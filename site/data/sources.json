@@ -794,7 +794,7 @@
       }
     ],
     "missingness": [
-      "Provenance discrepancy (external metadata only): Zenodo record 22310064 carries the title \"Liber Universalis de Collapsu Mathematicae\" while record 22310544 carries the Liber Collapsus title with identical files and declares isNewVersionOf 22310064. The library's canonical DOI for Liber Collapsus is resolved as 10.5281/zenodo.22310064; the discrepancy is preserved as provenance, not as uncertainty about the DOI."
+      "Provenance discrepancy (external metadata only): Zenodo record 22310064 carries the title \"Liber Universalis de Collapsu Mathematicae\" while record 22310544 carries the Liber Collapsus title with identical files and declares isNewVersionOf 22310064. The library's canonical DOI for Liber Collapsus is resolved as 10.5281/zenodo.22310064; the record relationship 22310064 <-> 22310544 remains an unresolved, non-blocking seam (SEAM-0022); it is not uncertainty about the library's DOI."
     ],
     "notes": "Registry role: CORPUS / COMPANION SOURCE. No Tier-2 object is forced; the governing corpus has not supplied an explicit Tier-2 placement for this edition. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.22310064 is a version DOI; resolved record 22310064, record title \"Liber Universalis de Collapsu Mathematicae\", creators ['Paulus, Clement'], publication date 2026-09-04, resource type Publication."
   },
@@ -984,12 +984,12 @@
       "url": "https://doi.org/10.5281/zenodo.17925172"
     },
     "concept_doi": "10.5281/zenodo.17925172",
-    "version_doi": "10.5281/zenodo.17980036",
+    "version_doi": "10.5281/zenodo.17925173",
     "related_dois": [
       {
-        "doi": "10.5281/zenodo.17925173",
-        "relation": "earlier_version",
-        "notes": "Version v1.0 (2025-12-12) under the concept; the DOI printed in the source PDF (SEAM-0019)."
+        "doi": "10.5281/zenodo.17980036",
+        "relation": "later_version",
+        "notes": "Later archive version (2025-12-12, latest at 2026-09-13 verification) that also carries A Geometry of Admissible Seams (SRC-000024)."
       }
     ],
     "supersedes": [],
@@ -1013,7 +1013,7 @@
     "missingness": [
       "Zenodo record title is the short form \"A Provenance & Canon Note\"."
     ],
-    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Concept DOI whose latest version (record 17980036) also carries Geometry of Admissible Seams.pdf (see SRC-000024). Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17925172 is a concept DOI (resolves to the latest version); resolved record 17980036, record title \"A Provenance & Canon Note\", creators ['Paulus, Clement'], publication date 2025-12-12, resource type Technical note."
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Lineage: identifier.doi is the concept DOI as listed by the corpus owner; version_doi 17925173 is the deposit the source PDF itself names; 17980036 is the later shared archive state (see SRC-000024). Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17925172 is a concept DOI (resolves to the latest version); resolved record 17980036, record title \"A Provenance & Canon Note\", creators ['Paulus, Clement'], publication date 2025-12-12, resource type Technical note."
   },
   {
     "source_id": "SRC-000024",

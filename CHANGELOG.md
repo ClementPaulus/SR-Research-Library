@@ -39,17 +39,24 @@ released governing record was rewritten.
 ### Changed
 
 - Schema SR-SCHEMA.v0.3.0 → SR-SCHEMA.v0.4.0 (optional source lineage fields).
-- Seams closed in place: SEAM-0002 and SEAM-0005 (site now has per-entity
-  pages), SEAM-0007 (questions route), SEAM-0008 (handled by shared-archive
-  policy), SEAM-0009 (whitepaper DOI: 18819238 concept/canonical; 18819239
-  historical version metadata only), SEAM-0010 (Liber canonical DOI
-  resolved; external title/version discrepancy preserved as provenance),
-  SEAM-0015 (SR-GOV-000014 active, SR-GOV-000015 candidate; status-only
-  changes), SEAM-0018 and SEAM-0019 (lineage typed on the records).
-  SEAM-0011 (Collapse Formalism DOI) stays open by design.
+- Seams closed in place (closed_by attributes the branch/PR; the release
+  generator records where a closure first appears): SEAM-0002 and SEAM-0005
+  (site now has per-entity pages), SEAM-0007 (questions route), SEAM-0008
+  (handled by shared-archive policy), SEAM-0009 (whitepaper DOI: 18819238
+  concept/canonical; 18819239 historical version metadata only), SEAM-0010
+  (Liber canonical DOI decision only: 22310064), SEAM-0015 (SR-GOV-000014
+  active, SR-GOV-000015 candidate; status-only changes), SEAM-0018 and
+  SEAM-0019 (lineage typed on the records). New SEAM-0022 keeps the Zenodo
+  record relationship 22310064 <-> 22310544 open as a non-blocking
+  UNRESOLVED_SEAM. SEAM-0011 (Collapse Formalism DOI) stays open by design.
 - `SRC-000015` missingness no longer calls the DOI lineage unresolved;
-  `SRC-000018` missingness now records the Zenodo title discrepancy as a
-  provenance note, not DOI uncertainty.
+  `SRC-000018` stays active on 22310064 with the record relationship
+  referred to SEAM-0022. `SRC-000023` (Provenance & Canon Note):
+  `version_doi` is 17925173 (the deposit the PDF names), with 17980036 typed
+  `later_version` (the shared archive state that also carries A Geometry of
+  Admissible Seams, `SRC-000024`).
+- Release manifests now record `closed_seams` and
+  `closures_first_recorded_in_this_release`.
 - `SR-OBJ-000011` (DMT) is unchanged: `SRC-000019` resolves through its
   concept DOI to the Version 2.0 record (22086947); no evidence that the
   library description changed, so no record revision was issued.
