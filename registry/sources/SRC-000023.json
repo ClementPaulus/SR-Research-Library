@@ -30,7 +30,8 @@
     }
   ],
   "missingness": [
-    "Zenodo record title is the short form \"A Provenance & Canon Note\"."
+    "Zenodo record title is the short form \"A Provenance & Canon Note\".",
+    "The source PDF states bundle DOI 10.5281/zenodo.17925173, which Zenodo records as version v1.0 (2025-12-12) under the listed concept DOI 10.5281/zenodo.17925172; preserved, not reconciled, see SEAM-0019."
   ],
   "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Concept DOI whose latest version (record 17980036) also carries Geometry of Admissible Seams.pdf (see SRC-000024). Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17925172 is a concept DOI (resolves to the latest version); resolved record 17980036, record title \"A Provenance & Canon Note\", creators ['Paulus, Clement'], publication date 2025-12-12, resource type Technical note."
 }

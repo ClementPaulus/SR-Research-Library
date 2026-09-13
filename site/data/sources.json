@@ -416,7 +416,9 @@
         "preferred": false
       }
     ],
-    "missingness": [],
+    "missingness": [
+      "Earlier version DOI 10.5281/zenodo.19701729 (2026-04-22) exists under the same Zenodo concept 10.5281/zenodo.19701728 as the listed DOI 10.5281/zenodo.19868885 (2026-04-28); archive lineage preserved, see SEAM-0018."
+    ],
     "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19868885 is a version DOI; resolved record 19868885, record title \"The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence\", creators ['Paulus, Clement'], publication date 2026-04-28, resource type Report."
   },
   {
@@ -451,7 +453,8 @@
       }
     ],
     "missingness": [
-      "Zenodo record title is the short form \"The First Finite-Return Casepack\"."
+      "Zenodo record title is the short form \"The First Finite-Return Casepack\".",
+      "Earlier version DOI 10.5281/zenodo.19703023 (2026-04-22) exists under the same Zenodo concept 10.5281/zenodo.19703022 as the listed DOI 10.5281/zenodo.19869494 (2026-04-28); archive lineage preserved, see SEAM-0018."
     ],
     "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19869494 is a version DOI; resolved record 19869494, record title \"The First Finite-Return Casepack\", creators ['Paulus, Clement'], publication date 2026-04-28, resource type Report."
   },
@@ -809,7 +812,8 @@
       }
     ],
     "missingness": [
-      "Zenodo record title is the short form \"A Provenance & Canon Note\"."
+      "Zenodo record title is the short form \"A Provenance & Canon Note\".",
+      "The source PDF states bundle DOI 10.5281/zenodo.17925173, which Zenodo records as version v1.0 (2025-12-12) under the listed concept DOI 10.5281/zenodo.17925172; preserved, not reconciled, see SEAM-0019."
     ],
     "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Concept DOI whose latest version (record 17980036) also carries Geometry of Admissible Seams.pdf (see SRC-000024). Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17925172 is a concept DOI (resolves to the latest version); resolved record 17980036, record title \"A Provenance & Canon Note\", creators ['Paulus, Clement'], publication date 2025-12-12, resource type Technical note."
   },

@@ -152,3 +152,46 @@ seams:
       an explicit repository policy and licensing decision. Works without a DOI in the bundle (SRC-000035..038,
       SRC-000039..042, SRC-000044, SRC-000045) therefore have no public archive anchor yet.
     status: open
+  - id: SEAM-0018
+    area: registry.sources.archive-lineage
+    description: >-
+      Census working package v0.2 (LIN-0002, LIN-0003) records earlier DOIs on local file states: The First
+      Finite-Return Casepack 10.5281/zenodo.19703023 vs public 10.5281/zenodo.19869494 (SRC-000013); The
+      Heterogeneous Local Pass 10.5281/zenodo.19701729 vs public 10.5281/zenodo.19868885 (SRC-000012). Zenodo
+      metadata (2026-09-13): 19703023 (2026-04-22) and 19869494 (2026-04-28) are both version records under
+      concept 10.5281/zenodo.19703022; 19701729 (2026-04-22) and 19868885 (2026-04-28) are both version records
+      under concept 10.5281/zenodo.19701728. Recorded as evidence; the registered SourceIDs keep the later public
+      DOIs listed by the corpus owner, and the earlier version DOIs are preserved in each source's missingness.
+      Whether the registry should anchor on the concept DOI instead is a corpus-owner decision.
+    status: open
+  - id: SEAM-0019
+    area: registry.sources.doi-lineage
+    description: >-
+      Provenance & Canon Note (SRC-000023): the source PDF states bundle DOI 10.5281/zenodo.17925173 while external
+      metadata gives 10.5281/zenodo.17925172 (census LIN-0004). Zenodo metadata (2026-09-13): 17925173 is version
+      v1.0 (2025-12-12) under concept 10.5281/zenodo.17925172, whose latest version is record 17980036 (also
+      carrying Geometry of Admissible Seams, SRC-000024). The registered record keeps the concept DOI as listed by
+      the corpus owner; the version DOI is preserved in missingness. Not silently reconciled.
+    status: open
+  - id: SEAM-0020
+    area: registry.sources.public-only-queue
+    description: >-
+      "Shape, Phase, and Forcing in Saturn's Southern Decagon: An Integrated Inference and External-Testing
+      Protocol" is exposed on the author's Academia profile as Active Tier-2 / Domain Closures (candidate class
+      external-ingress) but no local source file or DOI is available (census status SOURCE_NEEDED). Public
+      placement alone does not create admission; no SourceID or ObjectID is allocated until the source is acquired.
+    status: open
+  - id: SEAM-0021
+    area: registry.census
+    description: >-
+      Corpus census working package SR_CORPUS_CENSUS_WORKING_PACKAGE_v0_2 (placement pass over local file states,
+      chronology, Zenodo community, and Academia profile) reports 70 candidate source states, 11 candidate
+      governing references, and 35 candidate Tier-2 objects, with permanent identifiers deliberately deferred
+      until deduplication and archive lineage are stable. The package is working evidence (it includes a local
+      filesystem scan) and is kept out of the repository (.gitignore); only its resolved seams are carried here
+      (SEAM-0018..0020). Candidates not yet in the registry include DMT Version 2.0 (SRC-000019 currently resolves
+      to the latest Zenodo version), Nested Return in a Composite Diamond Clock, Recursive Accelerating Return
+      (10.5281/zenodo.22035775, not resolvable on 2026-09-13), Identifiable Return in Memristive Associative Memory
+      (external DOI 10.1038/s41467-026-69958-0 belongs to He et al., not to the local paper), and The First
+      Seam-Chain Casepack (DOI unresolved). Allocation awaits the deduplicated intellectual-object ledger.
+    status: open

@@ -30,6 +30,8 @@
       "preferred": false
     }
   ],
-  "missingness": [],
+  "missingness": [
+    "Earlier version DOI 10.5281/zenodo.19701729 (2026-04-22) exists under the same Zenodo concept 10.5281/zenodo.19701728 as the listed DOI 10.5281/zenodo.19868885 (2026-04-28); archive lineage preserved, see SEAM-0018."
+  ],
   "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19868885 is a version DOI; resolved record 19868885, record title \"The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence\", creators ['Paulus, Clement'], publication date 2026-04-28, resource type Report."
 }

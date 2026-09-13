@@ -30,7 +30,8 @@
     }
   ],
   "missingness": [
-    "Zenodo record title is the short form \"The First Finite-Return Casepack\"."
+    "Zenodo record title is the short form \"The First Finite-Return Casepack\".",
+    "Earlier version DOI 10.5281/zenodo.19703023 (2026-04-22) exists under the same Zenodo concept 10.5281/zenodo.19703022 as the listed DOI 10.5281/zenodo.19869494 (2026-04-28); archive lineage preserved, see SEAM-0018."
   ],
   "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19869494 is a version DOI; resolved record 19869494, record title \"The First Finite-Return Casepack\", creators ['Paulus, Clement'], publication date 2026-04-28, resource type Report."
 }
