@@ -69,9 +69,11 @@ def test_external_dois_are_not_assigned_to_local_derivative_papers():
     # External authorship is preserved as names, never replaced by a library AuthorID.
     assert sources["SRC-000048"]["source_authors"][0] == "Sean Lourette"
     assert sources["SRC-000051"]["source_authors"][0] == "Chengping He"
-    # The local memristive manuscript has no invented DOI and its own publication state.
-    assert "doi" not in sources["SRC-000052"]["identifier"]
-    assert _objects()["SR-OBJ-000023"]["publication_state"] == "registered-only"
+    # The local memristive manuscript carries its own verified Zenodo deposit and publication state,
+    # never the external article's DOI.
+    assert sources["SRC-000052"]["identifier"]["doi"] == "10.5281/zenodo.22695434"
+    assert sources["SRC-000052"]["concept_doi"] == "10.5281/zenodo.22695433"
+    assert _objects()["SR-OBJ-000023"]["publication_state"] == "archived"
 
 
 def test_new_objects_resolve_sources_and_taxonomies_and_stay_tier_2():
@@ -102,6 +104,19 @@ def test_new_objects_resolve_sources_and_taxonomies_and_stay_tier_2():
 def test_every_new_object_has_an_accepted_receipt():
     accepted = {r["object_id"] for r in _receipts().values() if r["decision"] == "ACCEPTED"}
     assert set(NEW_OBJECTS + REPAIRED) <= accepted
+
+
+def test_memristive_publication_update_preserves_prior_state_and_receipt():
+    objects, receipts = _objects(), _receipts()
+    obj = objects["SR-OBJ-000023"]
+    assert obj["version"] == "1.0.1"
+    history = json.loads((loader.REGISTRY_DIR / "objects" / "history" / "SR-OBJ-000023.v1.0.0.json").read_text(encoding="utf-8"))
+    assert history["publication_state"] == "registered-only"
+    # Metadata-only update: the scientific record is unchanged between 1.0.0 and 1.0.1.
+    for key in ("claim_layers", "scope", "exclusions", "next_burden", "maturity", "authority", "evidence_mode", "source_ids"):
+        assert history[key] == obj[key]
+    assert receipts["RCPT-000028"]["publication_state"] == "registered-only"
+    assert receipts["RCPT-000036"]["object_id"] == "SR-OBJ-000023" and receipts["RCPT-000036"]["version"] == "1.0.1"
 
 
 def test_historical_works_remain_historical():

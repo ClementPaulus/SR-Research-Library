@@ -2129,21 +2129,37 @@
       "Version 1.2 boundary (owner-supplied): the analysis includes a retrospective evidence freeze and acquired Figure-3 arrays; it does not retroactively become preregistered; no new chip experiment, completed hardware certificate, or completed UMCP kernel run is claimed."
     ],
     "identifier": {
-      "other": "Manuscript ID GCD-AM-IR.2026-09-08; Version 1.2 dated 9 September 2026; owner-supplied manuscript identity (Tier-2 census and repair pass, 2026-09). Full text not deposited in this repository."
+      "doi": "10.5281/zenodo.22695434",
+      "url": "https://doi.org/10.5281/zenodo.22695434",
+      "other": "Manuscript ID GCD-AM-IR.2026-09-08; Version 1.2 frozen 9 September 2026. Full text not mirrored in this repository."
     },
-    "concept_doi": null,
-    "version_doi": null,
+    "concept_doi": "10.5281/zenodo.22695433",
+    "version_doi": "10.5281/zenodo.22695434",
     "related_dois": [],
     "supersedes": [],
     "superseded_by": null,
     "publication_year": 2026,
-    "venue": null,
-    "links": [],
-    "missingness": [
-      "No DOI and no public archive deposit were found for this manuscript (Zenodo search 2026-09-13 by creator and title returned no record); identity rests on the owner-supplied manuscript ID and version.",
-      "Source-native claims are recorded from the owner-supplied manuscript description; the full text is not held by the library."
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.22695434",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/22695434",
+        "preferred": false
+      }
     ],
-    "notes": "Local derivative manuscript built around He et al. (SRC-000051). The external article's DOI 10.1038/s41467-026-69958-0 is not this source's identity. Publication state of the local manuscript is recorded on the object, not inherited from the external study."
+    "missingness": [
+      "The Zenodo record carries the short title \"Identifiable Return in Memristive Associative Memory\"; the full title and Manuscript ID GCD-AM-IR.2026-09-08 are taken from the owner-supplied manuscript identity.",
+      "Source-native claims are recorded from the owner-supplied manuscript description; the deposited full text has not been read by the library.",
+      "Peer review, journal acceptance, and independent certification are not claimed; the DOI records an archive deposit only."
+    ],
+    "notes": "Local derivative manuscript built around He et al. (SRC-000051). The external article's DOI 10.1038/s41467-026-69958-0 is not this source's identity. Publication state of the local manuscript is recorded on the object, not inherited from the external study. Publication update (2026-09-13): the first 2026-09-13 census check found no deposit (Zenodo search by creator and title) and the source was registered with no DOI; the owner then reported the public Zenodo deposit of Version 1.2. Zenodo verification (2026-09-13, API metadata): record 22695434, title \"Identifiable Return in Memristive Associative Memory\", version v1.2, creators ['Paulus, Clement'], publication date 2026-09-09, resource type Preprint, concept record 22695433, files identifiable_return.pdf and Identifiable_Return_v1_2_Frozen_Research_Package.zip. The DOI is the publication locator for the frozen v1.2 manuscript and research package, not a new scientific version or superseding run."
   },
   {
     "source_id": "SRC-000053",

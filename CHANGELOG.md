@@ -46,6 +46,16 @@ released governing record was rewritten.
   SEAM-0020, SEAM-0021 updated in place with the pass results; all remain
   open. Next free identifiers: `SR-OBJ-000031`, `SRC-000060`, `SR-GOV-000020`,
   `REL-000006`, `RCPT-000036`.
+- Publication update, Identifiable Return in Memristive Associative Memory:
+  Version 1.2 (frozen 9 September 2026) is publicly deposited on Zenodo as
+  10.5281/zenodo.22695434 (concept 22695433; verified by API 2026-09-13).
+  `SRC-000052` gains the DOI lineage, venue, and links; `SR-OBJ-000023`
+  resubmitted as 1.0.1 with `publication_state: archived` (RCPT-000036
+  ACCEPTED; RCPT-000028 and the 1.0.0 state in `registry/objects/history/`
+  preserved). Metadata only — manuscript text, evidence boundary,
+  retrospective analysis, frozen run, claims, authority, and unresolved
+  burdens are unchanged; the DOI locates the frozen v1.2 and is not a new
+  scientific version. Next free receipt: `RCPT-000037`.
 - `ENGINE_CONTRACT.md`: the engine MAY compute provisional structural
   adjacency for retrieval and review and SHALL NOT convert it into a relation
   or any scientific claim.

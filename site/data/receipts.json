@@ -2607,5 +2607,82 @@
       "Live use of the receipt by an instructor, reviewer, or institution to assess, repair, or transmit the course, producing actual student/evaluator artifacts; classroom efficacy remains unproven until then."
     ],
     "next_burden": "Live use of the receipt by an instructor, reviewer, or institution to assess, repair, or transmit the course, producing actual student/evaluator artifacts; classroom efficacy remains unproven until then."
+  },
+  "RCPT-000036": {
+    "receipt_id": "RCPT-000036",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000023",
+    "generated": "2026-09-13T23:31:20Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000023",
+    "title": "Identifiable Return in Memristive Associative Memory: A Generative Collapse Dynamics Analysis of Recurrent Pattern Completion",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.1",
+    "date": "2026-09-13T23:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "external-ingress",
+    "functional_locus": "umcp",
+    "domain_primary": "computer-science",
+    "structural_focus_primary": "identity",
+    "main_question": "Under what conditions does a physically constrained recurrent computation recover the intended memory rather than merely settle, repeat, or produce a similar state?",
+    "evidence_mode_primary": "retrospective-analysis",
+    "provenance": "externally-anchored-derivative",
+    "maturity": "retrospectively-evaluated",
+    "source_ids": [
+      "SRC-000052",
+      "SRC-000051"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "peer review, journal acceptance, or independent certification of the local manuscript (PUBLICATION_BOUNDARY)",
+      "cited Zenodo study archive of the external article (SOURCE_BOUNDARY)",
+      "per-update physical acquisition uncertainty and stop/padding semantics (NON_BLOCKING)",
+      "operator-level physical verification and calibration/regional-bound burden (NON_BLOCKING)",
+      "prospective sampling burden (NON_BLOCKING)"
+    ],
+    "open_burdens": [
+      "A prospective hardware-aware return test with frozen target identities, a cue law, acceptance regions, an identity margin, an implementation/calibration envelope, complete trajectory acquisition, a stopping horizon, a dwell requirement, and typed handling of wrong-memory capture, spurious stabilization, periodic behavior, finite-horizon non-return, and missing evidence."
+    ],
+    "next_burden": "A prospective hardware-aware return test with frozen target identities, a cue law, acceptance regions, an identity margin, an implementation/calibration envelope, complete trajectory acquisition, a stopping horizon, a dwell requirement, and typed handling of wrong-memory capture, spurious stabilization, periodic behavior, finite-horizon non-return, and missing evidence."
   }
 }

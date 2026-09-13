@@ -68,10 +68,10 @@
   "provenance": "externally-anchored-derivative",
   "maturity": "retrospectively-evaluated",
   "relations": [],
-  "version": "1.0.1",
-  "date": "2026-09-13T23:00:00Z",
-  "publication_state": "archived",
-  "source_boundary": "The governing source is SRC-000052 (\"Identifiable Return in Memristive Associative Memory: A Generative Collapse Dynamics Analysis of Recurrent Pattern Completion\"; Version 1.2, frozen 9 September 2026; Zenodo DOI 10.5281/zenodo.22695434). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. The external anchor SRC-000051 (He et al.; DOI 10.1038/s41467-026-69958-0) is the analysed study; its DOI and publication state belong to the external article, not to this object or its corpus-native source. Source-native statements about the local manuscript are recorded from the owner-supplied manuscript description; the deposited full text has not been read by the library.",
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "publication_state": "registered-only",
+  "source_boundary": "The governing source is SRC-000052 (\"Identifiable Return in Memristive Associative Memory: A Generative Collapse Dynamics Analysis of Recurrent Pattern Completion\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. The external anchor SRC-000051 (He et al.; DOI 10.1038/s41467-026-69958-0) is the analysed study; its DOI and publication state belong to the external article, not to this object or its corpus-native source. Source-native statements about the local manuscript are recorded from the owner-supplied manuscript description; the full text is not held by the library.",
   "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority, canon status, proof, weld, scientific endorsement, or release status.",
   "scope": "Retrospective, frozen analysis of ten released trajectories from the external study under declared cue corruption and hardware constraints, with an identity-aware recovery certificate and a prospective test design.",
   "exclusions": [
@@ -84,9 +84,9 @@
   "preserved_meaning": "The distinction between recovering the intended memory (identifiable return) and merely settling, repeating, or producing a similar state.",
   "missingness": [
     {
-      "item": "peer review, journal acceptance, or independent certification of the local manuscript",
+      "item": "public DOI or archive deposit for the local manuscript",
       "class": "PUBLICATION_BOUNDARY",
-      "notes": "Not claimed. The Zenodo DOI 10.5281/zenodo.22695434 records an archive deposit of the frozen v1.2 manuscript and research package; publication state recorded as archived. The 1.0.0 record's PUBLICATION_BOUNDARY item (no DOI found on the first 2026-09-13 check) is discharged by the verified deposit, not deleted into silence."
+      "notes": "None found (Zenodo search 2026-09-13); identity rests on the owner-supplied manuscript ID GCD-AM-IR.2026-09-08 v1.2. Publication state recorded as registered-only."
     },
     {
       "item": "cited Zenodo study archive of the external article",
@@ -109,8 +109,8 @@
       "notes": "The prospective test is designed, not executed."
     }
   ],
-  "distortion_or_substitution_risk": "Reading the retrospective certificate as a completed hardware certificate or UMCP run, treating a similar settled state as identifiable return, assigning the external article's DOI or publication state to the local paper, or reading the Zenodo deposit as a new scientific version or superseding run rather than the publication locator of the frozen v1.2.",
+  "distortion_or_substitution_risk": "Reading the retrospective certificate as a completed hardware certificate or UMCP run, treating a similar settled state as identifiable return, or assigning the external article's DOI or publication state to the local paper.",
   "next_burden": "A prospective hardware-aware return test with frozen target identities, a cue law, acceptance regions, an identity margin, an implementation/calibration envelope, complete trajectory acquisition, a stopping horizon, a dwell requirement, and typed handling of wrong-memory capture, spurious stabilization, periodic behavior, finite-horizon non-return, and missing evidence.",
   "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
-  "notes": "External anchor and local manuscript carry separate source identities (SRC-000051 external; SRC-000052 corpus-native, Zenodo DOI 10.5281/zenodo.22695434, concept 22695433). Registered in the 2026-09 Tier-2 census and repair pass; classification supplied by the corpus owner under the current Structura Reditus architecture. Version 1.0.1 (2026-09-13) is a publication and provenance metadata update only: publication state registered-only -> archived on the verified Zenodo deposit of Version 1.2 (frozen 9 September 2026). Manuscript text, evidence boundary, retrospective analysis, frozen run, claims, authority, and unresolved burdens are unchanged; prospective reliability testing, hardware-conditioned certification, and any canonical UMCP return or weld evaluation remain unresolved."
+  "notes": "External anchor and local manuscript carry separate source identities (SRC-000051 external; SRC-000052 corpus-native, no DOI). Registered in the 2026-09 Tier-2 census and repair pass; classification supplied by the corpus owner under the current Structura Reditus architecture."
 }
