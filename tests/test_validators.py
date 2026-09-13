@@ -54,6 +54,31 @@ class ValidatorFailureTests(unittest.TestCase):
         self.assertTrue(any("broken.schema.json" in e and "valid JSON Schema" in e for e in errors), errors)
 
 
+
+    def test_schema_validator_flags_invalid_registry_record(self):
+        bad_author = self.tmpdir / "registry" / "authors" / "AUTH-0002.yaml"
+        bad_author.write_text("author_id: AUTH-0002\n", encoding="utf-8")
+
+        targets = {
+            "author.schema.json": [self.tmpdir / "registry" / "authors"],
+            "object.schema.json": [self.tmpdir / "registry" / "objects"],
+            "source.schema.json": [self.tmpdir / "registry" / "sources"],
+            "relation.schema.json": [self.tmpdir / "registry" / "relations"],
+            "receipt.schema.json": [
+                self.tmpdir / "receipts" / "accepted",
+                self.tmpdir / "receipts" / "repair",
+                self.tmpdir / "receipts" / "rejected",
+            ],
+        }
+        for path in targets["receipt.schema.json"]:
+            path.mkdir(parents=True, exist_ok=True)
+
+        with patch("validators.schema_validation.SCHEMA_DIR", self.tmpdir / "schema"), patch.dict(
+            "validators.schema_validation.SCHEMA_RECORD_TARGETS", targets, clear=True
+        ):
+            errors = validate_schema_files()
+        self.assertTrue(any("AUTH-0002.yaml" in e and "violates author.schema.json" in e for e in errors), errors)
+
     def test_schema_validator_flags_missing_required_key_for_repo_schema(self):
         schema_path = self.tmpdir / "schema" / "author.schema.json"
         data = json.loads(schema_path.read_text(encoding="utf-8"))

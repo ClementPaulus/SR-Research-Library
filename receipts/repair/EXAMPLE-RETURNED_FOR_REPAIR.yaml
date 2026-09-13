@@ -5,6 +5,14 @@ author_ids:
   - AUTH-0001
 version: v0.0.1
 date: '2026-09-13T00:00:00Z'
+gates:
+  A: PASS
+  B: PASS
+  C: PASS
+  D: FAIL
+  E: FAIL
+  F: PASS
+  G: PASS
 blocked_gates:
   - D
   - E

@@ -3,7 +3,7 @@
   "$id": "SR-SCHEMA.v0.1.0/receipt.schema.json",
   "title": "Structura Reditus Admission Receipt",
   "type": "object",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "required": ["decision", "submission_identity", "date", "gates", "statement"],
   "properties": {
     "decision": {

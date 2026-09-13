@@ -60,7 +60,7 @@ def validate_relations() -> list[str]:
 
         if relation_type not in relation_types:
             errors.append(f"{path.name}: unsupported relation_type {relation_type}")
-        if subject not in object_ids:
+        if subject not in target_ids:
             errors.append(f"{path.name}: unresolved relation subject {subject}")
         if target not in target_ids:
             errors.append(f"{path.name}: unresolved relation object {target}")
