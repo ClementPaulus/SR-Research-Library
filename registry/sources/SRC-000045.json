@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000045",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "Refusal as Structure: On Critique, Boundary, and the Public Life of Thought",
+  "version": "1.0",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -12,6 +14,11 @@
   "identifier": {
     "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 04_INGRESS_CONTACT/Refusal_as_Structure.pdf, sha256 63a450c90b4dcd6107961cc5892552d5fba69c121508acff10f9928d2e39a08d. Full text supplied to the library maintainer; not deposited in this repository."
   },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": null,
   "links": [],

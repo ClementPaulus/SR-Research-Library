@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import json
 import re
+import unicodedata
 from pathlib import Path
 
 from . import loader, profiles, receipts as receipts_mod
@@ -82,6 +83,20 @@ def _e(value) -> str:
 
 def _slug(value) -> str:
     return re.sub(r"[^a-z0-9]+", "-", str(value).lower()).strip("-") or "none"
+
+
+def question_slug(question: str, limit: int = 80) -> str:
+    """Canonical /questions/<slug> key (SEAM-0007 policy).
+
+    Lower-case, Unicode normalized to ASCII, runs of non-alphanumerics -> '-',
+    trimmed, truncated to ``limit`` characters at a word boundary. Questions
+    that normalize to the same slug share one page.
+    """
+    ascii_text = unicodedata.normalize("NFKD", str(question or "")).encode("ascii", "ignore").decode("ascii")
+    slug = _slug(ascii_text)
+    if len(slug) > limit:
+        slug = slug[:limit].rsplit("-", 1)[0] or slug[:limit]
+    return slug or "none"
 
 
 STYLE = """
@@ -334,7 +349,7 @@ def _objects_index(data: dict, root: str, receipt_for: dict) -> str:
     return f"""
 <h1><span class="kind kind-obj">TIER-2 RESEARCH</span></h1>
 <p>The living research body: domain, diagnostic, translation, candidate, pedagogical, external-ingress, and handoff
-research registered as Tier-2 objects, each with its admission receipt. Browse by {views} &middot; <a href="{root}timeline/index.html">Timeline</a>.</p>
+research registered as Tier-2 objects, each with its admission receipt. Browse by {views} &middot; <a href="{root}questions/index.html">Main question</a> &middot; <a href="{root}timeline/index.html">Timeline</a>.</p>
 <input id="filter" class="filter" placeholder="Filter by author, domain, object of study, structural focus, main question, Tier-2 class, evidence mode, provenance, maturity, relation, source, or date&hellip;">
 {_table(OBJECT_HEADERS, rows, "objects", "No research objects registered yet.", filterable=True)}
 {FILTER_SCRIPT}
@@ -378,7 +393,7 @@ def _object_page(o: dict, root: str, by_source: dict, by_gov: dict, receipt_for:
     ("Object of study", _e(o.get("object_of_study"))),
     ("Admission receipt", _link(root, "rcpt", rcpt["receipt_id"], f'{rcpt["receipt_id"]} — {rcpt["decision"]}') if rcpt else '<span class="note">none</span>'),
 ])}
-<h2>Main question</h2><p>{_e(o.get("main_question"))}</p>
+<h2>Main question</h2><p><a href="{root}questions/{question_slug(o.get("main_question"))}.html">{_e(o.get("main_question"))}</a></p>
 <h2>Boundaries</h2>
 <div class="boundary"><strong>Authority boundary.</strong> {_e(o.get("authority_boundary"))}</div>
 <div class="boundary"><strong>Source boundary.</strong> {_e(o.get("source_boundary"))}</div>
@@ -428,6 +443,27 @@ def _axis_pages(data: dict, root: str, receipt_for: dict, out: Path, versions: d
             (out / key / f"{_slug(t)}.html").write_text(_page(f"{label}: {t}", body, root, versions), encoding="utf-8")
 
 
+def _question_pages(data: dict, root: str, receipt_for: dict, out: Path, versions: dict) -> None:
+    groups: dict = {}
+    for o in data["objects"]:
+        q = o.get("main_question")
+        if q:
+            groups.setdefault(question_slug(q), []).append(o)
+    (out / "questions").mkdir(parents=True, exist_ok=True)
+    rows = [_row([f'<a href="{_e(slug)}.html">{_e(members[0]["main_question"])}</a>',
+                  ", ".join(_link(root, "obj", o["object_id"]) for o in members)])
+            for slug, members in sorted(groups.items(), key=lambda kv: kv[1][0]["main_question"].lower())]
+    intro = ("<h1>Main questions</h1><p class='note'>One page per normalized main question (slug policy: lower-case ASCII, "
+             "non-alphanumerics to '-', 80 characters at a word boundary; identical normalizations share a page). "
+             "Cross-domain retrieval follows FIND &rarr; COMPARE &rarr; EXTRACT TRANSFERABLE STRUCTURE &rarr; REINSTANTIATE LOCALLY &rarr; VALIDATE LOCALLY.</p>")
+    (out / "questions" / "index.html").write_text(_page("Main questions", intro + _table(["Main question", "Objects"], rows, empty="No questions registered yet."), root, versions), encoding="utf-8")
+    for slug, members in groups.items():
+        body = (f'<p><span class="kind kind-obj">TIER-2 RESEARCH</span> by main question</p><h1>{_e(members[0]["main_question"])}</h1>'
+                + ("<p class='note'>Other objects whose main question normalizes to this slug: " + "; ".join(_e(m["main_question"]) for m in members[1:] if m["main_question"] != members[0]["main_question"]) + "</p>" if len({m["main_question"] for m in members}) > 1 else "")
+                + _table(OBJECT_HEADERS, [_object_row(o, root, receipt_for) for o in members]))
+        (out / "questions" / f"{slug}.html").write_text(_page(members[0]["main_question"], body, root, versions), encoding="utf-8")
+
+
 # --------------------------------------------------------------------------- sources surface
 
 def _sources_index(data: dict, root: str, objects_by_source: dict, gov_by_source: dict, historical_only: bool = False) -> str:
@@ -463,6 +499,21 @@ def _sources_index(data: dict, root: str, objects_by_source: dict, gov_by_source
 """
 
 
+def _lineage(s: dict, root: str) -> str:
+    rows = []
+    if s.get("concept_doi"):
+        rows.append(_row(["Concept DOI", _e(s["concept_doi"]), "archive concept (resolves to the latest deposited version)"]))
+    if s.get("version_doi"):
+        rows.append(_row(["Version DOI", _e(s["version_doi"]), "specific deposited version this record refers to"]))
+    for r in s.get("related_dois") or []:
+        rows.append(_row([_e(r.get("relation")), _e(r.get("doi")), _e(r.get("notes", ""))]))
+    for old in s.get("supersedes") or []:
+        rows.append(_row(["supersedes", _link(root, "src", old), "earlier source state (preserved)"]))
+    if s.get("superseded_by"):
+        rows.append(_row(["superseded_by", _link(root, "src", s["superseded_by"]), "current source state"]))
+    return _table(["Relation", "Identifier", "Notes"], rows, empty="No lineage recorded beyond the anchoring DOI.")
+
+
 def _source_page(s: dict, root: str, objects_by_source: dict, gov_by_source: dict) -> str:
     objs, govs = objects_by_source.get(s["source_id"], []), gov_by_source.get(s["source_id"], [])
     ident = s.get("identifier") or {}
@@ -472,16 +523,20 @@ def _source_page(s: dict, root: str, objects_by_source: dict, gov_by_source: dic
             + (f" Governing reference(s): {', '.join(_link(root, 'gov', g['governing_id']) for g in govs)}." if govs else "")
             + "</div>")
     return f"""
-<p><span class="kind kind-src">SOURCE</span> <span class="status">{_e(s.get("source_type"))}</span></p>
+<p><span class="kind kind-src">SOURCE</span> <span class="status">{_e(s.get("source_type"))}</span> <span class="status">{_e(s.get("status", "active"))}</span></p>
 <h1>{_e(s["title"])}</h1>
 {role}
 {_dl([
     ("SRC ID", _e(s["source_id"])),
     ("Source authors", ", ".join(_e(a) for a in s.get("source_authors", []))),
+    ("Version", _e(s.get("version")) if s.get("version") else '<span class="note">none stated</span>'),
     ("Year / venue", f'{_e(s.get("publication_year") or "")} &middot; {_e(s.get("venue") or "")}'),
     ("DOI", _e(ident.get("doi")) if ident.get("doi") else '<span class="note">none recorded</span>'),
     ("Other identifiers", "<br>".join(f"<strong>{_e(k)}:</strong> {_e(v)}" for k, v in ident.items() if k != "doi") or '<span class="note">none</span>'),
 ])}
+<h2>Lineage</h2>
+<p class="note">Source identity &ne; archive concept &ne; specific deposited version.</p>
+{_lineage(s, root)}
 <h2>External links</h2>
 {_external_links(s)}
 <h2>Source-native claims</h2>
@@ -576,7 +631,7 @@ def generate_site(site_dir: Path = None, registry: dict = None, receipts: dict =
 <p class="note">Tier-0 organizational and retrieval surface for the Structura Reditus corpus. Three registries, kept distinct:</p>
 <table>
 <tr><th><span class="kind kind-gov">GOVERNING REFERENCES</span></th><td><a href="governing/index.html">{counts['governing']} governing references</a> — canon-facing, constitutional, authority-axis, functional-source, kernel/protocol/specification, publication-protocol, ingress, and language-contact references with their exact admitted burden. Not research objects.</td></tr>
-<tr><th><span class="kind kind-obj">TIER-2 RESEARCH</span></th><td><a href="objects/index.html">{counts['objects']} registered Tier-2 research objects</a> ({accepted} accepted receipts; <a href="receipts/index.html">all receipts</a>) — the living research body, browsable by <a href="domains/index.html">domain</a>, <a href="focus/index.html">structural focus</a>, <a href="classes/index.html">Tier-2 class</a>, <a href="evidence/index.html">evidence mode</a>, <a href="maturity/index.html">maturity</a>, and <a href="timeline/index.html">timeline</a>.</td></tr>
+<tr><th><span class="kind kind-obj">TIER-2 RESEARCH</span></th><td><a href="objects/index.html">{counts['objects']} registered Tier-2 research objects</a> ({accepted} accepted receipts; <a href="receipts/index.html">all receipts</a>) — the living research body, browsable by <a href="domains/index.html">domain</a>, <a href="focus/index.html">structural focus</a>, <a href="classes/index.html">Tier-2 class</a>, <a href="evidence/index.html">evidence mode</a>, <a href="maturity/index.html">maturity</a>, <a href="questions/index.html">main question</a>, and <a href="timeline/index.html">timeline</a>.</td></tr>
 <tr><th><span class="kind kind-src">SOURCES &amp; ARCHIVES</span></th><td><a href="sources/index.html">{counts['sources']} sources</a> — DOI, archive, publisher, data, code, <a href="sources/historical.html">historical</a> and external sources with labeled outbound links. A source is never shown as Tier-2 research.</td></tr>
 <tr><th>Authors</th><td><a href="authors/index.html">{counts['authors']} registered author identities</a> — profiles contain only reconstructible quantities; no author score.</td></tr>
 </table>
@@ -594,6 +649,7 @@ def generate_site(site_dir: Path = None, registry: dict = None, receipts: dict =
         (site_dir / "objects" / f"{o['object_id']}.html").write_text(
             _page(o["title"], _object_page(o, up, by_source, by_gov, receipt_for, relations_by_id, history), up, versions), encoding="utf-8")
     _axis_pages(data, up, receipt_for, site_dir, versions)
+    _question_pages(data, up, receipt_for, site_dir, versions)
     timeline_rows = [_object_row(o, up, receipt_for) for o in sorted(data["objects"], key=lambda r: r.get("date", ""))]
     (site_dir / "timeline" / "index.html").write_text(
         _page("Timeline", "<h1>Timeline</h1><p class='note'>Tier-2 objects by record date.</p>" + _table(OBJECT_HEADERS, timeline_rows), up, versions), encoding="utf-8")

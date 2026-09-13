@@ -90,10 +90,17 @@ The AuthorID is stable for life; contribution history changes around it.
    - `missingness` — every unavailable metadata item, preserved explicitly,
      including any title or DOI discrepancy observed in archive metadata.
 3. Shared-archive DOIs: when one DOI anchors several member works, give each
-   work its own `SRC-*`, record the shared condition in `notes`, and never
-   collapse them into one object or count them as separate deposits.
-   Alternate or disputed DOIs go in `identifier.other`, `missingness`, and a
-   seam in `releases/open-seams.yaml` — never silently pick one.
+   work its own `SRC-*`, record the shared condition in `notes` and as a
+   `shared_archive` entry in `related_dois`, and never collapse them into one
+   object or count them as separate deposits.
+   Record lineage in the typed fields — `version`, `status`, `concept_doi`,
+   `version_doi`, `related_dois` (`earlier_version`, `later_version`,
+   `alternate_record`, `first_edition`, `external_metadata`, `software`),
+   `supersedes` / `superseded_by` — rather than in `notes`. Source identity
+   ≠ archive concept ≠ deposited version; a new version DOI alone never
+   creates a new source or object. Only a genuinely unresolved identity
+   question becomes a seam in `releases/open-seams.yaml` — never silently
+   pick one DOI.
 4. Never attribute a Structura Reditus or GCD interpretation to an external
    author unless the source actually makes that interpretation.
 

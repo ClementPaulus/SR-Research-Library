@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000039",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "UMCP Kernel Specification (UMCP-KERNEL-SPEC.v2.4.0-rc2)",
+  "version": "UMCP-KERNEL-SPEC.v2.4.0-rc2",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -13,6 +15,11 @@
   "identifier": {
     "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/UMCP_KERNEL_SPECIFICATION_v2.4.0-rc2.md, sha256 67880c6b2c7e2ce684a870a608330af5ebcf6c8dd9207ea7a11a237f1d059841. Full text supplied to the library maintainer; not deposited in this repository."
   },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": null,
   "links": [],

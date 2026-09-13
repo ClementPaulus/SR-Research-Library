@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000043",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "Entering Structura Reditus: A Complete Ingress to Reditus, Generative Collapse Dynamics, and Contract-First Evaluation (Structura Reditus Ingress Paper)",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -13,6 +15,11 @@
     "doi": "10.5281/zenodo.20549483",
     "url": "https://doi.org/10.5281/zenodo.20549483"
   },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": "Zenodo",
   "links": [

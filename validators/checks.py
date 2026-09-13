@@ -392,8 +392,65 @@ def check_source_links(registry: dict, report: ValidationReport) -> None:
                            f"DOI link '{url}' does not resolve identifier.doi '{doi}'")
 
 
+def check_source_lineage(registry: dict, report: ValidationReport) -> None:
+    """Typed source lineage: DOI consistency and append-preserving supersession between source records."""
+    sources = registry["sources"]
+    by_id = {r.get("source_id"): r for r in sources.values() if isinstance(r.get("source_id"), str)}
+    for filename, record in sources.items():
+        rec = f"sources/{filename}"
+        doi = (record.get("identifier") or {}).get("doi")
+        concept, version = record.get("concept_doi"), record.get("version_doi")
+        if doi and (concept or version) and doi not in (concept, version):
+            report.add("source-lineage", rec,
+                       f"identifier.doi '{doi}' is neither concept_doi nor version_doi; the anchoring DOI must be one of them")
+        if concept and version and concept == version:
+            report.add("source-lineage", rec, "concept_doi and version_doi are identical; a concept DOI is not a deposited version")
+        related = {r.get("doi") for r in record.get("related_dois") or [] if isinstance(r, dict)}
+        for d in related & {doi, concept, version} - {None}:
+            report.add("source-lineage", rec, f"related_dois repeats this record's own DOI '{d}'")
+        sid, status = record.get("source_id"), record.get("status", "active")
+        for old_id in record.get("supersedes") or []:
+            old = by_id.get(old_id)
+            if old is None:
+                report.add("source-lineage", rec, f"supersedes '{old_id}' but that record is not preserved in the registry")
+            else:
+                if old.get("superseded_by") != sid:
+                    report.add("source-lineage", rec, f"supersedes '{old_id}' but that record's superseded_by is '{old.get('superseded_by')}'")
+                if old.get("status", "active") == "active":
+                    report.add("source-lineage", rec, f"supersedes '{old_id}' but that record is still active")
+        newer = record.get("superseded_by")
+        if newer:
+            new = by_id.get(newer)
+            if new is None or sid not in (new.get("supersedes") or []):
+                report.add("source-lineage", rec, f"superseded_by '{newer}' is not a registered record that supersedes this one")
+            if status == "active":
+                report.add("source-lineage", rec, "an active source cannot be superseded_by another record")
+        elif status == "superseded":
+            report.add("source-lineage", rec, "status is superseded but superseded_by is null")
+
+
+def check_reserved_identities(registry: dict, report: ValidationReport, receipts: dict = None) -> None:
+    """An ObjectID named on a non-accepted receipt stays reserved for that submission's work."""
+    if receipts is None:
+        receipts = loader.load_receipts()
+    reserved: dict = {}
+    for receipt in receipts.values():
+        if receipt.get("decision") == "ACCEPTED":
+            continue
+        ident = receipt.get("provisional_object_id") or receipt.get("submission_identity")
+        if isinstance(ident, str) and ident.startswith("SR-OBJ-"):
+            reserved.setdefault(ident, receipt.get("receipt_id"))
+    accepted = {r.get("object_id") for r in receipts.values() if r.get("decision") == "ACCEPTED"}
+    for filename, record in registry["objects"].items():
+        oid = record.get("object_id")
+        if oid in reserved and oid not in accepted:
+            report.add("reserved-identities", f"objects/{filename}",
+                       f"'{oid}' is reserved by non-accepted receipt {reserved[oid]} and has no ACCEPTED receipt; "
+                       "resubmit the same work through admission or allocate a fresh ObjectID")
+
+
 def validate_registry(registry: dict = None, schemas: dict = None, taxonomies: dict = None,
-                      released_hashes: dict = None) -> ValidationReport:
+                      released_hashes: dict = None, receipts: dict = None) -> ValidationReport:
     """Run every automated validation check and return the full report.
 
     Released-governing-record immutability is enforced against the release
@@ -404,8 +461,12 @@ def validate_registry(registry: dict = None, schemas: dict = None, taxonomies: d
         registry = loader.load_registry()
         if released_hashes is None:
             released_hashes = loader.released_governing_hashes()
+        if receipts is None:
+            receipts = loader.load_receipts()
     if released_hashes is None:
         released_hashes = {}
+    if receipts is None:
+        receipts = {}
     if schemas is None:
         schemas = loader.load_schemas()
     if taxonomies is None:
@@ -423,5 +484,7 @@ def validate_registry(registry: dict = None, schemas: dict = None, taxonomies: d
     check_duplicate_object_collisions(registry, report)
     check_missingness_classes(registry, report)
     check_source_links(registry, report)
+    check_source_lineage(registry, report)
+    check_reserved_identities(registry, report, receipts)
     check_governing(registry, report, released_hashes)
     return report

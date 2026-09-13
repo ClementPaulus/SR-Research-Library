@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000024",
   "source_type": "historical",
+  "status": "historical",
   "title": "A Geometry of Admissible Seams: Contract-Bound Invariants and Auditable Transitions",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -10,6 +12,11 @@
     "doi": "10.5281/zenodo.17980036",
     "url": "https://doi.org/10.5281/zenodo.17980036"
   },
+  "concept_doi": "10.5281/zenodo.17925172",
+  "version_doi": "10.5281/zenodo.17980036",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2025,
   "venue": "Zenodo",
   "links": [

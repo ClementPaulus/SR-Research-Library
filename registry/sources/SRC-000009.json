@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000009",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "The First Pass: A Complete Worked Example Through the Generative-Collapse Spine",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -14,6 +16,11 @@
     "doi": "10.5281/zenodo.19520933",
     "url": "https://doi.org/10.5281/zenodo.19520933"
   },
+  "concept_doi": "10.5281/zenodo.19520933",
+  "version_doi": "10.5281/zenodo.19560043",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": "Zenodo",
   "links": [

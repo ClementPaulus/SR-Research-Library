@@ -11,7 +11,8 @@ seams:
   - id: SEAM-0002
     area: site
     description: The public surface is a minimal static generated page; per-entity and per-axis route families (see site/README.md) remain to be built.
-    status: open
+    status: closed
+    closed_by: SR-LIBRARY.v1.1.0 — the site generates governing, object, source, author, receipt, relation, timeline, question, and per-axis pages (see site/README.md).
   - id: SEAM-0003
     area: receipts
     description: Receipt IDs are allocated sequentially from the receipts/ tree; a concurrent-submission allocation policy is not yet declared.
@@ -23,7 +24,8 @@ seams:
   - id: SEAM-0005
     area: profiles
     description: Author-profile output is exposed via site/data/profiles.json only; no dedicated per-author pages exist yet.
-    status: open
+    status: closed
+    closed_by: SR-LIBRARY.v1.1.0 — /authors/<AuthorID> pages are generated from the registry profiles.
   - id: SEAM-0006
     area: taxonomy.domains
     description: Whether the domain list should be expanded further before first external submission intake.
@@ -31,7 +33,12 @@ seams:
   - id: SEAM-0007
     area: site.questions-routing
     description: Final question slug normalization and canonicalization policy.
-    status: open
+    status: closed
+    closed_by: >-
+      SR-LIBRARY.v1.1.0 — /questions/<slug> is generated. Policy: slug = main_question lower-cased, Unicode
+      normalized to ASCII, every run of non-alphanumerics replaced by '-', trimmed, truncated to 80 characters at a
+      word boundary; objects whose main questions normalize to the same slug share one page. The slug is a
+      navigation key only; the canonical question text lives on each object record.
   - id: SEAM-0008
     area: registry.sources.shared-doi
     description: >-
@@ -42,7 +49,12 @@ seams:
       A Geometry of Admissible Seams). The SourceID identifies the named work; the DOI identifies the archive.
       Member works are neither collapsed into one object nor counted as separate DOI deposits. Whether member
       works should later receive their own DOIs is a corpus-owner decision.
-    status: open
+    status: closed
+    closed_by: >-
+      SR-LIBRARY.v1.1.0 — handled by the shared-archive policy (README, LIBRARY_SPECIFICATION §3.2, registry/README):
+      one DOI may anchor several named works, each keeps its own SourceID, and shared membership is not multiple
+      deposits. Typed as relation shared_archive in related_dois. Minting separate DOIs is a publication decision,
+      not a library-architecture seam.
   - id: SEAM-0009
     area: registry.sources.doi-lineage
     description: >-
@@ -52,16 +64,25 @@ seams:
       18819239 is a version DOI (v2.1.3, 2026-02-28) under that concept. Recorded as evidence only; the exact
       concept/version relationship the corpus intends remains unresolved and is not silently reconciled. One
       source record and no duplicate object.
-    status: open
+    status: closed
+    closed_by: >-
+      SR-LIBRARY.v1.1.0 — resolved: 10.5281/zenodo.18819238 is the concept DOI and the library's canonical anchor
+      (SRC-000015 concept_doi); 18819239 is kept only as historical version metadata (related_dois,
+      earlier_version). The released governing record SR-GOV-000010 was not edited; SR-GOV-000019 supersedes it
+      with the resolved lineage.
   - id: SEAM-0010
     area: registry.sources.title-edition
     description: >-
-      SRC-000018 (Liber Collapsus): the corpus owner designates 10.5281/zenodo.22310064 as the canonical Liber
-      Collapsus DOI for the Structura Reditus Zenodo community. Zenodo record 22310064 currently carries the title
-      "Liber Universalis de Collapsu Mathematicae" (concept 10.5281/zenodo.16809846) with file liber_collapsus.pdf;
+      SRC-000018 / SR-GOV-000009 (Liber Collapsus). Canonical corpus DOI: resolved — 10.5281/zenodo.22310064, as
+      designated by the corpus owner for the Structura Reditus Zenodo community. External title/version metadata
+      relationship: preserved provenance discrepancy — Zenodo record 22310064 currently carries the title "Liber
+      Universalis de Collapsu Mathematicae" (concept 10.5281/zenodo.16809846) with file liber_collapsus.pdf, while
       record 10.5281/zenodo.22310544 carries the Liber Collapsus title with identical files and declares
-      isNewVersionOf 22310064. 22310544 is not substituted. Title/edition relationship unresolved.
-    status: open
+      isNewVersionOf 22310064. 22310544 is typed alternate_record on SRC-000018 and is not substituted.
+    status: closed
+    closed_by: >-
+      SR-LIBRARY.v1.1.0 — the library's DOI decision is closed; the external metadata discrepancy is recorded as
+      provenance on SRC-000018 (missingness, related_dois) and does not make the DOI uncertain.
   - id: SEAM-0011
     area: registry.sources.doi-mismatch
     description: >-
@@ -132,7 +153,13 @@ seams:
       candidate; not canon-frozen"; names a 2026-08-28 repaired working draft as predecessor). Version order and
       adoption status disagree. Registered as SR-GOV-000014 (unresolved) and SR-GOV-000015 (candidate) with
       supersedes null; not reconciled. Requires a corpus-owner adoption record.
-    status: open
+    status: closed
+    closed_by: >-
+      SR-LIBRARY.v1.1.0 — corpus-owner decision (2026-09-13) following the sources' own status lines: SR-GOV-000014
+      (SR-PUBLISHING-PROTOCOL.v1.0, "final Tier-0 publishing protocol; adopted working standard") is active;
+      SR-GOV-000015 (rc1, "internal Tier-0 repair candidate; not canon-frozen") remains candidate with no
+      supersession implied. Only status changed on the released records; their historical missingness text is
+      preserved unedited.
   - id: SEAM-0016
     area: registry.governing.ingress
     description: >-
@@ -163,7 +190,11 @@ seams:
       under concept 10.5281/zenodo.19701728. Recorded as evidence; the registered SourceIDs keep the later public
       DOIs listed by the corpus owner, and the earlier version DOIs are preserved in each source's missingness.
       Whether the registry should anchor on the concept DOI instead is a corpus-owner decision.
-    status: open
+    status: closed
+    closed_by: >-
+      SR-LIBRARY.v1.1.0 — lineage is now typed on the records: SRC-000012/013 carry concept_doi, version_doi (the
+      listed public DOI), and the earlier version records as related_dois earlier_version. Concept and version DOIs
+      are not collapsed.
   - id: SEAM-0019
     area: registry.sources.doi-lineage
     description: >-
@@ -172,7 +203,11 @@ seams:
       v1.0 (2025-12-12) under concept 10.5281/zenodo.17925172, whose latest version is record 17980036 (also
       carrying Geometry of Admissible Seams, SRC-000024). The registered record keeps the concept DOI as listed by
       the corpus owner; the version DOI is preserved in missingness. Not silently reconciled.
-    status: open
+    status: closed
+    closed_by: >-
+      SR-LIBRARY.v1.1.0 — typed on SRC-000023: concept_doi 10.5281/zenodo.17925172, version_doi 10.5281/zenodo.17980036
+      (latest at verification), related_dois earlier_version 10.5281/zenodo.17925173 (the DOI printed in the PDF).
+      Concept and version are not collapsed.
   - id: SEAM-0020
     area: registry.sources.public-only-queue
     description: >-

@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000023",
   "source_type": "historical",
+  "status": "historical",
   "title": "Generative Collapse Dynamics and Inference-Field Frameworks: A Provenance & Canon Note",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -13,6 +15,17 @@
     "doi": "10.5281/zenodo.17925172",
     "url": "https://doi.org/10.5281/zenodo.17925172"
   },
+  "concept_doi": "10.5281/zenodo.17925172",
+  "version_doi": "10.5281/zenodo.17980036",
+  "related_dois": [
+    {
+      "doi": "10.5281/zenodo.17925173",
+      "relation": "earlier_version",
+      "notes": "Version v1.0 (2025-12-12) under the concept; the DOI printed in the source PDF (SEAM-0019)."
+    }
+  ],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2025,
   "venue": "Zenodo",
   "links": [
@@ -30,8 +43,7 @@
     }
   ],
   "missingness": [
-    "Zenodo record title is the short form \"A Provenance & Canon Note\".",
-    "The source PDF states bundle DOI 10.5281/zenodo.17925173, which Zenodo records as version v1.0 (2025-12-12) under the listed concept DOI 10.5281/zenodo.17925172; preserved, not reconciled, see SEAM-0019."
+    "Zenodo record title is the short form \"A Provenance & Canon Note\"."
   ],
   "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Concept DOI whose latest version (record 17980036) also carries Geometry of Admissible Seams.pdf (see SRC-000024). Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17925172 is a concept DOI (resolves to the latest version); resolved record 17980036, record title \"A Provenance & Canon Note\", creators ['Paulus, Clement'], publication date 2025-12-12, resource type Technical note."
 }

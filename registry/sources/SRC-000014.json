@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000014",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "GCD / UMCP: The First Welded Seam Casepack — A Worked Case Showing Earned Continuity Under Frozen Seam Accounting",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -14,6 +16,11 @@
     "doi": "10.5281/zenodo.19869775",
     "url": "https://doi.org/10.5281/zenodo.19869775"
   },
+  "concept_doi": "10.5281/zenodo.19869774",
+  "version_doi": "10.5281/zenodo.19869775",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": "Zenodo",
   "links": [

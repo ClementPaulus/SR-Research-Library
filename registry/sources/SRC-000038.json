@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000038",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "Structura Collapsus: Collapse-Kernel and Protocol Reference for Generative Collapse Dynamics within the Structura Reditus Corpus",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -13,6 +15,11 @@
   "identifier": {
     "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/Structura_Collapsus.pdf, sha256 ffdaa7b6f22d9f9c6d860e55becdc4da98dc7f20d1b13bb826f908353626155f. Full text supplied to the library maintainer; not deposited in this repository."
   },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": null,
   "links": [],

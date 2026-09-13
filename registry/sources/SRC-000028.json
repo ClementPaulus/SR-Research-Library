@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000028",
   "source_type": "historical",
+  "status": "historical",
   "title": "The Grammar of Return",
+  "version": "v1.0",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -12,6 +14,11 @@
     "doi": "10.5281/zenodo.17518338",
     "url": "https://doi.org/10.5281/zenodo.17518338"
   },
+  "concept_doi": "10.5281/zenodo.17518337",
+  "version_doi": "10.5281/zenodo.17518338",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2025,
   "venue": "Zenodo",
   "links": [

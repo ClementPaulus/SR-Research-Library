@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000006",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "Generative Collapse Dynamics / UMCP: Passport and Entry Map — A Front-Door Guide to the Contract-First Measurement Framework",
+  "version": "v1.0.1 (packet)",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -12,6 +14,11 @@
     "doi": "10.5281/zenodo.19637774",
     "url": "https://doi.org/10.5281/zenodo.19637774"
   },
+  "concept_doi": "10.5281/zenodo.19622272",
+  "version_doi": "10.5281/zenodo.19637774",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": "Zenodo",
   "links": [

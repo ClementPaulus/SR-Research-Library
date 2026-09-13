@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000019",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "Dimethyltryptamine and the Recursive Reorganization of Consciousness",
+  "version": "2.0",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -15,6 +17,11 @@
     "doi": "10.5281/zenodo.21726224",
     "url": "https://doi.org/10.5281/zenodo.21726224"
   },
+  "concept_doi": "10.5281/zenodo.21726224",
+  "version_doi": "10.5281/zenodo.22086947",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": "Zenodo",
   "links": [
@@ -32,5 +39,5 @@
     }
   ],
   "missingness": [],
-  "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.21726224 is a concept DOI (resolves to the latest version); resolved record 22086947, record title \"Dimethyltryptamine and the Recursive Reorganization of Consciousness\", creators ['Paulus, Clement'], publication date 2026-08-24, resource type Book."
+  "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.21726224 is a concept DOI (resolves to the latest version); resolved record 22086947, record title \"Dimethyltryptamine and the Recursive Reorganization of Consciousness\", creators ['Paulus, Clement'], publication date 2026-08-24, resource type Book. Version lineage: the concept DOI resolves to the Version 2.0 record 10.5281/zenodo.22086947 (2026-08-24); the Version 1.0 state (2026-07-30, per corpus census v0.2) is a prior deposit under the same concept and is not a separate source or object."
 }

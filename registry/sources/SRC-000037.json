@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000037",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "The Functional Systems of Generative Collapse Dynamics: UMCP, RCFT, and ULRC as Measurement, Discovery, and Language Preservation — A Consolidated Thesis of Functional Operation and Domain Ingress",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -12,6 +14,11 @@
   "identifier": {
     "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 01_CANON_CONSTITUTION/Functional_Systems_of_GCD.pdf, sha256 25bccdd43635d6072a3aff9415f938626664a39224f9947b6cf8dd23a711e76d. Full text supplied to the library maintainer; not deposited in this repository."
   },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": null,
   "links": [],

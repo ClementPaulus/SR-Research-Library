@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000022",
   "source_type": "historical",
+  "status": "historical",
   "title": "The Seam of Reality: On Thought, Return, and the Illusion of the Outside",
+  "version": "v1.0",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -14,6 +16,11 @@
     "doi": "10.5281/zenodo.17619502",
     "url": "https://doi.org/10.5281/zenodo.17619502"
   },
+  "concept_doi": "10.5281/zenodo.17619501",
+  "version_doi": "10.5281/zenodo.17619502",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2025,
   "venue": "Zenodo",
   "links": [

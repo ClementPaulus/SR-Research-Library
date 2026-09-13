@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000025",
   "source_type": "historical",
+  "status": "historical",
   "title": "Retro-Coherent Transmission through Quantum Collapse: A Collapse Integrity Re-Interpretation of Negative Excitation Time",
+  "version": "v1.0.5",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -14,6 +16,11 @@
     "doi": "10.5281/zenodo.17509993",
     "url": "https://doi.org/10.5281/zenodo.17509993"
   },
+  "concept_doi": "10.5281/zenodo.17509993",
+  "version_doi": "10.5281/zenodo.17518421",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2025,
   "venue": "Zenodo",
   "links": [

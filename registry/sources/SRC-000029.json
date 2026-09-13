@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000029",
   "source_type": "historical",
+  "status": "historical",
   "title": "Universal Collapse Diagnostics: Contract-First Invariants, κ-Continuous Calculus, and Cross-Domain Audit",
+  "version": "v1.0.1",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -10,6 +12,11 @@
     "doi": "10.5281/zenodo.17173112",
     "url": "https://doi.org/10.5281/zenodo.17173112"
   },
+  "concept_doi": "10.5281/zenodo.17173112",
+  "version_doi": "10.5281/zenodo.17181872",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2025,
   "venue": "Zenodo",
   "links": [

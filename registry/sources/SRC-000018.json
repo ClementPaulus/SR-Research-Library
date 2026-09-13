@@ -1,15 +1,37 @@
 {
   "source_id": "SRC-000018",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "Liber Collapsus: De Reditu per Collapsum et de Identitate Servata",
+  "version": "2.0",
   "source_authors": [
     "Clement Paulus"
   ],
-  "source_native_claims": [],
+  "source_native_claims": [
+    "Axiom of Reditus, received from the active canon: Collapsus generativus est; solum quod per collapsum redit, reale est. The axiom is not a metaphor but a law of ontological admissibility; 'real' names the state of a structure that can be admitted after collapse as the same, continuous, or integral under the active contract.",
+    "Collapse by itself earns no credit: ruin alone is not proof, repetition alone is not Reditus, similarity alone is not identity, repair alone is not continuity. Reditus requires a structure that suffers perturbation or collapse, a declared rule by which it is read before and after, and re-entry into an admissible region under that same rule.",
+    "If the rule changes, simple Reditus cannot be claimed; the change must be declared through a seam. If the seam does not close, no credit is granted. Where τ_R = ∞_rec, no return credit is granted, and a gap may not be filled by narration.",
+    "Identity is not immobility; identity is Reditus under law (Identitas non est immobilitas; identitas est Reditus sub lege). Two senses are distinguished, idem (similarity, continuity, temporal permanence) and ipse (selfhood whose burden is preserved through change); the ipse burden is defined narrowly and formally as structural continuity through change under a declared contract whose seam can be examined.",
+    "The correspondence with Paul Ricœur's idem/ipse distinction is a correspondence of question, not an identity of doctrines; the author states that before the 11 October 2025 edition he had not read Ricœur, who is cited for historical placement and not as the source of the formulation.",
+    "Whatever is asserted to pertain to the object is subject to the test of the contract; a declared contract is not thereby true or sufficient but fixes the bounds of judgment. Before judgment the object is declared; before measurement the rule is fixed; before credit Reditus is proven. No channel may be changed after the event to adorn the outcome and no threshold chosen after the event to save the verdict.",
+    "The bounded trace Ψ(t) = (c_1(t), …, c_n(t)) with c_i ∈ [0,1] and weights w_i ≥ 0 summing to 1 is the measurable form of the object under a fixed contract; judgment bears directly on the trace and extends to the object only within the authority of the declared measurement rule.",
+    "This book neither closes the whole field nor substitutes the theory for the field; its narrower task is to order Reditus in brief mathematical and Latin form. The 2.0 edition (Editio altera, 4 August 2026) recognises, augments, and replaces the 2025 form in active use, preserving the prior form as historical testimony, and grants no credit to continuity between the two editions because that seam is not yet demonstrated."
+  ],
   "identifier": {
     "doi": "10.5281/zenodo.22310064",
     "url": "https://doi.org/10.5281/zenodo.22310064"
   },
+  "concept_doi": "10.5281/zenodo.16809846",
+  "version_doi": "10.5281/zenodo.22310064",
+  "related_dois": [
+    {
+      "doi": "10.5281/zenodo.22310544",
+      "relation": "alternate_record",
+      "notes": "Zenodo record carrying the Liber Collapsus title with identical files; declares isNewVersionOf 22310064. Provenance discrepancy only; not the library's DOI."
+    }
+  ],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": "Zenodo",
   "links": [
@@ -27,8 +49,7 @@
     }
   ],
   "missingness": [
-    "Zenodo record 22310064 currently carries the title \"Liber Universalis de Collapsu Mathematicae\" (concept 10.5281/zenodo.16809846) while its file listing contains liber_collapsus.pdf; record 10.5281/zenodo.22310544 carries the title \"Liber Collapsus: De Reditu per Collapsum et de Identitate Servata\" with identical files and declares isNewVersionOf 22310064. The corpus owner designates 22310064 as the canonical Liber Collapsus DOI for the Structura Reditus Zenodo community. This title/edition relationship is preserved as an unresolved seam (SEAM-0010); 22310544 is not substituted.",
-    "Source-native claims not captured in this import pass; only identity, archive, and classification metadata are recorded."
+    "Provenance discrepancy (external metadata only): Zenodo record 22310064 carries the title \"Liber Universalis de Collapsu Mathematicae\" while record 22310544 carries the Liber Collapsus title with identical files and declares isNewVersionOf 22310064. The library's canonical DOI for Liber Collapsus is resolved as 10.5281/zenodo.22310064; the discrepancy is preserved as provenance, not as uncertainty about the DOI."
   ],
   "notes": "Registry role: CORPUS / COMPANION SOURCE. No Tier-2 object is forced; the governing corpus has not supplied an explicit Tier-2 placement for this edition. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.22310064 is a version DOI; resolved record 22310064, record title \"Liber Universalis de Collapsu Mathematicae\", creators ['Paulus, Clement'], publication date 2026-09-04, resource type Publication."
 }
