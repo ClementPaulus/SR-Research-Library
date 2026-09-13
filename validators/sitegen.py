@@ -29,7 +29,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from . import loader, profiles, receipts as receipts_mod
+from . import bridges, loader, profiles, receipts as receipts_mod
 
 DISCLAIMER = ("Library admission means organizational conformance only and does not imply "
               "scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.")
@@ -60,6 +60,7 @@ def build_site_data(registry: dict = None, receipts: dict = None) -> dict:
         registry = loader.load_registry()
     if receipts is None:
         receipts = loader.load_receipts()
+    bridge_projection = bridges.build_bridge_projection(registry)
     return {
         "authors": sorted(registry["authors"].values(), key=lambda r: r.get("author_id", "")),
         "objects": sorted(registry["objects"].values(), key=lambda r: r.get("object_id", "")),
@@ -69,6 +70,7 @@ def build_site_data(registry: dict = None, receipts: dict = None) -> dict:
         "receipts": dict(sorted(receipts.items())),
         "profiles": profiles.build_all_profiles(registry),
         "taxonomies": loader.load_taxonomies(),
+        "bridge_candidates": bridge_projection,
         "schema_version": loader.schema_version(),
         "taxonomy_version": loader.taxonomy_version(),
     }
@@ -374,6 +376,23 @@ def _object_page(o: dict, root: str, by_source: dict, by_gov: dict, receipt_for:
                 f'{" &middot; DOI " + _e(doi) if doi else ""}</p>' + _external_links(s))
     gov_items = [_link(root, "gov", gid, f"{gid} — {by_gov[gid]['title']}" if gid in by_gov else gid) for gid in o.get("governing_refs", []) or []]
     prior = sorted(k for k in history if k.startswith(o["object_id"] + ".v"))
+    bridge_rows = []
+    for candidate in o.get("bridge_candidates", []):
+        other_id = candidate["object_b"] if candidate["object_a"] == o["object_id"] else candidate["object_a"]
+        other = candidate.get("_other")
+        other_title = other.get("title") if other else other_id
+        reasons = "; ".join(signal["evidence"] for signal in candidate.get("signals", []))
+        declared = "already represented by a declared REL-*" if candidate.get("already_declared") else "no declared REL-* represents this pair"
+        bridge_rows.append(_row([_link(root, "obj", other_id, f"{other_id} — {other_title}"),
+                                 f'<span class="status">{_e(candidate["strength"])}</span>',
+                                 _e(", ".join(candidate.get("candidate_relation_types", []))), _e(reasons), _e(declared)]))
+    bridges_html = ""
+    if bridge_rows:
+        bridges_html = f"""
+<h2>Possible structural connections</h2>
+<div class="boundary"><strong>Generated retrieval suggestion.</strong> This is not a declared research relation and does not establish scientific equivalence, shared mechanism, causation, support, or authority transfer.</div>
+{_table(["Object", "Bridge strength", "Candidate relation type(s)", "Signals", "Declared relation"], bridge_rows)}
+"""
     return f"""
 <p><span class="kind kind-obj">TIER-2 RESEARCH OBJECT</span> <span class="status">authority: {_e((o.get("authority") or {}).get("tier"))}</span></p>
 <h1>{_e(o["title"])}</h1>
@@ -411,6 +430,7 @@ def _object_page(o: dict, root: str, by_source: dict, by_gov: dict, receipt_for:
 <p class="note">Governing references constrain this record; they transfer no authority to it. This object remains Tier-2.</p>
 <h2>Relations</h2>
 {_table(["REL", "Type", "From", "To", "Notes"], rel_rows, empty="No relations declared.")}
+{bridges_html}
 <h2>Preserved previous versions</h2>
 {_list(prior)}
 <h2>Notes</h2><p>{_e(o.get("notes") or "")}</p>
@@ -599,6 +619,8 @@ def generate_site(site_dir: Path = None, registry: dict = None, receipts: dict =
     data_dir.mkdir(parents=True, exist_ok=True)
     for name in ("authors", "objects", "sources", "relations", "governing", "receipts", "profiles", "taxonomies"):
         (data_dir / f"{name}.json").write_text(json.dumps(data[name], indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    (data_dir / "bridge_candidates.json").write_text(
+        json.dumps(data["bridge_candidates"], indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     by_source = {s["source_id"]: s for s in data["sources"]}
     by_gov = {g["governing_id"]: g for g in data["governing"]}
@@ -619,6 +641,17 @@ def generate_site(site_dir: Path = None, registry: dict = None, receipts: dict =
         ident = _receipt_identity(r)
         if ident:
             receipt_for[ident] = r
+
+    objects_by_id = {o["object_id"]: o for o in data["objects"]}
+    visible_bridges_by_object = {o["object_id"]: [] for o in data["objects"]}
+    for candidate in data["bridge_candidates"]["candidates"]:
+        if candidate["strength"] not in (bridges.MEDIUM, bridges.HIGH):
+            continue
+        candidate_with_other = dict(candidate)
+        visible_bridges_by_object[candidate["object_a"]].append(
+            dict(candidate_with_other, _other=objects_by_id.get(candidate["object_b"])))
+        visible_bridges_by_object[candidate["object_b"]].append(
+            dict(candidate_with_other, _other=objects_by_id.get(candidate["object_a"])))
 
     up = "../"
     for folder in ("governing", "objects", "sources", "authors", "receipts", "relations", "timeline"):
@@ -646,8 +679,9 @@ def generate_site(site_dir: Path = None, registry: dict = None, receipts: dict =
 
     (site_dir / "objects" / "index.html").write_text(_page("Tier-2 Research", _objects_index(data, up, receipt_for), up, versions), encoding="utf-8")
     for o in data["objects"]:
+        object_for_page = dict(o, bridge_candidates=visible_bridges_by_object.get(o["object_id"], []))
         (site_dir / "objects" / f"{o['object_id']}.html").write_text(
-            _page(o["title"], _object_page(o, up, by_source, by_gov, receipt_for, relations_by_id, history), up, versions), encoding="utf-8")
+            _page(o["title"], _object_page(object_for_page, up, by_source, by_gov, receipt_for, relations_by_id, history), up, versions), encoding="utf-8")
     _axis_pages(data, up, receipt_for, site_dir, versions)
     _question_pages(data, up, receipt_for, site_dir, versions)
     timeline_rows = [_object_row(o, up, receipt_for) for o in sorted(data["objects"], key=lambda r: r.get("date", ""))]

@@ -64,6 +64,7 @@ Automated code MAY determine:
 - receipt generation;
 - registry statistics;
 - release manifests and hashes.
+- provisional structural adjacency among registered Tier-2 objects from declared registry fields for retrieval and review.
 
 Automated code SHALL NOT determine:
 
@@ -75,6 +76,9 @@ Automated code SHALL NOT determine:
 - domain-native evidentiary sufficiency;
 - whether GCD is true;
 - whether an external author agrees with Structura Reditus.
+- convert similarity or generated adjacency into scientific equivalence, shared mechanism, causation, support,
+  contradiction, reproduction, extension, authority transfer, or a durable REL-* relation without separately
+  declared evidence and review.
 
 Those burdens remain outside this engine unless a distinct governing contract explicitly supplies them.
 

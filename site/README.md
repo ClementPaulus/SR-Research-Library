@@ -34,7 +34,22 @@ Plus `authors/`, `receipts/`, `relations/`, `timeline/`, `questions/`, and per-a
 
 - `data/*.json` — registry, governing, receipt, profile, and taxonomy
   projections (`profiles.json` holds only reconstructible quantities; no
-  author score).
+  author score). `bridge_candidates.json` is a rebuildable retrieval projection,
+  not registry source data.
+
+## Connectivity levels
+
+The Library keeps three connectivity levels distinct:
+
+1. **Retrieval adjacency** — generated from shared registered structure.
+2. **Candidate relation** — a generated, explainable connection suggested for review.
+3. **Declared relation** — a durable, human-reviewed `REL-*` record.
+
+`retrieval adjacency != candidate relation != declared relation`.
+Generated bridge candidates are projections and are not part of the immutable
+research registry. They do not establish scientific equivalence, shared
+mechanism, causation, support, contradiction, reproduction, extension, or
+authority transfer.
 
 ## Retrieval axes
 

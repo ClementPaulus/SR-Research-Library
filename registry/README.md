@@ -114,3 +114,7 @@ constrain the record"; it never transfers their authority —
 
 Do not edit the generated views in `site/` as source data; regenerate them
 from the registry.
+
+Bridge candidates in `site/data/bridge_candidates.json` are generated retrieval
+and review projections. They are not `REL-*` records and never become part of
+the registry source of truth automatically.
