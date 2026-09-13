@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000017",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "A single algebraic diagnostic detects structurally identical phase transitions from quarks to the cosmic horizon",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -14,6 +16,11 @@
     "doi": "10.21203/rs.3.rs-9205902/v1",
     "url": "https://doi.org/10.21203/rs.3.rs-9205902/v1"
   },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": "Research Square",
   "links": [

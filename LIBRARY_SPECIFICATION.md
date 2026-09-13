@@ -1,7 +1,7 @@
 # Structura Reditus Research Library — Library Specification
 
 Specification version: SR-LIBRARY.v1.0.0
-Schema version: SR-SCHEMA.v0.3.0
+Schema version: SR-SCHEMA.v0.4.0
 Taxonomy version: SR-TAXONOMY.v0.2.0
 
 Governing flow:
@@ -149,10 +149,26 @@ web link.
 
 A DOI may legitimately identify an archive containing several distinct works.
 Each member work keeps its own SourceID and the shared-archive condition is
-recorded in `notes`; member works are neither collapsed into one object nor
-counted as separate DOI deposits. Alternate or disputed DOIs are preserved in
-`identifier.other`, `missingness`, and `releases/open-seams.yaml`, never
+recorded in `notes` and typed `shared_archive` in `related_dois`; member works
+are neither collapsed into one object nor counted as separate DOI deposits.
+Alternate or disputed DOIs are preserved as typed `related_dois` entries and,
+where genuinely unresolved, in `releases/open-seams.yaml`; they are never
 silently reconciled.
+
+### 3.3 Source lineage
+
+Source identity (`SRC-*`) ≠ archive concept (`concept_doi`) ≠ specific
+deposited version (`version_doi`). Source records carry `version`, `status`
+(`active` | `superseded` | `historical`), `concept_doi`, `version_doi`, typed
+`related_dois[]` (`earlier_version`, `later_version`, `alternate_record`,
+`shared_archive`, `first_edition`, `external_metadata`, `software`, `other`),
+and append-preserving `supersedes[]` / `superseded_by`. The anchoring
+`identifier.doi` must be the concept or the version DOI; the two are never
+collapsed; a superseded source is preserved with `status: superseded`. A new
+version DOI alone never creates a new source or research object: the same
+named work advances `version` (or is superseded by a new `SRC-*` that names
+the old one), and the corresponding Tier-2 object, if its library description
+changes, advances its record version with the prior state archived.
 
 ## 4. Schemas
 

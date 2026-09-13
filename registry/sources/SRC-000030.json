@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000030",
   "source_type": "historical",
+  "status": "historical",
   "title": "Generative Collapse Dynamics: Kernel, Platform, Theory, and Governance",
+  "version": "1.0",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -12,6 +14,11 @@
     "doi": "10.5281/zenodo.17090088",
     "url": "https://doi.org/10.5281/zenodo.17090088"
   },
+  "concept_doi": "10.5281/zenodo.17090087",
+  "version_doi": "10.5281/zenodo.17090088",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2025,
   "venue": "Zenodo",
   "links": [

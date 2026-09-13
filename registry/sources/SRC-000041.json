@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000041",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "Structura Reditus Publishing Protocol: Canon-facing publication, source, version, and repair discipline (SR-PUBLISHING-PROTOCOL.v1.0)",
+  "version": "SR-PUBLISHING-PROTOCOL.v1.0",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -12,6 +14,11 @@
   "identifier": {
     "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/STRUCTURA_REDITUS_PUBLISHING_GUIDANCE_v1.0.md, sha256 506d964b97add896016573f009f57464dce9c9c2e2c46df6cf502cf89d5caaab. Full text supplied to the library maintainer; not deposited in this repository."
   },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": null,
   "links": [],

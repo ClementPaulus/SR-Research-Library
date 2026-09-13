@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000046",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "Empirical Regime Auditing Under the GCD/UMCP Kernel: Contract-Frozen Calibration, Temporal Diagnostics, Typed Return, and Cross-Stream Evaluation (A Kernel for Empirical Regime Auditing, Version 2.0)",
+  "version": "2.0",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -15,6 +17,22 @@
     "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 05_COMPANION_WITNESSES/A_Kernel_for_Empirical_Regime_Auditing_v2.0.pdf, sha256 8e162d7e86811d2dfea7ccc949226d9d4c320f44a36c9ca18a364b1d8ca63b67. Full text supplied to the library maintainer; not deposited in this repository.",
     "other": "Second edition (Version 2.0, 4 September 2026) of 'A Kernel for Empirical Regime Auditing: Drift, Fidelity, Entropy, Curvature, Re-Entry, and Integrity', first edition DOI 10.5281/zenodo.16809847 (12 August 2025). The source names Liber Collapsus v2.0 (DOI 10.5281/zenodo.22310064) as its companion; the Zenodo file listing for 22310064 includes A_Kernel_for_Empirical_Regime_Auditing.pdf."
   },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [
+    {
+      "doi": "10.5281/zenodo.16809847",
+      "relation": "first_edition",
+      "notes": "First edition, 12 August 2025, preserved by the source as historical witness."
+    },
+    {
+      "doi": "10.5281/zenodo.22310064",
+      "relation": "shared_archive",
+      "notes": "Deposited alongside Liber Collapsus v2.0 per the Zenodo file listing."
+    }
+  ],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": "Zenodo",
   "links": [

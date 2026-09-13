@@ -29,7 +29,7 @@ The navigation keeps three registries visibly distinct:
   exists for it; source-only governing works are never shown with a Tier-2
   classification.
 
-Plus `authors/`, `receipts/`, `relations/`, `timeline/`, and per-axis views
+Plus `authors/`, `receipts/`, `relations/`, `timeline/`, `questions/`, and per-axis views
 `domains/`, `focus/`, `classes/`, `evidence/`, `maturity/`.
 
 - `data/*.json` — registry, governing, receipt, profile, and taxonomy
@@ -52,7 +52,7 @@ class, evidence mode, provenance, maturity, relation, source, and date.
 - `/relations/`
 - `/domains/<slug>`, `/focus/<slug>`, `/classes/<slug>`, `/evidence/<slug>`, `/maturity/<slug>`
 - `/timeline/`
-- `/questions/<slug>` — open seam (SEAM-0007), not yet generated.
+- `/questions/<slug>` — one page per normalized main question. Slug policy (SEAM-0007, closed): lower-case, Unicode normalized to ASCII, runs of non-alphanumerics → `-`, trimmed, truncated to 80 characters at a word boundary; questions that normalize identically share a page. The slug is a navigation key; the canonical question text lives on the object record.
 
 Cross-domain retrieval follows
 `FIND -> COMPARE -> EXTRACT TRANSFERABLE STRUCTURE -> REINSTANTIATE LOCALLY -> VALIDATE LOCALLY`.

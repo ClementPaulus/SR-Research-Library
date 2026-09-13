@@ -32,6 +32,15 @@ def load_open_seams(releases_dir: Path = None) -> list:
             if s.get("status") == "open"]
 
 
+def load_closed_seams(releases_dir: Path = None) -> dict:
+    """Return {seam_id: closed_by} for seams marked closed in releases/open-seams.yaml."""
+    path = (releases_dir or loader.RELEASES_DIR) / "open-seams.yaml"
+    if not path.is_file():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return {s["id"]: str(s.get("closed_by", "")).strip() for s in data.get("seams", []) if s.get("status") == "closed"}
+
+
 def _hash_directory(directory: Path) -> dict:
     """Return {relative path: sha256} for every record file in a directory tree."""
     hashes = {}
@@ -65,6 +74,12 @@ def build_release_manifest(library_version: str, open_seams: list = None,
     now = datetime.now(timezone.utc)
     if open_seams is None:
         open_seams = load_open_seams()
+    # Seam closures are attributed to the branch/PR that made them; the release records where they first appear.
+    closed = load_closed_seams()
+    previously_recorded = set()
+    for prior in loader.load_release_manifests().values():
+        previously_recorded.update((prior.get("closed_seams") or {}).keys())
+    newly_closed = sorted(sid for sid in closed if sid not in previously_recorded)
 
     ids = {
         "authors": sorted(r["author_id"] for r in registry["authors"].values() if r.get("author_id")),
@@ -102,6 +117,8 @@ def build_release_manifest(library_version: str, open_seams: list = None,
         "generated": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "timezone": "UTC",
         "open_seams": list(open_seams),
+        "closed_seams": dict(sorted(closed.items())),
+        "closures_first_recorded_in_this_release": newly_closed,
         "migration_notes": migration_notes or [],
         "hashes": hashes,
     }

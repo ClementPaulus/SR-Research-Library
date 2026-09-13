@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000035",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "Reditus & Structura Reditus: Field Constitution & Core-Object Formalization for Admissible Return Through Collapse",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -13,6 +15,11 @@
   "identifier": {
     "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 01_CANON_CONSTITUTION/Reditus_and_Structura_Reditus.pdf, sha256 4aa6a8d8f4d631e185d63c0bd50b8704e257d49437ad0e392dca0071460af0f3. Full text supplied to the library maintainer; not deposited in this repository."
   },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": null,
   "links": [],

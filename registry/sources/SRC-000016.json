@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000016",
   "source_type": "historical",
+  "status": "historical",
   "title": "UMCP CasePack Publication",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -10,6 +12,11 @@
     "doi": "10.5281/zenodo.18226878",
     "url": "https://doi.org/10.5281/zenodo.18226878"
   },
+  "concept_doi": "10.5281/zenodo.18226877",
+  "version_doi": "10.5281/zenodo.18226878",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": "Zenodo",
   "links": [

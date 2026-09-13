@@ -3,7 +3,7 @@
   "title": "Generative Collapse Dynamics (UMCP/GCD): Enabling Cross-Domain Comparability via Contract-Frozen Kernel Invariants and Typed Return",
   "source_id": "SRC-000015",
   "version": "Whitepaper — release line v2.1.5 (March 2026)",
-  "status": "active",
+  "status": "superseded",
   "governing_role": [
     "kernel-reference",
     "specification"
@@ -20,7 +20,7 @@
   "immutable_record": true,
   "active_from": "2026-09-13T04:28:50Z",
   "supersedes": null,
-  "superseded_by": null,
+  "superseded_by": "SR-GOV-000019",
   "doi": "10.5281/zenodo.18819238",
   "canonical_link": "https://doi.org/10.5281/zenodo.18819238",
   "scope": "What the framework computes: kernel ledger, typed return, recurring diagnostics (Δ = F − IC, ρ = IC/F), frozen parameters and structural constants, regime classification, seam budget, and the v2.1.5 verification summary (16 domain closures, 406 scale-ladder objects).",

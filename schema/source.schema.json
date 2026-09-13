@@ -69,6 +69,54 @@
       "items": { "type": "string", "minLength": 1 },
       "description": "Explicit list of unavailable metadata or evidence. Preserved, never silently filled."
     },
+    "version": {
+      "type": ["string", "null"],
+      "description": "Version or edition of the named work exactly as the source states it (e.g. '2.0', 'v2.1.5'). Null when the source states none."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "superseded", "historical"],
+      "default": "active",
+      "description": "active: current source state for this named work; superseded: a later source record (superseded_by) is the current state; historical: prefreeze/lineage witness kept as evidence."
+    },
+    "concept_doi": {
+      "type": ["string", "null"],
+      "pattern": "^10\\.[0-9]{4,9}/\\S+$",
+      "description": "Archive concept DOI that resolves to the latest deposited version (e.g. a Zenodo concept DOI). Source identity != archive concept != deposited version."
+    },
+    "version_doi": {
+      "type": ["string", "null"],
+      "pattern": "^10\\.[0-9]{4,9}/\\S+$",
+      "description": "DOI of the specific deposited version this record refers to."
+    },
+    "related_dois": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["doi", "relation"],
+        "properties": {
+          "doi": { "type": "string", "pattern": "^10\\.[0-9]{4,9}/\\S+$" },
+          "relation": {
+            "type": "string",
+            "enum": ["earlier_version", "later_version", "alternate_record", "shared_archive", "first_edition", "external_metadata", "software", "other"]
+          },
+          "notes": { "type": "string" }
+        }
+      },
+      "description": "Other DOIs observed for this work, each typed. Preserves lineage without collapsing concept, version, or alternate records into one identifier."
+    },
+    "supersedes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^SRC-[0-9]{6}$" },
+      "description": "Earlier source records (SRC-*) whose state this record supersedes; the earlier records are preserved."
+    },
+    "superseded_by": {
+      "type": ["string", "null"],
+      "pattern": "^SRC-[0-9]{6}$"
+    },
     "notes": { "type": "string" }
   }
 }

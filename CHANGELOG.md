@@ -4,6 +4,73 @@ All notable changes to the Structura Reditus Research Library are documented
 here. The library is versioned independently of GCD and of any other
 Structura Reditus artifact. Previous releases are never silently rewritten.
 
+## Unreleased — toward SR-LIBRARY.v1.1.0 (foundation for the corpus expansion)
+
+Additive cleanup on top of the frozen v1.0.0 release; no released manifest or
+released governing record was rewritten.
+
+### Added
+
+- Typed source lineage on `schema/source.schema.json`: `version`, `status`
+  (`active` | `superseded` | `historical`), `concept_doi`, `version_doi`,
+  typed `related_dois[]`, `supersedes[]`, `superseded_by`; enforced by
+  `check_source_lineage` (anchoring DOI must be concept or version; never
+  identical; append-preserving supersession). Populated for every Zenodo
+  source from the 2026-09-13 verification (concept vs version resolution),
+  including the whitepaper, Finite-Return Casepack, Heterogeneous Local Pass,
+  Provenance & Canon Note, Liber Collapsus, DMT, and the empirical-auditing
+  companion.
+- `check_reserved_identities`: an ObjectID on a non-accepted receipt stays
+  reserved for that submission (`SR-OBJ-000016/000017/000019`); next free
+  IDs are `SR-OBJ-000020`, `SRC-000047`, `SR-GOV-000020`.
+- `/questions/<slug>` route with the slug policy recorded on SEAM-0007.
+  Source pages show status, version, and a lineage table.
+- `SR-GOV-000019` (GCD/UMCP whitepaper) supersedes the released
+  `SR-GOV-000010` with the resolved DOI lineage; the old record is preserved
+  with `status: superseded`.
+- Liber Collapsus v2.0 (`SRC-000018`) `source_native_claims` populated from
+  the supplied full text (Axiom of Reditus, the three requirements of
+  return, idem/ipse identity, contract-before-judgment, bounded trace,
+  edition boundary).
+- `docs/MAIN_PROTECTION_RULESET.md` now names the required CI check
+  (`validate`) and gives the ruleset payload to require PRs and green checks
+  on `main`.
+
+### Changed
+
+- Schema SR-SCHEMA.v0.3.0 → SR-SCHEMA.v0.4.0 (optional source lineage fields).
+- Seams closed in place (closed_by attributes the branch/PR; the release
+  generator records where a closure first appears): SEAM-0002 and SEAM-0005
+  (site now has per-entity pages), SEAM-0007 (questions route), SEAM-0008
+  (handled by shared-archive policy), SEAM-0009 (whitepaper DOI: 18819238
+  concept/canonical; 18819239 historical version metadata only), SEAM-0010
+  (Liber canonical DOI decision only: 22310064), SEAM-0015 (SR-GOV-000014
+  active, SR-GOV-000015 candidate; status-only changes), SEAM-0018 and
+  SEAM-0019 (lineage typed on the records). New SEAM-0022 keeps the Zenodo
+  record relationship 22310064 <-> 22310544 open as a non-blocking
+  UNRESOLVED_SEAM. SEAM-0011 (Collapse Formalism DOI) stays open by design.
+- `SRC-000015` missingness no longer calls the DOI lineage unresolved;
+  `SRC-000018` stays active on 22310064 with the record relationship
+  referred to SEAM-0022. `SRC-000023` (Provenance & Canon Note):
+  `version_doi` is 17925173 (the deposit the PDF names), with 17980036 typed
+  `later_version` (the shared archive state that also carries A Geometry of
+  Admissible Seams, `SRC-000024`).
+- Release manifests now record `closed_seams` and
+  `closures_first_recorded_in_this_release`.
+- `SR-OBJ-000011` (DMT) is unchanged: `SRC-000019` resolves through its
+  concept DOI to the Version 2.0 record (22086947); no evidence that the
+  library description changed, so no record revision was issued.
+
+### Still pending for v1.1.0
+
+- Source-native claims for works whose full text is not held here
+  (Universal Collapse Diagnostics, A Geometry of Admissible Seams, The Common
+  Doorway, Collapse Calculus, the UMCP CasePack anchor, The Collapse
+  Formalism); their missingness lines remain.
+- The census corpus expansion (`SRC-000047+`, `SR-OBJ-000020+`, new
+  relations) and the v1.1.0 manifest, once sources are supplied and admitted
+  object by object.
+
 ## SR-LIBRARY.v1.0.0 — 2026-09-13
 
 First release (non-pre-release). Registry state is that of SR-LIBRARY.v0.2.0

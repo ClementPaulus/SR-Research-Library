@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000005",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "RCFT Operating System: Discovery, Candidate Maturity, and Generative Field-Hypothesis Discipline",
+  "version": "v1.0.0 (packet)",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -12,6 +14,11 @@
     "doi": "10.5281/zenodo.21212668",
     "url": "https://doi.org/10.5281/zenodo.21212668"
   },
+  "concept_doi": "10.5281/zenodo.21212667",
+  "version_doi": "10.5281/zenodo.21212668",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": "Zenodo",
   "links": [

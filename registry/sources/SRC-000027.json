@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000027",
   "source_type": "historical",
+  "status": "historical",
   "title": "Collapse Integrity Calculus",
+  "version": "v1.0",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -12,6 +14,11 @@
     "doi": "10.5281/zenodo.17518269",
     "url": "https://doi.org/10.5281/zenodo.17518269"
   },
+  "concept_doi": "10.5281/zenodo.17518268",
+  "version_doi": "10.5281/zenodo.17518269",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2025,
   "venue": "Zenodo",
   "links": [

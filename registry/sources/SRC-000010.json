@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000010",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "The Periodic Table as a Measured Object: Tier-1 Derivation from Atomic Properties in the GCD Kernel",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -14,6 +16,11 @@
     "doi": "10.5281/zenodo.19639656",
     "url": "https://doi.org/10.5281/zenodo.19639656"
   },
+  "concept_doi": "10.5281/zenodo.19639655",
+  "version_doi": "10.5281/zenodo.19639656",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": "Zenodo",
   "links": [

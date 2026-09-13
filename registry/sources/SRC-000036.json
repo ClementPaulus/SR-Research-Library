@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000036",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "Generative Collapse Dynamics: Canon Placement and the Two-Axis Architecture — Why GCD Is the Highest-Level Theoretical Acronym Inside Structura Reditus",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -12,6 +14,11 @@
   "identifier": {
     "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 01_CANON_CONSTITUTION/GCD_Canon_Placement_and_Two_Axis_Architecture.pdf, sha256 c26472bfa0ebe9145475e08f4d84c8056a92da668c59e1d7516ea458ed3ea8ad. Full text supplied to the library maintainer; not deposited in this repository."
   },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": null,
   "links": [],

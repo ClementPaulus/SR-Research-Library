@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000042",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "Structura Reditus Publishing Protocol (SR-PUBLISHING-PROTOCOL.v1.0-rc1)",
+  "version": "SR-PUBLISHING-PROTOCOL.v1.0-rc1",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -13,6 +15,11 @@
   "identifier": {
     "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/STRUCTURA_REDITUS_PUBLISHING_PROTOCOL_v1.0-rc1.md, sha256 8f1775f18d1f2fdf56a320a0ae596d6a386c177ac3be97fc8b213f3bf6f10c59. Full text supplied to the library maintainer; not deposited in this repository."
   },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": null,
   "links": [],

@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000034",
   "source_type": "historical",
+  "status": "historical",
   "title": "Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees",
+  "version": "1.0",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -10,6 +12,11 @@
     "doi": "10.5281/zenodo.16990996",
     "url": "https://doi.org/10.5281/zenodo.16990996"
   },
+  "concept_doi": "10.5281/zenodo.16990995",
+  "version_doi": "10.5281/zenodo.16990996",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2025,
   "venue": "Zenodo",
   "links": [

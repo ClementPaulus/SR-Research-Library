@@ -36,10 +36,40 @@ platform; PDFs are never stored or mirrored here.
 - Add an archive landing page only when it is known or resolvable; never
   guess full-text, code, data, or supplement URLs.
 - A DOI may anchor several member works (shared-archive DOI). Each member
-  keeps its own `SRC-*`; record the shared condition in `notes`.
-- Alternate or disputed DOIs go in `identifier.other`, `missingness`, and
-  `releases/open-seams.yaml`; they are never silently reconciled.
+  keeps its own `SRC-*`; record the shared condition in `notes` and as a
+  `shared_archive` entry in `related_dois`.
+- Alternate, earlier, or disputed DOIs are typed entries in `related_dois`
+  (see *Source lineage* below); only genuinely unresolved identity questions
+  go to `releases/open-seams.yaml`. Nothing is silently reconciled.
 - Link failure never deletes a source. DOI identity survives a broken link.
+
+### Source lineage (source identity ≠ archive concept ≠ deposited version)
+
+Every source may carry typed lineage instead of pushing DOI history into
+`notes`/`missingness`:
+
+| Field | Meaning |
+|---|---|
+| `version` | version/edition exactly as the source states it, or `null` |
+| `status` | `active` (current state of the named work), `superseded` (see `superseded_by`), `historical` (prefreeze/lineage witness) |
+| `concept_doi` | archive concept DOI (resolves to the latest deposited version) |
+| `version_doi` | DOI of the specific deposited version this record refers to |
+| `related_dois[]` | other observed DOIs, each typed: `earlier_version`, `later_version`, `alternate_record`, `shared_archive`, `first_edition`, `external_metadata`, `software`, `other` |
+| `supersedes[]` / `superseded_by` | append-preserving supersession between source records |
+
+`identifier.doi` (the anchoring DOI) must equal `concept_doi` or
+`version_doi` when either is set; concept and version DOIs are never
+collapsed; a superseded source stays in the registry with `status:
+superseded` and `superseded_by` set. `check_source_lineage` enforces this.
+
+### Reserved identifiers
+
+An ObjectID named on a RETURNED_FOR_REPAIR or REJECTED receipt stays
+reserved for that submission (its receipt and archived submission are
+historical identity). It is registered only by re-admitting the same work;
+it is never reassigned. Currently reserved: `SR-OBJ-000016`, `SR-OBJ-000017`,
+`SR-OBJ-000019`. The next free identifiers are therefore `SR-OBJ-000020`,
+`SRC-000047`, `SR-GOV-000020`, `REL-000004`, `RCPT-000023`.
 
 ## Governing references
 

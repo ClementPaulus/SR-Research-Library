@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000031",
   "source_type": "historical",
+  "status": "historical",
   "title": "The Episteme Construction",
+  "version": "v1.0.2",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -13,6 +15,11 @@
     "doi": "10.5281/zenodo.17189775",
     "url": "https://doi.org/10.5281/zenodo.17189775"
   },
+  "concept_doi": "10.5281/zenodo.17189775",
+  "version_doi": "10.5281/zenodo.17220771",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2025,
   "venue": "Zenodo",
   "links": [

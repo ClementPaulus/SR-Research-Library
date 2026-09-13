@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000044",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "GCD / UMCP — Entering the Corpus: Ingress, Publication Architecture, and Guided Routes",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -12,6 +14,11 @@
   "identifier": {
     "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 04_INGRESS_CONTACT/Ingress_Publication_Architecture_and_Guided_Routes.pdf, sha256 61deb14712bfae3ac6a023b3bd3a3c9d1b58c3b55fa0ec3640a0afbe35257bb4. Full text supplied to the library maintainer; not deposited in this repository."
   },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": null,
   "links": [],

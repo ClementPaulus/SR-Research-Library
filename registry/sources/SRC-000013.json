@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000013",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "The First Finite-Return Casepack: A Worked Case Showing Finite Re-Entry Under a Frozen Grammar",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -13,6 +15,17 @@
     "doi": "10.5281/zenodo.19869494",
     "url": "https://doi.org/10.5281/zenodo.19869494"
   },
+  "concept_doi": "10.5281/zenodo.19703022",
+  "version_doi": "10.5281/zenodo.19869494",
+  "related_dois": [
+    {
+      "doi": "10.5281/zenodo.19703023",
+      "relation": "earlier_version",
+      "notes": "Version record dated 2026-04-22 under the same concept (SEAM-0018)."
+    }
+  ],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": "Zenodo",
   "links": [
@@ -30,8 +43,7 @@
     }
   ],
   "missingness": [
-    "Zenodo record title is the short form \"The First Finite-Return Casepack\".",
-    "Earlier version DOI 10.5281/zenodo.19703023 (2026-04-22) exists under the same Zenodo concept 10.5281/zenodo.19703022 as the listed DOI 10.5281/zenodo.19869494 (2026-04-28); archive lineage preserved, see SEAM-0018."
+    "Zenodo record title is the short form \"The First Finite-Return Casepack\"."
   ],
   "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19869494 is a version DOI; resolved record 19869494, record title \"The First Finite-Return Casepack\", creators ['Paulus, Clement'], publication date 2026-04-28, resource type Report."
 }

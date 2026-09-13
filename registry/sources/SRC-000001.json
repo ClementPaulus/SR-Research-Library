@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000001",
   "source_type": "corpus-native",
+  "status": "active",
   "title": "Summa Reditus: A Complete Treatise on Admissible Return Through Collapse",
+  "version": "Architecture Freeze v1.0",
   "source_authors": [
     "Clement Paulus"
   ],
@@ -14,6 +16,11 @@
     "doi": "10.5281/zenodo.20653105",
     "url": "https://doi.org/10.5281/zenodo.20653105"
   },
+  "concept_doi": "10.5281/zenodo.20649886",
+  "version_doi": "10.5281/zenodo.20653105",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2026,
   "venue": "Zenodo",
   "links": [

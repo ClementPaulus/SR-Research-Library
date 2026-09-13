@@ -1,7 +1,9 @@
 {
   "source_id": "SRC-000020",
   "source_type": "historical",
+  "status": "historical",
   "title": "The Physics of Coherence: Recursive Collapse & Continuity Laws",
+  "version": null,
   "source_authors": [
     "Clement Paulus"
   ],
@@ -13,6 +15,11 @@
     "doi": "10.5281/zenodo.18072852",
     "url": "https://doi.org/10.5281/zenodo.18072852"
   },
+  "concept_doi": "10.5281/zenodo.18072852",
+  "version_doi": "10.5281/zenodo.18111558",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
   "publication_year": 2025,
   "venue": "Zenodo",
   "links": [
