@@ -4,6 +4,33 @@ All notable changes to the Structura Reditus Research Library are documented
 here. The library is versioned independently of GCD and of any other
 Structura Reditus artifact. Previous releases are never silently rewritten.
 
+## Unreleased
+
+Unified the two implementation branches
+(`copilot/build-initial-implementation` and
+`copilot/create-structura-reditus-library`) into a single library.
+
+### Added
+
+- `python -m validators.admit --register`: places an ACCEPTED record into
+  `registry/objects/`, archiving any previously registered version to
+  `registry/objects/history/` first. Non-accepted records are never
+  registered.
+- `taxonomy/extensions.yaml`: machine-readable record of every taxonomy term
+  proposal and its outcome (EXT-0001–EXT-0006).
+- `releases/open-seams.yaml`: tracked open seams (SEAM-0001–SEAM-0007),
+  copied into release manifests.
+- `registry/README.md` and `site/README.md` describing the source of truth
+  and the generated projection (including the site route-family contract).
+- Tests for registration, extension-record consistency, and seam records.
+
+### Changed
+
+- Taxonomy SR-TAXONOMY.v0.1.0 → SR-TAXONOMY.v0.2.0: added domains
+  `systems-theory`, `cognitive-science`, `social-science`; added publication
+  states `draft`, `internal`, `archived`. No existing terms removed or
+  redefined.
+
 ## SR-LIBRARY.v0.1.0 — 2026-09-13 (pre-release)
 
 First working implementation.

@@ -1,6 +1,13 @@
 # Structura Reditus Research Library
 
-**SR-LIBRARY.v0.1.0 (pre-release)** · Schema SR-SCHEMA.v0.1.0 · Taxonomy SR-TAXONOMY.v0.1.0
+**SR-LIBRARY.v0.1.0 (pre-release)** · Schema SR-SCHEMA.v0.1.0 · Taxonomy SR-TAXONOMY.v0.2.0
+
+Governing flow:
+
+```
+IDENTIFY -> REGISTER -> CLASSIFY -> RELATE -> VALIDATE RECORD
+         -> ACCEPT / RETURN FOR REPAIR / REJECT -> RETRIEVE
+```
 
 ## What the Research Library is
 
@@ -57,11 +64,12 @@ any historical GCD release.
 ```
 schema/       JSON Schemas for authors, objects, sources, relations, receipts
 taxonomy/     Controlled taxonomies for all main classification axes
+              (+ extensions.yaml: record of every term proposal and outcome)
 registry/     THE SOURCE OF TRUTH: authors, objects (+history), sources, relations
 receipts/     Admission receipts: accepted/, repair/, rejected/
 validators/   Validation, admission gates, receipts, profiles, manifests, site
 tests/        Test suite (pytest)
-releases/     Release manifests
+releases/     Release manifests (manifests/) and open-seams.yaml
 site/         Public library surface, generated from the registry
 examples/     Synthetic example submissions and receipts (explicitly synthetic)
 ```
@@ -75,7 +83,11 @@ examples/     Synthetic example submissions and receipts (explicitly synthetic)
    using controlled taxonomy values for every classification axis.
 5. Run the validators locally: `python -m validators.validate`.
 6. Evaluate admission: `python -m validators.admit path/to/object.json`.
-7. Submit the record (pull request adding files under `registry/`).
+   Add `--write` to store the receipt and `--register` to place an ACCEPTED
+   record into `registry/objects/` (prior versions are archived, never
+   overwritten).
+7. Submit the record (pull request adding files under `registry/` and
+   `receipts/`).
 
 Exact steps are in [CONTRIBUTING.md](CONTRIBUTING.md). The full contract is
 in [LIBRARY_SPECIFICATION.md](LIBRARY_SPECIFICATION.md).
@@ -151,12 +163,19 @@ rewritten.
 
 ## Proposing taxonomy additions
 
-Controlled taxonomies live in `taxonomy/*.yaml`. To propose a term, open a
-pull request that adds the term (id, label, optional description) to the
-relevant taxonomy file and bumps `taxonomy/VERSION`, with a short rationale
-stating what existing terms fail to cover. Existing terms are never silently
+Controlled taxonomies live in `taxonomy/*.yaml`. To propose a term, record
+the proposal in `taxonomy/extensions.yaml` (term, definition, why existing
+terms are insufficient, nearest terms, examples, ambiguity risk,
+backward-compatibility effect), then open a pull request that adds the term
+(id, label, optional description) to the relevant taxonomy file and bumps
+`taxonomy/VERSION`. Existing terms are never silently
 removed or redefined; superseded terms are deprecated in place. See
 [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Open seams
+
+Unresolved contract decisions are tracked in `releases/open-seams.yaml` and
+copied into each release manifest. Seams are closed in place, never deleted.
 
 ## Running locally
 
@@ -166,7 +185,7 @@ tests):
 ```
 pip install jsonschema pyyaml pytest
 python -m validators.validate          # validate the registry
-python -m validators.admit FILE        # evaluate an admission (add --write to store receipts)
+python -m validators.admit FILE        # evaluate an admission (--write stores receipts, --register registers ACCEPTED records)
 python -m validators.build_site        # regenerate site/ from the registry
 python -m validators.release VERSION   # write a release manifest
 python -m pytest tests/               # run the test suite

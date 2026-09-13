@@ -1,0 +1,33 @@
+# Structura Reditus Research Library — Open seams.
+# Unresolved decisions that the library contract has not yet closed. Seams are
+# copied into each release manifest; closed seams are kept here with status
+# `closed` and the version that closed them, never deleted.
+seams:
+  - id: SEAM-0001
+    area: registry
+    description: Registry contains no research objects, sources, or relations yet; no actual source metadata was supplied, and records are never fabricated or bulk-populated.
+    status: open
+  - id: SEAM-0002
+    area: site
+    description: The public surface is a minimal static generated page; per-entity and per-axis route families (see site/README.md) remain to be built.
+    status: open
+  - id: SEAM-0003
+    area: receipts
+    description: Receipt IDs are allocated sequentially from the receipts/ tree; a concurrent-submission allocation policy is not yet declared.
+    status: open
+  - id: SEAM-0004
+    area: taxonomy
+    description: Taxonomy deprecation is documented (deprecate-in-place) but no machine-readable `deprecated` flag exists yet in taxonomy files.
+    status: open
+  - id: SEAM-0005
+    area: profiles
+    description: Author-profile output is exposed via site/data/profiles.json only; no dedicated per-author pages exist yet.
+    status: open
+  - id: SEAM-0006
+    area: taxonomy.domains
+    description: Whether the domain list should be expanded further before first external submission intake.
+    status: open
+  - id: SEAM-0007
+    area: site.questions-routing
+    description: Final question slug normalization and canonicalization policy.
+    status: open

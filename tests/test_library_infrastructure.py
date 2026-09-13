@@ -8,8 +8,9 @@ import json
 
 import jsonschema
 import pytest
+import yaml
 
-from validators import loader, manifest, profiles, sitegen
+from validators import admit, loader, manifest, profiles, sitegen
 
 
 def test_external_source_attribution_preservation(base_registry, schemas):
@@ -64,6 +65,81 @@ def test_historical_version_preservation(tmp_path, synthetic_object):
 
     # Re-archiving identical content is a no-op, not a rewrite.
     assert loader.archive_object_version(copy.deepcopy(v1), registry_dir) == path_v1
+
+
+def test_register_object_preserves_previous_version(tmp_path, synthetic_object):
+    """Registering a new version archives the prior state; same-version rewrites fail."""
+    registry_dir = tmp_path / "registry"
+
+    v1 = copy.deepcopy(synthetic_object)
+    path = admit.register_object(v1, registry_dir)
+    assert path == registry_dir / "objects" / "SR-OBJ-000001.json"
+    assert json.loads(path.read_text(encoding="utf-8")) == v1
+    assert loader.load_object_history(registry_dir) == {}
+
+    # Identical re-registration is a no-op.
+    assert admit.register_object(copy.deepcopy(v1), registry_dir) == path
+
+    # Same version, different content: never silently rewritten.
+    conflicting = copy.deepcopy(v1)
+    conflicting["title"] = "Silently rewritten title (synthetic)"
+    with pytest.raises(FileExistsError):
+        admit.register_object(conflicting, registry_dir)
+
+    v2 = copy.deepcopy(v1)
+    v2["version"] = "0.2.0"
+    admit.register_object(v2, registry_dir)
+    assert json.loads(path.read_text(encoding="utf-8"))["version"] == "0.2.0"
+    history = loader.load_object_history(registry_dir)
+    assert list(history) == ["SR-OBJ-000001.v0.1.0.json"]
+    assert history["SR-OBJ-000001.v0.1.0.json"] == v1
+
+
+def test_admit_cli_registers_only_accepted(tmp_path, monkeypatch, synthetic_object, capsys):
+    registry_dir = tmp_path / "registry"
+    monkeypatch.setattr(loader, "REGISTRY_DIR", registry_dir)
+    real_registry = loader.load_registry(loader.REPO_ROOT / "registry")
+    monkeypatch.setattr(loader, "load_registry", lambda registry_dir=None: real_registry)
+
+    accepted = copy.deepcopy(synthetic_object)
+    accepted["source_ids"], accepted["relations"] = [], []
+    accepted_path = tmp_path / "accepted.json"
+    accepted_path.write_text(json.dumps(accepted), encoding="utf-8")
+    assert admit.main([str(accepted_path), "--register"]) == 0
+    assert (registry_dir / "objects" / "SR-OBJ-000001.json").exists()
+
+    repair = copy.deepcopy(accepted)
+    repair["object_id"] = "SR-OBJ-000002"
+    del repair["main_question"]
+    repair_path = tmp_path / "repair.json"
+    repair_path.write_text(json.dumps(repair), encoding="utf-8")
+    assert admit.main([str(repair_path), "--register"]) == 1
+    assert not (registry_dir / "objects" / "SR-OBJ-000002.json").exists()
+    assert "Not registered: decision is RETURNED_FOR_REPAIR" in capsys.readouterr().out
+
+
+def test_taxonomy_extension_record_matches_taxonomies(taxonomies):
+    """Every accepted extension is present in its taxonomy; no proposal is applied early."""
+    data = yaml.safe_load((loader.TAXONOMY_DIR / "extensions.yaml").read_text(encoding="utf-8"))
+    ids = [e["id"] for e in data["extensions"]]
+    assert len(ids) == len(set(ids))
+    for ext in data["extensions"]:
+        assert ext["decision"] in ("proposed", "accepted", "rejected", "deprecated")
+        present = ext["term"] in taxonomies[ext["taxonomy"]]
+        if ext["decision"] == "accepted":
+            assert present, f"{ext['id']} accepted but {ext['term']} missing from {ext['taxonomy']}"
+            assert ext["version_introduced"]
+        elif ext["decision"] in ("proposed", "rejected"):
+            assert not present, f"{ext['id']} is {ext['decision']} but already in taxonomy"
+
+
+def test_open_seams_are_well_formed():
+    data = yaml.safe_load((loader.RELEASES_DIR / "open-seams.yaml").read_text(encoding="utf-8"))
+    ids = [s["id"] for s in data["seams"]]
+    assert len(ids) == len(set(ids))
+    for seam in data["seams"]:
+        assert seam["status"] in ("open", "closed")
+        assert seam["area"] and seam["description"]
 
 
 def test_author_profile_reconstructible_quantities(base_registry, synthetic_object):

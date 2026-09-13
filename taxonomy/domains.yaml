@@ -21,6 +21,8 @@ terms:
     label: Neuroscience
   - id: psychology
     label: Psychology
+  - id: cognitive-science
+    label: Cognitive science
   - id: linguistics
     label: Linguistics
   - id: computer-science
@@ -35,6 +37,8 @@ terms:
     label: Economics
   - id: sociology
     label: Sociology
+  - id: social-science
+    label: Social science
   - id: history
     label: History
   - id: philosophy
@@ -43,6 +47,8 @@ terms:
     label: Education
   - id: arts
     label: Arts
+  - id: systems-theory
+    label: Systems theory
   - id: interdisciplinary
     label: Interdisciplinary
     description: Work whose primary domain cannot be reduced to a single listed domain.

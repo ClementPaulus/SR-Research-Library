@@ -5,9 +5,8 @@ from __future__ import annotations
 import copy
 
 import jsonschema
-import pytest
 
-from validators import gates, loader, receipts
+from validators import gates, receipts
 
 
 def evaluate(record, registry, schemas, taxonomies):

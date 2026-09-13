@@ -105,9 +105,12 @@ python -m pytest tests/          # full test suite
 2. Run the validators (§5) until clean.
 3. Evaluate admission locally:
    `python -m validators.admit path/to/SR-OBJ-NNNNNN.json`
-   (add `--write` to store the receipt under `receipts/`).
-4. Open a pull request containing the registry files and the generated
-   receipt.
+   (add `--write` to store the receipt under `receipts/`, and `--register`
+   to place an ACCEPTED record into `registry/objects/`; any previously
+   registered version is archived to `registry/objects/history/` first).
+4. Regenerate the public projection: `python -m validators.build_site`.
+5. Open a pull request containing the registry files, the generated
+   receipt, and the regenerated `site/`.
 
 ## 7. Interpreting admission receipts
 
@@ -145,15 +148,27 @@ python -m pytest tests/          # full test suite
 
 ## 9. Proposing taxonomy changes
 
-1. Open a pull request that edits the relevant `taxonomy/*.yaml` file:
+1. Record the proposal in `taxonomy/extensions.yaml` with the next `EXT-NNNN`
+   id: term, taxonomy, definition, why existing terms are insufficient,
+   nearest existing terms, examples, ambiguity risk, backward-compatibility
+   effect, and `decision: proposed`.
+2. Open a pull request that edits the relevant `taxonomy/*.yaml` file:
    - **Adding a term**: append `id`, `label`, and an optional `description`,
-     plus a rationale in the PR stating what existing terms fail to cover.
+     and set the extension record to `decision: accepted` with
+     `version_introduced`.
    - **Deprecating a term**: keep the term in place and add a
      `description` note marking it deprecated and naming its replacement.
      Terms are never silently removed or redefined, because historical
      records reference them.
-2. Bump `taxonomy/VERSION` (e.g. `SR-TAXONOMY.v0.1.0` → `SR-TAXONOMY.v0.2.0`).
-3. Run `python -m pytest tests/` — existing registry records must still
-   validate.
-4. Taxonomy changes are recorded in release manifests; they are part of the
+3. Bump `taxonomy/VERSION` (e.g. `SR-TAXONOMY.v0.2.0` → `SR-TAXONOMY.v0.3.0`).
+4. Run `python -m pytest tests/` — existing registry records must still
+   validate, and every `accepted` extension must be present in its taxonomy.
+5. Taxonomy changes are recorded in release manifests; they are part of the
    library's preserved history.
+
+## 10. Recording open seams
+
+When a contract decision cannot yet be closed, add a `SEAM-NNNN` entry to
+`releases/open-seams.yaml` (area, description, `status: open`). When it is
+closed, set `status: closed` in place; seams are never deleted. Seams are
+copied into the next release manifest.

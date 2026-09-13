@@ -2,7 +2,10 @@
 
 Specification version: SR-LIBRARY.v0.1.0 (pre-release)
 Schema version: SR-SCHEMA.v0.1.0
-Taxonomy version: SR-TAXONOMY.v0.1.0
+Taxonomy version: SR-TAXONOMY.v0.2.0
+
+Governing flow:
+`IDENTIFY -> REGISTER -> CLASSIFY -> RELATE -> VALIDATE RECORD -> ACCEPT / RETURN FOR REPAIR / REJECT -> RETRIEVE`
 
 ## 1. Object and placement
 
@@ -73,6 +76,13 @@ The public surface under `site/` is **generated from** the registry
 (`python -m validators.build_site`) and is never a second independent
 database.
 
+An ACCEPTED record enters the registry through
+`python -m validators.admit <record> --register`, which archives any
+previously registered version of the same object to
+`registry/objects/history/` before writing the new state. A registered state
+is never rewritten at the same version; RETURNED_FOR_REPAIR and REJECTED
+records are never registered.
+
 ## 4. Schemas
 
 JSON Schema (draft 2020-12) validation exists for authors, objects, sources,
@@ -97,6 +107,13 @@ values for:
 
 Free-text explanatory fields supplement controlled values; they never replace
 them.
+
+Every proposal to add or deprecate a controlled term is recorded in
+`taxonomy/extensions.yaml` (term, taxonomy, definition, insufficiency of
+existing terms, nearest terms, examples, ambiguity risk,
+backward-compatibility effect, decision, version introduced). A term enters a
+taxonomy file only once its extension record is `accepted`, and
+`taxonomy/VERSION` is bumped with it.
 
 ### 5.1 Tier-2 primary classes
 
@@ -297,6 +314,11 @@ version; author count; object count; source count; relation count; receipt
 count; manifest of IDs; date/timezone; open seams; migration notes; and
 SHA-256 hashes of schema, taxonomy, and registry files. Previous releases are
 never silently rewritten.
+
+Unresolved contract decisions are tracked as seams in
+`releases/open-seams.yaml` (`SEAM-NNNN`, area, description, status) and
+copied into each release manifest. Closed seams remain in the file with
+status `closed`; they are never deleted.
 
 ## 16. Admission authority exclusions
 

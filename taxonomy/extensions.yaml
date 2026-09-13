@@ -1,0 +1,83 @@
+# Structura Reditus Research Library — Taxonomy extension record.
+# Every proposal to add or deprecate a controlled term is recorded here, with
+# its outcome, before the term is added to a taxonomy file. See CONTRIBUTING.md §9.
+#
+# Each entry:
+#   id: EXT-NNNN
+#   taxonomy: <taxonomy name>
+#   term: <proposed term id>
+#   definition: <one-sentence definition>
+#   insufficiency: <why existing terms do not cover it>
+#   nearest_terms: [<existing term ids>]
+#   examples: [<short examples>]
+#   ambiguity_risk: <how the term could be confused>
+#   backward_compatibility: <effect on existing records>
+#   decision: proposed | accepted | rejected | deprecated
+#   version_introduced: <SR-TAXONOMY version, once accepted>
+extensions:
+  - id: EXT-0001
+    taxonomy: domains
+    term: systems-theory
+    definition: Work whose primary domain is the study of systems, feedback, and organization in general.
+    insufficiency: Not reducible to a single listed discipline; interdisciplinary is too broad.
+    nearest_terms: [interdisciplinary, structura-reditus-core]
+    examples: [general systems theory, cybernetics]
+    ambiguity_risk: Overlap with structura-reditus-core for field-internal work; core work stays in structura-reditus-core.
+    backward_compatibility: Additive; no existing records affected.
+    decision: accepted
+    version_introduced: SR-TAXONOMY.v0.2.0
+  - id: EXT-0002
+    taxonomy: domains
+    term: cognitive-science
+    definition: Interdisciplinary study of mind and cognition spanning psychology, neuroscience, linguistics, and computation.
+    insufficiency: Work that spans psychology and neuroscience has no single primary home.
+    nearest_terms: [psychology, neuroscience, linguistics]
+    examples: [computational models of cognition]
+    ambiguity_risk: Overlap with psychology and neuroscience; use the narrower term when it applies.
+    backward_compatibility: Additive; no existing records affected.
+    decision: accepted
+    version_introduced: SR-TAXONOMY.v0.2.0
+  - id: EXT-0003
+    taxonomy: domains
+    term: social-science
+    definition: Study of societies and social relationships not reducible to sociology or economics alone.
+    insufficiency: Cross-cutting social research had no primary home other than interdisciplinary.
+    nearest_terms: [sociology, economics, psychology]
+    examples: [political science, anthropology]
+    ambiguity_risk: Overlap with sociology; use sociology when the work is sociological.
+    backward_compatibility: Additive; no existing records affected.
+    decision: accepted
+    version_introduced: SR-TAXONOMY.v0.2.0
+  - id: EXT-0004
+    taxonomy: publication_states
+    term: draft
+    definition: Work in active preparation that has not been circulated.
+    insufficiency: unpublished did not distinguish in-progress drafts from finished but unpublished work.
+    nearest_terms: [unpublished]
+    examples: [working draft registered for early relation tracking]
+    ambiguity_risk: Boundary with unpublished; draft implies the work is still changing.
+    backward_compatibility: Additive; no existing records affected.
+    decision: accepted
+    version_introduced: SR-TAXONOMY.v0.2.0
+  - id: EXT-0005
+    taxonomy: publication_states
+    term: internal
+    definition: Circulated only within a bounded group, with no public publication event.
+    insufficiency: No existing state described internally circulated work.
+    nearest_terms: [unpublished, registered-only]
+    examples: [internal technical report]
+    ambiguity_risk: Boundary with registered-only; internal implies circulation outside the library.
+    backward_compatibility: Additive; no existing records affected.
+    decision: accepted
+    version_introduced: SR-TAXONOMY.v0.2.0
+  - id: EXT-0006
+    taxonomy: publication_states
+    term: archived
+    definition: Deposited in a stable archive without a formal publication venue.
+    insufficiency: Archive deposits are neither preprints nor published works.
+    nearest_terms: [preprint, published]
+    examples: [institutional repository deposit]
+    ambiguity_risk: Boundary with preprint; archived implies no intent to publish elsewhere.
+    backward_compatibility: Additive; no existing records affected.
+    decision: accepted
+    version_introduced: SR-TAXONOMY.v0.2.0

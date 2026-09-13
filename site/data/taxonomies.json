@@ -8,6 +8,7 @@
     "medicine",
     "neuroscience",
     "psychology",
+    "cognitive-science",
     "linguistics",
     "computer-science",
     "engineering",
@@ -15,10 +16,12 @@
     "ecology",
     "economics",
     "sociology",
+    "social-science",
     "history",
     "philosophy",
     "education",
     "arts",
+    "systems-theory",
     "interdisciplinary"
   ],
   "focuses": [
@@ -111,9 +114,12 @@
     "unresolved_relation"
   ],
   "publication_states": [
+    "draft",
     "unpublished",
+    "internal",
     "preprint",
     "published",
+    "archived",
     "registered-only",
     "withdrawn",
     "unknown"

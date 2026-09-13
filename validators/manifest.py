@@ -14,7 +14,19 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+import yaml
+
 from . import loader
+
+
+def load_open_seams(releases_dir: Path = None) -> list:
+    """Return the descriptions of seams still marked open in releases/open-seams.yaml."""
+    path = (releases_dir or loader.RELEASES_DIR) / "open-seams.yaml"
+    if not path.is_file():
+        return []
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return [f"{s['id']}: {s['description']}" for s in data.get("seams", [])
+            if s.get("status") == "open"]
 
 
 def _hash_directory(directory: Path) -> dict:
@@ -40,9 +52,15 @@ def _count_receipts(receipts_dir: Path) -> int:
 
 def build_release_manifest(library_version: str, open_seams: list = None,
                            migration_notes: list = None, prerelease: bool = True) -> dict:
-    """Build a release manifest from the current registry state."""
+    """Build a release manifest from the current registry state.
+
+    When ``open_seams`` is None, the seams marked open in
+    ``releases/open-seams.yaml`` are used.
+    """
     registry = loader.load_registry()
     now = datetime.now(timezone.utc)
+    if open_seams is None:
+        open_seams = load_open_seams()
 
     ids = {
         "authors": sorted(r["author_id"] for r in registry["authors"].values() if r.get("author_id")),
@@ -69,7 +87,7 @@ def build_release_manifest(library_version: str, open_seams: list = None,
         "id_manifest": ids,
         "generated": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "timezone": "UTC",
-        "open_seams": open_seams or [],
+        "open_seams": list(open_seams),
         "migration_notes": migration_notes or [],
         "hashes": hashes,
     }

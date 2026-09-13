@@ -2,12 +2,21 @@
 # Publication status carries no admission authority. It is descriptive metadata only.
 taxonomy: publication_states
 terms:
+  - id: draft
+    label: Draft
+    description: In active preparation; not yet circulated.
   - id: unpublished
     label: Unpublished
+  - id: internal
+    label: Internal
+    description: Circulated only within a bounded group; no public publication event.
   - id: preprint
     label: Preprint
   - id: published
     label: Published
+  - id: archived
+    label: Archived
+    description: Deposited in a stable archive without a formal publication venue.
   - id: registered-only
     label: Registered only
     description: Registered in the library without an external publication event.
