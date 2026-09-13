@@ -130,5 +130,15 @@
     "ulrc",
     "cross-system",
     "none"
+  ],
+  "missingness_classes": [
+    "NON_BLOCKING",
+    "EVALUABILITY_BLOCKING",
+    "CONTRACT_VIOLATING",
+    "AUTHORITY_BOUNDARY",
+    "SOURCE_BOUNDARY",
+    "PUBLICATION_BOUNDARY",
+    "REPAIRABLE",
+    "UNRESOLVED_SEAM"
   ]
 }

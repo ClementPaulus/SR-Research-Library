@@ -1,0 +1,27 @@
+name: Taxonomy extension
+about: Propose a controlled taxonomy term
+body:
+  - type: input
+    id: taxonomy
+    attributes:
+      label: Taxonomy
+    validations:
+      required: true
+  - type: input
+    id: term
+    attributes:
+      label: Proposed term
+    validations:
+      required: true
+  - type: textarea
+    id: definition
+    attributes:
+      label: Definition and need
+    validations:
+      required: true
+  - type: textarea
+    id: nearest
+    attributes:
+      label: Nearest existing terms and ambiguity risk
+    validations:
+      required: true

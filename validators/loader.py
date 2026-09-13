@@ -32,18 +32,17 @@ TAXONOMY_FILES = {
     "relation_types": "relation_types.yaml",
     "publication_states": "publication_states.yaml",
     "functional_loci": "functional_loci.yaml",
+    "missingness_classes": "missingness_classes.yaml",
 }
 
-MISSINGNESS_CLASSES = [
-    "NON_BLOCKING",
-    "EVALUABILITY_BLOCKING",
-    "CONTRACT_VIOLATING",
-    "AUTHORITY_BOUNDARY",
-    "SOURCE_BOUNDARY",
-    "PUBLICATION_BOUNDARY",
-    "REPAIRABLE",
-    "UNRESOLVED_SEAM",
-]
+
+def _taxonomy_terms(filename: str) -> list:
+    data = yaml.safe_load((TAXONOMY_DIR / filename).read_text(encoding="utf-8"))
+    return [term["id"] for term in data.get("terms", [])]
+
+
+# Controlled in taxonomy/missingness_classes.yaml; loaded once at import.
+MISSINGNESS_CLASSES = _taxonomy_terms("missingness_classes.yaml")
 
 DECISIONS = ["ACCEPTED", "RETURNED_FOR_REPAIR", "REJECTED"]
 

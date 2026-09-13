@@ -21,3 +21,12 @@ Regenerate a receipt for any submission with:
 ```
 python -m validators.admit examples/submissions/example-accepted.json
 ```
+
+## Object template
+
+`OBJECT_TEMPLATE.json` is a blank record with every field required by
+`schema/object.schema.json`. Copy it, allocate the next `SR-OBJ-NNNNNN`
+identifier, fill every field from actual records (controlled values come from
+`taxonomy/*.yaml`), declare unavailable information in `missingness` rather
+than guessing, and evaluate it with `python -m validators.admit`. The
+template itself is not a registered object.

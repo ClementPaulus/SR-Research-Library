@@ -94,10 +94,14 @@ The AuthorID is stable for life; contribution history changes around it.
 ## 5. Running validators locally
 
 ```
-pip install jsonschema pyyaml pytest
+pip install -r requirements-dev.txt
 python -m validators.validate    # all registry checks; exits non-zero on issues
 python -m pytest tests/          # full test suite
 ```
+
+The same checks run in CI (`.github/workflows/validate.yml`) on every pull
+request and push to `main`; `main` should be protected as described in
+[docs/MAIN_PROTECTION_RULESET.md](docs/MAIN_PROTECTION_RULESET.md).
 
 ## 6. Submitting work
 

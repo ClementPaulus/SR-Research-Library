@@ -1,0 +1,29 @@
+# Structura Reditus Research Library — Controlled taxonomy: missingness classes.
+# Used by admission Gate E and by validators. Classes describe the structural
+# status of a declared gap; they never judge the research claim.
+taxonomy: missingness_classes
+terms:
+  - id: NON_BLOCKING
+    label: Non-blocking
+    description: Declared gap that does not affect evaluability; recorded on the receipt.
+  - id: EVALUABILITY_BLOCKING
+    label: Evaluability blocking
+    description: Gap that prevents a gate from being evaluated; returns the object for repair.
+  - id: CONTRACT_VIOLATING
+    label: Contract violating
+    description: Gap that violates the active library contract; rejects the object.
+  - id: AUTHORITY_BOUNDARY
+    label: Authority boundary
+    description: Gap that lies outside the object's declared authority; non-blocking, preserved.
+  - id: SOURCE_BOUNDARY
+    label: Source boundary
+    description: Gap that the object's sources cannot establish; non-blocking, preserved.
+  - id: PUBLICATION_BOUNDARY
+    label: Publication boundary
+    description: Gap arising from publication state; non-blocking, preserved.
+  - id: REPAIRABLE
+    label: Repairable
+    description: Gap that can be supplied for the same object; returns the object for repair.
+  - id: UNRESOLVED_SEAM
+    label: Unresolved seam
+    description: Gap tied to an open contract seam; non-blocking, preserved and tracked.

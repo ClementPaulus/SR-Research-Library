@@ -8,10 +8,21 @@ Structura Reditus artifact. Previous releases are never silently rewritten.
 
 Unified the two implementation branches
 (`copilot/build-initial-implementation` and
-`copilot/create-structura-reditus-library`) into a single library.
+`copilot/create-structura-reditus-library`) and the uploaded
+`SR-LIBRARY.v0.1.0-rc1` engine package into a single library.
 
 ### Added
 
+- Full governing specification `docs/SR-RESEARCH-LIBRARY-SPEC.v0.1.md`,
+  `ENGINE_CONTRACT.md`, and `docs/` (identifiers, receipts, main-branch
+  protection ruleset) from the rc1 engine package; the package itself is
+  preserved under `releases/archive/`.
+- CI workflow (`.github/workflows/validate.yml`), pull-request template, and
+  taxonomy-extension issue form; `pyproject.toml`, `requirements*.txt`.
+- `taxonomy/missingness_classes.yaml`: missingness classes are now a
+  controlled taxonomy file (loaded by `validators.loader`) rather than a
+  hard-coded list.
+- `examples/OBJECT_TEMPLATE.json`: blank record with every required field.
 - `python -m validators.admit --register`: places an ACCEPTED record into
   `registry/objects/`, archiving any previously registered version to
   `registry/objects/history/` first. Non-accepted records are never

@@ -69,10 +69,26 @@ registry/     THE SOURCE OF TRUTH: authors, objects (+history), sources, relatio
 receipts/     Admission receipts: accepted/, repair/, rejected/
 validators/   Validation, admission gates, receipts, profiles, manifests, site
 tests/        Test suite (pytest)
-releases/     Release manifests (manifests/) and open-seams.yaml
+releases/     Release manifests (manifests/), open-seams.yaml, archived packages (archive/)
 site/         Public library surface, generated from the registry
-examples/     Synthetic example submissions and receipts (explicitly synthetic)
+examples/     Synthetic example submissions, receipts, and OBJECT_TEMPLATE.json
+docs/         Governing specification and supporting rules
+.github/      CI validation workflow, PR template, taxonomy-extension issue form
 ```
+
+## Governing documents
+
+- [docs/SR-RESEARCH-LIBRARY-SPEC.v0.1.md](docs/SR-RESEARCH-LIBRARY-SPEC.v0.1.md) —
+  the full governing specification (registry, admission, indexing, repair,
+  release).
+- [LIBRARY_SPECIFICATION.md](LIBRARY_SPECIFICATION.md) — the implemented
+  contract of this repository, section by section.
+- [ENGINE_CONTRACT.md](ENGINE_CONTRACT.md) — what automated code may and may
+  not decide.
+- [docs/IDENTIFIERS.md](docs/IDENTIFIERS.md), [docs/RECEIPTS.md](docs/RECEIPTS.md),
+  [docs/MAIN_PROTECTION_RULESET.md](docs/MAIN_PROTECTION_RULESET.md).
+- [CONTRIBUTING.md](CONTRIBUTING.md) — exact steps for adding authors,
+  sources, relations, objects, and taxonomy terms.
 
 ## Submission process
 
@@ -183,7 +199,7 @@ Requires Python 3.10+ with `jsonschema` and `pyyaml` (and `pytest` for
 tests):
 
 ```
-pip install jsonschema pyyaml pytest
+pip install -r requirements-dev.txt
 python -m validators.validate          # validate the registry
 python -m validators.admit FILE        # evaluate an admission (--write stores receipts, --register registers ACCEPTED records)
 python -m validators.build_site        # regenerate site/ from the registry
