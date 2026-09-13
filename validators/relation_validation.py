@@ -17,7 +17,7 @@ def validate_relations() -> list[str]:
         for record in relation_records
         if isinstance(record, dict) and record.get("relation_id")
     }
-    valid_targets = object_ids | source_ids
+    target_ids = object_ids | source_ids
 
     relation_type_data = load_yaml(ROOT / "taxonomy" / "relation_types.yaml")
     relation_types = set(relation_type_data.get("terms", [])) if isinstance(relation_type_data, dict) else set()
@@ -44,12 +44,7 @@ def validate_relations() -> list[str]:
             if source_id not in source_ids:
                 errors.append(f"{path.name}: unknown source reference {source_id}")
 
-        required_non_empty = [
-            "authority_boundary",
-            "next_burden",
-            "provenance",
-        ]
-        for field in required_non_empty:
+        for field in ("authority_boundary", "next_burden", "provenance"):
             if not obj.get(field):
                 errors.append(f"{path.name}: missing {field}")
 
@@ -65,9 +60,9 @@ def validate_relations() -> list[str]:
 
         if relation_type not in relation_types:
             errors.append(f"{path.name}: unsupported relation_type {relation_type}")
-        if subject not in valid_targets:
+        if subject not in object_ids:
             errors.append(f"{path.name}: unresolved relation subject {subject}")
-        if target not in valid_targets:
+        if target not in target_ids:
             errors.append(f"{path.name}: unresolved relation object {target}")
 
     return errors

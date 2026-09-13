@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import shutil
 import tempfile
 import unittest
@@ -51,6 +52,27 @@ class ValidatorFailureTests(unittest.TestCase):
         with patch("validators.schema_validation.SCHEMA_DIR", self.tmpdir / "schema"):
             errors = validate_schema_files()
         self.assertTrue(any("broken.schema.json" in e and "valid JSON Schema" in e for e in errors), errors)
+
+
+    def test_schema_validator_flags_missing_required_key_for_repo_schema(self):
+        schema_path = self.tmpdir / "schema" / "author.schema.json"
+        data = json.loads(schema_path.read_text(encoding="utf-8"))
+        data.pop("required", None)
+        schema_path.write_text(json.dumps(data), encoding="utf-8")
+
+        with patch("validators.schema_validation.SCHEMA_DIR", self.tmpdir / "schema"):
+            errors = validate_schema_files()
+        self.assertTrue(any("missing required schema key: required" in e for e in errors), errors)
+
+    def test_schema_validator_flags_non_object_repo_schema(self):
+        schema_path = self.tmpdir / "schema" / "author.schema.json"
+        data = json.loads(schema_path.read_text(encoding="utf-8"))
+        data["type"] = "array"
+        schema_path.write_text(json.dumps(data), encoding="utf-8")
+
+        with patch("validators.schema_validation.SCHEMA_DIR", self.tmpdir / "schema"):
+            errors = validate_schema_files()
+        self.assertTrue(any("root type must be object" in e for e in errors), errors)
 
     def test_unique_id_validator_flags_duplicate_ids(self):
         author1 = self.tmpdir / "registry" / "authors" / "AUTH-0001-a.yaml"
@@ -219,6 +241,42 @@ provenance: corpus-native
             errors = validate_relations()
         self.assertTrue(any("missing next_burden" in e for e in errors), errors)
 
+
+
+    def test_relation_validator_flags_invalid_relation_record(self):
+        obj = self.tmpdir / "registry" / "objects" / "SR-OBJ-000010.yaml"
+        obj.write_text(
+            """
+object_id: SR-OBJ-000010
+source_ids: []
+relations: []
+authority_boundary: Tier-2 only
+next_burden: maintain relation integrity
+provenance: corpus-native
+""".strip()
+            + "\n",
+            encoding="utf-8",
+        )
+
+        relation = self.tmpdir / "registry" / "relations" / "REL-000001.yaml"
+        relation.write_text(
+            """
+relation_id: REL-000001
+relation_type: not-in-taxonomy
+subject: SRC-000001
+object: SRC-000002
+direction: directed
+support: none
+notes: invalid for test
+""".strip()
+            + "\n",
+            encoding="utf-8",
+        )
+
+        with patch("validators.relation_validation.ROOT", self.tmpdir):
+            errors = validate_relations()
+        self.assertTrue(any("unsupported relation_type" in e for e in errors), errors)
+        self.assertTrue(any("unresolved relation subject" in e for e in errors), errors)
 
     def test_relation_validator_flags_non_list_reference_fields(self):
         obj = self.tmpdir / "registry" / "objects" / "SR-OBJ-000004.yaml"
