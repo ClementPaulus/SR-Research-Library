@@ -173,6 +173,27 @@ provenance: corpus-native
             errors = validate_relations()
         self.assertTrue(any("missing next_burden" in e for e in errors), errors)
 
+
+    def test_relation_validator_flags_non_list_reference_fields(self):
+        obj = self.tmpdir / "registry" / "objects" / "SR-OBJ-000004.yaml"
+        obj.write_text(
+            """
+object_id: SR-OBJ-000004
+source_ids: SRC-123456
+relations: REL-123456
+authority_boundary: Tier-2 only
+next_burden: normalize references
+provenance: corpus-native
+""".strip()
+            + "\n",
+            encoding="utf-8",
+        )
+
+        with patch("validators.relation_validation.ROOT", self.tmpdir):
+            errors = validate_relations()
+        self.assertTrue(any("source_ids must be a list" in e for e in errors), errors)
+        self.assertTrue(any("relations must be a list" in e for e in errors), errors)
+
     def test_relation_validator_flags_unresolved_source_and_relation(self):
         obj = self.tmpdir / "registry" / "objects" / "SR-OBJ-000003.yaml"
         obj.write_text(

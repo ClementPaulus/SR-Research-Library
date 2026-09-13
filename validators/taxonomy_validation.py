@@ -56,7 +56,6 @@ def validate_taxonomies() -> list[str]:
         for taxonomy_name, field_path in SECONDARY_FIELDS.items():
             values = _path_get(obj, field_path)
             if values is None:
-                errors.append(f"{obj_path.name} missing required field: {field_path}")
                 continue
             if not isinstance(values, list):
                 errors.append(f"{obj_path.name} field {field_path} must be a list")

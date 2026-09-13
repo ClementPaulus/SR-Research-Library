@@ -28,11 +28,19 @@ def validate_relations() -> list[str]:
             errors.append(f"{path.name}: object record must be a YAML object")
             continue
 
-        for relation_id in obj.get("relations", []):
+        relations = obj.get("relations", [])
+        if not isinstance(relations, list):
+            errors.append(f"{path.name}: relations must be a list")
+            relations = []
+        for relation_id in relations:
             if relation_id not in relation_ids:
                 errors.append(f"{path.name}: unknown relation reference {relation_id}")
 
-        for source_id in obj.get("source_ids", []):
+        source_refs = obj.get("source_ids", [])
+        if not isinstance(source_refs, list):
+            errors.append(f"{path.name}: source_ids must be a list")
+            source_refs = []
+        for source_id in source_refs:
             if source_id not in source_ids:
                 errors.append(f"{path.name}: unknown source reference {source_id}")
 

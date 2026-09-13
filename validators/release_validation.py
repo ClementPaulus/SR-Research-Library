@@ -16,17 +16,22 @@ REQUIRED_RELEASE_FIELDS = {
 
 def validate_release_manifest() -> list[str]:
     errors: list[str] = []
-    release = load_yaml(ROOT / "releases" / "SR-LIBRARY.v0.1.0-pre.manifest.yaml")
+    manifests = sorted((ROOT / "releases").glob("*.manifest.yaml"))
+    if not manifests:
+        return ["no release manifest files found"]
 
-    if not isinstance(release, dict):
-        return ["release manifest must be a YAML object"]
+    for manifest in manifests:
+        release = load_yaml(manifest)
+        if not isinstance(release, dict):
+            errors.append(f"{manifest.name}: release manifest must be a YAML object")
+            continue
 
-    missing = REQUIRED_RELEASE_FIELDS - set(release.keys())
-    if missing:
-        errors.append(f"release manifest missing fields: {sorted(missing)}")
+        missing = REQUIRED_RELEASE_FIELDS - set(release.keys())
+        if missing:
+            errors.append(f"{manifest.name}: missing fields: {sorted(missing)}")
 
-    frozen_at = release.get("frozen_at")
-    if frozen_at and not is_iso_datetime(str(frozen_at)):
-        errors.append("release manifest frozen_at must be ISO datetime")
+        frozen_at = release.get("frozen_at")
+        if frozen_at and not is_iso_datetime(str(frozen_at)):
+            errors.append(f"{manifest.name}: frozen_at must be ISO datetime")
 
     return errors
