@@ -1,0 +1,19 @@
+version: SR-TAXONOMY.v0.1.0
+terms:
+  - supports
+  - contrasts_with
+  - extends
+  - reproduces
+  - challenges
+  - translates
+  - maps_to
+  - shares_focus_with
+  - shares_question_with
+  - derived_from
+  - source_of
+  - supersedes
+  - historical_predecessor_of
+  - candidate_for
+  - handoff_to
+  - incompatible_under_current_contract
+  - unresolved_relation

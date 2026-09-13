@@ -1,0 +1,8 @@
+version: SR-TAXONOMY.v0.1.0
+terms:
+  - draft
+  - internal
+  - preprint
+  - published
+  - archived
+  - withdrawn

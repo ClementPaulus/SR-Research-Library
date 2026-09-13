@@ -1,0 +1,23 @@
+decision: REJECTED
+submission_identity: EXAMPLE-SUBMISSION-REJECT-001
+date: '2026-09-13T00:00:00Z'
+failed_gates:
+  - C
+  - E
+established_violation: Deliberate source misattribution in submission metadata.
+violation_class: CONTRACT_VIOLATING
+why_not_permitted: Library contract requires preserved external provenance and truthful source attribution.
+repair_possible_for_same_object: true
+required_repair_if_allowed: Correct attribution and provide preserved source-native claims with explicit local mapping boundary.
+new_seam_version_or_object_id_required: declared-seam-required-after-revision
+resubmission_allowed: true
+preserved_audit_record: true
+gates:
+  A: PASS
+  B: PASS
+  C: FAIL
+  D: PASS
+  E: FAIL
+  F: PASS
+  G: PASS
+statement: Rejection concerns library admission only and does not by itself prove underlying research claims false.

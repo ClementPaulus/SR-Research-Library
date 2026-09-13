@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "SR-SCHEMA.v0.1.0/receipt.schema.json",
+  "title": "Structura Reditus Admission Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision", "submission_identity", "date", "gates", "statement"],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": ["ACCEPTED", "RETURNED_FOR_REPAIR", "REJECTED"]
+    },
+    "submission_identity": { "type": "string" },
+    "date": { "type": "string", "format": "date-time" },
+    "gates": {
+      "type": "object",
+      "required": ["A", "B", "C", "D", "E", "F", "G"],
+      "properties": {
+        "A": { "type": "string" },
+        "B": { "type": "string" },
+        "C": { "type": "string" },
+        "D": { "type": "string" },
+        "E": { "type": "string" },
+        "F": { "type": "string" },
+        "G": { "type": "string" }
+      }
+    },
+    "statement": { "type": "string" }
+  }
+}

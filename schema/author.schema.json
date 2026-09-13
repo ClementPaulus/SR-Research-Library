@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "SR-SCHEMA.v0.1.0/author.schema.json",
+  "title": "Structura Reditus Author Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "author_id",
+    "display_name",
+    "alternate_names",
+    "orcid",
+    "entity_type",
+    "affiliations",
+    "declared_roles",
+    "declared_domains",
+    "credential_records",
+    "verification_state",
+    "created_at",
+    "updated_at",
+    "status",
+    "notes"
+  ],
+  "properties": {
+    "author_id": { "type": "string", "pattern": "^AUTH-[0-9]{4}$" },
+    "display_name": { "type": "string", "minLength": 1 },
+    "alternate_names": { "type": "array", "items": { "type": "string" } },
+    "orcid": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$" },
+    "entity_type": {
+      "type": "string",
+      "enum": ["person", "group", "institution", "historical", "anonymous", "other"]
+    },
+    "affiliations": { "type": "array", "items": { "type": "string" } },
+    "declared_roles": { "type": "array", "items": { "type": "string" } },
+    "declared_domains": { "type": "array", "items": { "type": "string" } },
+    "credential_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "verification"],
+        "properties": {
+          "label": { "type": "string" },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "source-verified",
+              "ORCID-verified",
+              "institutionally-stated",
+              "author-declared",
+              "unverified",
+              "unresolved"
+            ]
+          }
+        }
+      }
+    },
+    "verification_state": {
+      "type": "object",
+      "required": ["identity", "orcid", "affiliation", "credentials"],
+      "properties": {
+        "identity": { "type": "string" },
+        "orcid": { "type": "string" },
+        "affiliation": { "type": "string" },
+        "credentials": { "type": "string" }
+      }
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "status": { "type": "string", "enum": ["active", "inactive", "historical", "unresolved"] },
+    "notes": { "type": "string" }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "SR-SCHEMA.v0.1.0/source.schema.json",
+  "title": "Structura Reditus Source Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "title",
+    "source_type",
+    "authors",
+    "date",
+    "provenance_type",
+    "stable_reference",
+    "notes"
+  ],
+  "properties": {
+    "source_id": { "type": "string", "pattern": "^SRC-[0-9]{6}$" },
+    "title": { "type": "string" },
+    "source_type": { "type": "string" },
+    "authors": { "type": "array", "items": { "type": "string" } },
+    "date": { "type": "string" },
+    "provenance_type": { "type": "string" },
+    "stable_reference": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}

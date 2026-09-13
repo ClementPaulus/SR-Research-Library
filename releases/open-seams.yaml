@@ -1,0 +1,13 @@
+seams:
+  - id: SEAM-0001
+    area: taxonomy.domains
+    description: Whether domain list should be expanded before first external submission intake.
+    status: open
+  - id: SEAM-0002
+    area: publication_states
+    description: Whether additional publication states are needed for domain-specific archives.
+    status: open
+  - id: SEAM-0003
+    area: site.questions-routing
+    description: Final question slug normalization and canonicalization policy.
+    status: open

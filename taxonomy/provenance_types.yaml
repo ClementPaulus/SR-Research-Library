@@ -1,0 +1,10 @@
+version: SR-TAXONOMY.v0.1.0
+terms:
+  - corpus-native
+  - externally-anchored-derivative
+  - external-source-native
+  - collaborative
+  - historical-source-anchored
+  - dataset-derived
+  - translation-derived
+  - synthetic-test-object

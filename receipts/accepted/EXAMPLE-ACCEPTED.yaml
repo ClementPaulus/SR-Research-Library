@@ -1,0 +1,36 @@
+decision: ACCEPTED
+submission_identity: EXAMPLE-SUBMISSION-001
+object_id: SR-OBJ-EXAMPLE
+title: Example accepted receipt (illustrative only)
+author_ids:
+  - AUTH-0001
+version: v0.0.1
+date: '2026-09-13T00:00:00Z'
+authority:
+  tier: 2
+primary_tier2_class: candidate-material
+functional_locus: none-declared
+primary_domain: cross-domain
+structural_focus: return
+main_question: Under what declared conditions can an identifiable target be recovered after perturbation?
+evidence_mode: conceptual-argument
+provenance: corpus-native
+maturity: exploratory
+source_ids: []
+relation_ids: []
+publication_state: internal
+gates:
+  A: PASS
+  B: PASS
+  C: PASS
+  D: PASS
+  E: PASS
+  F: PASS
+  G: PASS
+non_blocking_missingness:
+  - class: NON_BLOCKING
+    description: Illustrative placeholder receipt with no production object linkage.
+open_burdens:
+  - Convert this example into real receipt only after actual object admission.
+next_burden: Attach to admitted object when available.
+statement: Admission is organizational only and does not by itself establish truth, endorsement, or Tier promotion.

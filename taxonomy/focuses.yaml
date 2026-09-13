@@ -1,0 +1,18 @@
+version: SR-TAXONOMY.v0.1.0
+terms:
+  - return
+  - identity
+  - continuity
+  - recovery
+  - compression
+  - heterogeneity
+  - translation
+  - failure
+  - causation
+  - recurrence
+  - memory
+  - robustness
+  - residual-migration
+  - boundary
+  - missingness
+  - adaptation

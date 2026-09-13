@@ -1,0 +1,30 @@
+library_version: SR-LIBRARY.v0.1.0-pre
+schema_version: SR-SCHEMA.v0.1.0
+taxonomy_version: SR-TAXONOMY.v0.1.0
+frozen_at: '2026-09-13T00:00:00Z'
+timezone: UTC
+registry_counts:
+  authors: 1
+  objects: 0
+  sources: 0
+  relations: 0
+  receipts:
+    accepted: 1
+    repair: 1
+    rejected: 1
+id_manifest:
+  authors:
+    - AUTH-0001
+  objects: []
+  sources: []
+  relations: []
+receipt_manifest:
+  accepted:
+    - receipts/accepted/EXAMPLE-ACCEPTED.yaml
+  repair:
+    - receipts/repair/EXAMPLE-RETURNED_FOR_REPAIR.yaml
+  rejected:
+    - receipts/rejected/EXAMPLE-REJECTED.yaml
+open_seams_file: releases/open-seams.yaml
+migration_notes: Initial pre-release baseline before bulk object registration.
+status: pre-release

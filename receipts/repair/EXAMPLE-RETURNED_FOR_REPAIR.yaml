@@ -1,0 +1,32 @@
+decision: RETURNED_FOR_REPAIR
+submission_identity: EXAMPLE-SUBMISSION-REPAIR-001
+provisional_object_id: SR-OBJ-PENDING
+author_ids:
+  - AUTH-0001
+version: v0.0.1
+date: '2026-09-13T00:00:00Z'
+blocked_gates:
+  - D
+  - E
+missing_structures:
+  - field: main_question
+    missingness_class: EVALUABILITY_BLOCKING
+    why_blocks: Main question is missing and classification cannot be completed.
+    exact_repair_required: Provide a complete neutral primary question.
+  - field: next_burden
+    missingness_class: REPAIRABLE
+    why_blocks: Next burden is required for admissible Tier-2 role declaration.
+    exact_repair_required: Declare next burden in bounded language.
+permitted_evidence_or_source: Preserve current provenance; add only source-backed material.
+repair_changes_object: false
+new_object_id_required: false
+seam_declaration_required: false
+fields_already_accepted:
+  - author identity
+  - provisional object identity
+fields_not_yet_accepted:
+  - classification completeness
+  - burden declaration
+resubmission_condition: Resubmit with required fields completed under same provenance boundary.
+current_state: NOT ADMITTED AS COMPLETE
+statement: This is not a judgment on the truth or value of the work.

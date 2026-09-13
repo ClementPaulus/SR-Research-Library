@@ -1,0 +1,118 @@
+from __future__ import annotations
+
+import shutil
+import tempfile
+import unittest
+from pathlib import Path
+from unittest.mock import patch
+
+from validators.relation_validation import validate_relations
+from validators.release_validation import validate_release_manifest
+from validators.schema_validation import validate_schema_files
+from validators.taxonomy_validation import validate_taxonomies
+from validators.unique_id_validation import validate_unique_ids
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class ValidatorBaselineTests(unittest.TestCase):
+    def test_repository_validators_pass_on_baseline(self):
+        self.assertEqual(validate_schema_files(), [])
+        self.assertEqual(validate_unique_ids(), [])
+        self.assertEqual(validate_taxonomies(), [])
+        self.assertEqual(validate_relations(), [])
+        self.assertEqual(validate_release_manifest(), [])
+
+
+class ValidatorFailureTests(unittest.TestCase):
+    def setUp(self):
+        self.tmpdir = Path(tempfile.mkdtemp(prefix="sr-library-tests-"))
+        shutil.copytree(ROOT / "schema", self.tmpdir / "schema")
+        shutil.copytree(ROOT / "taxonomy", self.tmpdir / "taxonomy")
+        shutil.copytree(ROOT / "releases", self.tmpdir / "releases")
+        (self.tmpdir / "registry" / "authors").mkdir(parents=True)
+        (self.tmpdir / "registry" / "objects").mkdir(parents=True)
+        (self.tmpdir / "registry" / "sources").mkdir(parents=True)
+        (self.tmpdir / "registry" / "relations").mkdir(parents=True)
+
+    def tearDown(self):
+        shutil.rmtree(self.tmpdir)
+
+    def test_taxonomy_validator_flags_missing_primary_domain(self):
+        obj = self.tmpdir / "registry" / "objects" / "SR-OBJ-000001.yaml"
+        obj.write_text(
+            """
+object_id: SR-OBJ-000001
+title: Example
+authors:
+  - author_id: AUTH-0001
+    contribution_role: author
+authority:
+  tier: 2
+tier2_class:
+  primary: candidate-material
+  secondary: []
+functional_locus:
+  primary: none-declared
+  secondary: []
+source_ids: []
+lens:
+  primary: none
+  secondary: []
+object_of_study: test
+structural_focus:
+  primary: return
+  secondary: []
+main_question: Under what declared conditions can a test object be recovered?
+secondary_questions: []
+claim_layers: []
+evidence_mode:
+  primary: conceptual-argument
+  secondary: []
+provenance: corpus-native
+maturity: exploratory
+relations: []
+version: v0.1.0
+date: '2026-09-13'
+publication_state: draft
+source_boundary: none
+authority_boundary: Tier-2 only
+scope: bounded
+exclusions: none
+preserved_meaning: test
+missingness: []
+distortion_or_substitution_risk: low
+next_burden: provide source-backed expansion
+repair_route: add missing domain
+notes: test
+""".strip()
+            + "\n",
+            encoding="utf-8",
+        )
+
+        with patch("validators.taxonomy_validation.ROOT", self.tmpdir):
+            errors = validate_taxonomies()
+        self.assertTrue(any("domain.primary" in e for e in errors), errors)
+
+    def test_relation_validator_flags_missing_next_burden(self):
+        obj = self.tmpdir / "registry" / "objects" / "SR-OBJ-000001.yaml"
+        obj.write_text(
+            """
+object_id: SR-OBJ-000001
+title: Example
+source_ids: []
+relations: []
+authority_boundary: Tier-2 only
+provenance: corpus-native
+""".strip()
+            + "\n",
+            encoding="utf-8",
+        )
+
+        with patch("validators.relation_validation.ROOT", self.tmpdir):
+            errors = validate_relations()
+        self.assertTrue(any("missing next_burden" in e for e in errors), errors)
+
+
+if __name__ == "__main__":
+    unittest.main()

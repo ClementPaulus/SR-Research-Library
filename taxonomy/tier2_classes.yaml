@@ -1,0 +1,9 @@
+version: SR-TAXONOMY.v0.1.0
+terms:
+  - domain-translation-material
+  - diagnostic-material
+  - language-contact-material
+  - pedagogical-material
+  - candidate-material
+  - external-ingress-material
+  - handoff-material

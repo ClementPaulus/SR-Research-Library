@@ -1,0 +1,18 @@
+author_id: AUTH-0001
+display_name: Clement Paulus
+alternate_names: []
+orcid: 0009-0000-6069-8234
+entity_type: person
+affiliations: []
+declared_roles: []
+declared_domains: []
+credential_records: []
+verification_state:
+  identity: author-declared
+  orcid: author-declared
+  affiliation: unresolved
+  credentials: unresolved
+created_at: '2026-09-13T00:00:00Z'
+updated_at: '2026-09-13T00:00:00Z'
+status: active
+notes: Initial required author seed record. No additional credentials or affiliations inferred.

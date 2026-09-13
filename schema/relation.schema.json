@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "SR-SCHEMA.v0.1.0/relation.schema.json",
+  "title": "Structura Reditus Relation Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["relation_id", "relation_type", "subject", "object", "direction", "support", "notes"],
+  "properties": {
+    "relation_id": { "type": "string", "pattern": "^REL-[0-9]{6}$" },
+    "relation_type": { "type": "string" },
+    "subject": { "type": "string" },
+    "object": { "type": "string" },
+    "direction": { "type": "string", "enum": ["directed", "undirected"] },
+    "support": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}
