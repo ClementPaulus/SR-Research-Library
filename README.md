@@ -90,7 +90,7 @@ registry/     THE SOURCE OF TRUTH: authors, governing (tier-1/ tier-0/ mixed/ vi
 receipts/     Admission receipts: accepted/, repair/ (+ archived submissions), rejected/
 validators/   Validation, admission gates, receipts, profiles, manifests, site
 tests/        Test suite (pytest)
-releases/     Release manifests (manifests/), open-seams.yaml, archived packages (archive/)
+releases/     Release manifests (manifests/) and open-seams.yaml
 site/         Public library surface, generated from the registry
 examples/     Synthetic example submissions, receipts, and OBJECT_TEMPLATE.json
 docs/         Governing specification and supporting rules

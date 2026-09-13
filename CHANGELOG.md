@@ -89,8 +89,10 @@ Unified the two implementation branches
 
 - Full governing specification `docs/SR-RESEARCH-LIBRARY-SPEC.v0.1.md`,
   `ENGINE_CONTRACT.md`, and `docs/` (identifiers, receipts, main-branch
-  protection ruleset) from the rc1 engine package; the package itself is
-  preserved under `releases/archive/`.
+  protection ruleset) from the rc1 engine package. The package zip was kept
+  under `releases/archive/` through SR-LIBRARY.v0.2.0 and then removed once
+  fully integrated; it remains recoverable from git history (commit
+  `c8a87f1`).
 - CI workflow (`.github/workflows/validate.yml`), pull-request template, and
   taxonomy-extension issue form; `pyproject.toml`, `requirements*.txt`.
 - `taxonomy/missingness_classes.yaml`: missingness classes are now a
