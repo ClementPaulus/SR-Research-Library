@@ -1,0 +1,34 @@
+{
+  "source_id": "SRC-000034",
+  "source_type": "historical",
+  "title": "Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [],
+  "identifier": {
+    "doi": "10.5281/zenodo.16990996",
+    "url": "https://doi.org/10.5281/zenodo.16990996"
+  },
+  "publication_year": 2025,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.16990996",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/16990996",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "No public abstract on the Zenodo record (files: Collapse_Calculus PDF, main tex, UMCP v1.0.2 drop-in manifest/policy surface, collapse_validate.py).",
+    "Source-native claims not captured in this import pass; only identity, archive, and classification metadata are recorded."
+  ],
+  "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Version DOI under concept 10.5281/zenodo.16990995 (latest version record 17007222). Zenodo verification (2026-09-13): DOI 10.5281/zenodo.16990996 is a version DOI; resolved record 16990996, record title \"Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees\", creators ['Paulus, Clement'], publication date 2025-08-28, resource type Publication."
+}

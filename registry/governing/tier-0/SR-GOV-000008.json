@@ -1,0 +1,29 @@
+{
+  "governing_id": "SR-GOV-000008",
+  "title": "ULRC Operating System: Language, Refusal, Translation, and Honest Contact",
+  "source_id": "SRC-000003",
+  "version": "Official source specification, July 3, 2026",
+  "status": "active",
+  "governing_role": [
+    "functional-source",
+    "language-contact",
+    "specification"
+  ],
+  "authority_scope": {
+    "tier_1": [],
+    "tier_0": [
+      "Grammar of contact: meaning-object preservation across collapse, translation, refusal, critique, reader change, compression, and public exposure; refusal logic, translation discipline, critique posture, contact states, misread types, and repair procedures."
+    ]
+  },
+  "source_role": "Meaning / contact / translation / refusal / critique / repair source; language fluency is not closure or proof (handoff manifest).",
+  "immutable_record": true,
+  "active_from": "2026-09-13T04:28:50Z",
+  "supersedes": null,
+  "superseded_by": null,
+  "doi": "10.5281/zenodo.21212668",
+  "canonical_link": "https://doi.org/10.5281/zenodo.21212668",
+  "scope": "The functional system that keeps language contact-bearing before evaluation begins, fixed as both source-of-truth reference and practical reading/writing manual.",
+  "non_goal": "Not a final-stance engine, not a replacement for UMCP, and not a general communication theory; fluent language is not evaluable closure.",
+  "missingness": [],
+  "notes": "Shared packet DOI 10.5281/zenodo.21212668 (coordinated four-paper release); the DOI identifies the archive, the record identifies the member work."
+}

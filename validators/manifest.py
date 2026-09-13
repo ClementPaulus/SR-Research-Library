@@ -11,12 +11,15 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
 
-from . import loader
+from . import checks, loader
+
+RECEIPT_FILE_RE = re.compile(r"^RCPT-[0-9]{6}\.json$")
 
 
 def load_open_seams(releases_dir: Path = None) -> list:
@@ -46,7 +49,8 @@ def _count_receipts(receipts_dir: Path) -> int:
     for subdir in ("accepted", "repair", "rejected"):
         directory = receipts_dir / subdir
         if directory.is_dir():
-            count += sum(1 for p in directory.iterdir() if p.suffix == ".json")
+            # Archived submissions (RCPT-NNNNNN.submission.json) sit beside receipts and are not receipts.
+            count += sum(1 for p in directory.iterdir() if RECEIPT_FILE_RE.match(p.name))
     return count
 
 
@@ -67,7 +71,15 @@ def build_release_manifest(library_version: str, open_seams: list = None,
         "objects": sorted(r["object_id"] for r in registry["objects"].values() if r.get("object_id")),
         "sources": sorted(r["source_id"] for r in registry["sources"].values() if r.get("source_id")),
         "relations": sorted(r["relation_id"] for r in registry["relations"].values() if r.get("relation_id")),
+        "governing": sorted(r["governing_id"] for r in registry.get("governing", {}).values() if r.get("governing_id")),
     }
+    # Released governing records become immutable; their content hash is what the validator enforces.
+    governing_hashes = {
+        r["governing_id"]: checks.governing_immutable_hash(r)
+        for r in registry.get("governing", {}).values() if r.get("governing_id")
+    }
+    # Records already released keep the hash of the release that froze them.
+    governing_hashes.update(loader.released_governing_hashes())
 
     hashes = {}
     hashes.update(_hash_directory(loader.SCHEMA_DIR))
@@ -83,8 +95,10 @@ def build_release_manifest(library_version: str, open_seams: list = None,
         "object_count": len(ids["objects"]),
         "source_count": len(ids["sources"]),
         "relation_count": len(ids["relations"]),
+        "governing_count": len(ids["governing"]),
         "receipt_count": _count_receipts(loader.RECEIPTS_DIR),
         "id_manifest": ids,
+        "governing_immutable_hashes": dict(sorted(governing_hashes.items())),
         "generated": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "timezone": "UTC",
         "open_seams": list(open_seams),

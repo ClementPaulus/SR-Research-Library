@@ -19,4 +19,4 @@ jobs:
       - name: Site is regenerated from the registry
         run: |
           python -m validators.build_site
-          git diff --exit-code -- site/data
+          git diff --exit-code -- site

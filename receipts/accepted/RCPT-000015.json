@@ -1,0 +1,74 @@
+{
+  "receipt_id": "RCPT-000015",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000015",
+  "generated": "2026-09-13T04:13:10Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000015",
+  "title": "The Common Doorway: A Cross-Field Method for Generative Collapse",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "language-contact",
+  "functional_locus": "ulrc",
+  "domain_primary": "interdisciplinary",
+  "structural_focus_primary": "translation",
+  "main_question": "How can structurally related claims from different fields be made mutually legible without requiring the fields to collapse into one vocabulary?",
+  "evidence_mode_primary": "pedagogical",
+  "provenance": "corpus-native",
+  "maturity": "historical",
+  "source_ids": [
+    "SRC-000032"
+  ],
+  "relation_ids": [],
+  "publication_state": "archived",
+  "non_blocking_missingness": [
+    "public abstract for this member work (SOURCE_BOUNDARY)",
+    "source-stated next burden (NON_BLOCKING)",
+    "historical terminology vs current architecture (UNRESOLVED_SEAM)"
+  ],
+  "open_burdens": [
+    "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  ],
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+}

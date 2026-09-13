@@ -1,0 +1,70 @@
+{
+  "receipt_id": "RCPT-000020",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000001",
+  "generated": "2026-09-13T04:29:19Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000001",
+  "title": "Generative Collapse Dynamics / UMCP: Passport and Entry Map — A Front-Door Guide to the Contract-First Measurement Framework",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.1",
+  "date": "2026-09-13T04:29:19Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "pedagogical",
+  "functional_locus": "cross-system",
+  "domain_primary": "structura-reditus-core",
+  "structural_focus_primary": "translation",
+  "main_question": "How can a new reader enter the GCD/UMCP framework as one coherent and navigable contract-first object without flattening its hierarchy?",
+  "evidence_mode_primary": "pedagogical",
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "source_ids": [
+    "SRC-000006"
+  ],
+  "relation_ids": [],
+  "publication_state": "archived",
+  "non_blocking_missingness": [],
+  "open_burdens": [
+    "Proceed to Part II (The Core), which states why the contract-first architecture has the structure it has; the entry map points to that argument but does not make it (supported by the series description)."
+  ],
+  "next_burden": "Proceed to Part II (The Core), which states why the contract-first architecture has the structure it has; the entry map points to that argument but does not make it (supported by the series description)."
+}

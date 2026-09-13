@@ -1,0 +1,94 @@
+{
+  "object_id": "SR-OBJ-000012",
+  "title": "The Seam of Reality: On Thought, Return, and the Illusion of the Outside",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "language-contact",
+    "secondary": [
+      "external-ingress",
+      "domain-translation"
+    ]
+  },
+  "functional_locus": "ulrc",
+  "source_ids": [
+    "SRC-000022"
+  ],
+  "lens": "epistemic critique and return",
+  "domain": {
+    "primary": "philosophy",
+    "secondary": [
+      "structura-reditus-core"
+    ]
+  },
+  "object_of_study": "the relation between epistemic gesture, structural return, and claims of external vantage",
+  "structural_focus": {
+    "primary": "return",
+    "secondary": [
+      "boundary",
+      "continuity"
+    ]
+  },
+  "main_question": "What stronger burden distinguishes epistemic gesture from admissible return when a claim itself is treated as occurring inside the structure it evaluates?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "The paper introduces a return-based audit calculus culminating in a validated epistemic seam with ledger-conserved log-integrity and rejects exterior gesture logic or any symbolic substrate beyond the runtime contract (Zenodo record description)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "The paper claims to outperform gesture-dependent or topology-saturated theories by exposing their cost through its own runtime budget."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library places this as historical language-contact material under ULRC; the external positions are not registered as sources in this pass."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "conceptual-argument",
+    "secondary": [
+      "formal-derivation"
+    ]
+  },
+  "provenance": "externally-anchored-derivative",
+  "maturity": "historical",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000022 (\"The Seam of Reality: On Thought, Return, and the Illusion of the Outside\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+  "scope": "A 2025 return-based audit calculus grounded in the historical Collapse Integrity Protocol, contrasted with exterior-gesture and topology-saturated epistemic approaches.",
+  "exclusions": [
+    "Does not attribute the Structura Reditus mapping to the external positions it critiques.",
+    "Does not carry historical 'Collapse Integrity Protocol', 'UMA', or 'RCFT kernel' terminology into the current architecture as authority.",
+    "Does not establish that the critiqued theories are false."
+  ],
+  "preserved_meaning": "The source-native positions of the external authors it engages remain their own; the paper's historical claim (that gesture-dependent theories expose their cost under its runtime budget) is preserved as the source's claim.",
+  "missingness": [
+    {
+      "item": "source-stated next burden",
+      "class": "NON_BLOCKING",
+      "notes": "Not stated on the public record."
+    },
+    {
+      "item": "historical terminology vs current architecture",
+      "class": "UNRESOLVED_SEAM",
+      "notes": "2025 terms (Collapse Integrity Protocol, UMA, RCFT kernel as then defined) are preserved as source evidence; their mapping onto the current canon is not forced."
+    },
+    {
+      "item": "external positions engaged by the paper",
+      "class": "SOURCE_BOUNDARY",
+      "notes": "Not registered as separate sources in this import pass; their source-native claims remain theirs."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading the historical audit calculus as the current UMCP/ULRC contract, or attributing the paper's Structura Reditus reading to the external philosophers it critiques.",
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Historical / prefreeze lineage object. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

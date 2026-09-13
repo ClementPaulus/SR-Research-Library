@@ -1,0 +1,25 @@
+{
+  "governing_id": "SR-GOV-000016",
+  "title": "Entering Structura Reditus: A Complete Ingress to Reditus, Generative Collapse Dynamics, and Contract-First Evaluation",
+  "source_id": "SRC-000043",
+  "version": "June 2026 (Zenodo publication date 2026-06-04)",
+  "status": "active",
+  "governing_role": [
+    "ingress"
+  ],
+  "authority_scope": {
+    "tier_1": [],
+    "tier_0": []
+  },
+  "source_role": "Public ingress and corpus route; route does not replace governing architecture (handoff manifest).",
+  "immutable_record": true,
+  "active_from": "2026-09-13T04:28:50Z",
+  "supersedes": null,
+  "superseded_by": null,
+  "doi": "10.5281/zenodo.20549483",
+  "canonical_link": "https://doi.org/10.5281/zenodo.20549483",
+  "scope": "One-paper ingress into the corpus in three movements: placement (mature hierarchy), discipline (why admissible return requires Axiom-0, frozen contract, bounded trace, closure availability, typed return, integrity accounting, missingness preservation, seam discipline, three-valued stance), and first pass.",
+  "non_goal": "A route into the corpus; it does not itself carry Tier-1 or Tier-0 authority and does not replace the governing architecture it introduces.",
+  "missingness": [],
+  "notes": "Zenodo record 20549483 sits under concept DOI 10.5281/zenodo.19622272, the concept also carrying the Orientation Series (SRC-000006..008); the source states it replaces the former three-part orientation burden. Whether the Orientation Series objects (SR-OBJ-000001..003) are thereby historical is a corpus-owner decision and is not applied here."
+}

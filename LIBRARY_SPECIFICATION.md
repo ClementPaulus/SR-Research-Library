@@ -1,7 +1,7 @@
 # Structura Reditus Research Library — Library Specification
 
-Specification version: SR-LIBRARY.v0.1.0 (pre-release)
-Schema version: SR-SCHEMA.v0.2.0
+Specification version: SR-LIBRARY.v0.2.0 (pre-release)
+Schema version: SR-SCHEMA.v0.3.0
 Taxonomy version: SR-TAXONOMY.v0.2.0
 
 Governing flow:
@@ -52,19 +52,40 @@ No tool in this repository conflates any of these.
 | Entity          | Namespace     | Example         |
 |-----------------|---------------|-----------------|
 | Author          | `AUTH-NNNN`   | `AUTH-0001`     |
+| Governing reference | `SR-GOV-NNNNNN` | `SR-GOV-000001` |
 | Research object | `SR-OBJ-NNNNNN` | `SR-OBJ-000001` |
 | Source          | `SRC-NNNNNN`  | `SRC-000001`    |
 | Relation        | `REL-NNNNNN`  | `REL-000001`    |
 | Receipt         | `RCPT-NNNNNN` | `RCPT-000001`   |
 
 Identifiers are stable. Author identity remains stable while contribution
-history changes.
+history changes. `SR-OBJ-*` is reserved exclusively for Tier-2 research;
+`SR-GOV-*` for governing-reference identity; `SRC-*` for source/archive
+identity. A work may hold these identities in any combination and they are
+never interchangeable.
 
 ## 3. Registry as source of truth
+
+The library is a **three-surface architecture**:
+
+1. **Governing Reference Registry** (`registry/governing/`, `SR-GOV-*`) —
+   canon-facing, constitutional, authority-axis, functional-source,
+   kernel-reference, protocol, specification, publication-protocol, ingress,
+   and language-contact references. Not research objects. Immutable once
+   released; supersession creates a new record and preserves the old one.
+2. **Tier-2 Research Object Registry** (`registry/objects/`, `SR-OBJ-*`) —
+   the living research body.
+3. **Source / Archive Registry** (`registry/sources/`, `SRC-*`) — where a
+   work actually lives; canonical DOI/archive identity and labeled outbound
+   links; never mirrors whole papers.
 
 The files under `registry/` are the **source of truth**:
 
 - `registry/authors/` — author records (JSON, `author.schema.json`).
+- `registry/governing/` — governing references (JSON, `governing.schema.json`);
+  `tier-1/`, `tier-0/`, `mixed/` are organizational views selected by the
+  record's `authority_scope`, and records with no Tier-1/Tier-0 burden sit at
+  the root. The validator checks that view and scope agree.
 - `registry/objects/` — current research-object records (JSON,
   `object.schema.json`).
 - `registry/objects/history/` — preserved historical object states
@@ -81,13 +102,64 @@ An ACCEPTED record enters the registry through
 previously registered version of the same object to
 `registry/objects/history/` before writing the new state. A registered state
 is never rewritten at the same version; RETURNED_FOR_REPAIR and REJECTED
-records are never registered.
+records are never registered. Their submissions are archived for audit beside
+their receipts (`receipts/repair/RCPT-NNNNNN.submission.json`).
+
+### 3.1 Governing-reference contract
+
+A governing record carries: `governing_id`, `title`, `source_id`, `version`,
+`status` (`active` | `superseded` | `historical` | `candidate` | `unresolved`),
+`governing_role`, `authority_scope` (`tier_1[]`, `tier_0[]`), `source_role`,
+`immutable_record`, `active_from`, `supersedes`, `superseded_by`, `doi`,
+`canonical_link`, `scope`, `non_goal`, `missingness`, `notes`.
+
+- **Authority belongs to the admitted burden.** A whole source is never
+  classified Tier-1 because it contains Tier-1 material, nor Tier-0 because
+  it contains protocol material. `authority_scope` states exactly which
+  Tier-1 and Tier-0 burdens the source admits; either list may be empty and
+  both may be populated (mixed).
+- **Candidates are not authority.** Repair or adoption candidates carry
+  `status: candidate`; sources that disagree on role, version, DOI, or
+  adoption status yield `status: unresolved`. Nothing is promoted to active
+  authority without an adoption record.
+- **Immutability.** Once a governing record is listed in a release manifest
+  (`governing_immutable_hashes`), its historical meaning is not edited in
+  place; only `status` and `superseded_by` may change. A later active record
+  must name the old one in `supersedes`; the old record is preserved with
+  `superseded_by` set and `status: superseded`. The validator enforces both
+  the hash and the supersession pointers.
+- **No inheritance.** Tier-2 objects may list `governing_refs`; each must
+  resolve to an existing `SR-GOV-*` record (Gate F blocks otherwise). The
+  reference constrains the object and transfers no authority —
+  `authority.tier` remains `tier-2`.
+- **No invented DOIs.** `doi` is recorded only when the supplied source
+  establishes it.
+
+### 3.2 Sources, external links, and shared DOIs
+
+Source records expose labeled outbound `links`
+(`label`, `type` ∈ {canonical, archive, full_text, publisher, code, data,
+supplement, project_page}, `url`, `preferred`). At most one link per source
+is preferred; for DOI-bearing works the DOI resolver is normally the
+preferred canonical link, and a DOI link must resolve `identifier.doi`. Archive
+landing pages are added only when known or resolvable; full-text, code, data,
+and supplement URLs are never guessed. PDFs are never stored or mirrored.
+External-link failure never deletes a source; DOI identity survives a broken
+web link.
+
+A DOI may legitimately identify an archive containing several distinct works.
+Each member work keeps its own SourceID and the shared-archive condition is
+recorded in `notes`; member works are neither collapsed into one object nor
+counted as separate DOI deposits. Alternate or disputed DOIs are preserved in
+`identifier.other`, `missingness`, and `releases/open-seams.yaml`, never
+silently reconciled.
 
 ## 4. Schemas
 
-JSON Schema (draft 2020-12) validation exists for authors, objects, sources,
-relations, and receipts under `schema/`. Registry records are deterministic
-machine-readable JSON (YAML is also accepted by the loaders).
+JSON Schema (draft 2020-12) validation exists for authors, governing
+references, objects, sources, relations, and receipts under `schema/`.
+Registry records are deterministic machine-readable JSON (YAML is also
+accepted by the loaders).
 
 ### 4.1 Timestamps
 

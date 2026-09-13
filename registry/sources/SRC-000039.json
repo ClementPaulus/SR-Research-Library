@@ -1,0 +1,23 @@
+{
+  "source_id": "SRC-000039",
+  "source_type": "corpus-native",
+  "title": "UMCP Kernel Specification (UMCP-KERNEL-SPEC.v2.4.0-rc2)",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Status: freeze-controlled repair candidate; not a Tier-1 freeze. Supersedes for review UMCP-KERNEL-SPEC.v2.4.0-rc1. Implementation baseline: GCD/UMCP repository v2.3.3.",
+    "Preserves rather than resolves three active seams: roughness (unweighted population dispersion in repository v2.3.3 vs weighted dispersion in the active UMCP operating witness), return credit (inherited R·τ_R vs independently defined Q_R), and criticality (primary CRITICAL regime vs IC < 0.30 overlay).",
+    "No historical run is rewritten by this candidate."
+  ],
+  "identifier": {
+    "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/UMCP_KERNEL_SPECIFICATION_v2.4.0-rc2.md, sha256 67880c6b2c7e2ce684a870a608330af5ebcf6c8dd9207ea7a11a237f1d059841. Full text supplied to the library maintainer; not deposited in this repository."
+  },
+  "publication_year": 2026,
+  "venue": null,
+  "links": [],
+  "missingness": [
+    "Internal specification supplied as Markdown in the handoff bundle; no DOI, venue, or public deposit is established by the source."
+  ],
+  "notes": "Prepared 2026-08-29, America/Chicago. See SR-GOV-000012."
+}

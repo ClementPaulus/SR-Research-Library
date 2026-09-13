@@ -107,11 +107,14 @@ def taxonomies():
 
 @pytest.fixture()
 def base_registry():
-    """Registry with the real AUTH-0001 plus synthetic fixtures."""
-    registry = loader.load_registry()
-    registry = copy.deepcopy(registry)
-    registry["sources"]["SRC-000001.json"] = copy.deepcopy(SYNTHETIC_SOURCE)
-    registry["relations"]["REL-000001.json"] = copy.deepcopy(SYNTHETIC_RELATION)
+    """Registry with the real AUTH-0001 plus synthetic fixtures only (live corpus records excluded)."""
+    registry = {
+        "authors": copy.deepcopy(loader.load_registry()["authors"]),
+        "objects": {},
+        "sources": {"SRC-000001.json": copy.deepcopy(SYNTHETIC_SOURCE)},
+        "relations": {"REL-000001.json": copy.deepcopy(SYNTHETIC_RELATION)},
+        "governing": {},
+    }
     return registry
 
 

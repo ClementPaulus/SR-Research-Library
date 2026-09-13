@@ -1,0 +1,39 @@
+{
+  "governing_id": "SR-GOV-000015",
+  "title": "Structura Reditus Publishing Protocol",
+  "source_id": "SRC-000042",
+  "version": "SR-PUBLISHING-PROTOCOL.v1.0-rc1 (prepared 2026-08-29, America/Chicago)",
+  "status": "candidate",
+  "governing_role": [
+    "publication-protocol",
+    "protocol"
+  ],
+  "authority_scope": {
+    "tier_1": [],
+    "tier_0": [
+      "Candidate publication-protocol rules: publish by burden, describe by role, cite by source boundary, repair by declared seam; every work enters under a declared object, primary role, burden, boundary, and repair route; carries forward the roughness, return-credit, and criticality technical seams."
+    ]
+  },
+  "source_role": "Publication-protocol repair candidate; internal Tier-0 repair candidate; not canon-frozen (handoff manifest; source status line).",
+  "immutable_record": true,
+  "active_from": "2026-09-13T04:28:50Z",
+  "supersedes": null,
+  "superseded_by": null,
+  "doi": null,
+  "canonical_link": null,
+  "scope": "Govern how local works enter, remain legible within, and are repaired inside the completed corpus, as a local publication-protocol witness under Summa Reditus, Architecture Freeze v1.0.",
+  "non_goal": "Conformance does not create proof, canon admission, DOI assignment, deposit, or public-release status; adoption or replacement of the source object requires a separate act.",
+  "missingness": [
+    {
+      "item": "Relationship to SR-PUBLISHING-PROTOCOL.v1.0 (SR-GOV-000014)",
+      "class": "UNRESOLVED_SEAM",
+      "notes": "rc1 names a 2026-08-28 repaired working draft as immediate predecessor; whether that draft is the v1.0 document is not stated. supersedes is left null."
+    },
+    {
+      "item": "Technical seams carried forward",
+      "class": "UNRESOLVED_SEAM",
+      "notes": "Nonuniform-weight roughness C; R·τ_R vs Q_R; primary CRITICAL vs overlay."
+    }
+  ],
+  "notes": ""
+}

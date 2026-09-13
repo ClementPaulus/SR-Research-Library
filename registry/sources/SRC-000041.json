@@ -1,0 +1,23 @@
+{
+  "source_id": "SRC-000041",
+  "source_type": "corpus-native",
+  "title": "Structura Reditus Publishing Protocol: Canon-facing publication, source, version, and repair discipline (SR-PUBLISHING-PROTOCOL.v1.0)",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Self-declared status: final Tier-0 publishing protocol; adopted working standard; not a Tier-1 freeze. Finalized 2026-08-28, America/Chicago.",
+    "This protocol governs manuscript construction and publication conformance; it does not create Tier-1 proof, canon admission, DOI status, or public-release status by declaration alone."
+  ],
+  "identifier": {
+    "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/STRUCTURA_REDITUS_PUBLISHING_GUIDANCE_v1.0.md, sha256 506d964b97add896016573f009f57464dce9c9c2e2c46df6cf502cf89d5caaab. Full text supplied to the library maintainer; not deposited in this repository."
+  },
+  "publication_year": 2026,
+  "venue": null,
+  "links": [],
+  "missingness": [
+    "Internal specification supplied as Markdown in the handoff bundle; no DOI, venue, or public deposit is established by the source.",
+    "The handoff manifest lists this file as 'Publishing guidance' while the document self-declares as the final adopted protocol v1.0; a later-dated rc1 (SRC-000042, 2026-08-29) names a 2026-08-28 working draft as its predecessor. Adoption status is preserved as unresolved (see SR-GOV-000014)."
+  ],
+  "notes": "Supplied under the file name STRUCTURA_REDITUS_PUBLISHING_GUIDANCE_v1.0.md."
+}

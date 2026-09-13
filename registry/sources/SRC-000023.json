@@ -1,0 +1,36 @@
+{
+  "source_id": "SRC-000023",
+  "source_type": "historical",
+  "title": "Generative Collapse Dynamics and Inference-Field Frameworks: A Provenance & Canon Note",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Archival note establishing the canonical form and provenance record for GCD, UMCP, and RCFT; defines the Tier-1 invariant skeleton {ω, F, S, C, τᴿ, κ, I} and the weld calculus closing Δκ = R·τᴿ − (Dω + DC) under a frozen contract with tolerance |s| ≤ 0.005.",
+    "The paper introduces no new algebra; its contribution is provenance and transparency."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.17925172",
+    "url": "https://doi.org/10.5281/zenodo.17925172"
+  },
+  "publication_year": 2025,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.17925172",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/17980036",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "Zenodo record title is the short form \"A Provenance & Canon Note\"."
+  ],
+  "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Concept DOI whose latest version (record 17980036) also carries Geometry of Admissible Seams.pdf (see SRC-000024). Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17925172 is a concept DOI (resolves to the latest version); resolved record 17980036, record title \"A Provenance & Canon Note\", creators ['Paulus, Clement'], publication date 2025-12-12, resource type Technical note."
+}

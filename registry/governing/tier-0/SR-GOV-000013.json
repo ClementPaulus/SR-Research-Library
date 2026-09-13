@@ -1,0 +1,33 @@
+{
+  "governing_id": "SR-GOV-000013",
+  "title": "UMCP Kernel Specification Repair Audit",
+  "source_id": "SRC-000040",
+  "version": "Repair target UMCP-KERNEL-SPEC.v2.4.0-rc2 (prepared 2026-08-29)",
+  "status": "candidate",
+  "governing_role": [
+    "specification"
+  ],
+  "authority_scope": {
+    "tier_1": [],
+    "tier_0": [
+      "Specification-repair audit of rc1 → rc2 under six constraints (no silent Tier-1 change; no silent reconciliation of source disagreement; v2.3.3 reproducible; diagnostics below kernel authority; return/seam/regime/stance distinct; compression only when the burden remains reconstructible); holds the 47-item lineage crosswalk moved out of the active specification."
+    ]
+  },
+  "source_role": "Repair/lineage audit for the kernel spec; audit witness, not canon admission (handoff manifest; source stance burden).",
+  "immutable_record": true,
+  "active_from": "2026-09-13T04:28:50Z",
+  "supersedes": null,
+  "superseded_by": null,
+  "doi": null,
+  "canonical_link": null,
+  "scope": "Audit receipt for the local UMCP kernel specification repair: what changed in rc2, what remained invariant, and what remains open.",
+  "non_goal": "Not Tier-1 admission, repository certification, or canon freeze; the evaluated object is the local specification, not Summa Reditus or the corpus as a whole.",
+  "missingness": [
+    {
+      "item": "Adoption record for rc2",
+      "class": "NON_BLOCKING",
+      "notes": "Adoption or freeze requires a separate authority act after the open seams close; none is supplied."
+    }
+  ],
+  "notes": ""
+}

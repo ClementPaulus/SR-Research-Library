@@ -1,0 +1,23 @@
+{
+  "source_id": "SRC-000042",
+  "source_type": "corpus-native",
+  "title": "Structura Reditus Publishing Protocol (SR-PUBLISHING-PROTOCOL.v1.0-rc1)",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Status: internal Tier-0 repair candidate; not canon-frozen. Prepared 2026-08-29. Immediate predecessor: repaired working draft dated 2026-08-28.",
+    "Conformance to this protocol does not create proof, canon admission, DOI assignment, deposit, or public-release status; adoption or replacement of the source object requires a separate act.",
+    "Carries forward three technical seams: nonuniform-weight roughness C; inherited R·τ_R versus independently defined Q_R return-credit profiles; primary CRITICAL enum versus critical overlay."
+  ],
+  "identifier": {
+    "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/STRUCTURA_REDITUS_PUBLISHING_PROTOCOL_v1.0-rc1.md, sha256 8f1775f18d1f2fdf56a320a0ae596d6a386c177ac3be97fc8b213f3bf6f10c59. Full text supplied to the library maintainer; not deposited in this repository."
+  },
+  "publication_year": 2026,
+  "venue": null,
+  "links": [],
+  "missingness": [
+    "Internal specification supplied as Markdown in the handoff bundle; no DOI, venue, or public deposit is established by the source."
+  ],
+  "notes": "See SR-GOV-000015."
+}

@@ -1,0 +1,83 @@
+{
+  "object_id": "SR-OBJ-000005",
+  "title": "The Periodic Table as a Measured Object: Tier-1 Derivation from Atomic Properties in the GCD Kernel",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "domain-translation",
+    "secondary": [
+      "diagnostic"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000010"
+  ],
+  "lens": "atomic measured-object closure",
+  "domain": {
+    "primary": "chemistry",
+    "secondary": [
+      "physics"
+    ]
+  },
+  "object_of_study": "the 118-element periodic table under a frozen atomic measurement surface",
+  "structural_focus": {
+    "primary": "heterogeneity",
+    "secondary": [
+      "robustness",
+      "boundary"
+    ]
+  },
+  "main_question": "What structural distinctions appear when the periodic table is evaluated as a finite measured object under one frozen GCD/UMCP grammar?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "Under the frozen closure all 118 rows satisfy F+ω=1, IC≤F, IC=e^κ to declared precision; corpus means ⟨F⟩=0.4155, ⟨IC⟩=0.3344, ⟨Δ⟩=0.0811, ⟨C⟩=0.4211; 111 rows Collapse, 7 Watch, 0 Stable, Critical overlay active in 41 rows (Zenodo record description)."
+    },
+    {
+      "layer": "translation",
+      "claim": "The library places this work as a domain translation of chemistry/physics data into evaluable Tier-2 closure form."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library records the object as Tier-2; the source title's \"Tier-1 Derivation\" refers to derivation from Tier-1 kernel identities, not to the authority of this record."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "retrospective-analysis",
+    "secondary": [
+      "formal-derivation"
+    ]
+  },
+  "provenance": "dataset-derived",
+  "maturity": "retrospectively-evaluated",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000010 (\"The Periodic Table as a Measured Object: Tier-1 Derivation from Atomic Properties in the GCD Kernel\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+  "scope": "All 118 elements embedded by one declared adapter under a frozen 8-channel atomic closure, one representative row carried through the full discipline, then the same grammar extended across the corpus.",
+  "exclusions": [
+    "Does not attempt to replace chemistry or explain the periodic table chemically.",
+    "Does not claim the periodic table originates from the kernel.",
+    "Does not grant Tier-1 authority to the library object despite the source title's wording."
+  ],
+  "preserved_meaning": "The source's own boundary: chemistry already explains the table chemically; the distinct burden is explicitness of one measured object under one published comparison surface.",
+  "missingness": [
+    {
+      "item": "source-stated next burden",
+      "class": "NON_BLOCKING",
+      "notes": "Not stated on the public record."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading the title's phrase \"Tier-1 Derivation\" as Tier-1 authority for this library record, or reading regime counts (111 Collapse, 7 Watch, 0 Stable) as chemical claims rather than readbacks under a frozen closure.",
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The sequel (SRC-000011 / SR-OBJ-000006) takes up a stronger closure, but that burden is stated by the sequel, not by this source.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Title preserved exactly as published. authority.tier is tier-2 by library contract. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

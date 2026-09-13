@@ -1,0 +1,35 @@
+{
+  "source_id": "SRC-000021",
+  "source_type": "historical",
+  "title": "The Episteme of Return: Collapse Integrity Kernel and the UMA Audit Stack",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Consolidates the Integrity Stack (declare → log → weld → invoke) into a single governing kernel for epistemic systems, integrating the Collapse Integrity Kernel v1.0.3, the Invoke Audit Protocol, and the Universal Math Appendix under the Grammar of Return."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.17756705",
+    "url": "https://doi.org/10.5281/zenodo.17756705"
+  },
+  "publication_year": 2025,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.17756705",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/17797689",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "Zenodo record title is the bundle title \"The Episteme of Return; The Seam of Reality; Universal Math Appendix\"; the archive's file listing contains The Episteme of Return.pdf, The Seam of Reality.pdf, and Universal Math Appendix (UMA).pdf."
+  ],
+  "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17756705 is a concept DOI (resolves to the latest version); resolved record 17797689, record title \"The Episteme of Return; The Seam of Reality; Universal Math Appendix\", creators ['Paulus, Clement'], publication date 2025-11-27, resource type Thesis."
+}

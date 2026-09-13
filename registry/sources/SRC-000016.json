@@ -1,0 +1,35 @@
+{
+  "source_id": "SRC-000016",
+  "source_type": "historical",
+  "title": "UMCP CasePack Publication",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [],
+  "identifier": {
+    "doi": "10.5281/zenodo.18226878",
+    "url": "https://doi.org/10.5281/zenodo.18226878"
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.18226878",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/18226878",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "Zenodo record title reads \"Universal Measurement Contract Protocol\" (resource type Book; files: Universal Measurement Contract Protocol.pdf, UMCP data.zip); the title \"UMCP CasePack Publication\" is the corpus owner's documented CasePack publication anchor. No paper identity is inferred beyond that anchor.",
+    "No public abstract on the Zenodo record.",
+    "Source-native claims not captured in this import pass; only identity, archive, and classification metadata are recorded."
+  ],
+  "notes": "Registry role: RUNNABLE CASEPACK / IMPLEMENTATION ARCHIVE SOURCE; no Tier-2 object. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.18226878 is a version DOI; resolved record 18226878, record title \"Universal Measurement Contract Protocol\", creators ['Paulus, Clement'], publication date 2026-01-13, resource type Book."
+}

@@ -1,0 +1,37 @@
+{
+  "source_id": "SRC-000025",
+  "source_type": "historical",
+  "title": "Retro-Coherent Transmission through Quantum Collapse: A Collapse Integrity Re-Interpretation of Negative Excitation Time",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Audits a quantum optics experiment (Sinclair et al., 2024) in which an atomic ensemble exhibits a negative excitation time under postselected single-photon transmission, framing it as a lawful return seam under the Collapse Integrity audit grammar.",
+    "Classifies the event as a Type I seam with ω = 0, τ_R = −0.82, D_C = −0.82 and zero residual, and introduces a subclass of retro-coherent seams (Class IIa) with τ_R < 0.",
+    "Claims that the Collapse Integrity grammar outperforms Lagrangian mechanics in discontinuous, memory-anchored, or retrocausal regimes."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.17509993",
+    "url": "https://doi.org/10.5281/zenodo.17509993"
+  },
+  "publication_year": 2025,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.17509993",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/17518421",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "Zenodo record title is the short form \"Retro-Coherent Transmission through Quantum Collapse\"."
+  ],
+  "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Historical negative-return semantics (τ_R < 0) are source-native to this work and are not inherited into current typed-return mechanics. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17509993 is a concept DOI (resolves to the latest version); resolved record 17518421, record title \"Retro-Coherent Transmission through Quantum Collapse\", creators ['Paulus, Clement'], publication date 2025-11-02, resource type Report."
+}

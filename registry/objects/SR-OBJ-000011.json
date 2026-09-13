@@ -1,0 +1,89 @@
+{
+  "object_id": "SR-OBJ-000011",
+  "title": "Dimethyltryptamine and the Recursive Reorganization of Consciousness",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "domain-translation",
+    "secondary": [
+      "external-ingress",
+      "diagnostic"
+    ]
+  },
+  "functional_locus": "cross-system",
+  "source_ids": [
+    "SRC-000019"
+  ],
+  "lens": "multilevel causal and return architecture",
+  "domain": {
+    "primary": "neuroscience",
+    "secondary": [
+      "psychology",
+      "cognitive-science",
+      "medicine"
+    ]
+  },
+  "object_of_study": "DMT-induced reorganization of a brain-body-environment system and subsequent recovery",
+  "structural_focus": {
+    "primary": "causation",
+    "secondary": [
+      "identity",
+      "memory",
+      "recovery",
+      "return"
+    ]
+  },
+  "main_question": "How can the rapid multilevel reorganization produced by DMT be structurally separated into departure, altered-state organization, recurrence, and recovery without collapsing phenomenology, mechanism, and ontology into one claim?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "The paper integrates evidence across pharmacokinetics, receptor signaling, cellular gain modulation, whole-brain dynamics, embodied physiology, phenomenology, memory, environment, repeated exposure, recovery, and post-session updating (Zenodo record description)."
+    },
+    {
+      "layer": "structural-mapping",
+      "claim": "The paper's central formal contribution is a prospective dual-reference architecture distinguishing departure from waking organization from approach toward a candidate recurrent DMT-state organization, treating lockout as a typed outcome and distinguishing local recovery from canonical waking return."
+    },
+    {
+      "layer": "candidate-claim",
+      "claim": "Breakthrough is defined provisionally as sustained altered-reference dominance rather than dose, intensity, neural complexity, visual effects, or ego dissolution — stated by the source as procedurally specified but empirically unvalidated."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "source-synthesis",
+    "secondary": [
+      "retrospective-analysis",
+      "prospective-protocol"
+    ]
+  },
+  "provenance": "externally-anchored-derivative",
+  "maturity": "source-bounded",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000019 (\"Dimethyltryptamine and the Recursive Reorganization of Consciousness\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+  "scope": "A multilevel causal architecture integrating external evidence (pharmacokinetics, receptor signaling, whole-brain dynamics, physiology, phenomenology, memory, environment, repeated exposure, recovery) with a prospective dual-reference architecture defining breakthrough provisionally as sustained altered-reference dominance.",
+  "exclusions": [
+    "Offers no preparation, dosing, administration, or legal-circumvention guidance.",
+    "Remains agnostic regarding the mind-independent existence of perceived entities or environments.",
+    "Does not claim empirical validation of the proposed architecture."
+  ],
+  "preserved_meaning": "External evidence remains attributed to its external sources as the paper synthesizes it; the paper's own distinction between controlled evidence, convergent human findings, structured phenomenology, computational inference, theoretical modeling, novel hypotheses, and ontological claims is preserved.",
+  "missingness": [
+    {
+      "item": "empirical validation of the dual-reference architecture",
+      "class": "SOURCE_BOUNDARY",
+      "notes": "Declared by the source as unvalidated; recorded as a boundary, not filled."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading the synthesis as established neuroscience or as clinical guidance, or attributing the GCD–UMCP dual-reference mapping to the external studies it draws on.",
+  "next_burden": "Prospective validation of the frozen dual-reference architecture: prospective testing, comparison with simpler models, preservation of negative results, and explicit contraction where its local predictions fail (stated by the source).",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "External evidence is synthesized, not asserted, by this record; the external studies are not registered as separate sources in this import pass. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

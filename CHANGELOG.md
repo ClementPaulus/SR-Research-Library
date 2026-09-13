@@ -4,7 +4,81 @@ All notable changes to the Structura Reditus Research Library are documented
 here. The library is versioned independently of GCD and of any other
 Structura Reditus artifact. Previous releases are never silently rewritten.
 
-## Unreleased
+## SR-LIBRARY.v0.2.0 — 2026-09-13 (pre-release)
+
+First populated release: the verified DOI-bearing corpus and the governing
+reference layer.
+
+### Added
+
+- **Governing Reference Registry** (`registry/governing/`, `SR-GOV-*`,
+  `schema/governing.schema.json`): 18 records populated from the full-text
+  governing sources supplied in handoff bundle
+  `SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0` (Summa Reditus, Reditus &
+  Structura Reditus, GCD Canon Placement, Functional Systems of GCD, the
+  Threefold Authority Order, UMCP/RCFT/ULRC Operating Systems, Liber Collapsus
+  v2.0, GCD/UMCP Whitepaper v2.1.5, Structura Collapsus, UMCP Kernel
+  Specification rc2 and its Repair Audit, both Publishing Protocol documents,
+  the Ingress Paper, Ingress/Publication Architecture, Refusal as Structure).
+  Each record carries its exact admitted burden in `authority_scope`; view
+  directories `tier-1/`, `tier-0/`, `mixed/` follow that scope. Statuses:
+  13 active, 3 candidate, 2 unresolved. Records are immutable once released
+  (`governing_immutable_hashes` in the manifest) and superseded, never
+  rewritten; the validator enforces immutability, supersession pointers, and
+  view placement.
+- Optional `governing_refs` on Tier-2 objects; each must resolve to an
+  `SR-GOV-*` record (Gate F blocks otherwise) and transfers no authority.
+- **Source registry populated**: 46 sources (`SRC-000001..046`) — the
+  verified Zenodo/Research Square corpus (34) and the governing-handoff
+  sources (12). Every DOI was resolved against public Zenodo/Crossref
+  metadata; observed titles, creators, dates, landing pages, and archive file
+  listings are recorded on the records. Shared-archive DOIs (four-paper
+  release, Orientation Series, Episteme Construction/Common Doorway,
+  Provenance Note/Geometry of Admissible Seams) are recorded per member work.
+- Optional labeled outbound `links` on sources (`canonical`, `archive`,
+  `full_text`, `publisher`, `code`, `data`, `supplement`, `project_page`;
+  at most one preferred; DOI links must resolve `identifier.doi`), validated
+  by `check_source_links`. No PDFs are stored.
+- **Tier-2 objects**: 19 submitted through the seven gates; 16 ACCEPTED and
+  registered (`SR-OBJ-000001..015`, `SR-OBJ-000018`), 3 RETURNED_FOR_REPAIR
+  (`SR-OBJ-000016` DOI/title mismatch; `SR-OBJ-000017`, `SR-OBJ-000019`
+  candidate-class works whose sources state no next burden). Non-accepted
+  submissions are archived beside their receipts as
+  `receipts/repair/RCPT-NNNNNN.submission.json`. Objects `SR-OBJ-000001..003`
+  revised to 1.0.1 with `governing_refs: [SR-GOV-000010]` (Zenodo
+  isSupplementTo), version 1.0.0 preserved in `registry/objects/history/`.
+- 3 relations (`REL-000001..003`, `extends`); 22 receipts (`RCPT-000001..022`).
+- Public site rebuilt as three surfaces — Governing References, Tier-2
+  Research, Sources & Archives — with per-entity pages for governing
+  references, objects, sources, authors, and receipts; per-axis views
+  (domain, structural focus, Tier-2 class, evidence mode, maturity), a
+  timeline, a historical/prefreeze source view, governing filter chips, and
+  labeled external links. A source is never shown with a Tier-2
+  classification.
+- Open seams SEAM-0008..0017 (shared DOIs, DOI lineage 18819238/18819239,
+  Liber Collapsus title/edition, Collapse Formalism DOI mismatch, title
+  variance, candidate next-burden repairs, DOI verification queue with
+  observed Zenodo titles, publishing-protocol adoption status, ingress
+  supersession, handoff evidence not committed). SEAM-0001 closed.
+- Loader helpers for receipts and release manifests; `loader.load_registry`
+  now returns a `governing` kind.
+
+### Changed
+
+- Schema SR-SCHEMA.v0.2.0 → SR-SCHEMA.v0.3.0 (source `links`, object
+  `governing_refs`, new governing schema).
+- Release manifests record `governing_count`, `id_manifest.governing`, and
+  `governing_immutable_hashes`; receipt counting ignores archived
+  submissions.
+
+### Not done, deliberately
+
+- No PDF or full text from the handoff bundle is committed; the bundle is
+  ignored by git and referenced by SHA-256 on each new source record.
+- No DOI was invented for works whose supplied source does not establish one.
+- No candidate or unresolved governing record was promoted to active.
+
+## Unreleased (pre-v0.2.0 integration)
 
 Unified the two implementation branches
 (`copilot/build-initial-implementation` and

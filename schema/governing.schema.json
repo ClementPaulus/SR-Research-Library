@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structura-reditus.org/schema/governing.schema.json",
+  "title": "Structura Reditus Research Library — Governing Reference Record",
+  "description": "A governing-reference record (SR-GOV-*). Preserves canon-facing, constitutional, authority-axis, functional-source, kernel-reference, protocol, specification, publication-protocol, ingress, and language-contact references with their exact admitted burden. Governing records are not Tier-2 research objects and are not source records; a work may hold SRC-*, SR-GOV-*, and SR-OBJ-* identities independently. Authority belongs to the admitted burden described in authority_scope, never to the whole document. Once released in a library manifest a record's historical meaning is immutable; only status and superseded_by may change, and a later record must supersede it explicitly.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "governing_id", "title", "source_id", "version", "status", "governing_role", "authority_scope",
+    "source_role", "immutable_record", "active_from", "supersedes", "superseded_by", "doi",
+    "canonical_link", "scope", "non_goal", "missingness", "notes"
+  ],
+  "properties": {
+    "governing_id": {
+      "type": "string",
+      "pattern": "^SR-GOV-[0-9]{6}$",
+      "description": "Stable governing-reference identifier, e.g. SR-GOV-000001."
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "source_id": {
+      "type": "string",
+      "pattern": "^SRC-[0-9]{6}$",
+      "description": "The source record carrying this work's archival identity. Must exist in registry/sources/."
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Version identity exactly as the source states it (e.g. 'Architecture Freeze v1.0', 'UMCP-KERNEL-SPEC.v2.4.0-rc2', 'release line v2.1.5')."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "superseded", "historical", "candidate", "unresolved"],
+      "description": "candidate: repair or adoption candidate, not active authority; unresolved: role, version, DOI, or adoption status ambiguous in the sources; superseded: replaced by a later record named in superseded_by."
+    },
+    "governing_role": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": ["canon-facing", "constitutional", "authority-axis", "functional-source", "kernel-reference",
+                 "protocol", "specification", "publication-protocol", "ingress", "language-contact"]
+      }
+    },
+    "authority_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tier_1", "tier_0"],
+      "description": "The exact admitted burden at each authority level. Both arrays are required; either may be empty. A document is never classified wholly Tier-1 or Tier-0 because it contains material at that level.",
+      "properties": {
+        "tier_1": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "tier_0": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "source_role": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The role the source itself declares or the handoff manifest admits for it."
+    },
+    "immutable_record": {
+      "type": "boolean",
+      "const": true,
+      "description": "Released governing records are never edited in place except for status and superseded_by."
+    },
+    "active_from": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|[+-][0-9]{2}:[0-9]{2})$",
+      "description": "ISO 8601 timestamp (explicit time zone) from which this record is in force in the library."
+    },
+    "supersedes": {
+      "type": ["string", "null"],
+      "pattern": "^SR-GOV-[0-9]{6}$",
+      "description": "Governing record this one explicitly supersedes; the old record is preserved."
+    },
+    "superseded_by": {
+      "type": ["string", "null"],
+      "pattern": "^SR-GOV-[0-9]{6}$"
+    },
+    "doi": {
+      "type": ["string", "null"],
+      "description": "DOI only when the supplied source establishes it; null preserves missingness."
+    },
+    "canonical_link": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "scope": { "type": "string", "minLength": 1, "description": "What the record governs, in the source's own terms." },
+    "non_goal": { "type": "string", "minLength": 1, "description": "What the source states it does not do." },
+    "missingness": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["item", "class"],
+        "properties": {
+          "item": { "type": "string", "minLength": 1 },
+          "class": {
+            "type": "string",
+            "enum": ["NON_BLOCKING", "EVALUABILITY_BLOCKING", "CONTRACT_VIOLATING", "AUTHORITY_BOUNDARY",
+                     "SOURCE_BOUNDARY", "PUBLICATION_BOUNDARY", "REPAIRABLE", "UNRESOLVED_SEAM"]
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}

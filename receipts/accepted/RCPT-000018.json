@@ -1,0 +1,74 @@
+{
+  "receipt_id": "RCPT-000018",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000018",
+  "generated": "2026-09-13T04:13:10Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000018",
+  "title": "Universal Collapse Diagnostics: Contract-First Invariants, κ-Continuous Calculus, and Cross-Domain Audit",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "diagnostic",
+  "functional_locus": "umcp",
+  "domain_primary": "interdisciplinary",
+  "structural_focus_primary": "boundary",
+  "main_question": "How can contract-first invariants and historical collapse diagnostics be applied consistently across heterogeneous domains while preserving auditability?",
+  "evidence_mode_primary": "formal-derivation",
+  "provenance": "corpus-native",
+  "maturity": "historical",
+  "source_ids": [
+    "SRC-000029"
+  ],
+  "relation_ids": [],
+  "publication_state": "archived",
+  "non_blocking_missingness": [
+    "public abstract (SOURCE_BOUNDARY)",
+    "source-stated next burden (NON_BLOCKING)",
+    "historical terminology vs current architecture (UNRESOLVED_SEAM)"
+  ],
+  "open_burdens": [
+    "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  ],
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+}

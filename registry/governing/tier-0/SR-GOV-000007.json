@@ -1,0 +1,28 @@
+{
+  "governing_id": "SR-GOV-000007",
+  "title": "Recursive Collapse Field Theory Operating System: Discovery, Candidate Maturity, and Generative Field-Hypothesis Discipline",
+  "source_id": "SRC-000005",
+  "version": "Official source specification, July 3, 2026",
+  "status": "active",
+  "governing_role": [
+    "functional-source",
+    "specification"
+  ],
+  "authority_scope": {
+    "tier_1": [],
+    "tier_0": [
+      "Candidate-record discipline: a candidate record names the candidate, types it, declares its maturity, identifies the surface that makes it legible, states what remains missing, blocks premature authority, and records the next burden. Central rule: explore freely; freeze carefully."
+    ]
+  },
+  "source_role": "Discovery / candidate / maturity / exploratory handoff source; exploration is not proof or final stance (handoff manifest).",
+  "immutable_record": true,
+  "active_from": "2026-09-13T04:28:50Z",
+  "supersedes": null,
+  "superseded_by": null,
+  "doi": "10.5281/zenodo.21212668",
+  "canonical_link": "https://doi.org/10.5281/zenodo.21212668",
+  "scope": "The disciplined environment in which recursive-collapse structures, field hypotheses, candidate invariants, domain mappings, diagnostic proposals, external-data bridge candidates, and closure paths may be generated before they are frozen, clarified, evaluated, adopted, rejected, or preserved as exploratory.",
+  "non_goal": "Does not redefine Reditus, Structura Reditus, GCD, the authority tiers, UMCP, or ULRC; discovery is not mistaken for proof; RCFT is not converted into an evaluation engine.",
+  "missingness": [],
+  "notes": "Shared packet DOI 10.5281/zenodo.21212668 (coordinated four-paper release); the DOI identifies the archive, the record identifies the member work."
+}

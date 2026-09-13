@@ -64,22 +64,69 @@ The AuthorID is stable for life; contribution history changes around it.
    state to `registry/objects/history/` (see §8), then update the record with
    a bumped `version`.
 
-## 3. Registering an external source
+## 3. Registering a source
 
 1. Take the next free identifier in the `SRC-NNNNNN` namespace.
 2. Create `registry/sources/SRC-NNNNNN.json` conforming to
    `schema/source.schema.json`:
-   - `source_type: external` for work outside Structura Reditus;
+   - `source_type: external` for work outside Structura Reditus,
+     `corpus-native` for current corpus works, `historical` for
+     prefreeze/lineage works, `dataset` for datasets;
    - `source_authors` — the original authors, exactly as attributable; never
      replaced by a library AuthorID;
    - `source_native_claims` — only claims the source itself makes, in its
      own terms; local interpretation belongs on your object's
      `claim_layers`, never here;
    - `identifier` — only supplied identifiers (DOI, URL, ISBN, archive
-     reference); never guessed;
-   - `missingness` — every unavailable metadata item, preserved explicitly.
-3. Never attribute a Structura Reditus or GCD interpretation to the external
+     reference); never guessed. For a DOI, set `identifier.url` to
+     `https://doi.org/<doi>`;
+   - `links` — labeled outbound resources (`canonical`, `archive`,
+     `full_text`, `publisher`, `code`, `data`, `supplement`,
+     `project_page`). Mark at most one `preferred: true` (normally the DOI
+     resolver, label "Canonical DOI"). Add an archive landing page only when
+     it is known or resolvable. Never guess full-text, code, data, or
+     supplement URLs, and never commit PDFs — the paper stays on its
+     platform;
+   - `missingness` — every unavailable metadata item, preserved explicitly,
+     including any title or DOI discrepancy observed in archive metadata.
+3. Shared-archive DOIs: when one DOI anchors several member works, give each
+   work its own `SRC-*`, record the shared condition in `notes`, and never
+   collapse them into one object or count them as separate deposits.
+   Alternate or disputed DOIs go in `identifier.other`, `missingness`, and a
+   seam in `releases/open-seams.yaml` — never silently pick one.
+4. Never attribute a Structura Reditus or GCD interpretation to an external
    author unless the source actually makes that interpretation.
+
+## 3a. Registering a governing reference
+
+Governing references (`SR-GOV-*`) preserve canon-facing, constitutional,
+authority-axis, functional-source, kernel-reference, protocol, specification,
+publication-protocol, ingress, and language-contact works. They are not
+research objects and never receive an `SR-OBJ-*` merely for visibility.
+
+1. Register the source first (§3); the governing record's `source_id` must
+   resolve.
+2. Take the next free `SR-GOV-NNNNNN` and create the record under
+   `registry/governing/<view>/` conforming to `schema/governing.schema.json`,
+   where `<view>` is `tier-1/`, `tier-0/`, or `mixed/` according to which of
+   `authority_scope.tier_1` / `tier_0` are non-empty (root if both are empty).
+3. Describe the **exact admitted burden** from the source itself in
+   `authority_scope`, `scope`, and `non_goal`. Never classify a whole
+   document as Tier-1 or Tier-0 because it contains material at that level.
+4. Use `status: candidate` for repair or adoption candidates and
+   `status: unresolved` where sources disagree on role, version, DOI, or
+   adoption status; record the disagreement in `missingness` and in
+   `releases/open-seams.yaml`. Do not promote a candidate without an
+   adoption record.
+5. Record `doi` only when the source establishes it. Set `version` exactly as
+   the source states it. `active_from` is a full ISO 8601 timestamp with time
+   zone.
+6. After release, never edit the record's meaning in place. To change active
+   authority: add a new `SR-GOV-*` with `supersedes: <old>`, then set the
+   old record's `superseded_by` and `status: superseded`. Keep the old file.
+   `python -m validators.validate` enforces this.
+7. On Tier-2 objects, list constraining references in `governing_refs`. This
+   never transfers authority; `authority.tier` stays `tier-2`.
 
 ## 4. Declaring relations
 

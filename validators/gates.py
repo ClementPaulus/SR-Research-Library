@@ -215,6 +215,11 @@ def _gate_f_relation_integrity(record: dict, registry: dict, taxonomies: dict, g
     if relations is None:
         gate.block("relations is missing (declare an empty list if the object has no relations)")
         return
+    # Governing references constrain the record; they never transfer authority (Gate B keeps tier-2).
+    governing_ids = {g.get("governing_id") for g in (registry.get("governing") or {}).values()}
+    for governing_id in record.get("governing_refs") or []:
+        if governing_id not in governing_ids:
+            gate.block(f"governing reference '{governing_id}' does not resolve to a registered SR-GOV record")
     registered = {r.get("relation_id"): r for r in registry["relations"].values()}
     object_ids = {o.get("object_id") for o in registry["objects"].values()}
     object_ids.add(record.get("object_id"))

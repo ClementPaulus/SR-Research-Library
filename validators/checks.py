@@ -15,6 +15,8 @@ credential.
 
 from __future__ import annotations
 
+import hashlib
+import json
 import re
 from dataclasses import dataclass, field
 
@@ -27,6 +29,7 @@ ID_PATTERNS = {
     "objects": re.compile(r"^SR-OBJ-[0-9]{6}$"),
     "sources": re.compile(r"^SRC-[0-9]{6}$"),
     "relations": re.compile(r"^REL-[0-9]{6}$"),
+    "governing": re.compile(r"^SR-GOV-[0-9]{6}$"),
 }
 
 ID_FIELDS = {
@@ -34,6 +37,7 @@ ID_FIELDS = {
     "objects": "object_id",
     "sources": "source_id",
     "relations": "relation_id",
+    "governing": "governing_id",
 }
 
 SCHEMA_FOR_KIND = {
@@ -41,6 +45,7 @@ SCHEMA_FOR_KIND = {
     "objects": "object",
     "sources": "source",
     "relations": "relation",
+    "governing": "governing",
 }
 
 # Registry event timestamps carry an explicit time-zone designator; date-only values are ambiguous.
@@ -112,6 +117,7 @@ def check_references(registry: dict, report: ValidationReport) -> None:
     source_ids = _ids(registry, "sources")
     relation_ids = _ids(registry, "relations")
     object_ids = _ids(registry, "objects")
+    governing_ids = _ids(registry, "governing") if "governing" in registry else set()
 
     for filename, record in registry["objects"].items():
         rec = f"objects/{filename}"
@@ -124,10 +130,20 @@ def check_references(registry: dict, report: ValidationReport) -> None:
         for relation_id in record.get("relations", []) or []:
             if relation_id not in relation_ids:
                 report.add("relation-references", rec, f"RelationID '{relation_id}' is not registered")
+        for governing_id in record.get("governing_refs", []) or []:
+            if governing_id not in governing_ids:
+                report.add("governing-references", rec,
+                           f"governing reference '{governing_id}' does not resolve to a registered SR-GOV record")
         supersedes = record.get("supersedes")
         if supersedes and supersedes not in object_ids:
             report.add("supersession-references", rec,
                        f"superseded ObjectID '{supersedes}' is not registered")
+
+    for filename, record in (registry.get("governing") or {}).items():
+        rec = f"governing/{filename}"
+        source_id = record.get("source_id")
+        if isinstance(source_id, str) and source_id not in source_ids:
+            report.add("source-references", rec, f"SourceID '{source_id}' is not registered")
 
     for filename, record in registry["relations"].items():
         rec = f"relations/{filename}"
@@ -223,9 +239,10 @@ def check_date_formats(registry: dict, report: ValidationReport) -> None:
         "authors": ["registered"],
         "objects": ["date"],
         "relations": ["declared"],
+        "governing": ["active_from"],
     }
     for kind, fields in date_fields.items():
-        for filename, record in registry[kind].items():
+        for filename, record in (registry.get(kind) or {}).items():
             for field_name in fields:
                 value = record.get(field_name)
                 if isinstance(value, str) and not TIMESTAMP_RE.match(value):
@@ -260,23 +277,140 @@ def check_duplicate_object_collisions(registry: dict, report: ValidationReport) 
 
 
 def check_missingness_classes(registry: dict, report: ValidationReport) -> None:
-    for filename, record in registry["objects"].items():
-        rec = f"objects/{filename}"
-        for entry in record.get("missingness", []) or []:
-            cls = entry.get("class") if isinstance(entry, dict) else None
-            if cls not in loader.MISSINGNESS_CLASSES:
-                report.add("missingness-classes", rec,
-                           f"missingness class '{cls}' is not a declared missingness class")
+    for kind in ("objects", "governing"):
+        for filename, record in (registry.get(kind) or {}).items():
+            rec = f"{kind}/{filename}"
+            for entry in record.get("missingness", []) or []:
+                cls = entry.get("class") if isinstance(entry, dict) else None
+                if cls not in loader.MISSINGNESS_CLASSES:
+                    report.add("missingness-classes", rec,
+                               f"missingness class '{cls}' is not a declared missingness class")
 
 
-def validate_registry(registry: dict = None, schemas: dict = None, taxonomies: dict = None) -> ValidationReport:
-    """Run every automated validation check and return the full report."""
+# Fields a released governing record may still change: everything else is its historical meaning.
+GOVERNING_MUTABLE_FIELDS = ("status", "superseded_by")
+
+
+def governing_immutable_hash(record: dict) -> str:
+    """SHA-256 of a governing record's immutable content (all fields except status/superseded_by)."""
+    frozen = {k: v for k, v in record.items() if k not in GOVERNING_MUTABLE_FIELDS}
+    payload = json.dumps(frozen, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def _governing_view(filename: str) -> str:
+    parts = filename.replace("\\", "/").split("/")
+    return parts[0] if len(parts) > 1 else ""
+
+
+def check_governing(registry: dict, report: ValidationReport, released_hashes: dict = None) -> None:
+    """View placement, authority-scope explicitness, supersession integrity, and released-record immutability."""
+    governing = registry.get("governing") or {}
+    if released_hashes is None:
+        released_hashes = loader.released_governing_hashes()
+    by_id = {r.get("governing_id"): r for r in governing.values() if isinstance(r.get("governing_id"), str)}
+
+    for filename, record in governing.items():
+        rec = f"governing/{filename}"
+        scope = record.get("authority_scope") or {}
+        tier_1, tier_0 = scope.get("tier_1"), scope.get("tier_0")
+        if not isinstance(tier_1, list) or not isinstance(tier_0, list):
+            report.add("governing-authority-scope", rec,
+                       "authority_scope must declare tier_1 and tier_0 burden lists explicitly (either may be empty)")
+            continue
+        view = _governing_view(filename)
+        expected = {"tier-1": (True, False), "tier-0": (False, True), "mixed": (True, True), "": (False, False)}
+        if view not in expected:
+            report.add("governing-view", rec, f"unknown governing view directory '{view}'")
+        elif expected[view] != (bool(tier_1), bool(tier_0)):
+            report.add("governing-view", rec,
+                       f"view directory '{view or '(root)'}' does not match authority_scope "
+                       f"(tier_1 {'declared' if tier_1 else 'empty'}, tier_0 {'declared' if tier_0 else 'empty'}); "
+                       "views are tier-1/, tier-0/, mixed/, or the root for records with no Tier-1/Tier-0 burden")
+
+        gid = record.get("governing_id")
+        status = record.get("status")
+        supersedes, superseded_by = record.get("supersedes"), record.get("superseded_by")
+        if supersedes:
+            old = by_id.get(supersedes)
+            if old is None:
+                report.add("governing-supersession", rec,
+                           f"supersedes '{supersedes}' but that record is not preserved in the registry")
+            else:
+                if old.get("superseded_by") != gid:
+                    report.add("governing-supersession", rec,
+                               f"supersedes '{supersedes}' but that record's superseded_by is '{old.get('superseded_by')}'")
+                if old.get("status") not in ("superseded", "historical"):
+                    report.add("governing-supersession", rec,
+                               f"supersedes '{supersedes}' but that record's status is '{old.get('status')}'")
+        if superseded_by:
+            new = by_id.get(superseded_by)
+            if new is None or new.get("supersedes") != gid:
+                report.add("governing-supersession", rec,
+                           f"superseded_by '{superseded_by}' is not a registered record that supersedes this one")
+            if status == "active":
+                report.add("governing-supersession", rec, "an active record cannot be superseded_by another record")
+        elif status == "superseded":
+            report.add("governing-supersession", rec, "status is superseded but superseded_by is null")
+
+        if gid in released_hashes and governing_immutable_hash(record) != released_hashes[gid]:
+            report.add("governing-immutability", rec,
+                       f"released governing record '{gid}' was edited in place; only status and superseded_by "
+                       "may change after release. Issue a new SR-GOV record that supersedes it.")
+
+    for gid in released_hashes:
+        if gid not in by_id:
+            report.add("governing-immutability", f"governing/{gid}",
+                       f"released governing record '{gid}' has been removed; superseded records must be preserved")
+
+
+DOI_RESOLVER = "https://doi.org/"
+
+
+def check_source_links(registry: dict, report: ValidationReport) -> None:
+    """Outbound links: at most one preferred per source; DOI resolver must match identifier.doi."""
+    for filename, record in registry["sources"].items():
+        rec = f"sources/{filename}"
+        links = record.get("links") or []
+        if not isinstance(links, list):
+            continue
+        preferred = [l for l in links if isinstance(l, dict) and l.get("preferred") is True]
+        if len(preferred) > 1:
+            report.add("source-links", rec,
+                       f"{len(preferred)} links are marked preferred; at most one is allowed")
+        urls = [l.get("url") for l in links if isinstance(l, dict)]
+        for url in set(urls):
+            if urls.count(url) > 1:
+                report.add("source-links", rec, f"duplicate link url '{url}'")
+        doi = (record.get("identifier") or {}).get("doi")
+        for link in links:
+            if not isinstance(link, dict):
+                continue
+            url = link.get("url") or ""
+            if url.startswith(DOI_RESOLVER) and doi and url != DOI_RESOLVER + doi:
+                report.add("source-links", rec,
+                           f"DOI link '{url}' does not resolve identifier.doi '{doi}'")
+
+
+def validate_registry(registry: dict = None, schemas: dict = None, taxonomies: dict = None,
+                      released_hashes: dict = None) -> ValidationReport:
+    """Run every automated validation check and return the full report.
+
+    Released-governing-record immutability is enforced against the release
+    manifests when the live registry is validated (registry is None). Callers
+    supplying their own registry pass ``released_hashes`` explicitly.
+    """
     if registry is None:
         registry = loader.load_registry()
+        if released_hashes is None:
+            released_hashes = loader.released_governing_hashes()
+    if released_hashes is None:
+        released_hashes = {}
     if schemas is None:
         schemas = loader.load_schemas()
     if taxonomies is None:
         taxonomies = loader.load_taxonomies()
+    registry.setdefault("governing", {})
 
     report = ValidationReport()
     check_schema_validity(registry, schemas, report)
@@ -288,4 +422,6 @@ def validate_registry(registry: dict = None, schemas: dict = None, taxonomies: d
     check_version_formats(registry, report)
     check_duplicate_object_collisions(registry, report)
     check_missingness_classes(registry, report)
+    check_source_links(registry, report)
+    check_governing(registry, report, released_hashes)
     return report

@@ -1,0 +1,89 @@
+{
+  "object_id": "SR-OBJ-000015",
+  "title": "The Common Doorway: A Cross-Field Method for Generative Collapse",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "language-contact",
+    "secondary": [
+      "pedagogical",
+      "domain-translation"
+    ]
+  },
+  "functional_locus": "ulrc",
+  "source_ids": [
+    "SRC-000032"
+  ],
+  "lens": "cross-field translation",
+  "domain": {
+    "primary": "interdisciplinary",
+    "secondary": [
+      "philosophy",
+      "psychology"
+    ]
+  },
+  "object_of_study": "a prose-first route for comparing claims across heterogeneous vocabularies",
+  "structural_focus": {
+    "primary": "translation",
+    "secondary": [
+      "boundary"
+    ]
+  },
+  "main_question": "How can structurally related claims from different fields be made mutually legible without requiring the fields to collapse into one vocabulary?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "The Common Doorway is distributed as a member work (The Common Doorway.pdf) of the archive 10.5281/zenodo.17189775 whose record describes The Episteme Construction."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library reads the work as historical language-contact material under ULRC; its content classification follows the corpus owner's placement."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "pedagogical",
+    "secondary": [
+      "conceptual-argument"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "historical",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000032 (\"The Common Doorway: A Cross-Field Method for Generative Collapse\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+  "scope": "A 2025 prose-first cross-field method distributed in the same archive as The Episteme Construction.",
+  "exclusions": [
+    "Does not require fields to adopt one vocabulary.",
+    "Does not carry 2025 terminology into the current ULRC contract as authority."
+  ],
+  "preserved_meaning": "The source-native vocabularies of the fields compared remain their own; the doorway is a route for mutual legibility, not a merger.",
+  "missingness": [
+    {
+      "item": "public abstract for this member work",
+      "class": "SOURCE_BOUNDARY",
+      "notes": "The shared record's description is that of The Episteme Construction; no separate abstract is on the record."
+    },
+    {
+      "item": "source-stated next burden",
+      "class": "NON_BLOCKING",
+      "notes": "Not stated on the public record."
+    },
+    {
+      "item": "historical terminology vs current architecture",
+      "class": "UNRESOLVED_SEAM",
+      "notes": "Preserved as source evidence."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading cross-field legibility as equivalence of claims, or reading the historical method as the current ULRC operating system.",
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Historical / prefreeze lineage object; membership in the shared archive verified from the Zenodo file listing. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

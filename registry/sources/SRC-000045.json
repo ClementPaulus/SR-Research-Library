@@ -1,0 +1,22 @@
+{
+  "source_id": "SRC-000045",
+  "source_type": "corpus-native",
+  "title": "Refusal as Structure: On Critique, Boundary, and the Public Life of Thought",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Critique is not merely pressure applied from outside; it is one of the ways thought learns the shape of its public surface.",
+    "Refusal can evade accountability but can also protect a boundary against false terms of entry; when refusal clarifies the conditions of contact it makes disagreement more honest."
+  ],
+  "identifier": {
+    "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 04_INGRESS_CONTACT/Refusal_as_Structure.pdf, sha256 63a450c90b4dcd6107961cc5892552d5fba69c121508acff10f9928d2e39a08d. Full text supplied to the library maintainer; not deposited in this repository."
+  },
+  "publication_year": 2026,
+  "venue": null,
+  "links": [],
+  "missingness": [
+    "No DOI or public archive deposit is established by the supplied source; identity is anchored to the handoff bundle file hash. Do not guess a DOI."
+  ],
+  "notes": "Version 1.0, finalized for publication, May 2026 (dated May 10, 2026). License CC BY-NC-ND 4.0 as stated in the source. See SR-GOV-000018."
+}

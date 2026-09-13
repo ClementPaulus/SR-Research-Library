@@ -1,0 +1,34 @@
+{
+  "source_id": "SRC-000033",
+  "source_type": "historical",
+  "title": "The Collapse Formalism: A Reader's Guide to the UMCP/RCFT/ULRC Stack",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [],
+  "identifier": {
+    "doi": "10.5281/zenodo.16990995",
+    "url": "https://doi.org/10.5281/zenodo.16990995"
+  },
+  "publication_year": 2025,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.16990995",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/17007222",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "DOI/title mismatch: 10.5281/zenodo.16990995 resolves (as concept DOI) to \"Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees\" (latest version record 17007222; version 16990996 is SRC-000034). Neither record's file listing contains a work titled The Collapse Formalism. The DOI for the titled work is therefore unverified in this import pass (SEAM-0011).",
+    "Source-native claims not captured in this import pass; only identity, archive, and classification metadata are recorded."
+  ],
+  "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Source identity is unresolved pending a DOI that resolves to the titled work; the record is retained so the seam is visible rather than silently repaired. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.16990995 is a concept DOI (resolves to the latest version); resolved record 17007222, record title \"Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees\", creators ['Paulus, Clement'], publication date 2025-08-30, resource type Publication."
+}

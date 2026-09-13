@@ -1,0 +1,31 @@
+{
+  "governing_id": "SR-GOV-000018",
+  "title": "Refusal as Structure: On Critique, Boundary, and the Public Life of Thought",
+  "source_id": "SRC-000045",
+  "version": "Version 1.0, finalized for publication, May 2026",
+  "status": "active",
+  "governing_role": [
+    "language-contact"
+  ],
+  "authority_scope": {
+    "tier_1": [],
+    "tier_0": []
+  },
+  "source_role": "Language / contact / refusal companion; contact/refusal is not stance derivation (handoff manifest).",
+  "immutable_record": true,
+  "active_from": "2026-09-13T04:28:50Z",
+  "supersedes": null,
+  "superseded_by": null,
+  "doi": null,
+  "canonical_link": null,
+  "scope": "Locating the ground from which critique speaks; refusal as protection of a boundary against false terms of entry when it clarifies the conditions of contact.",
+  "non_goal": "Does not derive stance, evaluate claims, or carry Tier-1/Tier-0 authority; contact and refusal are not stance derivation.",
+  "missingness": [
+    {
+      "item": "DOI / archive deposit",
+      "class": "NON_BLOCKING",
+      "notes": "Not established by the supplied source."
+    }
+  ],
+  "notes": "License stated in the source: CC BY-NC-ND 4.0."
+}

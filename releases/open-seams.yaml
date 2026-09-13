@@ -6,7 +6,8 @@ seams:
   - id: SEAM-0001
     area: registry
     description: Registry contains no research objects, sources, or relations yet; no actual source metadata was supplied, and records are never fabricated or bulk-populated.
-    status: open
+    status: closed
+    closed_by: first DOI-bearing corpus import (34 sources, 19 objects submitted, 3 relations), 2026-09-13.
   - id: SEAM-0002
     area: site
     description: The public surface is a minimal static generated page; per-entity and per-axis route families (see site/README.md) remain to be built.
@@ -30,4 +31,124 @@ seams:
   - id: SEAM-0007
     area: site.questions-routing
     description: Final question slug normalization and canonicalization policy.
+    status: open
+  - id: SEAM-0008
+    area: registry.sources.shared-doi
+    description: >-
+      Shared archive DOIs identify archives containing several distinct member works:
+      10.5281/zenodo.21212668 (SRC-000002..005, coordinated four-paper release), 10.5281/zenodo.19637774
+      (SRC-000006..008, Orientation Series I-III), 10.5281/zenodo.17189775 (SRC-000031 The Episteme Construction,
+      SRC-000032 The Common Doorway), 10.5281/zenodo.17980036 (SRC-000023 Provenance & Canon Note, SRC-000024
+      A Geometry of Admissible Seams). The SourceID identifies the named work; the DOI identifies the archive.
+      Member works are neither collapsed into one object nor counted as separate DOI deposits. Whether member
+      works should later receive their own DOIs is a corpus-owner decision.
+    status: open
+  - id: SEAM-0009
+    area: registry.sources.doi-lineage
+    description: >-
+      SRC-000015 (GCD/UMCP whitepaper): the active corpus identifies 10.5281/zenodo.18819238 as the preferred paper
+      DOI; ResearchGate metadata also exposes 10.5281/zenodo.18819239. Observed Zenodo metadata (2026-09-13):
+      18819238 is registered as the concept DOI whose latest version is record 18893328 (v2.1.5, 2026-03-05);
+      18819239 is a version DOI (v2.1.3, 2026-02-28) under that concept. Recorded as evidence only; the exact
+      concept/version relationship the corpus intends remains unresolved and is not silently reconciled. One
+      source record and no duplicate object.
+    status: open
+  - id: SEAM-0010
+    area: registry.sources.title-edition
+    description: >-
+      SRC-000018 (Liber Collapsus): the corpus owner designates 10.5281/zenodo.22310064 as the canonical Liber
+      Collapsus DOI for the Structura Reditus Zenodo community. Zenodo record 22310064 currently carries the title
+      "Liber Universalis de Collapsu Mathematicae" (concept 10.5281/zenodo.16809846) with file liber_collapsus.pdf;
+      record 10.5281/zenodo.22310544 carries the Liber Collapsus title with identical files and declares
+      isNewVersionOf 22310064. 22310544 is not substituted. Title/edition relationship unresolved.
+    status: open
+  - id: SEAM-0011
+    area: registry.sources.doi-mismatch
+    description: >-
+      SRC-000033 (The Collapse Formalism: A Reader's Guide to the UMCP/RCFT/ULRC Stack): listed DOI
+      10.5281/zenodo.16990995 resolves (concept) to Collapse Calculus (SRC-000034; versions 16990996, 17007222),
+      whose file listings contain no Collapse Formalism work. Source identity unverified; SR-OBJ-000016 was
+      RETURNED_FOR_REPAIR (RCPT-000016). Repair requires a DOI or archive reference that resolves to the titled work.
+    status: open
+  - id: SEAM-0012
+    area: registry.sources.title-variance
+    description: >-
+      Zenodo record titles differ from the listed titles for SRC-000016 (record: "Universal Measurement Contract
+      Protocol"; listed: "UMCP CasePack Publication"), SRC-000030 (record: "Generative Collapse Dynamics 4 Tier
+      Stack"; listed: "Generative Collapse Dynamics: Kernel, Platform, Theory, and Governance"; four member PDFs),
+      and SRC-000021 (bundle record title). Listed titles retained; observed titles recorded in each source's
+      missingness. Whether records should be retitled on Zenodo is a corpus-owner decision.
+    status: open
+  - id: SEAM-0013
+    area: registry.objects.next-burden
+    description: >-
+      SR-OBJ-000017 (Collapse Calculus) and SR-OBJ-000019 (A Geometry of Admissible Seams) are candidate-class
+      historical objects whose public records state no next burden; because candidate material implies a stronger
+      later use, both were RETURNED_FOR_REPAIR (RCPT-000017, RCPT-000019) pending the paper's own stated burden.
+      Submissions archived beside their receipts.
+    status: open
+  - id: SEAM-0014
+    area: registry.sources.doi-verification-queue
+    description: >-
+      DOI candidates known from earlier corpus records but not registered in the first import pass. Public Zenodo
+      metadata was fetched on 2026-09-13 (all creators "Paulus, Clement"); observed titles are recorded here as
+      evidence. No SourceID is allocated until the corpus owner confirms exact title, authorship, and
+      current/historical placement.
+      10.5281/zenodo.16660740 - expected: Universal Regime Diagnostic Toolkit / collapse-aware regime diagnostic
+      work; observed: "Universal Mathematics & Collapse Platform: Regime-Aware Procurement Systems via RCFT/ULRC"
+      (2025-07-31).
+      10.5281/zenodo.16623285 - expected: empirical calibration of UMCP using Hawking-analog / polariton-fluid data;
+      observed: "Universal Mathematics & Collapse Platform (UMCP): Empirical Calibration via Hawking-Analog
+      Polariton Fluids" (Dataset, 2025-07-30).
+      10.5281/zenodo.16757373 - expected: anyons / TQFT / topological-quantum collapse audit; observed: "Universal
+      Mathematics & Collapse Platform (UMCP) Audit of Self-Sustained Frictional Cooling in Active Matter" (Dataset,
+      2025-08-06) - expected family NOT matched.
+      10.5281/zenodo.16749329 - expected: Field Stability, Regime Closure, and Universal Audit; observed (concept ->
+      16749330): "Field Stability, Regime Closure, and Universal Audit: Empirical Protocols under the Universal
+      Mathematics & Collapse Platform (UMCP)" (2025-08-05).
+      10.5281/zenodo.16395027 - expected: UMCP Program Page; observed: "Architectural Blueprint and Operational
+      Logic" (Dataset, 2025-07-24) - identity not confirmed.
+      10.5281/zenodo.16908155 - expected: UMCP v1.0.1 canonical kernel / weld guarantees / audit protocol; observed:
+      "UMCP v1.0.1: Canonical Kernel, Weld Guarantees, and Audit Protocol" (2025-08-19).
+      10.5281/zenodo.16734906 - expected: Universal Regime Diagnostic Toolkit v1.0; observed: "Universal Regime
+      Diagnostic Toolkit: Modular Software and API for Field-Ready Collapse Diagnostics, Memory Audit, and Agent
+      Logic" (Dataset, 2025-08-03).
+      10.5281/zenodo.16745537 - expected: Collapse-Compatible Conjecture Catalog v1.0; observed:
+      "Collapse-Compatible Conjecture Catalog" (2025-08-03).
+      10.5281/zenodo.16696719 - expected: Collapse is Generative: Axiomatic Foundation and CEFL v1.1; observed:
+      "Collapse is Generative: Axiomatic Foundation and the Collapse Equator Fidelity Law" (v1.1, 2025-08-01).
+      10.5281/zenodo.16748011 - expected: RCFT/ULRC Backlog v2.2; observed: "RCFT/ULRC Protocol and Data Backlog
+      (2022-2025): Regime Assignment, Audit Trail, Calibration History, and Multi-Domain Collapse Diagnostics"
+      (Dataset v2.2, 2025-08-05).
+      10.5281/zenodo.16757372 - expected: later 2025 corpus/profile anchor, identity unresolved; observed: concept
+      DOI of 16757373 (Audit of Self-Sustained Frictional Cooling in Active Matter).
+    status: open
+  - id: SEAM-0015
+    area: registry.governing.publication-protocol
+    description: >-
+      Two publishing-protocol documents were supplied: SR-PUBLISHING-PROTOCOL.v1.0 (finalized 2026-08-28; self-declared
+      "final Tier-0 publishing protocol; adopted working standard"; listed by the handoff manifest as "publishing
+      guidance") and SR-PUBLISHING-PROTOCOL.v1.0-rc1 (prepared 2026-08-29; self-declared "internal Tier-0 repair
+      candidate; not canon-frozen"; names a 2026-08-28 repaired working draft as predecessor). Version order and
+      adoption status disagree. Registered as SR-GOV-000014 (unresolved) and SR-GOV-000015 (candidate) with
+      supersedes null; not reconciled. Requires a corpus-owner adoption record.
+    status: open
+  - id: SEAM-0016
+    area: registry.governing.ingress
+    description: >-
+      The June 2026 Ingress Paper (SR-GOV-000016, DOI 10.5281/zenodo.20549483, under the Orientation Series concept
+      DOI 10.5281/zenodo.19622272) states that it replaces the former three-part orientation burden. Neither it nor
+      the April 2026 route companion (SR-GOV-000017) states whether the companion remains the active route
+      reference, and no source states that the Orientation Series objects (SR-OBJ-000001..003) become historical.
+      SR-GOV-000017 is registered as unresolved; no object maturity was changed.
+    status: open
+  - id: SEAM-0017
+    area: registry.governing.handoff-evidence
+    description: >-
+      The governing records SR-GOV-000001..018 and sources SRC-000035..046 were populated from the full-text
+      handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0 (SHA256SUMS recorded on each new source as
+      identifier.archive_reference). The bundle, including its PDFs and Markdown specifications, is handoff
+      evidence and is not committed to this repository (ignored via .gitignore). Committing any full text requires
+      an explicit repository policy and licensing decision. Works without a DOI in the bundle (SRC-000035..038,
+      SRC-000039..042, SRC-000044, SRC-000045) therefore have no public archive anchor yet.
     status: open

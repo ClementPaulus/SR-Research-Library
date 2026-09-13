@@ -1,0 +1,35 @@
+{
+  "source_id": "SRC-000012",
+  "source_type": "corpus-native",
+  "title": "The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Shows, on one small object (three local channels under a frozen linear embedding), that arithmetic retention and multiplicative coherence are related but not identical, and that a healthy arithmetic surface can conceal a real multiplicative wound.",
+    "Does not introduce a new closure family, does not claim finite return, and does not stage a welded seam.",
+    "States that it prepares the reader for the next public burdens of the corpus: finite return, seam accounting, and welded continuity."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.19868885",
+    "url": "https://doi.org/10.5281/zenodo.19868885"
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.19868885",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/19868885",
+      "preferred": false
+    }
+  ],
+  "missingness": [],
+  "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19868885 is a version DOI; resolved record 19868885, record title \"The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence\", creators ['Paulus, Clement'], publication date 2026-04-28, resource type Report."
+}

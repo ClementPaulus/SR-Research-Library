@@ -1,0 +1,39 @@
+{
+  "governing_id": "SR-GOV-000014",
+  "title": "Structura Reditus Publishing Protocol: Canon-facing publication, source, version, and repair discipline",
+  "source_id": "SRC-000041",
+  "version": "SR-PUBLISHING-PROTOCOL.v1.0 (finalized 2026-08-28, America/Chicago)",
+  "status": "unresolved",
+  "governing_role": [
+    "publication-protocol",
+    "protocol"
+  ],
+  "authority_scope": {
+    "tier_1": [],
+    "tier_0": [
+      "Publication-protocol rules for manuscript construction and publication conformance: every work declares mandate, non-goal, and reader result; claim burden bounded before drafting; source, evidence, code, version, and publication boundaries explicit; canon and entry audits separate; author-independence as durability test."
+    ]
+  },
+  "source_role": "Publishing guidance per the handoff manifest; self-declared as the final Tier-0 publishing protocol and adopted working standard.",
+  "immutable_record": true,
+  "active_from": "2026-09-13T04:28:50Z",
+  "supersedes": null,
+  "superseded_by": null,
+  "doi": null,
+  "canonical_link": null,
+  "scope": "Govern how local works enter, remain legible within, and are repaired inside the completed Structura Reditus corpus.",
+  "non_goal": "Does not create Tier-1 proof, canon admission, DOI status, or public-release status by declaration alone; finalization does not publish any manuscript.",
+  "missingness": [
+    {
+      "item": "Adoption status",
+      "class": "UNRESOLVED_SEAM",
+      "notes": "The document self-declares as adopted working standard v1.0 (2026-08-28); the handoff manifest lists it as guidance; SR-GOV-000015 (rc1, 2026-08-29) names a 2026-08-28 working draft as its predecessor. Which document is the active publication protocol is not established by the sources and is not reconciled here."
+    },
+    {
+      "item": "Publication-protocol lineage",
+      "class": "NON_BLOCKING",
+      "notes": "Source object GCD / UMCP Publishing Protocol is not supplied or registered."
+    }
+  ],
+  "notes": "Status unresolved rather than active or superseded: the sources disagree on adoption status and version order."
+}

@@ -5,13 +5,48 @@
     "orcid": "0009-0000-6069-8234",
     "status": "active",
     "credentials": [],
-    "total_registered_authored_objects": 0,
-    "primary_domain_distribution": {},
-    "tier2_class_distribution": {},
-    "structural_focus_distribution": {},
-    "evidence_mode_distribution": {},
-    "provenance_distribution": {},
-    "maturity_distribution": {},
+    "total_registered_authored_objects": 16,
+    "primary_domain_distribution": {
+      "chemistry": 0.125,
+      "interdisciplinary": 0.1875,
+      "neuroscience": 0.0625,
+      "philosophy": 0.0625,
+      "physics": 0.125,
+      "structura-reditus-core": 0.4375
+    },
+    "tier2_class_distribution": {
+      "diagnostic": 0.3125,
+      "domain-translation": 0.1875,
+      "external-ingress": 0.0625,
+      "language-contact": 0.125,
+      "pedagogical": 0.3125
+    },
+    "structural_focus_distribution": {
+      "boundary": 0.125,
+      "causation": 0.0625,
+      "continuity": 0.0625,
+      "heterogeneity": 0.25,
+      "return": 0.3125,
+      "translation": 0.1875
+    },
+    "evidence_mode_distribution": {
+      "conceptual-argument": 0.0625,
+      "formal-derivation": 0.375,
+      "pedagogical": 0.25,
+      "retrospective-analysis": 0.25,
+      "source-synthesis": 0.0625
+    },
+    "provenance_distribution": {
+      "corpus-native": 0.625,
+      "dataset-derived": 0.1875,
+      "externally-anchored-derivative": 0.1875
+    },
+    "maturity_distribution": {
+      "frozen-local-object": 0.4375,
+      "historical": 0.3125,
+      "retrospectively-evaluated": 0.1875,
+      "source-bounded": 0.0625
+    },
     "note": "This profile contains only quantities reconstructible from the registry. It contains no universal author score and no weighting of prestige, credentials, degree level, institutional affiliation, citations, originality, quality, importance, or rank."
   }
 }

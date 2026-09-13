@@ -1,0 +1,43 @@
+{
+  "source_id": "SRC-000015",
+  "source_type": "corpus-native",
+  "title": "Generative Collapse Dynamics (UMCP/GCD): Enabling Cross-Domain Comparability via Contract-Frozen Kernel Invariants and Typed Return",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Presents GCD as a contract-first measurement discipline governed by a single admissibility axiom: collapse is generative; only what returns through collapse is real — where \"real\" is an audit rule, not a metaphysical claim.",
+    "Formalizes the Tier-1 kernel ledger (F, ω, S, C, κ, IC, typed return delay τ_R) and proves the identities F+ω=1, IC≤F, IC=exp(κ)."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.18819238",
+    "url": "https://doi.org/10.5281/zenodo.18819238",
+    "other": "Alternate DOI 10.5281/zenodo.18819239 appears in external (ResearchGate) metadata; preferred corpus DOI is 10.5281/zenodo.18819238."
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.18819238",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/18893328",
+      "preferred": false
+    },
+    {
+      "label": "Reference implementation (GitHub)",
+      "type": "code",
+      "url": "https://github.com/calebpruett927/GENERATIVE-COLLAPSE-DYNAMICS",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "Alternate DOI 10.5281/zenodo.18819239 appears in external metadata. The active corpus identifies 10.5281/zenodo.18819238 as the preferred paper DOI. Exact concept/version relationship remains an unresolved DOI-lineage seam and must not be silently reconciled (see releases/open-seams.yaml, SEAM-0009)."
+  ],
+  "notes": "Registry role: FOUNDATIONAL / OPERATIONAL SOURCE ONLY; no Tier-2 object is created from the foundational whitepaper. Code link taken from the repository named in the Zenodo record description. Observed Zenodo metadata (recorded as evidence, not as reconciliation): 10.5281/zenodo.18819238 is registered as the concept DOI whose latest version is record 18893328 (v2.1.5, 2026-03-05); 10.5281/zenodo.18819239 is a version DOI (v2.1.3, 2026-02-28) under the same concept. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.18819238 is a concept DOI (resolves to the latest version); resolved record 18893328, record title \"Generative Collapse Dynamics (UMCP/GCD): Enabling Cross-Domain Comparability via Contract-Frozen Kernel Invariants and Typed Return\", creators ['Paulus, Clement'], publication date 2026-03-05, resource type Report."
+}

@@ -1,0 +1,41 @@
+{
+  "governing_id": "SR-GOV-000009",
+  "title": "Liber Collapsus: De Reditu per Collapsum et de Identitate Servata",
+  "source_id": "SRC-000018",
+  "version": "Versio 2.0 — Editio altera, recognita et aucta (4 August 2026); first edition 11 October 2025",
+  "status": "active",
+  "governing_role": [
+    "canon-facing",
+    "language-contact"
+  ],
+  "authority_scope": {
+    "tier_1": [
+      "Compact canonical statement of Reditus and of Axiom-0 (Collapsus generativus est; solum quod per collapsum redit, reale est) as a law of ontological admissibility; identity as continuity of structure able to return under the same rule, not immobility of words."
+    ],
+    "tier_0": [
+      "Conditions under which Reditus may be tested: re-entry into an admissible region under the same declared contract; credit withheld where return is not demonstrated (fidem non tribuere ubi Reditus non demonstratur)."
+    ]
+  },
+  "source_role": "Active compact Reditus / identity / contract / seam / missingness / integrity language witness; local witness, not a tool to silently rewrite frozen technical runs (handoff manifest).",
+  "immutable_record": true,
+  "active_from": "2026-09-13T04:28:50Z",
+  "supersedes": null,
+  "superseded_by": null,
+  "doi": "10.5281/zenodo.22310064",
+  "canonical_link": "https://doi.org/10.5281/zenodo.22310064",
+  "scope": "Orders Reditus in brief mathematical and Latin form as a canonically ordered treatment and local witness; declares the object, exposes its own change from the 2025 edition, and states the rules by which Reditus may be proven.",
+  "non_goal": "Neither closes the whole field nor substitutes the theory for the field; does not grant credit to the continuity between its own two editions, since that seam is not yet demonstrated.",
+  "missingness": [
+    {
+      "item": "Prior edition (2025) as a governing record",
+      "class": "NON_BLOCKING",
+      "notes": "The 2025 first edition is preserved by the source as historical witness, not the governing edition; it is not registered as a separate SR-GOV record, so supersedes is null."
+    },
+    {
+      "item": "Zenodo title/edition seam",
+      "class": "UNRESOLVED_SEAM",
+      "notes": "Record 22310064 currently carries a different title; see SEAM-0010 and SRC-000018 missingness."
+    }
+  ],
+  "notes": "The 2.0 edition states it replaces the 2025 form in active use (in usu activo substituit) while preserving it as historical testimony."
+}

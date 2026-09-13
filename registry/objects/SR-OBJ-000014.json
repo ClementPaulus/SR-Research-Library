@@ -1,0 +1,84 @@
+{
+  "object_id": "SR-OBJ-000014",
+  "title": "The Episteme Construction",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "pedagogical",
+    "secondary": [
+      "handoff"
+    ]
+  },
+  "functional_locus": "cross-system",
+  "source_ids": [
+    "SRC-000031"
+  ],
+  "lens": "historical cross-domain field manual",
+  "domain": {
+    "primary": "interdisciplinary",
+    "secondary": [
+      "structura-reditus-core",
+      "systems-theory"
+    ]
+  },
+  "object_of_study": "a prefreeze contract-first method for making claims auditable across domains",
+  "structural_focus": {
+    "primary": "translation",
+    "secondary": [
+      "continuity",
+      "return"
+    ]
+  },
+  "main_question": "How can claims from heterogeneous domains be made structurally auditable and portable under a shared contract-first workflow?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "The Episteme Construction introduces a contract-first calculus for generative collapse built around a conservation-style budget for log-integrity κ, closed on the same anchor with residual ≤ 10⁻¹², and separates identities from closures and narratives (Zenodo record description)."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library places this as historical pedagogical/handoff material whose focus is translation across domains."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "pedagogical",
+    "secondary": [
+      "formal-derivation"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "historical",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000031 (\"The Episteme Construction\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+  "scope": "A 2025 field manual: Part I fixes the kernel (normalization, face policy, typed outcomes) and proves rate/transport identities and the secant-weld continuity update; Part II provides audited portable vignettes across physics, collapse-aware AI, symbolic/behavioral systems, cryptographic protocols, and legal/institutional processes; governance chapters define versioning, a release ledger, and ULRC naming.",
+  "exclusions": [
+    "Does not carry its 2025 kernel, closures, or First-Law statement into the current Tier-1 kernel as authority.",
+    "Does not register its vignettes as separate research objects."
+  ],
+  "preserved_meaning": "The source's separation of identities (math) from closures (thresholds/policies) and narratives (interpretations), as it stated it in 2025.",
+  "missingness": [
+    {
+      "item": "source-stated next burden",
+      "class": "NON_BLOCKING",
+      "notes": "Not stated on the public record."
+    },
+    {
+      "item": "historical terminology vs current architecture",
+      "class": "UNRESOLVED_SEAM",
+      "notes": "2025 kernel and governance terms are preserved as source evidence, not mapped onto the current canon."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading the historical First Law of Collapse or its residual tolerance as the current frozen contract.",
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Historical / prefreeze lineage object; shared archive DOI recorded on the source. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

@@ -1,0 +1,35 @@
+{
+  "source_id": "SRC-000022",
+  "source_type": "historical",
+  "title": "The Seam of Reality: On Thought, Return, and the Illusion of the Outside",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Introduces a return-based audit calculus grounded in the Collapse Integrity Protocol, culminating in a validated epistemic seam with ledger-conserved log-integrity.",
+    "Rejects the need for exterior gesture logic or any symbolic substrate beyond the runtime contract, defining epistemic structure strictly through collapsible recurrence and integrity-preserving welds.",
+    "Claims to outperform gesture-dependent or topology-saturated theories by exposing their cost through its own runtime budget."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.17619502",
+    "url": "https://doi.org/10.5281/zenodo.17619502"
+  },
+  "publication_year": 2025,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.17619502",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/17619502",
+      "preferred": false
+    }
+  ],
+  "missingness": [],
+  "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. The Zenodo description lists a different ORCID (0000-0003-3103-1096) than the registered AUTH-0001 ORCID; recorded as observed, not reconciled. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17619502 is a version DOI; resolved record 17619502, record title \"The Seam of Reality: On Thought, Return, and the Illusion of the Outside\", creators ['Paulus, Clement'], publication date 2025-11-15, resource type Publication."
+}

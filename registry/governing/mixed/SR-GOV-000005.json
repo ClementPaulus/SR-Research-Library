@@ -1,0 +1,31 @@
+{
+  "governing_id": "SR-GOV-000005",
+  "title": "The Threefold Authority Order: Tier-1, Tier-0, and Tier-2 in Canon, Protocol, and Translation",
+  "source_id": "SRC-000002",
+  "version": "Official source specification, July 5, 2026",
+  "status": "active",
+  "governing_role": [
+    "authority-axis",
+    "specification"
+  ],
+  "authority_scope": {
+    "tier_1": [
+      "Meaning of Tier-1: reserved kernel symbols, exact identities, and the immutable namespace; Tier-1 authority is positive as well as prohibitive and does not by itself execute a run, audit a ledger, validate a closure, or repair a translation."
+    ],
+    "tier_0": [
+      "Meaning of Tier-0: protocol, contracts, validators, closures, ledgers, seam accounting, and stance derivation; Tier-0 does not authorize by itself.",
+      "Promotion limits: usefulness, fluency, or public explanation does not become canon, protocol, proof, or final stance by itself; Tier-2 does not authorize by itself."
+    ]
+  },
+  "source_role": "Official authority-axis reference; defines Tier-1/Tier-0/Tier-2 roles and promotion limits (handoff manifest; source front matter).",
+  "immutable_record": true,
+  "active_from": "2026-09-13T04:28:50Z",
+  "supersedes": null,
+  "superseded_by": null,
+  "doi": "10.5281/zenodo.21212668",
+  "canonical_link": "https://doi.org/10.5281/zenodo.21212668",
+  "scope": "The threefold authority order governing what may define, execute, validate, translate, extend, adopt, or preserve within the corpus. Functional systems govern the kind of work; authority tiers govern the kind of authority.",
+  "non_goal": "Does not specify the operating grammar of UMCP, RCFT, or ULRC (cite the Operating System papers for those); authority placement does not itself perform evaluation, discovery, or translation.",
+  "missingness": [],
+  "notes": "Shared packet DOI 10.5281/zenodo.21212668 (coordinated four-paper release); the DOI identifies the archive, the record identifies the member work."
+}

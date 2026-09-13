@@ -196,14 +196,22 @@ def test_release_manifest_generation(tmp_path):
 
 
 def test_site_generated_from_registry(tmp_path, base_registry, synthetic_object):
-    """The site is generated from the registry, not a second database."""
+    """The site is generated from the registry, not a second database, with three distinct surfaces."""
     registry = copy.deepcopy(base_registry)
     registry["objects"]["SR-OBJ-000001.json"] = synthetic_object
-    index_path = sitegen.generate_site(tmp_path, registry)
+    index_path = sitegen.generate_site(tmp_path, registry, receipts={})
     html = index_path.read_text(encoding="utf-8")
-    assert "SR-OBJ-000001" in html
-    assert "Clement Paulus" in html
+    for surface in ("GOVERNING REFERENCES", "TIER-2 RESEARCH", "SOURCES &amp; ARCHIVES"):
+        assert surface in html
     assert "organizational conformance only" in html
+    objects_html = (tmp_path / "objects" / "index.html").read_text(encoding="utf-8")
+    assert "SR-OBJ-000001" in objects_html
+    object_page = (tmp_path / "objects" / "SR-OBJ-000001.html").read_text(encoding="utf-8")
+    assert "TIER-2 RESEARCH OBJECT" in object_page
+    source_page = (tmp_path / "sources" / "SRC-000001.html").read_text(encoding="utf-8")
+    assert "Registry kind: SOURCE" in source_page
+    assert "Tier-2 research object(s) built on it" in source_page
+    assert "Clement Paulus" in (tmp_path / "authors" / "AUTH-0001.html").read_text(encoding="utf-8")
     objects_data = json.loads((tmp_path / "data" / "objects.json").read_text(encoding="utf-8"))
     assert objects_data[0]["object_id"] == "SR-OBJ-000001"
     profiles_data = json.loads((tmp_path / "data" / "profiles.json").read_text(encoding="utf-8"))

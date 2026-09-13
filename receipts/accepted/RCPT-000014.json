@@ -1,0 +1,73 @@
+{
+  "receipt_id": "RCPT-000014",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000014",
+  "generated": "2026-09-13T04:13:10Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000014",
+  "title": "The Episteme Construction",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "pedagogical",
+  "functional_locus": "cross-system",
+  "domain_primary": "interdisciplinary",
+  "structural_focus_primary": "translation",
+  "main_question": "How can claims from heterogeneous domains be made structurally auditable and portable under a shared contract-first workflow?",
+  "evidence_mode_primary": "pedagogical",
+  "provenance": "corpus-native",
+  "maturity": "historical",
+  "source_ids": [
+    "SRC-000031"
+  ],
+  "relation_ids": [],
+  "publication_state": "archived",
+  "non_blocking_missingness": [
+    "source-stated next burden (NON_BLOCKING)",
+    "historical terminology vs current architecture (UNRESOLVED_SEAM)"
+  ],
+  "open_burdens": [
+    "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  ],
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+}

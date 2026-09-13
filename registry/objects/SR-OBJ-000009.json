@@ -1,0 +1,74 @@
+{
+  "object_id": "SR-OBJ-000009",
+  "title": "GCD / UMCP: The First Welded Seam Casepack — A Worked Case Showing Earned Continuity Under Frozen Seam Accounting",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "diagnostic",
+    "secondary": [
+      "pedagogical"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000014"
+  ],
+  "lens": "seam and continuity audit",
+  "domain": {
+    "primary": "structura-reditus-core",
+    "secondary": []
+  },
+  "object_of_study": "earned continuity across a declared seam",
+  "structural_focus": {
+    "primary": "continuity",
+    "secondary": [
+      "return",
+      "boundary"
+    ]
+  },
+  "main_question": "When does a finite-return event also satisfy the stronger burden required for welded continuity under frozen seam accounting?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "Finite return is necessary but not sufficient for welded continuity; under the unit-rate closure the result is returned-but-unwelded, under the calibrated local closure a conformant welded seam (Zenodo record description)."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "formal-derivation",
+    "secondary": [
+      "pedagogical"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000014 (\"GCD / UMCP: The First Welded Seam Casepack — A Worked Case Showing Earned Continuity Under Frozen Seam Accounting\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+  "scope": "One three-state local episode Ψ(0)=(0.90,0.90,0.90), Ψ(1)=(0.99,0.99,0.72), Ψ(2)=(0.90,0.91,0.89) with finite return under supremum norm tolerance η=0.02 (τR(2)=2), tested against two declared return-credit closures.",
+  "exclusions": [
+    "Does not introduce a new Tier-1 invariant.",
+    "Does not claim a universal return-rate constant.",
+    "Does not define governance procedure.",
+    "Does not stage a domain closure."
+  ],
+  "preserved_meaning": "The source's governing result: return makes the object visible again; weld makes its continuity earned. Under the unit-rate closure the seam residual fails; under the calibrated local closure it closes.",
+  "missingness": [
+    {
+      "item": "source-stated next burden",
+      "class": "NON_BLOCKING",
+      "notes": "Not stated on the public record."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading the calibrated closure as a universal return-rate constant, or reading a conformant local weld as continuity for other objects.",
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The source states what it does not do (new invariant, universal constant, governance, domain closure) but does not name a next burden.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

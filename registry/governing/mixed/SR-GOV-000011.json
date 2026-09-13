@@ -1,0 +1,36 @@
+{
+  "governing_id": "SR-GOV-000011",
+  "title": "Structura Collapsus: Collapse-Kernel and Protocol Reference for Generative Collapse Dynamics within the Structura Reditus Corpus",
+  "source_id": "SRC-000038",
+  "version": "Dated June 1, 2026 (no version label stated)",
+  "status": "active",
+  "governing_role": [
+    "kernel-reference",
+    "protocol"
+  ],
+  "authority_scope": {
+    "tier_1": [
+      "Full statement of the Tier-1 kernel: 44 structural identities, 3 algebraic identities, 5 frozen parameters, 5 structural constants, kernel primitives F, κ, S, C with derived ω = 1 − F and IC = e^κ, bounded trace entering the kernel as [ε, 1−ε]^n."
+    ],
+    "tier_0": [
+      "Tier-0 protocol: regime classification (4 gates), return typing, seam calculus, contract machinery, manifest discipline, weld governance, stance derivation; the Tier-0 implementation realised in Python and a portable C99 orchestration core (20,540 automated tests across 23 evaluation surfaces and 246 closure modules in the current reference line)."
+    ]
+  },
+  "source_role": "Collapse-kernel and protocol reference inside GCD/UMCP; technical spine, not the field constitution (handoff manifest).",
+  "immutable_record": true,
+  "active_from": "2026-09-13T04:28:50Z",
+  "supersedes": null,
+  "superseded_by": null,
+  "doi": null,
+  "canonical_link": null,
+  "scope": "The technical reference by which the collapse side of GCD/UMCP becomes executable, auditable, and portable; explains why the architecture takes this form and how each component participates in collapse-return evaluation.",
+  "non_goal": "Does not define the whole field, replace the object, or absorb the functional systems of the corpus; regime labels do not decide final stance.",
+  "missingness": [
+    {
+      "item": "DOI / archive deposit",
+      "class": "NON_BLOCKING",
+      "notes": "Not established by the supplied source; cited by the 2.0 companion as '1 June 2026' without DOI."
+    }
+  ],
+  "notes": ""
+}

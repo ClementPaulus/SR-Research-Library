@@ -1,0 +1,35 @@
+{
+  "source_id": "SRC-000030",
+  "source_type": "historical",
+  "title": "Generative Collapse Dynamics: Kernel, Platform, Theory, and Governance",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "The Ground Kernel of GCD fixes the invariant mathematics that underwrite collapse-aware diagnostics across domains: drift ω, fidelity F = 1−ω, entropy S, curvature C, adaptive first return τ_R, composite integrity IC, and log-integrity κ = ln IC, with typed outcomes as first-class audit values."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.17090088",
+    "url": "https://doi.org/10.5281/zenodo.17090088"
+  },
+  "publication_year": 2025,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.17090088",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/17090088",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "Zenodo record title reads \"Generative Collapse Dynamics 4 Tier Stack\"; the archive's file listing contains four member PDFs (The Ground Kernel of GCD; Sensitivities and Theory Mode; ULRC Governance, Composition, and Upgrade Safety; Normalization, Regime Gates, and Audit), consistent with the listed title's four parts."
+  ],
+  "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17090088 is a version DOI; resolved record 17090088, record title \"Generative Collapse Dynamics 4 Tier Stack\", creators ['Paulus, Clement'], publication date 2025-09-10, resource type Publication."
+}

@@ -1,0 +1,80 @@
+{
+  "object_id": "SR-OBJ-000004",
+  "title": "The First Pass: A Complete Worked Example Through the Generative-Collapse Spine",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "pedagogical",
+    "secondary": [
+      "diagnostic"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000009"
+  ],
+  "lens": "complete worked example",
+  "domain": {
+    "primary": "structura-reditus-core",
+    "secondary": []
+  },
+  "object_of_study": "a single measurement passed through the full validation spine",
+  "structural_focus": {
+    "primary": "return",
+    "secondary": [
+      "continuity"
+    ]
+  },
+  "main_question": "Can one simple declared measurement be traced reproducibly through every stage of the contract-first validation spine?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "The paper traces three identical voltage readings through the twelve stops of the GCD/UMCP validation spine and derives a three-valued verdict; appendices show a single near-zero channel destroys IC while F stays apparently healthy (Zenodo record description)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "All numbers are stated to be reproducible from the open-source reference implementation."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library reads this as the canonical pedagogical entrance whose diagnostic content is the heterogeneity gap."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "formal-derivation",
+    "secondary": [
+      "pedagogical"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000009 (\"The First Pass: A Complete Worked Example Through the Generative-Collapse Spine\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+  "scope": "One measurement (three identical voltage readings) traced through all twelve stops of the validation spine, with appendices contrasting heterogeneous counterexamples and degenerate limits.",
+  "exclusions": [
+    "Does not stage a domain closure.",
+    "Does not claim finite return or welded continuity for any external system.",
+    "Does not replace the reference implementation it cites."
+  ],
+  "preserved_meaning": "The twelve-stop spine and the source's own reading of Δ = F − IC as a structural heterogeneity diagnostic.",
+  "missingness": [
+    {
+      "item": "source-stated next burden",
+      "class": "NON_BLOCKING",
+      "notes": "Not stated on the public record. A later corpus work (SRC-000012) names the lesson The First Pass did not yet make explicit; that statement belongs to SRC-000012 and is not attributed to this source."
+    }
+  ],
+  "distortion_or_substitution_risk": "Treating the simplest homogeneous input as representative of real heterogeneous objects, or reading the worked verdict as a general result.",
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

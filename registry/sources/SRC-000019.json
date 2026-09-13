@@ -1,0 +1,36 @@
+{
+  "source_id": "SRC-000019",
+  "source_type": "corpus-native",
+  "title": "Dimethyltryptamine and the Recursive Reorganization of Consciousness",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Develops a multilevel causal architecture for how DMT reorganizes conscious experience across a compressed timescale, integrating pharmacokinetics, receptor signaling, cellular gain modulation, whole-brain dynamics, embodied physiology, phenomenology, memory, environment, repeated exposure, recovery, and post-session updating.",
+    "Presented as a Tier-2 special-case domain synthesis within the GCD–UMCP corpus; its central formal contribution is a prospective dual-reference architecture distinguishing departure from waking organization from approach toward a candidate recurrent DMT-state organization.",
+    "The proposed architecture is procedurally specified but empirically unvalidated; its scientific value depends on prospective testing, comparison with simpler models, preservation of negative results, and explicit contraction where its local predictions fail.",
+    "Offers no preparation, dosing, administration, or legal-circumvention guidance."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.21726224",
+    "url": "https://doi.org/10.5281/zenodo.21726224"
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.21726224",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/22086947",
+      "preferred": false
+    }
+  ],
+  "missingness": [],
+  "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.21726224 is a concept DOI (resolves to the latest version); resolved record 22086947, record title \"Dimethyltryptamine and the Recursive Reorganization of Consciousness\", creators ['Paulus, Clement'], publication date 2026-08-24, resource type Book."
+}

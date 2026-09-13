@@ -1,0 +1,86 @@
+{
+  "object_id": "SR-OBJ-000018",
+  "title": "Universal Collapse Diagnostics: Contract-First Invariants, κ-Continuous Calculus, and Cross-Domain Audit",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "diagnostic",
+    "secondary": [
+      "pedagogical",
+      "domain-translation"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000029"
+  ],
+  "lens": "historical cross-domain diagnostic manual",
+  "domain": {
+    "primary": "interdisciplinary",
+    "secondary": [
+      "systems-theory",
+      "physics"
+    ]
+  },
+  "object_of_study": "prefreeze collapse diagnostics across heterogeneous systems",
+  "structural_focus": {
+    "primary": "boundary",
+    "secondary": [
+      "return",
+      "robustness"
+    ]
+  },
+  "main_question": "How can contract-first invariants and historical collapse diagnostics be applied consistently across heterogeneous domains while preserving auditability?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "local-interpretation",
+      "claim": "The library places this as historical diagnostic material with pedagogical and domain-translation secondary roles; no source-native claims are recorded because the record carries no public abstract."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "formal-derivation",
+    "secondary": [
+      "pedagogical"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "historical",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000029 (\"Universal Collapse Diagnostics: Contract-First Invariants, κ-Continuous Calculus, and Cross-Domain Audit\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+  "scope": "A 2025 manual of contract-first invariants and κ-continuous calculus for cross-domain audit, distributed with a Unified First Law of Collapse note, ledger CSV, and figures.",
+  "exclusions": [
+    "Does not carry 2025 invariants, gates, or the First Law statement into the current Tier-1 kernel as authority.",
+    "Does not register its domain applications as separate objects."
+  ],
+  "preserved_meaning": "The historical diagnostic grammar as the source stated it; auditability as the source's declared aim.",
+  "missingness": [
+    {
+      "item": "public abstract",
+      "class": "SOURCE_BOUNDARY",
+      "notes": "No description on the Zenodo record; source-native claims are not recorded rather than inferred from the title."
+    },
+    {
+      "item": "source-stated next burden",
+      "class": "NON_BLOCKING",
+      "notes": "Not stated on the public record; no stronger use is implied by this historical diagnostic record."
+    },
+    {
+      "item": "historical terminology vs current architecture",
+      "class": "UNRESOLVED_SEAM",
+      "notes": "Preserved as source evidence."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading the historical diagnostics as the current UMCP operating system or its κ-continuous calculus as current kernel authority.",
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Historical / prefreeze lineage object. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

@@ -1,0 +1,35 @@
+{
+  "source_id": "SRC-000014",
+  "source_type": "corpus-native",
+  "title": "GCD / UMCP: The First Welded Seam Casepack — A Worked Case Showing Earned Continuity Under Frozen Seam Accounting",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Finite return is necessary but not sufficient for welded continuity; a welded object has passed through an accounting seam whose debits, credits, ledger change, budget comparison, residual check, and identity check reconcile under a frozen contract.",
+    "Under the unit-rate closure finite return is present but the seam residual fails (returned-but-unwelded); under the calibrated local closure the residual closes (conformant welded seam).",
+    "Does not introduce a new Tier-1 invariant, claim a universal return-rate constant, define governance procedure, or stage a domain closure."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.19869775",
+    "url": "https://doi.org/10.5281/zenodo.19869775"
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.19869775",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/19869775",
+      "preferred": false
+    }
+  ],
+  "missingness": [],
+  "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19869775 is a version DOI; resolved record 19869775, record title \"GCD / UMCP: The First Welded Seam Casepack: A Worked Case Showing Earned Continuity Under Frozen Seam Accounting\", creators ['Paulus, Clement'], publication date 2026-04-29, resource type Working paper."
+}

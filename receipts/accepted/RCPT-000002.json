@@ -1,0 +1,72 @@
+{
+  "receipt_id": "RCPT-000002",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000002",
+  "generated": "2026-09-13T04:13:09Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000002",
+  "title": "Generative Collapse Dynamics / UMCP: The Core — Why the Contract-First Measurement Framework Has the Structure It Has",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "pedagogical",
+  "functional_locus": "cross-system",
+  "domain_primary": "structura-reditus-core",
+  "structural_focus_primary": "boundary",
+  "main_question": "Why does the contract-first measurement framework require its bounded trace, frozen contract, typed return, kernel, seam, authority, and stance architecture?",
+  "evidence_mode_primary": "formal-derivation",
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "source_ids": [
+    "SRC-000007"
+  ],
+  "relation_ids": [
+    "REL-000001"
+  ],
+  "publication_state": "archived",
+  "non_blocking_missingness": [],
+  "open_burdens": [
+    "Proceed to Part III (The Pass), which walks one object through the full discipline from frozen contract to derived stance so the architecture is seen as a repeatable procedure (supported by the series description)."
+  ],
+  "next_burden": "Proceed to Part III (The Pass), which walks one object through the full discipline from frozen contract to derived stance so the architecture is seen as a repeatable procedure (supported by the series description)."
+}

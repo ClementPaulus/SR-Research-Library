@@ -1,0 +1,70 @@
+{
+  "object_id": "SR-OBJ-000008",
+  "title": "The First Finite-Return Casepack: A Worked Case Showing Finite Re-Entry Under a Frozen Grammar",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "diagnostic",
+    "secondary": [
+      "pedagogical"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000013"
+  ],
+  "lens": "finite-return casepack",
+  "domain": {
+    "primary": "structura-reditus-core",
+    "secondary": []
+  },
+  "object_of_study": "finite re-entry after a declared local wound under unchanged rules",
+  "structural_focus": {
+    "primary": "return",
+    "secondary": [
+      "recovery"
+    ]
+  },
+  "main_question": "Does the candidate returned state achieve finite admissible re-entry under the same frozen grammar that measured its departure?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "Admissible re-entry can be determined, typed, and read as an actual result rather than a merely constitutional possibility (Zenodo record description)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "The paper is continuity-facing but intentionally limited and establishes finite return as the necessary public step before weld, seam closure, and earned continuity."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "formal-derivation",
+    "secondary": [
+      "pedagogical"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000013 (\"The First Finite-Return Casepack: A Worked Case Showing Finite Re-Entry Under a Frozen Grammar\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+  "scope": "One bounded local episode with a reference state, a wounded departure, and a candidate returned state, evaluated for finite return under a frozen grammar.",
+  "exclusions": [
+    "Does not claim weld.",
+    "Does not claim seam closure.",
+    "Does not claim earned continuity."
+  ],
+  "preserved_meaning": "The source's distinction between finite return as a measured event and continuity as a stronger, not-yet-claimed burden.",
+  "missingness": [],
+  "distortion_or_substitution_risk": "Reading finite return as continuity or weld, or reading a single local episode as a general return law.",
+  "next_burden": "Weld, seam closure, and earned continuity — the stronger burdens the source names finite return as the necessary step before.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

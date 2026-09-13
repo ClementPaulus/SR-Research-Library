@@ -2,66 +2,58 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Structura Reditus Research Library</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home — Structura Reditus Research Library</title>
 <style>
-  body { font-family: system-ui, sans-serif; margin: 2rem auto; max-width: 60rem; line-height: 1.5; }
-  h1, h2 { font-weight: 600; }
-  table { border-collapse: collapse; width: 100%; margin-bottom: 1.5rem; }
-  th, td { border: 1px solid #ccc; padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
-  th { background: #f4f4f4; }
-  input { padding: 0.4rem; width: 100%; box-sizing: border-box; margin-bottom: 1rem; }
-  .note { color: #555; font-size: 0.9rem; }
+  body { font-family: system-ui, sans-serif; margin: 0; line-height: 1.5; color: #1a1a1a; }
+  header { background: #1f2a37; color: #fff; padding: 0.8rem 1.5rem; }
+  header a { color: #fff; text-decoration: none; margin-right: 1.2rem; font-weight: 600; }
+  header .brand { font-size: 1.1rem; margin-right: 2rem; }
+  main { max-width: 68rem; margin: 1.5rem auto; padding: 0 1.5rem; }
+  h1, h2, h3 { font-weight: 600; }
+  .kind { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 0.3rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.02em; }
+  .kind-gov { background: #fde68a; color: #4a3200; }
+  .kind-obj { background: #bfdbfe; color: #0b2f6b; }
+  .kind-src { background: #d1fae5; color: #064e3b; }
+  .kind-rcpt { background: #e5e7eb; color: #111827; }
+  .status { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 0.3rem; font-size: 0.8rem; background: #f3f4f6; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 1.5rem; font-size: 0.92rem; }
+  th, td { border: 1px solid #d4d4d8; padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f4f4f5; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.3rem 1rem; }
+  dt { font-weight: 600; color: #374151; }
+  dd { margin: 0; }
+  input.filter { padding: 0.45rem; width: 100%; box-sizing: border-box; margin-bottom: 0.8rem; }
+  .chips button { margin: 0 0.3rem 0.3rem 0; padding: 0.2rem 0.6rem; border: 1px solid #9ca3af; border-radius: 1rem; background: #fff; cursor: pointer; font-size: 0.85rem; }
+  .chips button.on { background: #1f2a37; color: #fff; border-color: #1f2a37; }
+  .note { color: #52525b; font-size: 0.9rem; }
+  .boundary { border-left: 4px solid #f59e0b; padding: 0.4rem 0.8rem; background: #fffbeb; margin: 1rem 0; }
+  ul.links li { margin-bottom: 0.2rem; }
+  .pref { font-weight: 700; }
+  pre { background: #f8fafc; padding: 1rem; overflow-x: auto; font-size: 0.85rem; white-space: pre-wrap; }
+  footer { max-width: 68rem; margin: 2rem auto; padding: 0 1.5rem 2rem; color: #52525b; font-size: 0.85rem; }
 </style>
 </head>
 <body>
+<header><a class="brand" href="index.html">Structura Reditus Research Library</a><a href="governing/index.html">Governing References</a><a href="objects/index.html">Tier-2 Research</a><a href="sources/index.html">Sources &amp; Archives</a><a href="authors/index.html">Authors</a><a href="receipts/index.html">Receipts</a></header>
+<main>
+
 <h1>Structura Reditus Research Library</h1>
-<p class="note">Tier-0 organizational and retrieval surface for Tier-2 research records.
-Generated from the registry (the source of truth).
-Library admission means organizational conformance only and does not imply
-scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission. This is an even organizational surface, not a prestige hierarchy.</p>
-<p class="note">Schema version: SR-SCHEMA.v0.2.0 &middot; Taxonomy version: SR-TAXONOMY.v0.2.0</p>
-
-<h2>Research objects</h2>
-<input id="filter" placeholder="Filter by author, domain, object of study, structural focus, main question, Tier-2 class, evidence mode, provenance, maturity, relation, source, or date&hellip;">
-<table id="objects">
-<thead><tr>
-<th>ObjectID</th><th>Title</th><th>Authors</th><th>Domain</th><th>Tier-2 class</th>
-<th>Structural focus</th><th>Object of study</th><th>Main question</th><th>Evidence mode</th>
-<th>Provenance</th><th>Maturity</th><th>Sources</th><th>Relations</th><th>Date</th>
-</tr></thead>
-<tbody>
-<tr><td colspan="14">No research objects registered yet.</td></tr>
-</tbody>
-</table>
-
-<h2>Authors</h2>
+<p class="note">Tier-0 organizational and retrieval surface for the Structura Reditus corpus. Three registries, kept distinct:</p>
 <table>
-<thead><tr><th>AuthorID</th><th>Display name</th><th>ORCID</th><th>Status</th><th>Registered objects</th></tr></thead>
-<tbody>
-<tr><td>AUTH-0001</td><td>Clement Paulus</td><td>0009-0000-6069-8234</td><td>active</td><td>0</td></tr>
-</tbody>
+<tr><th><span class="kind kind-gov">GOVERNING REFERENCES</span></th><td><a href="governing/index.html">18 governing references</a> — canon-facing, constitutional, authority-axis, functional-source, kernel/protocol/specification, publication-protocol, ingress, and language-contact references with their exact admitted burden. Not research objects.</td></tr>
+<tr><th><span class="kind kind-obj">TIER-2 RESEARCH</span></th><td><a href="objects/index.html">16 registered Tier-2 research objects</a> (19 accepted receipts; <a href="receipts/index.html">all receipts</a>) — the living research body, browsable by <a href="domains/index.html">domain</a>, <a href="focus/index.html">structural focus</a>, <a href="classes/index.html">Tier-2 class</a>, <a href="evidence/index.html">evidence mode</a>, <a href="maturity/index.html">maturity</a>, and <a href="timeline/index.html">timeline</a>.</td></tr>
+<tr><th><span class="kind kind-src">SOURCES &amp; ARCHIVES</span></th><td><a href="sources/index.html">46 sources</a> — DOI, archive, publisher, data, code, <a href="sources/historical.html">historical</a> and external sources with labeled outbound links. A source is never shown as Tier-2 research.</td></tr>
+<tr><th>Authors</th><td><a href="authors/index.html">1 registered author identities</a> — profiles contain only reconstructible quantities; no author score.</td></tr>
 </table>
+<p class="note">Everything here is a projection of <code>registry/</code> and <code>receipts/</code>. Library admission means organizational conformance only and does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.</p>
 
-<h2>Sources</h2>
-<table>
-<thead><tr><th>SourceID</th><th>Type</th><th>Title</th><th>Original authors</th></tr></thead>
-<tbody>
-<tr><td colspan="4">No sources registered yet.</td></tr>
-</tbody>
-</table>
-
-<h2>Cross-domain retrieval route</h2>
-<p>FIND &rarr; COMPARE &rarr; EXTRACT TRANSFERABLE STRUCTURE &rarr; REINSTANTIATE LOCALLY &rarr; VALIDATE LOCALLY.</p>
-<p class="note">Thresholds, adapters, closure gates, evidence standards, causal claims,
-ontological claims, and source authority are never transferred automatically between domains.</p>
-
-<script>
-document.getElementById('filter').addEventListener('input', function () {
-  var needle = this.value.toLowerCase();
-  document.querySelectorAll('#objects tbody tr').forEach(function (row) {
-    row.style.display = row.textContent.toLowerCase().indexOf(needle) === -1 ? 'none' : '';
-  });
-});
-</script>
+</main>
+<footer>
+<p>Library admission means organizational conformance only and does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission. Generated from the registry (the source of truth); this site is never a second database.
+Schema SR-SCHEMA.v0.3.0 &middot; Taxonomy SR-TAXONOMY.v0.2.0.</p>
+<p>Cross-domain retrieval: FIND &rarr; COMPARE &rarr; EXTRACT TRANSFERABLE STRUCTURE &rarr; REINSTANTIATE LOCALLY &rarr; VALIDATE LOCALLY.
+Thresholds, adapters, closure gates, evidence standards, causal claims, ontological claims, and source authority are never transferred automatically.</p>
+</footer>
 </body>
 </html>

@@ -1,0 +1,84 @@
+{
+  "object_id": "SR-OBJ-000017",
+  "title": "Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "candidate",
+    "secondary": [
+      "diagnostic"
+    ]
+  },
+  "functional_locus": "rcft",
+  "source_ids": [
+    "SRC-000034"
+  ],
+  "lens": "historical mathematical extension",
+  "domain": {
+    "primary": "mathematics",
+    "secondary": [
+      "systems-theory",
+      "structura-reditus-core"
+    ]
+  },
+  "object_of_study": "the prefreeze differential-calculus extension of the collapse algebra",
+  "structural_focus": {
+    "primary": "continuity",
+    "secondary": [
+      "robustness",
+      "return"
+    ]
+  },
+  "main_question": "What dynamic and continuity properties follow when the historical collapse algebra is extended into a differential calculus under frozen contracts?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "candidate-claim",
+      "claim": "The source presents weld-continuous dynamics and audit guarantees for a differential extension of the collapse algebra (title; no public abstract on the record)."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library places this as historical candidate material under RCFT."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "formal-derivation",
+    "secondary": [
+      "formal-proof"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "historical",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "preprint",
+  "source_boundary": "The governing source is SRC-000034 (\"Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+  "scope": "A 2025 extension of the collapse algebra into a differential calculus with weld-continuous dynamics and audit guarantees, distributed with a UMCP v1.0.2 drop-in manifest and validator script.",
+  "exclusions": [
+    "Does not promote any superseded equation or closure into the current Tier-1 kernel.",
+    "Candidate status is historical; no current adoption is implied."
+  ],
+  "preserved_meaning": "The historical status of the calculus as a candidate extension, with its 2025 contract and tolerances left as it declared them.",
+  "missingness": [
+    {
+      "item": "source-stated next burden for candidate material",
+      "class": "REPAIRABLE",
+      "notes": "No public abstract on the Zenodo record. Read the paper's own stated next burden (or its explicit statement that none is claimed) and supply it; do not infer it."
+    },
+    {
+      "item": "historical terminology vs current architecture",
+      "class": "UNRESOLVED_SEAM",
+      "notes": "Preserved as source evidence."
+    }
+  ],
+  "distortion_or_substitution_risk": "Promoting a superseded equation or closure from the historical calculus into the current kernel, or reading candidate status as adopted protocol.",
+  "next_burden": "Unresolved: the source's public record carries no abstract and states no next burden; because candidate material implies a stronger later use, the burden must be read from the paper itself before admission.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Historical / prefreeze lineage object. Historical status is essential. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

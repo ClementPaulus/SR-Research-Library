@@ -1,0 +1,22 @@
+{
+  "source_id": "SRC-000040",
+  "source_type": "corpus-native",
+  "title": "UMCP Kernel Specification Repair Audit (repair target UMCP-KERNEL-SPEC.v2.4.0-rc2)",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Stance burden: specification-repair audit; not Tier-1 admission, repository certification, or canon freeze.",
+    "Adoption or freeze requires a separate authority act after the open seams close; governing sources were controlling only for their listed burdens and were not averaged into one undifferentiated authority."
+  ],
+  "identifier": {
+    "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/UMCP_KERNEL_SPECIFICATION_REPAIR_AUDIT_v2.4.0-rc2.md, sha256 861227aa23d3c7123efe6a113ede46316b00c66c366908e93d8f8aea38f3a10d. Full text supplied to the library maintainer; not deposited in this repository."
+  },
+  "publication_year": 2026,
+  "venue": null,
+  "links": [],
+  "missingness": [
+    "Internal specification supplied as Markdown in the handoff bundle; no DOI, venue, or public deposit is established by the source."
+  ],
+  "notes": "Prepared 2026-08-29, America/Chicago. See SR-GOV-000013."
+}

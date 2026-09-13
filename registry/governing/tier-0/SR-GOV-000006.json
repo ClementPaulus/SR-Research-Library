@@ -1,0 +1,29 @@
+{
+  "governing_id": "SR-GOV-000006",
+  "title": "UMCP Operating System: Functional Ground, Formal Protocol, and Diagnostic Atlas",
+  "source_id": "SRC-000004",
+  "version": "Official source specification, July 3, 2026",
+  "status": "active",
+  "governing_role": [
+    "functional-source",
+    "specification"
+  ],
+  "authority_scope": {
+    "tier_1": [],
+    "tier_0": [
+      "Active evaluation grammar: a declared object becomes an accountable evaluation through frozen contract, admitted bounded trace, fixed kernel outputs, declared closures, return and seam accounting, ledger reconciliation, derived stance, and an audit record.",
+      "Diagnostic-atlas placement discipline: established mathematical structures may enter as degenerate limits, boundary regimes, projections, diagnostic surfaces, or reference limits only when contract, trace reduction, surviving invariant, closure condition, boundary behavior, and return/seam status are explicit."
+    ]
+  },
+  "source_role": "Evaluation / contract / closure / return / seam / ledger / stance source; UMCP is a functional system, not Tier-0 itself (handoff manifest).",
+  "immutable_record": true,
+  "active_from": "2026-09-13T04:28:50Z",
+  "supersedes": null,
+  "superseded_by": null,
+  "doi": "10.5281/zenodo.21212668",
+  "canonical_link": "https://doi.org/10.5281/zenodo.21212668",
+  "scope": "The contract-first operating system for evaluable structure inside Structura Reditus, as source-of-truth reference and practical protocol.",
+  "non_goal": "UMCP is not a general container for theory, not a loose collection of mathematical correspondences, not the object, not the whole field, and not the whole theory; diagnostic regimes are not stance, and extensions do not become authority without admission.",
+  "missingness": [],
+  "notes": "Shared packet DOI 10.5281/zenodo.21212668 (coordinated four-paper release); the DOI identifies the archive, the record identifies the member work. The Tier-0 burden listed is the protocol grammar this source specifies; the functional system itself is not an authority tier."
+}

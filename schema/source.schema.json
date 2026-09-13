@@ -46,6 +46,24 @@
       "description": "Publication year if known; null preserves missingness."
     },
     "venue": { "type": ["string", "null"] },
+    "links": {
+      "type": "array",
+      "description": "Labeled outbound resources. The original work stays on its DOI/archive platform; the library never mirrors it. At most one link per source may be preferred. Link failure never deletes a source; DOI identity survives a broken web link. Full-text, code, data, and supplement URLs are never guessed.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "type", "url", "preferred"],
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "type": {
+            "type": "string",
+            "enum": ["canonical", "archive", "full_text", "publisher", "code", "data", "supplement", "project_page"]
+          },
+          "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+          "preferred": { "type": "boolean" }
+        }
+      }
+    },
     "missingness": {
       "type": "array",
       "items": { "type": "string", "minLength": 1 },

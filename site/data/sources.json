@@ -1,1 +1,1482 @@
-[]
+[
+  {
+    "source_id": "SRC-000001",
+    "source_type": "corpus-native",
+    "title": "Summa Reditus: A Complete Treatise on Admissible Return Through Collapse",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Summa Reditus is a complete canon-facing treatise on Reditus: the admissible return of structure through collapse under declared conditions.",
+      "It gathers the Structura Reditus corpus into one ordered body without replacing the source works, casepacks, closures, protocols, or teaching materials.",
+      "The authority architecture (Tier-1, Tier-0, Tier-2) remains distinct from the functional systems (UMCP measures; RCFT explores; ULRC preserves language)."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.20653105",
+      "url": "https://doi.org/10.5281/zenodo.20653105"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.20653105",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/20653105",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Zenodo record title is the short form \"Summa Reditus\"; the full title above is as listed by the corpus owner."
+    ],
+    "notes": "Registry role: CANON-FACING SOURCE ONLY. No Tier-2 research object is created from Summa Reditus; it is registered so the governing treatise is searchable as a source without being relabeled as Tier-2 research. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.20653105 is a version DOI; resolved record 20653105, record title \"Summa Reditus\", creators ['Paulus, Clement'], publication date 2026-06-10, resource type Publication."
+  },
+  {
+    "source_id": "SRC-000002",
+    "source_type": "corpus-native",
+    "title": "The Threefold Authority Order",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Official source specification for the threefold authority order (Tier-1, Tier-0, Tier-2) of the Structura Reditus / GCD corpus.",
+      "Authority tiers govern what kind of authority is being exercised; functional systems govern what kind of work is being performed."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.21212668",
+      "url": "https://doi.org/10.5281/zenodo.21212668"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.21212668",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/21212668",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Archive file listing gives the fuller title \"The Threefold Authority Order: Tier-1, Tier-0, and Tier-2 in Canon, Protocol, and Translation\" (authority_tiers.pdf)."
+    ],
+    "notes": "Registry role: GOVERNING SOURCE ONLY; no Tier-2 object. Shared archive DOI 10.5281/zenodo.21212668 for the coordinated four-paper source-specification release (SRC-000002, SRC-000003, SRC-000004, SRC-000005). The SourceID identifies the named member work; the DOI identifies the archive. Member works are not collapsed into one object and the shared DOI is not counted as multiple deposits. Membership verified from the archive's file listing. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.21212668 is a version DOI; resolved record 21212668, record title \"Structura Reditus / GCD Coordinated Four-Paper Release\", creators ['Paulus, Clement'], publication date 2026-07-05, resource type Publication."
+  },
+  {
+    "source_id": "SRC-000003",
+    "source_type": "corpus-native",
+    "title": "ULRC Operating System: Language, Refusal, Translation, and Honest Contact",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Source-of-truth reference for the Unified Language of Recursive Collapse (ULRC) as the meaning and contact-preservation system inside Structura Reditus."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.21212668",
+      "url": "https://doi.org/10.5281/zenodo.21212668"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.21212668",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/21212668",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Registry role: FUNCTIONAL SOURCE SPECIFICATION ONLY; no Tier-2 object. Shared archive DOI 10.5281/zenodo.21212668 for the coordinated four-paper source-specification release (SRC-000002, SRC-000003, SRC-000004, SRC-000005). The SourceID identifies the named member work; the DOI identifies the archive. Member works are not collapsed into one object and the shared DOI is not counted as multiple deposits. Membership verified from the archive's file listing. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.21212668 is a version DOI; resolved record 21212668, record title \"Structura Reditus / GCD Coordinated Four-Paper Release\", creators ['Paulus, Clement'], publication date 2026-07-05, resource type Publication."
+  },
+  {
+    "source_id": "SRC-000004",
+    "source_type": "corpus-native",
+    "title": "UMCP Operating System: Functional Ground, Formal Protocol, and Diagnostic Atlas",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Source-of-truth specification for UMCP as the contract-first operating system for evaluable structure inside Structura Reditus."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.21212668",
+      "url": "https://doi.org/10.5281/zenodo.21212668"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.21212668",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/21212668",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Registry role: FUNCTIONAL SOURCE SPECIFICATION ONLY; no Tier-2 object. Shared archive DOI 10.5281/zenodo.21212668 for the coordinated four-paper source-specification release (SRC-000002, SRC-000003, SRC-000004, SRC-000005). The SourceID identifies the named member work; the DOI identifies the archive. Member works are not collapsed into one object and the shared DOI is not counted as multiple deposits. Membership verified from the archive's file listing. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.21212668 is a version DOI; resolved record 21212668, record title \"Structura Reditus / GCD Coordinated Four-Paper Release\", creators ['Paulus, Clement'], publication date 2026-07-05, resource type Publication."
+  },
+  {
+    "source_id": "SRC-000005",
+    "source_type": "corpus-native",
+    "title": "RCFT Operating System: Discovery, Candidate Maturity, and Generative Field-Hypothesis Discipline",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Source-of-truth reference for Recursive Collapse Field Theory (RCFT) as the discovery and exploration operating system of Generative Collapse Dynamics."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.21212668",
+      "url": "https://doi.org/10.5281/zenodo.21212668"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.21212668",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/21212668",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Archive file listing gives the expanded title \"Recursive Collapse Field Theory Operating System: Discovery, Candidate Maturity, and Generative Field-Hypothesis Discipline\" (RCFT_Operating_System.pdf)."
+    ],
+    "notes": "Registry role: FUNCTIONAL SOURCE SPECIFICATION ONLY; no Tier-2 object. Shared archive DOI 10.5281/zenodo.21212668 for the coordinated four-paper source-specification release (SRC-000002, SRC-000003, SRC-000004, SRC-000005). The SourceID identifies the named member work; the DOI identifies the archive. Member works are not collapsed into one object and the shared DOI is not counted as multiple deposits. Membership verified from the archive's file listing. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.21212668 is a version DOI; resolved record 21212668, record title \"Structura Reditus / GCD Coordinated Four-Paper Release\", creators ['Paulus, Clement'], publication date 2026-07-05, resource type Publication."
+  },
+  {
+    "source_id": "SRC-000006",
+    "source_type": "corpus-native",
+    "title": "Generative Collapse Dynamics / UMCP: Passport and Entry Map — A Front-Door Guide to the Contract-First Measurement Framework",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Part I, Passport and Entry Map, serves as the front-door guide: it presents the axiom, invariant scaffold, validation spine, tier structure, and principal reading routes through the canon."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.19637774",
+      "url": "https://doi.org/10.5281/zenodo.19637774"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.19637774",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/19637774",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Orientation Series, Part I of III. Shared archive DOI 10.5281/zenodo.19637774 for Orientation Series Parts I-III (SRC-000006, SRC-000007, SRC-000008). The SourceID identifies the named part; the DOI identifies the archive. Membership verified from the archive's file listing (Part I/II/III PDFs). Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19637774 is a version DOI; resolved record 19637774, record title \"Generative Collapse Dynamics / UMCP: Orientation Series (Parts I–III)\", creators ['Paulus, Clement'], publication date 2026-04-16, resource type Lesson."
+  },
+  {
+    "source_id": "SRC-000007",
+    "source_type": "corpus-native",
+    "title": "Generative Collapse Dynamics / UMCP: The Core — Why the Contract-First Measurement Framework Has the Structure It Has",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Part II, The Core, states the framework in its strongest self-contained form by showing why the contract-first measurement architecture has the structure it has, and why bounded trace, typed return, seam logic, and three-valued stance are necessary rather than optional."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.19637774",
+      "url": "https://doi.org/10.5281/zenodo.19637774"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.19637774",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/19637774",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Orientation Series, Part II of III. Shared archive DOI 10.5281/zenodo.19637774 for Orientation Series Parts I-III (SRC-000006, SRC-000007, SRC-000008). The SourceID identifies the named part; the DOI identifies the archive. Membership verified from the archive's file listing (Part I/II/III PDFs). Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19637774 is a version DOI; resolved record 19637774, record title \"Generative Collapse Dynamics / UMCP: Orientation Series (Parts I–III)\", creators ['Paulus, Clement'], publication date 2026-04-16, resource type Lesson."
+  },
+  {
+    "source_id": "SRC-000008",
+    "source_type": "corpus-native",
+    "title": "Generative Collapse Dynamics / UMCP: The Pass — A Complete Worked Traversal from Frozen Contract to Derived Stance",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Part III, The Pass, completes the sequence by walking one object through the full discipline from frozen contract to derived stance, so that the framework can be seen as a repeatable procedure."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.19637774",
+      "url": "https://doi.org/10.5281/zenodo.19637774"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.19637774",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/19637774",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Orientation Series, Part III of III. Shared archive DOI 10.5281/zenodo.19637774 for Orientation Series Parts I-III (SRC-000006, SRC-000007, SRC-000008). The SourceID identifies the named part; the DOI identifies the archive. Membership verified from the archive's file listing (Part I/II/III PDFs). Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19637774 is a version DOI; resolved record 19637774, record title \"Generative Collapse Dynamics / UMCP: Orientation Series (Parts I–III)\", creators ['Paulus, Clement'], publication date 2026-04-16, resource type Lesson."
+  },
+  {
+    "source_id": "SRC-000009",
+    "source_type": "corpus-native",
+    "title": "The First Pass: A Complete Worked Example Through the Generative-Collapse Spine",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Provides the first complete, self-contained trace of a single measurement (three identical voltage readings) through all twelve stops of the GCD/UMCP validation spine.",
+      "The heterogeneity gap Δ = F − IC is presented as a structural diagnostic: a single near-zero channel destroys IC while leaving F apparently healthy.",
+      "All numbers are stated to be reproducible from the open-source reference implementation."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.19520933",
+      "url": "https://doi.org/10.5281/zenodo.19520933"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.19520933",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/19560043",
+        "preferred": false
+      },
+      {
+        "label": "Reference implementation (GitHub)",
+        "type": "code",
+        "url": "https://github.com/calebpruett927/GENERATIVE-COLLAPSE-DYNAMICS",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Code link taken from the Zenodo record's declared related identifier (isSupplementTo), not guessed. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19520933 is a concept DOI (resolves to the latest version); resolved record 19560043, record title \"The First Pass: A Complete Worked Example Through the Generative-Collapse Spine\", creators ['Paulus, Clement'], publication date 2026-04-13, resource type Journal article."
+  },
+  {
+    "source_id": "SRC-000010",
+    "source_type": "corpus-native",
+    "title": "The Periodic Table as a Measured Object: Tier-1 Derivation from Atomic Properties in the GCD Kernel",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Treats all 118 elements as one fixed measured object under a frozen 8-channel atomic closure and asks what structure the GCD/UMCP kernel recovers from standard atomic properties alone.",
+      "The paper does not attempt to replace chemistry; its distinct burden is to make the entire table answerable as one explicit measured object under one published comparison surface.",
+      "Under the frozen closure all 118 rows satisfy the identities F+ω=1, IC≤F, IC=e^κ; at corpus scale 111 rows are in Collapse, 7 in Watch, 0 in Stable."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.19639656",
+      "url": "https://doi.org/10.5281/zenodo.19639656"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.19639656",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/19639656",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Title preserved exactly as published; \"Tier-1 Derivation\" is the source's own wording. The Research Library object built on this source (SR-OBJ-000005) is Tier-2. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19639656 is a version DOI; resolved record 19639656, record title \"The Periodic Table as a Measured Object: Tier-1 Derivation from Atomic Properties in the GCD Kernel\", creators ['Paulus, Clement'], publication date 2026-04-17, resource type Report."
+  },
+  {
+    "source_id": "SRC-000011",
+    "source_type": "corpus-native",
+    "title": "The Periodic Table as a Measured Object II: A Nuclear-Informed Cross-Scale Sequel on What Sharpens, Collapses, and Inverts Under a Stronger Atomic Closure",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Nuclear-informed sequel: replaces the 8-channel surface with a stronger 12-channel closure admitting neutron excess, binding energy per nucleon, magic-number proximity, valence-electron structure, and block order.",
+      "The paper does not replace chemistry and does not claim that the periodic table originates from the kernel; its burden is to determine which atomic distinctions sharpen, compress or collapse, and invert."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.19852651",
+      "url": "https://doi.org/10.5281/zenodo.19852651"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.19852651",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/19852651",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Zenodo record title is the short form \"The Periodic Table as a Measured Object II\"."
+    ],
+    "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19852651 is a version DOI; resolved record 19852651, record title \"The Periodic Table as a Measured Object II\", creators ['Paulus, Clement'], publication date 2026-04-28, resource type Report."
+  },
+  {
+    "source_id": "SRC-000012",
+    "source_type": "corpus-native",
+    "title": "The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Shows, on one small object (three local channels under a frozen linear embedding), that arithmetic retention and multiplicative coherence are related but not identical, and that a healthy arithmetic surface can conceal a real multiplicative wound.",
+      "Does not introduce a new closure family, does not claim finite return, and does not stage a welded seam.",
+      "States that it prepares the reader for the next public burdens of the corpus: finite return, seam accounting, and welded continuity."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.19868885",
+      "url": "https://doi.org/10.5281/zenodo.19868885"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.19868885",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/19868885",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19868885 is a version DOI; resolved record 19868885, record title \"The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence\", creators ['Paulus, Clement'], publication date 2026-04-28, resource type Report."
+  },
+  {
+    "source_id": "SRC-000013",
+    "source_type": "corpus-native",
+    "title": "The First Finite-Return Casepack: A Worked Case Showing Finite Re-Entry Under a Frozen Grammar",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "First public paper in the GCD/UMCP corpus to make return explicit as a measured finite event under a frozen grammar, using one bounded local episode with a reference state, a wounded departure, and a candidate returned state.",
+      "Does not yet claim weld, seam closure, or earned continuity; establishes finite return as the necessary public step before those stronger burdens."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.19869494",
+      "url": "https://doi.org/10.5281/zenodo.19869494"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.19869494",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/19869494",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Zenodo record title is the short form \"The First Finite-Return Casepack\"."
+    ],
+    "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19869494 is a version DOI; resolved record 19869494, record title \"The First Finite-Return Casepack\", creators ['Paulus, Clement'], publication date 2026-04-28, resource type Report."
+  },
+  {
+    "source_id": "SRC-000014",
+    "source_type": "corpus-native",
+    "title": "GCD / UMCP: The First Welded Seam Casepack — A Worked Case Showing Earned Continuity Under Frozen Seam Accounting",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Finite return is necessary but not sufficient for welded continuity; a welded object has passed through an accounting seam whose debits, credits, ledger change, budget comparison, residual check, and identity check reconcile under a frozen contract.",
+      "Under the unit-rate closure finite return is present but the seam residual fails (returned-but-unwelded); under the calibrated local closure the residual closes (conformant welded seam).",
+      "Does not introduce a new Tier-1 invariant, claim a universal return-rate constant, define governance procedure, or stage a domain closure."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.19869775",
+      "url": "https://doi.org/10.5281/zenodo.19869775"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.19869775",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/19869775",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19869775 is a version DOI; resolved record 19869775, record title \"GCD / UMCP: The First Welded Seam Casepack: A Worked Case Showing Earned Continuity Under Frozen Seam Accounting\", creators ['Paulus, Clement'], publication date 2026-04-29, resource type Working paper."
+  },
+  {
+    "source_id": "SRC-000015",
+    "source_type": "corpus-native",
+    "title": "Generative Collapse Dynamics (UMCP/GCD): Enabling Cross-Domain Comparability via Contract-Frozen Kernel Invariants and Typed Return",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Presents GCD as a contract-first measurement discipline governed by a single admissibility axiom: collapse is generative; only what returns through collapse is real — where \"real\" is an audit rule, not a metaphysical claim.",
+      "Formalizes the Tier-1 kernel ledger (F, ω, S, C, κ, IC, typed return delay τ_R) and proves the identities F+ω=1, IC≤F, IC=exp(κ)."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.18819238",
+      "url": "https://doi.org/10.5281/zenodo.18819238",
+      "other": "Alternate DOI 10.5281/zenodo.18819239 appears in external (ResearchGate) metadata; preferred corpus DOI is 10.5281/zenodo.18819238."
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.18819238",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/18893328",
+        "preferred": false
+      },
+      {
+        "label": "Reference implementation (GitHub)",
+        "type": "code",
+        "url": "https://github.com/calebpruett927/GENERATIVE-COLLAPSE-DYNAMICS",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Alternate DOI 10.5281/zenodo.18819239 appears in external metadata. The active corpus identifies 10.5281/zenodo.18819238 as the preferred paper DOI. Exact concept/version relationship remains an unresolved DOI-lineage seam and must not be silently reconciled (see releases/open-seams.yaml, SEAM-0009)."
+    ],
+    "notes": "Registry role: FOUNDATIONAL / OPERATIONAL SOURCE ONLY; no Tier-2 object is created from the foundational whitepaper. Code link taken from the repository named in the Zenodo record description. Observed Zenodo metadata (recorded as evidence, not as reconciliation): 10.5281/zenodo.18819238 is registered as the concept DOI whose latest version is record 18893328 (v2.1.5, 2026-03-05); 10.5281/zenodo.18819239 is a version DOI (v2.1.3, 2026-02-28) under the same concept. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.18819238 is a concept DOI (resolves to the latest version); resolved record 18893328, record title \"Generative Collapse Dynamics (UMCP/GCD): Enabling Cross-Domain Comparability via Contract-Frozen Kernel Invariants and Typed Return\", creators ['Paulus, Clement'], publication date 2026-03-05, resource type Report."
+  },
+  {
+    "source_id": "SRC-000016",
+    "source_type": "historical",
+    "title": "UMCP CasePack Publication",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [],
+    "identifier": {
+      "doi": "10.5281/zenodo.18226878",
+      "url": "https://doi.org/10.5281/zenodo.18226878"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.18226878",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/18226878",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Zenodo record title reads \"Universal Measurement Contract Protocol\" (resource type Book; files: Universal Measurement Contract Protocol.pdf, UMCP data.zip); the title \"UMCP CasePack Publication\" is the corpus owner's documented CasePack publication anchor. No paper identity is inferred beyond that anchor.",
+      "No public abstract on the Zenodo record.",
+      "Source-native claims not captured in this import pass; only identity, archive, and classification metadata are recorded."
+    ],
+    "notes": "Registry role: RUNNABLE CASEPACK / IMPLEMENTATION ARCHIVE SOURCE; no Tier-2 object. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.18226878 is a version DOI; resolved record 18226878, record title \"Universal Measurement Contract Protocol\", creators ['Paulus, Clement'], publication date 2026-01-13, resource type Book."
+  },
+  {
+    "source_id": "SRC-000017",
+    "source_type": "corpus-native",
+    "title": "A single algebraic diagnostic detects structurally identical phase transitions from quarks to the cosmic horizon",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "The ratio of geometric to arithmetic coherence (IC/F), computed from a single algebraic kernel applied to normalised physical measurements, exhibits structurally identical phase-transition signatures across systems spanning 61 orders of magnitude.",
+      "The heterogeneity gap Δ = F − IC spikes at every phase boundary tested, providing a single-number diagnostic for structural fragility independent of the underlying dynamics.",
+      "The contribution is not the AM-GM bound itself but its systematic application as a scale-independent phase-transition diagnostic across 20 scientific domains; 11,342 automated proofs across 406 physical objects confirm the three identities to machine precision."
+    ],
+    "identifier": {
+      "doi": "10.21203/rs.3.rs-9205902/v1",
+      "url": "https://doi.org/10.21203/rs.3.rs-9205902/v1"
+    },
+    "publication_year": 2026,
+    "venue": "Research Square",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.21203/rs.3.rs-9205902/v1",
+        "preferred": true
+      },
+      {
+        "label": "Research Square",
+        "type": "archive",
+        "url": "https://www.researchsquare.com/article/rs-9205902/v1",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Crossref verification (2026-09-13): DOI 10.21203/rs.3.rs-9205902/v1 resolves to the titled preprint, author Clement Paulus, posted 2026-03-27, publisher Springer Science and Business Media LLC (Research Square). The Research Square landing page is the DOI's registered resource URL."
+  },
+  {
+    "source_id": "SRC-000018",
+    "source_type": "corpus-native",
+    "title": "Liber Collapsus: De Reditu per Collapsum et de Identitate Servata",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [],
+    "identifier": {
+      "doi": "10.5281/zenodo.22310064",
+      "url": "https://doi.org/10.5281/zenodo.22310064"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.22310064",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/22310064",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Zenodo record 22310064 currently carries the title \"Liber Universalis de Collapsu Mathematicae\" (concept 10.5281/zenodo.16809846) while its file listing contains liber_collapsus.pdf; record 10.5281/zenodo.22310544 carries the title \"Liber Collapsus: De Reditu per Collapsum et de Identitate Servata\" with identical files and declares isNewVersionOf 22310064. The corpus owner designates 22310064 as the canonical Liber Collapsus DOI for the Structura Reditus Zenodo community. This title/edition relationship is preserved as an unresolved seam (SEAM-0010); 22310544 is not substituted.",
+      "Source-native claims not captured in this import pass; only identity, archive, and classification metadata are recorded."
+    ],
+    "notes": "Registry role: CORPUS / COMPANION SOURCE. No Tier-2 object is forced; the governing corpus has not supplied an explicit Tier-2 placement for this edition. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.22310064 is a version DOI; resolved record 22310064, record title \"Liber Universalis de Collapsu Mathematicae\", creators ['Paulus, Clement'], publication date 2026-09-04, resource type Publication."
+  },
+  {
+    "source_id": "SRC-000019",
+    "source_type": "corpus-native",
+    "title": "Dimethyltryptamine and the Recursive Reorganization of Consciousness",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Develops a multilevel causal architecture for how DMT reorganizes conscious experience across a compressed timescale, integrating pharmacokinetics, receptor signaling, cellular gain modulation, whole-brain dynamics, embodied physiology, phenomenology, memory, environment, repeated exposure, recovery, and post-session updating.",
+      "Presented as a Tier-2 special-case domain synthesis within the GCD–UMCP corpus; its central formal contribution is a prospective dual-reference architecture distinguishing departure from waking organization from approach toward a candidate recurrent DMT-state organization.",
+      "The proposed architecture is procedurally specified but empirically unvalidated; its scientific value depends on prospective testing, comparison with simpler models, preservation of negative results, and explicit contraction where its local predictions fail.",
+      "Offers no preparation, dosing, administration, or legal-circumvention guidance."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.21726224",
+      "url": "https://doi.org/10.5281/zenodo.21726224"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.21726224",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/22086947",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.21726224 is a concept DOI (resolves to the latest version); resolved record 22086947, record title \"Dimethyltryptamine and the Recursive Reorganization of Consciousness\", creators ['Paulus, Clement'], publication date 2026-08-24, resource type Book."
+  },
+  {
+    "source_id": "SRC-000020",
+    "source_type": "historical",
+    "title": "The Physics of Coherence: Recursive Collapse & Continuity Laws",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Formalizes a contract-first, domain-agnostic method for computing and auditing coherence-like invariants once observables are mapped into a bounded, dimensionless trace; the core claim is operational rather than metaphysical.",
+      "Canonizes the paper under Weld ID W-2025-12-31-PHYS-COHERENCE with pre-weld anchor The Episteme of Return (10.5281/zenodo.17756705)."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.18072852",
+      "url": "https://doi.org/10.5281/zenodo.18072852"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.18072852",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/18111558",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.18072852 is a concept DOI (resolves to the latest version); resolved record 18111558, record title \"The Physics of Coherence: Recursive Collapse & Continuity Laws\", creators ['Paulus, Clement'], publication date 2025-12-31, resource type Standard."
+  },
+  {
+    "source_id": "SRC-000021",
+    "source_type": "historical",
+    "title": "The Episteme of Return: Collapse Integrity Kernel and the UMA Audit Stack",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Consolidates the Integrity Stack (declare → log → weld → invoke) into a single governing kernel for epistemic systems, integrating the Collapse Integrity Kernel v1.0.3, the Invoke Audit Protocol, and the Universal Math Appendix under the Grammar of Return."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.17756705",
+      "url": "https://doi.org/10.5281/zenodo.17756705"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.17756705",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/17797689",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Zenodo record title is the bundle title \"The Episteme of Return; The Seam of Reality; Universal Math Appendix\"; the archive's file listing contains The Episteme of Return.pdf, The Seam of Reality.pdf, and Universal Math Appendix (UMA).pdf."
+    ],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17756705 is a concept DOI (resolves to the latest version); resolved record 17797689, record title \"The Episteme of Return; The Seam of Reality; Universal Math Appendix\", creators ['Paulus, Clement'], publication date 2025-11-27, resource type Thesis."
+  },
+  {
+    "source_id": "SRC-000022",
+    "source_type": "historical",
+    "title": "The Seam of Reality: On Thought, Return, and the Illusion of the Outside",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Introduces a return-based audit calculus grounded in the Collapse Integrity Protocol, culminating in a validated epistemic seam with ledger-conserved log-integrity.",
+      "Rejects the need for exterior gesture logic or any symbolic substrate beyond the runtime contract, defining epistemic structure strictly through collapsible recurrence and integrity-preserving welds.",
+      "Claims to outperform gesture-dependent or topology-saturated theories by exposing their cost through its own runtime budget."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.17619502",
+      "url": "https://doi.org/10.5281/zenodo.17619502"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.17619502",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/17619502",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. The Zenodo description lists a different ORCID (0000-0003-3103-1096) than the registered AUTH-0001 ORCID; recorded as observed, not reconciled. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17619502 is a version DOI; resolved record 17619502, record title \"The Seam of Reality: On Thought, Return, and the Illusion of the Outside\", creators ['Paulus, Clement'], publication date 2025-11-15, resource type Publication."
+  },
+  {
+    "source_id": "SRC-000023",
+    "source_type": "historical",
+    "title": "Generative Collapse Dynamics and Inference-Field Frameworks: A Provenance & Canon Note",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Archival note establishing the canonical form and provenance record for GCD, UMCP, and RCFT; defines the Tier-1 invariant skeleton {ω, F, S, C, τᴿ, κ, I} and the weld calculus closing Δκ = R·τᴿ − (Dω + DC) under a frozen contract with tolerance |s| ≤ 0.005.",
+      "The paper introduces no new algebra; its contribution is provenance and transparency."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.17925172",
+      "url": "https://doi.org/10.5281/zenodo.17925172"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.17925172",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/17980036",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Zenodo record title is the short form \"A Provenance & Canon Note\"."
+    ],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Concept DOI whose latest version (record 17980036) also carries Geometry of Admissible Seams.pdf (see SRC-000024). Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17925172 is a concept DOI (resolves to the latest version); resolved record 17980036, record title \"A Provenance & Canon Note\", creators ['Paulus, Clement'], publication date 2025-12-12, resource type Technical note."
+  },
+  {
+    "source_id": "SRC-000024",
+    "source_type": "historical",
+    "title": "A Geometry of Admissible Seams: Contract-Bound Invariants and Auditable Transitions",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [],
+    "identifier": {
+      "doi": "10.5281/zenodo.17980036",
+      "url": "https://doi.org/10.5281/zenodo.17980036"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.17980036",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/17980036",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Zenodo record 17980036 carries the title \"A Provenance & Canon Note\" (a version under concept 10.5281/zenodo.17925172, SRC-000023); its file listing contains Geometry of Admissible Seams.pdf alongside Provenance & Canon Note 1.0.1.pdf. The DOI is therefore a shared archive anchor for two member works. No public abstract for the Geometry paper is on the record.",
+      "Source-native claims not captured in this import pass; only identity, archive, and classification metadata are recorded."
+    ],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Shared archive DOI with SRC-000023 (Provenance & Canon Note). The SourceID identifies the named member work; the DOI identifies the archive. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17980036 is a version DOI; resolved record 17980036, record title \"A Provenance & Canon Note\", creators ['Paulus, Clement'], publication date 2025-12-12, resource type Technical note."
+  },
+  {
+    "source_id": "SRC-000025",
+    "source_type": "historical",
+    "title": "Retro-Coherent Transmission through Quantum Collapse: A Collapse Integrity Re-Interpretation of Negative Excitation Time",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Audits a quantum optics experiment (Sinclair et al., 2024) in which an atomic ensemble exhibits a negative excitation time under postselected single-photon transmission, framing it as a lawful return seam under the Collapse Integrity audit grammar.",
+      "Classifies the event as a Type I seam with ω = 0, τ_R = −0.82, D_C = −0.82 and zero residual, and introduces a subclass of retro-coherent seams (Class IIa) with τ_R < 0.",
+      "Claims that the Collapse Integrity grammar outperforms Lagrangian mechanics in discontinuous, memory-anchored, or retrocausal regimes."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.17509993",
+      "url": "https://doi.org/10.5281/zenodo.17509993"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.17509993",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/17518421",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Zenodo record title is the short form \"Retro-Coherent Transmission through Quantum Collapse\"."
+    ],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Historical negative-return semantics (τ_R < 0) are source-native to this work and are not inherited into current typed-return mechanics. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17509993 is a concept DOI (resolves to the latest version); resolved record 17518421, record title \"Retro-Coherent Transmission through Quantum Collapse\", creators ['Paulus, Clement'], publication date 2025-11-02, resource type Report."
+  },
+  {
+    "source_id": "SRC-000026",
+    "source_type": "historical",
+    "title": "Collapse Integrity Kernel v1.0.2",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Defines the canonical invariant structure for RCFT (ω, F, C, τᴿ, κ, I = e^κ, Δκ, residual, R), regime thresholds (Stable ω < 0.038; Watch; Collapse ω ≥ 0.30; Critical IC < 0.30), and the collapse conservation law Δκ = R·τ_R − (D_ω + D_C) with |residual| ≤ tol."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.17518301",
+      "url": "https://doi.org/10.5281/zenodo.17518301"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.17518301",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/17518301",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17518301 is a version DOI; resolved record 17518301, record title \"Collapse Integrity Kernel v1.0.2\", creators ['Paulus, Clement'], publication date 2025-11-01, resource type Data paper."
+  },
+  {
+    "source_id": "SRC-000027",
+    "source_type": "historical",
+    "title": "Collapse Integrity Calculus",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Formalizes the seam auditing grammar of RCFT around the collapse conservation law, defining how canonical test seams are evaluated for closure within tolerance (typically 0.005)."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.17518269",
+      "url": "https://doi.org/10.5281/zenodo.17518269"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.17518269",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/17518269",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17518269 is a version DOI; resolved record 17518269, record title \"Collapse Integrity Calculus\", creators ['Paulus, Clement'], publication date 2025-11-02, resource type Publication."
+  },
+  {
+    "source_id": "SRC-000028",
+    "source_type": "historical",
+    "title": "The Grammar of Return",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Establishes the formal audit protocol of RCFT: phase machine logic (DRIFT / RETURN / SHIP), collapse conservation, audit cycle grammar, canonical test invariants, closure tolerance protocols, and weld identity constraints."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.17518338",
+      "url": "https://doi.org/10.5281/zenodo.17518338"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.17518338",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/17518338",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17518338 is a version DOI; resolved record 17518338, record title \"The Grammar of Return\", creators ['Paulus, Clement'], publication date 2025-10-24, resource type Publication."
+  },
+  {
+    "source_id": "SRC-000029",
+    "source_type": "historical",
+    "title": "Universal Collapse Diagnostics: Contract-First Invariants, κ-Continuous Calculus, and Cross-Domain Audit",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [],
+    "identifier": {
+      "doi": "10.5281/zenodo.17173112",
+      "url": "https://doi.org/10.5281/zenodo.17173112"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.17173112",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/17181872",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Zenodo record title is the short form \"Universal Collapse Diagnostics\"; no public abstract on the record (files: Universal Collapse Diagnostics.pdf, Unified First Law of Collapse.pdf, ledger CSV, figures).",
+      "Source-native claims not captured in this import pass; only identity, archive, and classification metadata are recorded."
+    ],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17173112 is a concept DOI (resolves to the latest version); resolved record 17181872, record title \"Universal Collapse Diagnostics\", creators ['Paulus, Clement'], publication date 2025-09-23, resource type Book."
+  },
+  {
+    "source_id": "SRC-000030",
+    "source_type": "historical",
+    "title": "Generative Collapse Dynamics: Kernel, Platform, Theory, and Governance",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "The Ground Kernel of GCD fixes the invariant mathematics that underwrite collapse-aware diagnostics across domains: drift ω, fidelity F = 1−ω, entropy S, curvature C, adaptive first return τ_R, composite integrity IC, and log-integrity κ = ln IC, with typed outcomes as first-class audit values."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.17090088",
+      "url": "https://doi.org/10.5281/zenodo.17090088"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.17090088",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/17090088",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Zenodo record title reads \"Generative Collapse Dynamics 4 Tier Stack\"; the archive's file listing contains four member PDFs (The Ground Kernel of GCD; Sensitivities and Theory Mode; ULRC Governance, Composition, and Upgrade Safety; Normalization, Regime Gates, and Audit), consistent with the listed title's four parts."
+    ],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17090088 is a version DOI; resolved record 17090088, record title \"Generative Collapse Dynamics 4 Tier Stack\", creators ['Paulus, Clement'], publication date 2025-09-10, resource type Publication."
+  },
+  {
+    "source_id": "SRC-000031",
+    "source_type": "historical",
+    "title": "The Episteme Construction",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "A field manual for making claims auditable across domains, introducing a contract-first calculus for generative collapse built around a conservation-style budget for log-integrity κ (the First Law of Collapse: Δκ = R·τ_R − (D_ω + D_C)).",
+      "Separates identities (math) from closures (thresholds/policies) and narratives (interpretations), and standardizes captions, manifests, and weld governance."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.17189775",
+      "url": "https://doi.org/10.5281/zenodo.17189775"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.17189775",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/17220771",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Shared archive DOI 10.5281/zenodo.17189775 with The Common Doorway (SRC-000032); the archive's file listing contains both The Episteme Construction.pdf and The Common Doorway.pdf. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17189775 is a concept DOI (resolves to the latest version); resolved record 17220771, record title \"The Episteme Construction\", creators ['Paulus, Clement'], publication date 2025-09-27, resource type Book."
+  },
+  {
+    "source_id": "SRC-000032",
+    "source_type": "historical",
+    "title": "The Common Doorway: A Cross-Field Method for Generative Collapse",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [],
+    "identifier": {
+      "doi": "10.5281/zenodo.17189775",
+      "url": "https://doi.org/10.5281/zenodo.17189775"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.17189775",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/17220771",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "No separate public abstract for The Common Doorway on the shared Zenodo record; the record's description is that of The Episteme Construction.",
+      "Source-native claims not captured in this import pass; only identity, archive, and classification metadata are recorded."
+    ],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Distinct member work sharing the archive DOI of The Episteme Construction (SRC-000031); membership verified from the archive's file listing (The Common Doorway.pdf). The SourceID identifies the named member work; the DOI identifies the archive. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17189775 is a concept DOI (resolves to the latest version); resolved record 17220771, record title \"The Episteme Construction\", creators ['Paulus, Clement'], publication date 2025-09-27, resource type Book."
+  },
+  {
+    "source_id": "SRC-000033",
+    "source_type": "historical",
+    "title": "The Collapse Formalism: A Reader's Guide to the UMCP/RCFT/ULRC Stack",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [],
+    "identifier": {
+      "doi": "10.5281/zenodo.16990995",
+      "url": "https://doi.org/10.5281/zenodo.16990995"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.16990995",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/17007222",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "DOI/title mismatch: 10.5281/zenodo.16990995 resolves (as concept DOI) to \"Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees\" (latest version record 17007222; version 16990996 is SRC-000034). Neither record's file listing contains a work titled The Collapse Formalism. The DOI for the titled work is therefore unverified in this import pass (SEAM-0011).",
+      "Source-native claims not captured in this import pass; only identity, archive, and classification metadata are recorded."
+    ],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Source identity is unresolved pending a DOI that resolves to the titled work; the record is retained so the seam is visible rather than silently repaired. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.16990995 is a concept DOI (resolves to the latest version); resolved record 17007222, record title \"Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees\", creators ['Paulus, Clement'], publication date 2025-08-30, resource type Publication."
+  },
+  {
+    "source_id": "SRC-000034",
+    "source_type": "historical",
+    "title": "Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [],
+    "identifier": {
+      "doi": "10.5281/zenodo.16990996",
+      "url": "https://doi.org/10.5281/zenodo.16990996"
+    },
+    "publication_year": 2025,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.16990996",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/16990996",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "No public abstract on the Zenodo record (files: Collapse_Calculus PDF, main tex, UMCP v1.0.2 drop-in manifest/policy surface, collapse_validate.py).",
+      "Source-native claims not captured in this import pass; only identity, archive, and classification metadata are recorded."
+    ],
+    "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Version DOI under concept 10.5281/zenodo.16990995 (latest version record 17007222). Zenodo verification (2026-09-13): DOI 10.5281/zenodo.16990996 is a version DOI; resolved record 16990996, record title \"Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees\", creators ['Paulus, Clement'], publication date 2025-08-28, resource type Publication."
+  },
+  {
+    "source_id": "SRC-000035",
+    "source_type": "corpus-native",
+    "title": "Reditus & Structura Reditus: Field Constitution & Core-Object Formalization for Admissible Return Through Collapse",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Structura Reditus is the field devoted to Reditus: the admissible return of structure through collapse under declared conditions; its governing axiom is Axiom-0: collapse is generative; only what returns through collapse is real.",
+      "A structure receives epistemic, operational, or ontological credit only when it undergoes collapse or perturbation and re-enters admissible structure under the same declared rule-set; collapse alone and survival alone are insufficient.",
+      "Tier-1 reserves the immutable kernel symbols and identities; Tier-0 governs contracts, validators, closures, ledgers, seam accounting, and stance derivation; Tier-2 translates domains into evaluable closure form without redefining the kernel."
+    ],
+    "identifier": {
+      "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 01_CANON_CONSTITUTION/Reditus_and_Structura_Reditus.pdf, sha256 4aa6a8d8f4d631e185d63c0bd50b8704e257d49437ad0e392dca0071460af0f3. Full text supplied to the library maintainer; not deposited in this repository."
+    },
+    "publication_year": 2026,
+    "venue": null,
+    "links": [],
+    "missingness": [
+      "No DOI or public archive deposit is established by the supplied source; identity is anchored to the handoff bundle file hash. Do not guess a DOI."
+    ],
+    "notes": "Dated June 2026 (title page). Constitutional work; see SR-GOV-000002."
+  },
+  {
+    "source_id": "SRC-000036",
+    "source_type": "corpus-native",
+    "title": "Generative Collapse Dynamics: Canon Placement and the Two-Axis Architecture — Why GCD Is the Highest-Level Theoretical Acronym Inside Structura Reditus",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "GCD is not one subsystem among UMCP, RCFT, and ULRC; it is the foundational theory from which two necessary architectures follow: the tier architecture (authority) and the functional systems architecture (operation).",
+      "The two axes are orthogonal structures generated by the same theory; their formal separation does not extend GCD or add a new framework."
+    ],
+    "identifier": {
+      "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 01_CANON_CONSTITUTION/GCD_Canon_Placement_and_Two_Axis_Architecture.pdf, sha256 c26472bfa0ebe9145475e08f4d84c8056a92da668c59e1d7516ea458ed3ea8ad. Full text supplied to the library maintainer; not deposited in this repository."
+    },
+    "publication_year": 2026,
+    "venue": null,
+    "links": [],
+    "missingness": [
+      "No DOI or public archive deposit is established by the supplied source; identity is anchored to the handoff bundle file hash. Do not guess a DOI."
+    ],
+    "notes": "Dated June 2026 (title page). Placement report; see SR-GOV-000003."
+  },
+  {
+    "source_id": "SRC-000037",
+    "source_type": "corpus-native",
+    "title": "The Functional Systems of Generative Collapse Dynamics: UMCP, RCFT, and ULRC as Measurement, Discovery, and Language Preservation — A Consolidated Thesis of Functional Operation and Domain Ingress",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "UMCP measures, RCFT explores, and ULRC preserves language; the tiers govern what may be preserved, executed, translated, or changed, while the functional systems govern what kind of work is being performed.",
+      "The consolidated discipline is: freeze before judgment, explore before canon, and translate without drift."
+    ],
+    "identifier": {
+      "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 01_CANON_CONSTITUTION/Functional_Systems_of_GCD.pdf, sha256 25bccdd43635d6072a3aff9415f938626664a39224f9947b6cf8dd23a711e76d. Full text supplied to the library maintainer; not deposited in this repository."
+    },
+    "publication_year": 2026,
+    "venue": null,
+    "links": [],
+    "missingness": [
+      "No DOI or public archive deposit is established by the supplied source; identity is anchored to the handoff bundle file hash. Do not guess a DOI."
+    ],
+    "notes": "Dated June 2026 (title page). See SR-GOV-000004."
+  },
+  {
+    "source_id": "SRC-000038",
+    "source_type": "corpus-native",
+    "title": "Structura Collapsus: Collapse-Kernel and Protocol Reference for Generative Collapse Dynamics within the Structura Reditus Corpus",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Structura Collapsus is the canonical collapse-kernel and protocol reference for GCD/UMCP within the wider field of Structura Reditus; it does not define the whole field, replace the object, or absorb the functional systems.",
+      "It states in full the 44 structural identities, 47 proven lemmas, 5 frozen parameters, 5 structural constants, 4 regime gates, and 3 algebraic identities that constitute the Tier-1 kernel and its Tier-0 protocol; the current reference line includes 20,540 automated tests across 23 evaluation surfaces and 246 closure modules.",
+      "Regime labels classify the trace but do not decide final stance; stance is read only after contract sufficiency, closure availability, return typing, missingness policy, ledger reconciliation, and authority discipline have been checked."
+    ],
+    "identifier": {
+      "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/Structura_Collapsus.pdf, sha256 ffdaa7b6f22d9f9c6d860e55becdc4da98dc7f20d1b13bb826f908353626155f. Full text supplied to the library maintainer; not deposited in this repository."
+    },
+    "publication_year": 2026,
+    "venue": null,
+    "links": [],
+    "missingness": [
+      "No DOI or public archive deposit is established by the supplied source; identity is anchored to the handoff bundle file hash. Do not guess a DOI."
+    ],
+    "notes": "Dated June 1, 2026. Cited by the 2.0 companion as '1 June 2026' without DOI. See SR-GOV-000011."
+  },
+  {
+    "source_id": "SRC-000039",
+    "source_type": "corpus-native",
+    "title": "UMCP Kernel Specification (UMCP-KERNEL-SPEC.v2.4.0-rc2)",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Status: freeze-controlled repair candidate; not a Tier-1 freeze. Supersedes for review UMCP-KERNEL-SPEC.v2.4.0-rc1. Implementation baseline: GCD/UMCP repository v2.3.3.",
+      "Preserves rather than resolves three active seams: roughness (unweighted population dispersion in repository v2.3.3 vs weighted dispersion in the active UMCP operating witness), return credit (inherited R·τ_R vs independently defined Q_R), and criticality (primary CRITICAL regime vs IC < 0.30 overlay).",
+      "No historical run is rewritten by this candidate."
+    ],
+    "identifier": {
+      "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/UMCP_KERNEL_SPECIFICATION_v2.4.0-rc2.md, sha256 67880c6b2c7e2ce684a870a608330af5ebcf6c8dd9207ea7a11a237f1d059841. Full text supplied to the library maintainer; not deposited in this repository."
+    },
+    "publication_year": 2026,
+    "venue": null,
+    "links": [],
+    "missingness": [
+      "Internal specification supplied as Markdown in the handoff bundle; no DOI, venue, or public deposit is established by the source."
+    ],
+    "notes": "Prepared 2026-08-29, America/Chicago. See SR-GOV-000012."
+  },
+  {
+    "source_id": "SRC-000040",
+    "source_type": "corpus-native",
+    "title": "UMCP Kernel Specification Repair Audit (repair target UMCP-KERNEL-SPEC.v2.4.0-rc2)",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Stance burden: specification-repair audit; not Tier-1 admission, repository certification, or canon freeze.",
+      "Adoption or freeze requires a separate authority act after the open seams close; governing sources were controlling only for their listed burdens and were not averaged into one undifferentiated authority."
+    ],
+    "identifier": {
+      "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/UMCP_KERNEL_SPECIFICATION_REPAIR_AUDIT_v2.4.0-rc2.md, sha256 861227aa23d3c7123efe6a113ede46316b00c66c366908e93d8f8aea38f3a10d. Full text supplied to the library maintainer; not deposited in this repository."
+    },
+    "publication_year": 2026,
+    "venue": null,
+    "links": [],
+    "missingness": [
+      "Internal specification supplied as Markdown in the handoff bundle; no DOI, venue, or public deposit is established by the source."
+    ],
+    "notes": "Prepared 2026-08-29, America/Chicago. See SR-GOV-000013."
+  },
+  {
+    "source_id": "SRC-000041",
+    "source_type": "corpus-native",
+    "title": "Structura Reditus Publishing Protocol: Canon-facing publication, source, version, and repair discipline (SR-PUBLISHING-PROTOCOL.v1.0)",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Self-declared status: final Tier-0 publishing protocol; adopted working standard; not a Tier-1 freeze. Finalized 2026-08-28, America/Chicago.",
+      "This protocol governs manuscript construction and publication conformance; it does not create Tier-1 proof, canon admission, DOI status, or public-release status by declaration alone."
+    ],
+    "identifier": {
+      "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/STRUCTURA_REDITUS_PUBLISHING_GUIDANCE_v1.0.md, sha256 506d964b97add896016573f009f57464dce9c9c2e2c46df6cf502cf89d5caaab. Full text supplied to the library maintainer; not deposited in this repository."
+    },
+    "publication_year": 2026,
+    "venue": null,
+    "links": [],
+    "missingness": [
+      "Internal specification supplied as Markdown in the handoff bundle; no DOI, venue, or public deposit is established by the source.",
+      "The handoff manifest lists this file as 'Publishing guidance' while the document self-declares as the final adopted protocol v1.0; a later-dated rc1 (SRC-000042, 2026-08-29) names a 2026-08-28 working draft as its predecessor. Adoption status is preserved as unresolved (see SR-GOV-000014)."
+    ],
+    "notes": "Supplied under the file name STRUCTURA_REDITUS_PUBLISHING_GUIDANCE_v1.0.md."
+  },
+  {
+    "source_id": "SRC-000042",
+    "source_type": "corpus-native",
+    "title": "Structura Reditus Publishing Protocol (SR-PUBLISHING-PROTOCOL.v1.0-rc1)",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Status: internal Tier-0 repair candidate; not canon-frozen. Prepared 2026-08-29. Immediate predecessor: repaired working draft dated 2026-08-28.",
+      "Conformance to this protocol does not create proof, canon admission, DOI assignment, deposit, or public-release status; adoption or replacement of the source object requires a separate act.",
+      "Carries forward three technical seams: nonuniform-weight roughness C; inherited R·τ_R versus independently defined Q_R return-credit profiles; primary CRITICAL enum versus critical overlay."
+    ],
+    "identifier": {
+      "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/STRUCTURA_REDITUS_PUBLISHING_PROTOCOL_v1.0-rc1.md, sha256 8f1775f18d1f2fdf56a320a0ae596d6a386c177ac3be97fc8b213f3bf6f10c59. Full text supplied to the library maintainer; not deposited in this repository."
+    },
+    "publication_year": 2026,
+    "venue": null,
+    "links": [],
+    "missingness": [
+      "Internal specification supplied as Markdown in the handoff bundle; no DOI, venue, or public deposit is established by the source."
+    ],
+    "notes": "See SR-GOV-000015."
+  },
+  {
+    "source_id": "SRC-000043",
+    "source_type": "corpus-native",
+    "title": "Entering Structura Reditus: A Complete Ingress to Reditus, Generative Collapse Dynamics, and Contract-First Evaluation (Structura Reditus Ingress Paper)",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Provides a single ingress into the Structura Reditus corpus, replacing the former three-part orientation burden with one complete front-door paper organized around placement, discipline, and first pass."
+    ],
+    "identifier": {
+      "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 04_INGRESS_CONTACT/Structura_Reditus_Ingress_Paper.pdf, sha256 00d69642e0a0b66a83f223078dd564e6f9f06e728c9375304345a2e71c669ae4. Full text supplied to the library maintainer; not deposited in this repository.",
+      "doi": "10.5281/zenodo.20549483",
+      "url": "https://doi.org/10.5281/zenodo.20549483"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.20549483",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/20549483",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "DOI stated on the title page and verified against Zenodo (2026-09-13): record 20549483, title \"Entering Structura Reditus: A Complete Ingress to Reditus, Generative Collapse Dynamics, and Contract-First Evaluation\", creators ['Paulus, Clement'], publication date 2026-06-04, under concept DOI 10.5281/zenodo.19622272 (the concept record also carrying the Orientation Series, SRC-000006..008). See SR-GOV-000016."
+  },
+  {
+    "source_id": "SRC-000044",
+    "source_type": "corpus-native",
+    "title": "GCD / UMCP — Entering the Corpus: Ingress, Publication Architecture, and Guided Routes",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "States the publication architecture of the corpus, assigns each major paper family one primary burden, publishes decision rules for route choice, and formalizes the casepack ladder that follows The First Pass.",
+      "The paper is companion rather than constitutional: it does not replace the Orientation Series, restate the full constitutional derivation, replace continuity or weld papers, or compete with closure papers on domain substance."
+    ],
+    "identifier": {
+      "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 04_INGRESS_CONTACT/Ingress_Publication_Architecture_and_Guided_Routes.pdf, sha256 61deb14712bfae3ac6a023b3bd3a3c9d1b58c3b55fa0ec3640a0afbe35257bb4. Full text supplied to the library maintainer; not deposited in this repository."
+    },
+    "publication_year": 2026,
+    "venue": null,
+    "links": [],
+    "missingness": [
+      "No DOI or public archive deposit is established by the supplied source; identity is anchored to the handoff bundle file hash. Do not guess a DOI."
+    ],
+    "notes": "Dated April 20, 2026. See SR-GOV-000017."
+  },
+  {
+    "source_id": "SRC-000045",
+    "source_type": "corpus-native",
+    "title": "Refusal as Structure: On Critique, Boundary, and the Public Life of Thought",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Critique is not merely pressure applied from outside; it is one of the ways thought learns the shape of its public surface.",
+      "Refusal can evade accountability but can also protect a boundary against false terms of entry; when refusal clarifies the conditions of contact it makes disagreement more honest."
+    ],
+    "identifier": {
+      "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 04_INGRESS_CONTACT/Refusal_as_Structure.pdf, sha256 63a450c90b4dcd6107961cc5892552d5fba69c121508acff10f9928d2e39a08d. Full text supplied to the library maintainer; not deposited in this repository."
+    },
+    "publication_year": 2026,
+    "venue": null,
+    "links": [],
+    "missingness": [
+      "No DOI or public archive deposit is established by the supplied source; identity is anchored to the handoff bundle file hash. Do not guess a DOI."
+    ],
+    "notes": "Version 1.0, finalized for publication, May 2026 (dated May 10, 2026). License CC BY-NC-ND 4.0 as stated in the source. See SR-GOV-000018."
+  },
+  {
+    "source_id": "SRC-000046",
+    "source_type": "corpus-native",
+    "title": "Empirical Regime Auditing Under the GCD/UMCP Kernel: Contract-Frozen Calibration, Temporal Diagnostics, Typed Return, and Cross-Stream Evaluation (A Kernel for Empirical Regime Auditing, Version 2.0)",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Separates a fixed measurement kernel for the admitted state of an object from a temporal diagnostic layer for detecting how empirical observations move around that state.",
+      "Temporal quantities remain diagnostics unless an explicit closure promotes them; they do not redefine the reserved kernel namespace and do not acquire stance authority through usefulness alone.",
+      "Finite return establishes re-entry under the active contract but does not by itself establish a weld, favorable regime, high integrity, or final conformity.",
+      "The paper is the technical empirical companion to Liber Collapsus; open seams are aligned to UMCP-KERNEL-SPEC.v2.4.0-rc2 without promoting it."
+    ],
+    "identifier": {
+      "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 05_COMPANION_WITNESSES/A_Kernel_for_Empirical_Regime_Auditing_v2.0.pdf, sha256 8e162d7e86811d2dfea7ccc949226d9d4c320f44a36c9ca18a364b1d8ca63b67. Full text supplied to the library maintainer; not deposited in this repository.",
+      "other": "Second edition (Version 2.0, 4 September 2026) of 'A Kernel for Empirical Regime Auditing: Drift, Fidelity, Entropy, Curvature, Re-Entry, and Integrity', first edition DOI 10.5281/zenodo.16809847 (12 August 2025). The source names Liber Collapsus v2.0 (DOI 10.5281/zenodo.22310064) as its companion; the Zenodo file listing for 22310064 includes A_Kernel_for_Empirical_Regime_Auditing.pdf."
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Shared archive with Liber Collapsus (Zenodo)",
+        "type": "archive",
+        "url": "https://zenodo.org/records/22310064",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "No DOI of its own is established by the supplied Version 2.0 source; the first-edition DOI belongs to the 2025 edition, which the source preserves as the historical witness."
+    ],
+    "notes": "Companion witness per the handoff manifest: not automatically a governing reference, so no SR-GOV record is created. Historical first edition is not registered as a separate source in this pass."
+  }
+]

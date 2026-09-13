@@ -1,0 +1,35 @@
+{
+  "source_id": "SRC-000017",
+  "source_type": "corpus-native",
+  "title": "A single algebraic diagnostic detects structurally identical phase transitions from quarks to the cosmic horizon",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "The ratio of geometric to arithmetic coherence (IC/F), computed from a single algebraic kernel applied to normalised physical measurements, exhibits structurally identical phase-transition signatures across systems spanning 61 orders of magnitude.",
+    "The heterogeneity gap Δ = F − IC spikes at every phase boundary tested, providing a single-number diagnostic for structural fragility independent of the underlying dynamics.",
+    "The contribution is not the AM-GM bound itself but its systematic application as a scale-independent phase-transition diagnostic across 20 scientific domains; 11,342 automated proofs across 406 physical objects confirm the three identities to machine precision."
+  ],
+  "identifier": {
+    "doi": "10.21203/rs.3.rs-9205902/v1",
+    "url": "https://doi.org/10.21203/rs.3.rs-9205902/v1"
+  },
+  "publication_year": 2026,
+  "venue": "Research Square",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.21203/rs.3.rs-9205902/v1",
+      "preferred": true
+    },
+    {
+      "label": "Research Square",
+      "type": "archive",
+      "url": "https://www.researchsquare.com/article/rs-9205902/v1",
+      "preferred": false
+    }
+  ],
+  "missingness": [],
+  "notes": "Crossref verification (2026-09-13): DOI 10.21203/rs.3.rs-9205902/v1 resolves to the titled preprint, author Clement Paulus, posted 2026-03-27, publisher Springer Science and Business Media LLC (Research Square). The Research Square landing page is the DOI's registered resource URL."
+}

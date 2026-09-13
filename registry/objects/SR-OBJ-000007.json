@@ -1,0 +1,72 @@
+{
+  "object_id": "SR-OBJ-000007",
+  "title": "The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "diagnostic",
+    "secondary": [
+      "pedagogical"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000012"
+  ],
+  "lens": "local heterogeneity diagnostic",
+  "domain": {
+    "primary": "structura-reditus-core",
+    "secondary": [
+      "mathematics"
+    ]
+  },
+  "object_of_study": "the separation between arithmetic retention and multiplicative coherence",
+  "structural_focus": {
+    "primary": "heterogeneity",
+    "secondary": [
+      "robustness"
+    ]
+  },
+  "main_question": "Can arithmetic retention remain healthy while multiplicative coherence reveals a structurally significant local wound?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "Both control and comparison produce the same fidelity, drift, and arithmetic mean while differing materially in composite integrity, curvature, and heterogeneity gap (Zenodo record description)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "The paper states it prepares the reader for the next public burdens of the corpus: finite return, seam accounting, and welded continuity."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "formal-derivation",
+    "secondary": [
+      "pedagogical"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000012 (\"The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+  "scope": "Three local channels under a frozen linear embedding; a homogeneous control and a heterogeneous comparison with equal fidelity, drift, and arithmetic mean but differing composite integrity, curvature, and heterogeneity gap.",
+  "exclusions": [
+    "Does not introduce a new closure family.",
+    "Does not claim finite return.",
+    "Does not stage a welded seam."
+  ],
+  "preserved_meaning": "The source's exact lesson: average retention is not enough; a bounded object may preserve its arithmetic surface while already changing in internal condition.",
+  "missingness": [],
+  "distortion_or_substitution_risk": "Reading the local warning as a domain result, or treating the heterogeneity gap as a universal threshold rather than a computed distinction on one small object.",
+  "next_burden": "Finite return, seam accounting, and welded continuity — the next public burdens the source itself names as following from this local warning.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

@@ -1,0 +1,78 @@
+{
+  "object_id": "SR-OBJ-000002",
+  "title": "Generative Collapse Dynamics / UMCP: The Core — Why the Contract-First Measurement Framework Has the Structure It Has",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "pedagogical",
+    "secondary": [
+      "handoff"
+    ]
+  },
+  "functional_locus": "cross-system",
+  "source_ids": [
+    "SRC-000007"
+  ],
+  "lens": "constitutional explanation without authority promotion",
+  "domain": {
+    "primary": "structura-reditus-core",
+    "secondary": [
+      "mathematics"
+    ]
+  },
+  "object_of_study": "the structural necessity of the contract-first GCD/UMCP architecture",
+  "structural_focus": {
+    "primary": "boundary",
+    "secondary": [
+      "return",
+      "continuity"
+    ]
+  },
+  "main_question": "Why does the contract-first measurement framework require its bounded trace, frozen contract, typed return, kernel, seam, authority, and stance architecture?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "Part II shows why the contract-first measurement architecture has the structure it has, and why bounded trace, typed return, seam logic, and three-valued stance are necessary rather than optional (Zenodo record description)."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library reads this as pedagogical exposition with formal-derivation evidence; it deepens Part I (REL-000001)."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "formal-derivation",
+    "secondary": [
+      "pedagogical"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "relations": [
+    "REL-000001"
+  ],
+  "version": "1.0.1",
+  "date": "2026-09-13T04:29:19Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000007 (\"Generative Collapse Dynamics / UMCP: The Core — Why the Contract-First Measurement Framework Has the Structure It Has\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+  "scope": "Orientation Series Part II: the framework stated in its strongest self-contained form and the necessity argument for bounded trace, typed return, seam logic, and three-valued stance.",
+  "exclusions": [
+    "Does not perform a worked traversal.",
+    "Does not introduce new kernel invariants or closures.",
+    "Does not promote any component to Tier-0 or Tier-1 authority."
+  ],
+  "preserved_meaning": "The source's own necessity argument: that bounded trace, typed return, seam logic, and three-valued stance are necessary rather than optional.",
+  "missingness": [],
+  "distortion_or_substitution_risk": "Reading a constitutional explanation as a canon amendment or as kernel authority, rather than as a Tier-2 exposition of why the architecture holds.",
+  "next_burden": "Proceed to Part III (The Pass), which walks one object through the full discipline from frozen contract to derived stance so the architecture is seen as a repeatable procedure (supported by the series description).",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Orientation Series Part II of III. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture. Revision 1.0.1: governing_refs added — the Zenodo record for the Orientation Series declares isSupplementTo 10.5281/zenodo.18893328 (GCD/UMCP whitepaper, SR-GOV-000010); the reference constrains this record and transfers no authority (authority.tier remains tier-2). Version 1.0.0 preserved in registry/objects/history/.",
+  "governing_refs": [
+    "SR-GOV-000010"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "object_id": "SR-OBJ-000001",
+  "title": "Generative Collapse Dynamics / UMCP: Passport and Entry Map — A Front-Door Guide to the Contract-First Measurement Framework",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "pedagogical",
+    "secondary": [
+      "handoff"
+    ]
+  },
+  "functional_locus": "cross-system",
+  "source_ids": [
+    "SRC-000006"
+  ],
+  "lens": "orientation and ingress",
+  "domain": {
+    "primary": "structura-reditus-core",
+    "secondary": []
+  },
+  "object_of_study": "the front-door architecture and reading map of GCD/UMCP",
+  "structural_focus": {
+    "primary": "translation",
+    "secondary": [
+      "boundary",
+      "return"
+    ]
+  },
+  "main_question": "How can a new reader enter the GCD/UMCP framework as one coherent and navigable contract-first object without flattening its hierarchy?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "Part I presents the axiom, invariant scaffold, validation spine, tier structure, and principal reading routes through the canon (Zenodo record description)."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library classifies this part as pedagogical/handoff material whose structural focus is translation of the framework into an enterable order."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "pedagogical",
+    "secondary": [
+      "source-synthesis"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "relations": [],
+  "version": "1.0.1",
+  "date": "2026-09-13T04:29:19Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000006 (\"Generative Collapse Dynamics / UMCP: Passport and Entry Map — A Front-Door Guide to the Contract-First Measurement Framework\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+  "scope": "Orientation Series Part I: axiom, invariant scaffold, validation spine, tier structure, and principal reading routes, as an entry surface only.",
+  "exclusions": [
+    "Does not derive or prove kernel identities.",
+    "Does not perform a worked pass.",
+    "Does not grant or assess authority placement of any work it points to."
+  ],
+  "preserved_meaning": "The corpus-native reading order and hierarchy (object, field, theory, authority tiers, functional systems) exactly as the entry map presents them.",
+  "missingness": [],
+  "distortion_or_substitution_risk": "Reading the entry map as the framework itself, or treating its reading routes as authority rankings rather than navigation.",
+  "next_burden": "Proceed to Part II (The Core), which states why the contract-first architecture has the structure it has; the entry map points to that argument but does not make it (supported by the series description).",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Orientation Series Part I of III; shared archive DOI recorded on the source. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture. Revision 1.0.1: governing_refs added — the Zenodo record for the Orientation Series declares isSupplementTo 10.5281/zenodo.18893328 (GCD/UMCP whitepaper, SR-GOV-000010); the reference constrains this record and transfers no authority (authority.tier remains tier-2). Version 1.0.0 preserved in registry/objects/history/.",
+  "governing_refs": [
+    "SR-GOV-000010"
+  ]
+}

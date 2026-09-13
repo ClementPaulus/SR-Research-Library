@@ -1,0 +1,34 @@
+{
+  "source_id": "SRC-000018",
+  "source_type": "corpus-native",
+  "title": "Liber Collapsus: De Reditu per Collapsum et de Identitate Servata",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [],
+  "identifier": {
+    "doi": "10.5281/zenodo.22310064",
+    "url": "https://doi.org/10.5281/zenodo.22310064"
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.22310064",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/22310064",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "Zenodo record 22310064 currently carries the title \"Liber Universalis de Collapsu Mathematicae\" (concept 10.5281/zenodo.16809846) while its file listing contains liber_collapsus.pdf; record 10.5281/zenodo.22310544 carries the title \"Liber Collapsus: De Reditu per Collapsum et de Identitate Servata\" with identical files and declares isNewVersionOf 22310064. The corpus owner designates 22310064 as the canonical Liber Collapsus DOI for the Structura Reditus Zenodo community. This title/edition relationship is preserved as an unresolved seam (SEAM-0010); 22310544 is not substituted.",
+    "Source-native claims not captured in this import pass; only identity, archive, and classification metadata are recorded."
+  ],
+  "notes": "Registry role: CORPUS / COMPANION SOURCE. No Tier-2 object is forced; the governing corpus has not supplied an explicit Tier-2 placement for this edition. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.22310064 is a version DOI; resolved record 22310064, record title \"Liber Universalis de Collapsu Mathematicae\", creators ['Paulus, Clement'], publication date 2026-09-04, resource type Publication."
+}

@@ -1,0 +1,33 @@
+{
+  "source_id": "SRC-000007",
+  "source_type": "corpus-native",
+  "title": "Generative Collapse Dynamics / UMCP: The Core — Why the Contract-First Measurement Framework Has the Structure It Has",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Part II, The Core, states the framework in its strongest self-contained form by showing why the contract-first measurement architecture has the structure it has, and why bounded trace, typed return, seam logic, and three-valued stance are necessary rather than optional."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.19637774",
+    "url": "https://doi.org/10.5281/zenodo.19637774"
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.19637774",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/19637774",
+      "preferred": false
+    }
+  ],
+  "missingness": [],
+  "notes": "Orientation Series, Part II of III. Shared archive DOI 10.5281/zenodo.19637774 for Orientation Series Parts I-III (SRC-000006, SRC-000007, SRC-000008). The SourceID identifies the named part; the DOI identifies the archive. Membership verified from the archive's file listing (Part I/II/III PDFs). Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19637774 is a version DOI; resolved record 19637774, record title \"Generative Collapse Dynamics / UMCP: Orientation Series (Parts I–III)\", creators ['Paulus, Clement'], publication date 2026-04-16, resource type Lesson."
+}

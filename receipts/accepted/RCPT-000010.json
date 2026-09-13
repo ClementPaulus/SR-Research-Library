@@ -1,0 +1,73 @@
+{
+  "receipt_id": "RCPT-000010",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000010",
+  "generated": "2026-09-13T04:13:09Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000010",
+  "title": "A single algebraic diagnostic detects structurally identical phase transitions from quarks to the cosmic horizon",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "diagnostic",
+  "functional_locus": "umcp",
+  "domain_primary": "physics",
+  "structural_focus_primary": "heterogeneity",
+  "main_question": "Does the same algebraic heterogeneity diagnostic exhibit comparable boundary behavior across physical systems separated by extreme scale?",
+  "evidence_mode_primary": "retrospective-analysis",
+  "provenance": "dataset-derived",
+  "maturity": "retrospectively-evaluated",
+  "source_ids": [
+    "SRC-000017"
+  ],
+  "relation_ids": [],
+  "publication_state": "preprint",
+  "non_blocking_missingness": [
+    "source-stated next burden (NON_BLOCKING)",
+    "peer-review status (PUBLICATION_BOUNDARY)"
+  ],
+  "open_burdens": [
+    "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  ],
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+}

@@ -1,0 +1,74 @@
+{
+  "receipt_id": "RCPT-000013",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000013",
+  "generated": "2026-09-13T04:13:09Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000013",
+  "title": "Retro-Coherent Transmission through Quantum Collapse: A Collapse Integrity Re-Interpretation of Negative Excitation Time",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "external-ingress",
+  "functional_locus": "umcp",
+  "domain_primary": "physics",
+  "structural_focus_primary": "return",
+  "main_question": "How does the historical collapse-integrity formalism classify reported negative excitation-time observations under its declared audit grammar?",
+  "evidence_mode_primary": "retrospective-analysis",
+  "provenance": "externally-anchored-derivative",
+  "maturity": "historical",
+  "source_ids": [
+    "SRC-000025"
+  ],
+  "relation_ids": [],
+  "publication_state": "archived",
+  "non_blocking_missingness": [
+    "source-stated next burden (NON_BLOCKING)",
+    "historical negative-return semantics vs current typed return (UNRESOLVED_SEAM)",
+    "external experiment (Sinclair et al., 2024) (SOURCE_BOUNDARY)"
+  ],
+  "open_burdens": [
+    "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  ],
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+}

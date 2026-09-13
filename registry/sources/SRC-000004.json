@@ -1,0 +1,33 @@
+{
+  "source_id": "SRC-000004",
+  "source_type": "corpus-native",
+  "title": "UMCP Operating System: Functional Ground, Formal Protocol, and Diagnostic Atlas",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Source-of-truth specification for UMCP as the contract-first operating system for evaluable structure inside Structura Reditus."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.21212668",
+    "url": "https://doi.org/10.5281/zenodo.21212668"
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.21212668",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/21212668",
+      "preferred": false
+    }
+  ],
+  "missingness": [],
+  "notes": "Registry role: FUNCTIONAL SOURCE SPECIFICATION ONLY; no Tier-2 object. Shared archive DOI 10.5281/zenodo.21212668 for the coordinated four-paper source-specification release (SRC-000002, SRC-000003, SRC-000004, SRC-000005). The SourceID identifies the named member work; the DOI identifies the archive. Member works are not collapsed into one object and the shared DOI is not counted as multiple deposits. Membership verified from the archive's file listing. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.21212668 is a version DOI; resolved record 21212668, record title \"Structura Reditus / GCD Coordinated Four-Paper Release\", creators ['Paulus, Clement'], publication date 2026-07-05, resource type Publication."
+}

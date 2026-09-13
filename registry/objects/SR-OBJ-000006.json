@@ -1,0 +1,81 @@
+{
+  "object_id": "SR-OBJ-000006",
+  "title": "The Periodic Table as a Measured Object II: A Nuclear-Informed Cross-Scale Sequel on What Sharpens, Collapses, and Inverts Under a Stronger Atomic Closure",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "domain-translation",
+    "secondary": [
+      "diagnostic"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000011"
+  ],
+  "lens": "nuclear-informed atomic closure",
+  "domain": {
+    "primary": "chemistry",
+    "secondary": [
+      "physics"
+    ]
+  },
+  "object_of_study": "changes in atomic structural distinctions under a strengthened nuclear-informed measurement surface",
+  "structural_focus": {
+    "primary": "heterogeneity",
+    "secondary": [
+      "boundary",
+      "robustness"
+    ]
+  },
+  "main_question": "Which distinctions in the first atomic closure sharpen, collapse, or invert when nuclear information is added under a stronger frozen surface?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "The 12-channel closure yields a mixed but stronger readback: retention and coherence rise, heterogeneity and curvature rise, Collapse rows increase, Watch rows contract, Stable remains absent, the Critical overlay falls (Zenodo record description)."
+    },
+    {
+      "layer": "translation",
+      "claim": "The library places this work as a domain translation extending the first periodic-table closure (REL-000003)."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "retrospective-analysis",
+    "secondary": [
+      "formal-derivation"
+    ]
+  },
+  "provenance": "dataset-derived",
+  "maturity": "retrospectively-evaluated",
+  "relations": [
+    "REL-000003"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000011 (\"The Periodic Table as a Measured Object II: A Nuclear-Informed Cross-Scale Sequel on What Sharpens, Collapses, and Inverts Under a Stronger Atomic Closure\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+  "scope": "Replacement of the 8-channel surface by a 12-channel closure admitting neutron excess, binding energy per nucleon, magic-number proximity, valence-electron structure, and block order; comparison of readbacks against the first closure.",
+  "exclusions": [
+    "Does not replace chemistry.",
+    "Does not claim the periodic table originates from the kernel.",
+    "Does not claim the strengthened closure is simply better."
+  ],
+  "preserved_meaning": "The source's mixed readback: arithmetic retention and multiplicative coherence rise while heterogeneity and curvature also rise; Collapse rows increase, Watch contracts, Stable remains absent, Critical falls.",
+  "missingness": [
+    {
+      "item": "source-stated next burden",
+      "class": "NON_BLOCKING",
+      "notes": "Not stated on the public record."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading the stronger closure as a superior or final atomic account rather than a more revealing and more demanding comparison surface.",
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

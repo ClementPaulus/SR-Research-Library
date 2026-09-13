@@ -1,0 +1,33 @@
+{
+  "source_id": "SRC-000028",
+  "source_type": "historical",
+  "title": "The Grammar of Return",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Establishes the formal audit protocol of RCFT: phase machine logic (DRIFT / RETURN / SHIP), collapse conservation, audit cycle grammar, canonical test invariants, closure tolerance protocols, and weld identity constraints."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.17518338",
+    "url": "https://doi.org/10.5281/zenodo.17518338"
+  },
+  "publication_year": 2025,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.17518338",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/17518338",
+      "preferred": false
+    }
+  ],
+  "missingness": [],
+  "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Registry role: source only; no Tier-2 object. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17518338 is a version DOI; resolved record 17518338, record title \"The Grammar of Return\", creators ['Paulus, Clement'], publication date 2025-10-24, resource type Publication."
+}

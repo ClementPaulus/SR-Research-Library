@@ -1,0 +1,92 @@
+{
+  "object_id": "SR-OBJ-000013",
+  "title": "Retro-Coherent Transmission through Quantum Collapse: A Collapse Integrity Re-Interpretation of Negative Excitation Time",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "external-ingress",
+    "secondary": [
+      "domain-translation",
+      "diagnostic"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000025"
+  ],
+  "lens": "historical collapse-integrity reinterpretation",
+  "domain": {
+    "primary": "physics",
+    "secondary": []
+  },
+  "object_of_study": "reported negative excitation-time phenomena under an historical collapse-integrity mapping",
+  "structural_focus": {
+    "primary": "return",
+    "secondary": [
+      "causation",
+      "boundary"
+    ]
+  },
+  "main_question": "How does the historical collapse-integrity formalism classify reported negative excitation-time observations under its declared audit grammar?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "The paper frames a reported negative excitation time as a lawful return seam, classifying it as a Type I seam with ω = 0, τ_R = −0.82, D_C = −0.82 and zero residual, and introduces retro-coherent seams (Class IIa) (Zenodo record description)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "The paper claims the Collapse Integrity grammar outperforms Lagrangian mechanics in discontinuous, memory-anchored, or retrocausal regimes."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library registers this as historical external-ingress material; the historical negative-return semantics are an explicit seam against current typed return."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "retrospective-analysis",
+    "secondary": [
+      "source-synthesis"
+    ]
+  },
+  "provenance": "externally-anchored-derivative",
+  "maturity": "historical",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000025 (\"Retro-Coherent Transmission through Quantum Collapse: A Collapse Integrity Re-Interpretation of Negative Excitation Time\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+  "scope": "A 2025 audit of one external quantum-optics experiment (Sinclair et al., 2024) under the historical Collapse Integrity audit grammar, contract PHYS-04.",
+  "exclusions": [
+    "Does not inherit historical negative-return semantics (τ_R < 0) into current typed-return mechanics.",
+    "Does not attribute the collapse-integrity reading to the external experimenters.",
+    "Does not establish the source's comparative claim against Lagrangian mechanics."
+  ],
+  "preserved_meaning": "The external experiment's reported observation (a negative excitation time under postselected single-photon transmission) remains the experimenters' claim; the seam classification (Type I, Class IIa retro-coherent) remains the historical paper's claim.",
+  "missingness": [
+    {
+      "item": "source-stated next burden",
+      "class": "NON_BLOCKING",
+      "notes": "Not stated on the public record."
+    },
+    {
+      "item": "historical negative-return semantics vs current typed return",
+      "class": "UNRESOLVED_SEAM",
+      "notes": "τ_R < 0 as used in 2025 is preserved as source evidence and is not mapped onto current typed-return mechanics."
+    },
+    {
+      "item": "external experiment (Sinclair et al., 2024)",
+      "class": "SOURCE_BOUNDARY",
+      "notes": "Not registered as a separate source in this import pass; its identifier was not supplied and is not guessed."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading the historical τ_R < 0 seam as current typed return, or reading the paper's classification as a physics result established by the external experiment.",
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Historical / prefreeze lineage object. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

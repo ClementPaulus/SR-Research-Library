@@ -1,0 +1,1654 @@
+{
+  "RCPT-000001": {
+    "receipt_id": "RCPT-000001",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000001",
+    "generated": "2026-09-13T04:13:09Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000001",
+    "title": "Generative Collapse Dynamics / UMCP: Passport and Entry Map — A Front-Door Guide to the Contract-First Measurement Framework",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "pedagogical",
+    "functional_locus": "cross-system",
+    "domain_primary": "structura-reditus-core",
+    "structural_focus_primary": "translation",
+    "main_question": "How can a new reader enter the GCD/UMCP framework as one coherent and navigable contract-first object without flattening its hierarchy?",
+    "evidence_mode_primary": "pedagogical",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000006"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [],
+    "open_burdens": [
+      "Proceed to Part II (The Core), which states why the contract-first architecture has the structure it has; the entry map points to that argument but does not make it (supported by the series description)."
+    ],
+    "next_burden": "Proceed to Part II (The Core), which states why the contract-first architecture has the structure it has; the entry map points to that argument but does not make it (supported by the series description)."
+  },
+  "RCPT-000002": {
+    "receipt_id": "RCPT-000002",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000002",
+    "generated": "2026-09-13T04:13:09Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000002",
+    "title": "Generative Collapse Dynamics / UMCP: The Core — Why the Contract-First Measurement Framework Has the Structure It Has",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "pedagogical",
+    "functional_locus": "cross-system",
+    "domain_primary": "structura-reditus-core",
+    "structural_focus_primary": "boundary",
+    "main_question": "Why does the contract-first measurement framework require its bounded trace, frozen contract, typed return, kernel, seam, authority, and stance architecture?",
+    "evidence_mode_primary": "formal-derivation",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000007"
+    ],
+    "relation_ids": [
+      "REL-000001"
+    ],
+    "publication_state": "archived",
+    "non_blocking_missingness": [],
+    "open_burdens": [
+      "Proceed to Part III (The Pass), which walks one object through the full discipline from frozen contract to derived stance so the architecture is seen as a repeatable procedure (supported by the series description)."
+    ],
+    "next_burden": "Proceed to Part III (The Pass), which walks one object through the full discipline from frozen contract to derived stance so the architecture is seen as a repeatable procedure (supported by the series description)."
+  },
+  "RCPT-000003": {
+    "receipt_id": "RCPT-000003",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000003",
+    "generated": "2026-09-13T04:13:09Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000003",
+    "title": "Generative Collapse Dynamics / UMCP: The Pass — A Complete Worked Traversal from Frozen Contract to Derived Stance",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "pedagogical",
+    "functional_locus": "umcp",
+    "domain_primary": "structura-reditus-core",
+    "structural_focus_primary": "return",
+    "main_question": "What does a complete GCD/UMCP pass look like from frozen contract through derived stance?",
+    "evidence_mode_primary": "pedagogical",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000008"
+    ],
+    "relation_ids": [
+      "REL-000002"
+    ],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "source-stated next burden (NON_BLOCKING)"
+    ],
+    "open_burdens": [
+      "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The series description states only that by its end a reader can follow one full path without live author mediation."
+    ],
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The series description states only that by its end a reader can follow one full path without live author mediation."
+  },
+  "RCPT-000004": {
+    "receipt_id": "RCPT-000004",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000004",
+    "generated": "2026-09-13T04:13:09Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000004",
+    "title": "The First Pass: A Complete Worked Example Through the Generative-Collapse Spine",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "pedagogical",
+    "functional_locus": "umcp",
+    "domain_primary": "structura-reditus-core",
+    "structural_focus_primary": "return",
+    "main_question": "Can one simple declared measurement be traced reproducibly through every stage of the contract-first validation spine?",
+    "evidence_mode_primary": "formal-derivation",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000009"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "source-stated next burden (NON_BLOCKING)"
+    ],
+    "open_burdens": [
+      "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+    ],
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  },
+  "RCPT-000005": {
+    "receipt_id": "RCPT-000005",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000005",
+    "generated": "2026-09-13T04:13:09Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000005",
+    "title": "The Periodic Table as a Measured Object: Tier-1 Derivation from Atomic Properties in the GCD Kernel",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "domain-translation",
+    "functional_locus": "umcp",
+    "domain_primary": "chemistry",
+    "structural_focus_primary": "heterogeneity",
+    "main_question": "What structural distinctions appear when the periodic table is evaluated as a finite measured object under one frozen GCD/UMCP grammar?",
+    "evidence_mode_primary": "retrospective-analysis",
+    "provenance": "dataset-derived",
+    "maturity": "retrospectively-evaluated",
+    "source_ids": [
+      "SRC-000010"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "source-stated next burden (NON_BLOCKING)"
+    ],
+    "open_burdens": [
+      "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The sequel (SRC-000011 / SR-OBJ-000006) takes up a stronger closure, but that burden is stated by the sequel, not by this source."
+    ],
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The sequel (SRC-000011 / SR-OBJ-000006) takes up a stronger closure, but that burden is stated by the sequel, not by this source."
+  },
+  "RCPT-000006": {
+    "receipt_id": "RCPT-000006",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000006",
+    "generated": "2026-09-13T04:13:09Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000006",
+    "title": "The Periodic Table as a Measured Object II: A Nuclear-Informed Cross-Scale Sequel on What Sharpens, Collapses, and Inverts Under a Stronger Atomic Closure",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "domain-translation",
+    "functional_locus": "umcp",
+    "domain_primary": "chemistry",
+    "structural_focus_primary": "heterogeneity",
+    "main_question": "Which distinctions in the first atomic closure sharpen, collapse, or invert when nuclear information is added under a stronger frozen surface?",
+    "evidence_mode_primary": "retrospective-analysis",
+    "provenance": "dataset-derived",
+    "maturity": "retrospectively-evaluated",
+    "source_ids": [
+      "SRC-000011"
+    ],
+    "relation_ids": [
+      "REL-000003"
+    ],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "source-stated next burden (NON_BLOCKING)"
+    ],
+    "open_burdens": [
+      "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+    ],
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  },
+  "RCPT-000007": {
+    "receipt_id": "RCPT-000007",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000007",
+    "generated": "2026-09-13T04:13:09Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000007",
+    "title": "The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "diagnostic",
+    "functional_locus": "umcp",
+    "domain_primary": "structura-reditus-core",
+    "structural_focus_primary": "heterogeneity",
+    "main_question": "Can arithmetic retention remain healthy while multiplicative coherence reveals a structurally significant local wound?",
+    "evidence_mode_primary": "formal-derivation",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000012"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [],
+    "open_burdens": [
+      "Finite return, seam accounting, and welded continuity — the next public burdens the source itself names as following from this local warning."
+    ],
+    "next_burden": "Finite return, seam accounting, and welded continuity — the next public burdens the source itself names as following from this local warning."
+  },
+  "RCPT-000008": {
+    "receipt_id": "RCPT-000008",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000008",
+    "generated": "2026-09-13T04:13:09Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000008",
+    "title": "The First Finite-Return Casepack: A Worked Case Showing Finite Re-Entry Under a Frozen Grammar",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "diagnostic",
+    "functional_locus": "umcp",
+    "domain_primary": "structura-reditus-core",
+    "structural_focus_primary": "return",
+    "main_question": "Does the candidate returned state achieve finite admissible re-entry under the same frozen grammar that measured its departure?",
+    "evidence_mode_primary": "formal-derivation",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000013"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [],
+    "open_burdens": [
+      "Weld, seam closure, and earned continuity — the stronger burdens the source names finite return as the necessary step before."
+    ],
+    "next_burden": "Weld, seam closure, and earned continuity — the stronger burdens the source names finite return as the necessary step before."
+  },
+  "RCPT-000009": {
+    "receipt_id": "RCPT-000009",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000009",
+    "generated": "2026-09-13T04:13:09Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000009",
+    "title": "GCD / UMCP: The First Welded Seam Casepack — A Worked Case Showing Earned Continuity Under Frozen Seam Accounting",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "diagnostic",
+    "functional_locus": "umcp",
+    "domain_primary": "structura-reditus-core",
+    "structural_focus_primary": "continuity",
+    "main_question": "When does a finite-return event also satisfy the stronger burden required for welded continuity under frozen seam accounting?",
+    "evidence_mode_primary": "formal-derivation",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000014"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "source-stated next burden (NON_BLOCKING)"
+    ],
+    "open_burdens": [
+      "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The source states what it does not do (new invariant, universal constant, governance, domain closure) but does not name a next burden."
+    ],
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The source states what it does not do (new invariant, universal constant, governance, domain closure) but does not name a next burden."
+  },
+  "RCPT-000010": {
+    "receipt_id": "RCPT-000010",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000010",
+    "generated": "2026-09-13T04:13:09Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000010",
+    "title": "A single algebraic diagnostic detects structurally identical phase transitions from quarks to the cosmic horizon",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "diagnostic",
+    "functional_locus": "umcp",
+    "domain_primary": "physics",
+    "structural_focus_primary": "heterogeneity",
+    "main_question": "Does the same algebraic heterogeneity diagnostic exhibit comparable boundary behavior across physical systems separated by extreme scale?",
+    "evidence_mode_primary": "retrospective-analysis",
+    "provenance": "dataset-derived",
+    "maturity": "retrospectively-evaluated",
+    "source_ids": [
+      "SRC-000017"
+    ],
+    "relation_ids": [],
+    "publication_state": "preprint",
+    "non_blocking_missingness": [
+      "source-stated next burden (NON_BLOCKING)",
+      "peer-review status (PUBLICATION_BOUNDARY)"
+    ],
+    "open_burdens": [
+      "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+    ],
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  },
+  "RCPT-000011": {
+    "receipt_id": "RCPT-000011",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000011",
+    "generated": "2026-09-13T04:13:09Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000011",
+    "title": "Dimethyltryptamine and the Recursive Reorganization of Consciousness",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "domain-translation",
+    "functional_locus": "cross-system",
+    "domain_primary": "neuroscience",
+    "structural_focus_primary": "causation",
+    "main_question": "How can the rapid multilevel reorganization produced by DMT be structurally separated into departure, altered-state organization, recurrence, and recovery without collapsing phenomenology, mechanism, and ontology into one claim?",
+    "evidence_mode_primary": "source-synthesis",
+    "provenance": "externally-anchored-derivative",
+    "maturity": "source-bounded",
+    "source_ids": [
+      "SRC-000019"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "empirical validation of the dual-reference architecture (SOURCE_BOUNDARY)"
+    ],
+    "open_burdens": [
+      "Prospective validation of the frozen dual-reference architecture: prospective testing, comparison with simpler models, preservation of negative results, and explicit contraction where its local predictions fail (stated by the source)."
+    ],
+    "next_burden": "Prospective validation of the frozen dual-reference architecture: prospective testing, comparison with simpler models, preservation of negative results, and explicit contraction where its local predictions fail (stated by the source)."
+  },
+  "RCPT-000012": {
+    "receipt_id": "RCPT-000012",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000012",
+    "generated": "2026-09-13T04:13:09Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000012",
+    "title": "The Seam of Reality: On Thought, Return, and the Illusion of the Outside",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "language-contact",
+    "functional_locus": "ulrc",
+    "domain_primary": "philosophy",
+    "structural_focus_primary": "return",
+    "main_question": "What stronger burden distinguishes epistemic gesture from admissible return when a claim itself is treated as occurring inside the structure it evaluates?",
+    "evidence_mode_primary": "conceptual-argument",
+    "provenance": "externally-anchored-derivative",
+    "maturity": "historical",
+    "source_ids": [
+      "SRC-000022"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "source-stated next burden (NON_BLOCKING)",
+      "historical terminology vs current architecture (UNRESOLVED_SEAM)",
+      "external positions engaged by the paper (SOURCE_BOUNDARY)"
+    ],
+    "open_burdens": [
+      "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+    ],
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  },
+  "RCPT-000013": {
+    "receipt_id": "RCPT-000013",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000013",
+    "generated": "2026-09-13T04:13:09Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000013",
+    "title": "Retro-Coherent Transmission through Quantum Collapse: A Collapse Integrity Re-Interpretation of Negative Excitation Time",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "external-ingress",
+    "functional_locus": "umcp",
+    "domain_primary": "physics",
+    "structural_focus_primary": "return",
+    "main_question": "How does the historical collapse-integrity formalism classify reported negative excitation-time observations under its declared audit grammar?",
+    "evidence_mode_primary": "retrospective-analysis",
+    "provenance": "externally-anchored-derivative",
+    "maturity": "historical",
+    "source_ids": [
+      "SRC-000025"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "source-stated next burden (NON_BLOCKING)",
+      "historical negative-return semantics vs current typed return (UNRESOLVED_SEAM)",
+      "external experiment (Sinclair et al., 2024) (SOURCE_BOUNDARY)"
+    ],
+    "open_burdens": [
+      "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+    ],
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  },
+  "RCPT-000014": {
+    "receipt_id": "RCPT-000014",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000014",
+    "generated": "2026-09-13T04:13:10Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000014",
+    "title": "The Episteme Construction",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "pedagogical",
+    "functional_locus": "cross-system",
+    "domain_primary": "interdisciplinary",
+    "structural_focus_primary": "translation",
+    "main_question": "How can claims from heterogeneous domains be made structurally auditable and portable under a shared contract-first workflow?",
+    "evidence_mode_primary": "pedagogical",
+    "provenance": "corpus-native",
+    "maturity": "historical",
+    "source_ids": [
+      "SRC-000031"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "source-stated next burden (NON_BLOCKING)",
+      "historical terminology vs current architecture (UNRESOLVED_SEAM)"
+    ],
+    "open_burdens": [
+      "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+    ],
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  },
+  "RCPT-000015": {
+    "receipt_id": "RCPT-000015",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000015",
+    "generated": "2026-09-13T04:13:10Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000015",
+    "title": "The Common Doorway: A Cross-Field Method for Generative Collapse",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "language-contact",
+    "functional_locus": "ulrc",
+    "domain_primary": "interdisciplinary",
+    "structural_focus_primary": "translation",
+    "main_question": "How can structurally related claims from different fields be made mutually legible without requiring the fields to collapse into one vocabulary?",
+    "evidence_mode_primary": "pedagogical",
+    "provenance": "corpus-native",
+    "maturity": "historical",
+    "source_ids": [
+      "SRC-000032"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "public abstract for this member work (SOURCE_BOUNDARY)",
+      "source-stated next burden (NON_BLOCKING)",
+      "historical terminology vs current architecture (UNRESOLVED_SEAM)"
+    ],
+    "open_burdens": [
+      "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+    ],
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  },
+  "RCPT-000016": {
+    "receipt_id": "RCPT-000016",
+    "decision": "RETURNED_FOR_REPAIR",
+    "submission_identity": "SR-OBJ-000016",
+    "generated": "2026-09-13T04:13:10Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "BLOCKED",
+        "detail": "missingness 'source identity: DOI 10.5281/zenodo.16990995 resolves to Collapse Calculus (SRC-000034), not to The Collapse Formalism' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission; missingness 'source-stated next burden' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission"
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "RETURNED_FOR_REPAIR is not a rejection. Required structure is missing or incomplete, the gap blocks admission, and the same object can return through the declared repair. Library admission means organizational conformance only and does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "provisional_object_id": "SR-OBJ-000016",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "failed_or_blocked_gates": [
+      "Gate E: Boundary and missingness"
+    ],
+    "missing_structure": [
+      "missingness 'source identity: DOI 10.5281/zenodo.16990995 resolves to Collapse Calculus (SRC-000034), not to The Collapse Formalism' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission",
+      "missingness 'source-stated next burden' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission"
+    ],
+    "missingness_class": "REPAIRABLE",
+    "affected_burden": "Unresolved: not recoverable in this import pass because the listed DOI does not resolve to the titled work.",
+    "why_blocked": "Required structure is missing or incomplete and the gap blocks admission evaluability; the same object can reasonably return through the declared repair.",
+    "exact_repair_required": [
+      "Supply or correct: missingness 'source identity: DOI 10.5281/zenodo.16990995 resolves to Collapse Calculus (SRC-000034), not to The Collapse Formalism' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission",
+      "Supply or correct: missingness 'source-stated next burden' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission"
+    ],
+    "permitted_source_or_evidence": "Any source or evidence mode permitted by the controlled taxonomies; missing metadata must be supplied from actual records, never invented.",
+    "repair_changes_object": false,
+    "new_object_id_required": false,
+    "seam_declaration_required": true,
+    "fields_already_accepted": [
+      "object_id",
+      "title",
+      "authors",
+      "authority",
+      "provenance",
+      "source_ids",
+      "source_boundary",
+      "tier2_class",
+      "domain",
+      "structural_focus",
+      "evidence_mode",
+      "maturity",
+      "functional_locus",
+      "publication_state",
+      "main_question",
+      "relations",
+      "version",
+      "date",
+      "next_burden",
+      "repair_route"
+    ],
+    "fields_still_blocked": [
+      "missingness 'source identity: DOI 10.5281/zenodo.16990995 resolves to Collapse Calculus (SRC-000034), not to The Collapse Formalism' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission",
+      "missingness 'source-stated next burden' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission"
+    ],
+    "resubmission_condition": "Resubmit the same object with every listed missing structure supplied; all seven gates are then re-evaluated in full."
+  },
+  "RCPT-000017": {
+    "receipt_id": "RCPT-000017",
+    "decision": "RETURNED_FOR_REPAIR",
+    "submission_identity": "SR-OBJ-000017",
+    "generated": "2026-09-13T04:13:10Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "BLOCKED",
+        "detail": "missingness 'source-stated next burden for candidate material' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission"
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "RETURNED_FOR_REPAIR is not a rejection. Required structure is missing or incomplete, the gap blocks admission, and the same object can return through the declared repair. Library admission means organizational conformance only and does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "provisional_object_id": "SR-OBJ-000017",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "failed_or_blocked_gates": [
+      "Gate E: Boundary and missingness"
+    ],
+    "missing_structure": [
+      "missingness 'source-stated next burden for candidate material' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission"
+    ],
+    "missingness_class": "REPAIRABLE",
+    "affected_burden": "Unresolved: the source's public record carries no abstract and states no next burden; because candidate material implies a stronger later use, the burden must be read from the paper itself before admission.",
+    "why_blocked": "Required structure is missing or incomplete and the gap blocks admission evaluability; the same object can reasonably return through the declared repair.",
+    "exact_repair_required": [
+      "Supply or correct: missingness 'source-stated next burden for candidate material' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission"
+    ],
+    "permitted_source_or_evidence": "Any source or evidence mode permitted by the controlled taxonomies; missing metadata must be supplied from actual records, never invented.",
+    "repair_changes_object": false,
+    "new_object_id_required": false,
+    "seam_declaration_required": true,
+    "fields_already_accepted": [
+      "object_id",
+      "title",
+      "authors",
+      "authority",
+      "provenance",
+      "source_ids",
+      "source_boundary",
+      "tier2_class",
+      "domain",
+      "structural_focus",
+      "evidence_mode",
+      "maturity",
+      "functional_locus",
+      "publication_state",
+      "main_question",
+      "relations",
+      "version",
+      "date",
+      "next_burden",
+      "repair_route"
+    ],
+    "fields_still_blocked": [
+      "missingness 'source-stated next burden for candidate material' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission"
+    ],
+    "resubmission_condition": "Resubmit the same object with every listed missing structure supplied; all seven gates are then re-evaluated in full."
+  },
+  "RCPT-000018": {
+    "receipt_id": "RCPT-000018",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000018",
+    "generated": "2026-09-13T04:13:10Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000018",
+    "title": "Universal Collapse Diagnostics: Contract-First Invariants, κ-Continuous Calculus, and Cross-Domain Audit",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "diagnostic",
+    "functional_locus": "umcp",
+    "domain_primary": "interdisciplinary",
+    "structural_focus_primary": "boundary",
+    "main_question": "How can contract-first invariants and historical collapse diagnostics be applied consistently across heterogeneous domains while preserving auditability?",
+    "evidence_mode_primary": "formal-derivation",
+    "provenance": "corpus-native",
+    "maturity": "historical",
+    "source_ids": [
+      "SRC-000029"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "public abstract (SOURCE_BOUNDARY)",
+      "source-stated next burden (NON_BLOCKING)",
+      "historical terminology vs current architecture (UNRESOLVED_SEAM)"
+    ],
+    "open_burdens": [
+      "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+    ],
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  },
+  "RCPT-000019": {
+    "receipt_id": "RCPT-000019",
+    "decision": "RETURNED_FOR_REPAIR",
+    "submission_identity": "SR-OBJ-000019",
+    "generated": "2026-09-13T04:13:10Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "BLOCKED",
+        "detail": "missingness 'source-stated next burden for candidate material' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission"
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "RETURNED_FOR_REPAIR is not a rejection. Required structure is missing or incomplete, the gap blocks admission, and the same object can return through the declared repair. Library admission means organizational conformance only and does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "provisional_object_id": "SR-OBJ-000019",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "failed_or_blocked_gates": [
+      "Gate E: Boundary and missingness"
+    ],
+    "missing_structure": [
+      "missingness 'source-stated next burden for candidate material' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission"
+    ],
+    "missingness_class": "REPAIRABLE",
+    "affected_burden": "Unresolved: the shared archive record carries no abstract for this member work and states no next burden; because candidate material implies a stronger later use, the burden must be read from the paper itself before admission.",
+    "why_blocked": "Required structure is missing or incomplete and the gap blocks admission evaluability; the same object can reasonably return through the declared repair.",
+    "exact_repair_required": [
+      "Supply or correct: missingness 'source-stated next burden for candidate material' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission"
+    ],
+    "permitted_source_or_evidence": "Any source or evidence mode permitted by the controlled taxonomies; missing metadata must be supplied from actual records, never invented.",
+    "repair_changes_object": false,
+    "new_object_id_required": false,
+    "seam_declaration_required": true,
+    "fields_already_accepted": [
+      "object_id",
+      "title",
+      "authors",
+      "authority",
+      "provenance",
+      "source_ids",
+      "source_boundary",
+      "tier2_class",
+      "domain",
+      "structural_focus",
+      "evidence_mode",
+      "maturity",
+      "functional_locus",
+      "publication_state",
+      "main_question",
+      "relations",
+      "version",
+      "date",
+      "next_burden",
+      "repair_route"
+    ],
+    "fields_still_blocked": [
+      "missingness 'source-stated next burden for candidate material' (REPAIRABLE) blocks evaluability and must be repaired or reclassified before admission"
+    ],
+    "resubmission_condition": "Resubmit the same object with every listed missing structure supplied; all seven gates are then re-evaluated in full."
+  },
+  "RCPT-000020": {
+    "receipt_id": "RCPT-000020",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000001",
+    "generated": "2026-09-13T04:29:19Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000001",
+    "title": "Generative Collapse Dynamics / UMCP: Passport and Entry Map — A Front-Door Guide to the Contract-First Measurement Framework",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.1",
+    "date": "2026-09-13T04:29:19Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "pedagogical",
+    "functional_locus": "cross-system",
+    "domain_primary": "structura-reditus-core",
+    "structural_focus_primary": "translation",
+    "main_question": "How can a new reader enter the GCD/UMCP framework as one coherent and navigable contract-first object without flattening its hierarchy?",
+    "evidence_mode_primary": "pedagogical",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000006"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [],
+    "open_burdens": [
+      "Proceed to Part II (The Core), which states why the contract-first architecture has the structure it has; the entry map points to that argument but does not make it (supported by the series description)."
+    ],
+    "next_burden": "Proceed to Part II (The Core), which states why the contract-first architecture has the structure it has; the entry map points to that argument but does not make it (supported by the series description)."
+  },
+  "RCPT-000021": {
+    "receipt_id": "RCPT-000021",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000002",
+    "generated": "2026-09-13T04:29:19Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000002",
+    "title": "Generative Collapse Dynamics / UMCP: The Core — Why the Contract-First Measurement Framework Has the Structure It Has",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.1",
+    "date": "2026-09-13T04:29:19Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "pedagogical",
+    "functional_locus": "cross-system",
+    "domain_primary": "structura-reditus-core",
+    "structural_focus_primary": "boundary",
+    "main_question": "Why does the contract-first measurement framework require its bounded trace, frozen contract, typed return, kernel, seam, authority, and stance architecture?",
+    "evidence_mode_primary": "formal-derivation",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000007"
+    ],
+    "relation_ids": [
+      "REL-000001"
+    ],
+    "publication_state": "archived",
+    "non_blocking_missingness": [],
+    "open_burdens": [
+      "Proceed to Part III (The Pass), which walks one object through the full discipline from frozen contract to derived stance so the architecture is seen as a repeatable procedure (supported by the series description)."
+    ],
+    "next_burden": "Proceed to Part III (The Pass), which walks one object through the full discipline from frozen contract to derived stance so the architecture is seen as a repeatable procedure (supported by the series description)."
+  },
+  "RCPT-000022": {
+    "receipt_id": "RCPT-000022",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000003",
+    "generated": "2026-09-13T04:29:20Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000003",
+    "title": "Generative Collapse Dynamics / UMCP: The Pass — A Complete Worked Traversal from Frozen Contract to Derived Stance",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.1",
+    "date": "2026-09-13T04:29:19Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "pedagogical",
+    "functional_locus": "umcp",
+    "domain_primary": "structura-reditus-core",
+    "structural_focus_primary": "return",
+    "main_question": "What does a complete GCD/UMCP pass look like from frozen contract through derived stance?",
+    "evidence_mode_primary": "pedagogical",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000008"
+    ],
+    "relation_ids": [
+      "REL-000002"
+    ],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "source-stated next burden (NON_BLOCKING)"
+    ],
+    "open_burdens": [
+      "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The series description states only that by its end a reader can follow one full path without live author mediation."
+    ],
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The series description states only that by its end a reader can follow one full path without live author mediation."
+  }
+}

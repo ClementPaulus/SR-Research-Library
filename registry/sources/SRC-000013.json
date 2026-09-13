@@ -1,0 +1,36 @@
+{
+  "source_id": "SRC-000013",
+  "source_type": "corpus-native",
+  "title": "The First Finite-Return Casepack: A Worked Case Showing Finite Re-Entry Under a Frozen Grammar",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "First public paper in the GCD/UMCP corpus to make return explicit as a measured finite event under a frozen grammar, using one bounded local episode with a reference state, a wounded departure, and a candidate returned state.",
+    "Does not yet claim weld, seam closure, or earned continuity; establishes finite return as the necessary public step before those stronger burdens."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.19869494",
+    "url": "https://doi.org/10.5281/zenodo.19869494"
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.19869494",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/19869494",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "Zenodo record title is the short form \"The First Finite-Return Casepack\"."
+  ],
+  "notes": "Zenodo verification (2026-09-13): DOI 10.5281/zenodo.19869494 is a version DOI; resolved record 19869494, record title \"The First Finite-Return Casepack\", creators ['Paulus, Clement'], publication date 2026-04-28, resource type Report."
+}

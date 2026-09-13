@@ -191,6 +191,12 @@
       "items": { "type": "string", "pattern": "^REL-[0-9]{6}$" },
       "description": "RelationIDs declared by this object. Every referenced RelationID must exist in registry/relations/."
     },
+    "governing_refs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^SR-GOV-[0-9]{6}$" },
+      "description": "Optional. Governing references (registry/governing/) that constrain this record. Every value must resolve to an existing SR-GOV-* record. Listing a governing reference never transfers its authority to this Tier-2 object; authority.tier remains tier-2."
+    },
     "version": {
       "type": "string",
       "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",

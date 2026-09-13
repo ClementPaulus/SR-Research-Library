@@ -1,0 +1,8 @@
+{
+  "relation_id": "REL-000003",
+  "relation_type": "extends",
+  "from_id": "SR-OBJ-000006",
+  "to_id": "SR-OBJ-000005",
+  "declared": "2026-09-13T04:12:52Z",
+  "notes": "The nuclear-informed atomic sequel explicitly extends the first periodic-table closure."
+}

@@ -1,0 +1,32 @@
+{
+  "source_id": "SRC-000046",
+  "source_type": "corpus-native",
+  "title": "Empirical Regime Auditing Under the GCD/UMCP Kernel: Contract-Frozen Calibration, Temporal Diagnostics, Typed Return, and Cross-Stream Evaluation (A Kernel for Empirical Regime Auditing, Version 2.0)",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Separates a fixed measurement kernel for the admitted state of an object from a temporal diagnostic layer for detecting how empirical observations move around that state.",
+    "Temporal quantities remain diagnostics unless an explicit closure promotes them; they do not redefine the reserved kernel namespace and do not acquire stance authority through usefulness alone.",
+    "Finite return establishes re-entry under the active contract but does not by itself establish a weld, favorable regime, high integrity, or final conformity.",
+    "The paper is the technical empirical companion to Liber Collapsus; open seams are aligned to UMCP-KERNEL-SPEC.v2.4.0-rc2 without promoting it."
+  ],
+  "identifier": {
+    "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 05_COMPANION_WITNESSES/A_Kernel_for_Empirical_Regime_Auditing_v2.0.pdf, sha256 8e162d7e86811d2dfea7ccc949226d9d4c320f44a36c9ca18a364b1d8ca63b67. Full text supplied to the library maintainer; not deposited in this repository.",
+    "other": "Second edition (Version 2.0, 4 September 2026) of 'A Kernel for Empirical Regime Auditing: Drift, Fidelity, Entropy, Curvature, Re-Entry, and Integrity', first edition DOI 10.5281/zenodo.16809847 (12 August 2025). The source names Liber Collapsus v2.0 (DOI 10.5281/zenodo.22310064) as its companion; the Zenodo file listing for 22310064 includes A_Kernel_for_Empirical_Regime_Auditing.pdf."
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Shared archive with Liber Collapsus (Zenodo)",
+      "type": "archive",
+      "url": "https://zenodo.org/records/22310064",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "No DOI of its own is established by the supplied Version 2.0 source; the first-edition DOI belongs to the 2025 edition, which the source preserves as the historical witness."
+  ],
+  "notes": "Companion witness per the handoff manifest: not automatically a governing reference, so no SR-GOV record is created. Historical first edition is not registered as a separate source in this pass."
+}

@@ -1,0 +1,23 @@
+{
+  "source_id": "SRC-000038",
+  "source_type": "corpus-native",
+  "title": "Structura Collapsus: Collapse-Kernel and Protocol Reference for Generative Collapse Dynamics within the Structura Reditus Corpus",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Structura Collapsus is the canonical collapse-kernel and protocol reference for GCD/UMCP within the wider field of Structura Reditus; it does not define the whole field, replace the object, or absorb the functional systems.",
+    "It states in full the 44 structural identities, 47 proven lemmas, 5 frozen parameters, 5 structural constants, 4 regime gates, and 3 algebraic identities that constitute the Tier-1 kernel and its Tier-0 protocol; the current reference line includes 20,540 automated tests across 23 evaluation surfaces and 246 closure modules.",
+    "Regime labels classify the trace but do not decide final stance; stance is read only after contract sufficiency, closure availability, return typing, missingness policy, ledger reconciliation, and authority discipline have been checked."
+  ],
+  "identifier": {
+    "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 03_TECHNICAL_TIER0/Structura_Collapsus.pdf, sha256 ffdaa7b6f22d9f9c6d860e55becdc4da98dc7f20d1b13bb826f908353626155f. Full text supplied to the library maintainer; not deposited in this repository."
+  },
+  "publication_year": 2026,
+  "venue": null,
+  "links": [],
+  "missingness": [
+    "No DOI or public archive deposit is established by the supplied source; identity is anchored to the handoff bundle file hash. Do not guess a DOI."
+  ],
+  "notes": "Dated June 1, 2026. Cited by the 2.0 companion as '1 June 2026' without DOI. See SR-GOV-000011."
+}

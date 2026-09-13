@@ -1,0 +1,34 @@
+{
+  "source_id": "SRC-000024",
+  "source_type": "historical",
+  "title": "A Geometry of Admissible Seams: Contract-Bound Invariants and Auditable Transitions",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [],
+  "identifier": {
+    "doi": "10.5281/zenodo.17980036",
+    "url": "https://doi.org/10.5281/zenodo.17980036"
+  },
+  "publication_year": 2025,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.17980036",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/17980036",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "Zenodo record 17980036 carries the title \"A Provenance & Canon Note\" (a version under concept 10.5281/zenodo.17925172, SRC-000023); its file listing contains Geometry of Admissible Seams.pdf alongside Provenance & Canon Note 1.0.1.pdf. The DOI is therefore a shared archive anchor for two member works. No public abstract for the Geometry paper is on the record.",
+    "Source-native claims not captured in this import pass; only identity, archive, and classification metadata are recorded."
+  ],
+  "notes": "Historical / prefreeze lineage source. Historical terminology is preserved as source evidence and does not overwrite the mature Structura Reditus architecture. Shared archive DOI with SRC-000023 (Provenance & Canon Note). The SourceID identifies the named member work; the DOI identifies the archive. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.17980036 is a version DOI; resolved record 17980036, record title \"A Provenance & Canon Note\", creators ['Paulus, Clement'], publication date 2025-12-12, resource type Technical note."
+}

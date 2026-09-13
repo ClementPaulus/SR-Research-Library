@@ -1,0 +1,31 @@
+{
+  "governing_id": "SR-GOV-000001",
+  "title": "Summa Reditus: A Complete Treatise on Admissible Return Through Collapse",
+  "source_id": "SRC-000001",
+  "version": "Architecture Freeze v1.0 (freeze date 2026-06-10, America/Chicago; 314 pages)",
+  "status": "active",
+  "governing_role": [
+    "canon-facing",
+    "constitutional"
+  ],
+  "authority_scope": {
+    "tier_1": [
+      "Whole-corpus placement as the completed canon-facing treatise-object: Reditus as object, Structura Reditus as field, GCD as foundational theory, Tier-1/Tier-0/Tier-2 as authority architecture, UMCP/RCFT/ULRC as functional systems, Tier-2 closures as domain-ingress pathways.",
+      "Completed-treatise status: later corrected, expanded, compressed, typeset, archived, or newly deposited editions are declared versions of the same treatise-object unless they announce a new object, contract, or publication role."
+    ],
+    "tier_0": [
+      "Order of burden for every evaluative movement: object and contract before canon read; canon read before closure; closure before ledger reconciliation; ledger reconciliation before stance."
+    ]
+  },
+  "source_role": "Completed canon-facing treatise; whole-corpus placement and completed-treatise status (handoff manifest; Summa publication record).",
+  "immutable_record": true,
+  "active_from": "2026-09-13T04:28:50Z",
+  "supersedes": null,
+  "superseded_by": null,
+  "doi": "10.5281/zenodo.20653105",
+  "canonical_link": "https://doi.org/10.5281/zenodo.20653105",
+  "scope": "Gathers and places the Structura Reditus corpus in one ordered body: object, field, theory, authority architecture, functional systems, operational protocol, case range, recursive lineage, publication architecture, and teaching route.",
+  "non_goal": "Does not replace the source works, casepacks, closures, protocols, diagrams, teaching materials, language works, critique works, or technical artifacts that made the corpus possible; source works keep their own titles, dates, DOIs, and local burdens unless explicitly incorporated. Prose explanation does not redefine executable protocol, and executable protocol does not redefine the Tier-1 kernel. Architectural completion does not replace local proof.",
+  "missingness": [],
+  "notes": "Publication record: DOI-bearing publication-ready canon-facing architecture freeze. The treatise is source-only in the Tier-2 registry (no SR-OBJ)."
+}

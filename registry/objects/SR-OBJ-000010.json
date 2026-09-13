@@ -1,0 +1,89 @@
+{
+  "object_id": "SR-OBJ-000010",
+  "title": "A single algebraic diagnostic detects structurally identical phase transitions from quarks to the cosmic horizon",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "diagnostic",
+    "secondary": [
+      "domain-translation"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000017"
+  ],
+  "lens": "cross-scale physical diagnostic",
+  "domain": {
+    "primary": "physics",
+    "secondary": [
+      "interdisciplinary"
+    ]
+  },
+  "object_of_study": "heterogeneity/coherence signatures across physical phase boundaries",
+  "structural_focus": {
+    "primary": "heterogeneity",
+    "secondary": [
+      "boundary",
+      "failure"
+    ]
+  },
+  "main_question": "Does the same algebraic heterogeneity diagnostic exhibit comparable boundary behavior across physical systems separated by extreme scale?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "IC/F exhibits structurally identical phase-transition signatures across systems from quark confinement to dark-energy cosmology; Δ spikes at every phase boundary tested (Crossref abstract)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "11,342 automated proofs across 406 physical objects confirm F+ω≡1, IC≤F, IC=exp(κ) to machine precision with zero violations."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library places this as diagnostic material with a domain-translation secondary role; it records no claim of mechanistic identity."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "retrospective-analysis",
+    "secondary": [
+      "computational-reproduction",
+      "formal-derivation"
+    ]
+  },
+  "provenance": "dataset-derived",
+  "maturity": "retrospectively-evaluated",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "preprint",
+  "source_boundary": "The governing source is SRC-000017 (\"A single algebraic diagnostic detects structurally identical phase transitions from quarks to the cosmic horizon\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+  "scope": "The IC/F ratio and heterogeneity gap Δ = F − IC computed from one algebraic kernel over normalised physical measurements across systems spanning 61 orders of magnitude and 20 scientific domains, with computational verification of the three identities.",
+  "exclusions": [
+    "Does not claim that the underlying domain mechanisms are identical; only that the diagnostic's boundary signatures are structurally comparable.",
+    "Does not claim the AM-GM bound as a contribution.",
+    "Publication state is preprint; publication status carries no admission authority."
+  ],
+  "preserved_meaning": "The source's own scoping: the contribution is the systematic application of a scale-independent diagnostic, not the bound itself; the diagnostic is stated to be independent of the underlying dynamics.",
+  "missingness": [
+    {
+      "item": "source-stated next burden",
+      "class": "NON_BLOCKING",
+      "notes": "Not stated in the public abstract."
+    },
+    {
+      "item": "peer-review status",
+      "class": "PUBLICATION_BOUNDARY",
+      "notes": "Research Square preprint v1; publication state recorded as preprint."
+    }
+  ],
+  "distortion_or_substitution_risk": "Converting comparable diagnostic signatures into a claim that quark confinement, atomic structure, and dark energy share a mechanism — a stronger burden the source does not carry in its abstract.",
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Venue Research Square; DOI and landing page verified via Crossref. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

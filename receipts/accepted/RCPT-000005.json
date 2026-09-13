@@ -1,0 +1,72 @@
+{
+  "receipt_id": "RCPT-000005",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000005",
+  "generated": "2026-09-13T04:13:09Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000005",
+  "title": "The Periodic Table as a Measured Object: Tier-1 Derivation from Atomic Properties in the GCD Kernel",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "domain-translation",
+  "functional_locus": "umcp",
+  "domain_primary": "chemistry",
+  "structural_focus_primary": "heterogeneity",
+  "main_question": "What structural distinctions appear when the periodic table is evaluated as a finite measured object under one frozen GCD/UMCP grammar?",
+  "evidence_mode_primary": "retrospective-analysis",
+  "provenance": "dataset-derived",
+  "maturity": "retrospectively-evaluated",
+  "source_ids": [
+    "SRC-000010"
+  ],
+  "relation_ids": [],
+  "publication_state": "archived",
+  "non_blocking_missingness": [
+    "source-stated next burden (NON_BLOCKING)"
+  ],
+  "open_burdens": [
+    "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The sequel (SRC-000011 / SR-OBJ-000006) takes up a stronger closure, but that burden is stated by the sequel, not by this source."
+  ],
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The sequel (SRC-000011 / SR-OBJ-000006) takes up a stronger closure, but that burden is stated by the sequel, not by this source."
+}

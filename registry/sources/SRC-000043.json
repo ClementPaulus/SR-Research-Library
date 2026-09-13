@@ -1,0 +1,34 @@
+{
+  "source_id": "SRC-000043",
+  "source_type": "corpus-native",
+  "title": "Entering Structura Reditus: A Complete Ingress to Reditus, Generative Collapse Dynamics, and Contract-First Evaluation (Structura Reditus Ingress Paper)",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Provides a single ingress into the Structura Reditus corpus, replacing the former three-part orientation burden with one complete front-door paper organized around placement, discipline, and first pass."
+  ],
+  "identifier": {
+    "archive_reference": "Handoff bundle SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0, file 04_INGRESS_CONTACT/Structura_Reditus_Ingress_Paper.pdf, sha256 00d69642e0a0b66a83f223078dd564e6f9f06e728c9375304345a2e71c669ae4. Full text supplied to the library maintainer; not deposited in this repository.",
+    "doi": "10.5281/zenodo.20549483",
+    "url": "https://doi.org/10.5281/zenodo.20549483"
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.20549483",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/20549483",
+      "preferred": false
+    }
+  ],
+  "missingness": [],
+  "notes": "DOI stated on the title page and verified against Zenodo (2026-09-13): record 20549483, title \"Entering Structura Reditus: A Complete Ingress to Reditus, Generative Collapse Dynamics, and Contract-First Evaluation\", creators ['Paulus, Clement'], publication date 2026-06-04, under concept DOI 10.5281/zenodo.19622272 (the concept record also carrying the Orientation Series, SRC-000006..008). See SR-GOV-000016."
+}

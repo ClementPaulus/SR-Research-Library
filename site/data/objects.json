@@ -1,1 +1,1320 @@
-[]
+[
+  {
+    "object_id": "SR-OBJ-000001",
+    "title": "Generative Collapse Dynamics / UMCP: Passport and Entry Map — A Front-Door Guide to the Contract-First Measurement Framework",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "pedagogical",
+      "secondary": [
+        "handoff"
+      ]
+    },
+    "functional_locus": "cross-system",
+    "source_ids": [
+      "SRC-000006"
+    ],
+    "lens": "orientation and ingress",
+    "domain": {
+      "primary": "structura-reditus-core",
+      "secondary": []
+    },
+    "object_of_study": "the front-door architecture and reading map of GCD/UMCP",
+    "structural_focus": {
+      "primary": "translation",
+      "secondary": [
+        "boundary",
+        "return"
+      ]
+    },
+    "main_question": "How can a new reader enter the GCD/UMCP framework as one coherent and navigable contract-first object without flattening its hierarchy?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "Part I presents the axiom, invariant scaffold, validation spine, tier structure, and principal reading routes through the canon (Zenodo record description)."
+      },
+      {
+        "layer": "local-interpretation",
+        "claim": "The library classifies this part as pedagogical/handoff material whose structural focus is translation of the framework into an enterable order."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "pedagogical",
+      "secondary": [
+        "source-synthesis"
+      ]
+    },
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "relations": [],
+    "version": "1.0.1",
+    "date": "2026-09-13T04:29:19Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000006 (\"Generative Collapse Dynamics / UMCP: Passport and Entry Map — A Front-Door Guide to the Contract-First Measurement Framework\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+    "scope": "Orientation Series Part I: axiom, invariant scaffold, validation spine, tier structure, and principal reading routes, as an entry surface only.",
+    "exclusions": [
+      "Does not derive or prove kernel identities.",
+      "Does not perform a worked pass.",
+      "Does not grant or assess authority placement of any work it points to."
+    ],
+    "preserved_meaning": "The corpus-native reading order and hierarchy (object, field, theory, authority tiers, functional systems) exactly as the entry map presents them.",
+    "missingness": [],
+    "distortion_or_substitution_risk": "Reading the entry map as the framework itself, or treating its reading routes as authority rankings rather than navigation.",
+    "next_burden": "Proceed to Part II (The Core), which states why the contract-first architecture has the structure it has; the entry map points to that argument but does not make it (supported by the series description).",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Orientation Series Part I of III; shared archive DOI recorded on the source. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture. Revision 1.0.1: governing_refs added — the Zenodo record for the Orientation Series declares isSupplementTo 10.5281/zenodo.18893328 (GCD/UMCP whitepaper, SR-GOV-000010); the reference constrains this record and transfers no authority (authority.tier remains tier-2). Version 1.0.0 preserved in registry/objects/history/.",
+    "governing_refs": [
+      "SR-GOV-000010"
+    ]
+  },
+  {
+    "object_id": "SR-OBJ-000002",
+    "title": "Generative Collapse Dynamics / UMCP: The Core — Why the Contract-First Measurement Framework Has the Structure It Has",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "pedagogical",
+      "secondary": [
+        "handoff"
+      ]
+    },
+    "functional_locus": "cross-system",
+    "source_ids": [
+      "SRC-000007"
+    ],
+    "lens": "constitutional explanation without authority promotion",
+    "domain": {
+      "primary": "structura-reditus-core",
+      "secondary": [
+        "mathematics"
+      ]
+    },
+    "object_of_study": "the structural necessity of the contract-first GCD/UMCP architecture",
+    "structural_focus": {
+      "primary": "boundary",
+      "secondary": [
+        "return",
+        "continuity"
+      ]
+    },
+    "main_question": "Why does the contract-first measurement framework require its bounded trace, frozen contract, typed return, kernel, seam, authority, and stance architecture?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "Part II shows why the contract-first measurement architecture has the structure it has, and why bounded trace, typed return, seam logic, and three-valued stance are necessary rather than optional (Zenodo record description)."
+      },
+      {
+        "layer": "local-interpretation",
+        "claim": "The library reads this as pedagogical exposition with formal-derivation evidence; it deepens Part I (REL-000001)."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "formal-derivation",
+      "secondary": [
+        "pedagogical"
+      ]
+    },
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "relations": [
+      "REL-000001"
+    ],
+    "version": "1.0.1",
+    "date": "2026-09-13T04:29:19Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000007 (\"Generative Collapse Dynamics / UMCP: The Core — Why the Contract-First Measurement Framework Has the Structure It Has\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+    "scope": "Orientation Series Part II: the framework stated in its strongest self-contained form and the necessity argument for bounded trace, typed return, seam logic, and three-valued stance.",
+    "exclusions": [
+      "Does not perform a worked traversal.",
+      "Does not introduce new kernel invariants or closures.",
+      "Does not promote any component to Tier-0 or Tier-1 authority."
+    ],
+    "preserved_meaning": "The source's own necessity argument: that bounded trace, typed return, seam logic, and three-valued stance are necessary rather than optional.",
+    "missingness": [],
+    "distortion_or_substitution_risk": "Reading a constitutional explanation as a canon amendment or as kernel authority, rather than as a Tier-2 exposition of why the architecture holds.",
+    "next_burden": "Proceed to Part III (The Pass), which walks one object through the full discipline from frozen contract to derived stance so the architecture is seen as a repeatable procedure (supported by the series description).",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Orientation Series Part II of III. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture. Revision 1.0.1: governing_refs added — the Zenodo record for the Orientation Series declares isSupplementTo 10.5281/zenodo.18893328 (GCD/UMCP whitepaper, SR-GOV-000010); the reference constrains this record and transfers no authority (authority.tier remains tier-2). Version 1.0.0 preserved in registry/objects/history/.",
+    "governing_refs": [
+      "SR-GOV-000010"
+    ]
+  },
+  {
+    "object_id": "SR-OBJ-000003",
+    "title": "Generative Collapse Dynamics / UMCP: The Pass — A Complete Worked Traversal from Frozen Contract to Derived Stance",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "pedagogical",
+      "secondary": [
+        "diagnostic",
+        "handoff"
+      ]
+    },
+    "functional_locus": "umcp",
+    "source_ids": [
+      "SRC-000008"
+    ],
+    "lens": "worked operational traversal",
+    "domain": {
+      "primary": "structura-reditus-core",
+      "secondary": []
+    },
+    "object_of_study": "one complete object traversal through the GCD/UMCP validation spine",
+    "structural_focus": {
+      "primary": "return",
+      "secondary": [
+        "heterogeneity",
+        "continuity"
+      ]
+    },
+    "main_question": "What does a complete GCD/UMCP pass look like from frozen contract through derived stance?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "Part III completes the sequence by walking one object through the full discipline from frozen contract to derived stance (Zenodo record description)."
+      },
+      {
+        "layer": "local-interpretation",
+        "claim": "The library reads Part III as operationally enacting the architecture developed in Part II (REL-000002)."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "pedagogical",
+      "secondary": [
+        "formal-derivation"
+      ]
+    },
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "relations": [
+      "REL-000002"
+    ],
+    "version": "1.0.1",
+    "date": "2026-09-13T04:29:19Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000008 (\"Generative Collapse Dynamics / UMCP: The Pass — A Complete Worked Traversal from Frozen Contract to Derived Stance\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+    "scope": "Orientation Series Part III: one object walked through the full discipline from frozen contract to derived stance.",
+    "exclusions": [
+      "Does not stage a domain closure.",
+      "Does not claim results beyond the single traversed object.",
+      "Does not define governance procedure."
+    ],
+    "preserved_meaning": "The traversal order and the meaning of each stage as the source enacts them.",
+    "missingness": [
+      {
+        "item": "source-stated next burden",
+        "class": "NON_BLOCKING",
+        "notes": "Not stated on the public record; no stronger use is implied by this pedagogical, frozen-local-object record."
+      }
+    ],
+    "distortion_or_substitution_risk": "Generalizing a single worked traversal into a universal result, or treating the demonstrated stance as authority over other objects.",
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The series description states only that by its end a reader can follow one full path without live author mediation.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Orientation Series Part III of III. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture. Revision 1.0.1: governing_refs added — the Zenodo record for the Orientation Series declares isSupplementTo 10.5281/zenodo.18893328 (GCD/UMCP whitepaper, SR-GOV-000010); the reference constrains this record and transfers no authority (authority.tier remains tier-2). Version 1.0.0 preserved in registry/objects/history/.",
+    "governing_refs": [
+      "SR-GOV-000010"
+    ]
+  },
+  {
+    "object_id": "SR-OBJ-000004",
+    "title": "The First Pass: A Complete Worked Example Through the Generative-Collapse Spine",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "pedagogical",
+      "secondary": [
+        "diagnostic"
+      ]
+    },
+    "functional_locus": "umcp",
+    "source_ids": [
+      "SRC-000009"
+    ],
+    "lens": "complete worked example",
+    "domain": {
+      "primary": "structura-reditus-core",
+      "secondary": []
+    },
+    "object_of_study": "a single measurement passed through the full validation spine",
+    "structural_focus": {
+      "primary": "return",
+      "secondary": [
+        "continuity"
+      ]
+    },
+    "main_question": "Can one simple declared measurement be traced reproducibly through every stage of the contract-first validation spine?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "The paper traces three identical voltage readings through the twelve stops of the GCD/UMCP validation spine and derives a three-valued verdict; appendices show a single near-zero channel destroys IC while F stays apparently healthy (Zenodo record description)."
+      },
+      {
+        "layer": "source-observation",
+        "claim": "All numbers are stated to be reproducible from the open-source reference implementation."
+      },
+      {
+        "layer": "local-interpretation",
+        "claim": "The library reads this as the canonical pedagogical entrance whose diagnostic content is the heterogeneity gap."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "formal-derivation",
+      "secondary": [
+        "pedagogical"
+      ]
+    },
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "relations": [],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000009 (\"The First Pass: A Complete Worked Example Through the Generative-Collapse Spine\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+    "scope": "One measurement (three identical voltage readings) traced through all twelve stops of the validation spine, with appendices contrasting heterogeneous counterexamples and degenerate limits.",
+    "exclusions": [
+      "Does not stage a domain closure.",
+      "Does not claim finite return or welded continuity for any external system.",
+      "Does not replace the reference implementation it cites."
+    ],
+    "preserved_meaning": "The twelve-stop spine and the source's own reading of Δ = F − IC as a structural heterogeneity diagnostic.",
+    "missingness": [
+      {
+        "item": "source-stated next burden",
+        "class": "NON_BLOCKING",
+        "notes": "Not stated on the public record. A later corpus work (SRC-000012) names the lesson The First Pass did not yet make explicit; that statement belongs to SRC-000012 and is not attributed to this source."
+      }
+    ],
+    "distortion_or_substitution_risk": "Treating the simplest homogeneous input as representative of real heterogeneous objects, or reading the worked verdict as a general result.",
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  },
+  {
+    "object_id": "SR-OBJ-000005",
+    "title": "The Periodic Table as a Measured Object: Tier-1 Derivation from Atomic Properties in the GCD Kernel",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "domain-translation",
+      "secondary": [
+        "diagnostic"
+      ]
+    },
+    "functional_locus": "umcp",
+    "source_ids": [
+      "SRC-000010"
+    ],
+    "lens": "atomic measured-object closure",
+    "domain": {
+      "primary": "chemistry",
+      "secondary": [
+        "physics"
+      ]
+    },
+    "object_of_study": "the 118-element periodic table under a frozen atomic measurement surface",
+    "structural_focus": {
+      "primary": "heterogeneity",
+      "secondary": [
+        "robustness",
+        "boundary"
+      ]
+    },
+    "main_question": "What structural distinctions appear when the periodic table is evaluated as a finite measured object under one frozen GCD/UMCP grammar?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "Under the frozen closure all 118 rows satisfy F+ω=1, IC≤F, IC=e^κ to declared precision; corpus means ⟨F⟩=0.4155, ⟨IC⟩=0.3344, ⟨Δ⟩=0.0811, ⟨C⟩=0.4211; 111 rows Collapse, 7 Watch, 0 Stable, Critical overlay active in 41 rows (Zenodo record description)."
+      },
+      {
+        "layer": "translation",
+        "claim": "The library places this work as a domain translation of chemistry/physics data into evaluable Tier-2 closure form."
+      },
+      {
+        "layer": "local-interpretation",
+        "claim": "The library records the object as Tier-2; the source title's \"Tier-1 Derivation\" refers to derivation from Tier-1 kernel identities, not to the authority of this record."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "retrospective-analysis",
+      "secondary": [
+        "formal-derivation"
+      ]
+    },
+    "provenance": "dataset-derived",
+    "maturity": "retrospectively-evaluated",
+    "relations": [],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000010 (\"The Periodic Table as a Measured Object: Tier-1 Derivation from Atomic Properties in the GCD Kernel\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+    "scope": "All 118 elements embedded by one declared adapter under a frozen 8-channel atomic closure, one representative row carried through the full discipline, then the same grammar extended across the corpus.",
+    "exclusions": [
+      "Does not attempt to replace chemistry or explain the periodic table chemically.",
+      "Does not claim the periodic table originates from the kernel.",
+      "Does not grant Tier-1 authority to the library object despite the source title's wording."
+    ],
+    "preserved_meaning": "The source's own boundary: chemistry already explains the table chemically; the distinct burden is explicitness of one measured object under one published comparison surface.",
+    "missingness": [
+      {
+        "item": "source-stated next burden",
+        "class": "NON_BLOCKING",
+        "notes": "Not stated on the public record."
+      }
+    ],
+    "distortion_or_substitution_risk": "Reading the title's phrase \"Tier-1 Derivation\" as Tier-1 authority for this library record, or reading regime counts (111 Collapse, 7 Watch, 0 Stable) as chemical claims rather than readbacks under a frozen closure.",
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The sequel (SRC-000011 / SR-OBJ-000006) takes up a stronger closure, but that burden is stated by the sequel, not by this source.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Title preserved exactly as published. authority.tier is tier-2 by library contract. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  },
+  {
+    "object_id": "SR-OBJ-000006",
+    "title": "The Periodic Table as a Measured Object II: A Nuclear-Informed Cross-Scale Sequel on What Sharpens, Collapses, and Inverts Under a Stronger Atomic Closure",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "domain-translation",
+      "secondary": [
+        "diagnostic"
+      ]
+    },
+    "functional_locus": "umcp",
+    "source_ids": [
+      "SRC-000011"
+    ],
+    "lens": "nuclear-informed atomic closure",
+    "domain": {
+      "primary": "chemistry",
+      "secondary": [
+        "physics"
+      ]
+    },
+    "object_of_study": "changes in atomic structural distinctions under a strengthened nuclear-informed measurement surface",
+    "structural_focus": {
+      "primary": "heterogeneity",
+      "secondary": [
+        "boundary",
+        "robustness"
+      ]
+    },
+    "main_question": "Which distinctions in the first atomic closure sharpen, collapse, or invert when nuclear information is added under a stronger frozen surface?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "The 12-channel closure yields a mixed but stronger readback: retention and coherence rise, heterogeneity and curvature rise, Collapse rows increase, Watch rows contract, Stable remains absent, the Critical overlay falls (Zenodo record description)."
+      },
+      {
+        "layer": "translation",
+        "claim": "The library places this work as a domain translation extending the first periodic-table closure (REL-000003)."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "retrospective-analysis",
+      "secondary": [
+        "formal-derivation"
+      ]
+    },
+    "provenance": "dataset-derived",
+    "maturity": "retrospectively-evaluated",
+    "relations": [
+      "REL-000003"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000011 (\"The Periodic Table as a Measured Object II: A Nuclear-Informed Cross-Scale Sequel on What Sharpens, Collapses, and Inverts Under a Stronger Atomic Closure\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+    "scope": "Replacement of the 8-channel surface by a 12-channel closure admitting neutron excess, binding energy per nucleon, magic-number proximity, valence-electron structure, and block order; comparison of readbacks against the first closure.",
+    "exclusions": [
+      "Does not replace chemistry.",
+      "Does not claim the periodic table originates from the kernel.",
+      "Does not claim the strengthened closure is simply better."
+    ],
+    "preserved_meaning": "The source's mixed readback: arithmetic retention and multiplicative coherence rise while heterogeneity and curvature also rise; Collapse rows increase, Watch contracts, Stable remains absent, Critical falls.",
+    "missingness": [
+      {
+        "item": "source-stated next burden",
+        "class": "NON_BLOCKING",
+        "notes": "Not stated on the public record."
+      }
+    ],
+    "distortion_or_substitution_risk": "Reading the stronger closure as a superior or final atomic account rather than a more revealing and more demanding comparison surface.",
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  },
+  {
+    "object_id": "SR-OBJ-000007",
+    "title": "The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "diagnostic",
+      "secondary": [
+        "pedagogical"
+      ]
+    },
+    "functional_locus": "umcp",
+    "source_ids": [
+      "SRC-000012"
+    ],
+    "lens": "local heterogeneity diagnostic",
+    "domain": {
+      "primary": "structura-reditus-core",
+      "secondary": [
+        "mathematics"
+      ]
+    },
+    "object_of_study": "the separation between arithmetic retention and multiplicative coherence",
+    "structural_focus": {
+      "primary": "heterogeneity",
+      "secondary": [
+        "robustness"
+      ]
+    },
+    "main_question": "Can arithmetic retention remain healthy while multiplicative coherence reveals a structurally significant local wound?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "Both control and comparison produce the same fidelity, drift, and arithmetic mean while differing materially in composite integrity, curvature, and heterogeneity gap (Zenodo record description)."
+      },
+      {
+        "layer": "source-observation",
+        "claim": "The paper states it prepares the reader for the next public burdens of the corpus: finite return, seam accounting, and welded continuity."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "formal-derivation",
+      "secondary": [
+        "pedagogical"
+      ]
+    },
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "relations": [],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000012 (\"The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+    "scope": "Three local channels under a frozen linear embedding; a homogeneous control and a heterogeneous comparison with equal fidelity, drift, and arithmetic mean but differing composite integrity, curvature, and heterogeneity gap.",
+    "exclusions": [
+      "Does not introduce a new closure family.",
+      "Does not claim finite return.",
+      "Does not stage a welded seam."
+    ],
+    "preserved_meaning": "The source's exact lesson: average retention is not enough; a bounded object may preserve its arithmetic surface while already changing in internal condition.",
+    "missingness": [],
+    "distortion_or_substitution_risk": "Reading the local warning as a domain result, or treating the heterogeneity gap as a universal threshold rather than a computed distinction on one small object.",
+    "next_burden": "Finite return, seam accounting, and welded continuity — the next public burdens the source itself names as following from this local warning.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  },
+  {
+    "object_id": "SR-OBJ-000008",
+    "title": "The First Finite-Return Casepack: A Worked Case Showing Finite Re-Entry Under a Frozen Grammar",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "diagnostic",
+      "secondary": [
+        "pedagogical"
+      ]
+    },
+    "functional_locus": "umcp",
+    "source_ids": [
+      "SRC-000013"
+    ],
+    "lens": "finite-return casepack",
+    "domain": {
+      "primary": "structura-reditus-core",
+      "secondary": []
+    },
+    "object_of_study": "finite re-entry after a declared local wound under unchanged rules",
+    "structural_focus": {
+      "primary": "return",
+      "secondary": [
+        "recovery"
+      ]
+    },
+    "main_question": "Does the candidate returned state achieve finite admissible re-entry under the same frozen grammar that measured its departure?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "Admissible re-entry can be determined, typed, and read as an actual result rather than a merely constitutional possibility (Zenodo record description)."
+      },
+      {
+        "layer": "source-observation",
+        "claim": "The paper is continuity-facing but intentionally limited and establishes finite return as the necessary public step before weld, seam closure, and earned continuity."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "formal-derivation",
+      "secondary": [
+        "pedagogical"
+      ]
+    },
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "relations": [],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000013 (\"The First Finite-Return Casepack: A Worked Case Showing Finite Re-Entry Under a Frozen Grammar\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+    "scope": "One bounded local episode with a reference state, a wounded departure, and a candidate returned state, evaluated for finite return under a frozen grammar.",
+    "exclusions": [
+      "Does not claim weld.",
+      "Does not claim seam closure.",
+      "Does not claim earned continuity."
+    ],
+    "preserved_meaning": "The source's distinction between finite return as a measured event and continuity as a stronger, not-yet-claimed burden.",
+    "missingness": [],
+    "distortion_or_substitution_risk": "Reading finite return as continuity or weld, or reading a single local episode as a general return law.",
+    "next_burden": "Weld, seam closure, and earned continuity — the stronger burdens the source names finite return as the necessary step before.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  },
+  {
+    "object_id": "SR-OBJ-000009",
+    "title": "GCD / UMCP: The First Welded Seam Casepack — A Worked Case Showing Earned Continuity Under Frozen Seam Accounting",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "diagnostic",
+      "secondary": [
+        "pedagogical"
+      ]
+    },
+    "functional_locus": "umcp",
+    "source_ids": [
+      "SRC-000014"
+    ],
+    "lens": "seam and continuity audit",
+    "domain": {
+      "primary": "structura-reditus-core",
+      "secondary": []
+    },
+    "object_of_study": "earned continuity across a declared seam",
+    "structural_focus": {
+      "primary": "continuity",
+      "secondary": [
+        "return",
+        "boundary"
+      ]
+    },
+    "main_question": "When does a finite-return event also satisfy the stronger burden required for welded continuity under frozen seam accounting?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "Finite return is necessary but not sufficient for welded continuity; under the unit-rate closure the result is returned-but-unwelded, under the calibrated local closure a conformant welded seam (Zenodo record description)."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "formal-derivation",
+      "secondary": [
+        "pedagogical"
+      ]
+    },
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "relations": [],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000014 (\"GCD / UMCP: The First Welded Seam Casepack — A Worked Case Showing Earned Continuity Under Frozen Seam Accounting\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+    "scope": "One three-state local episode Ψ(0)=(0.90,0.90,0.90), Ψ(1)=(0.99,0.99,0.72), Ψ(2)=(0.90,0.91,0.89) with finite return under supremum norm tolerance η=0.02 (τR(2)=2), tested against two declared return-credit closures.",
+    "exclusions": [
+      "Does not introduce a new Tier-1 invariant.",
+      "Does not claim a universal return-rate constant.",
+      "Does not define governance procedure.",
+      "Does not stage a domain closure."
+    ],
+    "preserved_meaning": "The source's governing result: return makes the object visible again; weld makes its continuity earned. Under the unit-rate closure the seam residual fails; under the calibrated local closure it closes.",
+    "missingness": [
+      {
+        "item": "source-stated next burden",
+        "class": "NON_BLOCKING",
+        "notes": "Not stated on the public record."
+      }
+    ],
+    "distortion_or_substitution_risk": "Reading the calibrated closure as a universal return-rate constant, or reading a conformant local weld as continuity for other objects.",
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The source states what it does not do (new invariant, universal constant, governance, domain closure) but does not name a next burden.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  },
+  {
+    "object_id": "SR-OBJ-000010",
+    "title": "A single algebraic diagnostic detects structurally identical phase transitions from quarks to the cosmic horizon",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "diagnostic",
+      "secondary": [
+        "domain-translation"
+      ]
+    },
+    "functional_locus": "umcp",
+    "source_ids": [
+      "SRC-000017"
+    ],
+    "lens": "cross-scale physical diagnostic",
+    "domain": {
+      "primary": "physics",
+      "secondary": [
+        "interdisciplinary"
+      ]
+    },
+    "object_of_study": "heterogeneity/coherence signatures across physical phase boundaries",
+    "structural_focus": {
+      "primary": "heterogeneity",
+      "secondary": [
+        "boundary",
+        "failure"
+      ]
+    },
+    "main_question": "Does the same algebraic heterogeneity diagnostic exhibit comparable boundary behavior across physical systems separated by extreme scale?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "IC/F exhibits structurally identical phase-transition signatures across systems from quark confinement to dark-energy cosmology; Δ spikes at every phase boundary tested (Crossref abstract)."
+      },
+      {
+        "layer": "source-observation",
+        "claim": "11,342 automated proofs across 406 physical objects confirm F+ω≡1, IC≤F, IC=exp(κ) to machine precision with zero violations."
+      },
+      {
+        "layer": "local-interpretation",
+        "claim": "The library places this as diagnostic material with a domain-translation secondary role; it records no claim of mechanistic identity."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "retrospective-analysis",
+      "secondary": [
+        "computational-reproduction",
+        "formal-derivation"
+      ]
+    },
+    "provenance": "dataset-derived",
+    "maturity": "retrospectively-evaluated",
+    "relations": [],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "publication_state": "preprint",
+    "source_boundary": "The governing source is SRC-000017 (\"A single algebraic diagnostic detects structurally identical phase transitions from quarks to the cosmic horizon\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+    "scope": "The IC/F ratio and heterogeneity gap Δ = F − IC computed from one algebraic kernel over normalised physical measurements across systems spanning 61 orders of magnitude and 20 scientific domains, with computational verification of the three identities.",
+    "exclusions": [
+      "Does not claim that the underlying domain mechanisms are identical; only that the diagnostic's boundary signatures are structurally comparable.",
+      "Does not claim the AM-GM bound as a contribution.",
+      "Publication state is preprint; publication status carries no admission authority."
+    ],
+    "preserved_meaning": "The source's own scoping: the contribution is the systematic application of a scale-independent diagnostic, not the bound itself; the diagnostic is stated to be independent of the underlying dynamics.",
+    "missingness": [
+      {
+        "item": "source-stated next burden",
+        "class": "NON_BLOCKING",
+        "notes": "Not stated in the public abstract."
+      },
+      {
+        "item": "peer-review status",
+        "class": "PUBLICATION_BOUNDARY",
+        "notes": "Research Square preprint v1; publication state recorded as preprint."
+      }
+    ],
+    "distortion_or_substitution_risk": "Converting comparable diagnostic signatures into a claim that quark confinement, atomic structure, and dark energy share a mechanism — a stronger burden the source does not carry in its abstract.",
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Venue Research Square; DOI and landing page verified via Crossref. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  },
+  {
+    "object_id": "SR-OBJ-000011",
+    "title": "Dimethyltryptamine and the Recursive Reorganization of Consciousness",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "domain-translation",
+      "secondary": [
+        "external-ingress",
+        "diagnostic"
+      ]
+    },
+    "functional_locus": "cross-system",
+    "source_ids": [
+      "SRC-000019"
+    ],
+    "lens": "multilevel causal and return architecture",
+    "domain": {
+      "primary": "neuroscience",
+      "secondary": [
+        "psychology",
+        "cognitive-science",
+        "medicine"
+      ]
+    },
+    "object_of_study": "DMT-induced reorganization of a brain-body-environment system and subsequent recovery",
+    "structural_focus": {
+      "primary": "causation",
+      "secondary": [
+        "identity",
+        "memory",
+        "recovery",
+        "return"
+      ]
+    },
+    "main_question": "How can the rapid multilevel reorganization produced by DMT be structurally separated into departure, altered-state organization, recurrence, and recovery without collapsing phenomenology, mechanism, and ontology into one claim?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "The paper integrates evidence across pharmacokinetics, receptor signaling, cellular gain modulation, whole-brain dynamics, embodied physiology, phenomenology, memory, environment, repeated exposure, recovery, and post-session updating (Zenodo record description)."
+      },
+      {
+        "layer": "structural-mapping",
+        "claim": "The paper's central formal contribution is a prospective dual-reference architecture distinguishing departure from waking organization from approach toward a candidate recurrent DMT-state organization, treating lockout as a typed outcome and distinguishing local recovery from canonical waking return."
+      },
+      {
+        "layer": "candidate-claim",
+        "claim": "Breakthrough is defined provisionally as sustained altered-reference dominance rather than dose, intensity, neural complexity, visual effects, or ego dissolution — stated by the source as procedurally specified but empirically unvalidated."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "source-synthesis",
+      "secondary": [
+        "retrospective-analysis",
+        "prospective-protocol"
+      ]
+    },
+    "provenance": "externally-anchored-derivative",
+    "maturity": "source-bounded",
+    "relations": [],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000019 (\"Dimethyltryptamine and the Recursive Reorganization of Consciousness\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority.",
+    "scope": "A multilevel causal architecture integrating external evidence (pharmacokinetics, receptor signaling, whole-brain dynamics, physiology, phenomenology, memory, environment, repeated exposure, recovery) with a prospective dual-reference architecture defining breakthrough provisionally as sustained altered-reference dominance.",
+    "exclusions": [
+      "Offers no preparation, dosing, administration, or legal-circumvention guidance.",
+      "Remains agnostic regarding the mind-independent existence of perceived entities or environments.",
+      "Does not claim empirical validation of the proposed architecture."
+    ],
+    "preserved_meaning": "External evidence remains attributed to its external sources as the paper synthesizes it; the paper's own distinction between controlled evidence, convergent human findings, structured phenomenology, computational inference, theoretical modeling, novel hypotheses, and ontological claims is preserved.",
+    "missingness": [
+      {
+        "item": "empirical validation of the dual-reference architecture",
+        "class": "SOURCE_BOUNDARY",
+        "notes": "Declared by the source as unvalidated; recorded as a boundary, not filled."
+      }
+    ],
+    "distortion_or_substitution_risk": "Reading the synthesis as established neuroscience or as clinical guidance, or attributing the GCD–UMCP dual-reference mapping to the external studies it draws on.",
+    "next_burden": "Prospective validation of the frozen dual-reference architecture: prospective testing, comparison with simpler models, preservation of negative results, and explicit contraction where its local predictions fail (stated by the source).",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "External evidence is synthesized, not asserted, by this record; the external studies are not registered as separate sources in this import pass. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  },
+  {
+    "object_id": "SR-OBJ-000012",
+    "title": "The Seam of Reality: On Thought, Return, and the Illusion of the Outside",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "language-contact",
+      "secondary": [
+        "external-ingress",
+        "domain-translation"
+      ]
+    },
+    "functional_locus": "ulrc",
+    "source_ids": [
+      "SRC-000022"
+    ],
+    "lens": "epistemic critique and return",
+    "domain": {
+      "primary": "philosophy",
+      "secondary": [
+        "structura-reditus-core"
+      ]
+    },
+    "object_of_study": "the relation between epistemic gesture, structural return, and claims of external vantage",
+    "structural_focus": {
+      "primary": "return",
+      "secondary": [
+        "boundary",
+        "continuity"
+      ]
+    },
+    "main_question": "What stronger burden distinguishes epistemic gesture from admissible return when a claim itself is treated as occurring inside the structure it evaluates?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "The paper introduces a return-based audit calculus culminating in a validated epistemic seam with ledger-conserved log-integrity and rejects exterior gesture logic or any symbolic substrate beyond the runtime contract (Zenodo record description)."
+      },
+      {
+        "layer": "source-observation",
+        "claim": "The paper claims to outperform gesture-dependent or topology-saturated theories by exposing their cost through its own runtime budget."
+      },
+      {
+        "layer": "local-interpretation",
+        "claim": "The library places this as historical language-contact material under ULRC; the external positions are not registered as sources in this pass."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "conceptual-argument",
+      "secondary": [
+        "formal-derivation"
+      ]
+    },
+    "provenance": "externally-anchored-derivative",
+    "maturity": "historical",
+    "relations": [],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000022 (\"The Seam of Reality: On Thought, Return, and the Illusion of the Outside\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+    "scope": "A 2025 return-based audit calculus grounded in the historical Collapse Integrity Protocol, contrasted with exterior-gesture and topology-saturated epistemic approaches.",
+    "exclusions": [
+      "Does not attribute the Structura Reditus mapping to the external positions it critiques.",
+      "Does not carry historical 'Collapse Integrity Protocol', 'UMA', or 'RCFT kernel' terminology into the current architecture as authority.",
+      "Does not establish that the critiqued theories are false."
+    ],
+    "preserved_meaning": "The source-native positions of the external authors it engages remain their own; the paper's historical claim (that gesture-dependent theories expose their cost under its runtime budget) is preserved as the source's claim.",
+    "missingness": [
+      {
+        "item": "source-stated next burden",
+        "class": "NON_BLOCKING",
+        "notes": "Not stated on the public record."
+      },
+      {
+        "item": "historical terminology vs current architecture",
+        "class": "UNRESOLVED_SEAM",
+        "notes": "2025 terms (Collapse Integrity Protocol, UMA, RCFT kernel as then defined) are preserved as source evidence; their mapping onto the current canon is not forced."
+      },
+      {
+        "item": "external positions engaged by the paper",
+        "class": "SOURCE_BOUNDARY",
+        "notes": "Not registered as separate sources in this import pass; their source-native claims remain theirs."
+      }
+    ],
+    "distortion_or_substitution_risk": "Reading the historical audit calculus as the current UMCP/ULRC contract, or attributing the paper's Structura Reditus reading to the external philosophers it critiques.",
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Historical / prefreeze lineage object. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  },
+  {
+    "object_id": "SR-OBJ-000013",
+    "title": "Retro-Coherent Transmission through Quantum Collapse: A Collapse Integrity Re-Interpretation of Negative Excitation Time",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "external-ingress",
+      "secondary": [
+        "domain-translation",
+        "diagnostic"
+      ]
+    },
+    "functional_locus": "umcp",
+    "source_ids": [
+      "SRC-000025"
+    ],
+    "lens": "historical collapse-integrity reinterpretation",
+    "domain": {
+      "primary": "physics",
+      "secondary": []
+    },
+    "object_of_study": "reported negative excitation-time phenomena under an historical collapse-integrity mapping",
+    "structural_focus": {
+      "primary": "return",
+      "secondary": [
+        "causation",
+        "boundary"
+      ]
+    },
+    "main_question": "How does the historical collapse-integrity formalism classify reported negative excitation-time observations under its declared audit grammar?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "The paper frames a reported negative excitation time as a lawful return seam, classifying it as a Type I seam with ω = 0, τ_R = −0.82, D_C = −0.82 and zero residual, and introduces retro-coherent seams (Class IIa) (Zenodo record description)."
+      },
+      {
+        "layer": "source-observation",
+        "claim": "The paper claims the Collapse Integrity grammar outperforms Lagrangian mechanics in discontinuous, memory-anchored, or retrocausal regimes."
+      },
+      {
+        "layer": "local-interpretation",
+        "claim": "The library registers this as historical external-ingress material; the historical negative-return semantics are an explicit seam against current typed return."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "retrospective-analysis",
+      "secondary": [
+        "source-synthesis"
+      ]
+    },
+    "provenance": "externally-anchored-derivative",
+    "maturity": "historical",
+    "relations": [],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000025 (\"Retro-Coherent Transmission through Quantum Collapse: A Collapse Integrity Re-Interpretation of Negative Excitation Time\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+    "scope": "A 2025 audit of one external quantum-optics experiment (Sinclair et al., 2024) under the historical Collapse Integrity audit grammar, contract PHYS-04.",
+    "exclusions": [
+      "Does not inherit historical negative-return semantics (τ_R < 0) into current typed-return mechanics.",
+      "Does not attribute the collapse-integrity reading to the external experimenters.",
+      "Does not establish the source's comparative claim against Lagrangian mechanics."
+    ],
+    "preserved_meaning": "The external experiment's reported observation (a negative excitation time under postselected single-photon transmission) remains the experimenters' claim; the seam classification (Type I, Class IIa retro-coherent) remains the historical paper's claim.",
+    "missingness": [
+      {
+        "item": "source-stated next burden",
+        "class": "NON_BLOCKING",
+        "notes": "Not stated on the public record."
+      },
+      {
+        "item": "historical negative-return semantics vs current typed return",
+        "class": "UNRESOLVED_SEAM",
+        "notes": "τ_R < 0 as used in 2025 is preserved as source evidence and is not mapped onto current typed-return mechanics."
+      },
+      {
+        "item": "external experiment (Sinclair et al., 2024)",
+        "class": "SOURCE_BOUNDARY",
+        "notes": "Not registered as a separate source in this import pass; its identifier was not supplied and is not guessed."
+      }
+    ],
+    "distortion_or_substitution_risk": "Reading the historical τ_R < 0 seam as current typed return, or reading the paper's classification as a physics result established by the external experiment.",
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Historical / prefreeze lineage object. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  },
+  {
+    "object_id": "SR-OBJ-000014",
+    "title": "The Episteme Construction",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "pedagogical",
+      "secondary": [
+        "handoff"
+      ]
+    },
+    "functional_locus": "cross-system",
+    "source_ids": [
+      "SRC-000031"
+    ],
+    "lens": "historical cross-domain field manual",
+    "domain": {
+      "primary": "interdisciplinary",
+      "secondary": [
+        "structura-reditus-core",
+        "systems-theory"
+      ]
+    },
+    "object_of_study": "a prefreeze contract-first method for making claims auditable across domains",
+    "structural_focus": {
+      "primary": "translation",
+      "secondary": [
+        "continuity",
+        "return"
+      ]
+    },
+    "main_question": "How can claims from heterogeneous domains be made structurally auditable and portable under a shared contract-first workflow?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "The Episteme Construction introduces a contract-first calculus for generative collapse built around a conservation-style budget for log-integrity κ, closed on the same anchor with residual ≤ 10⁻¹², and separates identities from closures and narratives (Zenodo record description)."
+      },
+      {
+        "layer": "local-interpretation",
+        "claim": "The library places this as historical pedagogical/handoff material whose focus is translation across domains."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "pedagogical",
+      "secondary": [
+        "formal-derivation"
+      ]
+    },
+    "provenance": "corpus-native",
+    "maturity": "historical",
+    "relations": [],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000031 (\"The Episteme Construction\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+    "scope": "A 2025 field manual: Part I fixes the kernel (normalization, face policy, typed outcomes) and proves rate/transport identities and the secant-weld continuity update; Part II provides audited portable vignettes across physics, collapse-aware AI, symbolic/behavioral systems, cryptographic protocols, and legal/institutional processes; governance chapters define versioning, a release ledger, and ULRC naming.",
+    "exclusions": [
+      "Does not carry its 2025 kernel, closures, or First-Law statement into the current Tier-1 kernel as authority.",
+      "Does not register its vignettes as separate research objects."
+    ],
+    "preserved_meaning": "The source's separation of identities (math) from closures (thresholds/policies) and narratives (interpretations), as it stated it in 2025.",
+    "missingness": [
+      {
+        "item": "source-stated next burden",
+        "class": "NON_BLOCKING",
+        "notes": "Not stated on the public record."
+      },
+      {
+        "item": "historical terminology vs current architecture",
+        "class": "UNRESOLVED_SEAM",
+        "notes": "2025 kernel and governance terms are preserved as source evidence, not mapped onto the current canon."
+      }
+    ],
+    "distortion_or_substitution_risk": "Reading the historical First Law of Collapse or its residual tolerance as the current frozen contract.",
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Historical / prefreeze lineage object; shared archive DOI recorded on the source. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  },
+  {
+    "object_id": "SR-OBJ-000015",
+    "title": "The Common Doorway: A Cross-Field Method for Generative Collapse",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "language-contact",
+      "secondary": [
+        "pedagogical",
+        "domain-translation"
+      ]
+    },
+    "functional_locus": "ulrc",
+    "source_ids": [
+      "SRC-000032"
+    ],
+    "lens": "cross-field translation",
+    "domain": {
+      "primary": "interdisciplinary",
+      "secondary": [
+        "philosophy",
+        "psychology"
+      ]
+    },
+    "object_of_study": "a prose-first route for comparing claims across heterogeneous vocabularies",
+    "structural_focus": {
+      "primary": "translation",
+      "secondary": [
+        "boundary"
+      ]
+    },
+    "main_question": "How can structurally related claims from different fields be made mutually legible without requiring the fields to collapse into one vocabulary?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "The Common Doorway is distributed as a member work (The Common Doorway.pdf) of the archive 10.5281/zenodo.17189775 whose record describes The Episteme Construction."
+      },
+      {
+        "layer": "local-interpretation",
+        "claim": "The library reads the work as historical language-contact material under ULRC; its content classification follows the corpus owner's placement."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "pedagogical",
+      "secondary": [
+        "conceptual-argument"
+      ]
+    },
+    "provenance": "corpus-native",
+    "maturity": "historical",
+    "relations": [],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000032 (\"The Common Doorway: A Cross-Field Method for Generative Collapse\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+    "scope": "A 2025 prose-first cross-field method distributed in the same archive as The Episteme Construction.",
+    "exclusions": [
+      "Does not require fields to adopt one vocabulary.",
+      "Does not carry 2025 terminology into the current ULRC contract as authority."
+    ],
+    "preserved_meaning": "The source-native vocabularies of the fields compared remain their own; the doorway is a route for mutual legibility, not a merger.",
+    "missingness": [
+      {
+        "item": "public abstract for this member work",
+        "class": "SOURCE_BOUNDARY",
+        "notes": "The shared record's description is that of The Episteme Construction; no separate abstract is on the record."
+      },
+      {
+        "item": "source-stated next burden",
+        "class": "NON_BLOCKING",
+        "notes": "Not stated on the public record."
+      },
+      {
+        "item": "historical terminology vs current architecture",
+        "class": "UNRESOLVED_SEAM",
+        "notes": "Preserved as source evidence."
+      }
+    ],
+    "distortion_or_substitution_risk": "Reading cross-field legibility as equivalence of claims, or reading the historical method as the current ULRC operating system.",
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Historical / prefreeze lineage object; membership in the shared archive verified from the Zenodo file listing. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  },
+  {
+    "object_id": "SR-OBJ-000018",
+    "title": "Universal Collapse Diagnostics: Contract-First Invariants, κ-Continuous Calculus, and Cross-Domain Audit",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "diagnostic",
+      "secondary": [
+        "pedagogical",
+        "domain-translation"
+      ]
+    },
+    "functional_locus": "umcp",
+    "source_ids": [
+      "SRC-000029"
+    ],
+    "lens": "historical cross-domain diagnostic manual",
+    "domain": {
+      "primary": "interdisciplinary",
+      "secondary": [
+        "systems-theory",
+        "physics"
+      ]
+    },
+    "object_of_study": "prefreeze collapse diagnostics across heterogeneous systems",
+    "structural_focus": {
+      "primary": "boundary",
+      "secondary": [
+        "return",
+        "robustness"
+      ]
+    },
+    "main_question": "How can contract-first invariants and historical collapse diagnostics be applied consistently across heterogeneous domains while preserving auditability?",
+    "secondary_questions": [],
+    "claim_layers": [
+      {
+        "layer": "local-interpretation",
+        "claim": "The library places this as historical diagnostic material with pedagogical and domain-translation secondary roles; no source-native claims are recorded because the record carries no public abstract."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "formal-derivation",
+      "secondary": [
+        "pedagogical"
+      ]
+    },
+    "provenance": "corpus-native",
+    "maturity": "historical",
+    "relations": [],
+    "version": "1.0.0",
+    "date": "2026-09-13T04:12:52Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is SRC-000029 (\"Universal Collapse Diagnostics: Contract-First Invariants, κ-Continuous Calculus, and Cross-Domain Audit\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+    "scope": "A 2025 manual of contract-first invariants and κ-continuous calculus for cross-domain audit, distributed with a Unified First Law of Collapse note, ledger CSV, and figures.",
+    "exclusions": [
+      "Does not carry 2025 invariants, gates, or the First Law statement into the current Tier-1 kernel as authority.",
+      "Does not register its domain applications as separate objects."
+    ],
+    "preserved_meaning": "The historical diagnostic grammar as the source stated it; auditability as the source's declared aim.",
+    "missingness": [
+      {
+        "item": "public abstract",
+        "class": "SOURCE_BOUNDARY",
+        "notes": "No description on the Zenodo record; source-native claims are not recorded rather than inferred from the title."
+      },
+      {
+        "item": "source-stated next burden",
+        "class": "NON_BLOCKING",
+        "notes": "Not stated on the public record; no stronger use is implied by this historical diagnostic record."
+      },
+      {
+        "item": "historical terminology vs current architecture",
+        "class": "UNRESOLVED_SEAM",
+        "notes": "Preserved as source evidence."
+      }
+    ],
+    "distortion_or_substitution_risk": "Reading the historical diagnostics as the current UMCP operating system or its κ-continuous calculus as current kernel authority.",
+    "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "Historical / prefreeze lineage object. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  }
+]

@@ -59,7 +59,7 @@ def load_schema(name: str) -> dict:
 
 
 def load_schemas() -> dict:
-    return {name: load_schema(name) for name in ("author", "object", "source", "relation", "receipt")}
+    return {name: load_schema(name) for name in ("author", "object", "source", "relation", "receipt", "governing")}
 
 
 def load_taxonomies(taxonomy_dir: Path = TAXONOMY_DIR) -> dict:
@@ -86,6 +86,24 @@ def _load_dir(directory: Path) -> dict:
     return records
 
 
+GOVERNING_VIEWS = ("tier-1", "tier-0", "mixed")
+
+
+def _load_governing(directory: Path) -> dict:
+    """Load governing records from registry/governing/ and its view subdirectories.
+
+    The subdirectories (tier-1/, tier-0/, mixed/) are organizational views only;
+    keys are paths relative to registry/governing/ so the view is recoverable.
+    """
+    records = {}
+    if not directory.is_dir():
+        return records
+    for path in sorted(directory.rglob("*")):
+        if path.is_file() and path.suffix in (".json", ".yaml", ".yml"):
+            records[str(path.relative_to(directory))] = _load_record(path)
+    return records
+
+
 def load_registry(registry_dir: Path = REGISTRY_DIR) -> dict:
     """Load the full registry (current states only)."""
     return {
@@ -93,12 +111,48 @@ def load_registry(registry_dir: Path = REGISTRY_DIR) -> dict:
         "objects": _load_dir(registry_dir / "objects"),
         "sources": _load_dir(registry_dir / "sources"),
         "relations": _load_dir(registry_dir / "relations"),
+        "governing": _load_governing(registry_dir / "governing"),
     }
 
 
 def load_object_history(registry_dir: Path = REGISTRY_DIR) -> dict:
     """Load preserved historical object versions."""
     return _load_dir(registry_dir / "objects" / "history")
+
+
+def load_receipts(receipts_dir: Path = RECEIPTS_DIR) -> dict:
+    """Load every admission receipt: {receipt_id: receipt}."""
+    receipts = {}
+    for subdir in ("accepted", "repair", "rejected"):
+        directory = receipts_dir / subdir
+        if not directory.is_dir():
+            continue
+        for path in sorted(directory.glob("RCPT-*.json")):
+            if path.name.endswith(".submission.json"):
+                continue
+            receipts[path.stem] = _load_record(path)
+    return receipts
+
+
+def load_release_manifests(manifests_dir: Path = None) -> dict:
+    """Load every release manifest: {library_version: manifest}."""
+    manifests_dir = manifests_dir or (RELEASES_DIR / "manifests")
+    manifests = {}
+    if manifests_dir.is_dir():
+        for path in sorted(manifests_dir.glob("*.json")):
+            data = _load_record(path)
+            manifests[data.get("library_version", path.stem)] = data
+    return manifests
+
+
+def released_governing_hashes(manifests: dict = None) -> dict:
+    """{governing_id: immutable-content hash} for every governing record released in any manifest."""
+    if manifests is None:
+        manifests = load_release_manifests()
+    released = {}
+    for manifest in manifests.values():
+        released.update(manifest.get("governing_immutable_hashes") or {})
+    return released
 
 
 def schema_version() -> str:

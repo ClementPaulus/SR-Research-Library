@@ -1,6 +1,6 @@
 # Structura Reditus Research Library
 
-**SR-LIBRARY.v0.1.0 (pre-release)** · Schema SR-SCHEMA.v0.2.0 · Taxonomy SR-TAXONOMY.v0.2.0
+**SR-LIBRARY.v0.2.0 (pre-release)** · Schema SR-SCHEMA.v0.3.0 · Taxonomy SR-TAXONOMY.v0.2.0
 
 Governing flow:
 
@@ -8,6 +8,18 @@ Governing flow:
 IDENTIFY -> REGISTER -> CLASSIFY -> RELATE -> VALIDATE RECORD
          -> ACCEPT / RETURN FOR REPAIR / REJECT -> RETRIEVE
 ```
+
+## Three registries, one library
+
+| Surface | Identity | What it preserves |
+|---|---|---|
+| **Governing References** | `SR-GOV-*` | canon-facing, constitutional, authority-axis, functional-source, kernel-reference, protocol, specification, publication-protocol, ingress, and language-contact references with their **exact admitted burden** (`authority_scope.tier_1` / `tier_0`). Immutable once released; superseded, never rewritten. Not research objects. |
+| **Tier-2 Research** | `SR-OBJ-*` | the living research body: domain, focus, question, evidence, provenance, maturity, missingness, authority boundary, next burden, admission receipt. May list `governing_refs` that constrain it without transferring authority. |
+| **Sources & Archives** | `SRC-*` | where a work actually lives: DOI, archive, publisher, data, code, labeled outbound `links`. The paper stays on its DOI/archive platform; the library never mirrors it. |
+
+A work may hold any combination of these identities. *Summa Reditus* has an
+`SRC-*` and an `SR-GOV-*` record and no `SR-OBJ-*`; a domain paper has an
+`SRC-*` and an `SR-OBJ-*` and no `SR-GOV-*`. Relations use `REL-*`.
 
 ## What the Research Library is
 
@@ -54,19 +66,28 @@ any historical GCD release.
 | Entity          | Namespace       | Example         |
 |-----------------|-----------------|-----------------|
 | Author          | `AUTH-NNNN`     | `AUTH-0001`     |
+| Governing reference | `SR-GOV-NNNNNN` | `SR-GOV-000001` |
 | Research object | `SR-OBJ-NNNNNN` | `SR-OBJ-000001` |
 | Source          | `SRC-NNNNNN`    | `SRC-000001`    |
 | Relation        | `REL-NNNNNN`    | `REL-000001`    |
 | Receipt         | `RCPT-NNNNNN`   | `RCPT-000001`   |
 
+A DOI identifies an external archival anchor; a SourceID identifies the named
+work. One DOI may legitimately anchor several member works (a coordinated
+release, a multi-part series); such works keep separate SourceIDs and the
+shared-archive condition is recorded in their notes. They are neither
+collapsed into one object nor counted as separate DOI deposits. DOI identity
+survives a broken web link; a link failure never deletes a source.
+
 ## Repository layout
 
 ```
-schema/       JSON Schemas for authors, objects, sources, relations, receipts
+schema/       JSON Schemas for authors, governing references, objects, sources, relations, receipts
 taxonomy/     Controlled taxonomies for all main classification axes
               (+ extensions.yaml: record of every term proposal and outcome)
-registry/     THE SOURCE OF TRUTH: authors, objects (+history), sources, relations
-receipts/     Admission receipts: accepted/, repair/, rejected/
+registry/     THE SOURCE OF TRUTH: authors, governing (tier-1/ tier-0/ mixed/ views),
+              objects (+history), sources, relations
+receipts/     Admission receipts: accepted/, repair/ (+ archived submissions), rejected/
 validators/   Validation, admission gates, receipts, profiles, manifests, site
 tests/        Test suite (pytest)
 releases/     Release manifests (manifests/), open-seams.yaml, archived packages (archive/)

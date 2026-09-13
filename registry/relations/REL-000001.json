@@ -1,0 +1,8 @@
+{
+  "relation_id": "REL-000001",
+  "relation_type": "extends",
+  "from_id": "SR-OBJ-000002",
+  "to_id": "SR-OBJ-000001",
+  "declared": "2026-09-13T04:12:52Z",
+  "notes": "Orientation Series Part II follows and structurally deepens Part I."
+}

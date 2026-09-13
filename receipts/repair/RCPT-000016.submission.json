@@ -1,0 +1,83 @@
+{
+  "object_id": "SR-OBJ-000016",
+  "title": "The Collapse Formalism: A Reader's Guide to the UMCP/RCFT/ULRC Stack",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "pedagogical",
+    "secondary": [
+      "handoff"
+    ]
+  },
+  "functional_locus": "cross-system",
+  "source_ids": [
+    "SRC-000033"
+  ],
+  "lens": "historical formalism guide",
+  "domain": {
+    "primary": "structura-reditus-core",
+    "secondary": [
+      "mathematics"
+    ]
+  },
+  "object_of_study": "the prefreeze UMCP/RCFT/ULRC mathematical stack",
+  "structural_focus": {
+    "primary": "translation",
+    "secondary": [
+      "continuity"
+    ]
+  },
+  "main_question": "How can a reader reproduce and audit the historical contract-first mathematical stack without confusing identities, closures, and interpretation?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "local-interpretation",
+      "claim": "The library places this as historical pedagogical/handoff material; no source-native claims are recorded because the listed DOI does not resolve to the titled work."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "pedagogical",
+    "secondary": [
+      "formal-derivation"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "historical",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000033 (\"The Collapse Formalism: A Reader's Guide to the UMCP/RCFT/ULRC Stack\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+  "scope": "A 2025 reader's guide to the prefreeze UMCP/RCFT/ULRC stack, as listed by the corpus owner.",
+  "exclusions": [
+    "Does not carry the 2025 stack into the current architecture as authority.",
+    "Does not register the stack components as separate objects."
+  ],
+  "preserved_meaning": "The historical separation of identities, closures, and interpretation as the guide presented it.",
+  "missingness": [
+    {
+      "item": "source identity: DOI 10.5281/zenodo.16990995 resolves to Collapse Calculus (SRC-000034), not to The Collapse Formalism",
+      "class": "REPAIRABLE",
+      "notes": "The archive at this DOI contains no work titled The Collapse Formalism. Supply the DOI or archive reference that resolves to the titled work."
+    },
+    {
+      "item": "source-stated next burden",
+      "class": "REPAIRABLE",
+      "notes": "Cannot be read from a source whose record is unresolved."
+    },
+    {
+      "item": "historical terminology vs current architecture",
+      "class": "UNRESOLVED_SEAM",
+      "notes": "Preserved as source evidence."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading the historical stack as the current canon, or reading this guide as the source specification the four-paper release now provides.",
+  "next_burden": "Unresolved: not recoverable in this import pass because the listed DOI does not resolve to the titled work.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Historical / prefreeze lineage object. Submitted with its source identity unresolved so the seam is visible; see SEAM-0011. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

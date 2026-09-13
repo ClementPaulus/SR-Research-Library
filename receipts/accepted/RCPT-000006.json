@@ -1,0 +1,74 @@
+{
+  "receipt_id": "RCPT-000006",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000006",
+  "generated": "2026-09-13T04:13:09Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000006",
+  "title": "The Periodic Table as a Measured Object II: A Nuclear-Informed Cross-Scale Sequel on What Sharpens, Collapses, and Inverts Under a Stronger Atomic Closure",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T04:12:52Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "domain-translation",
+  "functional_locus": "umcp",
+  "domain_primary": "chemistry",
+  "structural_focus_primary": "heterogeneity",
+  "main_question": "Which distinctions in the first atomic closure sharpen, collapse, or invert when nuclear information is added under a stronger frozen surface?",
+  "evidence_mode_primary": "retrospective-analysis",
+  "provenance": "dataset-derived",
+  "maturity": "retrospectively-evaluated",
+  "source_ids": [
+    "SRC-000011"
+  ],
+  "relation_ids": [
+    "REL-000003"
+  ],
+  "publication_state": "archived",
+  "non_blocking_missingness": [
+    "source-stated next burden (NON_BLOCKING)"
+  ],
+  "open_burdens": [
+    "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+  ],
+  "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented."
+}

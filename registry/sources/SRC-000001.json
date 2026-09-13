@@ -1,0 +1,37 @@
+{
+  "source_id": "SRC-000001",
+  "source_type": "corpus-native",
+  "title": "Summa Reditus: A Complete Treatise on Admissible Return Through Collapse",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Summa Reditus is a complete canon-facing treatise on Reditus: the admissible return of structure through collapse under declared conditions.",
+    "It gathers the Structura Reditus corpus into one ordered body without replacing the source works, casepacks, closures, protocols, or teaching materials.",
+    "The authority architecture (Tier-1, Tier-0, Tier-2) remains distinct from the functional systems (UMCP measures; RCFT explores; ULRC preserves language)."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.20653105",
+    "url": "https://doi.org/10.5281/zenodo.20653105"
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.20653105",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/20653105",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "Zenodo record title is the short form \"Summa Reditus\"; the full title above is as listed by the corpus owner."
+  ],
+  "notes": "Registry role: CANON-FACING SOURCE ONLY. No Tier-2 research object is created from Summa Reditus; it is registered so the governing treatise is searchable as a source without being relabeled as Tier-2 research. Zenodo verification (2026-09-13): DOI 10.5281/zenodo.20653105 is a version DOI; resolved record 20653105, record title \"Summa Reditus\", creators ['Paulus, Clement'], publication date 2026-06-10, resource type Publication."
+}
