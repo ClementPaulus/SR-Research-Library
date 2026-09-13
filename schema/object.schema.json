@@ -1,0 +1,290 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structura-reditus.org/schema/object.schema.json",
+  "title": "Structura Reditus Research Library — Tier-2 Research Object Record",
+  "description": "A Tier-2 research object registered in the Research Library. Controlled taxonomy fields (domain, tier2_class, structural_focus, evidence_mode, provenance, maturity, functional_locus, publication_state) are validated against taxonomy/*.yaml by the taxonomy validator; free-text fields supplement but never replace controlled values.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "object_id",
+    "title",
+    "authors",
+    "authority",
+    "tier2_class",
+    "functional_locus",
+    "source_ids",
+    "lens",
+    "domain",
+    "object_of_study",
+    "structural_focus",
+    "main_question",
+    "secondary_questions",
+    "claim_layers",
+    "evidence_mode",
+    "provenance",
+    "maturity",
+    "relations",
+    "version",
+    "date",
+    "publication_state",
+    "source_boundary",
+    "authority_boundary",
+    "scope",
+    "exclusions",
+    "preserved_meaning",
+    "missingness",
+    "distortion_or_substitution_risk",
+    "next_burden",
+    "repair_route",
+    "notes"
+  ],
+  "properties": {
+    "object_id": {
+      "type": "string",
+      "pattern": "^SR-OBJ-[0-9]{6}$",
+      "description": "Stable research-object identifier, e.g. SR-OBJ-000001."
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "authors": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "pattern": "^AUTH-[0-9]{4}$" },
+      "description": "Registered AuthorIDs. Every referenced AuthorID must exist in registry/authors/."
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tier"],
+      "properties": {
+        "tier": {
+          "type": "string",
+          "enum": ["tier-2"],
+          "description": "The Research Library registers Tier-2 research records only. Tier-0/Tier-1 status is never granted by library admission."
+        }
+      }
+    },
+    "tier2_class": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary", "secondary"],
+      "properties": {
+        "primary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Exactly one primary Tier-2 class. Controlled value from taxonomy/tier2_classes.yaml."
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "description": "Optional secondary Tier-2 classes. Controlled values from taxonomy/tier2_classes.yaml."
+        }
+      }
+    },
+    "functional_locus": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Controlled value from taxonomy/functional_loci.yaml (e.g. umcp, rcft, ulrc, none)."
+    },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^SRC-[0-9]{6}$" },
+      "description": "SourceIDs the object depends on. Every referenced SourceID must exist in registry/sources/."
+    },
+    "lens": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The interpretive lens under which the object reads its material."
+    },
+    "domain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary", "secondary"],
+      "properties": {
+        "primary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Exactly one primary domain. Controlled value from taxonomy/domains.yaml."
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "description": "Optional secondary domains. Controlled values from taxonomy/domains.yaml."
+        }
+      }
+    },
+    "object_of_study": {
+      "type": "string",
+      "minLength": 1,
+      "description": "What the research object studies."
+    },
+    "structural_focus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary", "secondary"],
+      "properties": {
+        "primary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Exactly one primary structural focus. Controlled value from taxonomy/focuses.yaml."
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "description": "Optional secondary structural focuses. Controlled values from taxonomy/focuses.yaml."
+        }
+      }
+    },
+    "main_question": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The single main research question."
+    },
+    "secondary_questions": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "claim_layers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["layer", "claim"],
+        "properties": {
+          "layer": {
+            "type": "string",
+            "enum": ["source-observation", "local-interpretation", "translation", "structural-mapping", "candidate-claim"],
+            "description": "Distinguishes source observation from local interpretation. Never attribute a local interpretation to an external source."
+          },
+          "claim": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "evidence_mode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary", "secondary"],
+      "properties": {
+        "primary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Exactly one primary evidence mode. Controlled value from taxonomy/evidence_modes.yaml."
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "description": "Optional secondary evidence modes. Controlled values from taxonomy/evidence_modes.yaml."
+        }
+      }
+    },
+    "provenance": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Controlled value from taxonomy/provenance_types.yaml."
+    },
+    "maturity": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Controlled value from taxonomy/maturity_states.yaml."
+    },
+    "relations": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^REL-[0-9]{6}$" },
+      "description": "RelationIDs declared by this object. Every referenced RelationID must exist in registry/relations/."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version of this object record, e.g. 0.1.0."
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "ISO 8601 date of this record version (YYYY-MM-DD)."
+    },
+    "publication_state": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Controlled value from taxonomy/publication_states.yaml. Publication status carries no admission authority."
+    },
+    "source_boundary": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Explicit statement of what the cited sources do and do not establish. External source-native claims stay on their side of this boundary."
+    },
+    "authority_boundary": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Explicit statement of what this Tier-2 object does not claim authority over (e.g. no Tier-0/Tier-1 status, no external-source endorsement)."
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Declared scope of the object."
+    },
+    "exclusions": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "What the object explicitly does not cover."
+    },
+    "preserved_meaning": {
+      "type": "string",
+      "minLength": 1,
+      "description": "For translation/mapping work: what original meaning is preserved. For other work: what invariant the object commits to preserving."
+    },
+    "missingness": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["item", "class"],
+        "properties": {
+          "item": { "type": "string", "minLength": 1 },
+          "class": {
+            "type": "string",
+            "enum": [
+              "NON_BLOCKING",
+              "EVALUABILITY_BLOCKING",
+              "CONTRACT_VIOLATING",
+              "AUTHORITY_BOUNDARY",
+              "SOURCE_BOUNDARY",
+              "PUBLICATION_BOUNDARY",
+              "REPAIRABLE",
+              "UNRESOLVED_SEAM"
+            ]
+          },
+          "notes": { "type": "string" }
+        }
+      },
+      "description": "Declared missingness with classification. Missingness is preserved, never silently filled."
+    },
+    "distortion_or_substitution_risk": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Declared risk that local interpretation distorts or substitutes for source-native meaning."
+    },
+    "next_burden": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The next evidential or structural burden this object must discharge."
+    },
+    "repair_route": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The declared route by which a blocked or incomplete state of this object would be repaired."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-text explanatory notes. Supplements, never replaces, controlled values."
+    },
+    "synthetic": {
+      "type": "boolean",
+      "description": "True when the record is a synthetic example/test object. Synthetic records must be explicitly marked."
+    },
+    "supersedes": {
+      "type": ["string", "null"],
+      "pattern": "^SR-OBJ-[0-9]{6}$",
+      "description": "ObjectID of the record this object supersedes, if any. Historical versions are preserved, not overwritten."
+    }
+  }
+}

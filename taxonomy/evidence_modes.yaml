@@ -1,0 +1,37 @@
+# Structura Reditus Research Library — Controlled taxonomy: evidence modes.
+# Initial evidence-mode set as supplied by the library contract.
+taxonomy: evidence_modes
+terms:
+  - id: formal-proof
+    label: Formal proof
+  - id: formal-derivation
+    label: Formal derivation
+  - id: experimental
+    label: Experimental
+  - id: primary-empirical
+    label: Primary empirical
+  - id: secondary-empirical
+    label: Secondary empirical
+  - id: retrospective-analysis
+    label: Retrospective analysis
+  - id: prospective-protocol
+    label: Prospective protocol
+  - id: simulation
+    label: Simulation
+  - id: computational-reproduction
+    label: Computational reproduction
+  - id: source-synthesis
+    label: Source synthesis
+  - id: conceptual-argument
+    label: Conceptual argument
+  - id: phenomenological
+    label: Phenomenological
+  - id: historical
+    label: Historical
+  - id: pedagogical
+    label: Pedagogical
+  - id: translation-only
+    label: Translation only
+  - id: no-empirical-validation
+    label: No empirical validation
+    description: Explicit declaration that no empirical validation is claimed.

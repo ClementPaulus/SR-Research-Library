@@ -1,0 +1,21 @@
+# Structura Reditus Research Library — Controlled taxonomy: provenance types.
+# Initial provenance set as supplied by the library contract.
+taxonomy: provenance_types
+terms:
+  - id: corpus-native
+    label: Corpus native
+  - id: externally-anchored-derivative
+    label: Externally anchored derivative
+  - id: external-source-native
+    label: External source native
+  - id: collaborative
+    label: Collaborative
+  - id: historical-source-anchored
+    label: Historical source anchored
+  - id: dataset-derived
+    label: Dataset derived
+  - id: translation-derived
+    label: Translation derived
+  - id: synthetic-test-object
+    label: Synthetic test object
+    description: Explicitly synthetic object used for testing the library itself.

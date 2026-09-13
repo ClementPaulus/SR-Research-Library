@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structura-reditus.org/schema/relation.schema.json",
+  "title": "Structura Reditus Research Library — Relation Record",
+  "description": "A typed, directed relation between registry entities. Relation type is a controlled taxonomy value from taxonomy/relation_types.yaml.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["relation_id", "relation_type", "from_id", "to_id", "declared"],
+  "properties": {
+    "relation_id": {
+      "type": "string",
+      "pattern": "^REL-[0-9]{6}$",
+      "description": "Stable relation identifier, e.g. REL-000001."
+    },
+    "relation_type": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Controlled value from taxonomy/relation_types.yaml (validated by the taxonomy validator)."
+    },
+    "from_id": {
+      "type": "string",
+      "pattern": "^(SR-OBJ-[0-9]{6}|SRC-[0-9]{6})$",
+      "description": "Origin entity: research object or source."
+    },
+    "to_id": {
+      "type": "string",
+      "pattern": "^(SR-OBJ-[0-9]{6}|SRC-[0-9]{6})$",
+      "description": "Target entity: research object or source."
+    },
+    "declared": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Date the relation was declared (YYYY-MM-DD)."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-text explanation. Supplements, never replaces, the controlled relation type."
+    }
+  }
+}

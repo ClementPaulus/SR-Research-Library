@@ -1,0 +1,31 @@
+# Structura Reditus Research Library — Controlled taxonomy: maturity states.
+# Initial maturity set as supplied by the library contract.
+taxonomy: maturity_states
+terms:
+  - id: exploratory
+    label: Exploratory
+  - id: candidate
+    label: Candidate
+  - id: articulated
+    label: Articulated
+  - id: source-bounded
+    label: Source bounded
+  - id: frozen-local-object
+    label: Frozen local object
+  - id: retrospectively-evaluated
+    label: Retrospectively evaluated
+  - id: prospectively-testable
+    label: Prospectively testable
+  - id: prospectively-tested
+    label: Prospectively tested
+  - id: reproduced
+    label: Reproduced
+  - id: contradicted
+    label: Contradicted
+    description: Contradiction is a recorded state, not an admission failure.
+  - id: unresolved
+    label: Unresolved
+  - id: superseded
+    label: Superseded
+  - id: historical
+    label: Historical

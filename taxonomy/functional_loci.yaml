@@ -1,0 +1,20 @@
+# Structura Reditus Research Library — Controlled taxonomy: functional loci.
+# The functional systems of Structura Reditus (UMCP / RCFT / ULRC) plus
+# explicit values for cross-system and no-locus work.
+taxonomy: functional_loci
+terms:
+  - id: umcp
+    label: UMCP
+    description: Work located at the UMCP functional system.
+  - id: rcft
+    label: RCFT
+    description: Work located at the RCFT functional system.
+  - id: ulrc
+    label: ULRC
+    description: Work located at the ULRC functional system.
+  - id: cross-system
+    label: Cross-system
+    description: Work spanning more than one functional system.
+  - id: none
+    label: None
+    description: Work with no specific functional-system locus.

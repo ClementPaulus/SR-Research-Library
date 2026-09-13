@@ -1,0 +1,36 @@
+# Structura Reditus Research Library — Controlled taxonomy: structural focuses.
+# Initial structural-focus set as supplied by the library contract.
+taxonomy: focuses
+terms:
+  - id: return
+    label: Return
+  - id: identity
+    label: Identity
+  - id: continuity
+    label: Continuity
+  - id: recovery
+    label: Recovery
+  - id: compression
+    label: Compression
+  - id: heterogeneity
+    label: Heterogeneity
+  - id: translation
+    label: Translation
+  - id: failure
+    label: Failure
+  - id: causation
+    label: Causation
+  - id: recurrence
+    label: Recurrence
+  - id: memory
+    label: Memory
+  - id: robustness
+    label: Robustness
+  - id: residual-migration
+    label: Residual migration
+  - id: boundary
+    label: Boundary
+  - id: missingness
+    label: Missingness
+  - id: adaptation
+    label: Adaptation

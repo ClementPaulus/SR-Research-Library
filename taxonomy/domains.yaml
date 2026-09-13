@@ -1,0 +1,48 @@
+# Structura Reditus Research Library — Controlled taxonomy: primary/secondary domains.
+# Taxonomy version is tracked in taxonomy/VERSION.
+# Terms may be proposed via the taxonomy-change process in CONTRIBUTING.md.
+# Domains are an even organizational surface: no domain outranks another.
+taxonomy: domains
+terms:
+  - id: structura-reditus-core
+    label: Structura Reditus core
+    description: Work on the Structura Reditus field itself.
+  - id: mathematics
+    label: Mathematics
+  - id: physics
+    label: Physics
+  - id: chemistry
+    label: Chemistry
+  - id: biology
+    label: Biology
+  - id: medicine
+    label: Medicine
+  - id: neuroscience
+    label: Neuroscience
+  - id: psychology
+    label: Psychology
+  - id: linguistics
+    label: Linguistics
+  - id: computer-science
+    label: Computer science
+  - id: engineering
+    label: Engineering
+  - id: earth-systems
+    label: Earth systems
+  - id: ecology
+    label: Ecology
+  - id: economics
+    label: Economics
+  - id: sociology
+    label: Sociology
+  - id: history
+    label: History
+  - id: philosophy
+    label: Philosophy
+  - id: education
+    label: Education
+  - id: arts
+    label: Arts
+  - id: interdisciplinary
+    label: Interdisciplinary
+    description: Work whose primary domain cannot be reduced to a single listed domain.

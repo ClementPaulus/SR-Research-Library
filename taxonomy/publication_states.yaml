@@ -1,0 +1,18 @@
+# Structura Reditus Research Library — Controlled taxonomy: publication states.
+# Publication status carries no admission authority. It is descriptive metadata only.
+taxonomy: publication_states
+terms:
+  - id: unpublished
+    label: Unpublished
+  - id: preprint
+    label: Preprint
+  - id: published
+    label: Published
+  - id: registered-only
+    label: Registered only
+    description: Registered in the library without an external publication event.
+  - id: withdrawn
+    label: Withdrawn
+  - id: unknown
+    label: Unknown
+    description: Publication state not supplied; preserved as missingness rather than guessed.

@@ -1,0 +1,26 @@
+# Structura Reditus Research Library — Controlled taxonomy: Tier-2 primary classes.
+# Tier-2 supports exactly these seven primary classes.
+# Each research object has exactly one primary class; secondary classes are allowed.
+taxonomy: tier2_classes
+terms:
+  - id: domain-translation
+    label: Domain translation
+    description: Translates structure between a domain and Structura Reditus, or between domains.
+  - id: diagnostic
+    label: Diagnostic
+    description: Diagnoses structure, failure, or return behavior in a declared object of study.
+  - id: language-contact
+    label: Language contact
+    description: Manages contact between source-native language and Structura Reditus language.
+  - id: pedagogical
+    label: Pedagogical
+    description: Teaches or explains existing structure without changing it.
+  - id: candidate
+    label: Candidate
+    description: Proposes a candidate structure, claim, or object not yet articulated or tested.
+  - id: external-ingress
+    label: External ingress
+    description: Constructs a local Tier-2 closure around an external source while preserving external-source discipline.
+  - id: handoff
+    label: Handoff
+    description: Hands a prepared structure to another authority, domain, or functional system.

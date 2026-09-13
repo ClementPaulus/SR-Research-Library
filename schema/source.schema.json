@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structura-reditus.org/schema/source.schema.json",
+  "title": "Structura Reditus Research Library — Source Record",
+  "description": "A source object. External work remains an external source object with preserved authorship, source-native claims, source identity, and missingness. A source is never rewritten into a local interpretation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source_id", "source_type", "title", "source_authors", "missingness"],
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "pattern": "^SRC-[0-9]{6}$",
+      "description": "Stable source identifier, e.g. SRC-000001."
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["external", "corpus-native", "dataset", "historical"],
+      "description": "external: work outside Structura Reditus; corpus-native: work inside the SR corpus; dataset: a dataset source; historical: a historical document source."
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "source_authors": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Original authorship exactly as attributable. Never replaced by a library AuthorID for external work."
+    },
+    "source_native_claims": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Claims the source itself makes, in the source's own terms. Local interpretation is never placed here."
+    },
+    "identifier": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "External identity of the source (DOI, URL, ISBN, archive reference). Only supplied values; never guessed.",
+      "properties": {
+        "doi": { "type": "string" },
+        "url": { "type": "string" },
+        "isbn": { "type": "string" },
+        "archive_reference": { "type": "string" },
+        "other": { "type": "string" }
+      }
+    },
+    "publication_year": {
+      "type": ["integer", "null"],
+      "description": "Publication year if known; null preserves missingness."
+    },
+    "venue": { "type": ["string", "null"] },
+    "missingness": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Explicit list of unavailable metadata or evidence. Preserved, never silently filled."
+    },
+    "notes": { "type": "string" }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structura-reditus.org/schema/receipt.schema.json",
+  "title": "Structura Reditus Research Library — Admission Receipt",
+  "description": "Machine-readable admission receipt. Every admission decision generates a receipt. Library admission means organizational conformance only; it does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission. Rejection concerns library admission only and does not by itself establish that the underlying research claim is false.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["receipt_id", "decision", "submission_identity", "generated", "gates", "disclaimer"],
+  "properties": {
+    "receipt_id": {
+      "type": "string",
+      "pattern": "^RCPT-[0-9]{6}$"
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["ACCEPTED", "RETURNED_FOR_REPAIR", "REJECTED"]
+    },
+    "submission_identity": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identity of the submission (ObjectID or provisional identity)."
+    },
+    "generated": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|[+-][0-9]{2}:[0-9]{2})$",
+      "description": "ISO 8601 timestamp of receipt generation."
+    },
+    "gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["A", "B", "C", "D", "E", "F", "G"],
+      "properties": {
+        "A": { "$ref": "#/$defs/gate_result" },
+        "B": { "$ref": "#/$defs/gate_result" },
+        "C": { "$ref": "#/$defs/gate_result" },
+        "D": { "$ref": "#/$defs/gate_result" },
+        "E": { "$ref": "#/$defs/gate_result" },
+        "F": { "$ref": "#/$defs/gate_result" },
+        "G": { "$ref": "#/$defs/gate_result" }
+      }
+    },
+    "disclaimer": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Mandatory statement of what the decision does and does not mean."
+    },
+    "object_id": { "type": ["string", "null"] },
+    "provisional_object_id": { "type": ["string", "null"] },
+    "title": { "type": ["string", "null"] },
+    "author_ids": { "type": "array", "items": { "type": "string" } },
+    "version": { "type": ["string", "null"] },
+    "date": { "type": ["string", "null"] },
+    "authority": { "type": ["string", "null"] },
+    "tier2_class_primary": { "type": ["string", "null"] },
+    "functional_locus": { "type": ["string", "null"] },
+    "domain_primary": { "type": ["string", "null"] },
+    "structural_focus_primary": { "type": ["string", "null"] },
+    "main_question": { "type": ["string", "null"] },
+    "evidence_mode_primary": { "type": ["string", "null"] },
+    "provenance": { "type": ["string", "null"] },
+    "maturity": { "type": ["string", "null"] },
+    "source_ids": { "type": "array", "items": { "type": "string" } },
+    "relation_ids": { "type": "array", "items": { "type": "string" } },
+    "publication_state": { "type": ["string", "null"] },
+    "non_blocking_missingness": { "type": "array", "items": { "type": "string" } },
+    "open_burdens": { "type": "array", "items": { "type": "string" } },
+    "next_burden": { "type": ["string", "null"] },
+    "failed_or_blocked_gates": { "type": "array", "items": { "type": "string" } },
+    "missing_structure": { "type": "array", "items": { "type": "string" } },
+    "missingness_class": { "type": ["string", "null"] },
+    "affected_burden": { "type": ["string", "null"] },
+    "why_blocked": { "type": ["string", "null"] },
+    "exact_repair_required": { "type": "array", "items": { "type": "string" } },
+    "permitted_source_or_evidence": { "type": ["string", "null"] },
+    "repair_changes_object": { "type": ["boolean", "null"] },
+    "new_object_id_required": { "type": ["boolean", "null"] },
+    "seam_declaration_required": { "type": ["boolean", "null"] },
+    "fields_already_accepted": { "type": "array", "items": { "type": "string" } },
+    "fields_still_blocked": { "type": "array", "items": { "type": "string" } },
+    "resubmission_condition": { "type": ["string", "null"] },
+    "failed_gates": { "type": "array", "items": { "type": "string" } },
+    "established_violation": { "type": ["string", "null"] },
+    "violation_class": { "type": ["string", "null"] },
+    "why_not_permitted": { "type": ["string", "null"] },
+    "repairable_same_object": { "type": ["boolean", "null"] },
+    "new_object_version_or_seam_required": { "type": ["string", "null"] },
+    "resubmission_conditions": { "type": ["string", "null"] }
+  },
+  "$defs": {
+    "gate_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "result"],
+      "properties": {
+        "name": { "type": "string" },
+        "result": { "type": "string", "enum": ["PASS", "FAIL", "BLOCKED"] },
+        "detail": { "type": "string" }
+      }
+    }
+  }
+}

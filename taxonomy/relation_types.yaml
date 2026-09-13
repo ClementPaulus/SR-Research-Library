@@ -1,0 +1,39 @@
+# Structura Reditus Research Library — Controlled taxonomy: relation types.
+# Initial relation-type set as supplied by the library contract.
+taxonomy: relation_types
+terms:
+  - id: supports
+    label: Supports
+  - id: contrasts_with
+    label: Contrasts with
+  - id: extends
+    label: Extends
+  - id: reproduces
+    label: Reproduces
+  - id: challenges
+    label: Challenges
+    description: Challenging another Tier-2 work is a relation, not an admission failure.
+  - id: translates
+    label: Translates
+  - id: maps_to
+    label: Maps to
+  - id: shares_focus_with
+    label: Shares focus with
+  - id: shares_question_with
+    label: Shares question with
+  - id: derived_from
+    label: Derived from
+  - id: source_of
+    label: Source of
+  - id: supersedes
+    label: Supersedes
+  - id: historical_predecessor_of
+    label: Historical predecessor of
+  - id: candidate_for
+    label: Candidate for
+  - id: handoff_to
+    label: Handoff to
+  - id: incompatible_under_current_contract
+    label: Incompatible under current contract
+  - id: unresolved_relation
+    label: Unresolved relation
