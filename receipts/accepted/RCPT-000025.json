@@ -1,0 +1,72 @@
+{
+  "receipt_id": "RCPT-000025",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000020",
+  "generated": "2026-09-13T22:06:45Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000020",
+  "title": "GCD / UMCP: The First Seam-Chain Casepack: A Worked Case Showing Composed Continuity Across Multiple Welded Seams",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "diagnostic",
+  "functional_locus": "umcp",
+  "domain_primary": "structura-reditus-core",
+  "structural_focus_primary": "continuity",
+  "main_question": "When do individually admissible local welds compose into one admissible seam-chain rather than merely a sequence of local successes?",
+  "evidence_mode_primary": "formal-derivation",
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "source_ids": [
+    "SRC-000047"
+  ],
+  "relation_ids": [
+    "REL-000004"
+  ],
+  "publication_state": "archived",
+  "non_blocking_missingness": [],
+  "open_burdens": [
+    "Source-stated ('What This Enables Next'): a small domain closure with welded transitions (declaring its domain adapter before applying local weld and chain accounting), a publication-infrastructure casepack using receipt chains, a repository implementation of seam-chain validation, and a failure taxonomy for chain composition. The paper enables these burdens but does not absorb them; no external-domain chain closure is claimed to have occurred."
+  ],
+  "next_burden": "Source-stated ('What This Enables Next'): a small domain closure with welded transitions (declaring its domain adapter before applying local weld and chain accounting), a publication-infrastructure casepack using receipt chains, a repository implementation of seam-chain validation, and a failure taxonomy for chain composition. The paper enables these burdens but does not absorb them; no external-domain chain closure is claimed to have occurred."
+}

@@ -1,0 +1,87 @@
+{
+  "object_id": "SR-OBJ-000019",
+  "title": "A Geometry of Admissible Seams: Contract-Bound Invariants and Auditable Transitions",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "candidate",
+    "secondary": [
+      "diagnostic"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000024"
+  ],
+  "lens": "historical geometric seam formulation",
+  "domain": {
+    "primary": "mathematics",
+    "secondary": [
+      "structura-reditus-core"
+    ]
+  },
+  "object_of_study": "geometric representation of transitions and seam admissibility under frozen contracts",
+  "structural_focus": {
+    "primary": "continuity",
+    "secondary": [
+      "boundary",
+      "return"
+    ]
+  },
+  "main_question": "How can heterogeneous transitions be represented geometrically while keeping admissibility dependent on explicit contract and seam conditions rather than scalar resemblance?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "The note states that the kernel is domain-agnostic by construction, not reducible to a single score, and that admissibility is grounded in identity closure across seams under a frozen contract (deposited PDF, December 18th, 2025)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "The note treats cross-domain transfer as an empirical property rather than an assumption and states portability criteria: disclosed embedding/mapping, reproducibility, seam viability, closure stability under reuse, consistent admissibility behavior, and a quantified failure boundary, with a practical reporting minimum of manifests, closure registries, and audit rows."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library places this as historical candidate material under UMCP; the historical/current seam is preserved, not reconciled."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "formal-derivation",
+    "secondary": [
+      "conceptual-argument"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "historical",
+  "relations": [],
+  "version": "1.0.1",
+  "date": "2026-09-13T18:00:00Z",
+  "publication_state": "preprint",
+  "source_boundary": "The governing source is SRC-000024 (\"A Geometry of Admissible Seams: Contract-Bound Invariants and Auditable Transitions\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+  "scope": "A 2025 geometric formulation of transitions and seam admissibility, distributed in the archive 10.5281/zenodo.17980036 alongside the Provenance & Canon Note.",
+  "exclusions": [
+    "Does not promote any historical seam closure into the current Tier-0 protocol or Tier-1 kernel.",
+    "Candidate status is historical; no current adoption is implied."
+  ],
+  "preserved_meaning": "The source's stated dependence of admissibility on explicit contract and seam conditions rather than scalar resemblance.",
+  "missingness": [
+    {
+      "item": "public abstract for this member work",
+      "class": "SOURCE_BOUNDARY",
+      "notes": "Shared archive; the record description belongs to SRC-000023. The deposited PDF (Geometry of Admissible Seams.pdf) was consulted."
+    },
+    {
+      "item": "historical terminology vs current architecture",
+      "class": "UNRESOLVED_SEAM",
+      "notes": "Preserved as source evidence. The geometric mappings and closures remain contract-local historical constructions until the source's portability burdens are discharged."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading geometric resemblance as admissibility, or reading a historical candidate formulation as adopted protocol.",
+  "next_burden": "Demonstrate portability, where claimed, through explicit embedding and closure disclosure, reproducible audit records (manifests or manifest hashes, closure registries, representative audit rows with seam diagnostics), seam viability, closure stability under reuse, consistent admissibility behavior, and a quantified failure boundary (the source's Appendix D portability criteria). Until those burdens are discharged, the geometric mappings and closures remain contract-local historical constructions rather than universal seam rules or current protocol authority.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Historical / prefreeze lineage object; membership in the shared archive verified from the Zenodo file listing (Geometry of Admissible Seams.pdf). Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture. Revision 1.0.1 (2026-09 census and repair pass): the REPAIRABLE next-burden missingness of RCPT-000019 is discharged from the source's own portability criteria (deposited PDF in the shared archive 10.5281/zenodo.17980036); the earlier RETURNED_FOR_REPAIR receipt is preserved."
+}

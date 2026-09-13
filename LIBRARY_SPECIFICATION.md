@@ -244,6 +244,32 @@ Each research object contains at least:
 
 See `schema/object.schema.json` for the authoritative field definitions.
 
+### 6.1 Tier-2 admission decision rule
+
+A corpus work is assessed for an `SR-OBJ-*` identity only when **all** of
+the following hold. Works that fail any test remain source-only,
+governing-only, historical, queued, or blocked — they are never relabeled as
+Tier-2 research to increase search visibility.
+
+| Test | Requirement |
+|---|---|
+| A. Distinct intellectual object | The work carries a distinct research, diagnostic, translation, pedagogical, exploratory, domain-ingress, or handoff burden. A version update alone does not create a new ObjectID; a DOI, archive record, file, or source identity is not automatically a research object. |
+| B. Tier-2 function | The work is Tier-2 research, not exclusively Tier-1 kernel authority, Tier-0 governing/protocol material, a governing reference, a source-only archive object, or repository implementation infrastructure. |
+| C. Source identity | Enough identity exists to register or reuse an `SRC-*` record. A DOI is **not** mandatory: a verified local manuscript, owner-supplied manuscript/version, archive membership, stable repository artifact, or other explicit archive reference suffices. A DOI is never invented; a publicly mentioned title with no acquired source is not sufficient. |
+| D. Source-grounded burden | `title`, `authors`, `object_of_study`, `main_question`, `source_boundary`, `authority_boundary`, `scope`, `exclusions`, `missingness`, and `next_burden` are recoverable without invention. Library classification may interpret the work under the current architecture, but source-native claims stay separated from local interpretation. |
+| E. Classifiability | The work fits the controlled taxonomies (`tier2_class`, `domain`, `structural_focus`, `evidence_mode`, `provenance`, `maturity`, `functional_locus`, `publication_state`) without inventing a term for convenience. A genuine gap is a separate declared taxonomy-change burden (§5). |
+| F. Boundary | A visible boundary separates source observation, derived mathematics, local GCD mapping, mechanism hypothesis, generalization, ontology, and open burden. GCD interpretation is never attributed to external authors unless their source makes it. |
+| G. Missingness | Missingness is allowed and recorded. Blocking missingness (`EVALUABILITY_BLOCKING`, `REPAIRABLE`, `CONTRACT_VIOLATING`) prevents admission; non-blocking missingness stays on the record. Missingness is never converted into guessed metadata. |
+| H. No duplicate intellectual object | Before allocation: search existing objects and sources, inspect source lineage, supersession, shared archives, and repair receipts. A new version of an existing object preserves version history (`registry/objects/history/`) instead of minting a duplicate. |
+
+Processing order for a census pass: (1) reserved returned-for-repair
+objects; (2) source-complete Tier-2 works missing from the census; (3)
+existing `SRC-*` records that clearly warrant an object; (4) historical
+scientific witnesses explicitly placed as Tier-2/local witnesses; (5)
+pedagogical works explicitly placed by Summa Reditus; (6) public-only or
+source-missing works, which remain queued and unregistered. Admission
+standards are never lowered to raise the object count.
+
 ## 7. External-source discipline (mandatory)
 
 External work remains an **external source object** (`registry/sources/`).

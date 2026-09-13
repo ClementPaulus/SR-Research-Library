@@ -71,12 +71,20 @@ def test_reserved_object_ids_are_not_reused(base_registry, schemas, taxonomies, 
 
 
 def test_live_registry_reserves_returned_ids():
-    """IDs on non-accepted receipts stay reserved for those submissions."""
+    """IDs on non-accepted receipts stay reserved; they register only via a later ACCEPTED receipt for the same work."""
     receipts = loader.load_receipts()
     returned = {r["provisional_object_id"] for r in receipts.values() if r["decision"] == "RETURNED_FOR_REPAIR"}
     assert {"SR-OBJ-000016", "SR-OBJ-000017", "SR-OBJ-000019"} <= returned
-    registered = {o["object_id"] for o in loader.load_registry()["objects"].values()}
-    assert not (returned & registered)
+    accepted = {r["object_id"]: r for r in receipts.values() if r["decision"] == "ACCEPTED"}
+    registry = loader.load_registry()
+    registered = {o["object_id"]: o for o in registry["objects"].values()}
+    for oid in returned & set(registered):
+        # Re-admitted under the same reserved identity: the accepted receipt must be later than the repair receipt.
+        repair = next(r for r in receipts.values() if r["decision"] == "RETURNED_FOR_REPAIR" and r["provisional_object_id"] == oid)
+        assert oid in accepted and accepted[oid]["receipt_id"] > repair["receipt_id"]
+        assert accepted[oid]["title"] == registered[oid]["title"]
+    # SR-OBJ-000016 (The Collapse Formalism) stays blocked while its source identity is unresolved (SEAM-0011).
+    assert "SR-OBJ-000016" not in registered and "SR-OBJ-000016" not in accepted
 
 
 def test_question_slug_policy():

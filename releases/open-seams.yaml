@@ -88,6 +88,11 @@ seams:
       10.5281/zenodo.16990995 resolves (concept) to Collapse Calculus (SRC-000034; versions 16990996, 17007222),
       whose file listings contain no Collapse Formalism work. Source identity unverified; SR-OBJ-000016 was
       RETURNED_FOR_REPAIR (RCPT-000016). Repair requires a DOI or archive reference that resolves to the titled work.
+      Re-searched in the 2026-09 census pass (Zenodo API, creator "Paulus, Clement", titles Formalism / Reader's Guide,
+      all versions; Collapse Calculus concept 16990995 version records 16990996 and 17007222 file listings): no record
+      or file titled The Collapse Formalism exists. SR-OBJ-000016 remains RETURNED_FOR_REPAIR under its reserved
+      identity; no new receipt was generated for an unchanged blocked submission. Still missing: an archive record,
+      DOI, or owner-supplied manuscript that resolves to the titled work, from which the next burden can be read.
     status: open
   - id: SEAM-0012
     area: registry.sources.title-variance
@@ -105,7 +110,14 @@ seams:
       historical objects whose public records state no next burden; because candidate material implies a stronger
       later use, both were RETURNED_FOR_REPAIR (RCPT-000017, RCPT-000019) pending the paper's own stated burden.
       Submissions archived beside their receipts.
-    status: open
+    status: closed
+    closed_by: >-
+      2026-09 Tier-2 census and repair pass — the next burdens were read from the deposited PDFs themselves (Collapse
+      Calculus at 10.5281/zenodo.16990996: weld pre/post test with tolerance on |Δκ|, manifest hashes, hashed audit
+      rows, κ continuity under composition; A Geometry of Admissible Seams in 10.5281/zenodo.17980036: Appendix D
+      portability criteria). Both resubmitted under the SAME reserved identities as version 1.0.1 and ACCEPTED
+      (RCPT-000023, RCPT-000024); the RETURNED_FOR_REPAIR receipts and archived submissions are preserved. The
+      historical-vs-current UNRESOLVED_SEAM on each object is kept: nothing historical is promoted.
   - id: SEAM-0014
     area: registry.sources.doi-verification-queue
     description: >-
@@ -215,6 +227,11 @@ seams:
       Protocol" is exposed on the author's Academia profile as Active Tier-2 / Domain Closures (candidate class
       external-ingress) but no local source file or DOI is available (census status SOURCE_NEEDED). Public
       placement alone does not create admission; no SourceID or ObjectID is allocated until the source is acquired.
+      2026-09 census pass: the source is now publicly deposited (Zenodo 10.5281/zenodo.22550978, concept 22550977,
+      Final author edition v2.0.1, 6 September 2026, deposited PDF read) and is registered as SRC-000059 (source
+      only). No ObjectID is allocated: the corpus owner has not supplied the library classification for this work,
+      and the census instruction placed it outside the classified scope. Remaining burden: owner-supplied Tier-2
+      classification, then ordinary admission.
     status: open
   - id: SEAM-0021
     area: registry.census
@@ -229,6 +246,19 @@ seams:
       (10.5281/zenodo.22035775, not resolvable on 2026-09-13), Identifiable Return in Memristive Associative Memory
       (external DOI 10.1038/s41467-026-69958-0 belongs to He et al., not to the local paper), and The First
       Seam-Chain Casepack (DOI unresolved). Allocation awaits the deduplicated intellectual-object ledger.
+      2026-09 census pass status (see docs/TIER2_CENSUS_2026-09.md): REGISTERED — The First Seam-Chain Casepack
+      (SRC-000047 / SR-OBJ-000020, DOI 10.5281/zenodo.19870445 verified), Nested Return in a Composite Diamond Clock
+      (SRC-000049 / SR-OBJ-000021; external anchor SRC-000048), Recursive Accelerating Return (SRC-000050 /
+      SR-OBJ-000022; 10.5281/zenodo.22035775 now resolves, latest version 22121149), Identifiable Return in
+      Memristive Associative Memory (SRC-000052 / SR-OBJ-000023, owner-supplied manuscript, no DOI; external anchor
+      SRC-000051), Language Across Articulation (SRC-000053 / SR-OBJ-000024), Empirical Regime Auditing v2.0
+      (existing SRC-000046 / SR-OBJ-000025), Confinement as Integrity Collapse (SRC-000054 / SR-OBJ-000026,
+      historical), Contract-First Epistemology full course, Semester I, Semester II, Syllabus and Audit Receipt
+      (SRC-000055..058 / SR-OBJ-000027..030, shared archive 10.5281/zenodo.20074210). REPAIRED — SR-OBJ-000017,
+      SR-OBJ-000019 (SEAM-0013 closed). STILL BLOCKED — SR-OBJ-000016 (SEAM-0011). SOURCE REGISTERED, OBJECT
+      PENDING OWNER CLASSIFICATION — Saturn Southern Decagon (SRC-000059, SEAM-0020). VERSION LINEAGE ONLY — DMT
+      Version 2.0 (SRC-000019 typed with the v1.0 record 21726225 as earlier_version; SR-OBJ-000011 unchanged).
+      Remaining census candidates without acquired sources stay unallocated.
     status: open
   - id: SEAM-0022
     area: registry.sources.archive-record-relationship

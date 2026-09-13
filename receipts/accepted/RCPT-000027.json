@@ -1,0 +1,74 @@
+{
+  "receipt_id": "RCPT-000027",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000022",
+  "generated": "2026-09-13T22:06:48Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000022",
+  "title": "Recursive Accelerating Return: A Generative Collapse Dynamics Theory of Endogenous Generative Capacity",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "candidate",
+  "functional_locus": "rcft",
+  "domain_primary": "systems-theory",
+  "structural_focus_primary": "recurrence",
+  "main_question": "What must be inherited, what counts as admissible return, and what rate must increase before a recursive acceleration claim is earned?",
+  "evidence_mode_primary": "formal-derivation",
+  "provenance": "corpus-native",
+  "maturity": "prospectively-testable",
+  "source_ids": [
+    "SRC-000050"
+  ],
+  "relation_ids": [],
+  "publication_state": "archived",
+  "non_blocking_missingness": [
+    "empirical validation of RAR (NON_BLOCKING)",
+    "longitudinal causal evidence for causal-RAR (NON_BLOCKING)",
+    "archive record version label and full title (NON_BLOCKING)"
+  ],
+  "open_burdens": [
+    "Prospective domain validation under a frozen GCD.RAR.CORE contract and a declared GCD.RAR.MAP.<domain> mapping contract, including admitted-return timestamps, an operator-equivalence rule, a causal inheritance design, a capacity functional, resource normalization, failed-attempt accounting, an exogenous-exposure policy, an uncertainty/persistence rule, and model comparison (source-stated)."
+  ],
+  "next_burden": "Prospective domain validation under a frozen GCD.RAR.CORE contract and a declared GCD.RAR.MAP.<domain> mapping contract, including admitted-return timestamps, an operator-equivalence rule, a causal inheritance design, a capacity functional, resource normalization, failed-attempt accounting, an exogenous-exposure policy, an uncertainty/persistence rule, and model comparison (source-stated)."
+}

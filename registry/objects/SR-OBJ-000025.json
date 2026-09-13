@@ -1,0 +1,95 @@
+{
+  "object_id": "SR-OBJ-000025",
+  "title": "Empirical Regime Auditing Under the GCD/UMCP Kernel: Contract-Frozen Calibration, Temporal Diagnostics, Typed Return, and Cross-Stream Evaluation",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "diagnostic",
+    "secondary": [
+      "domain-translation"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000046"
+  ],
+  "lens": "empirical regime-auditing companion",
+  "domain": {
+    "primary": "structura-reditus-core",
+    "secondary": [
+      "mathematics",
+      "systems-theory"
+    ]
+  },
+  "object_of_study": "Contract-frozen empirical evaluation of multistream sequences using a fixed GCD/UMCP kernel plus a separate temporal-diagnostic layer.",
+  "structural_focus": {
+    "primary": "return",
+    "secondary": [
+      "boundary",
+      "missingness",
+      "heterogeneity"
+    ]
+  },
+  "main_question": "How can multistream empirical sequences be calibrated, admitted, diagnostically analyzed and tested for typed return without allowing temporal diagnostics to redefine the kernel or decide stance by themselves?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "The source separates a fixed measurement kernel for the admitted state of an object from a temporal diagnostic layer for detecting how empirical observations move around that state."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Temporal quantities remain diagnostics unless an explicit closure promotes them; they do not redefine the reserved kernel namespace and do not acquire stance authority through usefulness alone."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Finite return establishes re-entry under the active contract but does not by itself establish a weld, favorable regime, high integrity, or final conformity."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "The paper is the technical empirical companion to Liber Collapsus; its open seams are aligned to UMCP-KERNEL-SPEC.v2.4.0-rc2 without promoting it."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library places this as a diagnostic object with a domain-translation secondary role; temporal diagnostics remain Tier-2 unless separately promoted."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "formal-derivation",
+    "secondary": [
+      "retrospective-analysis",
+      "prospective-protocol"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000046 (\"Empirical Regime Auditing Under the GCD/UMCP Kernel: Contract-Frozen Calibration, Temporal Diagnostics, Typed Return, and Cross-Stream Evaluation (A Kernel for Empirical Regime Auditing, Version 2.0)\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. The first edition (DOI 10.5281/zenodo.16809847, 2025) is preserved by the source as historical witness and is not this object's source state.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority, canon status, proof, weld, scientific endorsement, or release status.",
+  "scope": "Second edition (Version 2.0, 4 September 2026): contract-frozen calibration, temporal diagnostics, typed return, and cross-stream evaluation of multistream empirical sequences under a fixed GCD/UMCP kernel.",
+  "exclusions": [
+    "Does not promote temporal diagnostics into the reserved kernel namespace.",
+    "Does not let finite return establish weld, favorable regime, high integrity, or conformity.",
+    "Does not promote UMCP-KERNEL-SPEC.v2.4.0-rc2.",
+    "Does not universalize domain-specific temporal thresholds."
+  ],
+  "preserved_meaning": "The separation of fixed kernel reads from temporal diagnostics, and of finite return from weld, regime, integrity, and conformity.",
+  "missingness": [
+    {
+      "item": "DOI of the Version 2.0 edition",
+      "class": "PUBLICATION_BOUNDARY",
+      "notes": "No DOI of its own is established by the supplied source; it is deposited in the shared archive with Liber Collapsus v2.0 (10.5281/zenodo.22310064). Publication state archived rests on that shared archive deposit."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading temporal diagnostics as kernel quantities, or reading finite return as weld, favorable regime, high integrity, or conformity.",
+  "next_burden": "Prospective domain-local validation of adapters, calibration windows, temporal diagnostics, sentinel rules, and any learned thresholds under frozen evidence boundaries. Domain-specific temporal thresholds are not universalized.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Reuses the existing companion-witness source SRC-000046 (no duplicate source). Registered in the 2026-09 Tier-2 census and repair pass; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

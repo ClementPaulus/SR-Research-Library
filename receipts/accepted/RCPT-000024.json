@@ -1,0 +1,73 @@
+{
+  "receipt_id": "RCPT-000024",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000019",
+  "generated": "2026-09-13T22:06:43Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000019",
+  "title": "A Geometry of Admissible Seams: Contract-Bound Invariants and Auditable Transitions",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.1",
+  "date": "2026-09-13T18:00:00Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "candidate",
+  "functional_locus": "umcp",
+  "domain_primary": "mathematics",
+  "structural_focus_primary": "continuity",
+  "main_question": "How can heterogeneous transitions be represented geometrically while keeping admissibility dependent on explicit contract and seam conditions rather than scalar resemblance?",
+  "evidence_mode_primary": "formal-derivation",
+  "provenance": "corpus-native",
+  "maturity": "historical",
+  "source_ids": [
+    "SRC-000024"
+  ],
+  "relation_ids": [],
+  "publication_state": "preprint",
+  "non_blocking_missingness": [
+    "public abstract for this member work (SOURCE_BOUNDARY)",
+    "historical terminology vs current architecture (UNRESOLVED_SEAM)"
+  ],
+  "open_burdens": [
+    "Demonstrate portability, where claimed, through explicit embedding and closure disclosure, reproducible audit records (manifests or manifest hashes, closure registries, representative audit rows with seam diagnostics), seam viability, closure stability under reuse, consistent admissibility behavior, and a quantified failure boundary (the source's Appendix D portability criteria). Until those burdens are discharged, the geometric mappings and closures remain contract-local historical constructions rather than universal seam rules or current protocol authority."
+  ],
+  "next_burden": "Demonstrate portability, where claimed, through explicit embedding and closure disclosure, reproducible audit records (manifests or manifest hashes, closure registries, representative audit rows with seam diagnostics), seam viability, closure stability under reuse, consistent admissibility behavior, and a quantified failure boundary (the source's Appendix D portability criteria). Until those burdens are discharged, the geometric mappings and closures remain contract-local historical constructions rather than universal seam rules or current protocol authority."
+}

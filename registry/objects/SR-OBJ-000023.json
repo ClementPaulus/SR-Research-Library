@@ -1,0 +1,116 @@
+{
+  "object_id": "SR-OBJ-000023",
+  "title": "Identifiable Return in Memristive Associative Memory: A Generative Collapse Dynamics Analysis of Recurrent Pattern Completion",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "external-ingress",
+    "secondary": [
+      "diagnostic",
+      "domain-translation"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000052",
+    "SRC-000051"
+  ],
+  "lens": "identity-aware retrospective return audit of an external hardware experiment",
+  "domain": {
+    "primary": "computer-science",
+    "secondary": [
+      "engineering",
+      "cognitive-science"
+    ]
+  },
+  "object_of_study": "Identity-preserving recurrent pattern completion under declared cue corruption and hardware constraints.",
+  "structural_focus": {
+    "primary": "identity",
+    "secondary": [
+      "return",
+      "memory",
+      "recovery",
+      "robustness"
+    ]
+  },
+  "main_question": "Under what conditions does a physically constrained recurrent computation recover the intended memory rather than merely settle, repeat, or produce a similar state?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "He et al. (SRC-000051, Nature Communications 17, 3096, 2026) report a hardware-adaptive learning algorithm for associative memory on memristor crossbars with released trajectory data (as read by the local analysis)."
+    },
+    {
+      "layer": "structural-mapping",
+      "claim": "The local manuscript (SRC-000052, Version 1.2) supplies an identity-aware recovery certificate, a reproducible retrospective audit of ten released trajectories, target-specific acceptance regions, a reconstruction residual, local contraction, an implementation-error burden, separation from competing memories, and a prospective test design."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Version 1.2 boundary: the analysis includes a retrospective evidence freeze and acquired Figure-3 arrays; it does not retroactively become preregistered; no new chip experiment, completed hardware certificate, or completed UMCP kernel run is claimed."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library places this as external ingress with diagnostic and domain-translation secondary roles; no GCD interpretation is attributed to He et al."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "retrospective-analysis",
+    "secondary": [
+      "computational-reproduction",
+      "formal-proof",
+      "prospective-protocol"
+    ]
+  },
+  "provenance": "externally-anchored-derivative",
+  "maturity": "retrospectively-evaluated",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "publication_state": "registered-only",
+  "source_boundary": "The governing source is SRC-000052 (\"Identifiable Return in Memristive Associative Memory: A Generative Collapse Dynamics Analysis of Recurrent Pattern Completion\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. The external anchor SRC-000051 (He et al.; DOI 10.1038/s41467-026-69958-0) is the analysed study; its DOI and publication state belong to the external article, not to this object or its corpus-native source. Source-native statements about the local manuscript are recorded from the owner-supplied manuscript description; the full text is not held by the library.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority, canon status, proof, weld, scientific endorsement, or release status.",
+  "scope": "Retrospective, frozen analysis of ten released trajectories from the external study under declared cue corruption and hardware constraints, with an identity-aware recovery certificate and a prospective test design.",
+  "exclusions": [
+    "Does not report a new chip experiment.",
+    "Does not claim a completed hardware certificate.",
+    "Does not claim a completed UMCP kernel run.",
+    "Does not retroactively claim preregistration.",
+    "Does not attribute GCD interpretation to He et al."
+  ],
+  "preserved_meaning": "The distinction between recovering the intended memory (identifiable return) and merely settling, repeating, or producing a similar state.",
+  "missingness": [
+    {
+      "item": "public DOI or archive deposit for the local manuscript",
+      "class": "PUBLICATION_BOUNDARY",
+      "notes": "None found (Zenodo search 2026-09-13); identity rests on the owner-supplied manuscript ID GCD-AM-IR.2026-09-08 v1.2. Publication state recorded as registered-only."
+    },
+    {
+      "item": "cited Zenodo study archive of the external article",
+      "class": "SOURCE_BOUNDARY",
+      "notes": "Not acquired."
+    },
+    {
+      "item": "per-update physical acquisition uncertainty and stop/padding semantics",
+      "class": "NON_BLOCKING",
+      "notes": "Open burdens preserved from the manuscript."
+    },
+    {
+      "item": "operator-level physical verification and calibration/regional-bound burden",
+      "class": "NON_BLOCKING",
+      "notes": "Open burdens preserved from the manuscript."
+    },
+    {
+      "item": "prospective sampling burden",
+      "class": "NON_BLOCKING",
+      "notes": "The prospective test is designed, not executed."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading the retrospective certificate as a completed hardware certificate or UMCP run, treating a similar settled state as identifiable return, or assigning the external article's DOI or publication state to the local paper.",
+  "next_burden": "A prospective hardware-aware return test with frozen target identities, a cue law, acceptance regions, an identity margin, an implementation/calibration envelope, complete trajectory acquisition, a stopping horizon, a dwell requirement, and typed handling of wrong-memory capture, spurious stabilization, periodic behavior, finite-horizon non-return, and missing evidence.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "External anchor and local manuscript carry separate source identities (SRC-000051 external; SRC-000052 corpus-native, no DOI). Registered in the 2026-09 Tier-2 census and repair pass; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

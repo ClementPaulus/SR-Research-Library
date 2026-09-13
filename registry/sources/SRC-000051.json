@@ -1,0 +1,45 @@
+{
+  "source_id": "SRC-000051",
+  "source_type": "external",
+  "status": "active",
+  "title": "A hardware-adaptive learning algorithm for superlinear-capacity associative memory on memristor crossbars",
+  "version": null,
+  "source_authors": [
+    "Chengping He",
+    "Mingrui Jiang",
+    "Keyi Shan",
+    "Szu-Hao Yang",
+    "Zefan Li",
+    "Shengbo Wang",
+    "Giacomo Pedretti",
+    "Jim Ignowski",
+    "Can Li"
+  ],
+  "source_native_claims": [
+    "Reports a hardware-adaptive learning algorithm for associative memory on memristor crossbars with released trajectory data (per the article title and the local analysis SRC-000052; the article's own text is not held by the library)."
+  ],
+  "identifier": {
+    "doi": "10.1038/s41467-026-69958-0",
+    "url": "https://doi.org/10.1038/s41467-026-69958-0"
+  },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
+  "publication_year": 2026,
+  "venue": "Nature Communications 17, 3096",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.1038/s41467-026-69958-0",
+      "preferred": true
+    }
+  ],
+  "missingness": [
+    "Full text not held by the library; source-native claims are limited to what the title and the derivative analysis (SRC-000052) attribute to the article.",
+    "The cited Zenodo study archive of the article is not acquired (per the local analysis)."
+  ],
+  "notes": "External source. This DOI belongs to He et al. and is never assigned to the local derivative manuscript (SRC-000052 / SR-OBJ-000023). Crossref verification (2026-09-13): DOI 10.1038/s41467-026-69958-0, Nature Communications vol. 17, article 3096, published online 2026-02-23, nine authors as listed."
+}

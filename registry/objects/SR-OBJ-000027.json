@@ -1,0 +1,89 @@
+{
+  "object_id": "SR-OBJ-000027",
+  "title": "Contract-First Epistemology: Measurement, Return, and the Structure of Legitimate Claims",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "pedagogical",
+    "secondary": [
+      "handoff"
+    ]
+  },
+  "functional_locus": "cross-system",
+  "source_ids": [
+    "SRC-000055"
+  ],
+  "lens": "full course / formal teaching architecture",
+  "domain": {
+    "primary": "education",
+    "secondary": [
+      "structura-reditus-core",
+      "philosophy"
+    ]
+  },
+  "object_of_study": "Operational transmission of contract-first evaluation to another evaluator.",
+  "structural_focus": {
+    "primary": "translation",
+    "secondary": [
+      "adaptation",
+      "return"
+    ]
+  },
+  "main_question": "How should a claim earn evaluative standing under declared object, contract, closure, missingness, ledger and stance discipline?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "A twenty-eight-week college-level teaching architecture (Course Architecture v1.0, May 6, 2026) within the GCD / UMCP teaching route; its mandate is to train students to produce auditable evaluative structure before rendering judgment."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Core route: Contract -> Canon -> Closures -> Integrity Ledger -> Stance (the course's five-stop spine and derived three-valued stance)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "The course architecture is structurally declared (source-stated); classroom efficacy is a separate, not-yet-evaluable claim that the source itself says should not be asserted as proven until it returns through actual instruction, student artifacts, assessment records, and repair evidence."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library places this as the pedagogical parent object of the course line; Semester I, Semester II, and the Syllabus and Audit Receipt are distinct teaching witnesses with their own records."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "pedagogical",
+    "secondary": [
+      "conceptual-argument",
+      "no-empirical-validation"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000055 (\"Contract-First Epistemology: Measurement, Return, and the Structure of Legitimate Claims (Full Course Architecture v1.0)\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. Course-architecture completion is what the source establishes; classroom effectiveness is not established by the source or by this object.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority, canon status, proof, weld, scientific endorsement, or release status.",
+  "scope": "The complete twenty-eight-week course architecture: universal preamble, Semester I (Weeks 1–14), Semester II (Weeks 15–28), Teaching Kit, templates, ledgers, readiness checks, rubrics, and final transmission instruments.",
+  "exclusions": [
+    "Does not claim classroom effectiveness from complete course architecture.",
+    "Does not require students to master the full GCD / UMCP mathematical corpus.",
+    "Does not grant any authority tier to course completion."
+  ],
+  "preserved_meaning": "The course's separation of structural readiness (declared, auditable architecture) from unproven classroom efficacy.",
+  "missingness": [
+    {
+      "item": "classroom efficacy",
+      "class": "NON_BLOCKING",
+      "notes": "NON_EVALUABLE until tested through student artifacts, rubric results, defense outcomes, repair logs, instructor notes, and later transmission evidence (source stance). Distinct from the structural conformance of the architecture, which the source establishes."
+    }
+  ],
+  "distortion_or_substitution_risk": "Treating complete course architecture as evidence of teaching effectiveness, or collapsing the structural-readiness claim into an efficacy claim.",
+  "next_burden": "Live pedagogical return: student/evaluator artifacts showing the method can be operated independently without author mediation. Classroom effectiveness is not claimed from complete course architecture.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Member work of the shared course archive 10.5281/zenodo.20074210 (full course file). Registered in the 2026-09 Tier-2 census and repair pass; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

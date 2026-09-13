@@ -1,0 +1,73 @@
+{
+  "receipt_id": "RCPT-000029",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000024",
+  "generated": "2026-09-13T22:06:51Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000024",
+  "title": "Language Across Articulation: Meaning, Translation, and Epistemic Accountability in Structura Reditus",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "language-contact",
+  "functional_locus": "ulrc",
+  "domain_primary": "linguistics",
+  "structural_focus_primary": "translation",
+  "main_question": "How can expressive and interpretive flexibility coexist with accountable preservation of what an articulation is doing?",
+  "evidence_mode_primary": "source-synthesis",
+  "provenance": "externally-anchored-derivative",
+  "maturity": "source-bounded",
+  "source_ids": [
+    "SRC-000053"
+  ],
+  "relation_ids": [],
+  "publication_state": "archived",
+  "non_blocking_missingness": [
+    "empirical validation (NON_BLOCKING)",
+    "peer review / journal acceptance (PUBLICATION_BOUNDARY)"
+  ],
+  "open_burdens": [
+    "Prospective tests of whether independently specified burden profiles can be preserved, clarified, or correctly flagged as changed across translators, readers, media, or contexts. No empirical validation is claimed by the current paper."
+  ],
+  "next_burden": "Prospective tests of whether independently specified burden profiles can be preserved, clarified, or correctly flagged as changed across translators, readers, media, or contexts. No empirical validation is claimed by the current paper."
+}

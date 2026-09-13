@@ -1,0 +1,73 @@
+{
+  "receipt_id": "RCPT-000023",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000017",
+  "generated": "2026-09-13T22:06:42Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000017",
+  "title": "Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.1",
+  "date": "2026-09-13T18:00:00Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "candidate",
+  "functional_locus": "rcft",
+  "domain_primary": "mathematics",
+  "structural_focus_primary": "continuity",
+  "main_question": "What dynamic and continuity properties follow when the historical collapse algebra is extended into a differential calculus under frozen contracts?",
+  "evidence_mode_primary": "formal-derivation",
+  "provenance": "corpus-native",
+  "maturity": "historical",
+  "source_ids": [
+    "SRC-000034"
+  ],
+  "relation_ids": [],
+  "publication_state": "preprint",
+  "non_blocking_missingness": [
+    "historical terminology vs current architecture (UNRESOLVED_SEAM)",
+    "source-native claims beyond the abstract and policy surface (NON_BLOCKING)"
+  ],
+  "open_burdens": [
+    "Independently replay the historical weld lifecycle against the source's declared verification targets: satisfy the source-local weld-budget identity (pre/post test on the same anchor with tolerance on |Δκ|) within tolerance, emit the reconciled audit record (manifest snapshot and hashed audit rows), verify artifact hashes against the recorded manifest, and test the source's stated continuity behavior of κ / integrity under its declared composition and piecewise-secant rules. Any translation into the mature Structura Reditus architecture requires a separately declared repair or mapping; no historical equation, closure, return-credit rule, or weld mechanic is promoted into current Tier-1 or Tier-0 authority by this object."
+  ],
+  "next_burden": "Independently replay the historical weld lifecycle against the source's declared verification targets: satisfy the source-local weld-budget identity (pre/post test on the same anchor with tolerance on |Δκ|) within tolerance, emit the reconciled audit record (manifest snapshot and hashed audit rows), verify artifact hashes against the recorded manifest, and test the source's stated continuity behavior of κ / integrity under its declared composition and piecewise-secant rules. Any translation into the mature Structura Reditus architecture requires a separately declared repair or mapping; no historical equation, closure, return-credit rule, or weld mechanic is promoted into current Tier-1 or Tier-0 authority by this object."
+}

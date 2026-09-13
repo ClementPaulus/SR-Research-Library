@@ -1,0 +1,45 @@
+{
+  "source_id": "SRC-000059",
+  "source_type": "corpus-native",
+  "status": "active",
+  "title": "Shape, Phase, and Forcing in Saturn's Southern Decagon: An Integrated Inference and External-Testing Protocol",
+  "version": "2.0.1 (Final author edition)",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Primary role (source-stated): analytical methods paper with a proposed observational reanalysis and controlled numerical experiments.",
+    "Primary object (source-stated): the separation of collective angular motion, internal geometric deformation, tracer visibility, and forcing in Saturn's southern wave-number-10 pattern.",
+    "Primary claim (source-stated): mechanism discrimination requires identifiable signal content that the admitted nuisance freedoms and competing models cannot absorb.",
+    "Result status (source-stated): conditional proofs and analytical design; not a completed observational preregistration."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.22550978",
+    "url": "https://doi.org/10.5281/zenodo.22550978"
+  },
+  "concept_doi": "10.5281/zenodo.22550977",
+  "version_doi": "10.5281/zenodo.22550978",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.22550978",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/22550978",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "No Tier-2 object is registered for this source in this pass: the corpus owner has not supplied the library classification, and SEAM-0020 is updated to reflect that the source is now acquired."
+  ],
+  "notes": "Corpus-native analytical methods paper (Final author edition v2.0.1, 6 September 2026). The paper states: 'The observational discovery belongs to Sánchez-Lavega and collaborators. The present contribution is a set of analytical distinctions and tests, not a claim to have discovered the decagon or established its cause.' Corpus role (source-stated): local Tier-2 methodological witness under Summa Reditus, Architecture Freeze v1.0; RCFT candidate development and ULRC clarification. Registered as a source only; formerly SOURCE_NEEDED (SEAM-0020). Zenodo verification (2026-09-13, API metadata): record 22550978, title \"Shape, Phase, and Forcing in Saturn's Southern Decagon: An Integrated Inference and External-Testing Protocol\", creators ['Paulus, Clement'], publication date 2026-09-06, resource type Preprint."
+}

@@ -1,0 +1,44 @@
+{
+  "source_id": "SRC-000053",
+  "source_type": "corpus-native",
+  "status": "active",
+  "title": "Language Across Articulation: Meaning, Translation, and Epistemic Accountability in Structura Reditus",
+  "version": "1.2 (Publication edition)",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Role and mandate (source-stated): a comparative language paper led by the Unified Language of Recursive Collapse (ULRC), articulating the corpus's position through engagement with Pleyer and colleagues' design-features review; its function is ingress, carrying ULRC's contact discipline into open literature under Tier-2 authority without changing ULRC.",
+    "Evidence boundary (source-stated): supplied source editions and selected primary literature identified in the references; source cutoff 8 September 2026; no new participant data, empirical validation, canonical return, or weld is reported.",
+    "Paper-local formal constructions remain Tier-2 proposals, not kernel definitions or adopted protocol."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.22695438",
+    "url": "https://doi.org/10.5281/zenodo.22695438"
+  },
+  "concept_doi": "10.5281/zenodo.22695437",
+  "version_doi": "10.5281/zenodo.22695438",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.22695438",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/22695438",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "No participant data, empirical validation, canonical return, weld, peer review, or journal acceptance is claimed by the edition (source-stated publication boundary)."
+  ],
+  "notes": "Corpus-native comparative language paper led by ULRC (Version 1.2, Publication edition, 9 September 2026). The edition's own publication boundary states: 'Final Zenodo publication DOI: 10.5281/zenodo.22695438. This DOI records the archive deposit; journal acceptance, independent certification, and peer-review status are not claimed by this edition.' The paper places itself as a local witness under Summa Reditus, Architecture Freeze v1.0. Zenodo verification (2026-09-13, API metadata): record 22695438, title \"Language Across Articulation: Meaning, Translation, and Epistemic Accountability in Structura Reditus\", creators ['Paulus, Clement'], publication date 2026-09-09, resource type Preprint."
+}

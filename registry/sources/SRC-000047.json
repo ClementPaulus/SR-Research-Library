@@ -1,0 +1,44 @@
+{
+  "source_id": "SRC-000047",
+  "source_type": "corpus-native",
+  "status": "active",
+  "title": "GCD / UMCP: The First Seam-Chain Casepack: A Worked Case Showing Composed Continuity Across Multiple Welded Seams",
+  "version": "1.0",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "A single welded seam proves that one local continuity claim reconciles under frozen seam accounting; it does not yet prove that continuity composes across a sequence of seams.",
+    "The paper constructs a bounded five-state local episode with two candidate local seams (0->2 and 2->4) and asks whether the composed transition 0->4 reconciles as one chain-level continuity claim under one frozen seam-chain contract.",
+    "Local welds are necessary for seam-chain continuity but not sufficient: no chain residual closure, no composed continuity.",
+    "Non-goal (source-stated): no new domain closure, no resistant-corpus continuity claim, no governance procedure, no universalized local return-rate closure, no portable chain law, no extension or redefinition of Tier-1, and no claim that local welds compose automatically.",
+    "What This Enables Next (source-stated): a small domain closure with welded transitions, a publication-infrastructure casepack using receipt chains, a repository implementation of seam-chain validation, and a failure taxonomy for chain composition; the paper enables these burdens but does not absorb them."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.19870445",
+    "url": "https://doi.org/10.5281/zenodo.19870445"
+  },
+  "concept_doi": "10.5281/zenodo.19870444",
+  "version_doi": "10.5281/zenodo.19870445",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.19870445",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/19870445",
+      "preferred": false
+    }
+  ],
+  "missingness": [],
+  "notes": "Corpus-native pass/casepack paper (corpus v1.0, April 27, 2026); the paper states it occupies the fifth rung of the local post-The First Pass casepack ladder (The First Pass -> The Heterogeneous Local Pass -> The First Finite-Return Casepack -> The First Welded Seam Casepack -> this paper). The paper's own metadata note says DOI records and repository identifiers are maintained in archive metadata and are not part of the internal seam-chain proof. Zenodo verification (2026-09-13, API metadata): record 19870445, title \"GCD / UMCP: The First Seam-Chain Casepack: A Worked Case Showing Composed Continuity Across Multiple Welded Seams\", creators ['Paulus, Clement'], publication date 2026-04-27, resource type Working paper."
+}

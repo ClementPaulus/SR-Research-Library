@@ -1,0 +1,72 @@
+{
+  "receipt_id": "RCPT-000032",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000027",
+  "generated": "2026-09-13T22:06:56Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000027",
+  "title": "Contract-First Epistemology: Measurement, Return, and the Structure of Legitimate Claims",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "pedagogical",
+  "functional_locus": "cross-system",
+  "domain_primary": "education",
+  "structural_focus_primary": "translation",
+  "main_question": "How should a claim earn evaluative standing under declared object, contract, closure, missingness, ledger and stance discipline?",
+  "evidence_mode_primary": "pedagogical",
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "source_ids": [
+    "SRC-000055"
+  ],
+  "relation_ids": [],
+  "publication_state": "archived",
+  "non_blocking_missingness": [
+    "classroom efficacy (NON_BLOCKING)"
+  ],
+  "open_burdens": [
+    "Live pedagogical return: student/evaluator artifacts showing the method can be operated independently without author mediation. Classroom effectiveness is not claimed from complete course architecture."
+  ],
+  "next_burden": "Live pedagogical return: student/evaluator artifacts showing the method can be operated independently without author mediation. Classroom effectiveness is not claimed from complete course architecture."
+}

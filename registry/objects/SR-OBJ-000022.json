@@ -1,0 +1,114 @@
+{
+  "object_id": "SR-OBJ-000022",
+  "title": "Recursive Accelerating Return: A Generative Collapse Dynamics Theory of Endogenous Generative Capacity",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "candidate",
+    "secondary": [
+      "diagnostic"
+    ]
+  },
+  "functional_locus": "rcft",
+  "source_ids": [
+    "SRC-000050"
+  ],
+  "lens": "derived GCD regime theory",
+  "domain": {
+    "primary": "systems-theory",
+    "secondary": [
+      "economics",
+      "computer-science",
+      "structura-reditus-core"
+    ]
+  },
+  "object_of_study": "A collapse-return recurrence in which admitted returned structure changes the next productive generator and the resulting effective productive rate may accelerate, decelerate, saturate, reverse, or fail.",
+  "structural_focus": {
+    "primary": "recurrence",
+    "secondary": [
+      "causation",
+      "adaptation",
+      "return"
+    ]
+  },
+  "main_question": "What must be inherited, what counts as admissible return, and what rate must increase before a recursive acceleration claim is earned?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "RAR is formulated as a derived regime of GCD and does not redefine the Tier-1 UMCP kernel (source-stated publication status)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Operational classification requires admissible return, an identified endogenous operator change, a positive identified effect of that change on later productive capacity, a positive increasing effective log-capacity rate across the declared observation window, and frozen persistence/uncertainty/resource-accounting conditions (GCD.RAR.CORE)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "The classification does not by itself establish that inheritance caused the rate increase; a causal-RAR claim requires an additional longitudinal counterfactual."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Evidence boundary: formal theory, synthetic operational demonstrations, and a prospective falsification design; no empirical validation of RAR is claimed."
+    },
+    {
+      "layer": "candidate-claim",
+      "claim": "The source's conditional claim: trajectories satisfying the stated conditions belong to a RAR solution class of GCD; this is not a forecast of inevitable acceleration."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library places this as candidate-class theory under RCFT (exploration before freeze) with a diagnostic secondary role."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "formal-derivation",
+    "secondary": [
+      "simulation",
+      "prospective-protocol",
+      "no-empirical-validation"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "prospectively-testable",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000050 (\"Recursive Accelerating Return: A Generative Collapse Dynamics Theory of Endogenous Generative Capacity\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. Formal theory, synthetic demonstrations, and a prospective falsification design are included; no empirical validation of RAR is claimed by the source or by this object.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority, canon status, proof, weld, scientific endorsement, or release status.",
+  "scope": "Formal statement of Recursive Accelerating Return as a derived GCD regime: cycle boundary, admissible return, endogenous operator recursion, effective generative return rate r_n = a_n / Δt_n, the GCD.RAR.CORE study-level contract, the GCD.RAR.MAP.<domain> mapping requirement, synthetic demonstrations, and a prospective test domain.",
+  "exclusions": [
+    "Does not redefine the Tier-1 kernel.",
+    "Does not claim empirical validation of RAR.",
+    "Does not claim that all complex systems accelerate or that technological acceleration is inevitable.",
+    "Does not by itself establish that inheritance caused an observed rate increase."
+  ],
+  "preserved_meaning": "The source's separation of generative capacity, per-cycle log-gain, and inter-return interval, and its conditional (not forecasting) character.",
+  "missingness": [
+    {
+      "item": "empirical validation of RAR",
+      "class": "NON_BLOCKING",
+      "notes": "None claimed by the source; prospective validation is the declared next burden."
+    },
+    {
+      "item": "longitudinal causal evidence for causal-RAR",
+      "class": "NON_BLOCKING",
+      "notes": "Required by the source for the stronger causal mechanism claim; not supplied."
+    },
+    {
+      "item": "archive record version label and full title",
+      "class": "NON_BLOCKING",
+      "notes": "The Zenodo record carries the short title and no version label; identity is taken from the manuscript front matter (Publication ID GCD-RAR.2026-08-26)."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading the RAR classification as proof that inheritance caused acceleration, or reading a derived regime theory as kernel authority or as a forecast.",
+  "next_burden": "Prospective domain validation under a frozen GCD.RAR.CORE contract and a declared GCD.RAR.MAP.<domain> mapping contract, including admitted-return timestamps, an operator-equivalence rule, a causal inheritance design, a capacity functional, resource normalization, failed-attempt accounting, an exogenous-exposure policy, an uncertainty/persistence rule, and model comparison (source-stated).",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "DOI 10.5281/zenodo.22035775 is stated by the manuscript; it was not resolvable on the first 2026-09-13 check (SEAM-0021) and resolves on re-verification to the concept record (latest version 22121149). The source places itself under Summa Reditus canonical placement. Registered in the 2026-09 Tier-2 census and repair pass; classification supplied by the corpus owner under the current Structura Reditus architecture.",
+  "governing_refs": [
+    "SR-GOV-000001"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "source_id": "SRC-000055",
+  "source_type": "corpus-native",
+  "status": "active",
+  "title": "Contract-First Epistemology: Measurement, Return, and the Structure of Legitimate Claims (Full Course Architecture v1.0)",
+  "version": "Course Architecture v1.0",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "A twenty-eight-week college-level teaching architecture within the GCD / UMCP teaching route whose formal field anchor is Contract-First Epistemology of Measurement (record description).",
+    "Course mandate (source-stated): train students to produce auditable evaluative structure before rendering judgment; the primary instructional object is operational fluency, not passive comprehension.",
+    "The course's own audit stance: classroom efficacy should not be asserted as proven until it returns through actual instruction, student artifacts, assessment records, and repair evidence."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.20074210",
+    "url": "https://doi.org/10.5281/zenodo.20074210"
+  },
+  "concept_doi": "10.5281/zenodo.20074209",
+  "version_doi": "10.5281/zenodo.20074210",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.20074210",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/20074210",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "The Zenodo record title is the archive title; the member file carries the course title without the 'Full Course Architecture v1.0' suffix."
+  ],
+  "notes": "Member work of the shared Zenodo archive 10.5281/zenodo.20074210 (concept 10.5281/zenodo.20074209, resource type Lesson, 2026-05-06), whose file listing is: 'Contract First Epistemology.pdf' (full course, SRC-000055), 'semester_1.pdf' (SRC-000056), 'semester_2.pdf' (SRC-000057), 'course syllabus and audit receipt.pdf' (SRC-000058), and 'course_layout.pdf' (course layout; not registered separately). The SourceID identifies the named member work; the DOI identifies the archive (SEAM-0008 policy). This record is the member file 'Contract First Epistemology.pdf'. Zenodo verification (2026-09-13, API metadata): record 20074210, title \"Contract-First Epistemology: Measurement, Return, and the Structure of Legitimate Claims\", creators ['Paulus, Clement'], publication date 2026-05-06, resource type Lesson."
+}

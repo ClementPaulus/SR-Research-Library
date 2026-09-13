@@ -1,0 +1,53 @@
+{
+  "source_id": "SRC-000054",
+  "source_type": "historical",
+  "status": "historical",
+  "title": "Confinement as Integrity Collapse: A Contract-Frozen Structural Signature of Quark Binding in the GCD/UMCP Measurement Kernel",
+  "version": "Latest closed edition 2026-05-27 (SS1m-CONFINE-T3-2025; original T3 closure 2025-07-11)",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "The paper asks a complementary measurement question to non-perturbative QCD: what structural signature the quark->hadron boundary leaves when quarks and hadrons are evaluated under a single frozen particle-data closure; the kernel receives only the declared particle trace, not the QCD Lagrangian, a confining potential, Wilson loops, lattice configurations, or a running coupling.",
+    "Under the declared source-local closure, the mean integrity composite falls from 0.581 (quarks) to 0.0111 (hadrons), a 98.1% drop; all 14 conventional hadrons satisfy IC_h < IC_q,min = 0.517 while the arithmetic mean F drops by only 28.5%; the heterogeneity gap amplifies by 10.8x; the 14/14 bound holds across a guard-band sweep, and six exotic hadrons also fall in the hadron integrity band.",
+    "Source-stated non-claims: it is not an analytic proof of QCD confinement, does not solve the Yang-Mills mass-gap problem, and does not replace non-perturbative QCD; its contribution is narrower and falsifiable under the declared closure.",
+    "Source-stated falsifier: a new color-singlet hadron with IC >= 0.517 under the same frozen composite-particle closure would violate the universal-suppression claim of Theorem T3."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.20420835",
+    "url": "https://doi.org/10.5281/zenodo.20420835"
+  },
+  "concept_doi": "10.5281/zenodo.20420835",
+  "version_doi": "10.5281/zenodo.20437261",
+  "related_dois": [
+    {
+      "doi": "10.5281/zenodo.20420836",
+      "relation": "alternate_record",
+      "notes": "Second version record under the same concept, dated 2026-05-28, same file name; relationship to the 2026-05-27 record not stated by the records."
+    }
+  ],
+  "supersedes": [],
+  "superseded_by": null,
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.20420835",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/20437261",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "The Zenodo record carries no description; source-native claims are taken from the deposited PDF's abstract and stated non-claims.",
+    "Two version records exist under the concept (20437261 dated 2026-05-27, 20420836 dated 2026-05-28); the concept DOI resolves to 20437261, which is recorded as the version DOI. Which deposit the corpus owner regards as the closed edition is not stated by the records.",
+    "The original 2025-07-11 T3 closure is dated in the manuscript but has no separate public deposit known to the library."
+  ],
+  "notes": "Historical / prefreeze scientific closure (original T3 closure 2025-07-11, historical manuscript identifier SS1m-CONFINE-T3-2025), redeposited as a closed edition in 2026. Historical terminology and mechanics are preserved as source evidence and do not overwrite the mature Structura Reditus architecture; the paper's title variant in the maintenance instruction ('A Measurable Structural Signature ...') differs from the deposited title ('A Contract-Frozen Structural Signature ...'); the deposited title is used. Zenodo verification (2026-09-13, API metadata): record 20437261, title \"Confinement as Integrity Collapse: A Contract-Frozen Structural Signature of Quark Binding in the GCD/UMCP Measurement Kernel\", creators ['Paulus, Clement'], publication date 2026-05-27, resource type Report."
+}

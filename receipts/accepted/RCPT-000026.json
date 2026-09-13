@@ -1,0 +1,76 @@
+{
+  "receipt_id": "RCPT-000026",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000021",
+  "generated": "2026-09-13T22:06:46Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000021",
+  "title": "Nested Return in a Composite Diamond Clock: A Welded-Seam Audit of Phase Projection, Thermal Nulling, and Residual-Burden Migration",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "external-ingress",
+  "functional_locus": "umcp",
+  "domain_primary": "physics",
+  "structural_focus_primary": "residual-migration",
+  "main_question": "What structural operation occurs when phase-generated contamination is projected away, thermal drift is nulled, the target oscillator mode is preserved, and a previously subdominant residual becomes governing?",
+  "evidence_mode_primary": "secondary-empirical",
+  "provenance": "externally-anchored-derivative",
+  "maturity": "source-bounded",
+  "source_ids": [
+    "SRC-000049",
+    "SRC-000048"
+  ],
+  "relation_ids": [],
+  "publication_state": "archived",
+  "non_blocking_missingness": [
+    "raw experimental data of the external anchor (SOURCE_BOUNDARY)",
+    "absolute-accuracy burden and long-duration reproducibility (NON_BLOCKING)",
+    "remaining environmental/technical channels and feedback-loop completion (NON_BLOCKING)",
+    "canonical UMCP return contract, seam accounting, and weld evaluation (AUTHORITY_BOUNDARY)"
+  ],
+  "open_burdens": [
+    "A canonical UMCP return/weld claim would require a separately frozen object definition, adapter, bounded trace, missingness policy, eligible return domain, metric, tolerance, horizon/time base, seam-accounting profile, closure registry, return-credit profile, residual tolerance, and RunID (source-stated). The local nested-restoration result is not turned into canonical weld."
+  ],
+  "next_burden": "A canonical UMCP return/weld claim would require a separately frozen object definition, adapter, bounded trace, missingness policy, eligible return domain, metric, tolerance, horizon/time base, seam-accounting profile, closure registry, return-credit profile, residual tolerance, and RunID (source-stated). The local nested-restoration result is not turned into canonical weld."
+}

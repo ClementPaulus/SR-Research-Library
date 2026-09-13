@@ -1,0 +1,110 @@
+{
+  "object_id": "SR-OBJ-000021",
+  "title": "Nested Return in a Composite Diamond Clock: A Welded-Seam Audit of Phase Projection, Thermal Nulling, and Residual-Burden Migration",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "external-ingress",
+    "secondary": [
+      "domain-translation",
+      "diagnostic"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000049",
+    "SRC-000048"
+  ],
+  "lens": "independent secondary structural analysis of an external metrology experiment",
+  "domain": {
+    "primary": "physics",
+    "secondary": [
+      "engineering"
+    ]
+  },
+  "object_of_study": "Nested physical closure in a composite NV-center clock through phase projection, thermal-mode nulling, and post-closure systematic reordering.",
+  "structural_focus": {
+    "primary": "residual-migration",
+    "secondary": [
+      "return",
+      "robustness",
+      "boundary"
+    ]
+  },
+  "main_question": "What structural operation occurs when phase-generated contamination is projected away, thermal drift is nulled, the target oscillator mode is preserved, and a previously subdominant residual becomes governing?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "Lourette et al. (SRC-000048) report a composite diamond-clock scheme in which TTZFS-8 eight-phase cycling suppresses pulse-error-generated spectral components and a composite D/Q estimator nulls first-order thermal drift while preserving the common oscillator mode (as read by the local analysis)."
+    },
+    {
+      "layer": "structural-mapping",
+      "claim": "The local analysis (SRC-000049) reads the two operations as a typed, hierarchical local closure: phase-space projection followed by channel-space thermal nulling; once the dominant thermal burden is suppressed a new leading residual becomes visible."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "These local operators are Tier-2 labels for native physical operations; they do not redefine canonical tau_R or the reserved invariants."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "No Tier-0 UMCP weld verdict is claimed: the source lacks a GCD return contract, seam-accounting profile, return-credit definition, residual tolerance, and RunID; 'welded-seam audit' names the audit burden, not a pre-granted weld."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "secondary-empirical",
+    "secondary": [
+      "formal-derivation",
+      "source-synthesis"
+    ]
+  },
+  "provenance": "externally-anchored-derivative",
+  "maturity": "source-bounded",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000049 (\"Nested Return in a Composite Diamond Clock: A Welded-Seam Audit of Phase Projection, Thermal Nulling, and Residual-Burden Migration\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. The external anchor SRC-000048 (Lourette et al., Physical Review Applied 25, 064046, 2026; DOI 10.1103/z2sl-6gcc) is cited as the primary object of the analysis; its DOI belongs to the external article, not to this object or its corpus-native source, and no GCD interpretation is attributed to its authors.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority, canon status, proof, weld, scientific endorsement, or release status.",
+  "scope": "Independent secondary analysis of the published composite diamond-clock experiment: the TTZFS-8 phase-cycling operation, the D/Q composite thermal estimator, the residual error budget after thermal suppression, and the contrast between internal compensation and external restoration.",
+  "exclusions": [
+    "Does not redefine canonical tau_R or the reserved Tier-1 invariants.",
+    "Does not claim a Tier-0 UMCP weld verdict.",
+    "Does not report new experimental data.",
+    "Does not attribute GCD interpretation to Lourette et al."
+  ],
+  "preserved_meaning": "The distinction between native physical closure (already explicit in the source) and a canonical UMCP return/weld claim, which would require its own frozen contract and run identity.",
+  "missingness": [
+    {
+      "item": "raw experimental data of the external anchor",
+      "class": "SOURCE_BOUNDARY",
+      "notes": "Not publicly deposited (source-stated)."
+    },
+    {
+      "item": "absolute-accuracy burden and long-duration reproducibility",
+      "class": "NON_BLOCKING",
+      "notes": "Not established by the analysed source; recorded as open."
+    },
+    {
+      "item": "remaining environmental/technical channels and feedback-loop completion",
+      "class": "NON_BLOCKING",
+      "notes": "Named by the analysis as the next visible residual burdens; not resolved."
+    },
+    {
+      "item": "canonical UMCP return contract, seam accounting, and weld evaluation",
+      "class": "AUTHORITY_BOUNDARY",
+      "notes": "Absent by design; the object claims no canonical weld (NON_EVALUABLE absent a return/seam contract)."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading the local nested-restoration result as a canonical UMCP weld, or reading the Tier-2 operator labels as redefinitions of the kernel.",
+  "next_burden": "A canonical UMCP return/weld claim would require a separately frozen object definition, adapter, bounded trace, missingness policy, eligible return domain, metric, tolerance, horizon/time base, seam-accounting profile, closure registry, return-credit profile, residual tolerance, and RunID (source-stated). The local nested-restoration result is not turned into canonical weld.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "External anchor and local analysis carry separate source identities (SRC-000048 external; SRC-000049 corpus-native). The source places itself as a local witness under Summa Reditus, Architecture Freeze v1.0. Registered in the 2026-09 Tier-2 census and repair pass; classification supplied by the corpus owner under the current Structura Reditus architecture.",
+  "governing_refs": [
+    "SR-GOV-000001"
+  ]
+}

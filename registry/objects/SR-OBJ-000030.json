@@ -1,0 +1,90 @@
+{
+  "object_id": "SR-OBJ-000030",
+  "title": "Contract-First Epistemology: Full Course Syllabus and Audit Receipt",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "pedagogical",
+    "secondary": [
+      "handoff"
+    ]
+  },
+  "functional_locus": "cross-system",
+  "source_ids": [
+    "SRC-000058"
+  ],
+  "lens": "compact course audit receipt",
+  "domain": {
+    "primary": "education",
+    "secondary": [
+      "structura-reditus-core"
+    ]
+  },
+  "object_of_study": "The full twenty-eight-week teaching route treated as an evaluable object: what the course is, what it teaches, how it is sequenced, what students produce, and what counts as completion.",
+  "structural_focus": {
+    "primary": "return",
+    "secondary": [
+      "identity",
+      "continuity"
+    ]
+  },
+  "main_question": "Is the full teaching route structurally declared enough to be taught, assessed, repaired, and transmitted without author mediation?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "The syllabus receipt (Receipt ID CFE.SYLLABUS-RECEIPT.v1.0) provides a compact audit view of the full twenty-eight-week structure, designed to be read before the main course body is assessed; it treats the course itself as an evaluable object."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Scope: front matter, course body, back matter, Teaching Kit, templates, ledgers, readiness checks, rubrics, and final transmission instruments. Out of scope: empirical pilot results, live cohort performance, institutional approval, instructor-specific adaptations, and domain-specific course variants."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "The course architecture is structurally declared (source-stated); classroom efficacy is a separate, not-yet-evaluable claim that the source itself says should not be asserted as proven until it returns through actual instruction, student artifacts, assessment records, and repair evidence."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "Distinct-object test: the file carries a compact audit/receipt burden (its own receipt identity, scope, out-of-scope list, mandate, non-goal, and reader result) rather than repeating the course body; the library therefore registers it as a distinct witness."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "pedagogical",
+    "secondary": []
+  },
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000058 (\"Contract-First Epistemology: Full Course Syllabus and Audit Receipt\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. The receipt audits course architecture; live cohort performance and institutional approval are out of its scope by its own declaration.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority, canon status, proof, weld, scientific endorsement, or release status.",
+  "scope": "A fourteen-page compact audit receipt for the complete course architecture: course identity, mandate, non-goal, sequence, expected student products, completion standard, and reader result.",
+  "exclusions": [
+    "Does not repeat every lecture, worksheet, rubric, or teaching instrument.",
+    "Does not report empirical pilot results or live cohort performance.",
+    "Does not claim institutional approval."
+  ],
+  "preserved_meaning": "The full-course audit surface and the distinction between structural readiness and unproven classroom efficacy.",
+  "missingness": [
+    {
+      "item": "classroom efficacy",
+      "class": "NON_BLOCKING",
+      "notes": "Out of the receipt's declared scope; NON_EVALUABLE pending student artifacts and transmission evidence. Distinct from structural conformance."
+    },
+    {
+      "item": "separate record description for this member work",
+      "class": "SOURCE_BOUNDARY",
+      "notes": "The archive description describes the full course."
+    }
+  ],
+  "distortion_or_substitution_risk": "Reading the audit receipt as evidence that the course has been taught or has worked, or reading it as merely another copy of the full course.",
+  "next_burden": "Live use of the receipt by an instructor, reviewer, or institution to assess, repair, or transmit the course, producing actual student/evaluator artifacts; classroom efficacy remains unproven until then.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Member work of the shared course archive 10.5281/zenodo.20074210 (course syllabus and audit receipt.pdf). Registered in the 2026-09 Tier-2 census and repair pass; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

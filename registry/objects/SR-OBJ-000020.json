@@ -1,0 +1,91 @@
+{
+  "object_id": "SR-OBJ-000020",
+  "title": "GCD / UMCP: The First Seam-Chain Casepack: A Worked Case Showing Composed Continuity Across Multiple Welded Seams",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "diagnostic",
+    "secondary": [
+      "handoff"
+    ]
+  },
+  "functional_locus": "umcp",
+  "source_ids": [
+    "SRC-000047"
+  ],
+  "lens": "seam-chain composition casepack",
+  "domain": {
+    "primary": "structura-reditus-core",
+    "secondary": [
+      "mathematics",
+      "systems-theory"
+    ]
+  },
+  "object_of_study": "Composed continuity across an ordered finite sequence of locally evaluated seams under one frozen chain-accounting contract.",
+  "structural_focus": {
+    "primary": "continuity",
+    "secondary": [
+      "return",
+      "identity"
+    ]
+  },
+  "main_question": "When do individually admissible local welds compose into one admissible seam-chain rather than merely a sequence of local successes?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "A single welded seam proves that one local continuity claim reconciles under frozen seam accounting; it does not yet prove that continuity composes across a sequence of seams (source abstract)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "The paper constructs a bounded five-state local episode with two candidate local seams, 0->2 and 2->4, and asks whether the composed transition 0->4 reconciles as one chain-level continuity claim; each local seam is evaluated under the same frozen seam-chain contract."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Central result: local welds are necessary for seam-chain continuity but not sufficient unless the chain-level ledger also closes — 'no chain residual closure, no composed continuity'."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Source-stated non-goals: no new domain closure, no resistant-corpus continuity claim, no governance procedure, no universalized local return-rate closure, no portable chain law, no extension or redefinition of Tier-1, no claim that local welds compose automatically."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library places this as a diagnostic casepack with a handoff role: the source's 'What This Enables Next' names later burdens it does not absorb."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "formal-derivation",
+    "secondary": [
+      "formal-proof"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "relations": [
+    "REL-000004"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000047 (\"GCD / UMCP: The First Seam-Chain Casepack: A Worked Case Showing Composed Continuity Across Multiple Welded Seams\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority, canon status, proof, weld, scientific endorsement, or release status.",
+  "scope": "One bounded five-state local episode with two candidate local seams (0->2, 2->4) and their composition (0->4), evaluated under one frozen seam-chain contract for finite return, ledger change, drift and curvature debits, return credit, residual, identity, and stance.",
+  "exclusions": [
+    "Does not introduce a new Tier-1 structure.",
+    "Does not stage a new domain closure.",
+    "Does not claim resistant-corpus continuity.",
+    "Does not define governance procedure.",
+    "Does not claim a universal return-rate constant.",
+    "Does not claim that all local welds compose automatically."
+  ],
+  "preserved_meaning": "A local weld and a seam-chain are different burdens; composed continuity requires both local seam validity and global chain reconciliation.",
+  "missingness": [],
+  "distortion_or_substitution_risk": "Inferring chain continuity merely because every local transition looks acceptable or because multiple finite returns occurred.",
+  "next_burden": "Source-stated ('What This Enables Next'): a small domain closure with welded transitions (declaring its domain adapter before applying local weld and chain accounting), a publication-infrastructure casepack using receipt chains, a repository implementation of seam-chain validation, and a failure taxonomy for chain composition. The paper enables these burdens but does not absorb them; no external-domain chain closure is claimed to have occurred.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Fifth rung of the local casepack ladder (The First Pass -> The Heterogeneous Local Pass -> The First Finite-Return Casepack -> The First Welded Seam Casepack -> this paper), as the source states. Registered in the 2026-09 Tier-2 census and repair pass; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}

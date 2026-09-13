@@ -819,7 +819,13 @@
     },
     "concept_doi": "10.5281/zenodo.21726224",
     "version_doi": "10.5281/zenodo.22086947",
-    "related_dois": [],
+    "related_dois": [
+      {
+        "doi": "10.5281/zenodo.21726225",
+        "relation": "earlier_version",
+        "notes": "Version 1.0 record (2026-07-30) under the same concept; Version 2.0 is the current state of the same intellectual object (SR-OBJ-000011). No separate source or object."
+      }
+    ],
     "supersedes": [],
     "superseded_by": null,
     "publication_year": 2026,
@@ -1852,5 +1858,609 @@
       "No DOI of its own is established by the supplied Version 2.0 source; the first-edition DOI belongs to the 2025 edition, which the source preserves as the historical witness."
     ],
     "notes": "Companion witness per the handoff manifest: not automatically a governing reference, so no SR-GOV record is created. Historical first edition is not registered as a separate source in this pass."
+  },
+  {
+    "source_id": "SRC-000047",
+    "source_type": "corpus-native",
+    "status": "active",
+    "title": "GCD / UMCP: The First Seam-Chain Casepack: A Worked Case Showing Composed Continuity Across Multiple Welded Seams",
+    "version": "1.0",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "A single welded seam proves that one local continuity claim reconciles under frozen seam accounting; it does not yet prove that continuity composes across a sequence of seams.",
+      "The paper constructs a bounded five-state local episode with two candidate local seams (0->2 and 2->4) and asks whether the composed transition 0->4 reconciles as one chain-level continuity claim under one frozen seam-chain contract.",
+      "Local welds are necessary for seam-chain continuity but not sufficient: no chain residual closure, no composed continuity.",
+      "Non-goal (source-stated): no new domain closure, no resistant-corpus continuity claim, no governance procedure, no universalized local return-rate closure, no portable chain law, no extension or redefinition of Tier-1, and no claim that local welds compose automatically.",
+      "What This Enables Next (source-stated): a small domain closure with welded transitions, a publication-infrastructure casepack using receipt chains, a repository implementation of seam-chain validation, and a failure taxonomy for chain composition; the paper enables these burdens but does not absorb them."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.19870445",
+      "url": "https://doi.org/10.5281/zenodo.19870445"
+    },
+    "concept_doi": "10.5281/zenodo.19870444",
+    "version_doi": "10.5281/zenodo.19870445",
+    "related_dois": [],
+    "supersedes": [],
+    "superseded_by": null,
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.19870445",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/19870445",
+        "preferred": false
+      }
+    ],
+    "missingness": [],
+    "notes": "Corpus-native pass/casepack paper (corpus v1.0, April 27, 2026); the paper states it occupies the fifth rung of the local post-The First Pass casepack ladder (The First Pass -> The Heterogeneous Local Pass -> The First Finite-Return Casepack -> The First Welded Seam Casepack -> this paper). The paper's own metadata note says DOI records and repository identifiers are maintained in archive metadata and are not part of the internal seam-chain proof. Zenodo verification (2026-09-13, API metadata): record 19870445, title \"GCD / UMCP: The First Seam-Chain Casepack: A Worked Case Showing Composed Continuity Across Multiple Welded Seams\", creators ['Paulus, Clement'], publication date 2026-04-27, resource type Working paper."
+  },
+  {
+    "source_id": "SRC-000048",
+    "source_type": "external",
+    "status": "active",
+    "title": "Toward a temperature-insensitive composite diamond clock",
+    "version": null,
+    "source_authors": [
+      "Sean Lourette",
+      "Andrey Jarmola",
+      "Jabir Chathanathil",
+      "Victor M. Acosta",
+      "A. Glen Birdwell",
+      "Peter Blümler",
+      "Dmitry Budker",
+      "Sebastián C. Carrasco",
+      "Tony G. Ivanov",
+      "Shimon Kolkowitz",
+      "Vladimir S. Malinovsky"
+    ],
+    "source_native_claims": [
+      "Reports a composite diamond-clock scheme addressing the temperature sensitivity of the nitrogen-vacancy zero-field splitting near room temperature (per the article title and the local analysis SRC-000049; the article's own text is not held by the library)."
+    ],
+    "identifier": {
+      "doi": "10.1103/z2sl-6gcc",
+      "url": "https://doi.org/10.1103/z2sl-6gcc"
+    },
+    "concept_doi": null,
+    "version_doi": null,
+    "related_dois": [],
+    "supersedes": [],
+    "superseded_by": null,
+    "publication_year": 2026,
+    "venue": "Physical Review Applied 25, 064046",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.1103/z2sl-6gcc",
+        "preferred": true
+      }
+    ],
+    "missingness": [
+      "Full text not held by the library; source-native claims are limited to what the title and the derivative analysis (SRC-000049) attribute to the article.",
+      "Crossref records a correction dated 2026-06-22; the content of the correction is not recorded here."
+    ],
+    "notes": "External source. This DOI belongs to Lourette et al. and is never assigned to the local derivative analysis (SRC-000049 / SR-OBJ-000021). Crossref verification (2026-09-13): DOI 10.1103/z2sl-6gcc, Physical Review Applied vol. 25, article 064046, published online 2026-06-11, correction 2026-06-22, eleven authors as listed."
+  },
+  {
+    "source_id": "SRC-000049",
+    "source_type": "corpus-native",
+    "status": "active",
+    "title": "Nested Return in a Composite Diamond Clock: A Welded-Seam Audit of Phase Projection, Thermal Nulling, and Residual-Burden Migration",
+    "version": "1.0",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Manuscript type (source-stated): Tier-2 domain-closure study / independent secondary analysis.",
+      "Two experimentally distinct operations act on different representational spaces: TTZFS-8 eight-phase cycling suppresses pulse-error-generated spectral components (phase-space projection), and a composite D/Q estimator nulls first-order thermal drift while preserving the common oscillator mode (channel-space thermal nulling).",
+      "Once the dominant thermal mode is removed, a previously subdominant residual becomes the governing burden (residual-burden migration).",
+      "The source (Lourette et al.) does not provide a GCD return contract, seam-accounting profile, return credit, residual tolerance, or RunID; 'welded-seam audit' names the audit burden, not a pre-granted weld, and canonical weld cannot be inferred from local restoration (NON_EVALUABLE absent return/seam contract).",
+      "The local operators do not redefine canonical tau_R or the reserved invariants F, omega, S, C, kappa, IC; a separate UMCP run would require its own object definition, adapter, bounded trace, missingness policy, return domain, metric, tolerance, closure registry, and run identity."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.22155902",
+      "url": "https://doi.org/10.5281/zenodo.22155902"
+    },
+    "concept_doi": "10.5281/zenodo.22155901",
+    "version_doi": "10.5281/zenodo.22155902",
+    "related_dois": [
+      {
+        "doi": "10.1103/z2sl-6gcc",
+        "relation": "external_metadata",
+        "notes": "Zenodo relation isDerivedFrom; the DOI of the external anchor (SRC-000048), not of this work."
+      }
+    ],
+    "supersedes": [],
+    "superseded_by": null,
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.22155902",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/22155902",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "Raw experimental data of the external anchor are not publicly deposited (source-stated)."
+    ],
+    "notes": "Corpus-native independent secondary analysis (corpus version 1.0, 28 August 2026) of Lourette et al. (SRC-000048). The Zenodo record declares isDerivedFrom 10.1103/z2sl-6gcc; that DOI belongs to the external article and is not this source's identity. The record also carries source figures under a separate FIGURE_LICENSES.md. Zenodo verification (2026-09-13, API metadata): record 22155902, title \"Nested Return in a Composite Diamond Clock: A Welded-Seam Audit of Phase Projection, Thermal Nulling, and Residual-Burden Migration\", creators ['Paulus, Clement'], publication date 2026-08-28, resource type Preprint."
+  },
+  {
+    "source_id": "SRC-000050",
+    "source_type": "corpus-native",
+    "status": "active",
+    "title": "Recursive Accelerating Return: A Generative Collapse Dynamics Theory of Endogenous Generative Capacity",
+    "version": "GCD-RAR.2026-08-26",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Recursive Accelerating Return (RAR) is formulated as a derived regime of Generative Collapse Dynamics; it does not redefine the Tier-1 UMCP kernel (source-stated publication status).",
+      "The claim is conditional: if structure survives collapse, returns admissibly, alters the next generator under a declared equivalence rule, has a positive identified effect on later productive capacity, and the positive log-gain per unit elapsed inter-return time increases across successive admissible returns, then the trajectory belongs to a RAR solution class of GCD.",
+      "Showing that inheritance caused the rate increase requires an additional longitudinal counterfactual; the classification does not by itself establish causal RAR.",
+      "The study-level contract GCD.RAR.CORE freezes the cycle boundary, admissible return domain, canonical return test, inter-return interval rule, capacity functional, resource normalization, operator-equivalence rule, causal capacity test, model-comparison rule, uncertainty policy, and any exogenous-exposure policy; a domain implementation must additionally declare a Tier-2 mapping contract GCD.RAR.MAP.<domain>.",
+      "Evidence boundary (source-stated): formal theory, synthetic operational demonstrations, and a prospective falsification design are included; no empirical validation of RAR is claimed."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.22035775",
+      "url": "https://doi.org/10.5281/zenodo.22035775"
+    },
+    "concept_doi": "10.5281/zenodo.22035775",
+    "version_doi": "10.5281/zenodo.22121149",
+    "related_dois": [
+      {
+        "doi": "10.5281/zenodo.22036337",
+        "relation": "earlier_version",
+        "notes": "Version record v1, 2026-08-16, under the same concept."
+      },
+      {
+        "doi": "10.5281/zenodo.22064156",
+        "relation": "earlier_version",
+        "notes": "Version record 2026-08-22, under the same concept."
+      },
+      {
+        "doi": "10.5281/zenodo.22087426",
+        "relation": "earlier_version",
+        "notes": "Version record 2026-08-24, under the same concept."
+      },
+      {
+        "doi": "10.5281/zenodo.22118835",
+        "relation": "earlier_version",
+        "notes": "Version record 2026-08-26 (superseded the same day by 22121149), under the same concept."
+      }
+    ],
+    "supersedes": [],
+    "superseded_by": null,
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.22035775",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/22121149",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "The Zenodo record carries the short title \"Recursive Accelerating Return\" and no version label; the full title and Publication ID GCD-RAR.2026-08-26 are taken from the manuscript front matter."
+    ],
+    "notes": "Corpus-native theory paper; the manuscript states DOI 10.5281/zenodo.22035775 (the concept DOI), Publication ID GCD-RAR.2026-08-26, date August 26, 2026, evidence cutoff August 22, 2026. SEAM-0021 recorded this DOI as not resolvable on the first 2026-09-13 check; on re-verification later the same day it resolves to the concept record whose latest version is 22121149 (2026-08-26). Earlier version deposits under the concept are typed below. Zenodo verification (2026-09-13, API metadata): record 22121149, title \"Recursive Accelerating Return: A Generative Collapse Dynamics Theory of Endogenous Generative Capacity\", creators ['Paulus, Clement'], publication date 2026-08-26, resource type Publication."
+  },
+  {
+    "source_id": "SRC-000051",
+    "source_type": "external",
+    "status": "active",
+    "title": "A hardware-adaptive learning algorithm for superlinear-capacity associative memory on memristor crossbars",
+    "version": null,
+    "source_authors": [
+      "Chengping He",
+      "Mingrui Jiang",
+      "Keyi Shan",
+      "Szu-Hao Yang",
+      "Zefan Li",
+      "Shengbo Wang",
+      "Giacomo Pedretti",
+      "Jim Ignowski",
+      "Can Li"
+    ],
+    "source_native_claims": [
+      "Reports a hardware-adaptive learning algorithm for associative memory on memristor crossbars with released trajectory data (per the article title and the local analysis SRC-000052; the article's own text is not held by the library)."
+    ],
+    "identifier": {
+      "doi": "10.1038/s41467-026-69958-0",
+      "url": "https://doi.org/10.1038/s41467-026-69958-0"
+    },
+    "concept_doi": null,
+    "version_doi": null,
+    "related_dois": [],
+    "supersedes": [],
+    "superseded_by": null,
+    "publication_year": 2026,
+    "venue": "Nature Communications 17, 3096",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.1038/s41467-026-69958-0",
+        "preferred": true
+      }
+    ],
+    "missingness": [
+      "Full text not held by the library; source-native claims are limited to what the title and the derivative analysis (SRC-000052) attribute to the article.",
+      "The cited Zenodo study archive of the article is not acquired (per the local analysis)."
+    ],
+    "notes": "External source. This DOI belongs to He et al. and is never assigned to the local derivative manuscript (SRC-000052 / SR-OBJ-000023). Crossref verification (2026-09-13): DOI 10.1038/s41467-026-69958-0, Nature Communications vol. 17, article 3096, published online 2026-02-23, nine authors as listed."
+  },
+  {
+    "source_id": "SRC-000052",
+    "source_type": "corpus-native",
+    "status": "active",
+    "title": "Identifiable Return in Memristive Associative Memory: A Generative Collapse Dynamics Analysis of Recurrent Pattern Completion",
+    "version": "1.2",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Manuscript type (owner-supplied): formal companion method with frozen retrospective source-data analysis of He et al. (SRC-000051).",
+      "Contributions (owner-supplied): an identity-aware recovery certificate; a reproducible retrospective audit of ten released trajectories; target-specific acceptance regions; reconstruction residual; local contraction; implementation-error burden; separation from competing memories; and a prospective test design.",
+      "Version 1.2 boundary (owner-supplied): the analysis includes a retrospective evidence freeze and acquired Figure-3 arrays; it does not retroactively become preregistered; no new chip experiment, completed hardware certificate, or completed UMCP kernel run is claimed."
+    ],
+    "identifier": {
+      "other": "Manuscript ID GCD-AM-IR.2026-09-08; Version 1.2 dated 9 September 2026; owner-supplied manuscript identity (Tier-2 census and repair pass, 2026-09). Full text not deposited in this repository."
+    },
+    "concept_doi": null,
+    "version_doi": null,
+    "related_dois": [],
+    "supersedes": [],
+    "superseded_by": null,
+    "publication_year": 2026,
+    "venue": null,
+    "links": [],
+    "missingness": [
+      "No DOI and no public archive deposit were found for this manuscript (Zenodo search 2026-09-13 by creator and title returned no record); identity rests on the owner-supplied manuscript ID and version.",
+      "Source-native claims are recorded from the owner-supplied manuscript description; the full text is not held by the library."
+    ],
+    "notes": "Local derivative manuscript built around He et al. (SRC-000051). The external article's DOI 10.1038/s41467-026-69958-0 is not this source's identity. Publication state of the local manuscript is recorded on the object, not inherited from the external study."
+  },
+  {
+    "source_id": "SRC-000053",
+    "source_type": "corpus-native",
+    "status": "active",
+    "title": "Language Across Articulation: Meaning, Translation, and Epistemic Accountability in Structura Reditus",
+    "version": "1.2 (Publication edition)",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Role and mandate (source-stated): a comparative language paper led by the Unified Language of Recursive Collapse (ULRC), articulating the corpus's position through engagement with Pleyer and colleagues' design-features review; its function is ingress, carrying ULRC's contact discipline into open literature under Tier-2 authority without changing ULRC.",
+      "Evidence boundary (source-stated): supplied source editions and selected primary literature identified in the references; source cutoff 8 September 2026; no new participant data, empirical validation, canonical return, or weld is reported.",
+      "Paper-local formal constructions remain Tier-2 proposals, not kernel definitions or adopted protocol."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.22695438",
+      "url": "https://doi.org/10.5281/zenodo.22695438"
+    },
+    "concept_doi": "10.5281/zenodo.22695437",
+    "version_doi": "10.5281/zenodo.22695438",
+    "related_dois": [],
+    "supersedes": [],
+    "superseded_by": null,
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.22695438",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/22695438",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "No participant data, empirical validation, canonical return, weld, peer review, or journal acceptance is claimed by the edition (source-stated publication boundary)."
+    ],
+    "notes": "Corpus-native comparative language paper led by ULRC (Version 1.2, Publication edition, 9 September 2026). The edition's own publication boundary states: 'Final Zenodo publication DOI: 10.5281/zenodo.22695438. This DOI records the archive deposit; journal acceptance, independent certification, and peer-review status are not claimed by this edition.' The paper places itself as a local witness under Summa Reditus, Architecture Freeze v1.0. Zenodo verification (2026-09-13, API metadata): record 22695438, title \"Language Across Articulation: Meaning, Translation, and Epistemic Accountability in Structura Reditus\", creators ['Paulus, Clement'], publication date 2026-09-09, resource type Preprint."
+  },
+  {
+    "source_id": "SRC-000054",
+    "source_type": "historical",
+    "status": "historical",
+    "title": "Confinement as Integrity Collapse: A Contract-Frozen Structural Signature of Quark Binding in the GCD/UMCP Measurement Kernel",
+    "version": "Latest closed edition 2026-05-27 (SS1m-CONFINE-T3-2025; original T3 closure 2025-07-11)",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "The paper asks a complementary measurement question to non-perturbative QCD: what structural signature the quark->hadron boundary leaves when quarks and hadrons are evaluated under a single frozen particle-data closure; the kernel receives only the declared particle trace, not the QCD Lagrangian, a confining potential, Wilson loops, lattice configurations, or a running coupling.",
+      "Under the declared source-local closure, the mean integrity composite falls from 0.581 (quarks) to 0.0111 (hadrons), a 98.1% drop; all 14 conventional hadrons satisfy IC_h < IC_q,min = 0.517 while the arithmetic mean F drops by only 28.5%; the heterogeneity gap amplifies by 10.8x; the 14/14 bound holds across a guard-band sweep, and six exotic hadrons also fall in the hadron integrity band.",
+      "Source-stated non-claims: it is not an analytic proof of QCD confinement, does not solve the Yang-Mills mass-gap problem, and does not replace non-perturbative QCD; its contribution is narrower and falsifiable under the declared closure.",
+      "Source-stated falsifier: a new color-singlet hadron with IC >= 0.517 under the same frozen composite-particle closure would violate the universal-suppression claim of Theorem T3."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.20420835",
+      "url": "https://doi.org/10.5281/zenodo.20420835"
+    },
+    "concept_doi": "10.5281/zenodo.20420835",
+    "version_doi": "10.5281/zenodo.20437261",
+    "related_dois": [
+      {
+        "doi": "10.5281/zenodo.20420836",
+        "relation": "alternate_record",
+        "notes": "Second version record under the same concept, dated 2026-05-28, same file name; relationship to the 2026-05-27 record not stated by the records."
+      }
+    ],
+    "supersedes": [],
+    "superseded_by": null,
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.20420835",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/20437261",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "The Zenodo record carries no description; source-native claims are taken from the deposited PDF's abstract and stated non-claims.",
+      "Two version records exist under the concept (20437261 dated 2026-05-27, 20420836 dated 2026-05-28); the concept DOI resolves to 20437261, which is recorded as the version DOI. Which deposit the corpus owner regards as the closed edition is not stated by the records.",
+      "The original 2025-07-11 T3 closure is dated in the manuscript but has no separate public deposit known to the library."
+    ],
+    "notes": "Historical / prefreeze scientific closure (original T3 closure 2025-07-11, historical manuscript identifier SS1m-CONFINE-T3-2025), redeposited as a closed edition in 2026. Historical terminology and mechanics are preserved as source evidence and do not overwrite the mature Structura Reditus architecture; the paper's title variant in the maintenance instruction ('A Measurable Structural Signature ...') differs from the deposited title ('A Contract-Frozen Structural Signature ...'); the deposited title is used. Zenodo verification (2026-09-13, API metadata): record 20437261, title \"Confinement as Integrity Collapse: A Contract-Frozen Structural Signature of Quark Binding in the GCD/UMCP Measurement Kernel\", creators ['Paulus, Clement'], publication date 2026-05-27, resource type Report."
+  },
+  {
+    "source_id": "SRC-000055",
+    "source_type": "corpus-native",
+    "status": "active",
+    "title": "Contract-First Epistemology: Measurement, Return, and the Structure of Legitimate Claims (Full Course Architecture v1.0)",
+    "version": "Course Architecture v1.0",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "A twenty-eight-week college-level teaching architecture within the GCD / UMCP teaching route whose formal field anchor is Contract-First Epistemology of Measurement (record description).",
+      "Course mandate (source-stated): train students to produce auditable evaluative structure before rendering judgment; the primary instructional object is operational fluency, not passive comprehension.",
+      "The course's own audit stance: classroom efficacy should not be asserted as proven until it returns through actual instruction, student artifacts, assessment records, and repair evidence."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.20074210",
+      "url": "https://doi.org/10.5281/zenodo.20074210"
+    },
+    "concept_doi": "10.5281/zenodo.20074209",
+    "version_doi": "10.5281/zenodo.20074210",
+    "related_dois": [],
+    "supersedes": [],
+    "superseded_by": null,
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.20074210",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/20074210",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "The Zenodo record title is the archive title; the member file carries the course title without the 'Full Course Architecture v1.0' suffix."
+    ],
+    "notes": "Member work of the shared Zenodo archive 10.5281/zenodo.20074210 (concept 10.5281/zenodo.20074209, resource type Lesson, 2026-05-06), whose file listing is: 'Contract First Epistemology.pdf' (full course, SRC-000055), 'semester_1.pdf' (SRC-000056), 'semester_2.pdf' (SRC-000057), 'course syllabus and audit receipt.pdf' (SRC-000058), and 'course_layout.pdf' (course layout; not registered separately). The SourceID identifies the named member work; the DOI identifies the archive (SEAM-0008 policy). This record is the member file 'Contract First Epistemology.pdf'. Zenodo verification (2026-09-13, API metadata): record 20074210, title \"Contract-First Epistemology: Measurement, Return, and the Structure of Legitimate Claims\", creators ['Paulus, Clement'], publication date 2026-05-06, resource type Lesson."
+  },
+  {
+    "source_id": "SRC-000056",
+    "source_type": "corpus-native",
+    "status": "active",
+    "title": "Contract-First Epistemology: Semester I — Method Internalization (Weeks 1–14)",
+    "version": "Course Architecture v1.0",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Governing Semester Question (source-stated): What must be declared before judgment becomes evaluable?",
+      "Instructional burden (source-stated): make judgment evaluable before students are asked to handle return, ledger reconciliation, diagnostics, domain transfer, critique, or final casepack defense; Weeks 1–14 begin with ordinary judgment and end with the first complete mini-pass.",
+      "Dated May 6, 2026, Course Architecture v1.0, prepared by Clement Paulus."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.20074210",
+      "url": "https://doi.org/10.5281/zenodo.20074210"
+    },
+    "concept_doi": "10.5281/zenodo.20074209",
+    "version_doi": "10.5281/zenodo.20074210",
+    "related_dois": [],
+    "supersedes": [],
+    "superseded_by": null,
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.20074210",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/20074210",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "No separate DOI or record description for this member work; the archive description describes the full course."
+    ],
+    "notes": "Member work of the shared Zenodo archive 10.5281/zenodo.20074210 (concept 10.5281/zenodo.20074209, resource type Lesson, 2026-05-06), whose file listing is: 'Contract First Epistemology.pdf' (full course, SRC-000055), 'semester_1.pdf' (SRC-000056), 'semester_2.pdf' (SRC-000057), 'course syllabus and audit receipt.pdf' (SRC-000058), and 'course_layout.pdf' (course layout; not registered separately). The SourceID identifies the named member work; the DOI identifies the archive (SEAM-0008 policy). This record is the member file 'semester_1.pdf'. Zenodo verification (2026-09-13, API metadata): record 20074210, title \"Contract-First Epistemology: Semester I — Method Internalization\", creators ['Paulus, Clement'], publication date 2026-05-06, resource type Lesson."
+  },
+  {
+    "source_id": "SRC-000057",
+    "source_type": "corpus-native",
+    "status": "active",
+    "title": "Contract-First Epistemology: Semester II — Return, Diagnostics, Transfer, and Production (Weeks 15–28)",
+    "version": "Course Architecture v1.0",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Governing Semester Question (source-stated): What must return, reconcile, transfer, and be defended before judgment becomes auditable?",
+      "Instructional burden (source-stated): make evaluation durable after Semester I has made evaluation possible; Weeks 15–28 begin with typed return and end with final casepack defense and method transmission.",
+      "Dated May 6, 2026, Course Architecture v1.0, prepared by Clement Paulus."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.20074210",
+      "url": "https://doi.org/10.5281/zenodo.20074210"
+    },
+    "concept_doi": "10.5281/zenodo.20074209",
+    "version_doi": "10.5281/zenodo.20074210",
+    "related_dois": [],
+    "supersedes": [],
+    "superseded_by": null,
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.20074210",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/20074210",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "No separate DOI or record description for this member work; the archive description describes the full course."
+    ],
+    "notes": "Member work of the shared Zenodo archive 10.5281/zenodo.20074210 (concept 10.5281/zenodo.20074209, resource type Lesson, 2026-05-06), whose file listing is: 'Contract First Epistemology.pdf' (full course, SRC-000055), 'semester_1.pdf' (SRC-000056), 'semester_2.pdf' (SRC-000057), 'course syllabus and audit receipt.pdf' (SRC-000058), and 'course_layout.pdf' (course layout; not registered separately). The SourceID identifies the named member work; the DOI identifies the archive (SEAM-0008 policy). This record is the member file 'semester_2.pdf'. Zenodo verification (2026-09-13, API metadata): record 20074210, title \"Contract-First Epistemology: Semester II — Return, Diagnostics, Transfer, and Production\", creators ['Paulus, Clement'], publication date 2026-05-06, resource type Lesson."
+  },
+  {
+    "source_id": "SRC-000058",
+    "source_type": "corpus-native",
+    "status": "active",
+    "title": "Contract-First Epistemology: Full Course Syllabus and Audit Receipt",
+    "version": "Course Architecture v1.0",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Purpose (source-stated): a compact audit view of the full twenty-eight-week teaching structure, designed to be read before the main course body is assessed; it treats the course itself as an evaluable object (Receipt ID CFE.SYLLABUS-RECEIPT.v1.0).",
+      "Scope (source-stated): front matter, course body, back matter, Teaching Kit, templates, ledgers, readiness checks, rubrics, and final transmission instruments. Out of scope: empirical pilot results, live cohort performance, institutional approval, instructor-specific adaptations, and domain-specific course variants.",
+      "Non-goal (source-stated): do not require students to master the full GCD / UMCP mathematical corpus before they can operate the basic evaluative discipline."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.20074210",
+      "url": "https://doi.org/10.5281/zenodo.20074210"
+    },
+    "concept_doi": "10.5281/zenodo.20074209",
+    "version_doi": "10.5281/zenodo.20074210",
+    "related_dois": [],
+    "supersedes": [],
+    "superseded_by": null,
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.20074210",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/20074210",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "No separate DOI or record description for this member work; the archive description describes the full course."
+    ],
+    "notes": "Member work of the shared Zenodo archive 10.5281/zenodo.20074210 (concept 10.5281/zenodo.20074209, resource type Lesson, 2026-05-06), whose file listing is: 'Contract First Epistemology.pdf' (full course, SRC-000055), 'semester_1.pdf' (SRC-000056), 'semester_2.pdf' (SRC-000057), 'course syllabus and audit receipt.pdf' (SRC-000058), and 'course_layout.pdf' (course layout; not registered separately). The SourceID identifies the named member work; the DOI identifies the archive (SEAM-0008 policy). This record is the member file 'course syllabus and audit receipt.pdf'. Zenodo verification (2026-09-13, API metadata): record 20074210, title \"Contract-First Epistemology: Full Course Syllabus and Audit Receipt\", creators ['Paulus, Clement'], publication date 2026-05-06, resource type Lesson."
+  },
+  {
+    "source_id": "SRC-000059",
+    "source_type": "corpus-native",
+    "status": "active",
+    "title": "Shape, Phase, and Forcing in Saturn's Southern Decagon: An Integrated Inference and External-Testing Protocol",
+    "version": "2.0.1 (Final author edition)",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Primary role (source-stated): analytical methods paper with a proposed observational reanalysis and controlled numerical experiments.",
+      "Primary object (source-stated): the separation of collective angular motion, internal geometric deformation, tracer visibility, and forcing in Saturn's southern wave-number-10 pattern.",
+      "Primary claim (source-stated): mechanism discrimination requires identifiable signal content that the admitted nuisance freedoms and competing models cannot absorb.",
+      "Result status (source-stated): conditional proofs and analytical design; not a completed observational preregistration."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.22550978",
+      "url": "https://doi.org/10.5281/zenodo.22550978"
+    },
+    "concept_doi": "10.5281/zenodo.22550977",
+    "version_doi": "10.5281/zenodo.22550978",
+    "related_dois": [],
+    "supersedes": [],
+    "superseded_by": null,
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.22550978",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo Archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/22550978",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "No Tier-2 object is registered for this source in this pass: the corpus owner has not supplied the library classification, and SEAM-0020 is updated to reflect that the source is now acquired."
+    ],
+    "notes": "Corpus-native analytical methods paper (Final author edition v2.0.1, 6 September 2026). The paper states: 'The observational discovery belongs to Sánchez-Lavega and collaborators. The present contribution is a set of analytical distinctions and tests, not a claim to have discovered the decagon or established its cause.' Corpus role (source-stated): local Tier-2 methodological witness under Summa Reditus, Architecture Freeze v1.0; RCFT candidate development and ULRC clarification. Registered as a source only; formerly SOURCE_NEEDED (SEAM-0020). Zenodo verification (2026-09-13, API metadata): record 22550978, title \"Shape, Phase, and Forcing in Saturn's Southern Decagon: An Integrated Inference and External-Testing Protocol\", creators ['Paulus, Clement'], publication date 2026-09-06, resource type Preprint."
   }
 ]

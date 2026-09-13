@@ -1,0 +1,44 @@
+{
+  "source_id": "SRC-000058",
+  "source_type": "corpus-native",
+  "status": "active",
+  "title": "Contract-First Epistemology: Full Course Syllabus and Audit Receipt",
+  "version": "Course Architecture v1.0",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Purpose (source-stated): a compact audit view of the full twenty-eight-week teaching structure, designed to be read before the main course body is assessed; it treats the course itself as an evaluable object (Receipt ID CFE.SYLLABUS-RECEIPT.v1.0).",
+    "Scope (source-stated): front matter, course body, back matter, Teaching Kit, templates, ledgers, readiness checks, rubrics, and final transmission instruments. Out of scope: empirical pilot results, live cohort performance, institutional approval, instructor-specific adaptations, and domain-specific course variants.",
+    "Non-goal (source-stated): do not require students to master the full GCD / UMCP mathematical corpus before they can operate the basic evaluative discipline."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.20074210",
+    "url": "https://doi.org/10.5281/zenodo.20074210"
+  },
+  "concept_doi": "10.5281/zenodo.20074209",
+  "version_doi": "10.5281/zenodo.20074210",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.20074210",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/20074210",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "No separate DOI or record description for this member work; the archive description describes the full course."
+  ],
+  "notes": "Member work of the shared Zenodo archive 10.5281/zenodo.20074210 (concept 10.5281/zenodo.20074209, resource type Lesson, 2026-05-06), whose file listing is: 'Contract First Epistemology.pdf' (full course, SRC-000055), 'semester_1.pdf' (SRC-000056), 'semester_2.pdf' (SRC-000057), 'course syllabus and audit receipt.pdf' (SRC-000058), and 'course_layout.pdf' (course layout; not registered separately). The SourceID identifies the named member work; the DOI identifies the archive (SEAM-0008 policy). This record is the member file 'course syllabus and audit receipt.pdf'. Zenodo verification (2026-09-13, API metadata): record 20074210, title \"Contract-First Epistemology: Full Course Syllabus and Audit Receipt\", creators ['Paulus, Clement'], publication date 2026-05-06, resource type Lesson."
+}

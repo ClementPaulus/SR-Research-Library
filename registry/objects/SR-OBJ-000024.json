@@ -1,0 +1,99 @@
+{
+  "object_id": "SR-OBJ-000024",
+  "title": "Language Across Articulation: Meaning, Translation, and Epistemic Accountability in Structura Reditus",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "language-contact",
+    "secondary": [
+      "external-ingress",
+      "domain-translation"
+    ]
+  },
+  "functional_locus": "ulrc",
+  "source_ids": [
+    "SRC-000053"
+  ],
+  "lens": "ULRC-led comparative language paper",
+  "domain": {
+    "primary": "linguistics",
+    "secondary": [
+      "philosophy",
+      "cognitive-science"
+    ]
+  },
+  "object_of_study": "Accountable preservation of intellectual responsibility across changed articulations, translation, interpretation and semantic compression.",
+  "structural_focus": {
+    "primary": "translation",
+    "secondary": [
+      "identity",
+      "boundary"
+    ]
+  },
+  "main_question": "How can expressive and interpretive flexibility coexist with accountable preservation of what an articulation is doing?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "Role and mandate: a comparative language paper led by ULRC engaging Pleyer and colleagues' design-features review; its function is ingress, carrying ULRC's contact discipline into open literature under Tier-2 authority without changing ULRC."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Evidence boundary: supplied source editions and selected primary literature; source cutoff 8 September 2026; no new participant data, empirical validation, canonical return, or weld is reported."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Publication boundary: author-approved publication edition; the Zenodo DOI records the archive deposit; journal acceptance, independent certification, and peer-review status are not claimed."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "Paper-local formal constructions are Tier-2 proposals, not kernel definitions or adopted protocol; nothing here changes ULRC."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "source-synthesis",
+    "secondary": [
+      "conceptual-argument",
+      "no-empirical-validation"
+    ]
+  },
+  "provenance": "externally-anchored-derivative",
+  "maturity": "source-bounded",
+  "relations": [],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000053 (\"Language Across Articulation: Meaning, Translation, and Epistemic Accountability in Structura Reditus\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. External linguistics sources engaged by the paper are not registered as separate library sources in this pass and no ULRC construction is attributed to them.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority, canon status, proof, weld, scientific endorsement, or release status.",
+  "scope": "Comparative treatment of meaning, translation, interpretation, semantic compression, and epistemic accountability across changed articulations, led by ULRC, against selected primary literature up to the stated cutoff.",
+  "exclusions": [
+    "Does not report participant data or empirical validation.",
+    "Does not claim canonical return or weld.",
+    "Does not claim peer review or journal acceptance.",
+    "Does not change ULRC or promote paper-local constructions to kernel or protocol status."
+  ],
+  "preserved_meaning": "Preservation concerns the declared meaning/burden profile rather than identical wording.",
+  "missingness": [
+    {
+      "item": "empirical validation",
+      "class": "NON_BLOCKING",
+      "notes": "None claimed by the current edition; prospective tests are the declared next burden."
+    },
+    {
+      "item": "peer review / journal acceptance",
+      "class": "PUBLICATION_BOUNDARY",
+      "notes": "Not claimed by the edition; the DOI records an archive deposit only."
+    }
+  ],
+  "distortion_or_substitution_risk": "Converting fluency into proof; attributing local ULRC constructions to external linguistics sources; treating semantic resemblance as preservation; treating clarification, declared revision, and silent replacement as equivalent.",
+  "next_burden": "Prospective tests of whether independently specified burden profiles can be preserved, clarified, or correctly flagged as changed across translators, readers, media, or contexts. No empirical validation is claimed by the current paper.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "The maintenance instruction stated that the edition names no DOI; the deposited publication edition itself states 'Final Zenodo publication DOI: 10.5281/zenodo.22695438', which is recorded on SRC-000053. Placed by the source as a local witness under Summa Reditus, Architecture Freeze v1.0. Registered in the 2026-09 Tier-2 census and repair pass; classification supplied by the corpus owner under the current Structura Reditus architecture.",
+  "governing_refs": [
+    "SR-GOV-000001"
+  ]
+}

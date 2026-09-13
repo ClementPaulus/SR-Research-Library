@@ -1,0 +1,73 @@
+{
+  "receipt_id": "RCPT-000033",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000028",
+  "generated": "2026-09-13T22:06:57Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000028",
+  "title": "Contract-First Epistemology: Semester I — Method Internalization (Weeks 1–14)",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "pedagogical",
+  "functional_locus": "cross-system",
+  "domain_primary": "education",
+  "structural_focus_primary": "boundary",
+  "main_question": "What must be declared before judgment becomes evaluable?",
+  "evidence_mode_primary": "pedagogical",
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "source_ids": [
+    "SRC-000056"
+  ],
+  "relation_ids": [],
+  "publication_state": "archived",
+  "non_blocking_missingness": [
+    "classroom efficacy (NON_BLOCKING)",
+    "separate record description for this member work (SOURCE_BOUNDARY)"
+  ],
+  "open_burdens": [
+    "Actual student/evaluator performance demonstrating independent completion of the mini-pass and transition to Semester II."
+  ],
+  "next_burden": "Actual student/evaluator performance demonstrating independent completion of the mini-pass and transition to Semester II."
+}

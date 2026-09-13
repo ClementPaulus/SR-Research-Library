@@ -1650,5 +1650,962 @@
       "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The series description states only that by its end a reader can follow one full path without live author mediation."
     ],
     "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The series description states only that by its end a reader can follow one full path without live author mediation."
+  },
+  "RCPT-000023": {
+    "receipt_id": "RCPT-000023",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000017",
+    "generated": "2026-09-13T22:06:42Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000017",
+    "title": "Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.1",
+    "date": "2026-09-13T18:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "candidate",
+    "functional_locus": "rcft",
+    "domain_primary": "mathematics",
+    "structural_focus_primary": "continuity",
+    "main_question": "What dynamic and continuity properties follow when the historical collapse algebra is extended into a differential calculus under frozen contracts?",
+    "evidence_mode_primary": "formal-derivation",
+    "provenance": "corpus-native",
+    "maturity": "historical",
+    "source_ids": [
+      "SRC-000034"
+    ],
+    "relation_ids": [],
+    "publication_state": "preprint",
+    "non_blocking_missingness": [
+      "historical terminology vs current architecture (UNRESOLVED_SEAM)",
+      "source-native claims beyond the abstract and policy surface (NON_BLOCKING)"
+    ],
+    "open_burdens": [
+      "Independently replay the historical weld lifecycle against the source's declared verification targets: satisfy the source-local weld-budget identity (pre/post test on the same anchor with tolerance on |Δκ|) within tolerance, emit the reconciled audit record (manifest snapshot and hashed audit rows), verify artifact hashes against the recorded manifest, and test the source's stated continuity behavior of κ / integrity under its declared composition and piecewise-secant rules. Any translation into the mature Structura Reditus architecture requires a separately declared repair or mapping; no historical equation, closure, return-credit rule, or weld mechanic is promoted into current Tier-1 or Tier-0 authority by this object."
+    ],
+    "next_burden": "Independently replay the historical weld lifecycle against the source's declared verification targets: satisfy the source-local weld-budget identity (pre/post test on the same anchor with tolerance on |Δκ|) within tolerance, emit the reconciled audit record (manifest snapshot and hashed audit rows), verify artifact hashes against the recorded manifest, and test the source's stated continuity behavior of κ / integrity under its declared composition and piecewise-secant rules. Any translation into the mature Structura Reditus architecture requires a separately declared repair or mapping; no historical equation, closure, return-credit rule, or weld mechanic is promoted into current Tier-1 or Tier-0 authority by this object."
+  },
+  "RCPT-000024": {
+    "receipt_id": "RCPT-000024",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000019",
+    "generated": "2026-09-13T22:06:43Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000019",
+    "title": "A Geometry of Admissible Seams: Contract-Bound Invariants and Auditable Transitions",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.1",
+    "date": "2026-09-13T18:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "candidate",
+    "functional_locus": "umcp",
+    "domain_primary": "mathematics",
+    "structural_focus_primary": "continuity",
+    "main_question": "How can heterogeneous transitions be represented geometrically while keeping admissibility dependent on explicit contract and seam conditions rather than scalar resemblance?",
+    "evidence_mode_primary": "formal-derivation",
+    "provenance": "corpus-native",
+    "maturity": "historical",
+    "source_ids": [
+      "SRC-000024"
+    ],
+    "relation_ids": [],
+    "publication_state": "preprint",
+    "non_blocking_missingness": [
+      "public abstract for this member work (SOURCE_BOUNDARY)",
+      "historical terminology vs current architecture (UNRESOLVED_SEAM)"
+    ],
+    "open_burdens": [
+      "Demonstrate portability, where claimed, through explicit embedding and closure disclosure, reproducible audit records (manifests or manifest hashes, closure registries, representative audit rows with seam diagnostics), seam viability, closure stability under reuse, consistent admissibility behavior, and a quantified failure boundary (the source's Appendix D portability criteria). Until those burdens are discharged, the geometric mappings and closures remain contract-local historical constructions rather than universal seam rules or current protocol authority."
+    ],
+    "next_burden": "Demonstrate portability, where claimed, through explicit embedding and closure disclosure, reproducible audit records (manifests or manifest hashes, closure registries, representative audit rows with seam diagnostics), seam viability, closure stability under reuse, consistent admissibility behavior, and a quantified failure boundary (the source's Appendix D portability criteria). Until those burdens are discharged, the geometric mappings and closures remain contract-local historical constructions rather than universal seam rules or current protocol authority."
+  },
+  "RCPT-000025": {
+    "receipt_id": "RCPT-000025",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000020",
+    "generated": "2026-09-13T22:06:45Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000020",
+    "title": "GCD / UMCP: The First Seam-Chain Casepack: A Worked Case Showing Composed Continuity Across Multiple Welded Seams",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T18:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "diagnostic",
+    "functional_locus": "umcp",
+    "domain_primary": "structura-reditus-core",
+    "structural_focus_primary": "continuity",
+    "main_question": "When do individually admissible local welds compose into one admissible seam-chain rather than merely a sequence of local successes?",
+    "evidence_mode_primary": "formal-derivation",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000047"
+    ],
+    "relation_ids": [
+      "REL-000004"
+    ],
+    "publication_state": "archived",
+    "non_blocking_missingness": [],
+    "open_burdens": [
+      "Source-stated ('What This Enables Next'): a small domain closure with welded transitions (declaring its domain adapter before applying local weld and chain accounting), a publication-infrastructure casepack using receipt chains, a repository implementation of seam-chain validation, and a failure taxonomy for chain composition. The paper enables these burdens but does not absorb them; no external-domain chain closure is claimed to have occurred."
+    ],
+    "next_burden": "Source-stated ('What This Enables Next'): a small domain closure with welded transitions (declaring its domain adapter before applying local weld and chain accounting), a publication-infrastructure casepack using receipt chains, a repository implementation of seam-chain validation, and a failure taxonomy for chain composition. The paper enables these burdens but does not absorb them; no external-domain chain closure is claimed to have occurred."
+  },
+  "RCPT-000026": {
+    "receipt_id": "RCPT-000026",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000021",
+    "generated": "2026-09-13T22:06:46Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000021",
+    "title": "Nested Return in a Composite Diamond Clock: A Welded-Seam Audit of Phase Projection, Thermal Nulling, and Residual-Burden Migration",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T18:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "external-ingress",
+    "functional_locus": "umcp",
+    "domain_primary": "physics",
+    "structural_focus_primary": "residual-migration",
+    "main_question": "What structural operation occurs when phase-generated contamination is projected away, thermal drift is nulled, the target oscillator mode is preserved, and a previously subdominant residual becomes governing?",
+    "evidence_mode_primary": "secondary-empirical",
+    "provenance": "externally-anchored-derivative",
+    "maturity": "source-bounded",
+    "source_ids": [
+      "SRC-000049",
+      "SRC-000048"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "raw experimental data of the external anchor (SOURCE_BOUNDARY)",
+      "absolute-accuracy burden and long-duration reproducibility (NON_BLOCKING)",
+      "remaining environmental/technical channels and feedback-loop completion (NON_BLOCKING)",
+      "canonical UMCP return contract, seam accounting, and weld evaluation (AUTHORITY_BOUNDARY)"
+    ],
+    "open_burdens": [
+      "A canonical UMCP return/weld claim would require a separately frozen object definition, adapter, bounded trace, missingness policy, eligible return domain, metric, tolerance, horizon/time base, seam-accounting profile, closure registry, return-credit profile, residual tolerance, and RunID (source-stated). The local nested-restoration result is not turned into canonical weld."
+    ],
+    "next_burden": "A canonical UMCP return/weld claim would require a separately frozen object definition, adapter, bounded trace, missingness policy, eligible return domain, metric, tolerance, horizon/time base, seam-accounting profile, closure registry, return-credit profile, residual tolerance, and RunID (source-stated). The local nested-restoration result is not turned into canonical weld."
+  },
+  "RCPT-000027": {
+    "receipt_id": "RCPT-000027",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000022",
+    "generated": "2026-09-13T22:06:48Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000022",
+    "title": "Recursive Accelerating Return: A Generative Collapse Dynamics Theory of Endogenous Generative Capacity",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T18:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "candidate",
+    "functional_locus": "rcft",
+    "domain_primary": "systems-theory",
+    "structural_focus_primary": "recurrence",
+    "main_question": "What must be inherited, what counts as admissible return, and what rate must increase before a recursive acceleration claim is earned?",
+    "evidence_mode_primary": "formal-derivation",
+    "provenance": "corpus-native",
+    "maturity": "prospectively-testable",
+    "source_ids": [
+      "SRC-000050"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "empirical validation of RAR (NON_BLOCKING)",
+      "longitudinal causal evidence for causal-RAR (NON_BLOCKING)",
+      "archive record version label and full title (NON_BLOCKING)"
+    ],
+    "open_burdens": [
+      "Prospective domain validation under a frozen GCD.RAR.CORE contract and a declared GCD.RAR.MAP.<domain> mapping contract, including admitted-return timestamps, an operator-equivalence rule, a causal inheritance design, a capacity functional, resource normalization, failed-attempt accounting, an exogenous-exposure policy, an uncertainty/persistence rule, and model comparison (source-stated)."
+    ],
+    "next_burden": "Prospective domain validation under a frozen GCD.RAR.CORE contract and a declared GCD.RAR.MAP.<domain> mapping contract, including admitted-return timestamps, an operator-equivalence rule, a causal inheritance design, a capacity functional, resource normalization, failed-attempt accounting, an exogenous-exposure policy, an uncertainty/persistence rule, and model comparison (source-stated)."
+  },
+  "RCPT-000028": {
+    "receipt_id": "RCPT-000028",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000023",
+    "generated": "2026-09-13T22:06:50Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000023",
+    "title": "Identifiable Return in Memristive Associative Memory: A Generative Collapse Dynamics Analysis of Recurrent Pattern Completion",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T18:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "external-ingress",
+    "functional_locus": "umcp",
+    "domain_primary": "computer-science",
+    "structural_focus_primary": "identity",
+    "main_question": "Under what conditions does a physically constrained recurrent computation recover the intended memory rather than merely settle, repeat, or produce a similar state?",
+    "evidence_mode_primary": "retrospective-analysis",
+    "provenance": "externally-anchored-derivative",
+    "maturity": "retrospectively-evaluated",
+    "source_ids": [
+      "SRC-000052",
+      "SRC-000051"
+    ],
+    "relation_ids": [],
+    "publication_state": "registered-only",
+    "non_blocking_missingness": [
+      "public DOI or archive deposit for the local manuscript (PUBLICATION_BOUNDARY)",
+      "cited Zenodo study archive of the external article (SOURCE_BOUNDARY)",
+      "per-update physical acquisition uncertainty and stop/padding semantics (NON_BLOCKING)",
+      "operator-level physical verification and calibration/regional-bound burden (NON_BLOCKING)",
+      "prospective sampling burden (NON_BLOCKING)"
+    ],
+    "open_burdens": [
+      "A prospective hardware-aware return test with frozen target identities, a cue law, acceptance regions, an identity margin, an implementation/calibration envelope, complete trajectory acquisition, a stopping horizon, a dwell requirement, and typed handling of wrong-memory capture, spurious stabilization, periodic behavior, finite-horizon non-return, and missing evidence."
+    ],
+    "next_burden": "A prospective hardware-aware return test with frozen target identities, a cue law, acceptance regions, an identity margin, an implementation/calibration envelope, complete trajectory acquisition, a stopping horizon, a dwell requirement, and typed handling of wrong-memory capture, spurious stabilization, periodic behavior, finite-horizon non-return, and missing evidence."
+  },
+  "RCPT-000029": {
+    "receipt_id": "RCPT-000029",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000024",
+    "generated": "2026-09-13T22:06:51Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000024",
+    "title": "Language Across Articulation: Meaning, Translation, and Epistemic Accountability in Structura Reditus",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T18:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "language-contact",
+    "functional_locus": "ulrc",
+    "domain_primary": "linguistics",
+    "structural_focus_primary": "translation",
+    "main_question": "How can expressive and interpretive flexibility coexist with accountable preservation of what an articulation is doing?",
+    "evidence_mode_primary": "source-synthesis",
+    "provenance": "externally-anchored-derivative",
+    "maturity": "source-bounded",
+    "source_ids": [
+      "SRC-000053"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "empirical validation (NON_BLOCKING)",
+      "peer review / journal acceptance (PUBLICATION_BOUNDARY)"
+    ],
+    "open_burdens": [
+      "Prospective tests of whether independently specified burden profiles can be preserved, clarified, or correctly flagged as changed across translators, readers, media, or contexts. No empirical validation is claimed by the current paper."
+    ],
+    "next_burden": "Prospective tests of whether independently specified burden profiles can be preserved, clarified, or correctly flagged as changed across translators, readers, media, or contexts. No empirical validation is claimed by the current paper."
+  },
+  "RCPT-000030": {
+    "receipt_id": "RCPT-000030",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000025",
+    "generated": "2026-09-13T22:06:53Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000025",
+    "title": "Empirical Regime Auditing Under the GCD/UMCP Kernel: Contract-Frozen Calibration, Temporal Diagnostics, Typed Return, and Cross-Stream Evaluation",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T18:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "diagnostic",
+    "functional_locus": "umcp",
+    "domain_primary": "structura-reditus-core",
+    "structural_focus_primary": "return",
+    "main_question": "How can multistream empirical sequences be calibrated, admitted, diagnostically analyzed and tested for typed return without allowing temporal diagnostics to redefine the kernel or decide stance by themselves?",
+    "evidence_mode_primary": "formal-derivation",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000046"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "DOI of the Version 2.0 edition (PUBLICATION_BOUNDARY)"
+    ],
+    "open_burdens": [
+      "Prospective domain-local validation of adapters, calibration windows, temporal diagnostics, sentinel rules, and any learned thresholds under frozen evidence boundaries. Domain-specific temporal thresholds are not universalized."
+    ],
+    "next_burden": "Prospective domain-local validation of adapters, calibration windows, temporal diagnostics, sentinel rules, and any learned thresholds under frozen evidence boundaries. Domain-specific temporal thresholds are not universalized."
+  },
+  "RCPT-000031": {
+    "receipt_id": "RCPT-000031",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000026",
+    "generated": "2026-09-13T22:06:54Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000026",
+    "title": "Confinement as Integrity Collapse: A Contract-Frozen Structural Signature of Quark Binding in the GCD/UMCP Measurement Kernel",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T18:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "diagnostic",
+    "functional_locus": "umcp",
+    "domain_primary": "physics",
+    "structural_focus_primary": "heterogeneity",
+    "main_question": "What structural signature does the quark->hadron boundary leave when quarks and hadrons are evaluated under a single frozen source-local particle-data closure?",
+    "evidence_mode_primary": "retrospective-analysis",
+    "provenance": "historical-source-anchored",
+    "maturity": "historical",
+    "source_ids": [
+      "SRC-000054"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "historical terminology vs current architecture (UNRESOLVED_SEAM)",
+      "public record description (SOURCE_BOUNDARY)",
+      "closed-edition deposit identity (NON_BLOCKING)"
+    ],
+    "open_burdens": [
+      "Independent reconstruction under the mature architecture with current source data/version, a frozen particle/hadron adapter, stable channel semantics across compared object classes, the current kernel contract, explicit missingness, sensitivity/ablation tests, and comparison against native-domain explanations and alternative adapters. Historical results remain historical even if re-evaluated later."
+    ],
+    "next_burden": "Independent reconstruction under the mature architecture with current source data/version, a frozen particle/hadron adapter, stable channel semantics across compared object classes, the current kernel contract, explicit missingness, sensitivity/ablation tests, and comparison against native-domain explanations and alternative adapters. Historical results remain historical even if re-evaluated later."
+  },
+  "RCPT-000032": {
+    "receipt_id": "RCPT-000032",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000027",
+    "generated": "2026-09-13T22:06:56Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000027",
+    "title": "Contract-First Epistemology: Measurement, Return, and the Structure of Legitimate Claims",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T18:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "pedagogical",
+    "functional_locus": "cross-system",
+    "domain_primary": "education",
+    "structural_focus_primary": "translation",
+    "main_question": "How should a claim earn evaluative standing under declared object, contract, closure, missingness, ledger and stance discipline?",
+    "evidence_mode_primary": "pedagogical",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000055"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "classroom efficacy (NON_BLOCKING)"
+    ],
+    "open_burdens": [
+      "Live pedagogical return: student/evaluator artifacts showing the method can be operated independently without author mediation. Classroom effectiveness is not claimed from complete course architecture."
+    ],
+    "next_burden": "Live pedagogical return: student/evaluator artifacts showing the method can be operated independently without author mediation. Classroom effectiveness is not claimed from complete course architecture."
+  },
+  "RCPT-000033": {
+    "receipt_id": "RCPT-000033",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000028",
+    "generated": "2026-09-13T22:06:57Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000028",
+    "title": "Contract-First Epistemology: Semester I — Method Internalization (Weeks 1–14)",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T18:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "pedagogical",
+    "functional_locus": "cross-system",
+    "domain_primary": "education",
+    "structural_focus_primary": "boundary",
+    "main_question": "What must be declared before judgment becomes evaluable?",
+    "evidence_mode_primary": "pedagogical",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000056"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "classroom efficacy (NON_BLOCKING)",
+      "separate record description for this member work (SOURCE_BOUNDARY)"
+    ],
+    "open_burdens": [
+      "Actual student/evaluator performance demonstrating independent completion of the mini-pass and transition to Semester II."
+    ],
+    "next_burden": "Actual student/evaluator performance demonstrating independent completion of the mini-pass and transition to Semester II."
+  },
+  "RCPT-000034": {
+    "receipt_id": "RCPT-000034",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000029",
+    "generated": "2026-09-13T22:06:59Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000029",
+    "title": "Contract-First Epistemology: Semester II — Return, Diagnostics, Transfer, and Production (Weeks 15–28)",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T18:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "pedagogical",
+    "functional_locus": "cross-system",
+    "domain_primary": "education",
+    "structural_focus_primary": "return",
+    "main_question": "What must return, reconcile, transfer and be defended before judgment becomes auditable?",
+    "evidence_mode_primary": "pedagogical",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000057"
+    ],
+    "relation_ids": [
+      "REL-000005"
+    ],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "classroom efficacy (NON_BLOCKING)",
+      "separate record description for this member work (SOURCE_BOUNDARY)"
+    ],
+    "open_burdens": [
+      "Independent student/evaluator production, defense, repair and transmission of a complete casepack."
+    ],
+    "next_burden": "Independent student/evaluator production, defense, repair and transmission of a complete casepack."
+  },
+  "RCPT-000035": {
+    "receipt_id": "RCPT-000035",
+    "decision": "ACCEPTED",
+    "submission_identity": "SR-OBJ-000030",
+    "generated": "2026-09-13T22:07:00Z",
+    "gates": {
+      "A": {
+        "name": "Identity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "B": {
+        "name": "Tier placement",
+        "result": "PASS",
+        "detail": ""
+      },
+      "C": {
+        "name": "Source and provenance",
+        "result": "PASS",
+        "detail": ""
+      },
+      "D": {
+        "name": "Classification",
+        "result": "PASS",
+        "detail": ""
+      },
+      "E": {
+        "name": "Boundary and missingness",
+        "result": "PASS",
+        "detail": ""
+      },
+      "F": {
+        "name": "Relation integrity",
+        "result": "PASS",
+        "detail": ""
+      },
+      "G": {
+        "name": "Library durability",
+        "result": "PASS",
+        "detail": ""
+      }
+    },
+    "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+    "object_id": "SR-OBJ-000030",
+    "title": "Contract-First Epistemology: Full Course Syllabus and Audit Receipt",
+    "author_ids": [
+      "AUTH-0001"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-13T18:00:00Z",
+    "authority": "tier-2",
+    "tier2_class_primary": "pedagogical",
+    "functional_locus": "cross-system",
+    "domain_primary": "education",
+    "structural_focus_primary": "return",
+    "main_question": "Is the full teaching route structurally declared enough to be taught, assessed, repaired, and transmitted without author mediation?",
+    "evidence_mode_primary": "pedagogical",
+    "provenance": "corpus-native",
+    "maturity": "frozen-local-object",
+    "source_ids": [
+      "SRC-000058"
+    ],
+    "relation_ids": [],
+    "publication_state": "archived",
+    "non_blocking_missingness": [
+      "classroom efficacy (NON_BLOCKING)",
+      "separate record description for this member work (SOURCE_BOUNDARY)"
+    ],
+    "open_burdens": [
+      "Live use of the receipt by an instructor, reviewer, or institution to assess, repair, or transmit the course, producing actual student/evaluator artifacts; classroom efficacy remains unproven until then."
+    ],
+    "next_burden": "Live use of the receipt by an instructor, reviewer, or institution to assess, repair, or transmit the course, producing actual student/evaluator artifacts; classroom efficacy remains unproven until then."
   }
 }

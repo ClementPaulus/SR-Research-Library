@@ -9,7 +9,48 @@ Structura Reditus artifact. Previous releases are never silently rewritten.
 Additive cleanup on top of the frozen v1.0.0 release; no released manifest or
 released governing record was rewritten.
 
-### Added
+### Added (2026-09 Tier-2 census, repair, and ingress pass)
+
+- Tier-2 admission decision rule (tests A–H and census processing order) in
+  `LIBRARY_SPECIFICATION.md` §6.1; readback report
+  `docs/TIER2_CENSUS_2026-09.md`.
+- Repairs under reserved identities: `SR-OBJ-000017` (Collapse Calculus) and
+  `SR-OBJ-000019` (A Geometry of Admissible Seams) resubmitted as 1.0.1 with
+  source-stated next burdens and ACCEPTED (RCPT-000023, RCPT-000024); the
+  RETURNED_FOR_REPAIR receipts are preserved. `SR-OBJ-000016` (The Collapse
+  Formalism) stays RETURNED_FOR_REPAIR — no source resolves to the titled work
+  (SEAM-0011).
+- Eleven new Tier-2 objects `SR-OBJ-000020..030` (RCPT-000025..035): The
+  First Seam-Chain Casepack; Nested Return in a Composite Diamond Clock;
+  Recursive Accelerating Return; Identifiable Return in Memristive Associative
+  Memory; Language Across Articulation; Empirical Regime Auditing v2.0 (on the
+  existing `SRC-000046`); Confinement as Integrity Collapse (historical);
+  Contract-First Epistemology full course, Semester I, Semester II, and the
+  Syllabus and Audit Receipt.
+- Thirteen sources `SRC-000047..059`, including the first two external
+  sources (`SRC-000048` Lourette et al., `SRC-000051` He et al.) whose DOIs
+  stay with the external articles, and `SRC-000059` (Saturn Southern Decagon,
+  source only). `SRC-000019` (DMT) carries the v1.0 record as
+  `earlier_version`; no duplicate DMT object.
+- Relations `REL-000004` (Seam-Chain Casepack extends the Welded Seam
+  Casepack) and `REL-000005` (Semester II extends Semester I), both stated by
+  the sources.
+- Bridge-detection projection (`validators/bridges.py`,
+  `site/data/bridge_candidates.json`): retrieval adjacency ≠ candidate
+  relation ≠ declared relation; rebuilt with the new objects.
+- Tests `tests/test_census_2026_09.py` and `tests/test_bridges.py`.
+
+### Changed (2026-09 census pass)
+
+- SEAM-0013 closed (next burdens read from the deposited PDFs). SEAM-0011,
+  SEAM-0020, SEAM-0021 updated in place with the pass results; all remain
+  open. Next free identifiers: `SR-OBJ-000031`, `SRC-000060`, `SR-GOV-000020`,
+  `REL-000006`, `RCPT-000036`.
+- `ENGINE_CONTRACT.md`: the engine MAY compute provisional structural
+  adjacency for retrieval and review and SHALL NOT convert it into a relation
+  or any scientific claim.
+
+### Added (v1.1 foundation)
 
 - Typed source lineage on `schema/source.schema.json`: `version`, `status`
   (`active` | `superseded` | `historical`), `concept_doi`, `version_doi`,
@@ -64,12 +105,13 @@ released governing record was rewritten.
 ### Still pending for v1.1.0
 
 - Source-native claims for works whose full text is not held here
-  (Universal Collapse Diagnostics, A Geometry of Admissible Seams, The Common
-  Doorway, Collapse Calculus, the UMCP CasePack anchor, The Collapse
-  Formalism); their missingness lines remain.
-- The census corpus expansion (`SRC-000047+`, `SR-OBJ-000020+`, new
-  relations) and the v1.1.0 manifest, once sources are supplied and admitted
-  object by object.
+  (Universal Collapse Diagnostics, The Common Doorway, the UMCP CasePack
+  anchor, The Collapse Formalism); their missingness lines remain. Collapse
+  Calculus and A Geometry of Admissible Seams now carry claims read from
+  their deposited PDFs.
+- The remaining census candidates without acquired sources (SEAM-0014,
+  SEAM-0021), the Saturn object pending owner classification (SEAM-0020),
+  and the v1.1.0 manifest.
 
 ## SR-LIBRARY.v1.0.0 — 2026-09-13
 

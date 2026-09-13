@@ -1,0 +1,75 @@
+{
+  "receipt_id": "RCPT-000034",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000029",
+  "generated": "2026-09-13T22:06:59Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000029",
+  "title": "Contract-First Epistemology: Semester II — Return, Diagnostics, Transfer, and Production (Weeks 15–28)",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "pedagogical",
+  "functional_locus": "cross-system",
+  "domain_primary": "education",
+  "structural_focus_primary": "return",
+  "main_question": "What must return, reconcile, transfer and be defended before judgment becomes auditable?",
+  "evidence_mode_primary": "pedagogical",
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "source_ids": [
+    "SRC-000057"
+  ],
+  "relation_ids": [
+    "REL-000005"
+  ],
+  "publication_state": "archived",
+  "non_blocking_missingness": [
+    "classroom efficacy (NON_BLOCKING)",
+    "separate record description for this member work (SOURCE_BOUNDARY)"
+  ],
+  "open_burdens": [
+    "Independent student/evaluator production, defense, repair and transmission of a complete casepack."
+  ],
+  "next_burden": "Independent student/evaluator production, defense, repair and transmission of a complete casepack."
+}

@@ -22,5 +22,21 @@
     "to_id": "SR-OBJ-000005",
     "declared": "2026-09-13T04:12:52Z",
     "notes": "The nuclear-informed atomic sequel explicitly extends the first periodic-table closure."
+  },
+  {
+    "relation_id": "REL-000004",
+    "relation_type": "extends",
+    "from_id": "SR-OBJ-000020",
+    "to_id": "SR-OBJ-000009",
+    "declared": "2026-09-13T18:00:00Z",
+    "notes": "The First Seam-Chain Casepack states that it occupies the fifth rung of the casepack ladder directly after The First Welded Seam Casepack and that its burden is composition of the single welded seam that paper established."
+  },
+  {
+    "relation_id": "REL-000005",
+    "relation_type": "extends",
+    "from_id": "SR-OBJ-000029",
+    "to_id": "SR-OBJ-000028",
+    "declared": "2026-09-13T18:00:00Z",
+    "notes": "Semester II states that its instructional burden is to make evaluation durable after Semester I has made evaluation possible (Weeks 15–28 follow Weeks 1–14 of the same Course Architecture v1.0)."
   }
 ]

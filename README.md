@@ -108,6 +108,9 @@ docs/         Governing specification and supporting rules
   not decide.
 - [docs/IDENTIFIERS.md](docs/IDENTIFIERS.md), [docs/RECEIPTS.md](docs/RECEIPTS.md),
   [docs/MAIN_PROTECTION_RULESET.md](docs/MAIN_PROTECTION_RULESET.md).
+- [docs/TIER2_CENSUS_2026-09.md](docs/TIER2_CENSUS_2026-09.md) — readback of
+  the 2026-09 Tier-2 census, repair, and ingress pass (registry state is the
+  source of truth; the report is a readback).
 - [CONTRIBUTING.md](CONTRIBUTING.md) — exact steps for adding authors,
   sources, relations, objects, and taxonomy terms.
 

@@ -1,0 +1,31 @@
+{
+  "source_id": "SRC-000052",
+  "source_type": "corpus-native",
+  "status": "active",
+  "title": "Identifiable Return in Memristive Associative Memory: A Generative Collapse Dynamics Analysis of Recurrent Pattern Completion",
+  "version": "1.2",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Manuscript type (owner-supplied): formal companion method with frozen retrospective source-data analysis of He et al. (SRC-000051).",
+    "Contributions (owner-supplied): an identity-aware recovery certificate; a reproducible retrospective audit of ten released trajectories; target-specific acceptance regions; reconstruction residual; local contraction; implementation-error burden; separation from competing memories; and a prospective test design.",
+    "Version 1.2 boundary (owner-supplied): the analysis includes a retrospective evidence freeze and acquired Figure-3 arrays; it does not retroactively become preregistered; no new chip experiment, completed hardware certificate, or completed UMCP kernel run is claimed."
+  ],
+  "identifier": {
+    "other": "Manuscript ID GCD-AM-IR.2026-09-08; Version 1.2 dated 9 September 2026; owner-supplied manuscript identity (Tier-2 census and repair pass, 2026-09). Full text not deposited in this repository."
+  },
+  "concept_doi": null,
+  "version_doi": null,
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
+  "publication_year": 2026,
+  "venue": null,
+  "links": [],
+  "missingness": [
+    "No DOI and no public archive deposit were found for this manuscript (Zenodo search 2026-09-13 by creator and title returned no record); identity rests on the owner-supplied manuscript ID and version.",
+    "Source-native claims are recorded from the owner-supplied manuscript description; the full text is not held by the library."
+  ],
+  "notes": "Local derivative manuscript built around He et al. (SRC-000051). The external article's DOI 10.1038/s41467-026-69958-0 is not this source's identity. Publication state of the local manuscript is recorded on the object, not inherited from the external study."
+}

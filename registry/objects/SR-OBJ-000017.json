@@ -1,0 +1,88 @@
+{
+  "object_id": "SR-OBJ-000017",
+  "title": "Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "candidate",
+    "secondary": [
+      "diagnostic"
+    ]
+  },
+  "functional_locus": "rcft",
+  "source_ids": [
+    "SRC-000034"
+  ],
+  "lens": "historical mathematical extension",
+  "domain": {
+    "primary": "mathematics",
+    "secondary": [
+      "systems-theory",
+      "structura-reditus-core"
+    ]
+  },
+  "object_of_study": "the prefreeze differential-calculus extension of the collapse algebra",
+  "structural_focus": {
+    "primary": "continuity",
+    "secondary": [
+      "robustness",
+      "return"
+    ]
+  },
+  "main_question": "What dynamic and continuity properties follow when the historical collapse algebra is extended into a differential calculus under frozen contracts?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "The source elevates the collapse algebra into a differential calculus and states that any change requires a weld: a logged pre/post test on the same anchor with tolerance on |Δκ|; Tier 5 formalizes acts with manifest snapshots, weld validation, and cryptographically hashed audit rows (deposited PDF abstract and Table I policy surface, v1.0.2)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "The source states it proves well-posedness under locally Lipschitz closures and that piecewise-secant updates preserve κ exactly, including across face pivots."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library places this as historical candidate material under RCFT; the historical/current seam is preserved, not reconciled."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "formal-derivation",
+    "secondary": [
+      "formal-proof"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "historical",
+  "relations": [],
+  "version": "1.0.1",
+  "date": "2026-09-13T18:00:00Z",
+  "publication_state": "preprint",
+  "source_boundary": "The governing source is SRC-000034 (\"Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. As a historical/prefreeze work, the source's own terminology is preserved as evidence of what it stated in its year of publication.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority. Historical terminology is preserved as source evidence and does not supersede the active Structura Reditus canon, specification, contract, or run.",
+  "scope": "A 2025 extension of the collapse algebra into a differential calculus with weld-continuous dynamics and audit guarantees, distributed with a UMCP v1.0.2 drop-in manifest and validator script.",
+  "exclusions": [
+    "Does not promote any superseded equation or closure into the current Tier-1 kernel.",
+    "Candidate status is historical; no current adoption is implied."
+  ],
+  "preserved_meaning": "The historical status of the calculus as a candidate extension, with its 2025 contract and tolerances left as it declared them.",
+  "missingness": [
+    {
+      "item": "historical terminology vs current architecture",
+      "class": "UNRESOLVED_SEAM",
+      "notes": "Preserved as source evidence. Translation of the historical weld-continuous calculus into the mature Structura Reditus architecture requires a separately declared repair or mapping."
+    },
+    {
+      "item": "source-native claims beyond the abstract and policy surface",
+      "class": "NON_BLOCKING",
+      "notes": "The Zenodo record carries no description; the deposited PDF abstract, policy surface (Table I), and validator were consulted for the next burden."
+    }
+  ],
+  "distortion_or_substitution_risk": "Promoting a superseded equation or closure from the historical calculus into the current kernel, or reading candidate status as adopted protocol.",
+  "next_burden": "Independently replay the historical weld lifecycle against the source's declared verification targets: satisfy the source-local weld-budget identity (pre/post test on the same anchor with tolerance on |Δκ|) within tolerance, emit the reconciled audit record (manifest snapshot and hashed audit rows), verify artifact hashes against the recorded manifest, and test the source's stated continuity behavior of κ / integrity under its declared composition and piecewise-secant rules. Any translation into the mature Structura Reditus architecture requires a separately declared repair or mapping; no historical equation, closure, return-credit rule, or weld mechanic is promoted into current Tier-1 or Tier-0 authority by this object.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Historical / prefreeze lineage object. Historical status is essential. Registered from the first DOI-bearing corpus import; classification supplied by the corpus owner under the current Structura Reditus architecture. Revision 1.0.1 (2026-09 census and repair pass): the REPAIRABLE next-burden missingness of RCPT-000017 is discharged from the source's own verification targets (deposited PDF at 10.5281/zenodo.16990996); the earlier RETURNED_FOR_REPAIR receipt is preserved."
+}

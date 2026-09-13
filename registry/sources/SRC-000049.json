@@ -1,0 +1,52 @@
+{
+  "source_id": "SRC-000049",
+  "source_type": "corpus-native",
+  "status": "active",
+  "title": "Nested Return in a Composite Diamond Clock: A Welded-Seam Audit of Phase Projection, Thermal Nulling, and Residual-Burden Migration",
+  "version": "1.0",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Manuscript type (source-stated): Tier-2 domain-closure study / independent secondary analysis.",
+    "Two experimentally distinct operations act on different representational spaces: TTZFS-8 eight-phase cycling suppresses pulse-error-generated spectral components (phase-space projection), and a composite D/Q estimator nulls first-order thermal drift while preserving the common oscillator mode (channel-space thermal nulling).",
+    "Once the dominant thermal mode is removed, a previously subdominant residual becomes the governing burden (residual-burden migration).",
+    "The source (Lourette et al.) does not provide a GCD return contract, seam-accounting profile, return credit, residual tolerance, or RunID; 'welded-seam audit' names the audit burden, not a pre-granted weld, and canonical weld cannot be inferred from local restoration (NON_EVALUABLE absent return/seam contract).",
+    "The local operators do not redefine canonical tau_R or the reserved invariants F, omega, S, C, kappa, IC; a separate UMCP run would require its own object definition, adapter, bounded trace, missingness policy, return domain, metric, tolerance, closure registry, and run identity."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.22155902",
+    "url": "https://doi.org/10.5281/zenodo.22155902"
+  },
+  "concept_doi": "10.5281/zenodo.22155901",
+  "version_doi": "10.5281/zenodo.22155902",
+  "related_dois": [
+    {
+      "doi": "10.1103/z2sl-6gcc",
+      "relation": "external_metadata",
+      "notes": "Zenodo relation isDerivedFrom; the DOI of the external anchor (SRC-000048), not of this work."
+    }
+  ],
+  "supersedes": [],
+  "superseded_by": null,
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.22155902",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/22155902",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "Raw experimental data of the external anchor are not publicly deposited (source-stated)."
+  ],
+  "notes": "Corpus-native independent secondary analysis (corpus version 1.0, 28 August 2026) of Lourette et al. (SRC-000048). The Zenodo record declares isDerivedFrom 10.1103/z2sl-6gcc; that DOI belongs to the external article and is not this source's identity. The record also carries source figures under a separate FIGURE_LICENSES.md. Zenodo verification (2026-09-13, API metadata): record 22155902, title \"Nested Return in a Composite Diamond Clock: A Welded-Seam Audit of Phase Projection, Thermal Nulling, and Residual-Burden Migration\", creators ['Paulus, Clement'], publication date 2026-08-28, resource type Preprint."
+}

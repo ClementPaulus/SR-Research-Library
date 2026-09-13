@@ -19,7 +19,13 @@
   },
   "concept_doi": "10.5281/zenodo.21726224",
   "version_doi": "10.5281/zenodo.22086947",
-  "related_dois": [],
+  "related_dois": [
+    {
+      "doi": "10.5281/zenodo.21726225",
+      "relation": "earlier_version",
+      "notes": "Version 1.0 record (2026-07-30) under the same concept; Version 2.0 is the current state of the same intellectual object (SR-OBJ-000011). No separate source or object."
+    }
+  ],
   "supersedes": [],
   "superseded_by": null,
   "publication_year": 2026,

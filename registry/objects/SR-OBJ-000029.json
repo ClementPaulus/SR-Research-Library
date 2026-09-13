@@ -1,0 +1,93 @@
+{
+  "object_id": "SR-OBJ-000029",
+  "title": "Contract-First Epistemology: Semester II — Return, Diagnostics, Transfer, and Production (Weeks 15–28)",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "pedagogical",
+    "secondary": [
+      "handoff"
+    ]
+  },
+  "functional_locus": "cross-system",
+  "source_ids": [
+    "SRC-000057"
+  ],
+  "lens": "second-semester teaching route",
+  "domain": {
+    "primary": "education",
+    "secondary": [
+      "structura-reditus-core"
+    ]
+  },
+  "object_of_study": "Making evaluation durable: typed return, ledger reconciliation, seam analysis, diagnostics, domain transfer, critique, casepack production, defense, repair, and transmission.",
+  "structural_focus": {
+    "primary": "return",
+    "secondary": [
+      "continuity",
+      "translation"
+    ]
+  },
+  "main_question": "What must return, reconcile, transfer and be defended before judgment becomes auditable?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "Governing Semester Question: What must return, reconcile, transfer, and be defended before judgment becomes auditable? (source-stated)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Instructional burden: make evaluation durable after Semester I has made evaluation possible; Weeks 15–28 begin with typed return and end with final casepack defense and method transmission (May 6, 2026, Course Architecture v1.0)."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "The course architecture is structurally declared (source-stated); classroom efficacy is a separate, not-yet-evaluable claim that the source itself says should not be asserted as proven until it returns through actual instruction, student artifacts, assessment records, and repair evidence."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "The library registers Semester II as a distinct teaching witness that follows Semester I (REL-000005), not as a copy of the full course."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "pedagogical",
+    "secondary": [
+      "no-empirical-validation"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "relations": [
+    "REL-000005"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-13T18:00:00Z",
+  "publication_state": "archived",
+  "source_boundary": "The governing source is SRC-000057 (\"Contract-First Epistemology: Semester II — Return, Diagnostics, Transfer, and Production (Weeks 15–28)\"). The source establishes only what its own public record and text state; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. Course-architecture completion is what the source establishes; classroom effectiveness is not established by the source or by this object.",
+  "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority or Tier-1 kernel authority, canon status, proof, weld, scientific endorsement, or release status.",
+  "scope": "Weeks 15–28 of the course: distinguishing return from repetition, reconciling integrity ledgers, evaluating seams, building measurement interfaces, interpreting diagnostics, transferring the method across domains, critiquing by layer, assembling and defending final casepacks, repairing without silent substitution, and transmitting the method.",
+  "exclusions": [
+    "Does not claim classroom effectiveness.",
+    "Does not restate the Semester I method-internalization burden."
+  ],
+  "preserved_meaning": "The course's separation of structural readiness from unproven classroom efficacy, applied to the second semester.",
+  "missingness": [
+    {
+      "item": "classroom efficacy",
+      "class": "NON_BLOCKING",
+      "notes": "NON_EVALUABLE pending actual student artifacts and transmission evidence (source stance). Distinct from structural conformance."
+    },
+    {
+      "item": "separate record description for this member work",
+      "class": "SOURCE_BOUNDARY",
+      "notes": "The archive description describes the full course."
+    }
+  ],
+  "distortion_or_substitution_risk": "Collapsing structural conformance of the semester architecture into a claim of classroom efficacy.",
+  "next_burden": "Independent student/evaluator production, defense, repair and transmission of a complete casepack.",
+  "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+  "notes": "Member work of the shared course archive 10.5281/zenodo.20074210 (semester_2.pdf). Registered in the 2026-09 Tier-2 census and repair pass; classification supplied by the corpus owner under the current Structura Reditus architecture."
+}
