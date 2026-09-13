@@ -43,7 +43,8 @@ SCHEMA_FOR_KIND = {
     "relations": "relation",
 }
 
-DATE_RE = re.compile(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$")
+# Registry event timestamps carry an explicit time-zone designator; date-only values are ambiguous.
+TIMESTAMP_RE = re.compile(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|[+-][0-9]{2}:[0-9]{2})$")
 VERSION_RE = re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+$")
 
 
@@ -227,9 +228,10 @@ def check_date_formats(registry: dict, report: ValidationReport) -> None:
         for filename, record in registry[kind].items():
             for field_name in fields:
                 value = record.get(field_name)
-                if isinstance(value, str) and not DATE_RE.match(value):
+                if isinstance(value, str) and not TIMESTAMP_RE.match(value):
                     report.add("date-formats", f"{kind}/{filename}",
-                               f"{field_name} '{value}' is not an ISO 8601 date (YYYY-MM-DD)")
+                               f"{field_name} '{value}' is not an ISO 8601 timestamp with an "
+                               "explicit time zone (YYYY-MM-DDThh:mm:ssZ or +/-HH:MM)")
 
 
 def check_version_formats(registry: dict, report: ValidationReport) -> None:

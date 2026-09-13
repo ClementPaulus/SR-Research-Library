@@ -41,7 +41,7 @@ from dataclasses import dataclass, field
 import jsonschema
 
 from . import loader
-from .checks import DATE_RE, VERSION_RE
+from .checks import TIMESTAMP_RE, VERSION_RE
 
 PASS, FAIL, BLOCKED = "PASS", "FAIL", "BLOCKED"
 
@@ -249,8 +249,9 @@ def _gate_g_library_durability(record: dict, schemas: dict, gate: GateResult) ->
     date = record.get("date")
     if _missing(date):
         gate.block("date is missing")
-    elif not DATE_RE.match(date):
-        gate.fail(f"date '{date}' violates the ISO 8601 (YYYY-MM-DD) date contract")
+    elif not TIMESTAMP_RE.match(date):
+        gate.fail(f"date '{date}' violates the ISO 8601 timestamp contract "
+                  "(YYYY-MM-DDThh:mm:ss with an explicit Z or +/-HH:MM time zone)")
     for field_name in ("next_burden", "repair_route", "preserved_meaning",
                        "object_of_study", "lens", "distortion_or_substitution_risk"):
         if _missing(record.get(field_name)):

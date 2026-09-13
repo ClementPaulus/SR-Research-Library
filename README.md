@@ -1,6 +1,6 @@
 # Structura Reditus Research Library
 
-**SR-LIBRARY.v0.1.0 (pre-release)** · Schema SR-SCHEMA.v0.1.0 · Taxonomy SR-TAXONOMY.v0.2.0
+**SR-LIBRARY.v0.1.0 (pre-release)** · Schema SR-SCHEMA.v0.2.0 · Taxonomy SR-TAXONOMY.v0.2.0
 
 Governing flow:
 

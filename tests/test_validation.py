@@ -33,6 +33,26 @@ def test_invalid_author_record(schemas):
     assert errors, "invalid author record must produce schema errors"
 
 
+def test_date_only_timestamps_are_rejected(base_registry, schemas, taxonomies, synthetic_object):
+    """A bare date leaves its time basis ambiguous and is not a valid registry timestamp."""
+    registry = copy.deepcopy(base_registry)
+    registry["objects"]["SR-OBJ-000001.json"] = copy.deepcopy(synthetic_object)
+    registry["authors"]["AUTH-0001.json"]["registered"] = "2026-09-13"
+    registry["relations"]["REL-000001.json"]["declared"] = "2026-09-13"
+    registry["objects"]["SR-OBJ-000001.json"]["date"] = "2026-09-13"
+    report = checks.validate_registry(registry, schemas, taxonomies)
+    flagged = {i.record for i in report.for_check("date-formats")}
+    assert flagged == {"authors/AUTH-0001.json", "relations/REL-000001.json",
+                       "objects/SR-OBJ-000001.json"}
+    assert report.for_check("schema-validity")
+
+    for value in ("2026-09-13T02:48:30Z", "2026-09-12T21:48:30-05:00"):
+        registry["authors"]["AUTH-0001.json"]["registered"] = value
+        registry["relations"]["REL-000001.json"]["declared"] = value
+        registry["objects"]["SR-OBJ-000001.json"]["date"] = value
+        assert checks.validate_registry(registry, schemas, taxonomies).ok
+
+
 def test_duplicate_author_id(base_registry, schemas, taxonomies):
     """Two files declaring the same AuthorID are reported as duplicates."""
     registry = copy.deepcopy(base_registry)

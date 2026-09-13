@@ -47,7 +47,7 @@
     "AUTH-0001"
   ],
   "version": "0.1.0",
-  "date": "2026-09-13",
+  "date": "2026-09-13T00:00:00Z",
   "authority": "tier-2",
   "tier2_class_primary": "diagnostic",
   "functional_locus": "none",

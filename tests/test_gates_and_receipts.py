@@ -156,7 +156,7 @@ def test_founder_neutral_admission(base_registry, schemas, taxonomies, synthetic
         "author_id": "AUTH-0002",
         "display_name": "Synthetic Second Author (synthetic test identity)",
         "status": "active",
-        "registered": "2026-09-13",
+        "registered": "2026-09-13T00:00:00Z",
         "notes": "SYNTHETIC: test fixture only.",
     }
 

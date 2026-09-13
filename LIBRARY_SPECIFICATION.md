@@ -1,7 +1,7 @@
 # Structura Reditus Research Library — Library Specification
 
 Specification version: SR-LIBRARY.v0.1.0 (pre-release)
-Schema version: SR-SCHEMA.v0.1.0
+Schema version: SR-SCHEMA.v0.2.0
 Taxonomy version: SR-TAXONOMY.v0.2.0
 
 Governing flow:
@@ -88,6 +88,17 @@ records are never registered.
 JSON Schema (draft 2020-12) validation exists for authors, objects, sources,
 relations, and receipts under `schema/`. Registry records are deterministic
 machine-readable JSON (YAML is also accepted by the loaders).
+
+### 4.1 Timestamps
+
+Every registry event field — `registered` (author), `date` (object version),
+`declared` (relation), and `generated` (receipt, release manifest) — is an
+ISO 8601 timestamp with an explicit time-zone designator:
+`YYYY-MM-DDThh:mm:ssZ` or `YYYY-MM-DDThh:mm:ss±HH:MM`. Date-only values are
+rejected by the schemas, the validators, and Gate G, because a bare date
+leaves its time basis (UTC versus local) ambiguous. Either UTC (`Z`) or local
+time with its offset is acceptable; the offset must be written, never
+assumed.
 
 ## 5. Controlled taxonomies
 

@@ -42,7 +42,7 @@ SYNTHETIC_RELATION = {
     "relation_type": "derived_from",
     "from_id": "SR-OBJ-000001",
     "to_id": "SRC-000001",
-    "declared": "2026-09-13",
+    "declared": "2026-09-13T00:00:00Z",
     "notes": "SYNTHETIC: test fixture relation.",
 }
 
@@ -71,7 +71,7 @@ SYNTHETIC_OBJECT = {
     "maturity": "exploratory",
     "relations": ["REL-000001"],
     "version": "0.1.0",
-    "date": "2026-09-13",
+    "date": "2026-09-13T00:00:00Z",
     "publication_state": "registered-only",
     "source_boundary": "The synthetic source establishes nothing beyond its own existence "
                        "as a fixture; no scholarly claim is drawn from it.",

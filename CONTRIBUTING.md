@@ -24,7 +24,9 @@ Ground rules that apply to every step:
    - `author_id` — e.g. `AUTH-0002`
    - `display_name` — the author's public name
    - `status` — normally `active`
-   - `registered` — today's date, `YYYY-MM-DD`
+   - `registered` — the registration timestamp as ISO 8601 with an explicit
+     time zone, e.g. `2026-09-12T21:48:30-05:00` or `2026-09-13T02:48:30Z`;
+     date-only values are rejected because their time basis is ambiguous
    - `orcid` — only if the author actually has one; never invented
    - `credentials` — optional; each entry needs a `statement` and a
      `verification_state` (`unverified`, `self-declared`,
@@ -54,7 +56,8 @@ The AuthorID is stable for life; contribution history changes around it.
      `exclusions`, `preserved_meaning`, `missingness`,
      `distortion_or_substitution_risk`, `next_burden`, `repair_route`,
      `notes`;
-   - `version` (`MAJOR.MINOR.PATCH`) and `date` (`YYYY-MM-DD`).
+   - `version` (`MAJOR.MINOR.PATCH`) and `date` (ISO 8601 timestamp with an
+     explicit time zone, `YYYY-MM-DDThh:mm:ssZ` or `±HH:MM`).
 3. Declare unknown or unavailable information in `missingness` with a
    missingness class; never fill gaps with guesses.
 4. When revising an already-registered object, first preserve the current
@@ -84,7 +87,8 @@ The AuthorID is stable for life; contribution history changes around it.
 2. Create `registry/relations/REL-NNNNNN.json` conforming to
    `schema/relation.schema.json` with a `relation_type` from
    `taxonomy/relation_types.yaml`, `from_id`/`to_id` referencing registered
-   objects or sources, and a `declared` date.
+   objects or sources, and a `declared` timestamp (ISO 8601 with an explicit
+   time zone).
 3. List the RelationID in the `relations` array of the object that declares
    it.
 4. If a relation cannot yet be classified, use `unresolved_relation` rather

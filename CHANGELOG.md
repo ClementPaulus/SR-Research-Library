@@ -37,6 +37,14 @@ Unified the two implementation branches
 
 ### Changed
 
+- Schema SR-SCHEMA.v0.1.0 → SR-SCHEMA.v0.2.0: registry event fields
+  (`authors.registered`, `objects.date`, `relations.declared`) are now ISO
+  8601 timestamps with an explicit time-zone designator (`Z` or `±HH:MM`)
+  instead of date-only values, whose time basis was ambiguous. The
+  validators and Gate G enforce the same pattern.
+- `AUTH-0001.registered` repaired from `2026-09-13` to `2026-09-13T02:48:30Z`,
+  the recorded time of the commit that created the record
+  (`2026-09-12T21:48:30-05:00` America/Chicago).
 - Taxonomy SR-TAXONOMY.v0.1.0 → SR-TAXONOMY.v0.2.0: added domains
   `systems-theory`, `cognitive-science`, `social-science`; added publication
   states `draft`, `internal`, `archived`. No existing terms removed or
