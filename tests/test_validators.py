@@ -38,6 +38,39 @@ class ValidatorFailureTests(unittest.TestCase):
     def tearDown(self):
         shutil.rmtree(self.tmpdir)
 
+
+    def test_schema_validator_flags_invalid_json_schema(self):
+        invalid_schema = self.tmpdir / "schema" / "broken.schema.json"
+        invalid_schema.write_text(
+            '{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"x","type":"object","required":[],"properties":{},"additionalProperties":1}',
+            encoding="utf-8",
+        )
+
+        with patch("validators.schema_validation.SCHEMA_DIR", self.tmpdir / "schema"):
+            errors = validate_schema_files()
+        self.assertTrue(any("broken.schema.json" in e and "valid JSON Schema" in e for e in errors), errors)
+
+    def test_unique_id_validator_flags_duplicate_ids(self):
+        author1 = self.tmpdir / "registry" / "authors" / "AUTH-0001-a.yaml"
+        author2 = self.tmpdir / "registry" / "authors" / "AUTH-0001-b.yaml"
+        content = "author_id: AUTH-0001\n"
+        author1.write_text(content, encoding="utf-8")
+        author2.write_text(content, encoding="utf-8")
+
+        with patch("validators.unique_id_validation.ROOT", self.tmpdir):
+            errors = validate_unique_ids()
+        self.assertTrue(any("duplicate IDs" in e for e in errors), errors)
+
+    def test_release_validator_flags_count_mismatch(self):
+        manifest = self.tmpdir / "releases" / "SR-LIBRARY.v0.1.0-pre.manifest.yaml"
+        text = manifest.read_text(encoding="utf-8")
+        text = text.replace("authors: 1", "authors: 99")
+        manifest.write_text(text, encoding="utf-8")
+
+        with patch("validators.release_validation.ROOT", self.tmpdir):
+            errors = validate_release_manifest()
+        self.assertTrue(any("registry_counts.authors expected" in e for e in errors), errors)
+
     def test_taxonomy_validator_flags_missing_primary_domain(self):
         obj = self.tmpdir / "registry" / "objects" / "SR-OBJ-000001.yaml"
         obj.write_text(

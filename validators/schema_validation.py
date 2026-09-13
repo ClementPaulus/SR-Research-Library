@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from jsonschema.validators import Draft202012Validator
+
 from .common import ROOT, load_json
 
 SCHEMA_DIR = ROOT / "schema"
@@ -10,7 +12,9 @@ REQUIRED_SCHEMA_KEYS = {"$schema", "$id", "type", "required", "properties"}
 
 def validate_schema_files() -> list[str]:
     errors: list[str] = []
-    for path in sorted(SCHEMA_DIR.glob("*.schema.json")):
+    schema_files = sorted(SCHEMA_DIR.glob("*.schema.json"))
+
+    for path in schema_files:
         try:
             data = load_json(path)
         except Exception as exc:  # pragma: no cover - defensive
@@ -25,7 +29,12 @@ def validate_schema_files() -> list[str]:
         if not isinstance(data.get("required"), list) or not data.get("required"):
             errors.append(f"{path.name} must declare non-empty required list")
 
-    if not list(SCHEMA_DIR.glob("*.schema.json")):
+        try:
+            Draft202012Validator.check_schema(data)
+        except Exception as exc:
+            errors.append(f"{path.name} is not a valid JSON Schema: {exc}")
+
+    if not schema_files:
         errors.append("No schema files found")
 
     return errors
