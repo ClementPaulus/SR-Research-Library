@@ -1,6 +1,6 @@
 # Structura Reditus Research Library
 
-**SR-LIBRARY.v0.2.0 (pre-release)** · Schema SR-SCHEMA.v0.3.0 · Taxonomy SR-TAXONOMY.v0.2.0
+**SR-LIBRARY.v1.0.0** · Schema SR-SCHEMA.v0.3.0 · Taxonomy SR-TAXONOMY.v0.2.0
 
 Governing flow:
 
@@ -192,8 +192,9 @@ ontological claims, and source authority are never transferred automatically.
 
 ## Versioning
 
-The library is versioned independently (currently `SR-LIBRARY.v0.1.0`,
-pre-release). Every release records schema/taxonomy versions, entity counts,
+The library is versioned independently (currently `SR-LIBRARY.v1.0.0`, the
+first release; `v0.1.0` and `v0.2.0` were pre-releases). Every release records
+schema/taxonomy versions, entity counts,
 the full ID manifest, date/timezone, open seams, migration notes, and file
 hashes. Previous releases and historical object states are never silently
 rewritten.
@@ -224,6 +225,6 @@ pip install -r requirements-dev.txt
 python -m validators.validate          # validate the registry
 python -m validators.admit FILE        # evaluate an admission (--write stores receipts, --register registers ACCEPTED records)
 python -m validators.build_site        # regenerate site/ from the registry
-python -m validators.release VERSION   # write a release manifest
+python -m validators.release VERSION   # write a release manifest (--final for a non-pre-release)
 python -m pytest tests/               # run the test suite
 ```

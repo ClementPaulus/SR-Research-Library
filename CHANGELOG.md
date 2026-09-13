@@ -4,6 +4,37 @@ All notable changes to the Structura Reditus Research Library are documented
 here. The library is versioned independently of GCD and of any other
 Structura Reditus artifact. Previous releases are never silently rewritten.
 
+## SR-LIBRARY.v1.0.0 — 2026-09-13
+
+First release (non-pre-release). Registry state is that of SR-LIBRARY.v0.2.0
+plus the items below; nothing in a previous manifest was rewritten.
+
+### Added
+
+- Open seams SEAM-0018..0021 carried from corpus census working package
+  v0.2: casepack archive lineage (earlier version DOIs 19703023 and 19701729
+  verified as versions under the same Zenodo concepts as the listed DOIs),
+  Provenance & Canon Note DOI 17925173 (v1.0 under concept 17925172), the
+  Saturn decagon public-only `SOURCE_NEEDED` queue item, and the deferred
+  census candidates. Sources SRC-000012/013/023 annotated in `missingness`.
+- `python -m validators.release --final` writes a non-pre-release manifest.
+
+### Removed
+
+- Placeholder `.gitkeep` files from populated directories; the archived rc1
+  engine zip (recoverable from commit `c8a87f1`). Handoff and census working
+  packages are git-ignored and not part of the release.
+
+### Release notes
+
+- 46 sources, 16 registered Tier-2 objects (3 RETURNED_FOR_REPAIR archived
+  beside their receipts), 3 relations, 18 governing references (13 active,
+  3 candidate, 2 unresolved), 22 receipts, 1 author.
+- Open seams SEAM-0002..0021 are carried in the manifest. A release does not
+  imply that every work in it is true, validated, conformant under UMCP, or
+  endorsed by Structura Reditus; admission is organizational conformance
+  only.
+
 ## SR-LIBRARY.v0.2.0 — 2026-09-13 (pre-release)
 
 First populated release: the verified DOI-bearing corpus and the governing

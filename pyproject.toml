@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "structura-reditus-research-library"
-version = "0.1.0"
+version = "1.0.0"
 description = "Registry, admission, receipt, and retrieval tooling for the Structura Reditus Research Library"
 readme = "README.md"
 license = { file = "LICENSE" }

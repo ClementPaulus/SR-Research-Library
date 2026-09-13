@@ -1,6 +1,6 @@
 # Structura Reditus Research Library — Library Specification
 
-Specification version: SR-LIBRARY.v0.2.0 (pre-release)
+Specification version: SR-LIBRARY.v1.0.0
 Schema version: SR-SCHEMA.v0.3.0
 Taxonomy version: SR-TAXONOMY.v0.2.0
 
@@ -390,11 +390,13 @@ to rewrite an existing historical state.
 
 ## 15. Releases
 
-The library is versioned independently, beginning with the pre-release
-`SR-LIBRARY.v0.1.0`. Each release manifest
-(`python -m validators.release <version>`) records: schema version; taxonomy
-version; author count; object count; source count; relation count; receipt
-count; manifest of IDs; date/timezone; open seams; migration notes; and
+The library is versioned independently, beginning with the pre-releases
+`SR-LIBRARY.v0.1.0` and `SR-LIBRARY.v0.2.0` and the first release
+`SR-LIBRARY.v1.0.0`. Each release manifest
+(`python -m validators.release <version> [--final]`) records: schema version; taxonomy
+version; author count; object count; source count; relation count;
+governing count; receipt count; manifest of IDs; governing immutable hashes;
+date/timezone; open seams; migration notes; and
 SHA-256 hashes of schema, taxonomy, and registry files. Previous releases are
 never silently rewritten.
 
