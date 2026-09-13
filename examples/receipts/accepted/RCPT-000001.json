@@ -1,0 +1,70 @@
+{
+  "receipt_id": "RCPT-000001",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000001",
+  "generated": "2026-09-13T00:00:00Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000001",
+  "title": "SYNTHETIC EXAMPLE: structurally complete self-test submission",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "0.1.0",
+  "date": "2026-09-13",
+  "authority": "tier-2",
+  "tier2_class_primary": "diagnostic",
+  "functional_locus": "none",
+  "domain_primary": "structura-reditus-core",
+  "structural_focus_primary": "return",
+  "main_question": "Does a structurally complete record pass all seven admission gates?",
+  "evidence_mode_primary": "no-empirical-validation",
+  "provenance": "synthetic-test-object",
+  "maturity": "exploratory",
+  "source_ids": [],
+  "relation_ids": [],
+  "publication_state": "registered-only",
+  "non_blocking_missingness": [
+    "No empirical validation performed (NON_BLOCKING)"
+  ],
+  "open_burdens": [
+    "None beyond continued example maintenance."
+  ],
+  "next_burden": "None beyond continued example maintenance."
+}

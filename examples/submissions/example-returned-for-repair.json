@@ -1,0 +1,65 @@
+{
+  "object_id": "SR-OBJ-000001",
+  "title": "SYNTHETIC EXAMPLE: submission missing its main question",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "diagnostic",
+    "secondary": []
+  },
+  "functional_locus": "none",
+  "source_ids": [],
+  "lens": "Library self-test lens: this record examines the library's own admission machinery.",
+  "domain": {
+    "primary": "structura-reditus-core",
+    "secondary": []
+  },
+  "object_of_study": "The admission-gate machinery of the Research Library itself.",
+  "structural_focus": {
+    "primary": "return",
+    "secondary": [
+      "boundary"
+    ]
+  },
+  "main_question": "",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "local-interpretation",
+      "claim": "A structurally complete record should be ACCEPTED by the gates."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "no-empirical-validation",
+    "secondary": []
+  },
+  "provenance": "synthetic-test-object",
+  "maturity": "exploratory",
+  "relations": [],
+  "version": "0.1.0",
+  "date": "2026-09-13",
+  "publication_state": "registered-only",
+  "source_boundary": "No sources are cited; nothing is established by any source.",
+  "authority_boundary": "This object claims no Tier-0 or Tier-1 authority, no scientific truth, and no endorsement of any external source.",
+  "scope": "Library self-testing only.",
+  "exclusions": [
+    "Any real scholarly claim."
+  ],
+  "preserved_meaning": "Not applicable beyond the synthetic framing; no source meaning exists to preserve.",
+  "missingness": [
+    {
+      "item": "No empirical validation performed",
+      "class": "NON_BLOCKING",
+      "notes": "The object is a synthetic example."
+    }
+  ],
+  "distortion_or_substitution_risk": "None: no source exists to distort or substitute.",
+  "next_burden": "None beyond continued example maintenance.",
+  "repair_route": "Amend this record and resubmit through the same seven gates.",
+  "notes": "SYNTHETIC: example submission whose main_question is missing, producing RETURNED_FOR_REPAIR.",
+  "synthetic": true
+}

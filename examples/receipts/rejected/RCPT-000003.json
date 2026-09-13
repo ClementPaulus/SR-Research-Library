@@ -1,0 +1,54 @@
+{
+  "receipt_id": "RCPT-000003",
+  "decision": "REJECTED",
+  "submission_identity": "SR-OBJ-000001",
+  "generated": "2026-09-13T00:00:00Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "FAIL",
+      "detail": "authority.tier 'tier-1' violates the library contract: the Research Library registers Tier-2 research records only and does not create new authority tiers"
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "FAIL",
+      "detail": "schema durability: authority/tier: 'tier-1' is not one of ['tier-2']"
+    }
+  },
+  "disclaimer": "This rejection concerns library admission only: the submitted record violates the active library contract. It does not by itself establish that the underlying research claim is false. Library admission means organizational conformance only and does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "failed_gates": [
+    "Gate B: Tier placement",
+    "Gate G: Library durability"
+  ],
+  "established_violation": "authority.tier 'tier-1' violates the library contract: the Research Library registers Tier-2 research records only and does not create new authority tiers; schema durability: authority/tier: 'tier-1' is not one of ['tier-2']",
+  "violation_class": "CONTRACT_VIOLATING",
+  "why_not_permitted": "An evaluable admission gate failed because the submitted object violates the active library contract.",
+  "repairable_same_object": false,
+  "new_object_version_or_seam_required": "A corrected record must be submitted as a new version (or, if the violation changes the object's identity, as a new object with a declared seam).",
+  "resubmission_conditions": "Remove every listed contract violation; resubmission is then evaluated by the same seven gates with no penalty for the prior rejection."
+}

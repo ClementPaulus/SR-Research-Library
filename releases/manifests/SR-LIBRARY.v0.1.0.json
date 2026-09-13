@@ -1,0 +1,48 @@
+{
+  "library_version": "SR-LIBRARY.v0.1.0",
+  "prerelease": true,
+  "schema_version": "SR-SCHEMA.v0.1.0",
+  "taxonomy_version": "SR-TAXONOMY.v0.1.0",
+  "author_count": 1,
+  "object_count": 0,
+  "source_count": 0,
+  "relation_count": 0,
+  "receipt_count": 0,
+  "id_manifest": {
+    "authors": [
+      "AUTH-0001"
+    ],
+    "objects": [],
+    "sources": [],
+    "relations": []
+  },
+  "generated": "2026-09-13T02:54:12Z",
+  "timezone": "UTC",
+  "open_seams": [
+    "Registry contains no research objects, sources, or relations yet: no actual source metadata was supplied, and records are never fabricated or bulk-populated.",
+    "The public surface is a minimal static generated page; richer per-entity pages and per-axis filter views remain to be built.",
+    "Receipt IDs are allocated sequentially from the receipts/ tree; a concurrent-submission allocation policy is not yet declared.",
+    "Taxonomy deprecation is documented (deprecate-in-place) but no machine-readable 'deprecated' flag exists yet in taxonomy files.",
+    "Author-profile output is exposed via site/data/profiles.json only; no dedicated per-author pages exist yet."
+  ],
+  "migration_notes": [
+    "First working implementation; no migration from any previous release."
+  ],
+  "hashes": {
+    "schema/author.schema.json": "b95efe1ff238b58f49b67213e27fde6985896e6852a266f20db69f6561d45287",
+    "schema/object.schema.json": "b21b915c9696f1b70f0ea65e2251d0fb9a22bab33c0c7ee513ae4c9fd0be5ad4",
+    "schema/receipt.schema.json": "963d7e9aedf319c0966de456d6f6f4c1caf68f95ec3d3f52bd616806acff650b",
+    "schema/relation.schema.json": "e07232afe647ee0bb8e072a6a319d2ab89788441ba5d5e673292f3797a95b589",
+    "schema/source.schema.json": "ef11eb3f6c62bdde4b4e4dba789d940e56f87e800a26381d1169046c97f0904d",
+    "taxonomy/domains.yaml": "c3d351e88c58d6eb2fe0c5eb47fd9e685d096be7161db4bddebf15eb576f1f62",
+    "taxonomy/evidence_modes.yaml": "4531d4fb6dbc9b3d9583cfe13d0d987e529f6ee66ba383f6c377b8ba1b4e8fd4",
+    "taxonomy/focuses.yaml": "959d1a439c340752deac36b75e71ae39e1db4dbece9c95c4a27c4c69526bb905",
+    "taxonomy/functional_loci.yaml": "7d81231086d5040c3edf380acb2300c52cd37d794891d35183567d66c4c7c660",
+    "taxonomy/maturity_states.yaml": "79b764c75d1bc50f762f36e3c9bf8905cee906d15f063acbcd13a782c72cdfd6",
+    "taxonomy/provenance_types.yaml": "ca98bbdd6cd96faa45a1d11bb792709ff922f31961c3289523824de5a556871b",
+    "taxonomy/publication_states.yaml": "0af204bbed0174fdfa24984030e9878e4cd51d47038ffc4c1544b504bd1615d9",
+    "taxonomy/relation_types.yaml": "7a89b4a843ca4387da850324affdb7fd45e68128e42707575779ec1bcf5e94e4",
+    "taxonomy/tier2_classes.yaml": "efa10827463bed6801903fe9b413207e72f432bd42fc8f7152d5d9714f47eca0",
+    "registry/authors/AUTH-0001.json": "1ee7fe457f72c782a446b0551e67b83b6245d5740bbb3704cacad9bd43f771f2"
+  }
+}

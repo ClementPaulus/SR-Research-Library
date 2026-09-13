@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Structura Reditus Research Library</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 2rem auto; max-width: 60rem; line-height: 1.5; }
+  h1, h2 { font-weight: 600; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 1.5rem; }
+  th, td { border: 1px solid #ccc; padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f4f4f4; }
+  input { padding: 0.4rem; width: 100%; box-sizing: border-box; margin-bottom: 1rem; }
+  .note { color: #555; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<h1>Structura Reditus Research Library</h1>
+<p class="note">Tier-0 organizational and retrieval surface for Tier-2 research records.
+Generated from the registry (the source of truth).
+Library admission means organizational conformance only and does not imply
+scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission. This is an even organizational surface, not a prestige hierarchy.</p>
+<p class="note">Schema version: SR-SCHEMA.v0.1.0 &middot; Taxonomy version: SR-TAXONOMY.v0.1.0</p>
+
+<h2>Research objects</h2>
+<input id="filter" placeholder="Filter by author, domain, object of study, structural focus, main question, Tier-2 class, evidence mode, provenance, maturity, relation, source, or date&hellip;">
+<table id="objects">
+<thead><tr>
+<th>ObjectID</th><th>Title</th><th>Authors</th><th>Domain</th><th>Tier-2 class</th>
+<th>Structural focus</th><th>Object of study</th><th>Main question</th><th>Evidence mode</th>
+<th>Provenance</th><th>Maturity</th><th>Sources</th><th>Relations</th><th>Date</th>
+</tr></thead>
+<tbody>
+<tr><td colspan="14">No research objects registered yet.</td></tr>
+</tbody>
+</table>
+
+<h2>Authors</h2>
+<table>
+<thead><tr><th>AuthorID</th><th>Display name</th><th>ORCID</th><th>Status</th><th>Registered objects</th></tr></thead>
+<tbody>
+<tr><td>AUTH-0001</td><td>Clement Paulus</td><td>0009-0000-6069-8234</td><td>active</td><td>0</td></tr>
+</tbody>
+</table>
+
+<h2>Sources</h2>
+<table>
+<thead><tr><th>SourceID</th><th>Type</th><th>Title</th><th>Original authors</th></tr></thead>
+<tbody>
+<tr><td colspan="4">No sources registered yet.</td></tr>
+</tbody>
+</table>
+
+<h2>Cross-domain retrieval route</h2>
+<p>FIND &rarr; COMPARE &rarr; EXTRACT TRANSFERABLE STRUCTURE &rarr; REINSTANTIATE LOCALLY &rarr; VALIDATE LOCALLY.</p>
+<p class="note">Thresholds, adapters, closure gates, evidence standards, causal claims,
+ontological claims, and source authority are never transferred automatically between domains.</p>
+
+<script>
+document.getElementById('filter').addEventListener('input', function () {
+  var needle = this.value.toLowerCase();
+  document.querySelectorAll('#objects tbody tr').forEach(function (row) {
+    row.style.display = row.textContent.toLowerCase().indexOf(needle) === -1 ? 'none' : '';
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+# Contributing to the Structura Reditus Research Library
+
+This document gives the exact steps for working with the library. Nothing
+here requires live explanation from the repository creator. The full
+contract is in [LIBRARY_SPECIFICATION.md](LIBRARY_SPECIFICATION.md).
+
+Ground rules that apply to every step:
+
+- Do not fabricate metadata. When information is missing, preserve the gap in
+  the `missingness` field and mark the record for repair. Do not guess. Do
+  not silently reconcile inconsistent source data.
+- Synthetic examples must be explicitly marked as synthetic (use
+  `"synthetic": true` and provenance `synthetic-test-object`).
+- Publication status, credentials, citation counts, and agreement with GCD
+  carry no admission authority.
+- Every author, including AUTH-0001, is held to the same admission gates.
+
+## 1. Requesting or registering an AuthorID
+
+1. Take the next free identifier in the `AUTH-NNNN` namespace (check
+   `registry/authors/`).
+2. Create `registry/authors/AUTH-NNNN.json` conforming to
+   `schema/author.schema.json` with at least:
+   - `author_id` — e.g. `AUTH-0002`
+   - `display_name` — the author's public name
+   - `status` — normally `active`
+   - `registered` — today's date, `YYYY-MM-DD`
+   - `orcid` — only if the author actually has one; never invented
+   - `credentials` — optional; each entry needs a `statement` and a
+     `verification_state` (`unverified`, `self-declared`,
+     `externally-verified`). Credentials are provenance metadata only.
+3. Run `python -m validators.validate` and confirm no issues.
+4. Open a pull request adding only that file.
+
+The AuthorID is stable for life; contribution history changes around it.
+
+## 2. Preparing a research-object record
+
+1. Take the next free identifier in the `SR-OBJ-NNNNNN` namespace.
+2. Create a JSON file conforming to `schema/object.schema.json`. Every field
+   listed as required in the schema must be present, including:
+   - exactly one `tier2_class.primary` from `taxonomy/tier2_classes.yaml`
+     (secondary classes optional);
+   - `authority.tier` set to `tier-2` (the library registers Tier-2 records
+     only);
+   - controlled values for `domain.primary`, `structural_focus.primary`,
+     `evidence_mode.primary`, `provenance`, `maturity`, `functional_locus`,
+     and `publication_state` from their taxonomy files — free text never
+     replaces controlled values;
+   - `main_question` (one main question; others go in `secondary_questions`);
+   - `claim_layers` entries with a declared `layer` so source observation
+     stays distinct from local interpretation;
+   - explicit `source_boundary`, `authority_boundary`, `scope`,
+     `exclusions`, `preserved_meaning`, `missingness`,
+     `distortion_or_substitution_risk`, `next_burden`, `repair_route`,
+     `notes`;
+   - `version` (`MAJOR.MINOR.PATCH`) and `date` (`YYYY-MM-DD`).
+3. Declare unknown or unavailable information in `missingness` with a
+   missingness class; never fill gaps with guesses.
+4. When revising an already-registered object, first preserve the current
+   state to `registry/objects/history/` (see §8), then update the record with
+   a bumped `version`.
+
+## 3. Registering an external source
+
+1. Take the next free identifier in the `SRC-NNNNNN` namespace.
+2. Create `registry/sources/SRC-NNNNNN.json` conforming to
+   `schema/source.schema.json`:
+   - `source_type: external` for work outside Structura Reditus;
+   - `source_authors` — the original authors, exactly as attributable; never
+     replaced by a library AuthorID;
+   - `source_native_claims` — only claims the source itself makes, in its
+     own terms; local interpretation belongs on your object's
+     `claim_layers`, never here;
+   - `identifier` — only supplied identifiers (DOI, URL, ISBN, archive
+     reference); never guessed;
+   - `missingness` — every unavailable metadata item, preserved explicitly.
+3. Never attribute a Structura Reditus or GCD interpretation to the external
+   author unless the source actually makes that interpretation.
+
+## 4. Declaring relations
+
+1. Take the next free identifier in the `REL-NNNNNN` namespace.
+2. Create `registry/relations/REL-NNNNNN.json` conforming to
+   `schema/relation.schema.json` with a `relation_type` from
+   `taxonomy/relation_types.yaml`, `from_id`/`to_id` referencing registered
+   objects or sources, and a `declared` date.
+3. List the RelationID in the `relations` array of the object that declares
+   it.
+4. If a relation cannot yet be classified, use `unresolved_relation` rather
+   than inventing a type. `challenges` and `contrasts_with` are ordinary
+   relations — disagreement is not an admission failure.
+
+## 5. Running validators locally
+
+```
+pip install jsonschema pyyaml pytest
+python -m validators.validate    # all registry checks; exits non-zero on issues
+python -m pytest tests/          # full test suite
+```
+
+## 6. Submitting work
+
+1. Add your new files under `registry/` (author, sources, relations, object).
+2. Run the validators (§5) until clean.
+3. Evaluate admission locally:
+   `python -m validators.admit path/to/SR-OBJ-NNNNNN.json`
+   (add `--write` to store the receipt under `receipts/`).
+4. Open a pull request containing the registry files and the generated
+   receipt.
+
+## 7. Interpreting admission receipts
+
+- `ACCEPTED` — all seven gates (A–G) passed; only non-blocking missingness
+  remains. Admission means organizational conformance only: not truth, not
+  endorsement, not Tier-0 adoption, not Tier-1 admission.
+- `RETURNED_FOR_REPAIR` — structure is missing or incomplete. The receipt
+  lists the blocked gates, exact missing structure, the exact repair
+  required, fields already accepted, fields still blocked, and the exact
+  resubmission condition. This is not a rejection.
+- `REJECTED` — an evaluable gate failed because the record violates the
+  library contract (for example, a non-Tier-2 authority claim or an
+  uncontrolled taxonomy value). The receipt states the established violation
+  and the resubmission conditions. Rejection does not establish that the
+  underlying research claim is false.
+
+## 8. Repairing and resubmitting
+
+1. Read the `exact_repair_required` list on the repair receipt.
+2. Supply exactly the missing structure — from actual records, never
+   invented. If information genuinely does not exist, declare it in
+   `missingness` with the appropriate class.
+3. If the repair changes the object's identity (the receipt says a new
+   ObjectID is required), register a new object and relate it to the old one
+   (`supersedes` / `derived_from`); otherwise keep the same ObjectID.
+4. When revising a registered object, preserve the previous state first:
+   ```
+   python -c "import json; from validators import loader; \
+   loader.archive_object_version(json.load(open('registry/objects/SR-OBJ-NNNNNN.json')))"
+   ```
+   then bump `version` and edit the record. Historical states are never
+   rewritten.
+5. Re-run the validators and admission evaluation; resubmit. All seven gates
+   are re-evaluated in full, with no penalty for the earlier return.
+
+## 9. Proposing taxonomy changes
+
+1. Open a pull request that edits the relevant `taxonomy/*.yaml` file:
+   - **Adding a term**: append `id`, `label`, and an optional `description`,
+     plus a rationale in the PR stating what existing terms fail to cover.
+   - **Deprecating a term**: keep the term in place and add a
+     `description` note marking it deprecated and naming its replacement.
+     Terms are never silently removed or redefined, because historical
+     records reference them.
+2. Bump `taxonomy/VERSION` (e.g. `SR-TAXONOMY.v0.1.0` → `SR-TAXONOMY.v0.2.0`).
+3. Run `python -m pytest tests/` — existing registry records must still
+   validate.
+4. Taxonomy changes are recorded in release manifests; they are part of the
+   library's preserved history.

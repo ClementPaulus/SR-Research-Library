@@ -57,9 +57,9 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <body>
 <h1>Structura Reditus Research Library</h1>
 <p class="note">Tier-0 organizational and retrieval surface for Tier-2 research records.
-Generated from the registry (the source of truth). Library admission means organizational
-conformance only and does not imply scientific truth, endorsement, Tier-0 adoption, or
-Tier-1 admission. This is an even organizational surface, not a prestige hierarchy.</p>
+Generated from the registry (the source of truth).
+Library admission means organizational conformance only and does not imply
+scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission. This is an even organizational surface, not a prestige hierarchy.</p>
 <p class="note">Schema version: {schema_version} &middot; Taxonomy version: {taxonomy_version}</p>
 
 <h2>Research objects</h2>

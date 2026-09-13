@@ -1,0 +1,134 @@
+"""Tests for external-source discipline, history preservation, profiles,
+manifests, and site generation."""
+
+from __future__ import annotations
+
+import copy
+import json
+
+import jsonschema
+import pytest
+
+from validators import loader, manifest, profiles, sitegen
+
+
+def test_external_source_attribution_preservation(base_registry, schemas):
+    """External work remains an external source object with preserved
+    authorship, source-native claims, source identity, and missingness."""
+    source = base_registry["sources"]["SRC-000001.json"]
+    jsonschema.Draft202012Validator(schemas["source"]).validate(source)
+    assert source["source_type"] == "external"
+    # Original authorship is preserved as names, never replaced by a library AuthorID.
+    assert source["source_authors"]
+    assert not any(a.startswith("AUTH-") for a in source["source_authors"])
+    # Source-native claims stay on the source; local interpretation lives on the object.
+    assert source["source_native_claims"]
+    # Missingness is preserved, not silently filled.
+    assert source["missingness"]
+    assert source["publication_year"] is None
+
+
+def test_object_keeps_source_observation_distinct(synthetic_object):
+    """Claim layers keep source observation distinct from local interpretation,
+    so a local interpretation is never attributed to the external author."""
+    layers = {entry["layer"] for entry in synthetic_object["claim_layers"]}
+    assert "source-observation" in layers
+    assert "local-interpretation" in layers
+
+
+def test_historical_version_preservation(tmp_path, synthetic_object):
+    """Object revisions preserve prior states; history is never rewritten."""
+    registry_dir = tmp_path / "registry"
+    (registry_dir / "objects").mkdir(parents=True)
+
+    v1 = copy.deepcopy(synthetic_object)
+    path_v1 = loader.archive_object_version(v1, registry_dir)
+    assert path_v1.exists()
+    assert "SR-OBJ-000001.v0.1.0" in path_v1.name
+
+    v2 = copy.deepcopy(synthetic_object)
+    v2["version"] = "0.2.0"
+    v2["notes"] = "SYNTHETIC: revised test fixture."
+    path_v2 = loader.archive_object_version(v2, registry_dir)
+    assert path_v2 != path_v1
+
+    # Both historical states remain readable and distinct.
+    history = loader.load_object_history(registry_dir)
+    assert len(history) == 2
+
+    # Attempting to rewrite an existing historical state with different content fails.
+    conflicting = copy.deepcopy(v1)
+    conflicting["title"] = "Silently rewritten title (synthetic)"
+    with pytest.raises(FileExistsError):
+        loader.archive_object_version(conflicting, registry_dir)
+
+    # Re-archiving identical content is a no-op, not a rewrite.
+    assert loader.archive_object_version(copy.deepcopy(v1), registry_dir) == path_v1
+
+
+def test_author_profile_reconstructible_quantities(base_registry, synthetic_object):
+    registry = copy.deepcopy(base_registry)
+    registry["objects"]["SR-OBJ-000001.json"] = synthetic_object
+    profile = profiles.build_author_profile("AUTH-0001", registry)
+    assert profile["author_id"] == "AUTH-0001"
+    assert profile["display_name"] == "Clement Paulus"
+    assert profile["total_registered_authored_objects"] == 1
+    assert profile["primary_domain_distribution"] == {"structura-reditus-core": 1.0}
+    assert profile["tier2_class_distribution"] == {"diagnostic": 1.0}
+    assert profile["structural_focus_distribution"] == {"return": 1.0}
+    assert profile["evidence_mode_distribution"] == {"no-empirical-validation": 1.0}
+    assert profile["provenance_distribution"] == {"synthetic-test-object": 1.0}
+    assert profile["maturity_distribution"] == {"exploratory": 1.0}
+    # No universal author score and no prestige weighting exists anywhere in the profile.
+    for forbidden in ("score", "rank", "prestige", "citations", "importance"):
+        assert forbidden not in profile
+
+
+def test_author_identity_stable_while_history_changes(base_registry, synthetic_object):
+    """Author identity fields are unchanged as contribution history grows."""
+    empty_profile = profiles.build_author_profile("AUTH-0001", base_registry)
+    registry = copy.deepcopy(base_registry)
+    registry["objects"]["SR-OBJ-000001.json"] = synthetic_object
+    grown_profile = profiles.build_author_profile("AUTH-0001", registry)
+    for identity_field in ("author_id", "display_name", "orcid", "status"):
+        assert empty_profile[identity_field] == grown_profile[identity_field]
+    assert empty_profile["total_registered_authored_objects"] == 0
+    assert grown_profile["total_registered_authored_objects"] == 1
+
+
+def test_release_manifest_generation(tmp_path):
+    data = manifest.build_release_manifest(
+        "SR-LIBRARY.v0.0.0-test",
+        open_seams=["synthetic test seam"],
+        migration_notes=["synthetic test note"],
+    )
+    assert data["schema_version"] == loader.schema_version()
+    assert data["taxonomy_version"] == loader.taxonomy_version()
+    assert data["author_count"] >= 1
+    assert "AUTH-0001" in data["id_manifest"]["authors"]
+    assert data["timezone"] == "UTC"
+    assert data["hashes"]
+
+    path = manifest.write_release_manifest(data, tmp_path)
+    assert path.exists()
+    # Identical rewrite is a no-op; differing rewrite is refused.
+    assert manifest.write_release_manifest(data, tmp_path) == path
+    altered = copy.deepcopy(data)
+    altered["migration_notes"] = ["silently changed"]
+    with pytest.raises(FileExistsError):
+        manifest.write_release_manifest(altered, tmp_path)
+
+
+def test_site_generated_from_registry(tmp_path, base_registry, synthetic_object):
+    """The site is generated from the registry, not a second database."""
+    registry = copy.deepcopy(base_registry)
+    registry["objects"]["SR-OBJ-000001.json"] = synthetic_object
+    index_path = sitegen.generate_site(tmp_path, registry)
+    html = index_path.read_text(encoding="utf-8")
+    assert "SR-OBJ-000001" in html
+    assert "Clement Paulus" in html
+    assert "organizational conformance only" in html
+    objects_data = json.loads((tmp_path / "data" / "objects.json").read_text(encoding="utf-8"))
+    assert objects_data[0]["object_id"] == "SR-OBJ-000001"
+    profiles_data = json.loads((tmp_path / "data" / "profiles.json").read_text(encoding="utf-8"))
+    assert "AUTH-0001" in profiles_data
