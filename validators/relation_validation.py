@@ -10,15 +10,24 @@ def validate_relations() -> list[str]:
     source_records = [load_yaml(path) for path in list_yaml_files(ROOT / "registry" / "sources")]
     relation_records = [load_yaml(path) for path in list_yaml_files(ROOT / "registry" / "relations")]
 
-    object_ids = {record.get("object_id") for record in object_records if record.get("object_id")}
-    source_ids = {record.get("source_id") for record in source_records if record.get("source_id")}
-    relation_ids = {record.get("relation_id") for record in relation_records if record.get("relation_id")}
+    object_ids = {record.get("object_id") for record in object_records if isinstance(record, dict) and record.get("object_id")}
+    source_ids = {record.get("source_id") for record in source_records if isinstance(record, dict) and record.get("source_id")}
+    relation_ids = {
+        record.get("relation_id")
+        for record in relation_records
+        if isinstance(record, dict) and record.get("relation_id")
+    }
     valid_targets = object_ids | source_ids
 
-    relation_types = set(load_yaml(ROOT / "taxonomy" / "relation_types.yaml").get("terms", []))
+    relation_type_data = load_yaml(ROOT / "taxonomy" / "relation_types.yaml")
+    relation_types = set(relation_type_data.get("terms", [])) if isinstance(relation_type_data, dict) else set()
 
     for path in list_yaml_files(ROOT / "registry" / "objects"):
         obj = load_yaml(path)
+        if not isinstance(obj, dict):
+            errors.append(f"{path.name}: object record must be a YAML object")
+            continue
+
         for relation_id in obj.get("relations", []):
             if relation_id not in relation_ids:
                 errors.append(f"{path.name}: unknown relation reference {relation_id}")
@@ -38,6 +47,10 @@ def validate_relations() -> list[str]:
 
     for path in list_yaml_files(ROOT / "registry" / "relations"):
         rel = load_yaml(path)
+        if not isinstance(rel, dict):
+            errors.append(f"{path.name}: relation record must be a YAML object")
+            continue
+
         subject = rel.get("subject")
         target = rel.get("object")
         relation_type = rel.get("relation_type")

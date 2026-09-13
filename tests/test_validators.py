@@ -196,5 +196,19 @@ provenance: corpus-native
         self.assertTrue(any("unknown relation reference REL-999999" in e for e in errors), errors)
 
 
+class ValidatorRunnerTests(unittest.TestCase):
+    def test_runner_returns_zero_when_all_validators_pass(self):
+        from validators import run_validators
+
+        with patch.object(run_validators, "VALIDATORS", [("ok", lambda: [])]):
+            self.assertEqual(run_validators.main(), 0)
+
+    def test_runner_returns_one_when_any_validator_fails(self):
+        from validators import run_validators
+
+        with patch.object(run_validators, "VALIDATORS", [("bad", lambda: ["err"]) ]):
+            self.assertEqual(run_validators.main(), 1)
+
+
 if __name__ == "__main__":
     unittest.main()
