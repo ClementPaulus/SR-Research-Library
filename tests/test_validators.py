@@ -6,6 +6,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+import yaml
+
 from validators.relation_validation import validate_relations
 from validators.release_validation import validate_release_manifest
 from validators.schema_validation import validate_schema_files
@@ -70,6 +72,17 @@ class ValidatorFailureTests(unittest.TestCase):
         with patch("validators.release_validation.ROOT", self.tmpdir):
             errors = validate_release_manifest()
         self.assertTrue(any("registry_counts.authors expected" in e for e in errors), errors)
+
+
+    def test_release_validator_flags_invalid_manifest_shapes(self):
+        manifest = self.tmpdir / "releases" / "SR-LIBRARY.v0.1.0-pre.manifest.yaml"
+        data = yaml.safe_load(manifest.read_text(encoding="utf-8"))
+        data["registry_counts"] = "not-a-map"
+        manifest.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+
+        with patch("validators.release_validation.ROOT", self.tmpdir):
+            errors = validate_release_manifest()
+        self.assertTrue(any("registry_counts must be a mapping" in e for e in errors), errors)
 
     def test_taxonomy_validator_flags_missing_primary_domain(self):
         obj = self.tmpdir / "registry" / "objects" / "SR-OBJ-000001.yaml"

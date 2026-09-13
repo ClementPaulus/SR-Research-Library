@@ -62,6 +62,11 @@ def validate_release_manifest() -> list[str]:
         if frozen_at and not is_iso_datetime(str(frozen_at)):
             errors.append(f"{manifest.name}: frozen_at must be ISO datetime")
 
+        manifest_counts = release.get("registry_counts")
+        if not isinstance(manifest_counts, dict):
+            errors.append(f"{manifest.name}: registry_counts must be a mapping")
+            continue
+
         expected_counts = {
             "authors": len(registry_files["authors"]),
             "objects": len(registry_files["objects"]),
@@ -69,19 +74,26 @@ def validate_release_manifest() -> list[str]:
             "relations": len(registry_files["relations"]),
         }
 
-        manifest_counts = release.get("registry_counts", {})
         for key, expected in expected_counts.items():
             if manifest_counts.get(key) != expected:
                 errors.append(f"{manifest.name}: registry_counts.{key} expected {expected} got {manifest_counts.get(key)}")
 
-        receipt_counts = manifest_counts.get("receipts", {}) if isinstance(manifest_counts, dict) else {}
+        receipt_counts = manifest_counts.get("receipts")
+        if not isinstance(receipt_counts, dict):
+            errors.append(f"{manifest.name}: registry_counts.receipts must be a mapping")
+            continue
+
         for key, expected in ((k, len(v)) for k, v in receipt_files.items()):
             if receipt_counts.get(key) != expected:
                 errors.append(
                     f"{manifest.name}: registry_counts.receipts.{key} expected {expected} got {receipt_counts.get(key)}"
                 )
 
-        id_manifest = release.get("id_manifest", {})
+        id_manifest = release.get("id_manifest")
+        if not isinstance(id_manifest, dict):
+            errors.append(f"{manifest.name}: id_manifest must be a mapping")
+            continue
+
         expected_ids = {
             "authors": _id_values(registry_files["authors"], "author_id"),
             "objects": _id_values(registry_files["objects"], "object_id"),
@@ -92,7 +104,11 @@ def validate_release_manifest() -> list[str]:
             if sorted(id_manifest.get(key, [])) != expected:
                 errors.append(f"{manifest.name}: id_manifest.{key} does not match registry IDs")
 
-        receipt_manifest = release.get("receipt_manifest", {})
+        receipt_manifest = release.get("receipt_manifest")
+        if not isinstance(receipt_manifest, dict):
+            errors.append(f"{manifest.name}: receipt_manifest must be a mapping")
+            continue
+
         for key, files in receipt_files.items():
             expected_paths = sorted(str(path.relative_to(ROOT)) for path in files)
             if sorted(receipt_manifest.get(key, [])) != expected_paths:
