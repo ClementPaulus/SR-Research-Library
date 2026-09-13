@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+from collections import Counter
 from pathlib import Path
 
 from .common import ROOT, list_yaml_files, load_yaml
@@ -40,7 +41,8 @@ def validate_unique_ids() -> list[str]:
         if bad:
             errors.append(f"{category}: invalid ID format(s): {bad}")
 
-        duplicates = sorted({i for i in ids if ids.count(i) > 1})
+        counts = Counter(ids)
+        duplicates = sorted([identifier for identifier, count in counts.items() if count > 1])
         if duplicates:
             errors.append(f"{category}: duplicate IDs found: {duplicates}")
 

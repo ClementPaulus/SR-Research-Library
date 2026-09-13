@@ -94,6 +94,66 @@ notes: test
             errors = validate_taxonomies()
         self.assertTrue(any("domain.primary" in e for e in errors), errors)
 
+    def test_taxonomy_validator_flags_unsupported_secondary_value(self):
+        obj = self.tmpdir / "registry" / "objects" / "SR-OBJ-000002.yaml"
+        obj.write_text(
+            """
+object_id: SR-OBJ-000002
+title: Example
+authors:
+  - author_id: AUTH-0001
+    contribution_role: author
+authority:
+  tier: 2
+tier2_class:
+  primary: candidate-material
+  secondary: []
+functional_locus:
+  primary: none-declared
+  secondary:
+    - invalid-locus
+source_ids: []
+lens:
+  primary: none
+  secondary: []
+domain:
+  primary: cross-domain
+  secondary: []
+object_of_study: test
+structural_focus:
+  primary: return
+  secondary: []
+main_question: Under what declared conditions can a test object be recovered?
+secondary_questions: []
+claim_layers: []
+evidence_mode:
+  primary: conceptual-argument
+  secondary: []
+provenance: corpus-native
+maturity: exploratory
+relations: []
+version: v0.1.0
+date: '2026-09-13'
+publication_state: draft
+source_boundary: none
+authority_boundary: Tier-2 only
+scope: bounded
+exclusions: none
+preserved_meaning: test
+missingness: []
+distortion_or_substitution_risk: low
+next_burden: provide source-backed expansion
+repair_route: add missing domain
+notes: test
+""".strip()
+            + "\n",
+            encoding="utf-8",
+        )
+
+        with patch("validators.taxonomy_validation.ROOT", self.tmpdir):
+            errors = validate_taxonomies()
+        self.assertTrue(any("functional_locus.secondary" in e for e in errors), errors)
+
     def test_relation_validator_flags_missing_next_burden(self):
         obj = self.tmpdir / "registry" / "objects" / "SR-OBJ-000001.yaml"
         obj.write_text(
@@ -112,6 +172,28 @@ provenance: corpus-native
         with patch("validators.relation_validation.ROOT", self.tmpdir):
             errors = validate_relations()
         self.assertTrue(any("missing next_burden" in e for e in errors), errors)
+
+    def test_relation_validator_flags_unresolved_source_and_relation(self):
+        obj = self.tmpdir / "registry" / "objects" / "SR-OBJ-000003.yaml"
+        obj.write_text(
+            """
+object_id: SR-OBJ-000003
+source_ids:
+  - SRC-999999
+relations:
+  - REL-999999
+authority_boundary: Tier-2 only
+next_burden: add admissible source and relation
+provenance: corpus-native
+""".strip()
+            + "\n",
+            encoding="utf-8",
+        )
+
+        with patch("validators.relation_validation.ROOT", self.tmpdir):
+            errors = validate_relations()
+        self.assertTrue(any("unknown source reference SRC-999999" in e for e in errors), errors)
+        self.assertTrue(any("unknown relation reference REL-999999" in e for e in errors), errors)
 
 
 if __name__ == "__main__":

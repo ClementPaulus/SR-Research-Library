@@ -6,22 +6,16 @@ from .common import ROOT, list_yaml_files, load_yaml
 def validate_relations() -> list[str]:
     errors: list[str] = []
 
-    object_ids = {
-        load_yaml(path).get("object_id")
-        for path in list_yaml_files(ROOT / "registry" / "objects")
-        if load_yaml(path).get("object_id")
-    }
-    source_ids = {
-        load_yaml(path).get("source_id")
-        for path in list_yaml_files(ROOT / "registry" / "sources")
-        if load_yaml(path).get("source_id")
-    }
-    relation_ids = {
-        load_yaml(path).get("relation_id")
-        for path in list_yaml_files(ROOT / "registry" / "relations")
-        if load_yaml(path).get("relation_id")
-    }
+    object_records = [load_yaml(path) for path in list_yaml_files(ROOT / "registry" / "objects")]
+    source_records = [load_yaml(path) for path in list_yaml_files(ROOT / "registry" / "sources")]
+    relation_records = [load_yaml(path) for path in list_yaml_files(ROOT / "registry" / "relations")]
+
+    object_ids = {record.get("object_id") for record in object_records if record.get("object_id")}
+    source_ids = {record.get("source_id") for record in source_records if record.get("source_id")}
+    relation_ids = {record.get("relation_id") for record in relation_records if record.get("relation_id")}
     valid_targets = object_ids | source_ids
+
+    relation_types = set(load_yaml(ROOT / "taxonomy" / "relation_types.yaml").get("terms", []))
 
     for path in list_yaml_files(ROOT / "registry" / "objects"):
         obj = load_yaml(path)
@@ -46,6 +40,10 @@ def validate_relations() -> list[str]:
         rel = load_yaml(path)
         subject = rel.get("subject")
         target = rel.get("object")
+        relation_type = rel.get("relation_type")
+
+        if relation_type not in relation_types:
+            errors.append(f"{path.name}: unsupported relation_type {relation_type}")
         if subject not in valid_targets:
             errors.append(f"{path.name}: unresolved relation subject {subject}")
         if target not in valid_targets:
