@@ -2,6 +2,15 @@
 
 **SR-LIBRARY.v1.0.0** · Schema SR-SCHEMA.v0.4.0 · Taxonomy SR-TAXONOMY.v0.2.0
 
+**[Browse research](site/search.html)** · **Create your profile** · **Log in** · **Upload research** —
+the researcher portal (`portal/`) gives every contributor a persistent account, an automatically
+assigned public AuthorID, guided uploads, source-grounded record preparation, the existing admission
+engine, receipts, repair, and registration in this repository — with no GitHub account, terminal, or
+JSON editing. Signed-in researchers land in their workspace. See
+[docs/PORTAL_CONTRIBUTING.md](docs/PORTAL_CONTRIBUTING.md) (researcher guide and direct route),
+[docs/PORTAL_IMPLEMENTATION.md](docs/PORTAL_IMPLEMENTATION.md), [docs/PORTAL_OPERATIONS.md](docs/PORTAL_OPERATIONS.md),
+and [docs/PORTAL_ACCEPTANCE.md](docs/PORTAL_ACCEPTANCE.md) for what is verified and what still needs owner provisioning.
+
 Governing flow:
 
 ```
@@ -82,19 +91,22 @@ survives a broken web link; a link failure never deletes a source.
 ## Repository layout
 
 ```
-schema/       JSON Schemas for authors, governing references, objects, sources, relations, receipts
+schema/       JSON Schemas for authors, governing references, objects, sources, relations, receipts,
+              plus infrastructure schemas (execution manifests, identifier reservations)
 taxonomy/     Controlled taxonomies for all main classification axes
               (+ extensions.yaml: record of every term proposal and outcome)
 registry/     THE SOURCE OF TRUTH: authors, governing (tier-1/ tier-0/ mixed/ views),
-              objects (+history), sources, relations
-receipts/     Admission receipts: accepted/, repair/ (+ archived submissions), rejected/
-validators/   Validation, admission gates, receipts, profiles, manifests, site
-tests/        Test suite (pytest)
+              objects (+history), sources, relations, reservations (identifier ledger)
+receipts/     Admission receipts: accepted/, repair/, rejected/ (+ .submission.json snapshots),
+              executions/ (companion execution manifests)
+validators/   Validation, admission gates, receipts, allocation, execution manifests, search, profiles, site
+portal/       Public researcher portal (Django): accounts, submissions, registry bridge, catalog, tests
+tests/        Engine test suite (pytest); tests/fixtures/ holds immutable census snapshots
 releases/     Release manifests (manifests/) and open-seams.yaml
-site/         Public library surface, generated from the registry
+site/         Public library surface, generated from the registry (incl. search.html + data/search_index.json)
 examples/     Synthetic example submissions, receipts, and OBJECT_TEMPLATE.json
-docs/         Governing specification and supporting rules
-.github/      CI validation workflow, PR template, taxonomy-extension issue form
+docs/         Governing specification, supporting rules, portal docs, portal-evidence/ (baseline hashes, browser run)
+.github/      CI validation + portal workflow, PR template, issue forms
 ```
 
 ## Governing documents
@@ -116,21 +128,30 @@ docs/         Governing specification and supporting rules
 
 ## Submission process
 
-1. Register (or already have) an `AUTH-NNNN` author record.
-2. Register any external sources as `SRC-NNNNNN` source records.
-3. Declare any relations as `REL-NNNNNN` relation records.
+**Portal route (primary).** Create your profile once → verify your email (an AuthorID is assigned
+automatically) → *Upload research* → review the prepared record and answer the remaining questions →
+*Submit this revision to the public research library* → read the receipt → repair if asked → find the
+registered result. Full guide: [docs/PORTAL_CONTRIBUTING.md](docs/PORTAL_CONTRIBUTING.md).
+
+**Direct repository route.** Both routes use the same schemas, taxonomies, engine, identifier
+reservations, receipts, and preservation rules.
+
+1. Register (or already have) an `AUTH-NNNN` author record; reserve it with
+   `python -m validators.reserve AUTH --purpose "author registration"`.
+2. Search for duplicate work, then reserve `SR-OBJ`/`SRC`/`REL` identifiers the same way.
+3. Register any external sources as `SRC-NNNNNN` source records and relations as `REL-NNNNNN`.
 4. Prepare the research-object record against `schema/object.schema.json`,
    using controlled taxonomy values for every classification axis.
-5. Run the validators locally: `python -m validators.validate`.
-6. Evaluate admission: `python -m validators.admit path/to/object.json`.
-   Add `--write` to store the receipt and `--register` to place an ACCEPTED
-   record into `registry/objects/` (prior versions are archived, never
-   overwritten).
-7. Submit the record (pull request adding files under `registry/` and
-   `receipts/`).
+5. Evaluate admission: `python -m validators.admit path/to/object.json --write`
+   stores the receipt, the exact submission snapshot, and the execution manifest;
+   add `--register` to place an ACCEPTED record into `registry/objects/` (prior
+   versions are archived, never overwritten; the reservation is marked published).
+6. Run the validators: `python -m validators.validate`; regenerate the projection:
+   `python -m validators.build_site`.
+7. Submit the record (pull request adding files under `registry/`, `receipts/`, and `site/`).
 
-Exact steps are in [CONTRIBUTING.md](CONTRIBUTING.md). The full contract is
-in [LIBRARY_SPECIFICATION.md](LIBRARY_SPECIFICATION.md).
+Exact steps are in [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/PORTAL_CONTRIBUTING.md](docs/PORTAL_CONTRIBUTING.md).
+The full contract is in [LIBRARY_SPECIFICATION.md](LIBRARY_SPECIFICATION.md).
 
 ## Admission outcomes
 
@@ -180,10 +201,14 @@ appear as provenance metadata with a verification state.
 
 ## Cross-domain search 
 
-The generated site supports browsing/filtering by author, domain, subdomain,
-object of study, structural focus, main question, Tier-2 class, evidence
-mode, provenance, maturity, relation, source, and date. Cross-domain
-retrieval follows:
+The portal (`/research`) and the generated site (`site/search.html`, `site/data/search_index.json`)
+share one index and one set of matching rules: every unquoted term must match somewhere in a record's
+public fields (title, all questions, object of study, classifications, authors, sources and DOIs,
+relations, missingness, next burden); `"quoted text"` is a phrase; identifiers and DOIs match exactly;
+filters combine by AND across axes and OR within an axis (primary or secondary values); ranking is
+retrieval relevance only. Browse/filter by author, domain, subdomain, object of study, structural focus,
+main question, Tier-2 class, evidence mode, provenance, maturity, relation, source, and date.
+Cross-domain retrieval follows:
 
 ```
 FIND -> COMPARE -> EXTRACT TRANSFERABLE STRUCTURE
@@ -226,8 +251,16 @@ tests):
 ```
 pip install -r requirements-dev.txt
 python -m validators.validate          # validate the registry
-python -m validators.admit FILE        # evaluate an admission (--write stores receipts, --register registers ACCEPTED records)
+python -m validators.admit FILE        # evaluate an admission (--write stores receipt + snapshot + execution manifest, --register registers ACCEPTED records)
+python -m validators.reserve NS ...    # reserve an identifier through the shared ledger (AUTH, SR-OBJ, SRC, REL, RCPT, SR-GOV)
 python -m validators.build_site        # regenerate site/ from the registry
 python -m validators.release VERSION   # write a release manifest (--final for a non-pre-release)
-python -m pytest tests/               # run the test suite
+python -m pytest tests/               # run the engine test suite
+```
+
+Researcher portal (Python 3.12; see [docs/PORTAL_OPERATIONS.md](docs/PORTAL_OPERATIONS.md)):
+
+```
+docker compose -f portal/compose.yaml up --build   # web :8000, worker, PostgreSQL, Redis, MinIO, Mailpit :8025
+make -C portal venv test                            # hashed-lock install and the portal test suite
 ```

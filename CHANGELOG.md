@@ -6,6 +6,43 @@ Structura Reditus artifact. Previous releases are never silently rewritten.
 
 ## Unreleased — toward SR-LIBRARY.v1.1.0 (foundation for the corpus expansion)
 
+### Added (2026-09-14 researcher portal — infrastructure, additive)
+
+- `portal/`: public Django 5.2 LTS researcher portal (accounts with automatic
+  AuthorID registration, guided uploads and source-grounded preparation,
+  immutable revisions, the unchanged admission engine run in isolated pinned
+  checkouts, receipts, repair, GitHub App publication with verification,
+  search, handoff export, review queue). 39 portal tests; browser acceptance
+  evidence under `docs/portal-evidence/browser/`.
+- `validators/allocation.py` + `python -m validators.reserve`: repository-wide
+  identifier allocation and the additive reservation ledger
+  `registry/reservations/` (`schema/reservation.schema.json`,
+  SR-RESERVATION.v0.1.0); `check_reservations` in the validator.
+- `validators/execution.py` + `schema/execution.schema.json`
+  (SR-EXECUTION.v0.1.0): companion execution manifests under
+  `receipts/executions/` binding a receipt to its submission hash, source-file
+  hashes, engine revision, schema/taxonomy versions, and registry base.
+- `admit --write` now preserves the exact submitted-record snapshot for every
+  decision (accepted included) and writes bundles atomically; existing receipt
+  IDs are never overwritten. `admit.evaluate_and_write` is the single entry
+  point for CLI and portal.
+- `validators/search.py`: shared search index (`site/data/search_index.json`)
+  and documented matching semantics; `site/search.html`. Baseline misses
+  (“physically constrained”, “Clement”, `REL-000006`) resolved.
+- Receipt selection on object pages by version and chronology; all attempts
+  listed. Census tests refactored: exact 2026-09 facts moved to
+  `tests/fixtures/census_2026_09_snapshot.json`; live tests permit
+  evidence-backed growth.
+- `docs/portal-evidence/baseline-810f4222.json` + `tests/test_baseline_preservation.py`
+  (225 historical artifacts byte-identical).
+- Docs: PORTAL_IMPLEMENTATION, PORTAL_OPERATIONS, PORTAL_CONTRIBUTING,
+  PORTAL_ACCEPTANCE; MAIN_PROTECTION_RULESET (effective check name `validate`),
+  RECEIPTS and IDENTIFIERS clarifications; issue forms fixed (`description`)
+  and extended. CI: portal job and runtime path-policy diff.
+
+No released record, receipt, schema, taxonomy, or manifest was rewritten;
+`schema/VERSION` stays SR-SCHEMA.v0.4.0 because no record schema changed.
+
 Additive cleanup on top of the frozen v1.0.0 release; no released manifest or
 released governing record was rewritten.
 

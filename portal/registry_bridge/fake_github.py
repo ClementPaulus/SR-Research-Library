@@ -62,7 +62,14 @@ class _State:
 
     def files_at(self, ref: str) -> dict:
         paths = _git("ls-tree", "-r", "--name-only", ref).splitlines()
-        return {p: _git("show", f"{ref}:{p}") for p in paths}
+        files = {}
+        for path in paths:
+            out = subprocess.run(["git", "show", f"{ref}:{path}"], cwd=settings.PORTAL_REGISTRY_REPO_PATH, capture_output=True)
+            try:
+                files[path] = out.stdout.decode("utf-8")
+            except UnicodeDecodeError:
+                files[path] = out.stdout  # binary evidence files stay bytes
+        return files
 
     @property
     def commits(self):
