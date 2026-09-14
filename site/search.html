@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search — Structura Reditus Research Library</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; line-height: 1.5; color: #1a1a1a; }
+  header { background: #1f2a37; color: #fff; padding: 0.8rem 1.5rem; }
+  header a { color: #fff; text-decoration: none; margin-right: 1.2rem; font-weight: 600; }
+  header .brand { font-size: 1.1rem; margin-right: 2rem; }
+  main { max-width: 68rem; margin: 1.5rem auto; padding: 0 1.5rem; }
+  h1, h2, h3 { font-weight: 600; }
+  .kind { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 0.3rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.02em; }
+  .kind-gov { background: #fde68a; color: #4a3200; }
+  .kind-obj { background: #bfdbfe; color: #0b2f6b; }
+  .kind-src { background: #d1fae5; color: #064e3b; }
+  .kind-rcpt { background: #e5e7eb; color: #111827; }
+  .status { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 0.3rem; font-size: 0.8rem; background: #f3f4f6; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 1.5rem; font-size: 0.92rem; }
+  th, td { border: 1px solid #d4d4d8; padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f4f4f5; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.3rem 1rem; }
+  dt { font-weight: 600; color: #374151; }
+  dd { margin: 0; }
+  input.filter { padding: 0.45rem; width: 100%; box-sizing: border-box; margin-bottom: 0.8rem; }
+  .chips button { margin: 0 0.3rem 0.3rem 0; padding: 0.2rem 0.6rem; border: 1px solid #9ca3af; border-radius: 1rem; background: #fff; cursor: pointer; font-size: 0.85rem; }
+  .chips button.on { background: #1f2a37; color: #fff; border-color: #1f2a37; }
+  .note { color: #52525b; font-size: 0.9rem; }
+  .boundary { border-left: 4px solid #f59e0b; padding: 0.4rem 0.8rem; background: #fffbeb; margin: 1rem 0; }
+  ul.links li { margin-bottom: 0.2rem; }
+  .pref { font-weight: 700; }
+  pre { background: #f8fafc; padding: 1rem; overflow-x: auto; font-size: 0.85rem; white-space: pre-wrap; }
+  footer { max-width: 68rem; margin: 2rem auto; padding: 0 1.5rem 2rem; color: #52525b; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<header><a class="brand" href="index.html">Structura Reditus Research Library</a><a href="governing/index.html">Governing References</a><a href="objects/index.html">Tier-2 Research</a><a href="sources/index.html">Sources &amp; Archives</a><a href="authors/index.html">Authors</a><a href="receipts/index.html">Receipts</a><a href="search.html">Search</a></header>
+<main>
+
+<h1>Search the library</h1>
+<p class="note">All terms must match somewhere in a record's public fields (title, questions, object of study, classifications, authors, sources, DOIs, relations, missingness, next burden). Use "quotes" for a phrase; identifiers and DOIs match exactly. Ranking is retrieval relevance only. Without JavaScript, browse <a href="objects/index.html">Tier-2 research</a>, <a href="sources/index.html">sources</a>, <a href="authors/index.html">authors</a>, or <a href="governing/index.html">governing references</a>; every record has a stable page.</p>
+<form id="search-form" role="search" action="search.html" method="get">
+<label for="q">Search terms</label>
+<input id="q" name="q" class="filter" type="search" placeholder="e.g. physically constrained, Clement, REL-000006, 10.5281/zenodo.22739943">
+<label for="kind">Record kind</label>
+<select id="kind" name="kind"><option value="object">Tier-2 research</option><option value="source">Sources</option><option value="author">Authors</option><option value="governing">Governing references</option><option value="">All kinds</option></select>
+<button type="submit">Search</button>
+</form>
+<p id="count" class="note" aria-live="polite"></p>
+<ul id="results"></ul>
+
+<script>
+(function () {
+  var form = document.getElementById('search-form');
+  var box = document.getElementById('q');
+  var out = document.getElementById('results');
+  var count = document.getElementById('count');
+  var index = null;
+  var ID_RE = /^(SR-OBJ-[0-9]{6}|SRC-[0-9]{6}|REL-[0-9]{6}|AUTH-[0-9]{4}|RCPT-[0-9]{6}|SR-GOV-[0-9]{6})$/i;
+  var DOI_RE = /^10\.[0-9]{4,9}\/\S+$/i;
+  function fold(s) { return String(s == null ? '' : s).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+  function fieldsOf(d) {
+    var f = {};
+    function put(k, v) { if (v == null) return; var t = Array.isArray(v) ? v.join(' ') : String(v); if (t.trim()) f[k] = fold(t); }
+    put('id', d.id); put('title', d.title);
+    if (d.kind === 'object') {
+      put('main_question', d.main_question); put('secondary_questions', (d.questions || []).slice(1));
+      put('object_of_study', d.object_of_study); put('lens', d.lens);
+      ['tier2_class', 'domain', 'structural_focus', 'evidence_mode'].forEach(function (a) { put(a + '.primary', d[a].primary); put(a + '.secondary', d[a].secondary); });
+      ['provenance', 'maturity', 'functional_locus', 'publication_state', 'version', 'date', 'next_burden'].forEach(function (k) { put(k, d[k]); });
+      put('authors', (d.authors || []).map(function (a) { return a.display_name + ' ' + a.author_id + ' ' + (a.orcid || ''); }));
+      put('sources', (d.sources || []).map(function (s) { return s.source_id + ' ' + s.title + ' ' + (s.doi || ''); }));
+      put('relations', (d.relations || []).map(function (r) { return r.relation_id + ' ' + r.relation_type + ' ' + r.from_id + ' ' + r.to_id; }));
+      put('governing_refs', d.governing_refs);
+      put('missingness', (d.missingness || []).map(function (m) { return m.item + ' ' + m['class']; }));
+      if (d.receipt) put('receipt', d.receipt.receipt_id + ' ' + d.receipt.decision);
+    } else if (d.kind === 'source') {
+      ['source_type', 'source_authors', 'doi', 'venue', 'publication_year', 'version', 'status', 'source_native_claims'].forEach(function (k) { put(k, d[k]); });
+    } else if (d.kind === 'author') { put('display_name', d.display_name); put('orcid', d.orcid); }
+    else if (d.kind === 'governing') { ['status', 'governing_role', 'source_id', 'scope'].forEach(function (k) { put(k, d[k]); }); }
+    return f;
+  }
+  function idsOf(d) {
+    var v = [d.id];
+    if (d.kind === 'object') { v = v.concat(d.author_ids || [], d.source_ids || [], d.relation_ids || [], d.governing_refs || [], (d.sources || []).map(function (s) { return s.doi; })); if (d.receipt) v.push(d.receipt.receipt_id); }
+    else if (d.kind === 'source') v.push(d.doi); else if (d.kind === 'governing') v.push(d.source_id);
+    return v.filter(Boolean).map(fold);
+  }
+  function parse(q) {
+    var terms = [], re = /"([^"]+)"|(\S+)/g, m;
+    while ((m = re.exec(q || ''))) { var raw = (m[1] || m[2]).trim(); if (!raw) continue; terms.push({ text: fold(raw), phrase: !!m[1], identifier: ID_RE.test(raw) || DOI_RE.test(raw) }); }
+    return terms;
+  }
+  function run(q, kind) {
+    var terms = parse(q), hits = [];
+    index.documents.forEach(function (d) {
+      if (kind && d.kind !== kind) return;
+      var f = fieldsOf(d), ids = idsOf(d), matched = {}, ok = true;
+      for (var i = 0; i < terms.length; i++) {
+        var t = terms[i], any = false;
+        if (t.identifier && ids.indexOf(t.text) !== -1) { matched.identifier = t.text; any = true; }
+        Object.keys(f).forEach(function (k) { if (f[k].indexOf(t.text) !== -1) { matched[k] = t.text; any = true; } });
+        if (!any) { ok = false; break; }
+      }
+      if (ok) hits.push({ d: d, matched: Object.keys(matched).sort(), score: Object.keys(matched).length });
+    });
+    hits.sort(function (a, b) { return b.score - a.score || (a.d.kind < b.d.kind ? -1 : a.d.kind > b.d.kind ? 1 : a.d.id < b.d.id ? -1 : 1); });
+    return hits;
+  }
+  function href(d) { var k = { object: 'objects', source: 'sources', author: 'authors', governing: 'governing' }[d.kind]; return k + '/' + d.id + '.html'; }
+  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  function render(hits) {
+    count.textContent = hits.length + ' result' + (hits.length === 1 ? '' : 's');
+    out.innerHTML = hits.map(function (h) {
+      return '<li><a href="' + href(h.d) + '">' + esc(h.d.id) + ' — ' + esc(h.d.title || h.d.display_name) + '</a> <span class="note">' + esc(h.d.kind) + '</span>' +
+        (h.matched.length ? '<br><span class="note">matched: ' + esc(h.matched.join(', ')) + '</span>' : '') + '</li>';
+    }).join('') || '<li class="note">No records match every term. Try fewer terms, or an exact identifier.</li>';
+  }
+  function go() {
+    var q = box.value, kind = document.getElementById('kind').value;
+    var url = new URL(window.location); url.searchParams.set('q', q); if (kind) url.searchParams.set('kind', kind); else url.searchParams.delete('kind');
+    history.replaceState(null, '', url);
+    render(run(q, kind));
+  }
+  fetch('data/search_index.json').then(function (r) { return r.json(); }).then(function (ix) {
+    index = ix;
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('q')) box.value = params.get('q');
+    if (params.get('kind')) document.getElementById('kind').value = params.get('kind');
+    go();
+    form.addEventListener('submit', function (e) { e.preventDefault(); go(); });
+    box.addEventListener('input', go);
+    document.getElementById('kind').addEventListener('change', go);
+  });
+})();
+</script>
+
+
+</main>
+<footer>
+<p>Library admission means organizational conformance only and does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission. Generated from the registry (the source of truth); this site is never a second database.
+Schema SR-SCHEMA.v0.4.0 &middot; Taxonomy SR-TAXONOMY.v0.2.0.</p>
+<p>Cross-domain retrieval: FIND &rarr; COMPARE &rarr; EXTRACT TRANSFERABLE STRUCTURE &rarr; REINSTANTIATE LOCALLY &rarr; VALIDATE LOCALLY.
+Thresholds, adapters, closure gates, evidence standards, causal claims, ontological claims, and source authority are never transferred automatically.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+{
+  "snapshot": "Tier-2 census 2026-09 at baseline commit 810f4222c7cca357a12184b8cb485617aecb8869",
+  "note": "Immutable historical facts. Live tests assert these are PRESERVED, not that the live library still equals them.",
+  "object_ids": [
+    "SR-OBJ-000001",
+    "SR-OBJ-000002",
+    "SR-OBJ-000003",
+    "SR-OBJ-000004",
+    "SR-OBJ-000005",
+    "SR-OBJ-000006",
+    "SR-OBJ-000007",
+    "SR-OBJ-000008",
+    "SR-OBJ-000009",
+    "SR-OBJ-000010",
+    "SR-OBJ-000011",
+    "SR-OBJ-000012",
+    "SR-OBJ-000013",
+    "SR-OBJ-000014",
+    "SR-OBJ-000015",
+    "SR-OBJ-000017",
+    "SR-OBJ-000018",
+    "SR-OBJ-000019",
+    "SR-OBJ-000020",
+    "SR-OBJ-000021",
+    "SR-OBJ-000022",
+    "SR-OBJ-000023",
+    "SR-OBJ-000024",
+    "SR-OBJ-000025",
+    "SR-OBJ-000026",
+    "SR-OBJ-000027",
+    "SR-OBJ-000028",
+    "SR-OBJ-000029",
+    "SR-OBJ-000030",
+    "SR-OBJ-000031"
+  ],
+  "relations": {
+    "REL-000001": {
+      "relation_type": "extends",
+      "from_id": "SR-OBJ-000002",
+      "to_id": "SR-OBJ-000001"
+    },
+    "REL-000002": {
+      "relation_type": "extends",
+      "from_id": "SR-OBJ-000003",
+      "to_id": "SR-OBJ-000002"
+    },
+    "REL-000003": {
+      "relation_type": "extends",
+      "from_id": "SR-OBJ-000006",
+      "to_id": "SR-OBJ-000005"
+    },
+    "REL-000004": {
+      "relation_type": "extends",
+      "from_id": "SR-OBJ-000020",
+      "to_id": "SR-OBJ-000009"
+    },
+    "REL-000005": {
+      "relation_type": "extends",
+      "from_id": "SR-OBJ-000029",
+      "to_id": "SR-OBJ-000028"
+    },
+    "REL-000006": {
+      "relation_type": "extends",
+      "from_id": "SR-OBJ-000031",
+      "to_id": "SR-OBJ-000023"
+    }
+  },
+  "relation_count": 6,
+  "receipt_ids": [
+    "RCPT-000001",
+    "RCPT-000002",
+    "RCPT-000003",
+    "RCPT-000004",
+    "RCPT-000005",
+    "RCPT-000006",
+    "RCPT-000007",
+    "RCPT-000008",
+    "RCPT-000009",
+    "RCPT-000010",
+    "RCPT-000011",
+    "RCPT-000012",
+    "RCPT-000013",
+    "RCPT-000014",
+    "RCPT-000015",
+    "RCPT-000016",
+    "RCPT-000017",
+    "RCPT-000018",
+    "RCPT-000019",
+    "RCPT-000020",
+    "RCPT-000021",
+    "RCPT-000022",
+    "RCPT-000023",
+    "RCPT-000024",
+    "RCPT-000025",
+    "RCPT-000026",
+    "RCPT-000027",
+    "RCPT-000028",
+    "RCPT-000029",
+    "RCPT-000030",
+    "RCPT-000031",
+    "RCPT-000032",
+    "RCPT-000033",
+    "RCPT-000034",
+    "RCPT-000035",
+    "RCPT-000036",
+    "RCPT-000037"
+  ],
+  "repair_receipts": [
+    "RCPT-000016",
+    "RCPT-000017",
+    "RCPT-000019"
+  ],
+  "blocked_without_source_identity": {
+    "object_id": "SR-OBJ-000016",
+    "repair_receipt": "RCPT-000016",
+    "source_id": "SRC-000033"
+  }
+}

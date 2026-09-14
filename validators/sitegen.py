@@ -29,7 +29,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from . import bridges, loader, profiles, receipts as receipts_mod
+from . import bridges, loader, profiles, receipts as receipts_mod, search as search_mod
 
 DISCLAIMER = ("Library admission means organizational conformance only and does not imply "
               "scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.")
@@ -164,7 +164,8 @@ def _page(title: str, body: str, root: str, versions: dict) -> str:
            f'<a href="{root}objects/index.html">Tier-2 Research</a>'
            f'<a href="{root}sources/index.html">Sources &amp; Archives</a>'
            f'<a href="{root}authors/index.html">Authors</a>'
-           f'<a href="{root}receipts/index.html">Receipts</a>')
+           f'<a href="{root}receipts/index.html">Receipts</a>'
+           f'<a href="{root}search.html">Search</a>')
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -358,8 +359,11 @@ research registered as Tier-2 objects, each with its admission receipt. Browse b
 """
 
 
-def _object_page(o: dict, root: str, by_source: dict, by_gov: dict, receipt_for: dict, relations_by_id: dict, history: dict) -> str:
+def _object_page(o: dict, root: str, by_source: dict, by_gov: dict, receipt_for: dict, relations_by_id: dict, history: dict, attempts: dict = None) -> str:
     rcpt = receipt_for.get(o["object_id"])
+    attempt_rows = [_row([_link(root, "rcpt", r["receipt_id"]), _e(r["decision"]), _e(r.get("version") or ""), _e(r.get("generated")),
+                          "current" if rcpt and r["receipt_id"] == rcpt["receipt_id"] else ""])
+                    for r in (attempts or {}).get(o["object_id"], [])]
     rel_rows = []
     for rid in o.get("relations", []):
         r = relations_by_id.get(rid)
@@ -431,6 +435,9 @@ def _object_page(o: dict, root: str, by_source: dict, by_gov: dict, receipt_for:
 <h2>Relations</h2>
 {_table(["REL", "Type", "From", "To", "Notes"], rel_rows, empty="No relations declared.")}
 {bridges_html}
+<h2>Admission attempts</h2>
+<p class="note">Every formal evaluation of this identity in chronological order. Earlier repair or rejection receipts are preserved; the current receipt is the acceptance matching the registered version.</p>
+{_table(["Receipt", "Decision", "Evaluated version", "Generated", ""], attempt_rows, empty="No admission attempts recorded.")}
 <h2>Preserved previous versions</h2>
 {_list(prior)}
 <h2>Notes</h2><p>{_e(o.get("notes") or "")}</p>
@@ -595,6 +602,41 @@ def _receipt_identity(r: dict):
     return r.get("object_id") or r.get("provisional_object_id") or r.get("submission_identity")
 
 
+def _receipt_order(r: dict) -> tuple:
+    return (r.get("generated") or "", r.get("receipt_id") or "")
+
+
+def attempts_by_identity(receipts: dict) -> dict:
+    """{submission identity: [receipts in chronological order]} — every attempt, none hidden."""
+    grouped: dict = {}
+    for r in receipts.values():
+        ident = _receipt_identity(r)
+        if ident:
+            grouped.setdefault(ident, []).append(r)
+    for ident in grouped:
+        grouped[ident].sort(key=_receipt_order)
+    return grouped
+
+
+def select_current_receipt(o: dict, attempts: dict) -> dict | None:
+    """The receipt that governs the *current registered state* of an object.
+
+    Preference: the latest ACCEPTED receipt for this object at exactly its
+    registered version; otherwise the latest ACCEPTED receipt for the object;
+    otherwise the chronologically latest attempt. Directory order never decides.
+    """
+    candidates = attempts.get(o["object_id"], [])
+    if not candidates:
+        return None
+    same_version = [r for r in candidates if r.get("decision") == "ACCEPTED" and r.get("version") == o.get("version")]
+    if same_version:
+        return same_version[-1]
+    accepted = [r for r in candidates if r.get("decision") == "ACCEPTED"]
+    if accepted:
+        return accepted[-1]
+    return candidates[-1]
+
+
 def _receipt_page(r: dict, root: str, registered_ids: set) -> str:
     ident = _receipt_identity(r)
     obj = _link(root, "obj", ident) if ident in registered_ids else _e(ident)
@@ -603,6 +645,112 @@ def _receipt_page(r: dict, root: str, registered_ids: set) -> str:
 <h1>{_e(r["receipt_id"])}</h1>
 {_dl([("Decision", _e(r["decision"])), ("Submission", obj), ("Generated", _e(r.get("generated")))])}
 <pre>{_e(receipts_mod.render_receipt_markdown(r))}</pre>
+"""
+
+
+SEARCH_SCRIPT = r"""
+<script>
+(function () {
+  var form = document.getElementById('search-form');
+  var box = document.getElementById('q');
+  var out = document.getElementById('results');
+  var count = document.getElementById('count');
+  var index = null;
+  var ID_RE = /^(SR-OBJ-[0-9]{6}|SRC-[0-9]{6}|REL-[0-9]{6}|AUTH-[0-9]{4}|RCPT-[0-9]{6}|SR-GOV-[0-9]{6})$/i;
+  var DOI_RE = /^10\.[0-9]{4,9}\/\S+$/i;
+  function fold(s) { return String(s == null ? '' : s).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+  function fieldsOf(d) {
+    var f = {};
+    function put(k, v) { if (v == null) return; var t = Array.isArray(v) ? v.join(' ') : String(v); if (t.trim()) f[k] = fold(t); }
+    put('id', d.id); put('title', d.title);
+    if (d.kind === 'object') {
+      put('main_question', d.main_question); put('secondary_questions', (d.questions || []).slice(1));
+      put('object_of_study', d.object_of_study); put('lens', d.lens);
+      ['tier2_class', 'domain', 'structural_focus', 'evidence_mode'].forEach(function (a) { put(a + '.primary', d[a].primary); put(a + '.secondary', d[a].secondary); });
+      ['provenance', 'maturity', 'functional_locus', 'publication_state', 'version', 'date', 'next_burden'].forEach(function (k) { put(k, d[k]); });
+      put('authors', (d.authors || []).map(function (a) { return a.display_name + ' ' + a.author_id + ' ' + (a.orcid || ''); }));
+      put('sources', (d.sources || []).map(function (s) { return s.source_id + ' ' + s.title + ' ' + (s.doi || ''); }));
+      put('relations', (d.relations || []).map(function (r) { return r.relation_id + ' ' + r.relation_type + ' ' + r.from_id + ' ' + r.to_id; }));
+      put('governing_refs', d.governing_refs);
+      put('missingness', (d.missingness || []).map(function (m) { return m.item + ' ' + m['class']; }));
+      if (d.receipt) put('receipt', d.receipt.receipt_id + ' ' + d.receipt.decision);
+    } else if (d.kind === 'source') {
+      ['source_type', 'source_authors', 'doi', 'venue', 'publication_year', 'version', 'status', 'source_native_claims'].forEach(function (k) { put(k, d[k]); });
+    } else if (d.kind === 'author') { put('display_name', d.display_name); put('orcid', d.orcid); }
+    else if (d.kind === 'governing') { ['status', 'governing_role', 'source_id', 'scope'].forEach(function (k) { put(k, d[k]); }); }
+    return f;
+  }
+  function idsOf(d) {
+    var v = [d.id];
+    if (d.kind === 'object') { v = v.concat(d.author_ids || [], d.source_ids || [], d.relation_ids || [], d.governing_refs || [], (d.sources || []).map(function (s) { return s.doi; })); if (d.receipt) v.push(d.receipt.receipt_id); }
+    else if (d.kind === 'source') v.push(d.doi); else if (d.kind === 'governing') v.push(d.source_id);
+    return v.filter(Boolean).map(fold);
+  }
+  function parse(q) {
+    var terms = [], re = /"([^"]+)"|(\S+)/g, m;
+    while ((m = re.exec(q || ''))) { var raw = (m[1] || m[2]).trim(); if (!raw) continue; terms.push({ text: fold(raw), phrase: !!m[1], identifier: ID_RE.test(raw) || DOI_RE.test(raw) }); }
+    return terms;
+  }
+  function run(q, kind) {
+    var terms = parse(q), hits = [];
+    index.documents.forEach(function (d) {
+      if (kind && d.kind !== kind) return;
+      var f = fieldsOf(d), ids = idsOf(d), matched = {}, ok = true;
+      for (var i = 0; i < terms.length; i++) {
+        var t = terms[i], any = false;
+        if (t.identifier && ids.indexOf(t.text) !== -1) { matched.identifier = t.text; any = true; }
+        Object.keys(f).forEach(function (k) { if (f[k].indexOf(t.text) !== -1) { matched[k] = t.text; any = true; } });
+        if (!any) { ok = false; break; }
+      }
+      if (ok) hits.push({ d: d, matched: Object.keys(matched).sort(), score: Object.keys(matched).length });
+    });
+    hits.sort(function (a, b) { return b.score - a.score || (a.d.kind < b.d.kind ? -1 : a.d.kind > b.d.kind ? 1 : a.d.id < b.d.id ? -1 : 1); });
+    return hits;
+  }
+  function href(d) { var k = { object: 'objects', source: 'sources', author: 'authors', governing: 'governing' }[d.kind]; return k + '/' + d.id + '.html'; }
+  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  function render(hits) {
+    count.textContent = hits.length + ' result' + (hits.length === 1 ? '' : 's');
+    out.innerHTML = hits.map(function (h) {
+      return '<li><a href="' + href(h.d) + '">' + esc(h.d.id) + ' — ' + esc(h.d.title || h.d.display_name) + '</a> <span class="note">' + esc(h.d.kind) + '</span>' +
+        (h.matched.length ? '<br><span class="note">matched: ' + esc(h.matched.join(', ')) + '</span>' : '') + '</li>';
+    }).join('') || '<li class="note">No records match every term. Try fewer terms, or an exact identifier.</li>';
+  }
+  function go() {
+    var q = box.value, kind = document.getElementById('kind').value;
+    var url = new URL(window.location); url.searchParams.set('q', q); if (kind) url.searchParams.set('kind', kind); else url.searchParams.delete('kind');
+    history.replaceState(null, '', url);
+    render(run(q, kind));
+  }
+  fetch('data/search_index.json').then(function (r) { return r.json(); }).then(function (ix) {
+    index = ix;
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('q')) box.value = params.get('q');
+    if (params.get('kind')) document.getElementById('kind').value = params.get('kind');
+    go();
+    form.addEventListener('submit', function (e) { e.preventDefault(); go(); });
+    box.addEventListener('input', go);
+    document.getElementById('kind').addEventListener('change', go);
+  });
+})();
+</script>
+"""
+
+
+def _search_page(data: dict) -> str:
+    return f"""
+<h1>Search the library</h1>
+<p class="note">All terms must match somewhere in a record's public fields (title, questions, object of study, classifications, authors, sources, DOIs, relations, missingness, next burden). Use "quotes" for a phrase; identifiers and DOIs match exactly. Ranking is retrieval relevance only. Without JavaScript, browse <a href="objects/index.html">Tier-2 research</a>, <a href="sources/index.html">sources</a>, <a href="authors/index.html">authors</a>, or <a href="governing/index.html">governing references</a>; every record has a stable page.</p>
+<form id="search-form" role="search" action="search.html" method="get">
+<label for="q">Search terms</label>
+<input id="q" name="q" class="filter" type="search" placeholder="e.g. physically constrained, Clement, REL-000006, 10.5281/zenodo.22739943">
+<label for="kind">Record kind</label>
+<select id="kind" name="kind"><option value="object">Tier-2 research</option><option value="source">Sources</option><option value="author">Authors</option><option value="governing">Governing references</option><option value="">All kinds</option></select>
+<button type="submit">Search</button>
+</form>
+<p id="count" class="note" aria-live="polite"></p>
+<ul id="results"></ul>
+{SEARCH_SCRIPT}
 """
 
 
@@ -636,11 +784,19 @@ def generate_site(site_dir: Path = None, registry: dict = None, receipts: dict =
     gov_by_source: dict = {}
     for g in data["governing"]:
         gov_by_source.setdefault(g["source_id"], []).append(g)
-    receipt_for: dict = {}  # latest receipt per submission identity (receipt ids are sequential)
-    for r in data["receipts"].values():
-        ident = _receipt_identity(r)
-        if ident:
-            receipt_for[ident] = r
+    receipt_for: dict = {}  # receipt governing each object's current registered state (by version and chronology)
+    attempts = attempts_by_identity(data["receipts"])
+    for o in data["objects"]:
+        chosen = select_current_receipt(o, attempts)
+        if chosen:
+            receipt_for[o["object_id"]] = chosen
+    for ident, history_list in attempts.items():
+        receipt_for.setdefault(ident, history_list[-1])
+
+    search_index = search_mod.build_search_index(registry if registry is not None else loader.load_registry(),
+                                                 data["receipts"], receipt_for)
+    (data_dir / "search_index.json").write_text(json.dumps(search_index, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    (site_dir / "search.html").write_text(_page("Search", _search_page(data), "", versions), encoding="utf-8")
 
     objects_by_id = {o["object_id"]: o for o in data["objects"]}
     visible_bridges_by_object = {o["object_id"]: [] for o in data["objects"]}
@@ -681,7 +837,7 @@ def generate_site(site_dir: Path = None, registry: dict = None, receipts: dict =
     for o in data["objects"]:
         object_for_page = dict(o, bridge_candidates=visible_bridges_by_object.get(o["object_id"], []))
         (site_dir / "objects" / f"{o['object_id']}.html").write_text(
-            _page(o["title"], _object_page(object_for_page, up, by_source, by_gov, receipt_for, relations_by_id, history), up, versions), encoding="utf-8")
+            _page(o["title"], _object_page(object_for_page, up, by_source, by_gov, receipt_for, relations_by_id, history, attempts), up, versions), encoding="utf-8")
     _axis_pages(data, up, receipt_for, site_dir, versions)
     _question_pages(data, up, receipt_for, site_dir, versions)
     timeline_rows = [_object_row(o, up, receipt_for) for o in sorted(data["objects"], key=lambda r: r.get("date", ""))]

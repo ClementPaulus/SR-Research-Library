@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structura-reditus.org/schema/reservation.schema.json",
+  "title": "Structura Reditus Research Library — Identifier Reservation (SR-RESERVATION.v0.1.0)",
+  "description": "Additive, public-safe ledger entry recording that one identifier value in one namespace has been reserved for one operation. Reservations are infrastructure records, not registry surfaces: they carry no research content and transfer no authority. A reserved value is never reused for different work and never recycled after withdrawal or failure. Stored one file per reservation under registry/reservations/<value>.json; excluded from load_registry().",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["reservation_version", "namespace", "value", "operation_key", "purpose", "state", "reserved_at", "route"],
+  "properties": {
+    "reservation_version": { "type": "string", "const": "SR-RESERVATION.v0.1.0" },
+    "namespace": {
+      "type": "string",
+      "enum": ["AUTH", "SR-OBJ", "SRC", "REL", "RCPT", "SR-GOV"]
+    },
+    "value": {
+      "type": "string",
+      "pattern": "^(AUTH-[0-9]{4}|SR-OBJ-[0-9]{6}|SRC-[0-9]{6}|REL-[0-9]{6}|RCPT-[0-9]{6}|SR-GOV-[0-9]{6})$"
+    },
+    "operation_key": {
+      "type": "string",
+      "minLength": 8,
+      "description": "Public-safe operation reference (UUID or opaque key). Never an email, account id, or private draft reference."
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Short public statement of what the value is reserved for (e.g. 'new research object family', 'author registration')."
+    },
+    "state": {
+      "type": "string",
+      "enum": ["reserved", "published", "withdrawn"],
+      "description": "reserved = held for the operation; published = the committed record exists; withdrawn = the operation ended without a record. Withdrawn values are never reallocated."
+    },
+    "reserved_at": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "route": { "type": "string", "enum": ["cli", "portal"] },
+    "published_record_path": {
+      "type": ["string", "null"],
+      "description": "Repository-relative path of the committed record once state is published."
+    },
+    "notes": { "type": "string" }
+  }
+}
