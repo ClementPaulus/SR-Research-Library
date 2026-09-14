@@ -58,6 +58,42 @@ default branch.
 `portal/submissions/state.py`; every transition is guarded (`TRANSITIONS`) and appended to `core.Event`
 with actor, revision, previous/new state, operation key, and reason.
 
+## 3a. Automatic preparation (the default contribution experience)
+
+Every completed upload runs `submissions.services.prepare` as one outbox job with six recorded steps
+(`Submission.processing_notes[-1]["steps"]`, shown live on the status page and via `status.json`):
+
+| Step | What it does | Where |
+|---|---|---|
+| preserve | files already stored under immutable keys with server-side SHA-256; originals never modified | `register_upload` |
+| identify | DOI / arXiv / Zenodo / URL / "Version N" statements with line locators; publication hints (preprint, archived, published) | `preparation.identify_sources`, `merge_identifications` (cross-file **version ambiguity**) |
+| duplicates | DOI match → reuse the existing `SRC-*`; title similarity ≥ 0.82 (or long-prefix containment) against committed objects/sources; identical file hashes against execution manifests | `preparation.check_duplicates` over the committed projection |
+| extract | deterministic parsers (pypdf, python-docx, Markdown/text/LaTeX, JSON/YAML records, CSV/TSV, bounded ZIP) with page/paragraph/line locators | `extraction.extract` |
+| classify | keyword → taxonomy suggestions for evidence mode, Tier-2 class, domain (+secondary), structural focus, functional locus, publication state; ties are reported, never resolved arbitrarily; every suggestion is recorded as `library-classification`, **uncertain**, with the matched terms | `preparation.suggest_classifications` |
+| assemble | candidate record; automatic `SRC-NEW-1` proposal built only from what the files state (gaps → source missingness; source type flagged for confirmation); readiness assessment | `extraction.assemble_candidate`, `services._auto_source`, `preparation.assess` |
+
+Failure of any step marks it `failed`, moves the submission to *Processing unavailable*, keeps the upload, and
+retries with backoff; the researcher can always continue manually.
+
+**Readiness and questions.** `preparation.assess` classifies every required field as *ready* (present and
+reliably extracted or confirmed), *needs confirmation* (present but from an uncertain extraction or a
+suggestion), or *missing*, and emits only the questions still open. Each question carries `why` (which
+gate/rule needs it), `blocks` (whether it prevents admission), and `resolves` (what answer or evidence
+closes it). Two policy questions are added when triggered: **which version governs** (two version
+statements across files) and **revision or distinct study** (possible duplicate object). Both must be
+answered on the submit page (`_version_resolution`, `_duplicate_resolution`); choosing *revision of
+SR-OBJ-X* sets the intended object so the engine archives the previous state instead of minting a duplicate.
+
+**Confirming without retyping.** Saving the draft from the editor (not autosave) records a
+`researcher-statement` evidence row ("confirmed in the editor") for every uncertain value the researcher
+kept; the original uncertain extraction row is preserved beside it, so uncertainty remains visible in the
+evidence history and the field stops being asked about.
+
+**Repair reuse.** *Start repair* copies the frozen revision's evidence rows into the new draft
+(`reused_from_revision`), maps the receipt's `missing_structure` to field paths
+(`preparation.repair_focus`), and flags exactly those fields in the editor; all seven gates still run on
+the newly confirmed revision.
+
 ## 4. Admission engine reuse
 
 `registry_bridge/evaluation.py` runs `registry_bridge/evaluate_worker.py` as a **separate process**

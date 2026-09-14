@@ -117,3 +117,25 @@ progress { width: 100%; max-width: 46rem; height: 1rem; }
 .timeline li { padding: 0.35rem 0; border-bottom: 1px dotted var(--line); }
 .timeline time { color: var(--muted); margin-right: 0.5rem; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(1px,1px,1px,1px); white-space: nowrap; }
+
+/* Journey stepper, readiness, evidence origins */
+.journey { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem; padding: 0; margin: 0.5rem 0 1rem; counter-reset: step; }
+.journey li { position: relative; padding: 0.3rem 0.75rem 0.3rem 2rem; border: 1px solid var(--line); border-radius: 1rem; font-family: system-ui, sans-serif; font-size: 0.9rem; background: var(--surface-2); color: var(--muted); }
+.journey li::before { counter-increment: step; content: counter(step); position: absolute; left: 0.55rem; top: 0.25rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; text-align: center; font-size: 0.75rem; line-height: 1.2rem; background: var(--line); color: var(--ink); }
+.journey li.journey-done { color: var(--ok); background: var(--ok-bg); border-color: #b8d8c2; }
+.journey li.journey-done::before { content: "\2713"; background: var(--ok); color: #fff; }
+.journey li.journey-current { color: var(--ink); background: var(--info-bg); border-color: var(--action); font-weight: 650; }
+.journey li.journey-current::before { background: var(--action); color: #fff; }
+.steps { list-style: none; padding: 0; margin: 0.5rem 0; }
+.steps li { padding: 0.3rem 0; border-bottom: 1px dotted var(--line); }
+.questions li { margin: 0.6rem 0; padding: 0.5rem 0.7rem; border-left: 3px solid var(--line); }
+.questions li.question-missing { border-left-color: var(--bad); }
+.questions li.question-needs_confirmation { border-left-color: var(--warn); }
+.origin { font-weight: 650; padding: 0 0.3rem; border-radius: var(--radius); }
+.origin-source-extraction { background: var(--info-bg); color: var(--info); }
+.origin-library-classification { background: var(--warn-bg); color: var(--warn); }
+.origin-researcher-statement { background: var(--ok-bg); color: var(--ok); }
+.field-repair { border-left: 4px solid var(--bad); padding-left: 0.6rem; }
+.field-confirm textarea, .field-confirm input, .field-confirm select { border-color: #c9a227; }
+.field-missing textarea, .field-missing input, .field-missing select { border-color: var(--bad); }
+.readiness .status { margin-right: 0.3rem; }

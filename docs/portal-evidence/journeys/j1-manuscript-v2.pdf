@@ -1,0 +1,66 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1464 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+50 760 Td
+(Bounded Archive Expansion in the Structura Reditus Intake Pipeline) Tj T*
+(Synthetic Researcher) Tj T*
+(Version 2 \(2026-09-14\). Preprint; not peer reviewed.) Tj T*
+(This manuscript is a synthetic acceptance fixture: it describes only the research library's own) Tj T*
+(intake machinery.) Tj T*
+() Tj T*
+(Abstract) Tj T*
+(We test whether the intake pipeline's bounded ZIP expansion returns the same member set under) Tj T*
+(repeated runs. In a simulation of two hundred synthetic archives the simulated pipeline) Tj T*
+(returned identical member sets in every run; one archive with a nested depth of four failed as) Tj T*
+(designed. The failure is reported as a result, not as missing information.) Tj T*
+() Tj T*
+(Introduction) Tj T*
+(The pipeline is a diagnostic of the library's own robustness. Bounded expansion, member-count) Tj T*
+(limits and a time budget are the contract under test; nothing here is a scholarly claim about) Tj T*
+(any external domain.) Tj T*
+() Tj T*
+(Method) Tj T*
+(Two hundred synthetic archives were generated with controlled depth and member counts and) Tj T*
+(passed through the expansion routine ten times each. Identity of the returned member set was) Tj T*
+(checked by hashing.) Tj T*
+() Tj T*
+(Result) Tj T*
+(All archives within the contract returned identical member sets on every run. The single) Tj T*
+(archive nested beyond depth three was refused each time, as the contract requires.) Tj T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+6 0 obj
+<< /Title (Bounded Archive Expansion in the Structura Reditus Intake Pipeline) /Author (Synthetic Researcher) /Producer (SR portal acceptance fixture) >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000001601 00000 n 
+0000001727 00000 n 
+0000001784 00000 n 
+0000001833 00000 n 
+trailer
+<< /Size 7 /Root 5 0 R /Info 6 0 R >>
+startxref
+2002
+%%EOF

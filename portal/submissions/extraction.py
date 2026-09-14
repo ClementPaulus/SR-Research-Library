@@ -36,6 +36,7 @@ class Extracted:
 
     fields: dict = field(default_factory=dict)        # field_path -> {"value", "locator", "uncertain", "origin"}
     text_excerpt: str = ""
+    full_text: str = ""                               # bounded plain text for identification and classification
     processing: dict = field(default_factory=dict)
     problems: list = field(default_factory=list)
     members: list = field(default_factory=list)       # archive members: {"name", "bytes", "sha256", "data"}
@@ -45,6 +46,9 @@ class Extracted:
         if value is None or (isinstance(value, str) and not value.strip()):
             return
         self.fields.setdefault(path, {"value": value, "locator": locator, "uncertain": uncertain, "origin": origin})
+
+
+FULL_TEXT_LIMIT = 400_000
 
 
 def suffix_of(filename: str) -> str:
@@ -105,6 +109,7 @@ def extract_pdf(data: bytes, filename: str) -> Extracted:
         page = next((n for n, t in pages_text if "abstract" in t.lower()), 1)
         out.put("_abstract", abstract, f"page {page} (Abstract)", uncertain=True)
     out.text_excerpt = _clean("\n".join(t for _, t in pages_text[:3]), 4000)
+    out.full_text = "\n".join(t for _, t in pages_text)[:FULL_TEXT_LIMIT]
     out.processing["pages"] = len(reader.pages)
     return out
 
@@ -126,6 +131,7 @@ def extract_docx(data: bytes, filename: str) -> Extracted:
     if abstract:
         out.put("_abstract", abstract, "paragraph containing 'Abstract'", uncertain=True)
     out.text_excerpt = _clean("\n".join(t for _, t in paragraphs[:40]), 4000)
+    out.full_text = "\n".join(t for _, t in paragraphs)[:FULL_TEXT_LIMIT]
     return out
 
 
@@ -162,6 +168,7 @@ def extract_text_like(data: bytes, filename: str) -> Extracted:
         if abstract:
             out.put("_abstract", abstract, "section headed 'Abstract'", uncertain=True)
     out.text_excerpt = _clean("\n".join(lines[:80]), 4000)
+    out.full_text = text[:FULL_TEXT_LIMIT]
     return out
 
 
@@ -178,6 +185,7 @@ def extract_record(data: bytes, filename: str) -> Extracted:
         out.problems.append("The record must be a JSON/YAML object with research-object fields.")
         return out
     out.record = record
+    out.full_text = json.dumps(record, ensure_ascii=False)[:FULL_TEXT_LIMIT]
     for key, value in record.items():
         out.put(key, value, f"record:{key}", origin="researcher-statement")
     return out

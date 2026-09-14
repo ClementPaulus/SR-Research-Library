@@ -14,16 +14,22 @@ terminal, identifier allocation, or JSON editing.
    works*, and your profile. Changing your display name never changes your AuthorID.
 3. **Upload research.** PDF, DOCX, Markdown, text, LaTeX, JSON/YAML records, CSV/TSV, or a ZIP handoff
    (50 MiB per file, 200 MiB per submission), or supply a DOI/archive reference/URL instead.
-   *“Your files are saved. We’re preparing a draft for your review.”*
-4. **Review the prepared draft.** Each field shows where it came from — extracted from a file (with
-   page/line), stated by you, or local library classification — and the remaining questions
-   (“What remains untested within the scope of this work?”, “Which version governs this submission?”).
-   Gaps go in *Missingness* with a class; nothing is guessed for you. Autosave protects against lost
-   edits; two tabs never overwrite each other.
-5. **Submit.** *“Submit this revision to the public research library.”* The exact public scope is shown
-   beside the button: the receipt and record snapshot are public on any decision; the record itself only
-   on ACCEPTED; your email and private files never. The revision is frozen and evaluated by the seven
-   gates in isolation.
+   *“Your files are saved. We’re preparing a draft for your review.”* The status page shows the six
+   preparation steps as they run: preserve files → identify source and version information → check for
+   possible duplicates → extract metadata → propose library classifications → prepare the editable
+   submission. If a step fails, your upload is kept and the step is retried.
+4. **Review the prepared draft.** The readiness panel says what is *ready*, what *needs confirmation*, and
+   what is *missing*. Each field shows where its value came from — extracted from a file (with page/line),
+   a library-classification suggestion (keyword-based, always marked uncertain), or stated by you. Only the
+   questions still open are asked, each with *why it matters*, whether it *blocks submission*, and *what
+   resolves it*. Keeping an extracted or suggested value and pressing **Save draft** records it as confirmed
+   — you never retype what the system already found. Gaps go in *Missingness* with a class; nothing is
+   guessed for you. Autosave protects against lost edits; two tabs never overwrite each other.
+5. **Submit.** *“Submit this revision to the public research library.”* If two manuscript versions were
+   found you state which governs; if a possible duplicate object was found you decide *revision of it* or
+   *distinct study*; if the proposed source's type is uncertain you confirm it; and you confirm the layer of
+   each claim (source observations belong to the source; interpretations are yours). The exact public scope
+   is shown beside the button. The revision is frozen and evaluated by the seven gates in isolation.
 6. **Read the receipt.** ACCEPTED → *Registration is in progress* → **Registered** with links to the
    public record, receipt, and commit. RETURNED_FOR_REPAIR → *“This submission needs additional
    information. Your files and earlier version are preserved.”* → *Start repair* creates a linked new

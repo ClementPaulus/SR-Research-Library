@@ -92,6 +92,10 @@ class FakeGitHubClient:
         if self.repo.unavailable_calls > 0:
             self.repo.unavailable_calls -= 1
             raise GitHubUnavailable("injected outage")
+        # Acceptance runs inject an outage across processes by creating this file.
+        outage_file = getattr(settings, "PORTAL_FAKE_GITHUB_OUTAGE_FILE", "")
+        if outage_file and Path(outage_file).exists():
+            raise GitHubUnavailable("injected outage (file flag)")
 
     def default_branch_sha(self, branch):
         self._maybe_unavailable()

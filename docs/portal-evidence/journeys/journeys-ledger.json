@@ -1,0 +1,117 @@
+{
+  "J1_new_researcher_pdf_to_registered": {
+    "email": "j1-1789428682@example.invalid",
+    "author_id": "AUTH-0002",
+    "detail_url": "http://127.0.0.1:8123/workspace/submissions/5ced692d-5d3a-4d14-9b3f-c552f3a1cff0",
+    "state_after_upload": "Needs your review",
+    "preparation_steps": [
+      [
+        "preserve",
+        "done"
+      ],
+      [
+        "identify",
+        "done"
+      ],
+      [
+        "duplicates",
+        "done"
+      ],
+      [
+        "extract",
+        "done"
+      ],
+      [
+        "classify",
+        "done"
+      ],
+      [
+        "assemble",
+        "done"
+      ]
+    ],
+    "duplicates_detail": "no matching DOI, similar title, or identical file in the registry",
+    "readiness_initial": {
+      "ready": 3,
+      "to confirm": 7,
+      "missing": 14,
+      "blocking": 21
+    },
+    "title_prefilled": "Bounded Archive Expansion in the Structura Reditus Intake Pipeline",
+    "evidence_mode_suggested": "simulation",
+    "tier2_class_suggested": "diagnostic",
+    "publication_state_suggested": "preprint",
+    "evidence_rows_with_locators": 7,
+    "classification_origin_visible": true,
+    "uncertain_marked": 7,
+    "readiness_after_answers": {
+      "ready": 24,
+      "to confirm": 0,
+      "missing": 0,
+      "blocking": 0
+    },
+    "title_confirmed_on_save": true,
+    "source_type_question_shown": true,
+    "final_state": "Registered",
+    "receipt_id": "RCPT-000038",
+    "object_id": "SR-OBJ-000032",
+    "profile_link_shown": true,
+    "public_record_shows_source_and_receipt": true,
+    "searchable": true,
+    "profile_counts_one_object": "1",
+    "handoff_bytes": 8584
+  },
+  "J2_ambiguous_versions_and_duplicate": {
+    "email": "j2-1789428700@example.invalid",
+    "author_id": "AUTH-0003",
+    "state_after_upload": "Needs your review",
+    "version_ambiguity_shown": true,
+    "duplicate_shown": true,
+    "blocking_questions": 22,
+    "question_explains_why": true,
+    "confirm_requires_version": true,
+    "confirm_requires_duplicate_decision": true,
+    "refused_without_resolution": true,
+    "final_state": "Registered",
+    "object_id": "SR-OBJ-000033"
+  },
+  "J3_repair_and_resubmission": {
+    "email": "j3-1789428717@example.invalid",
+    "author_id": "AUTH-0004",
+    "confirm_warns_blocking": true,
+    "state_after_first_submit": "Needs repair",
+    "repair_receipt": "RCPT-000040",
+    "exact_repair_listed": true,
+    "repair_flags_fields": true,
+    "repair_reused_evidence": true,
+    "readiness_in_repair": {
+      "ready": 22,
+      "to confirm": 0,
+      "missing": 2,
+      "blocking": 2
+    },
+    "final_state": "Registered",
+    "receipts_in_history": [
+      "RCPT-000040",
+      "RCPT-000041"
+    ],
+    "revisions_shown": 3,
+    "object_id": "SR-OBJ-000034",
+    "public_page_shows_both_attempts": true
+  },
+  "J4_interruption_recovery": {
+    "email": "j4-1789428740@example.invalid",
+    "author_id": "AUTH-0005",
+    "state_during_outage": "Accepted \u2014 registration pending",
+    "receipt_during_outage": "RCPT-000042",
+    "registered_shown_prematurely": false,
+    "reconcile_output": [
+      "redispatched 1 job(s); 0 publication(s) re-checked"
+    ],
+    "final_state": "Registered",
+    "receipts_after_recovery": [
+      "RCPT-000042"
+    ],
+    "single_receipt": true
+  }
+}

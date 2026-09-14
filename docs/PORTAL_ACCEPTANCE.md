@@ -9,20 +9,40 @@ django-allauth 65.19.3. **Date:** 2026-09-14.
 historical artifacts: [portal-evidence/baseline-810f4222.json](portal-evidence/baseline-810f4222.json).
 
 **Final automated result:** engine suite **94 passed** (`python -m pytest` at repo root), portal suite
-**39 passed** (`make -C portal test`), validator OK, site regeneration deterministic.
+**49 passed** (`make -C portal test`), validator OK, site regeneration deterministic.
+
+**Implemented vs demonstrated.** Every row marked PASS below was *executed* in the environment named in
+its evidence column. Features that are implemented but whose live behaviour depends on owner-provisioned
+services (real GitHub App writes, real email delivery, S3, PostgreSQL/Redis restarts, backups) are marked
+NOT RUN with the exact dependency in §Dependencies. The four researcher journeys are described step by
+step, with screenshots, in [PORTAL_WALKTHROUGH.md](PORTAL_WALKTHROUGH.md).
 
 **Environments used:**
 * *Unit/integration* — pytest with an isolated scratch clone of the repository and the git-backed
   GitHub double (`registry_bridge.fake_github`), which performs real branch/commit/PR/check/merge
   operations with git plumbing on that clone.
 * *Browser* — headless Chromium (Playwright 1.62) against a live dev server (`runserver`, eager Celery,
-  file-captured email, git-backed GitHub double) on an isolated clone `/tmp/accept-repo`; screenshots and
-  the machine ledger are in [portal-evidence/browser/](portal-evidence/browser/).
+  file-captured email, git-backed GitHub double) on an isolated clone; screenshots and machine ledgers are
+  in [portal-evidence/browser/](portal-evidence/browser/) (first acceptance run) and
+  [portal-evidence/journeys/](portal-evidence/journeys/) (four researcher journeys, `run_journeys.sh`).
 * *Staging/production* — **not provisioned in this environment.** No hosting, domain, SMTP service,
   managed PostgreSQL/Redis/S3, or GitHub App installation exists yet. Rows that require them are
   **NOT RUN** and listed with the exact owner action in §Dependencies.
 
 Legend: PASS / FAIL / NOT RUN. NOT RUN is not a pass.
+
+## W — Researcher journeys (automatic preparation as the default experience)
+
+| ID | Scenario | Result | Evidence | Limitation |
+|---|---|---|---|---|
+| W01 | New user: signup → verify → automatic AuthorID → upload PDF → prepared draft → answer only missing fields → submit → Registered, with no JSON, Git, identifier allocation, or founder action | **PASS** | journeys ledger `J1_*`: `AUTH-0002`, steps all `done`, readiness 3/7/14 → 24/0/0, suggestions `simulation`/`diagnostic`/`preprint` shown as uncertain library classification, title confirmed on save, `RCPT-000038`, `SR-OBJ-000032`, profile 1 object, searchable, handoff; screenshots 01–07; `test_manuscript_with_auto_proposed_source_registers_end_to_end` | Git double and captured email (see Dependencies) |
+| W02 | Upload initiates preparation: preserve files, identify source/version, duplicate check, extract, classify, prepare; progress visible; upload retained on failure | **PASS** | `test_upload_runs_full_preparation_with_steps_suggestions_and_auto_source`; `status.json` steps polled live (screenshot 02); failure path in `prepare` marks the step `failed` and keeps the upload (`test_u03…`) | Model-assisted extraction not configured (disclosed in preparation notes) |
+| W03 | Prepared submission distinguishes extracted / suggested / stated; uncertain stays visible; source per field inspectable | **PASS** | screenshots 03, 04, 15 (origin badges, locators, *uncertain*, *confirmed in the editor*, *reused from revision r1*); `test_saving_confirms_kept_uncertain_values_without_retyping` | — |
+| W04 | Only remaining questions asked, each with why / blocks / resolves; answers saved; leaving and returning preserved | **PASS** | ledger `question_explains_why`, readiness counts; `preparation.assess`; `test_upload_runs_full_preparation…` (title not re-asked); autosave + `test_p02` | — |
+| W05 | Ambiguous submission requires clarification (governing version, revision vs distinct) and is refused without it | **PASS** | ledger `J2_*`: `version_ambiguity_shown`, `duplicate_shown`, `refused_without_resolution` = true, then Registered `SR-OBJ-000033`; screenshots 08–12; `test_two_versions_uploaded_require…`, `test_duplicate_object_requires_resolution_and_revision_sets_target` | — |
+| W06 | Repair identifies affected fields, reuses valid preparation, reruns all seven gates | **PASS** | ledger `J3_*`: `RCPT-000040` repair → flagged `scope`, `next_burden`, 22 ready reused → `RCPT-000041` accepted → `SR-OBJ-000034`; public page shows both attempts; screenshots 13–17; `test_repair_reuses_evidence_and_names_flagged_fields` | — |
+| W07 | Recovery after interruption: accepted stays pending, no premature Registered, reconcile completes with a single receipt | **PASS** | ledger `J4_*`: `Accepted — registration pending`, `registered_shown_prematurely` = false, `reconcile` → Registered `SR-OBJ-000035`, `single_receipt` = true; screenshots 18–19; `test_outage_file_blocks_publication_then_reconcile_recovers` | Outage injected via the test double's file flag |
+| W08 | Scholarly interpretation and disputed attribution require explicit resolution | **PASS** | confirm page requires the claims-by-layer acknowledgement; AuthorIDs not bound to the account open an `attribution` review case with no accept-anyway (`test_review_trigger_for_other_authors_attribution_and_no_accept_anyway`) | — |
 
 ## A — Accounts
 
