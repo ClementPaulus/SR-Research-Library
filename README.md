@@ -178,7 +178,7 @@ over primary domain, Tier-2 class, structural focus, evidence mode,
 provenance, and maturity. There is no universal author score. Credentials may
 appear as provenance metadata with a verification state.
 
-## Cross-domain search
+## Cross-domain search 
 
 The generated site supports browsing/filtering by author, domain, subdomain,
 object of study, structural focus, main question, Tier-2 class, evidence
