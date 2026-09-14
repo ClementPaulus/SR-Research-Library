@@ -154,9 +154,37 @@ def test_relations_are_deliberate_and_source_explicit():
                                        "from_id": "SR-OBJ-000020", "to_id": "SR-OBJ-000009"}
     assert relations["REL-000005"] == {**relations["REL-000005"], "relation_type": "extends",
                                        "from_id": "SR-OBJ-000029", "to_id": "SR-OBJ-000028"}
-    assert len(relations) == 5
+    assert relations["REL-000006"] == {**relations["REL-000006"], "relation_type": "extends",
+                                       "from_id": "SR-OBJ-000031", "to_id": "SR-OBJ-000023"}
+    assert len(relations) == 6
     assert "REL-000004" in _objects()["SR-OBJ-000020"]["relations"]
     assert "REL-000005" in _objects()["SR-OBJ-000029"]["relations"]
+    assert "REL-000006" in _objects()["SR-OBJ-000031"]["relations"]
+
+
+def test_prospective_identifiable_return_is_a_distinct_successor_object():
+    objects, sources, receipts = _objects(), _sources(), _receipts()
+    new, pred = objects["SR-OBJ-000031"], objects["SR-OBJ-000023"]
+    # Predecessor untouched: still 1.0.1, retrospective, no supersession.
+    assert pred["version"] == "1.0.1" and pred["maturity"] == "retrospectively-evaluated"
+    assert "supersedes" not in new and "supersedes" not in pred
+    assert sources["SRC-000052"]["superseded_by"] is None and sources["SRC-000052"]["status"] == "active"
+    # New object: own source, own concept DOI, reused external anchor, no duplicate of SRC-000052.
+    assert new["source_ids"] == ["SRC-000060", "SRC-000051"]
+    src = sources["SRC-000060"]
+    assert src["identifier"]["doi"] == "10.5281/zenodo.22739943" == src["version_doi"]
+    assert src["concept_doi"] == "10.5281/zenodo.22739942" and src["supersedes"] == []
+    assert sources["SRC-000051"]["identifier"]["doi"] == HE_DOI
+    assert new["maturity"] == "prospectively-tested" and new["evidence_mode"]["primary"] == "simulation"
+    assert new["publication_state"] == "archived" and new["version"] == "1.0.0"
+    # 9/10 reliability and MU-01 stay a negative result, not missingness; hardware remains an open seam.
+    text = " ".join(c["claim"] for c in new["claim_layers"])
+    assert "nine of ten" in text and "MU-01 failed" in text
+    classes = {m["item"]: m["class"] for m in new["missingness"]}
+    assert not any(c in ("EVALUABILITY_BLOCKING", "REPAIRABLE", "CONTRACT_VIOLATING") for c in classes.values())
+    assert any(k.startswith("new prospectively linked physical memristor") and v == "UNRESOLVED_SEAM" for k, v in classes.items())
+    assert "Does not rewrite or supersede SR-OBJ-000023." in new["exclusions"]
+    assert receipts["RCPT-000037"]["object_id"] == "SR-OBJ-000031" and receipts["RCPT-000037"]["decision"] == "ACCEPTED"
 
 
 def test_released_governing_records_and_manifests_unchanged():
@@ -198,5 +226,5 @@ def test_site_rebuild_is_deterministic_and_bridges_include_new_objects(tmp_path)
     chain = next(c for c in projection["candidates"] if {c["object_a"], c["object_b"]} == {"SR-OBJ-000009", "SR-OBJ-000020"})
     assert chain["already_declared"] is True
     # Generated adjacency created no REL-* records.
-    assert len(registry["relations"]) == 5
+    assert len(registry["relations"]) == 6
     assert bridges.build_bridge_projection(registry) == projection

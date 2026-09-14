@@ -60,6 +60,41 @@ released governing record was rewritten.
   adjacency for retrieval and review and SHALL NOT convert it into a relation
   or any scientific claim.
 
+### Added (2026-09-14 ingress — Prospective Identifiable Return in Associative Memory)
+
+- New distinct Tier-2 object `SR-OBJ-000031` (Prospective Identifiable Return
+  in Associative Memory: A Completed Prospective Computational Test of
+  Identity, Correction, Discrimination, and Reliability; Final Publication
+  Edition v1.0, 14 September 2026) — diagnostic (+external-ingress,
+  +domain-translation), locus umcp, domain computer-science, focus return,
+  evidence simulation (+prospective-protocol, +computational-reproduction),
+  provenance externally-anchored-derivative, maturity prospectively-tested,
+  publication state archived. `RCPT-000037` ACCEPTED, all seven gates PASS.
+  §6.1 Test A satisfied by a new frozen contract (PIR-COMP-2026-09-14-v1.0),
+  new run (PIR-COMP-R1), fresh development and untouched confirmation
+  evidence, and a new concept DOI; not a version update of `SR-OBJ-000023`.
+- Source `SRC-000060` (corpus-native; Zenodo 10.5281/zenodo.22739943 version,
+  10.5281/zenodo.22739942 concept; verified by API 2026-09-14; Preprint,
+  CC-BY-4.0; deposited PDF and publication bundle read, not mirrored).
+  `SRC-000051` (He et al.) reused as external anchor; `SRC-000052` not
+  duplicated and not superseded.
+- Relation `REL-000006`: `SR-OBJ-000031` extends `SR-OBJ-000023`, as stated
+  by the source (predecessor retained as a separate retrospective object; no
+  `supersedes`).
+- Recorded result profile as stated by the source: 5,711/6,000 exact
+  intended-target recoveries (95.1833%); recurrence gain 0.5520 [0.541667,
+  0.562504]; joint-model log loss 0.134226 beating all three simple models;
+  reliability partial — 9/10 targets pass, MU-01 fails (159/200, lower bound
+  0.712291) as an observed negative result; p = 0.50 control 71/2,000, no
+  leakage trigger; procedural stance CONFORMANT. Not physical hardware
+  validation; canonical UMCP return/weld not activated.
+- New open seam `SEAM-0023` (prospective physical-hardware branch of the
+  Identifiable Return lineage stays open; not closed by the computational
+  run). Readback surfaces updated (`docs/TIER2_CENSUS_2026-09.md`,
+  `registry/README.md`, `tests/test_census_2026_09.py`); site regenerated.
+  Next free identifiers: `SR-OBJ-000032`, `SRC-000061`, `SR-GOV-000020`,
+  `REL-000007`, `RCPT-000038`.
+
 ### Added (v1.1 foundation)
 
 - Typed source lineage on `schema/source.schema.json`: `version`, `status`

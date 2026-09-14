@@ -1120,6 +1120,33 @@
       "already_declared": false
     },
     {
+      "object_a": "SR-OBJ-000002",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000002 -> SR-OBJ-000031",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: return."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000002 next burden overlaps SR-OBJ-000031 on: contract, deriv, frozen, one."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
       "object_a": "SR-OBJ-000003",
       "object_b": "SR-OBJ-000001",
       "direction": "SR-OBJ-000003 -> SR-OBJ-000001",
@@ -1929,6 +1956,32 @@
       "already_declared": false
     },
     {
+      "object_a": "SR-OBJ-000004",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000004 <-> SR-OBJ-000031",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "shared_structural_focus",
+          "evidence": "Both objects declare primary structural focus 'return'."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, functional_locus."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
       "object_a": "SR-OBJ-000005",
       "object_b": "SR-OBJ-000006",
       "direction": "SR-OBJ-000005 <-> SR-OBJ-000006",
@@ -2366,6 +2419,32 @@
       "already_declared": false
     },
     {
+      "object_a": "SR-OBJ-000005",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000005 <-> SR-OBJ-000031",
+      "strength": "LOW",
+      "candidate_relation_types": [
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: robustnes."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, functional_locus."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
       "object_a": "SR-OBJ-000006",
       "object_b": "SR-OBJ-000007",
       "direction": "SR-OBJ-000006 <-> SR-OBJ-000007",
@@ -2782,6 +2861,32 @@
         {
           "type": "structural_focus_overlap",
           "evidence": "Structural focus terms overlap: boundary."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000006",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000006 <-> SR-OBJ-000031",
+      "strength": "LOW",
+      "candidate_relation_types": [
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: robustnes."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, functional_locus."
         }
       ],
       "not_established": [
@@ -3302,6 +3407,37 @@
       "already_declared": false
     },
     {
+      "object_a": "SR-OBJ-000007",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000007 -> SR-OBJ-000031",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: robustnes."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, functional_locus."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000007 next burden overlaps SR-OBJ-000031 on: return, source."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
       "object_a": "SR-OBJ-000008",
       "object_b": "SR-OBJ-000002",
       "direction": "SR-OBJ-000008 -> SR-OBJ-000002",
@@ -3689,6 +3825,37 @@
         {
           "type": "burden_handoff",
           "evidence": "SR-OBJ-000008 next burden overlaps SR-OBJ-000030 on: continuity, return."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000008",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000008 -> SR-OBJ-000031",
+      "strength": "HIGH",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "shared_structural_focus",
+          "evidence": "Both objects declare primary structural focus 'return'."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, functional_locus."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000008 next burden overlaps SR-OBJ-000031 on: return, source."
         }
       ],
       "not_established": [
@@ -4760,6 +4927,37 @@
       "already_declared": false
     },
     {
+      "object_a": "SR-OBJ-000011",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000011 -> SR-OBJ-000031",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: identity, memory, recovery, return."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: domain, tier2_class, evidence_mode, provenance."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000011 next burden overlaps SR-OBJ-000031 on: frozen, simpler, source."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
       "object_a": "SR-OBJ-000012",
       "object_b": "SR-OBJ-000009",
       "direction": "SR-OBJ-000012 -> SR-OBJ-000009",
@@ -5165,6 +5363,32 @@
       "already_declared": false
     },
     {
+      "object_a": "SR-OBJ-000012",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000012 <-> SR-OBJ-000031",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "shared_structural_focus",
+          "evidence": "Both objects declare primary structural focus 'return'."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, provenance."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
       "object_a": "SR-OBJ-000013",
       "object_b": "SR-OBJ-000008",
       "direction": "SR-OBJ-000013 -> SR-OBJ-000008",
@@ -5419,6 +5643,32 @@
       "already_declared": false
     },
     {
+      "object_a": "SR-OBJ-000013",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000013 <-> SR-OBJ-000031",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "shared_structural_focus",
+          "evidence": "Both objects declare primary structural focus 'return'."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, provenance, functional_locus."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
       "object_a": "SR-OBJ-000014",
       "object_b": "SR-OBJ-000009",
       "direction": "SR-OBJ-000014 -> SR-OBJ-000009",
@@ -5657,6 +5907,28 @@
         {
           "type": "classification_overlap",
           "evidence": "Registered classification fields overlap: domain, tier2_class, evidence_mode, provenance, functional_locus."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000014",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000014 <-> SR-OBJ-000031",
+      "strength": "LOW",
+      "candidate_relation_types": [
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: return."
         }
       ],
       "not_established": [
@@ -6768,6 +7040,32 @@
       "already_declared": false
     },
     {
+      "object_a": "SR-OBJ-000018",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000018 <-> SR-OBJ-000031",
+      "strength": "LOW",
+      "candidate_relation_types": [
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: return, robustnes."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, functional_locus."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
       "object_a": "SR-OBJ-000019",
       "object_b": "SR-OBJ-000002",
       "direction": "SR-OBJ-000019 -> SR-OBJ-000002",
@@ -7316,6 +7614,32 @@
         {
           "type": "classification_overlap",
           "evidence": "Registered classification fields overlap: domain, provenance."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000019",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000019 <-> SR-OBJ-000031",
+      "strength": "LOW",
+      "candidate_relation_types": [
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: return."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, functional_locus."
         }
       ],
       "not_established": [
@@ -8142,6 +8466,32 @@
       "already_declared": false
     },
     {
+      "object_a": "SR-OBJ-000021",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000021 <-> SR-OBJ-000031",
+      "strength": "LOW",
+      "candidate_relation_types": [
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: return, robustnes."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: domain, tier2_class, provenance, functional_locus."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
       "object_a": "SR-OBJ-000022",
       "object_b": "SR-OBJ-000001",
       "direction": "SR-OBJ-000022 -> SR-OBJ-000001",
@@ -8618,6 +8968,37 @@
       "already_declared": false
     },
     {
+      "object_a": "SR-OBJ-000022",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000022 -> SR-OBJ-000031",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: recurrence, return."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: domain, tier2_class, evidence_mode, maturity."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000022 next burden overlaps SR-OBJ-000031 on: contract, frozen, return, source."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
       "object_a": "SR-OBJ-000023",
       "object_b": "SR-OBJ-000002",
       "direction": "SR-OBJ-000023 -> SR-OBJ-000002",
@@ -8832,6 +9213,42 @@
         "declared relation"
       ],
       "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000023",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000023 -> SR-OBJ-000031",
+      "strength": "HIGH",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with",
+        "structurally_adjacent"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: identity, memory, recovery, return, robustnes."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: domain, tier2_class, evidence_mode, provenance, functional_locus."
+        },
+        {
+          "type": "explicit_lineage",
+          "evidence": "SR-OBJ-000031 explicitly names SR-OBJ-000023 with lineage language."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000023 next burden overlaps SR-OBJ-000031 on: cue, frozen, identity, implementation, memory, return, target."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": true
     },
     {
       "object_a": "SR-OBJ-000024",
@@ -9283,6 +9700,37 @@
       "already_declared": false
     },
     {
+      "object_a": "SR-OBJ-000025",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000025 -> SR-OBJ-000031",
+      "strength": "HIGH",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "shared_structural_focus",
+          "evidence": "Both objects declare primary structural focus 'return'."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, evidence_mode, functional_locus."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000025 next burden overlaps SR-OBJ-000031 on: frozen, specific."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
       "object_a": "SR-OBJ-000026",
       "object_b": "SR-OBJ-000001",
       "direction": "SR-OBJ-000026 -> SR-OBJ-000001",
@@ -9498,6 +9946,32 @@
         {
           "type": "burden_handoff",
           "evidence": "SR-OBJ-000026 next burden overlaps SR-OBJ-000028 on: contract, missingnes, object."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000026",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000026 -> SR-OBJ-000031",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "handoff_to"
+      ],
+      "signals": [
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, evidence_mode, provenance, functional_locus."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000026 next burden overlaps SR-OBJ-000031 on: contract, explanation, frozen, source."
         }
       ],
       "not_established": [
@@ -9752,6 +10226,28 @@
       "already_declared": false
     },
     {
+      "object_a": "SR-OBJ-000027",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000027 <-> SR-OBJ-000031",
+      "strength": "LOW",
+      "candidate_relation_types": [
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: return."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
       "object_a": "SR-OBJ-000028",
       "object_b": "SR-OBJ-000029",
       "direction": "SR-OBJ-000028 <-> SR-OBJ-000029",
@@ -9860,6 +10356,268 @@
         {
           "type": "burden_handoff",
           "evidence": "SR-OBJ-000029 next burden overlaps SR-OBJ-000030 on: repair, student."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000029",
+      "object_b": "SR-OBJ-000031",
+      "direction": "SR-OBJ-000029 <-> SR-OBJ-000031",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "shared_structural_focus",
+          "evidence": "Both objects declare primary structural focus 'return'."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000031",
+      "object_b": "SR-OBJ-000001",
+      "direction": "SR-OBJ-000031 -> SR-OBJ-000001",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: return."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000031 next burden overlaps SR-OBJ-000001 on: architecture, new, object, without."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000031",
+      "object_b": "SR-OBJ-000003",
+      "direction": "SR-OBJ-000031 -> SR-OBJ-000003",
+      "strength": "HIGH",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "shared_structural_focus",
+          "evidence": "Both objects declare primary structural focus 'return'."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, functional_locus."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000031 next burden overlaps SR-OBJ-000003 on: complete, frozen, object."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000031",
+      "object_b": "SR-OBJ-000009",
+      "direction": "SR-OBJ-000031 -> SR-OBJ-000009",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: return."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, functional_locus."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000031 next burden overlaps SR-OBJ-000009 on: burden, frozen."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000031",
+      "object_b": "SR-OBJ-000010",
+      "direction": "SR-OBJ-000031 -> SR-OBJ-000010",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: failure."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, evidence_mode, functional_locus."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000031 next burden overlaps SR-OBJ-000010 on: diagnostic, physical."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000031",
+      "object_b": "SR-OBJ-000017",
+      "direction": "SR-OBJ-000031 -> SR-OBJ-000017",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: return, robustnes."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000031 next burden overlaps SR-OBJ-000017 on: follow, frozen, into."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000031",
+      "object_b": "SR-OBJ-000020",
+      "direction": "SR-OBJ-000031 -> SR-OBJ-000020",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: identity, return."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: tier2_class, functional_locus."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000031 next burden overlaps SR-OBJ-000020 on: frozen, identity, into."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000031",
+      "object_b": "SR-OBJ-000024",
+      "direction": "SR-OBJ-000031 -> SR-OBJ-000024",
+      "strength": "MEDIUM",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "structural_focus_overlap",
+          "evidence": "Structural focus terms overlap: identity."
+        },
+        {
+          "type": "classification_overlap",
+          "evidence": "Registered classification fields overlap: domain, tier2_class, provenance."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000031 next burden overlaps SR-OBJ-000024 on: identity, semantic."
+        }
+      ],
+      "not_established": [
+        "shared mechanism",
+        "scientific equivalence",
+        "causation",
+        "declared relation"
+      ],
+      "already_declared": false
+    },
+    {
+      "object_a": "SR-OBJ-000031",
+      "object_b": "SR-OBJ-000030",
+      "direction": "SR-OBJ-000031 -> SR-OBJ-000030",
+      "strength": "HIGH",
+      "candidate_relation_types": [
+        "handoff_to",
+        "shares_focus_with"
+      ],
+      "signals": [
+        {
+          "type": "shared_structural_focus",
+          "evidence": "Both objects declare primary structural focus 'return'."
+        },
+        {
+          "type": "burden_handoff",
+          "evidence": "SR-OBJ-000031 next burden overlaps SR-OBJ-000030 on: identity, object, without."
         }
       ],
       "not_established": [

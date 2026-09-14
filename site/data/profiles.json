@@ -5,59 +5,61 @@
     "orcid": "0009-0000-6069-8234",
     "status": "active",
     "credentials": [],
-    "total_registered_authored_objects": 29,
+    "total_registered_authored_objects": 30,
     "primary_domain_distribution": {
-      "chemistry": 0.068966,
-      "computer-science": 0.034483,
-      "education": 0.137931,
-      "interdisciplinary": 0.103448,
-      "linguistics": 0.034483,
-      "mathematics": 0.068966,
-      "neuroscience": 0.034483,
-      "philosophy": 0.034483,
-      "physics": 0.137931,
-      "structura-reditus-core": 0.310345,
-      "systems-theory": 0.034483
+      "chemistry": 0.066667,
+      "computer-science": 0.066667,
+      "education": 0.133333,
+      "interdisciplinary": 0.1,
+      "linguistics": 0.033333,
+      "mathematics": 0.066667,
+      "neuroscience": 0.033333,
+      "philosophy": 0.033333,
+      "physics": 0.133333,
+      "structura-reditus-core": 0.3,
+      "systems-theory": 0.033333
     },
     "tier2_class_distribution": {
-      "candidate": 0.103448,
-      "diagnostic": 0.275862,
-      "domain-translation": 0.103448,
-      "external-ingress": 0.103448,
-      "language-contact": 0.103448,
-      "pedagogical": 0.310345
+      "candidate": 0.1,
+      "diagnostic": 0.3,
+      "domain-translation": 0.1,
+      "external-ingress": 0.1,
+      "language-contact": 0.1,
+      "pedagogical": 0.3
     },
     "structural_focus_distribution": {
-      "boundary": 0.103448,
-      "causation": 0.034483,
-      "continuity": 0.137931,
-      "heterogeneity": 0.172414,
-      "identity": 0.034483,
-      "recurrence": 0.034483,
-      "residual-migration": 0.034483,
-      "return": 0.275862,
-      "translation": 0.172414
+      "boundary": 0.1,
+      "causation": 0.033333,
+      "continuity": 0.133333,
+      "heterogeneity": 0.166667,
+      "identity": 0.033333,
+      "recurrence": 0.033333,
+      "residual-migration": 0.033333,
+      "return": 0.3,
+      "translation": 0.166667
     },
     "evidence_mode_distribution": {
-      "conceptual-argument": 0.034483,
-      "formal-derivation": 0.37931,
-      "pedagogical": 0.275862,
-      "retrospective-analysis": 0.206897,
-      "secondary-empirical": 0.034483,
-      "source-synthesis": 0.068966
+      "conceptual-argument": 0.033333,
+      "formal-derivation": 0.366667,
+      "pedagogical": 0.266667,
+      "retrospective-analysis": 0.2,
+      "secondary-empirical": 0.033333,
+      "simulation": 0.033333,
+      "source-synthesis": 0.066667
     },
     "provenance_distribution": {
-      "corpus-native": 0.655172,
-      "dataset-derived": 0.103448,
-      "externally-anchored-derivative": 0.206897,
-      "historical-source-anchored": 0.034483
+      "corpus-native": 0.633333,
+      "dataset-derived": 0.1,
+      "externally-anchored-derivative": 0.233333,
+      "historical-source-anchored": 0.033333
     },
     "maturity_distribution": {
-      "frozen-local-object": 0.448276,
-      "historical": 0.275862,
-      "prospectively-testable": 0.034483,
-      "retrospectively-evaluated": 0.137931,
-      "source-bounded": 0.103448
+      "frozen-local-object": 0.433333,
+      "historical": 0.266667,
+      "prospectively-testable": 0.033333,
+      "prospectively-tested": 0.033333,
+      "retrospectively-evaluated": 0.133333,
+      "source-bounded": 0.1
     },
     "note": "This profile contains only quantities reconstructible from the registry. It contains no universal author score and no weighting of prestige, credentials, degree level, institutional affiliation, citations, originality, quality, importance, or rank."
   }

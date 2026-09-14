@@ -1,0 +1,56 @@
+{
+  "source_id": "SRC-000060",
+  "source_type": "corpus-native",
+  "status": "active",
+  "title": "Prospective Identifiable Return in Associative Memory: A Completed Prospective Computational Test of Identity, Correction, Discrimination, and Reliability",
+  "version": "1.0",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Manuscript type (paper, Publication record): completed Tier-2 prospective computational evaluation; final publication edition v1.0; UMCP evaluative locus; contract PIR-COMP-2026-09-14-v1.0 (SHA-256 9d156e760fbe...), model freeze MODEL_FREEZE.json (SHA-256 975430177b9d...), run PIR-COMP-R1.",
+    "Lineage (paper §1, Fig. 1): immediate predecessor Paulus, Identifiable Return in Memristive Associative Memory v1.2 (10.5281/zenodo.22695434); external anchor He et al., Nature Communications 17, 3096 (2026), 10.1038/s41467-026-69958-0; SR-OBJ-000023 retained as a separate retrospective object; repository snapshot 7ff9869eae068c82c7e539d296e312591d1a5c0d.",
+    "Frozen object (paper §4, §12): ten 64-coordinate Figure-3 targets; synchronous map x_{t+1} = sign(x_t W), W = g1 - g0 (SRC-FIG3-REALWEIGHT-SYNC-SIGN-v1); independent bit-flip cues p in {0.05, 0.10, 0.20}, p = 0.50 negative control; T = 10; exact terminal target equality; development/confirmation separation with disjoint PCG64 namespaces; four L2 logistic models frozen before confirmation.",
+    "Results (paper §14, results/RESULT_PROFILE.json): 5,711/6,000 recovery-eligible confirmation trajectories reached exact intended-target equality (95.1833%); one-step 2,399/6,000; paired recurrence gain 0.5520, stratified bootstrap 95% CI [0.541667, 0.562504]; 3,312 one-step-fail/ten-step-succeed trials and zero reverse; two identity-rescue trajectories; joint-model confirmation log loss 0.134226 vs error-only 0.175544, identity-only 0.164289, correction-only 0.160711, all three Bonferroni lower bounds positive; reliability 9/10 targets pass at p = 0.05, MU-01 fails with 159/200 (0.7950, lower bound 0.712291); p = 0.50 negative control 71/2,000 (3.55%), leakage audit not triggered.",
+    "Stance (paper §14.6, §19; FINAL_STANCE.md): procedural stance CONFORMANT; identity, recurrence-specific correction, and prospective discrimination earn local computational credit; reliability is partial (9/10), the all-target reliability claim is not supported; MU-01 is retained as a negative target-level result and not repaired post hoc.",
+    "Boundary (paper Publication passport, §2.3, §17.5, §18): the study is computational; the hardware-prospective object remains NON_EVALUABLE under present public evidence and computational success does not become a new physical memristor validation; canonical tau_R, integrity, regime, return credit, and weld are not activated; no universal validation of GCD or Structura Reditus is claimed; three open burdens remain (MU-01 diagnostic, hardware-linked replication, external replication)."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.22739943",
+    "url": "https://doi.org/10.5281/zenodo.22739943",
+    "other": "Final Publication Edition v1.0, 14 September 2026; contract PIR-COMP-2026-09-14-v1.0; run PIR-COMP-R1. Full text and publication bundle not mirrored in this repository."
+  },
+  "concept_doi": "10.5281/zenodo.22739942",
+  "version_doi": "10.5281/zenodo.22739943",
+  "related_dois": [
+    {
+      "doi": "10.5281/zenodo.22695434",
+      "relation": "other",
+      "notes": "Immediate retrospective predecessor (SRC-000052, v1.2), named by the paper as a separate lineage object; not an earlier version of this source and not superseded by it."
+    }
+  ],
+  "supersedes": [],
+  "superseded_by": null,
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.22739943",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo Archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/22739943",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "The Zenodo record carries the short title \"Prospective Identifiable Return in Associative Memory\" and no version string; the full title with subtitle and the edition \"v1.0\" are taken from the deposited PDF title page, PUBLICATION_RECORD.md, and CITATION.cff in the bundle.",
+    "Peer review, journal acceptance, and independent certification are not claimed; the DOI records an archive deposit (Zenodo resource type Preprint) only.",
+    "The Zenodo record declares no related identifiers; the predecessor and external-anchor lineage is taken from the paper text, not from archive metadata."
+  ],
+  "notes": "Corpus-native completed prospective computational successor to SRC-000052 (Identifiable Return in Memristive Associative Memory v1.2). Distinct source identity: new contract, new run (PIR-COMP-R1), new frozen evidence, new concept DOI; not a version of SRC-000052 and does not supersede it. The external article DOI 10.1038/s41467-026-69958-0 belongs to He et al. (SRC-000051) and is not this source's identity. Zenodo verification (2026-09-14, API metadata): record 22739943, title \"Prospective Identifiable Return in Associative Memory\", version field empty, creators ['Paulus, Clement'] (ORCID 0009-0000-6069-8234), publication date 2026-09-14, resource type Preprint, access open, license CC-BY-4.0, concept record 22739942, files prospective_identifiable_return.pdf (189,794 bytes) and prospective_identifiable_return_publication_bundle_v1_0.zip (1,932,585 bytes). The deposited PDF and bundle were read for this record (paper text; PUBLICATION_RECORD.md, FINAL_STANCE.md, CITATION.cff, results/RESULT_PROFILE.json, validation/execution_receipt.json, missingness_ledger.csv). The DOI is the publication/provenance locator for the completed manuscript and bundle; per the paper it does not alter the frozen contract, model freeze, execution record, result profile, or final stance."
+}

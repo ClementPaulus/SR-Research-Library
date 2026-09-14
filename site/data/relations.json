@@ -38,5 +38,13 @@
     "to_id": "SR-OBJ-000028",
     "declared": "2026-09-13T18:00:00Z",
     "notes": "Semester II states that its instructional burden is to make evaluation durable after Semester I has made evaluation possible (Weeks 15–28 follow Weeks 1–14 of the same Course Architecture v1.0)."
+  },
+  {
+    "relation_id": "REL-000006",
+    "relation_type": "extends",
+    "from_id": "SR-OBJ-000031",
+    "to_id": "SR-OBJ-000023",
+    "declared": "2026-09-14T02:15:00Z",
+    "notes": "Stated by the source (SRC-000060, paper §1.3, §1.5, Fig. 1, Appendix A): the completed prospective computational run PIR-COMP-R1 is the successor to Identifiable Return in Memristive Associative Memory v1.2 and closes the computational burden the predecessor left unresolved (prospective correction, discrimination, target-specific reliability). The paper retains SR-OBJ-000023 as a separate retrospective object; the predecessor is extended, not superseded or rewritten."
   }
 ]

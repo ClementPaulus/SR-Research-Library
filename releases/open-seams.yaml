@@ -252,7 +252,9 @@ seams:
       SR-OBJ-000022; 10.5281/zenodo.22035775 now resolves, latest version 22121149), Identifiable Return in
       Memristive Associative Memory (SRC-000052 / SR-OBJ-000023, owner-supplied manuscript, no DOI at the pass; external
       anchor SRC-000051; publication update 2026-09-13: Version 1.2 deposited as 10.5281/zenodo.22695434, concept
-      22695433, verified; object resubmitted as 1.0.1 archived, RCPT-000036), Language Across Articulation (SRC-000053 / SR-OBJ-000024), Empirical Regime Auditing v2.0
+      22695433, verified; object resubmitted as 1.0.1 archived, RCPT-000036; 2026-09-14: distinct prospective
+      computational successor registered as SRC-000060 / SR-OBJ-000031, REL-000006 extends, RCPT-000037, predecessor
+      not superseded, hardware branch tracked as SEAM-0023), Language Across Articulation (SRC-000053 / SR-OBJ-000024), Empirical Regime Auditing v2.0
       (existing SRC-000046 / SR-OBJ-000025), Confinement as Integrity Collapse (SRC-000054 / SR-OBJ-000026,
       historical), Contract-First Epistemology full course, Semester I, Semester II, Syllabus and Audit Receipt
       (SRC-000055..058 / SR-OBJ-000027..030, shared archive 10.5281/zenodo.20074210). REPAIRED — SR-OBJ-000017,
@@ -272,4 +274,23 @@ seams:
       established by any source. SRC-000018 stays active with 22310064 as its canonical DOI and 22310544 typed
       alternate_record; SR-GOV-000009 carries the seam in its released missingness. Resolution requires the
       corpus owner to correct or confirm the Zenodo record metadata.
+    status: open
+  - id: SEAM-0023
+    area: registry.objects.open-hardware-branch
+    description: >-
+      Identifiable Return lineage, prospective physical-hardware branch (UNRESOLVED_SEAM, non-blocking). SR-OBJ-000023
+      (Paulus v1.2, SRC-000052, retrospective audit of ten released He et al. trajectories) designed a prospective
+      hardware-aware return test but did not execute it. SR-OBJ-000031 (Prospective Identifiable Return in Associative
+      Memory, SRC-000060, DOI 10.5281/zenodo.22739943, 2026-09-14; REL-000006 extends SR-OBJ-000023) completes the
+      COMPUTATIONAL prospective successor only: run PIR-COMP-R1 under frozen contract PIR-COMP-2026-09-14-v1.0,
+      procedurally CONFORMANT, with identity/correction/discrimination credit earned and reliability partial (9/10
+      targets; MU-01 is an observed negative result, not missingness). The paper's own preflight found all ten Gate-0
+      rows for a new hardware-prospective run NON_EVALUABLE: no prospectively linked physical chip/array/programming/
+      calibration realization, authenticated physical-update or stopping semantics, complete prospective physical
+      trajectories, or attempt denominator exists in public evidence. The computational result is therefore not
+      recorded as physical memristor validation, and canonical UMCP tau_R/integrity/regime/return-credit/weld remain
+      unactivated (AUTHORITY_BOUNDARY on both objects). The predecessor SR-OBJ-000023 is preserved intact (not
+      superseded). Closure requires a new prospective hardware-linked run registered as its own object with an
+      independently frozen physical contract; the MU-01 diagnostic and external replication on a second
+      implementation are separate open burdens on SR-OBJ-000031 and do not close this seam.
     status: open

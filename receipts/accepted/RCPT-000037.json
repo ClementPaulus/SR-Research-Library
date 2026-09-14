@@ -1,0 +1,79 @@
+{
+  "receipt_id": "RCPT-000037",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000031",
+  "generated": "2026-09-14T02:13:13Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000031",
+  "title": "Prospective Identifiable Return in Associative Memory: A Completed Prospective Computational Test of Identity, Correction, Discrimination, and Reliability",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-14T02:15:00Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "diagnostic",
+  "functional_locus": "umcp",
+  "domain_primary": "computer-science",
+  "structural_focus_primary": "return",
+  "main_question": "Do target identity separation and corrective recurrent dynamics jointly provide out-of-sample information about reliable target-specific associative-memory recovery beyond prespecified simpler explanations under one unchanged evaluation contract?",
+  "evidence_mode_primary": "simulation",
+  "provenance": "externally-anchored-derivative",
+  "maturity": "prospectively-tested",
+  "source_ids": [
+    "SRC-000060",
+    "SRC-000051"
+  ],
+  "relation_ids": [
+    "REL-000006"
+  ],
+  "publication_state": "archived",
+  "non_blocking_missingness": [
+    "new prospectively linked physical memristor acquisition chain (chip/array/programming/calibration realization for PIR-COMP-R1) (UNRESOLVED_SEAM)",
+    "canonical UMCP eligible-anchor/return/weld structure (AUTHORITY_BOUNDARY)",
+    "external replication on a second independently specified associative-memory implementation (NON_BLOCKING)",
+    "mechanistic explanation for the MU-01 failed reliability certificate (NON_BLOCKING)",
+    "peer review, journal acceptance, or independent certification (PUBLICATION_BOUNDARY)"
+  ],
+  "open_burdens": [
+    "Three distinct follow-on burdens remain (paper §18): (1) a separate exploratory diagnostic of MU-01's failed reliability certificate, without retroactively repairing PIR-COMP-R1; (2) a new prospective hardware-linked replication with independently frozen physical operator, chip/array/programming identity, calibration, physical-update semantics, complete trajectories, and attempt denominator; and (3) external replication of the frozen burden architecture on a second independently specified associative-memory implementation. None of these is absorbed into the present object."
+  ],
+  "next_burden": "Three distinct follow-on burdens remain (paper §18): (1) a separate exploratory diagnostic of MU-01's failed reliability certificate, without retroactively repairing PIR-COMP-R1; (2) a new prospective hardware-linked replication with independently frozen physical operator, chip/array/programming identity, calibration, physical-update semantics, complete trajectories, and attempt denominator; and (3) external replication of the frozen burden architecture on a second independently specified associative-memory implementation. None of these is absorbed into the present object."
+}

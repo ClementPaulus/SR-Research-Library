@@ -2578,5 +2578,149 @@
     "next_burden": "Live use of the receipt by an instructor, reviewer, or institution to assess, repair, or transmit the course, producing actual student/evaluator artifacts; classroom efficacy remains unproven until then.",
     "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
     "notes": "Member work of the shared course archive 10.5281/zenodo.20074210 (course syllabus and audit receipt.pdf). Registered in the 2026-09 Tier-2 census and repair pass; classification supplied by the corpus owner under the current Structura Reditus architecture."
+  },
+  {
+    "object_id": "SR-OBJ-000031",
+    "title": "Prospective Identifiable Return in Associative Memory: A Completed Prospective Computational Test of Identity, Correction, Discrimination, and Reliability",
+    "authors": [
+      "AUTH-0001"
+    ],
+    "authority": {
+      "tier": "tier-2"
+    },
+    "tier2_class": {
+      "primary": "diagnostic",
+      "secondary": [
+        "external-ingress",
+        "domain-translation"
+      ]
+    },
+    "functional_locus": "umcp",
+    "source_ids": [
+      "SRC-000060",
+      "SRC-000051"
+    ],
+    "lens": "Prospectively frozen identity-aware evaluation of target-specific recurrent associative-memory recovery under a source-derived computational operator.",
+    "domain": {
+      "primary": "computer-science",
+      "secondary": [
+        "engineering",
+        "cognitive-science"
+      ]
+    },
+    "object_of_study": "A fixed, source-derived recurrent associative-memory implementation exposed to fresh cue perturbations under a prospectively frozen analysis contract.",
+    "structural_focus": {
+      "primary": "return",
+      "secondary": [
+        "identity",
+        "recovery",
+        "recurrence",
+        "memory",
+        "robustness",
+        "failure"
+      ]
+    },
+    "main_question": "Do target identity separation and corrective recurrent dynamics jointly provide out-of-sample information about reliable target-specific associative-memory recovery beyond prespecified simpler explanations under one unchanged evaluation contract?",
+    "secondary_questions": [
+      "Does ten-update recurrence recover the intended target more often than one application of the same frozen map (recurrence-specific correction)?",
+      "Does the frozen per-target reliability certificate (p_min = 0.95, one-sided exact Clopper-Pearson, Bonferroni alpha/10) hold for every one of the ten frozen targets at p = 0.05?"
+    ],
+    "claim_layers": [
+      {
+        "layer": "source-observation",
+        "claim": "External anchor: He et al. (SRC-000051, Nature Communications 17, 3096, 2026) provide the associative-memory architecture on memristor crossbars, the memristor experimental lineage, released source code and trajectory data, and the Figure-3 notebook map from which the frozen computational operator is derived (as read by the local paper). GCD terminology and the burden architecture are not attributed to He et al."
+      },
+      {
+        "layer": "structural-mapping",
+        "claim": "Inherited formal structure: the predecessor Paulus v1.2 (SRC-000052 / SR-OBJ-000023) supplies the distinction between identifiable target recovery and similarity or stabilization, target-specific acceptance regions and identity margins, maintenance/recovery separation, conditional recovery certificates and the 1/P cue-indistinguishability information limit, and the retrospective ten-trajectory audit in which every released cue was already nearest to its intended target. This structure is inherited, not reclassified as a new empirical result."
+      },
+      {
+        "layer": "source-observation",
+        "claim": "Prospective computational result under frozen contract PIR-COMP-2026-09-14-v1.0, run PIR-COMP-R1 (paper §14; results/RESULT_PROFILE.json): 5,711/6,000 recovery-eligible confirmation trajectories reached exact intended-target equality (95.1833%); one-step exact recovery 2,399/6,000, ten-step 5,711/6,000; recurrence-specific paired gain 0.5520, stratified bootstrap 95% interval [0.541667, 0.562504]; 3,312 trials failed after one update and succeeded after recurrence, zero showed the reverse; only two trajectories rescued an intended identity after the initial unique nearest-target classifier selected another target; frozen joint model confirmation mean log loss 0.134226 against error-only 0.175544, identity-only 0.164289, correction-only 0.160711, with all three preregistered simple-minus-joint bootstrap lower bounds positive; nine of ten targets passed the frozen per-target reliability certificate at familywise alpha 0.05; MU-01 failed with 159/200 exact recoveries (observed rate 0.7950, lower bound 0.712291); independent p = 0.50 negative control returned the intended target in 71/2,000 trials (3.55%) and the leakage audit did not trigger. Typed residuals: 76 wrong-memory captures, 201 periodic, 3 spurious stabilizations, 9 finite-horizon non-returns."
+      },
+      {
+        "layer": "source-observation",
+        "claim": "Procedural stance stated by the source: CONFORMANT for PIR-COMP-R1 — contract hashed before development, development and confirmation in disjoint randomness namespaces, primary models frozen and hashed before confirmation, zero load-bearing protocol deviations (validation/execution_receipt.json). Procedural conformance and scientific support are declared distinct by the paper (§15.1)."
+      },
+      {
+        "layer": "local-interpretation",
+        "claim": "Identity, recurrence-specific correction, and prospective discrimination earn local computational credit within the declared object. Reliability is PARTIAL, not universal: 9/10 targets pass and MU-01 fails; the strongest all-target reliability claim is not supported. The library records this as a mixed prospective result profile, not as 'reliability proven', 'all memories reliable', 'universal return', or hardware validation."
+      },
+      {
+        "layer": "candidate-claim",
+        "claim": "Mechanism hypothesis (paper §16, §17.3): the combination of target identity separation and early first-step corrective dynamics is locally supported as prospectively informative for later exact recovery. Predictive support is not promoted to causal necessity, universal mechanism, or ontology."
+      },
+      {
+        "layer": "source-observation",
+        "claim": "Hardware boundary stated by the source (Publication passport; §3.3; §17.5): the study is computational; the preflight found all ten Gate-0 rows for a new hardware-prospective run NON_EVALUABLE; current public evidence does not authenticate a new physical chip/programming/calibration episode, so the completed computational run does not count as new physical memristor validation."
+      },
+      {
+        "layer": "local-interpretation",
+        "claim": "Canonical boundary: canonical UMCP tau_R, integrity, regime, return credit, and weld are not activated by this paper (source §2.3, §16, missingness_ledger MISS-005); the library places the object at the UMCP evaluative locus as Tier-2 diagnostic with external-ingress and domain-translation secondary roles. No GCD or Structura Reditus interpretation is attributed to He et al."
+      }
+    ],
+    "evidence_mode": {
+      "primary": "simulation",
+      "secondary": [
+        "prospective-protocol",
+        "computational-reproduction"
+      ]
+    },
+    "provenance": "externally-anchored-derivative",
+    "maturity": "prospectively-tested",
+    "relations": [
+      "REL-000006"
+    ],
+    "version": "1.0.0",
+    "date": "2026-09-14T02:15:00Z",
+    "publication_state": "archived",
+    "source_boundary": "The governing source is the final v1.0 publication SRC-000060 (\"Prospective Identifiable Return in Associative Memory: A Completed Prospective Computational Test of Identity, Correction, Discrimination, and Reliability\"; Final Publication Edition v1.0, 14 September 2026; Zenodo DOI 10.5281/zenodo.22739943, concept 10.5281/zenodo.22739942), read from the deposited PDF and publication bundle. SR-OBJ-000023 / SRC-000052 (Paulus v1.2, DOI 10.5281/zenodo.22695434) is the immediate retrospective predecessor and remains a separate object; SRC-000051 (He et al.; DOI 10.1038/s41467-026-69958-0) is the external anchor whose DOI and publication state belong to the external article. The prospective computation is local to the new frozen run PIR-COMP-R1 under contract PIR-COMP-2026-09-14-v1.0; external-source observations remain external; everything classified here under the current Structura Reditus architecture (Tier-2 class, structural focus, evidence mode, maturity) is library interpretation and is not attributed to the source. The physical hardware burden is a separate open seam. DOI and archive inclusion locate the manuscript and bundle and do not themselves prove the scientific claims.",
+    "authority_boundary": "This is a Tier-2 Research Library object. Library admission does not grant Tier-0 protocol authority, Tier-1 kernel authority, canon status, proof, weld, universal scientific endorsement, or physical hardware validation. The completed prospective result remains bounded to the declared computational object and contract.",
+    "scope": "Prospective computational evaluation under the exact frozen source-derived operator (x_{t+1} = sign(x_t W), W = g1 - g0), ten-target registry, independent bit-flip cue family (p in {0.05, 0.10, 0.20}), ten-update horizon, target-specific exact-equality outcome rule, development/confirmation separation, predictive model freeze, per-target reliability criterion, and p = 0.50 negative-control contract used in PIR-COMP-R1.",
+    "exclusions": [
+      "Does not claim universal validation of GCD.",
+      "Does not validate Structura Reditus as a whole.",
+      "Does not claim a universal associative-memory law.",
+      "Does not report a new physical memristor experiment.",
+      "Does not claim hardware certification.",
+      "Does not activate canonical tau_R, integrity, regime, return credit, or weld.",
+      "Does not claim uniform reliability across all ten targets.",
+      "Does not remove or repair MU-01 post hoc.",
+      "Does not claim causal necessity of the predictive variables.",
+      "Does not generalize automatically to arbitrary memory architectures.",
+      "Does not rewrite or supersede SR-OBJ-000023."
+    ],
+    "preserved_meaning": "The distinction between exact intended-target recovery, recurrent representation correction, prospective predictive discrimination, and target-specific reliability; computational validation remains distinct from physical hardware validation.",
+    "missingness": [
+      {
+        "item": "new prospectively linked physical memristor acquisition chain (chip/array/programming/calibration realization for PIR-COMP-R1)",
+        "class": "UNRESOLVED_SEAM",
+        "notes": "Not supplied and not claimed (bundle missingness_ledger MISS-001, MISS-002). Blocks only a prospective hardware-linked claim, which this object does not make; the completed computational run is evaluable and procedurally CONFORMANT. The hardware-prospective branch remains a distinct open seam."
+      },
+      {
+        "item": "canonical UMCP eligible-anchor/return/weld structure",
+        "class": "AUTHORITY_BOUNDARY",
+        "notes": "Not activated (MISS-005). Activation requires a separately governed canonical contract; not a defect of this object."
+      },
+      {
+        "item": "external replication on a second independently specified associative-memory implementation",
+        "class": "NON_BLOCKING",
+        "notes": "Not yet performed (MISS-004). Bounds generalization/portability only."
+      },
+      {
+        "item": "mechanistic explanation for the MU-01 failed reliability certificate",
+        "class": "NON_BLOCKING",
+        "notes": "Open exploratory burden (MISS-003). The MU-01 failure itself (159/200, lower bound 0.712291) is an OBSERVED NEGATIVE RESULT, not missing data and not a repairable defect; it stays in the result profile."
+      },
+      {
+        "item": "peer review, journal acceptance, or independent certification",
+        "class": "PUBLICATION_BOUNDARY",
+        "notes": "Not claimed. Zenodo DOI 10.5281/zenodo.22739943 records an archive deposit (resource type Preprint) of the final v1.0 manuscript and publication bundle; publication state recorded as archived."
+      }
+    ],
+    "distortion_or_substitution_risk": "Primary risks are reading the prospective computational result as a new physical memristor validation; converting 9/10 target-specific reliability into an all-target certificate; promoting predictive discrimination into causal necessity or universal mechanism; treating procedural CONFORMANT status as scientific proof; activating canonical UMCP return or weld without their governing contract; or rewriting the retrospective predecessor rather than preserving the successor seam.",
+    "next_burden": "Three distinct follow-on burdens remain (paper §18): (1) a separate exploratory diagnostic of MU-01's failed reliability certificate, without retroactively repairing PIR-COMP-R1; (2) a new prospective hardware-linked replication with independently frozen physical operator, chip/array/programming identity, calibration, physical-update semantics, complete trajectories, and attempt denominator; and (3) external replication of the frozen burden architecture on a second independently specified associative-memory implementation. None of these is absorbed into the present object.",
+    "repair_route": "Supply the missing structure from the source work or its archive record (never from inference); if a source DOI does not resolve to the titled work, supply the DOI that does. Resubmit the same ObjectID; all seven gates are re-evaluated.",
+    "notes": "New distinct Tier-2 research object (LIBRARY_SPECIFICATION §6.1 Test A): a prospective computational successor with its own contract (PIR-COMP-2026-09-14-v1.0), run (PIR-COMP-R1), fresh development and untouched confirmation evidence, new concept DOI (22739942), and new results; not a version update of SR-OBJ-000023, which is preserved intact as the retrospective predecessor (REL-000006 extends). Sources: SRC-000060 (corpus-native, this publication) and SRC-000051 (external anchor, reused, not duplicated); SRC-000052 is reached through the relation and source boundary rather than listed again. Classification supplied by the corpus owner and validated against the live taxonomies without new terms. Registered 2026-09-14 from the deposited PDF and bundle; PDF and ZIP are not mirrored (source policy). Inclusion means organizational conformance only."
   }
 ]

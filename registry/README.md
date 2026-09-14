@@ -70,9 +70,11 @@ historical identity). It is registered only by re-admitting the same work;
 it is never reassigned. `SR-OBJ-000017` and `SR-OBJ-000019` returned under
 their reserved identities in the 2026-09 census pass (RCPT-000023,
 RCPT-000024; the earlier repair receipts are preserved). Currently reserved
-and still blocked: `SR-OBJ-000016` (SEAM-0011). The next free identifiers are
-therefore `SR-OBJ-000031`, `SRC-000060`, `SR-GOV-000020`, `REL-000006`,
-`RCPT-000036`. Recalculate from the live tree before allocating; see
+and still blocked: `SR-OBJ-000016` (SEAM-0011). After the 2026-09-14
+ingress of `SR-OBJ-000031` (Prospective Identifiable Return in Associative
+Memory; SRC-000060, REL-000006, RCPT-000037) the next free identifiers are
+`SR-OBJ-000032`, `SRC-000061`, `SR-GOV-000020`, `REL-000007`,
+`RCPT-000038`. Recalculate from the live tree before allocating; see
 [docs/TIER2_CENSUS_2026-09.md](../docs/TIER2_CENSUS_2026-09.md) for the
 census readback and [LIBRARY_SPECIFICATION.md §6.1](../LIBRARY_SPECIFICATION.md)
 for the Tier-2 admission decision rule.
