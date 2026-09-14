@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Researcher portal (primary contributor route)
+    url: https://github.com/ClementPaulus/SR-Research-Library/blob/main/docs/PORTAL_CONTRIBUTING.md
+    about: Create your profile once, upload research, review the prepared record, submit, repair, and find the registered result — no GitHub account or JSON editing needed.

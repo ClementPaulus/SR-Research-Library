@@ -1,0 +1,21 @@
+{
+  "A01.signup_page_after_submit": "http://127.0.0.1:8123/accounts/confirm-email/",
+  "A01.after_verification_url": "http://127.0.0.1:8123/login?next=/workspace/",
+  "A01.author_id_in_workspace": "AUTH-0002",
+  "A01.state": "registered",
+  "U01.detail_url": "http://127.0.0.1:8123/workspace/submissions/cac7122e-41ff-410c-b634-00b900c5e3f6",
+  "U01.state_label": "Needs your review",
+  "P01.evidence_rows": 25,
+  "P01.title_prefilled": "Synthetic self-test object for library admission machinery",
+  "O03.first_tab_focus": "INPUT",
+  "O03.horizontal_overflow_at_200pct": false,
+  "O03.mobile_upload_input_visible": true,
+  "E01.preflight_visible": true,
+  "E01.final_state": "Registered",
+  "E01.receipt_id": "RCPT-000038",
+  "G01.public_record_link": "SR-OBJ-000032",
+  "G01.public_record_status": 200,
+  "H02.public_handoff_bytes": 8632,
+  "A02.same_author_id": "AUTH-0002",
+  "A02.submission_listed": true
+}

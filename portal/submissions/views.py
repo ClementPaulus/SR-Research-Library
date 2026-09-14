@@ -144,9 +144,12 @@ def edit(request, submission_id):
     else:
         form = DraftForm.from_submission(submission, taxonomies=taxonomies())
     return render(request, "submissions/edit.html", {
-        "s": submission, "form": form, "evidence": evidence_by_field, "notes": notes,
+        "s": submission, "form": form, "evidence_by_field": evidence_by_field, "notes": notes,
         "sources": submission.proposed_sources or {}, "relations": submission.proposed_relations or {},
         "source_form": ProposedSourceForm(), "relation_form": ProposedRelationForm(), "raw_json": json.dumps(submission.draft, indent=2, ensure_ascii=False),
+        "abstract_hint": submission.draft.get("_abstract_hint"), "source_authors_hint": submission.draft.get("_source_authors_hint"),
+        "source_rows": [(k, v, v.get("_ambiguous_version")) for k, v in (submission.proposed_sources or {}).items()],
+        "relation_rows": [(k, v, v.get("evidence") or v.get("_evidence") or "") for k, v in (submission.proposed_relations or {}).items()],
     })
 
 

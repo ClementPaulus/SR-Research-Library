@@ -1,5 +1,7 @@
 name: Taxonomy extension
-about: Propose a controlled taxonomy term
+description: Propose a controlled taxonomy term (taxonomy/extensions.yaml record + versioned change)
+title: "[Taxonomy] "
+labels: [taxonomy]
 body:
   - type: input
     id: taxonomy

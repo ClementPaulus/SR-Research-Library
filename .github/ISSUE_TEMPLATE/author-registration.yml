@@ -1,0 +1,40 @@
+name: Author registration (direct route)
+description: Reserve an AUTH-NNNN identity for a direct repository contribution. The researcher portal does this automatically after email verification; use this form only for the Codespaces/PR route.
+title: "[Author] "
+labels: [author-registration]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A public author identity and a private login account are distinct. Submitting a name, email, ORCID, or an existing AuthorID never grants ownership of an existing identity; matching text is not evidence of control. Prefer the portal: **Create your profile** on the website assigns an AuthorID once and keeps it with your account.
+  - type: input
+    id: display_name
+    attributes:
+      label: Public display name
+      description: Exactly as it should appear on the public author record.
+    validations:
+      required: true
+  - type: input
+    id: orcid
+    attributes:
+      label: ORCID iD (optional)
+      description: Only if you actually have one. A typed ORCID is metadata, not proof of control.
+  - type: dropdown
+    id: existing
+    attributes:
+      label: Are you claiming an existing AuthorID?
+      options: ["No — allocate a new identity", "Yes — I need a verified link to an existing AUTH-NNNN"]
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence a maintainer can verify (existing-identity claims only)
+      description: e.g. control of the ORCID record, the archive deposit account, or the corresponding-author address in the source.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Publication terms
+      options:
+        - label: I understand the display name and accepted contribution records are public; no email address is placed in the registry.
+          required: true

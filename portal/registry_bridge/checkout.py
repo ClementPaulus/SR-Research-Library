@@ -34,6 +34,8 @@ def repository_head(ref: str = None) -> str:
     repo = settings.PORTAL_REGISTRY_REPO_PATH
     if ref:
         return _git("rev-parse", ref, cwd=repo)
+    if getattr(settings, "PORTAL_REGISTRY_USE_LOCAL_HEAD", False):
+        return _git("rev-parse", "HEAD", cwd=repo)
     remote_ref = f"{settings.PORTAL_REGISTRY_REMOTE}/{settings.PORTAL_REGISTRY_DEFAULT_BRANCH}"
     out = _git("rev-parse", "--verify", "--quiet", remote_ref, cwd=repo, check=False)
     return out or _git("rev-parse", "HEAD", cwd=repo)
@@ -43,7 +45,7 @@ def fetch_default_branch() -> str:
     """Fetch the latest default branch (no-op if the remote is unavailable) and return its SHA."""
     repo = settings.PORTAL_REGISTRY_REPO_PATH
     remotes = _git("remote", cwd=repo, check=False).split()
-    if settings.PORTAL_REGISTRY_REMOTE in remotes:
+    if settings.PORTAL_REGISTRY_REMOTE in remotes and not getattr(settings, "PORTAL_REGISTRY_USE_LOCAL_HEAD", False):
         subprocess.run(["git", "fetch", "--quiet", settings.PORTAL_REGISTRY_REMOTE, settings.PORTAL_REGISTRY_DEFAULT_BRANCH],
                        cwd=repo, text=True, capture_output=True, timeout=120)
     return repository_head()

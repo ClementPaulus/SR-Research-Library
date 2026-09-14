@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 LOGIN_URL = "/login"
-LOGIN_REDIRECT_URL = "/workspace"
+LOGIN_REDIRECT_URL = "/workspace/"
 LOGOUT_REDIRECT_URL = "/"
 ACCOUNT_ADAPTER = "accounts.adapter.PortalAccountAdapter"
 ACCOUNT_LOGIN_METHODS = {"email"}
@@ -138,6 +138,7 @@ SESSION_COOKIE_AGE = int(env("PORTAL_SESSION_COOKIE_AGE", str(14 * 24 * 3600)))
 
 # --------------------------------------------------------------------------- email
 EMAIL_BACKEND = env("EMAIL_BACKEND", "django.core.mail.backends.smtp.EmailBackend")
+EMAIL_FILE_PATH = env("EMAIL_FILE_PATH", str(PORTAL_DIR / "captured-mail"))  # filebased backend only (dev/acceptance)
 EMAIL_HOST = env("EMAIL_HOST", "localhost")
 EMAIL_PORT = int(env("EMAIL_PORT", "1025"))
 EMAIL_HOST_USER = env("EMAIL_HOST_USER", "")
@@ -208,6 +209,7 @@ PORTAL_RECONCILE_INTERVAL_SECONDS = int(env("PORTAL_RECONCILE_INTERVAL_SECONDS",
 PORTAL_REGISTRY_REPO_PATH = Path(env("PORTAL_REGISTRY_REPO_PATH", str(REPO_ROOT)))
 PORTAL_REGISTRY_DEFAULT_BRANCH = env("PORTAL_REGISTRY_DEFAULT_BRANCH", "main")
 PORTAL_REGISTRY_REMOTE = env("PORTAL_REGISTRY_REMOTE", "origin")
+PORTAL_REGISTRY_USE_LOCAL_HEAD = env_bool("PORTAL_REGISTRY_USE_LOCAL_HEAD", False)  # dev: evaluate against the local checkout's HEAD
 PORTAL_EVALUATION_PYTHON = env("PORTAL_EVALUATION_PYTHON", "")  # defaults to sys.executable
 GITHUB_REPO_OWNER = env("GITHUB_REPO_OWNER", "")
 GITHUB_REPO_NAME = env("GITHUB_REPO_NAME", "")

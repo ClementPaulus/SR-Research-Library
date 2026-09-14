@@ -339,6 +339,12 @@ def confirm_and_submit(submission: Submission, actor, *, publish_files: bool, ac
         raise SubmissionError("confirm which metadata and receipts become public before submitting")
     if not actor.author_id:
         raise SubmissionError("your public author identity is still being registered; submit once your AuthorID is assigned")
+    from accounts.models import AuthorBinding
+
+    binding_state = AuthorBinding.objects.filter(account=actor).values_list("state", flat=True).first()
+    if binding_state not in (AuthorBinding.REGISTERED, AuthorBinding.LINKED):
+        raise SubmissionError(f"your AuthorID {actor.author_id} is reserved and is being published to the public registry; "
+                              "you can keep editing this draft and submit once registration completes (see your profile for status)")
     if not submission.editable:
         raise SubmissionError("this submission is not in an editable state")
     with transaction.atomic():
