@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Contribute{% endblock %}
+{% block content %}
+<h1>Contribute to the library</h1>
+<p>Four routes. None requires an AuthorID before you start; persistent private threads need a login.</p>
+<div class="grid">
+  <div class="card"><h2 style="margin-top:0">Submit or revise research</h2><p>Upload your manuscript or supply a DOI; review the prepared record; submit it to the seven admission gates. Accepted work is registered with a receipt.</p><p><a class="button" href="{% url 'submissions:new' %}">Upload research</a></p></div>
+  <div class="card"><h2 style="margin-top:0">Suggest an external source</h2><p>Point the library at a work that should be a source record. A source-only suggestion is never counted as your authored research.</p><p><a class="button secondary" href="{% url 'submissions:questions' %}">Suggest a source</a></p></div>
+  <div class="card"><h2 style="margin-top:0">Propose a connection or challenge</h2><p>Propose a typed relation between records with the evidence that supports it. Disagreement is an ordinary relation, never an admission failure.</p><p><a class="button secondary" href="{% url 'submissions:questions' %}">Propose a relation</a></p></div>
+  <div class="card"><h2 style="margin-top:0">Ask a contribution question</h2><p>Unsure which route applies? Ask; the thread keeps questions, source pointers, responses, and resolution state.</p><p><a class="button secondary" href="{% url 'submissions:questions' %}">Ask a question</a></p></div>
+</div>
+<h2>What admission means</h2>
+<p>{{ ADMISSION_BOUNDARY }} Outcomes are exactly <strong>ACCEPTED</strong>, <strong>RETURNED_FOR_REPAIR</strong> (not a rejection: the receipt lists the exact repair), and <strong>REJECTED</strong> (an evaluable contract violation; the receipt states the resubmission route). Every author, including the founder, meets the same gates.</p>
+<h2>Direct repository route</h2>
+<p>Experienced contributors may work in a Codespace or clone instead. Both routes share the same schemas, taxonomies, admission engine, identifier reservations, receipts, and preservation rules. Steps: reserve identifiers with <code>python -m validators.reserve</code>, search for duplicate work, prepare source and record files, evaluate with <code>python -m validators.admit FILE --write</code> (which stores the receipt, the exact submission snapshot, and the execution manifest), register only ACCEPTED work with <code>--register</code>, run <code>python -m validators.validate</code>, regenerate the projection with <code>python -m validators.build_site</code>, and open a pull request. See <code>docs/PORTAL_CONTRIBUTING.md</code> in the repository.</p>
+{% endblock %}

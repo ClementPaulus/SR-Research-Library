@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}{{ s }} — {{ s.state_label }}{% endblock %}
+{% block content %}
+<p><span class="kind">Submission</span> <span class="status {% if s.workflow_state == 'registered' %}status-ok{% elif s.workflow_state == 'needs_repair' or s.workflow_state == 'needs_your_review' or s.workflow_state == 'processing_unavailable' or s.workflow_state == 'review_needed' %}status-warn{% elif s.workflow_state == 'not_admitted' %}status-bad{% else %}status-info{% endif %}" id="state-badge">{{ s.state_label }}</span></p>
+<h1>{{ s }}</h1>
+<p id="state-meaning">{{ s.state_meaning }}</p>
+{% if s.workflow_state == 'needs_repair' %}<div class="boundary">This submission needs additional information. Your files and earlier version are preserved. Read the exact repair on the receipt below, then start a repair.</div>
+{% elif s.workflow_state == 'accepted_registration_pending' %}<div class="boundary">Your submission passed the admission checks. Registration is in progress.</div>
+{% elif s.workflow_state == 'registered' %}<div class="boundary">Your work is registered. <a href="{% url 'catalog:research_detail' s.draft.object_id %}">Public record</a>{% for a in attempts %}{% if a.decision == 'ACCEPTED' %} · <a href="{% url 'catalog:receipt_detail' a.receipt_id %}">receipt {{ a.receipt_id }}</a>{% endif %}{% endfor %}</div>
+{% elif s.workflow_state == 'needs_your_review' %}<div class="boundary">Review the extracted details and answer the remaining questions before submitting.</div>{% endif %}
+
+<div class="actions">
+  {% if can_edit and s.editable %}<a class="button" href="{% url 'submissions:edit' s.id %}">Review and edit the draft</a> <a class="button secondary" href="{% url 'submissions:confirm' s.id %}">Submit this revision</a>{% endif %}
+  {% if can_edit and s.workflow_state == 'needs_repair' or can_edit and s.workflow_state == 'not_admitted' or can_edit and s.workflow_state == 'registered' %}
+    <form method="post" action="{% url 'submissions:repair' s.id %}">{% csrf_token %}<button class="primary" type="submit">{% if s.workflow_state == 'registered' %}Start a new revision{% else %}Start repair{% endif %}</button></form>{% endif %}
+  {% for r in revisions %}<a class="button secondary" href="{% url 'submissions:export' s.id r.number %}">Handoff r{{ r.number }} (owner)</a> <a class="button secondary" href="{% url 'submissions:export' s.id r.number %}?scope=public">Handoff r{{ r.number }} (public-safe)</a>{% endfor %}
+</div>
+
+{% if notes.problems or notes.questions %}
+<h2>Preparation results</h2>
+{% if notes.problems %}<ul>{% for p in notes.problems %}<li class="note">{{ p }}</li>{% endfor %}</ul>{% endif %}
+{% if notes.questions %}<h3>Questions to answer in the editor</h3><ol>{% for q in notes.questions %}<li>{{ q.question }} <span class="note">({{ q.field }})</span></li>{% endfor %}</ol>{% endif %}
+{% if notes.issues %}<h3>Proposed dependency records did not validate</h3><ul>{% for i in notes.issues %}<li>{{ i.record }}: {{ i.message }}</li>{% endfor %}</ul>{% endif %}
+{% endif %}
+
+<h2>Files</h2>
+<table><thead><tr><th>File</th><th>Type</th><th>Bytes</th><th>SHA-256</th><th>Visibility</th><th></th></tr></thead><tbody>
+{% for u in uploads %}<tr><td>{{ u.filename }}</td><td>{{ u.media_type }}</td><td>{{ u.byte_count }}</td><td><code>{{ u.sha256|slice:":16" }}…</code></td><td>{{ u.visibility }}</td><td><a href="{% url 'submissions:download' s.id u.id %}">download</a></td></tr>
+{% empty %}<tr><td colspan="6" class="note">No files; source reference: {{ s.source_reference|default:"none" }}</td></tr>{% endfor %}
+</tbody></table>
+{% if can_edit and s.editable or can_edit and s.workflow_state == 'preparing' %}
+<form method="post" enctype="multipart/form-data" action="{% url 'submissions:upload' s.id %}" class="stack" data-upload="ajax">{% csrf_token %}
+  <label for="files">Add files</label><input id="files" name="files" type="file" multiple>
+  <progress id="upload-progress" value="0" max="100" aria-label="Upload progress"></progress><p id="upload-status" class="note" role="status" aria-live="polite"></p><ul id="upload-list" class="upload-list"></ul>
+  <div class="actions"><button class="secondary" type="submit">Upload</button></div></form>
+{% endif %}
+
+<h2>Revisions and decisions</h2>
+<table><thead><tr><th>Revision</th><th>Confirmed</th><th>Content hash</th><th>Repairs</th><th>Decision</th><th>Receipt</th><th>Gates</th><th>Publication</th></tr></thead><tbody>
+{% for r in revisions %}<tr><td>r{{ r.number }}</td><td>{{ r.confirmed_at|date:"Y-m-d H:i" }}</td><td><code>{{ r.content_hash|slice:"7:23" }}</code></td><td>{% if r.repairs %}r{{ r.repairs.number }}{% endif %}</td>
+  <td>{% for a in attempts %}{% if a.revision_id == r.id %}{{ a.decision }}<br>{% endif %}{% endfor %}</td>
+  <td>{% for a in attempts %}{% if a.revision_id == r.id and a.receipt_id %}<a href="{% url 'catalog:receipt_detail' a.receipt_id %}">{{ a.receipt_id }}</a><br>{% endif %}{% endfor %}</td>
+  <td>{% for a in attempts %}{% if a.revision_id == r.id %}{% for k, v in a.gate_results.items %}<span class="gate gate-{{ v }}">{{ k }}</span>{% endfor %}<br>{% endif %}{% endfor %}</td>
+  <td>{% for p in publications %}{% if p.attempt.revision_id == r.id %}{{ p.status }}{% if p.pr_number %} · PR #{{ p.pr_number }}{% endif %}{% if p.merge_sha %} · <code>{{ p.merge_sha|slice:":10" }}</code>{% endif %}{% if p.blocker %}<div class="note">{{ p.blocker }}</div>{% endif %}<br>{% endif %}{% endfor %}</td></tr>
+{% empty %}<tr><td colspan="8" class="note">No confirmed revision yet.</td></tr>{% endfor %}
+</tbody></table>
+{% for a in attempts %}{% if a.receipt and a.decision != 'ACCEPTED' %}
+<details><summary>Receipt {{ a.receipt_id }} — exact repair / violation</summary>
+<ul>{% for line in a.receipt.exact_repair_required %}<li>{{ line }}</li>{% endfor %}{% if a.receipt.established_violation %}<li>{{ a.receipt.established_violation }}</li><li>{{ a.receipt.resubmission_conditions }}</li>{% endif %}</ul></details>
+{% endif %}{% endfor %}
+
+{% if review_cases %}
+<h2>Review cases</h2>
+<table><thead><tr><th>Condition</th><th>Detail</th><th>State</th><th>Resolution</th></tr></thead><tbody>
+{% for c in review_cases %}<tr><td>{{ c.get_condition_display }}</td><td>{{ c.detail }}</td><td>{{ c.state }}</td><td>{{ c.resolution }}</td></tr>{% endfor %}</tbody></table>
+{% endif %}
+
+<h2>Questions about this submission</h2>
+{% for q in questions %}<div class="card"><p><strong>{{ q.author.display_name }}</strong> <span class="note">{{ q.created_at|date:"Y-m-d H:i" }} · r{{ q.revision.number|default:"—" }}{% if q.resolved %} · resolved{% endif %}</span></p><p>{{ q.text }}</p>{% if q.source_pointer %}<p class="note">Source pointer: {{ q.source_pointer }}</p>{% endif %}
+{% for r in q.responses.all %}<p style="margin-left:1rem"><strong>{{ r.author.display_name }}</strong> <span class="note">{{ r.created_at|date:"Y-m-d H:i" }}</span><br>{{ r.text }}</p>{% endfor %}
+{% if q.resolution_evidence %}<p class="note">Resolution evidence: {{ q.resolution_evidence }}</p>{% endif %}
+<form method="post" action="{% url 'submissions:respond' s.id q.id %}" class="stack">{% csrf_token %}<label for="resp-{{ q.id }}">Respond</label><textarea id="resp-{{ q.id }}" name="text" rows="2"></textarea>
+<div class="checkbox"><input type="checkbox" id="res-{{ q.id }}" name="resolve"><label for="res-{{ q.id }}">Mark resolved</label></div><input type="text" name="resolution_evidence" placeholder="Resolution evidence (optional)"><div class="actions"><button class="secondary">Send</button></div></form></div>
+{% empty %}<p class="note">No questions yet.</p>{% endfor %}
+<form method="post" action="{% url 'submissions:ask' s.id %}" class="stack card">{% csrf_token %}<label for="ask-text">Ask about this submission (the current revision is attached)</label><textarea id="ask-text" name="text" rows="3" required></textarea><label for="ask-ptr">Source pointer (optional)</label><input id="ask-ptr" name="source_pointer" type="text"><div class="actions"><button class="secondary" type="submit">Ask</button></div></form>
+
+<h2>History</h2>
+<ul class="timeline">{% for e in events %}<li><time>{{ e.occurred_at|date:"Y-m-d H:i:s" }}</time> {{ e.action }}{% if e.previous_state %} {{ e.previous_state }} → {{ e.new_state }}{% endif %} <span class="note">{{ e.actor_label }}{% if e.reason %} — {{ e.reason }}{% endif %}</span></li>{% endfor %}</ul>
+{% endblock %}
+{% block scripts %}{% load static %}<script src="{% static 'js/upload.js' %}"></script>
+<script>
+(function(){ var badge=document.getElementById('state-badge'); if(!badge||!window.fetch) return; var initial=badge.textContent;
+  var poll=setInterval(function(){ fetch("{% url 'submissions:status' s.id %}",{headers:{'Accept':'application/json'}}).then(function(r){return r.json();}).then(function(j){ if(j.label!==initial){ clearInterval(poll); window.location.reload(); } }).catch(function(){}); }, 5000); })();
+</script>{% endblock %}

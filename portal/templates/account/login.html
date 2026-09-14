@@ -1,0 +1,19 @@
+{% extends "account/base_entrance.html" %}
+{% block title %}Log in{% endblock %}
+{% block entrance_content %}
+<h1>Log in</h1>
+<form method="post" action="{% url 'account_login' %}" class="stack card">
+  {% csrf_token %}
+  {% for field in form %}
+    <div class="field {% if field.name == 'remember' %}checkbox{% endif %}">
+      {% if field.name == 'remember' %}{{ field }} <label for="{{ field.id_for_label }}">Keep me signed in on this device</label>
+      {% else %}<label for="{{ field.id_for_label }}">{{ field.label }}</label>{{ field }}{% endif %}
+      {% if field.errors %}<ul class="errorlist" role="alert">{% for e in field.errors %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+    </div>
+  {% endfor %}
+  {% if form.non_field_errors %}<ul class="errorlist" role="alert">{% for e in form.non_field_errors %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+  {% if redirect_field_value %}<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">{% endif %}
+  <div class="actions"><button class="primary" type="submit">Log in</button> <a href="{% url 'account_reset_password' %}">Forgot your password?</a> <a href="{% url 'account_signup' %}">Create your profile</a></div>
+</form>
+<p class="note">Opened a link in a different browser? Log in here to recover your existing account rather than creating another one.</p>
+{% endblock %}

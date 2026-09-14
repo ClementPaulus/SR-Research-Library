@@ -1,0 +1,47 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Structura Reditus Research Library{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'css/portal.css' %}">
+{% block head %}{% endblock %}
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <nav aria-label="Primary">
+    <a class="brand" href="{% url 'catalog:home' %}">Structura Reditus Research Library</a>
+    <ul>
+      <li><a href="{% url 'catalog:research' %}">Browse research</a></li>
+      <li><a href="{% url 'catalog:sources' %}">Sources</a></li>
+      <li><a href="{% url 'catalog:governing' %}">Governing</a></li>
+      <li><a href="{% url 'catalog:authors' %}">Authors</a></li>
+      <li><a href="{% url 'catalog:contribute' %}">Contribute</a></li>
+    </ul>
+    <ul class="account">
+      {% if user.is_authenticated %}
+        <li><a href="{% url 'submissions:workspace' %}">Workspace</a></li>
+        <li><a class="button" href="{% url 'submissions:new' %}">Upload research</a></li>
+        {% if user.is_reviewer %}<li><a href="{% url 'review:queue' %}">Review</a></li>{% endif %}
+        <li><form method="post" action="{% url 'accounts:logout' %}">{% csrf_token %}<button class="link" type="submit">Log out</button></form></li>
+      {% else %}
+        <li><a href="{% url 'accounts:login' %}">Log in</a></li>
+        <li><a class="button" href="{% url 'accounts:signup' %}">Create your profile</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+</header>
+<main id="main" tabindex="-1">
+{% if messages %}<ul class="messages" role="status" aria-live="polite">{% for m in messages %}<li class="msg msg-{{ m.tags }}">{{ m }}</li>{% endfor %}</ul>{% endif %}
+{% block content %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <p>{{ ADMISSION_BOUNDARY }}</p>
+  <p>Every public page is a projection of the committed registry{% if projection %} at <code>{{ projection.sha|slice:":12" }}</code> (schema {{ projection.schema_version }}, taxonomy {{ projection.taxonomy_version }}){% endif %}. The library is a Tier-0 organizational surface: no author score, no prestige weighting.</p>
+  {% if PORTAL_SUPPORT_CONTACT %}<p>Support: {{ PORTAL_SUPPORT_CONTACT }}</p>{% endif %}
+  {% if PORTAL_DEVELOPMENT_EMAIL_CAPTURE %}<p class="dev-note">Development mode: verification email is captured locally, not delivered.</p>{% endif %}
+</footer>
+{% block scripts %}{% endblock %}
+</body>
+</html>

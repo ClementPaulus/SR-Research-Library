@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Governing references{% endblock %}
+{% block content %}
+<h1><span class="kind kind-gov">Governing references</span></h1>
+<p>Canon-facing, constitutional, authority-axis, functional-source, kernel/protocol/specification, publication-protocol, ingress, and language-contact references with their exact admitted burden. Not research objects; listing one on a Tier-2 record transfers no authority.</p>
+<div class="table-wrap"><table><thead><tr><th>SR-GOV</th><th>Title</th><th>Role</th><th>Status</th><th>Tier-1 burden</th><th>Tier-0 burden</th></tr></thead><tbody>
+{% for g in rows %}<tr><td><a href="{% url 'catalog:governing_detail' g.governing_id %}">{{ g.governing_id }}</a></td><td>{{ g.title }}</td><td>{{ g.governing_role }}</td><td><span class="status">{{ g.status }}</span></td><td>{{ g.authority_scope.tier_1|join:", " }}</td><td>{{ g.authority_scope.tier_0|join:", " }}</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

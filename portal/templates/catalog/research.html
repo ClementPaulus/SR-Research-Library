@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Tier-2 research — Structura Reditus Research Library{% endblock %}
+{% block content %}
+<h1><span class="kind kind-obj">Tier-2 research</span> Browse and filter</h1>
+<form method="get" action="{% url 'catalog:research' %}" class="stack" id="filter-form">
+  <label for="q">Search terms</label>
+  <input id="q" name="q" type="search" value="{{ q }}" placeholder="All terms must match; use &quot;quotes&quot; for a phrase; IDs and DOIs match exactly">
+  <div class="filters">
+    {% for axis, label in axes %}{% endfor %}
+    <div><label for="f-domain">Domain</label><select id="f-domain" name="domain" multiple>{% for t in options.domain %}<option value="{{ t }}" {% if t in filters.domain %}selected{% endif %}>{{ t }}</option>{% endfor %}</select></div>
+    <div><label for="f-class">Tier-2 class</label><select id="f-class" name="class" multiple>{% for t in options.class %}<option value="{{ t }}" {% if t in filters.class %}selected{% endif %}>{{ t }}</option>{% endfor %}</select></div>
+    <div><label for="f-focus">Structural focus</label><select id="f-focus" name="focus" multiple>{% for t in options.focus %}<option value="{{ t }}" {% if t in filters.focus %}selected{% endif %}>{{ t }}</option>{% endfor %}</select></div>
+    <div><label for="f-evidence">Evidence mode</label><select id="f-evidence" name="evidence" multiple>{% for t in options.evidence %}<option value="{{ t }}" {% if t in filters.evidence %}selected{% endif %}>{{ t }}</option>{% endfor %}</select></div>
+    <div><label for="f-maturity">Maturity</label><select id="f-maturity" name="maturity" multiple>{% for t in options.maturity %}<option value="{{ t }}" {% if t in filters.maturity %}selected{% endif %}>{{ t }}</option>{% endfor %}</select></div>
+    <div><label for="f-provenance">Provenance</label><select id="f-provenance" name="provenance" multiple>{% for t in options.provenance %}<option value="{{ t }}" {% if t in filters.provenance %}selected{% endif %}>{{ t }}</option>{% endfor %}</select></div>
+    <div><label for="f-pub">Publication state</label><select id="f-pub" name="publication_state" multiple>{% for t in options.publication_state %}<option value="{{ t }}" {% if t in filters.publication_state %}selected{% endif %}>{{ t }}</option>{% endfor %}</select></div>
+    <div><label for="f-author">Author</label><select id="f-author" name="author" multiple>{% for id, name in options.author %}<option value="{{ id }}" {% if id in filters.author %}selected{% endif %}>{{ name }} ({{ id }})</option>{% endfor %}</select></div>
+  </div>
+  <div class="actions"><button class="primary" type="submit">Apply</button> <a href="{% url 'catalog:research' %}">Reset</a>
+    {% if query_string %}<span class="note">Shareable link: <a href="?{{ query_string }}">this query</a></span>{% endif %}</div>
+</form>
+{% if filters %}<div class="chips" aria-label="Applied filters">{% for axis, values in filters.items %}{% for v in values %}<span class="chip">{{ axis }}: {{ v }}</span>{% endfor %}{% endfor %}</div>{% endif %}
+<p class="note" role="status">{{ result.total }} research object{{ result.total|pluralize }} match. Ranked by retrieval relevance only.</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>SR-OBJ</th><th>Title</th><th>Authors</th><th>Domain</th><th>Class</th><th>Focus</th><th>Evidence</th><th>Maturity</th><th>Receipt</th><th>Date</th></tr></thead>
+  <tbody>
+  {% for row in rows %}{% with d=row.doc %}
+    <tr>
+      <td><a href="{% url 'catalog:research_detail' d.id %}">{{ d.id }}</a></td>
+      <td>{{ d.title }}{% if row.matched %}<div class="excerpt">matched: {{ row.matched|join:", " }}</div>{% endif %}
+        {% for label, text in row.excerpts.items %}{% if label != "title" and label != "id" %}<div class="excerpt">{{ label }}: {{ text }}</div>{% endif %}{% endfor %}</td>
+      <td>{% for a in d.authors %}<a href="{% url 'catalog:author_detail' a.author_id %}">{{ a.display_name }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+      <td>{{ d.domain.primary }}{% if d.domain.secondary %} <span class="note">+{{ d.domain.secondary|join:", " }}</span>{% endif %}</td>
+      <td>{{ d.tier2_class.primary }}</td><td>{{ d.structural_focus.primary }}</td><td>{{ d.evidence_mode.primary }}</td><td>{{ d.maturity }}</td>
+      <td>{% if d.receipt %}<a href="{% url 'catalog:receipt_detail' d.receipt.receipt_id %}">{{ d.receipt.decision }}</a>{% else %}<span class="note">none</span>{% endif %}</td>
+      <td>{{ d.date|slice:":10" }}</td>
+    </tr>
+  {% endwith %}{% empty %}<tr><td colspan="10" class="note">No records match every term and filter. Remove a term or reset the filters.</td></tr>{% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

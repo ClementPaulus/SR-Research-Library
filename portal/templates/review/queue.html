@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Review queue{% endblock %}
+{% block content %}
+<h1>Review</h1>
+<p class="note">Human review handles documented conditions only: identity claims, ambiguous sources, edit ownership, attribution, unsupported relations, taxonomy/governing changes, publication exceptions. Controversy, negative results, disagreement, and the founder's identity are never triggers. A reviewer resolves inputs; the engine alone decides admission.</p>
+<h2>Open review cases</h2>
+<table><thead><tr><th>Submission</th><th>Condition</th><th>Detail</th><th>Opened</th><th></th></tr></thead><tbody>
+{% for c in cases %}<tr><td><a href="{% url 'submissions:detail' c.submission.id %}">{{ c.submission }}</a></td><td>{{ c.get_condition_display }}</td><td>{{ c.detail }}</td><td>{{ c.created_at|date:"Y-m-d H:i" }}</td><td><a class="button secondary" href="{% url 'review:case' c.id %}">Resolve</a></td></tr>{% empty %}<tr><td colspan="5" class="note">None.</td></tr>{% endfor %}</tbody></table>
+{% if claims %}<h2>Identity claims</h2>
+<table><thead><tr><th>Account</th><th>Claimed AuthorID</th><th>Evidence</th><th></th></tr></thead><tbody>
+{% for c in claims %}<tr><td>{{ c.account.display_name }} ({{ c.account.email }})</td><td>{{ c.author_id }}</td><td>{{ c.evidence }}</td><td><form method="post" action="{% url 'review:decide_claim' c.id %}" class="stack">{% csrf_token %}<input type="text" name="notes" placeholder="Verification notes" required><div class="actions"><button class="primary" name="decision" value="verify">Verify &amp; link</button><button class="secondary" name="decision" value="deny">Deny</button></div></form></td></tr>{% endfor %}</tbody></table>{% endif %}
+{% if blocked %}<h2>Publications needing attention</h2>
+<table><thead><tr><th>Operation</th><th>Kind</th><th>Status</th><th>PR</th><th>Exact blocker</th><th></th></tr></thead><tbody>
+{% for p in blocked %}<tr><td><code>{{ p.operation_key|slice:":13" }}</code></td><td>{{ p.kind }}</td><td>{{ p.status }}</td><td>{{ p.pr_number|default:"" }}</td><td>{{ p.blocker }}</td><td><form method="post" action="{% url 'review:retry_publication' p.operation_key %}">{% csrf_token %}<button class="secondary">Retry</button></form></td></tr>{% endfor %}</tbody></table>{% endif %}
+{% if dead_jobs %}<h2>Stopped jobs</h2><table><thead><tr><th>Task</th><th>Operation</th><th>Attempts</th><th>Last safe error</th></tr></thead><tbody>{% for j in dead_jobs %}<tr><td>{{ j.task_name }}</td><td><code>{{ j.operation_key|slice:":13" }}</code></td><td>{{ j.attempts }}</td><td>{{ j.last_safe_error }}</td></tr>{% endfor %}</tbody></table>{% endif %}
+{% endblock %}

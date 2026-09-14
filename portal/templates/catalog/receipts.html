@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Admission receipts{% endblock %}
+{% block content %}
+<h1>Admission receipts</h1>
+<p class="note">{{ ADMISSION_BOUNDARY }}</p>
+<table><thead><tr><th>Receipt</th><th>Decision</th><th>Submission identity</th><th>Version</th><th>Generated</th></tr></thead><tbody>
+{% for r in rows %}<tr><td><a href="{% url 'catalog:receipt_detail' r.receipt_id %}">{{ r.receipt_id }}</a></td><td>{{ r.decision }}</td><td>{{ r.object_id|default:r.provisional_object_id|default:r.submission_identity }}</td><td>{{ r.version|default:"" }}</td><td>{{ r.generated }}</td></tr>{% endfor %}
+</tbody></table>
+{% endblock %}

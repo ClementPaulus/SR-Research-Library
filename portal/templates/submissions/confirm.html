@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Submit this revision — {{ s }}{% endblock %}
+{% block content %}
+<h1>Submit this revision to the public research library</h1>
+<p>Submitting freezes the record below as an immutable revision, reserves any new identifiers, and runs the seven admission gates in an isolated evaluation against the pinned registry. You will receive a formal receipt for the decision.</p>
+<div class="boundary">{{ ADMISSION_BOUNDARY }}</div>
+<h2>What becomes public</h2>
+<ul>
+  <li><strong>Public on any decision:</strong> the receipt (decision, gate results, submission identity, version) and the exact confirmed record snapshot beside it.</li>
+  <li><strong>Public on ACCEPTED:</strong> the research record itself in the registry, with your AuthorID and the source records it references.</li>
+  <li><strong>Never public:</strong> your email, login data, unconfirmed extraction text, and private files (unless you opt in below).</li>
+</ul>
+{% if preview.error %}<p class="note">{{ preview.error }}</p>{% elif preview %}
+<h2>Preflight (advisory only)</h2>
+<p>Likely decision: <strong>{{ preview.decision_preview }}</strong>. {{ preview.note }}</p>
+<table><thead><tr><th>Gate</th><th>Result</th><th>Details</th></tr></thead><tbody>{% for k, g in preview.gates.items %}<tr><td>{{ k }}</td><td><span class="gate gate-{{ g.result }}">{{ g.result }}</span></td><td>{% for d in g.details %}{{ d }}<br>{% endfor %}</td></tr>{% endfor %}</tbody></table>
+{% endif %}
+<h2>Files in this revision</h2>
+<ul>{% for u in uploads %}<li>{{ u.filename }} <code>{{ u.sha256|slice:":16" }}…</code> ({{ u.byte_count }} bytes) — hash recorded in the execution manifest; bytes stay in private storage.</li>{% empty %}<li class="note">No files; source identity rests on the supplied reference and source records.</li>{% endfor %}</ul>
+<details><summary>Exact record to be frozen</summary><pre>{{ record_json }}</pre></details>
+<form method="post" class="stack card">{% csrf_token %}<input type="hidden" name="draft_version" value="{{ s.draft_version }}">
+  <div class="checkbox"><input type="checkbox" id="acknowledge" name="acknowledge" required><label for="acknowledge">I have reviewed the record above and understand which metadata, snapshots, and decisions become public.</label></div>
+  <div class="checkbox"><input type="checkbox" id="publish_files" name="publish_files"><label for="publish_files">Also publish my uploaded files through the portal under the versioned portal source policy (optional; external papers stay on their platforms).</label></div>
+  <div class="actions"><button class="primary" type="submit">Submit this revision to the public research library</button> <a href="{% url 'submissions:edit' s.id %}">Back to the editor</a></div>
+</form>
+{% endblock %}

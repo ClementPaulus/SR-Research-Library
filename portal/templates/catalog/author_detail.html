@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ a.display_name }} — {{ a.author_id }}{% endblock %}
+{% block content %}
+<p><span class="kind">Author</span> <span class="status">{{ a.status }}</span></p>
+<h1>{{ a.display_name }}</h1>
+<dl>
+  <dt>AuthorID</dt><dd><code>{{ a.author_id }}</code></dd>
+  {% if a.orcid %}<dt>ORCID</dt><dd>{{ a.orcid }} <span class="note">(supplied identity metadata; not verified control)</span></dd>{% endif %}
+  <dt>Registered</dt><dd>{{ a.registered }}</dd>
+  <dt>Registered research objects</dt><dd>{{ profile.total_registered_authored_objects|default:0 }}</dd>
+</dl>
+{% if objects %}
+<h2>Tier-2 research objects</h2>
+<ul>{% for o in objects %}<li><a href="{% url 'catalog:research_detail' o.object_id %}">{{ o.object_id }} — {{ o.title }}</a> <span class="note">v{{ o.version }}</span></li>{% endfor %}</ul>
+<h2>Distributions (reconstructible from the registry)</h2>
+<table><thead><tr><th>Axis</th><th>Normalized distribution</th></tr></thead><tbody>
+{% for label, dist in distributions %}<tr><td>{{ label }}</td><td>{% for k, v in dist.items %}{{ k }} {{ v|floatformat:2 }}{% if not forloop.last %}, {% endif %}{% empty %}<span class="note">—</span>{% endfor %}</td></tr>{% endfor %}
+</tbody></table>
+{% else %}
+<h2>Tier-2 research objects</h2>
+<p>No registered research objects yet.</p>
+{% endif %}
+<p class="note">{{ profile.note }}</p>
+{% if a.notes %}<h2>Notes</h2><p>{{ a.notes }}</p>{% endif %}
+{% endblock %}

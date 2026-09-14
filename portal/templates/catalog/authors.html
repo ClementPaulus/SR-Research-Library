@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Authors{% endblock %}
+{% block content %}
+<h1>Public author identities</h1>
+<p>Profiles contain only quantities reconstructible from the registry. There is no author score and no weighting of prestige, credentials, citations, or affiliation.</p>
+<table><thead><tr><th>AuthorID</th><th>Display name</th><th>ORCID</th><th>Status</th><th>Registered research objects</th></tr></thead><tbody>
+{% for row in rows %}<tr><td><a href="{% url 'catalog:author_detail' row.author.author_id %}">{{ row.author.author_id }}</a></td><td>{{ row.author.display_name }}</td><td>{{ row.author.orcid|default:"" }}</td><td>{{ row.author.status }}</td><td>{{ row.profile.total_registered_authored_objects|default:0 }}</td></tr>{% endfor %}
+</tbody></table>
+{% endblock %}

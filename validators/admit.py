@@ -73,16 +73,19 @@ def _source_file_entries(paths: list) -> list:
 def evaluate_and_write(record: dict, *, write: bool, register: bool, operation_key: str = None,
                        source_files: list = None, route: str = "cli", registry_base: str = None,
                        registry: dict = None, schemas: dict = None, taxonomies: dict = None,
-                       receipts_dir: Path = None, registry_dir: Path = None, out=print) -> dict:
+                       receipts_dir: Path = None, registry_dir: Path = None, receipt_id: str = None, out=print) -> dict:
     """Evaluate one record and (optionally) persist its bundle and registration.
 
     Returns {decision, receipt, execution, paths, registered_path}. Used by both
-    the CLI and the portal worker so the two routes share one code path.
+    the CLI and the portal worker so the two routes share one code path. A
+    pre-reserved ``receipt_id`` may be supplied; otherwise the allocator picks the
+    next free value.
     """
     receipts_dir = receipts_dir or loader.RECEIPTS_DIR
     registry_dir = registry_dir or loader.REGISTRY_DIR
     evaluation = gates.evaluate_object(record, registry, schemas, taxonomies)
-    receipt_id = receipts.next_receipt_id(receipts_dir, registry_dir) if write else None
+    if receipt_id is None:
+        receipt_id = receipts.next_receipt_id(receipts_dir, registry_dir) if write else None
     receipt = receipts.build_receipt(record, evaluation, receipt_id=receipt_id)
     out(receipts.render_receipt_markdown(receipt))
     result = {"decision": evaluation.decision, "receipt": receipt, "evaluation": evaluation,

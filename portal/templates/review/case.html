@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Review case — {{ case.get_condition_display }}{% endblock %}
+{% block content %}
+<h1>{{ case.get_condition_display }}</h1>
+<p><a href="{% url 'submissions:detail' s.id %}">{{ s }}</a> · revision r{{ revision.number }} · <code>{{ revision.content_hash|slice:":23" }}</code></p>
+<div class="boundary"><strong>Exact issue.</strong> {{ case.detail }}</div>
+<details open><summary>Frozen record under review</summary><pre>{{ revision.record|pprint }}</pre></details>
+{% if revision.proposed_records.relations %}<details><summary>Proposed relations</summary><pre>{{ revision.proposed_records.relations|pprint }}</pre></details>{% endif %}
+{% if revision.proposed_records.sources %}<details><summary>Proposed sources</summary><pre>{{ revision.proposed_records.sources|pprint }}</pre></details>{% endif %}
+<form method="post" class="stack card">{% csrf_token %}
+  <label for="resolution">Resolution (what evidence resolved the question, or what the researcher must supply)</label><textarea id="resolution" name="resolution" rows="4" required></textarea>
+  <div class="actions"><button class="primary" name="action" value="resolve">Record resolution and re-evaluate</button> <button class="secondary" name="action" value="return">Return to researcher with the requested evidence</button></div>
+  <p class="note">There is no "accept anyway". Re-evaluation runs the same seven gates on the same frozen revision and issues a distinct receipt.</p>
+</form>
+{% endblock %}

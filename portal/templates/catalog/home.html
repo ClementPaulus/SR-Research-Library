@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Structura Reditus Research Library{% endblock %}
+{% block content %}
+<div class="hero">
+  <section>
+    <h1>Search the research library</h1>
+    <form role="search" method="get" action="{% url 'catalog:home' %}" class="stack">
+      <label for="q">Search titles, questions, authors, sources, DOIs, identifiers</label>
+      <input id="q" name="q" type="search" value="{{ q }}" placeholder="e.g. physically constrained · Clement · REL-000006 · 10.5281/zenodo.22739943">
+      <div class="actions"><button class="primary" type="submit">Search</button> <a href="{% url 'catalog:research' %}">Browse and filter all research</a></div>
+    </form>
+    {% if results %}
+      <p class="note">{{ results.total }} result{{ results.total|pluralize }} across research, sources, authors and governing references. All terms must match; use "quotes" for a phrase.</p>
+      <ul>
+      {% for hit in results.results %}
+        <li>
+          {% with d=hit.document %}
+          {% if d.kind == "object" %}<a href="{% url 'catalog:research_detail' d.id %}">{{ d.id }} — {{ d.title }}</a> <span class="kind kind-obj">Tier-2 research</span>
+          {% elif d.kind == "source" %}<a href="{% url 'catalog:source_detail' d.id %}">{{ d.id }} — {{ d.title }}</a> <span class="kind kind-src">Source</span>
+          {% elif d.kind == "author" %}<a href="{% url 'catalog:author_detail' d.id %}">{{ d.id }} — {{ d.display_name }}</a> <span class="kind">Author</span>
+          {% else %}<a href="{% url 'catalog:governing_detail' d.id %}">{{ d.id }} — {{ d.title }}</a> <span class="kind kind-gov">Governing</span>{% endif %}
+          {% endwith %}
+          <div class="excerpt">matched: {{ hit.matched_fields|join:", " }}</div>
+        </li>
+      {% empty %}<li class="note">No records match every term. Try fewer terms or an exact identifier.</li>{% endfor %}
+      </ul>
+    {% endif %}
+    <h2>Recently registered research</h2>
+    <ul>{% for o in recent %}<li><a href="{% url 'catalog:research_detail' o.object_id %}">{{ o.object_id }} — {{ o.title }}</a> <span class="note">{{ o.date|slice:":10" }} · {{ o.domain.primary }}</span></li>{% endfor %}</ul>
+  </section>
+  <aside>
+    <div class="card">
+      <h2 style="margin-top:0">Your research, registered</h2>
+      {% if user.is_authenticated %}
+        <p>Welcome back, {{ user.display_name }}.</p>
+        <p><a class="button" href="{% url 'submissions:new' %}">Upload research</a></p>
+        <p><a href="{% url 'submissions:workspace' %}">Go to your workspace</a></p>
+      {% else %}
+        <p>Create your account once. Your profile and submissions stay with you when you return.</p>
+        <p><a class="button" href="{% url 'accounts:signup' %}">Create your profile</a> <a class="button secondary" href="{% url 'accounts:login' %}">Log in</a></p>
+        <p class="note">No GitHub account, terminal, or JSON editing needed. Direct repository contribution remains available on the <a href="{% url 'catalog:contribute' %}">contribute page</a>.</p>
+      {% endif %}
+    </div>
+    <div class="card">
+      <h2 style="margin-top:0">Three registries, kept distinct</h2>
+      <p><span class="kind kind-gov">Governing</span> <a href="{% url 'catalog:governing' %}">{{ counts.governing }} references</a> — exact admitted burden; not research.</p>
+      <p><span class="kind kind-obj">Tier-2 research</span> <a href="{% url 'catalog:research' %}">{{ counts.objects }} objects</a> · <a href="{% url 'catalog:receipts' %}">{{ counts.receipts }} receipts</a>.</p>
+      <p><span class="kind kind-src">Sources</span> <a href="{% url 'catalog:sources' %}">{{ counts.sources }} sources</a> — where each work lives; never mirrored.</p>
+      <p><a href="{% url 'catalog:authors' %}">{{ counts.authors }} public author identit{{ counts.authors|pluralize:"y,ies" }}</a>.</p>
+    </div>
+  </aside>
+</div>
+{% endblock %}

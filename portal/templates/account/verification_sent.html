@@ -1,0 +1,8 @@
+{% extends "account/base_manage.html" %}
+{% block title %}Verify your email{% endblock %}
+{% block manage_content %}
+<h1>Verify your email</h1>
+<p>We sent a verification link to your email address. Open it to activate your account; then you will be taken to your workspace.</p>
+{% if PORTAL_DEVELOPMENT_EMAIL_CAPTURE %}<p class="dev-note">Development mode: the message was captured locally (console or Mailpit at http://localhost:8025), not delivered to a real mailbox.</p>{% endif %}
+<p class="note">If the link opens in a different browser, log in there to continue with the same account.</p>
+{% endblock %}
