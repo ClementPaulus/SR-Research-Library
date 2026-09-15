@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structura-reditus.org/schema/execution.schema.json",
+  "title": "Structura Reditus Research Library — Execution Manifest (SR-EXECUTION.v0.1.0)",
+  "description": "Companion manifest binding one formal admission receipt to the exact inputs that produced it: the confirmed submission revision and its canonical hash, original source-file hashes, the engine revision, schema and taxonomy versions, and the registry base. It is infrastructure evidence, not a research record and not a receipt. It never contains the SHA of the commit that contains it (no circular hash); publication is recorded separately. Stored under receipts/executions/ and excluded from ordinary receipt loading.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_version",
+    "receipt_id",
+    "decision",
+    "submission_identity",
+    "submission_hash",
+    "submission_snapshot_path",
+    "engine_revision",
+    "schema_version",
+    "taxonomy_version",
+    "registry_base",
+    "evaluated_at",
+    "gate_results",
+    "route",
+    "source_files",
+    "review_decision"
+  ],
+  "properties": {
+    "manifest_version": { "type": "string", "const": "SR-EXECUTION.v0.1.0" },
+    "receipt_id": { "type": "string", "pattern": "^RCPT-[0-9]{6}$" },
+    "decision": { "type": "string", "enum": ["ACCEPTED", "RETURNED_FOR_REPAIR", "REJECTED"] },
+    "submission_identity": { "type": "string", "minLength": 1 },
+    "submission_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "description": "SHA-256 of the canonical serialization (sorted keys, UTF-8, no trailing whitespace) of the exact evaluated record."
+    },
+    "submission_snapshot_path": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Repository-relative path of the preserved .submission.json snapshot."
+    },
+    "engine_revision": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Git commit SHA (or 'working-tree:<sha>-dirty') of the validators package used for evaluation."
+    },
+    "schema_version": { "type": "string", "pattern": "^SR-SCHEMA\\.v[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "taxonomy_version": { "type": "string", "pattern": "^SR-TAXONOMY\\.v[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "registry_base": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Git commit SHA of the registry state the evaluation read (the base, never the commit that contains this manifest)."
+    },
+    "evaluated_at": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "gate_results": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["A", "B", "C", "D", "E", "F", "G"],
+      "properties": {
+        "A": { "type": "string", "enum": ["PASS", "FAIL", "BLOCKED"] },
+        "B": { "type": "string", "enum": ["PASS", "FAIL", "BLOCKED"] },
+        "C": { "type": "string", "enum": ["PASS", "FAIL", "BLOCKED"] },
+        "D": { "type": "string", "enum": ["PASS", "FAIL", "BLOCKED"] },
+        "E": { "type": "string", "enum": ["PASS", "FAIL", "BLOCKED"] },
+        "F": { "type": "string", "enum": ["PASS", "FAIL", "BLOCKED"] },
+        "G": { "type": "string", "enum": ["PASS", "FAIL", "BLOCKED"] }
+      }
+    },
+    "route": {
+      "type": "string",
+      "enum": ["cli", "portal"],
+      "description": "Which contribution route produced the evaluation. Both routes use the same engine."
+    },
+    "operation_key": {
+      "type": ["string", "null"],
+      "description": "Public-safe idempotency key of the portal operation (UUID). Null for CLI evaluations without an operation."
+    },
+    "source_files": {
+      "type": "array",
+      "description": "Hashes of the original uploaded/submitted files that grounded this revision. Binaries are never stored in Git; only hashes and version references are.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["display_name", "sha256", "bytes"],
+        "properties": {
+          "display_name": { "type": "string", "minLength": 1 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "bytes": { "type": "integer", "minimum": 0 },
+          "media_type": { "type": ["string", "null"] },
+          "version_reference": { "type": ["string", "null"], "description": "Source version, DOI, or archive reference this file corresponds to, if stated." },
+          "public": { "type": "boolean", "description": "Whether the file itself is published; false means only the hash is public." }
+        }
+      }
+    },
+    "review_decision": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["condition", "resolution", "resolved_at"],
+      "description": "Present only when a documented human-review condition was resolved before this evaluation. A reviewer never overrides a gate.",
+      "properties": {
+        "condition": { "type": "string", "minLength": 1 },
+        "resolution": { "type": "string", "minLength": 1 },
+        "resolved_at": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|[+-][0-9]{2}:[0-9]{2})$" }
+      }
+    },
+    "supersedes_attempt": {
+      "type": ["string", "null"],
+      "pattern": "^RCPT-[0-9]{6}$",
+      "description": "Earlier receipt of the same submission family this attempt follows (repair chain). Never edits the earlier receipt."
+    },
+    "notes": { "type": "string" }
+  }
+}

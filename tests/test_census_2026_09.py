@@ -1,15 +1,21 @@
 """Regression tests for the 2026-09 Tier-2 census, repair, and ingress pass.
 
 These tests read the live registry and receipts; they encode the structural
-rules of the pass, not the scientific content of any work.
+rules of the pass, not the scientific content of any work. Exact census
+counts live in tests/fixtures/census_2026_09_snapshot.json (immutable
+history). Live assertions check that snapshot facts are *preserved* and that
+anything added since is valid and evidence-backed — growth is not a failure.
 """
 
 from __future__ import annotations
 
 import hashlib
 import json
+from pathlib import Path
 
 from validators import bridges, loader, sitegen
+
+SNAPSHOT = json.loads((Path(__file__).parent / "fixtures" / "census_2026_09_snapshot.json").read_text(encoding="utf-8"))
 
 LOURETTE_DOI = "10.1103/z2sl-6gcc"
 HE_DOI = "10.1038/s41467-026-69958-0"
@@ -45,13 +51,28 @@ def test_repaired_objects_keep_reserved_ids_and_preserve_repair_receipts():
         assert not objects[oid]["next_burden"].startswith("Unresolved")
 
 
-def test_collapse_formalism_stays_blocked_without_source_identity():
+def test_collapse_formalism_blocked_state_is_preserved_or_repaired_with_evidence():
+    """SR-OBJ-000016 was RETURNED_FOR_REPAIR for missing source identity (snapshot).
+
+    Live rule: the repair receipt is preserved forever. The object may enter the
+    registry only through a *later* ACCEPTED receipt with the blocking
+    missingness discharged — never by deleting the block or the receipt.
+    """
+    blocked = SNAPSHOT["blocked_without_source_identity"]
+    oid, repair_id, sid = blocked["object_id"], blocked["repair_receipt"], blocked["source_id"]
     objects, receipts = _objects(), _receipts()
-    assert "SR-OBJ-000016" not in objects
-    assert not any(r.get("object_id") == "SR-OBJ-000016" for r in receipts.values() if r["decision"] == "ACCEPTED")
-    assert receipts["RCPT-000016"]["decision"] == "RETURNED_FOR_REPAIR"
-    src = _sources()["SRC-000033"]
-    assert any("mismatch" in m for m in src["missingness"])
+    assert receipts[repair_id]["decision"] == "RETURNED_FOR_REPAIR"
+    assert receipts[repair_id]["provisional_object_id"] == oid
+    later_accepted = [r for r in receipts.values() if r["decision"] == "ACCEPTED" and r.get("object_id") == oid]
+    if oid not in objects:
+        assert not later_accepted
+        src = _sources()[sid]
+        assert any("mismatch" in m for m in src["missingness"])
+    else:
+        assert later_accepted and all(r["receipt_id"] > repair_id for r in later_accepted)
+        assert not any(m["class"] in ("REPAIRABLE", "EVALUABILITY_BLOCKING", "CONTRACT_VIOLATING")
+                       for m in objects[oid]["missingness"])
+        assert objects[oid]["source_ids"]
 
 
 def test_external_dois_are_not_assigned_to_local_derivative_papers():
@@ -149,17 +170,35 @@ def test_pedagogical_records_separate_architecture_from_efficacy():
 
 def test_relations_are_deliberate_and_source_explicit():
     registry = loader.load_registry()
+    taxonomies = loader.load_taxonomies()
     relations = {r["relation_id"]: r for r in registry["relations"].values()}
-    assert relations["REL-000004"] == {**relations["REL-000004"], "relation_type": "extends",
-                                       "from_id": "SR-OBJ-000020", "to_id": "SR-OBJ-000009"}
-    assert relations["REL-000005"] == {**relations["REL-000005"], "relation_type": "extends",
-                                       "from_id": "SR-OBJ-000029", "to_id": "SR-OBJ-000028"}
-    assert relations["REL-000006"] == {**relations["REL-000006"], "relation_type": "extends",
-                                       "from_id": "SR-OBJ-000031", "to_id": "SR-OBJ-000023"}
-    assert len(relations) == 6
-    assert "REL-000004" in _objects()["SR-OBJ-000020"]["relations"]
-    assert "REL-000005" in _objects()["SR-OBJ-000029"]["relations"]
-    assert "REL-000006" in _objects()["SR-OBJ-000031"]["relations"]
+    objects = _objects()
+    # Snapshot relations are preserved exactly (type and endpoints never rewritten).
+    for rid, expected in SNAPSHOT["relations"].items():
+        assert relations[rid] == {**relations[rid], **expected}, rid
+    assert "REL-000004" in objects["SR-OBJ-000020"]["relations"]
+    assert "REL-000005" in objects["SR-OBJ-000029"]["relations"]
+    assert "REL-000006" in objects["SR-OBJ-000031"]["relations"]
+    # Growth is permitted: every relation added since the snapshot must be valid and declared.
+    assert len(relations) >= SNAPSHOT["relation_count"]
+    endpoints = set(objects) | {s for s in _sources()}
+    declared = {rid for o in objects.values() for rid in o.get("relations", [])}
+    for rid, rel in relations.items():
+        if rid in SNAPSHOT["relations"]:
+            continue
+        assert rel["relation_type"] in taxonomies["relation_types"], rid
+        assert rel["from_id"] in endpoints and rel["to_id"] in endpoints, rid
+        assert rid in declared, f"{rid} exists but no registered object declares it"
+
+
+def test_snapshot_objects_and_receipts_are_preserved():
+    objects, receipts = _objects(), _receipts()
+    assert set(SNAPSHOT["object_ids"]) <= set(objects)
+    assert set(SNAPSHOT["receipt_ids"]) <= set(receipts)
+    for rid in SNAPSHOT["repair_receipts"]:
+        assert receipts[rid]["decision"] == "RETURNED_FOR_REPAIR"
+        directory = loader.RECEIPTS_DIR / "repair"
+        assert (directory / f"{rid}.submission.json").exists(), f"{rid} snapshot must stay beside its receipt"
 
 
 def test_prospective_identifiable_return_is_a_distinct_successor_object():
@@ -225,6 +264,7 @@ def test_site_rebuild_is_deterministic_and_bridges_include_new_objects(tmp_path)
     assert set(NEW_OBJECTS) <= involved
     chain = next(c for c in projection["candidates"] if {c["object_a"], c["object_b"]} == {"SR-OBJ-000009", "SR-OBJ-000020"})
     assert chain["already_declared"] is True
-    # Generated adjacency created no REL-* records.
-    assert len(registry["relations"]) == 6
+    # Generated adjacency created no REL-* records: the relation set equals the committed files.
+    committed = {p.stem for p in (loader.REGISTRY_DIR / "relations").glob("REL-*.json")}
+    assert {r["relation_id"] for r in registry["relations"].values()} == committed
     assert bridges.build_bridge_projection(registry) == projection

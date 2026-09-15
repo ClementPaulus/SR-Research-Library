@@ -1,0 +1,3927 @@
+{
+  "index_version": "SR-SEARCH-INDEX.v0.1.0",
+  "schema_version": "SR-SCHEMA.v0.4.0",
+  "taxonomy_version": "SR-TAXONOMY.v0.2.0",
+  "semantics": {
+    "terms": "all unquoted terms must match (case-insensitive, accent-folded)",
+    "phrase": "\"quoted text\" must appear contiguously",
+    "identifiers": "SR-OBJ/SRC/REL/AUTH/RCPT/SR-GOV identifiers and DOIs match exactly",
+    "filters": "AND across axes, OR within an axis; primary or secondary values match",
+    "ranking": "retrieval relevance only (distinct fields matched, then identifier order)"
+  },
+  "filter_axes": [
+    "author",
+    "class",
+    "domain",
+    "evidence",
+    "focus",
+    "functional_locus",
+    "maturity",
+    "provenance",
+    "publication_state",
+    "source"
+  ],
+  "documents": [
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000001",
+      "title": "Generative Collapse Dynamics / UMCP: Passport and Entry Map — A Front-Door Guide to the Contract-First Measurement Framework",
+      "questions": [
+        "How can a new reader enter the GCD/UMCP framework as one coherent and navigable contract-first object without flattening its hierarchy?"
+      ],
+      "main_question": "How can a new reader enter the GCD/UMCP framework as one coherent and navigable contract-first object without flattening its hierarchy?",
+      "object_of_study": "the front-door architecture and reading map of GCD/UMCP",
+      "lens": "orientation and ingress",
+      "tier2_class": {
+        "primary": "pedagogical",
+        "secondary": [
+          "handoff"
+        ]
+      },
+      "domain": {
+        "primary": "structura-reditus-core",
+        "secondary": []
+      },
+      "structural_focus": {
+        "primary": "translation",
+        "secondary": [
+          "boundary",
+          "return"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "pedagogical",
+        "secondary": [
+          "source-synthesis"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "cross-system",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000006",
+          "title": "Generative Collapse Dynamics / UMCP: Passport and Entry Map — A Front-Door Guide to the Contract-First Measurement Framework",
+          "doi": "10.5281/zenodo.19637774"
+        }
+      ],
+      "source_ids": [
+        "SRC-000006"
+      ],
+      "relations": [
+        {
+          "relation_id": "REL-000001",
+          "relation_type": "extends",
+          "from_id": "SR-OBJ-000002",
+          "to_id": "SR-OBJ-000001",
+          "declared_here": false
+        }
+      ],
+      "relation_ids": [
+        "REL-000001"
+      ],
+      "governing_refs": [
+        "SR-GOV-000010"
+      ],
+      "version": "1.0.1",
+      "date": "2026-09-13T04:29:19Z",
+      "next_burden": "Proceed to Part II (The Core), which states why the contract-first architecture has the structure it has; the entry map points to that argument but does not make it (supported by the series description).",
+      "missingness": [],
+      "receipt": {
+        "receipt_id": "RCPT-000020",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000002",
+      "title": "Generative Collapse Dynamics / UMCP: The Core — Why the Contract-First Measurement Framework Has the Structure It Has",
+      "questions": [
+        "Why does the contract-first measurement framework require its bounded trace, frozen contract, typed return, kernel, seam, authority, and stance architecture?"
+      ],
+      "main_question": "Why does the contract-first measurement framework require its bounded trace, frozen contract, typed return, kernel, seam, authority, and stance architecture?",
+      "object_of_study": "the structural necessity of the contract-first GCD/UMCP architecture",
+      "lens": "constitutional explanation without authority promotion",
+      "tier2_class": {
+        "primary": "pedagogical",
+        "secondary": [
+          "handoff"
+        ]
+      },
+      "domain": {
+        "primary": "structura-reditus-core",
+        "secondary": [
+          "mathematics"
+        ]
+      },
+      "structural_focus": {
+        "primary": "boundary",
+        "secondary": [
+          "return",
+          "continuity"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "formal-derivation",
+        "secondary": [
+          "pedagogical"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "cross-system",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000007",
+          "title": "Generative Collapse Dynamics / UMCP: The Core — Why the Contract-First Measurement Framework Has the Structure It Has",
+          "doi": "10.5281/zenodo.19637774"
+        }
+      ],
+      "source_ids": [
+        "SRC-000007"
+      ],
+      "relations": [
+        {
+          "relation_id": "REL-000001",
+          "relation_type": "extends",
+          "from_id": "SR-OBJ-000002",
+          "to_id": "SR-OBJ-000001",
+          "declared_here": true
+        },
+        {
+          "relation_id": "REL-000002",
+          "relation_type": "extends",
+          "from_id": "SR-OBJ-000003",
+          "to_id": "SR-OBJ-000002",
+          "declared_here": false
+        }
+      ],
+      "relation_ids": [
+        "REL-000001",
+        "REL-000002"
+      ],
+      "governing_refs": [
+        "SR-GOV-000010"
+      ],
+      "version": "1.0.1",
+      "date": "2026-09-13T04:29:19Z",
+      "next_burden": "Proceed to Part III (The Pass), which walks one object through the full discipline from frozen contract to derived stance so the architecture is seen as a repeatable procedure (supported by the series description).",
+      "missingness": [],
+      "receipt": {
+        "receipt_id": "RCPT-000021",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000003",
+      "title": "Generative Collapse Dynamics / UMCP: The Pass — A Complete Worked Traversal from Frozen Contract to Derived Stance",
+      "questions": [
+        "What does a complete GCD/UMCP pass look like from frozen contract through derived stance?"
+      ],
+      "main_question": "What does a complete GCD/UMCP pass look like from frozen contract through derived stance?",
+      "object_of_study": "one complete object traversal through the GCD/UMCP validation spine",
+      "lens": "worked operational traversal",
+      "tier2_class": {
+        "primary": "pedagogical",
+        "secondary": [
+          "diagnostic",
+          "handoff"
+        ]
+      },
+      "domain": {
+        "primary": "structura-reditus-core",
+        "secondary": []
+      },
+      "structural_focus": {
+        "primary": "return",
+        "secondary": [
+          "heterogeneity",
+          "continuity"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "pedagogical",
+        "secondary": [
+          "formal-derivation"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000008",
+          "title": "Generative Collapse Dynamics / UMCP: The Pass — A Complete Worked Traversal from Frozen Contract to Derived Stance",
+          "doi": "10.5281/zenodo.19637774"
+        }
+      ],
+      "source_ids": [
+        "SRC-000008"
+      ],
+      "relations": [
+        {
+          "relation_id": "REL-000002",
+          "relation_type": "extends",
+          "from_id": "SR-OBJ-000003",
+          "to_id": "SR-OBJ-000002",
+          "declared_here": true
+        }
+      ],
+      "relation_ids": [
+        "REL-000002"
+      ],
+      "governing_refs": [
+        "SR-GOV-000010"
+      ],
+      "version": "1.0.1",
+      "date": "2026-09-13T04:29:19Z",
+      "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The series description states only that by its end a reader can follow one full path without live author mediation.",
+      "missingness": [
+        {
+          "item": "source-stated next burden",
+          "class": "NON_BLOCKING"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000022",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000004",
+      "title": "The First Pass: A Complete Worked Example Through the Generative-Collapse Spine",
+      "questions": [
+        "Can one simple declared measurement be traced reproducibly through every stage of the contract-first validation spine?"
+      ],
+      "main_question": "Can one simple declared measurement be traced reproducibly through every stage of the contract-first validation spine?",
+      "object_of_study": "a single measurement passed through the full validation spine",
+      "lens": "complete worked example",
+      "tier2_class": {
+        "primary": "pedagogical",
+        "secondary": [
+          "diagnostic"
+        ]
+      },
+      "domain": {
+        "primary": "structura-reditus-core",
+        "secondary": []
+      },
+      "structural_focus": {
+        "primary": "return",
+        "secondary": [
+          "continuity"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "formal-derivation",
+        "secondary": [
+          "pedagogical"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000009",
+          "title": "The First Pass: A Complete Worked Example Through the Generative-Collapse Spine",
+          "doi": "10.5281/zenodo.19520933"
+        }
+      ],
+      "source_ids": [
+        "SRC-000009"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T04:12:52Z",
+      "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+      "missingness": [
+        {
+          "item": "source-stated next burden",
+          "class": "NON_BLOCKING"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000004",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000005",
+      "title": "The Periodic Table as a Measured Object: Tier-1 Derivation from Atomic Properties in the GCD Kernel",
+      "questions": [
+        "What structural distinctions appear when the periodic table is evaluated as a finite measured object under one frozen GCD/UMCP grammar?"
+      ],
+      "main_question": "What structural distinctions appear when the periodic table is evaluated as a finite measured object under one frozen GCD/UMCP grammar?",
+      "object_of_study": "the 118-element periodic table under a frozen atomic measurement surface",
+      "lens": "atomic measured-object closure",
+      "tier2_class": {
+        "primary": "domain-translation",
+        "secondary": [
+          "diagnostic"
+        ]
+      },
+      "domain": {
+        "primary": "chemistry",
+        "secondary": [
+          "physics"
+        ]
+      },
+      "structural_focus": {
+        "primary": "heterogeneity",
+        "secondary": [
+          "robustness",
+          "boundary"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "retrospective-analysis",
+        "secondary": [
+          "formal-derivation"
+        ]
+      },
+      "provenance": "dataset-derived",
+      "maturity": "retrospectively-evaluated",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000010",
+          "title": "The Periodic Table as a Measured Object: Tier-1 Derivation from Atomic Properties in the GCD Kernel",
+          "doi": "10.5281/zenodo.19639656"
+        }
+      ],
+      "source_ids": [
+        "SRC-000010"
+      ],
+      "relations": [
+        {
+          "relation_id": "REL-000003",
+          "relation_type": "extends",
+          "from_id": "SR-OBJ-000006",
+          "to_id": "SR-OBJ-000005",
+          "declared_here": false
+        }
+      ],
+      "relation_ids": [
+        "REL-000003"
+      ],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T04:12:52Z",
+      "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The sequel (SRC-000011 / SR-OBJ-000006) takes up a stronger closure, but that burden is stated by the sequel, not by this source.",
+      "missingness": [
+        {
+          "item": "source-stated next burden",
+          "class": "NON_BLOCKING"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000005",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000006",
+      "title": "The Periodic Table as a Measured Object II: A Nuclear-Informed Cross-Scale Sequel on What Sharpens, Collapses, and Inverts Under a Stronger Atomic Closure",
+      "questions": [
+        "Which distinctions in the first atomic closure sharpen, collapse, or invert when nuclear information is added under a stronger frozen surface?"
+      ],
+      "main_question": "Which distinctions in the first atomic closure sharpen, collapse, or invert when nuclear information is added under a stronger frozen surface?",
+      "object_of_study": "changes in atomic structural distinctions under a strengthened nuclear-informed measurement surface",
+      "lens": "nuclear-informed atomic closure",
+      "tier2_class": {
+        "primary": "domain-translation",
+        "secondary": [
+          "diagnostic"
+        ]
+      },
+      "domain": {
+        "primary": "chemistry",
+        "secondary": [
+          "physics"
+        ]
+      },
+      "structural_focus": {
+        "primary": "heterogeneity",
+        "secondary": [
+          "boundary",
+          "robustness"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "retrospective-analysis",
+        "secondary": [
+          "formal-derivation"
+        ]
+      },
+      "provenance": "dataset-derived",
+      "maturity": "retrospectively-evaluated",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000011",
+          "title": "The Periodic Table as a Measured Object II: A Nuclear-Informed Cross-Scale Sequel on What Sharpens, Collapses, and Inverts Under a Stronger Atomic Closure",
+          "doi": "10.5281/zenodo.19852651"
+        }
+      ],
+      "source_ids": [
+        "SRC-000011"
+      ],
+      "relations": [
+        {
+          "relation_id": "REL-000003",
+          "relation_type": "extends",
+          "from_id": "SR-OBJ-000006",
+          "to_id": "SR-OBJ-000005",
+          "declared_here": true
+        }
+      ],
+      "relation_ids": [
+        "REL-000003"
+      ],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T04:12:52Z",
+      "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+      "missingness": [
+        {
+          "item": "source-stated next burden",
+          "class": "NON_BLOCKING"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000006",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000007",
+      "title": "The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence",
+      "questions": [
+        "Can arithmetic retention remain healthy while multiplicative coherence reveals a structurally significant local wound?"
+      ],
+      "main_question": "Can arithmetic retention remain healthy while multiplicative coherence reveals a structurally significant local wound?",
+      "object_of_study": "the separation between arithmetic retention and multiplicative coherence",
+      "lens": "local heterogeneity diagnostic",
+      "tier2_class": {
+        "primary": "diagnostic",
+        "secondary": [
+          "pedagogical"
+        ]
+      },
+      "domain": {
+        "primary": "structura-reditus-core",
+        "secondary": [
+          "mathematics"
+        ]
+      },
+      "structural_focus": {
+        "primary": "heterogeneity",
+        "secondary": [
+          "robustness"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "formal-derivation",
+        "secondary": [
+          "pedagogical"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000012",
+          "title": "The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence",
+          "doi": "10.5281/zenodo.19868885"
+        }
+      ],
+      "source_ids": [
+        "SRC-000012"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T04:12:52Z",
+      "next_burden": "Finite return, seam accounting, and welded continuity — the next public burdens the source itself names as following from this local warning.",
+      "missingness": [],
+      "receipt": {
+        "receipt_id": "RCPT-000007",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000008",
+      "title": "The First Finite-Return Casepack: A Worked Case Showing Finite Re-Entry Under a Frozen Grammar",
+      "questions": [
+        "Does the candidate returned state achieve finite admissible re-entry under the same frozen grammar that measured its departure?"
+      ],
+      "main_question": "Does the candidate returned state achieve finite admissible re-entry under the same frozen grammar that measured its departure?",
+      "object_of_study": "finite re-entry after a declared local wound under unchanged rules",
+      "lens": "finite-return casepack",
+      "tier2_class": {
+        "primary": "diagnostic",
+        "secondary": [
+          "pedagogical"
+        ]
+      },
+      "domain": {
+        "primary": "structura-reditus-core",
+        "secondary": []
+      },
+      "structural_focus": {
+        "primary": "return",
+        "secondary": [
+          "recovery"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "formal-derivation",
+        "secondary": [
+          "pedagogical"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000013",
+          "title": "The First Finite-Return Casepack: A Worked Case Showing Finite Re-Entry Under a Frozen Grammar",
+          "doi": "10.5281/zenodo.19869494"
+        }
+      ],
+      "source_ids": [
+        "SRC-000013"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T04:12:52Z",
+      "next_burden": "Weld, seam closure, and earned continuity — the stronger burdens the source names finite return as the necessary step before.",
+      "missingness": [],
+      "receipt": {
+        "receipt_id": "RCPT-000008",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000009",
+      "title": "GCD / UMCP: The First Welded Seam Casepack — A Worked Case Showing Earned Continuity Under Frozen Seam Accounting",
+      "questions": [
+        "When does a finite-return event also satisfy the stronger burden required for welded continuity under frozen seam accounting?"
+      ],
+      "main_question": "When does a finite-return event also satisfy the stronger burden required for welded continuity under frozen seam accounting?",
+      "object_of_study": "earned continuity across a declared seam",
+      "lens": "seam and continuity audit",
+      "tier2_class": {
+        "primary": "diagnostic",
+        "secondary": [
+          "pedagogical"
+        ]
+      },
+      "domain": {
+        "primary": "structura-reditus-core",
+        "secondary": []
+      },
+      "structural_focus": {
+        "primary": "continuity",
+        "secondary": [
+          "return",
+          "boundary"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "formal-derivation",
+        "secondary": [
+          "pedagogical"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000014",
+          "title": "GCD / UMCP: The First Welded Seam Casepack — A Worked Case Showing Earned Continuity Under Frozen Seam Accounting",
+          "doi": "10.5281/zenodo.19869775"
+        }
+      ],
+      "source_ids": [
+        "SRC-000014"
+      ],
+      "relations": [
+        {
+          "relation_id": "REL-000004",
+          "relation_type": "extends",
+          "from_id": "SR-OBJ-000020",
+          "to_id": "SR-OBJ-000009",
+          "declared_here": false
+        }
+      ],
+      "relation_ids": [
+        "REL-000004"
+      ],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T04:12:52Z",
+      "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented. The source states what it does not do (new invariant, universal constant, governance, domain closure) but does not name a next burden.",
+      "missingness": [
+        {
+          "item": "source-stated next burden",
+          "class": "NON_BLOCKING"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000009",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000010",
+      "title": "A single algebraic diagnostic detects structurally identical phase transitions from quarks to the cosmic horizon",
+      "questions": [
+        "Does the same algebraic heterogeneity diagnostic exhibit comparable boundary behavior across physical systems separated by extreme scale?"
+      ],
+      "main_question": "Does the same algebraic heterogeneity diagnostic exhibit comparable boundary behavior across physical systems separated by extreme scale?",
+      "object_of_study": "heterogeneity/coherence signatures across physical phase boundaries",
+      "lens": "cross-scale physical diagnostic",
+      "tier2_class": {
+        "primary": "diagnostic",
+        "secondary": [
+          "domain-translation"
+        ]
+      },
+      "domain": {
+        "primary": "physics",
+        "secondary": [
+          "interdisciplinary"
+        ]
+      },
+      "structural_focus": {
+        "primary": "heterogeneity",
+        "secondary": [
+          "boundary",
+          "failure"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "retrospective-analysis",
+        "secondary": [
+          "computational-reproduction",
+          "formal-derivation"
+        ]
+      },
+      "provenance": "dataset-derived",
+      "maturity": "retrospectively-evaluated",
+      "functional_locus": "umcp",
+      "publication_state": "preprint",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000017",
+          "title": "A single algebraic diagnostic detects structurally identical phase transitions from quarks to the cosmic horizon",
+          "doi": "10.21203/rs.3.rs-9205902/v1"
+        }
+      ],
+      "source_ids": [
+        "SRC-000017"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T04:12:52Z",
+      "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+      "missingness": [
+        {
+          "item": "source-stated next burden",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "peer-review status",
+          "class": "PUBLICATION_BOUNDARY"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000010",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000011",
+      "title": "Dimethyltryptamine and the Recursive Reorganization of Consciousness",
+      "questions": [
+        "How can the rapid multilevel reorganization produced by DMT be structurally separated into departure, altered-state organization, recurrence, and recovery without collapsing phenomenology, mechanism, and ontology into one claim?"
+      ],
+      "main_question": "How can the rapid multilevel reorganization produced by DMT be structurally separated into departure, altered-state organization, recurrence, and recovery without collapsing phenomenology, mechanism, and ontology into one claim?",
+      "object_of_study": "DMT-induced reorganization of a brain-body-environment system and subsequent recovery",
+      "lens": "multilevel causal and return architecture",
+      "tier2_class": {
+        "primary": "domain-translation",
+        "secondary": [
+          "external-ingress",
+          "diagnostic"
+        ]
+      },
+      "domain": {
+        "primary": "neuroscience",
+        "secondary": [
+          "psychology",
+          "cognitive-science",
+          "medicine"
+        ]
+      },
+      "structural_focus": {
+        "primary": "causation",
+        "secondary": [
+          "identity",
+          "memory",
+          "recovery",
+          "return"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "source-synthesis",
+        "secondary": [
+          "retrospective-analysis",
+          "prospective-protocol"
+        ]
+      },
+      "provenance": "externally-anchored-derivative",
+      "maturity": "source-bounded",
+      "functional_locus": "cross-system",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000019",
+          "title": "Dimethyltryptamine and the Recursive Reorganization of Consciousness",
+          "doi": "10.5281/zenodo.21726224"
+        }
+      ],
+      "source_ids": [
+        "SRC-000019"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T04:12:52Z",
+      "next_burden": "Prospective validation of the frozen dual-reference architecture: prospective testing, comparison with simpler models, preservation of negative results, and explicit contraction where its local predictions fail (stated by the source).",
+      "missingness": [
+        {
+          "item": "empirical validation of the dual-reference architecture",
+          "class": "SOURCE_BOUNDARY"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000011",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000012",
+      "title": "The Seam of Reality: On Thought, Return, and the Illusion of the Outside",
+      "questions": [
+        "What stronger burden distinguishes epistemic gesture from admissible return when a claim itself is treated as occurring inside the structure it evaluates?"
+      ],
+      "main_question": "What stronger burden distinguishes epistemic gesture from admissible return when a claim itself is treated as occurring inside the structure it evaluates?",
+      "object_of_study": "the relation between epistemic gesture, structural return, and claims of external vantage",
+      "lens": "epistemic critique and return",
+      "tier2_class": {
+        "primary": "language-contact",
+        "secondary": [
+          "external-ingress",
+          "domain-translation"
+        ]
+      },
+      "domain": {
+        "primary": "philosophy",
+        "secondary": [
+          "structura-reditus-core"
+        ]
+      },
+      "structural_focus": {
+        "primary": "return",
+        "secondary": [
+          "boundary",
+          "continuity"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "conceptual-argument",
+        "secondary": [
+          "formal-derivation"
+        ]
+      },
+      "provenance": "externally-anchored-derivative",
+      "maturity": "historical",
+      "functional_locus": "ulrc",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000022",
+          "title": "The Seam of Reality: On Thought, Return, and the Illusion of the Outside",
+          "doi": "10.5281/zenodo.17619502"
+        }
+      ],
+      "source_ids": [
+        "SRC-000022"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T04:12:52Z",
+      "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+      "missingness": [
+        {
+          "item": "source-stated next burden",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "historical terminology vs current architecture",
+          "class": "UNRESOLVED_SEAM"
+        },
+        {
+          "item": "external positions engaged by the paper",
+          "class": "SOURCE_BOUNDARY"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000012",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000013",
+      "title": "Retro-Coherent Transmission through Quantum Collapse: A Collapse Integrity Re-Interpretation of Negative Excitation Time",
+      "questions": [
+        "How does the historical collapse-integrity formalism classify reported negative excitation-time observations under its declared audit grammar?"
+      ],
+      "main_question": "How does the historical collapse-integrity formalism classify reported negative excitation-time observations under its declared audit grammar?",
+      "object_of_study": "reported negative excitation-time phenomena under an historical collapse-integrity mapping",
+      "lens": "historical collapse-integrity reinterpretation",
+      "tier2_class": {
+        "primary": "external-ingress",
+        "secondary": [
+          "domain-translation",
+          "diagnostic"
+        ]
+      },
+      "domain": {
+        "primary": "physics",
+        "secondary": []
+      },
+      "structural_focus": {
+        "primary": "return",
+        "secondary": [
+          "causation",
+          "boundary"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "retrospective-analysis",
+        "secondary": [
+          "source-synthesis"
+        ]
+      },
+      "provenance": "externally-anchored-derivative",
+      "maturity": "historical",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000025",
+          "title": "Retro-Coherent Transmission through Quantum Collapse: A Collapse Integrity Re-Interpretation of Negative Excitation Time",
+          "doi": "10.5281/zenodo.17509993"
+        }
+      ],
+      "source_ids": [
+        "SRC-000025"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T04:12:52Z",
+      "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+      "missingness": [
+        {
+          "item": "source-stated next burden",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "historical negative-return semantics vs current typed return",
+          "class": "UNRESOLVED_SEAM"
+        },
+        {
+          "item": "external experiment (Sinclair et al., 2024)",
+          "class": "SOURCE_BOUNDARY"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000013",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000014",
+      "title": "The Episteme Construction",
+      "questions": [
+        "How can claims from heterogeneous domains be made structurally auditable and portable under a shared contract-first workflow?"
+      ],
+      "main_question": "How can claims from heterogeneous domains be made structurally auditable and portable under a shared contract-first workflow?",
+      "object_of_study": "a prefreeze contract-first method for making claims auditable across domains",
+      "lens": "historical cross-domain field manual",
+      "tier2_class": {
+        "primary": "pedagogical",
+        "secondary": [
+          "handoff"
+        ]
+      },
+      "domain": {
+        "primary": "interdisciplinary",
+        "secondary": [
+          "structura-reditus-core",
+          "systems-theory"
+        ]
+      },
+      "structural_focus": {
+        "primary": "translation",
+        "secondary": [
+          "continuity",
+          "return"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "pedagogical",
+        "secondary": [
+          "formal-derivation"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "historical",
+      "functional_locus": "cross-system",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000031",
+          "title": "The Episteme Construction",
+          "doi": "10.5281/zenodo.17189775"
+        }
+      ],
+      "source_ids": [
+        "SRC-000031"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T04:12:52Z",
+      "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+      "missingness": [
+        {
+          "item": "source-stated next burden",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "historical terminology vs current architecture",
+          "class": "UNRESOLVED_SEAM"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000014",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000015",
+      "title": "The Common Doorway: A Cross-Field Method for Generative Collapse",
+      "questions": [
+        "How can structurally related claims from different fields be made mutually legible without requiring the fields to collapse into one vocabulary?"
+      ],
+      "main_question": "How can structurally related claims from different fields be made mutually legible without requiring the fields to collapse into one vocabulary?",
+      "object_of_study": "a prose-first route for comparing claims across heterogeneous vocabularies",
+      "lens": "cross-field translation",
+      "tier2_class": {
+        "primary": "language-contact",
+        "secondary": [
+          "pedagogical",
+          "domain-translation"
+        ]
+      },
+      "domain": {
+        "primary": "interdisciplinary",
+        "secondary": [
+          "philosophy",
+          "psychology"
+        ]
+      },
+      "structural_focus": {
+        "primary": "translation",
+        "secondary": [
+          "boundary"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "pedagogical",
+        "secondary": [
+          "conceptual-argument"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "historical",
+      "functional_locus": "ulrc",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000032",
+          "title": "The Common Doorway: A Cross-Field Method for Generative Collapse",
+          "doi": "10.5281/zenodo.17189775"
+        }
+      ],
+      "source_ids": [
+        "SRC-000032"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T04:12:52Z",
+      "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+      "missingness": [
+        {
+          "item": "public abstract for this member work",
+          "class": "SOURCE_BOUNDARY"
+        },
+        {
+          "item": "source-stated next burden",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "historical terminology vs current architecture",
+          "class": "UNRESOLVED_SEAM"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000015",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000017",
+      "title": "Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees",
+      "questions": [
+        "What dynamic and continuity properties follow when the historical collapse algebra is extended into a differential calculus under frozen contracts?"
+      ],
+      "main_question": "What dynamic and continuity properties follow when the historical collapse algebra is extended into a differential calculus under frozen contracts?",
+      "object_of_study": "the prefreeze differential-calculus extension of the collapse algebra",
+      "lens": "historical mathematical extension",
+      "tier2_class": {
+        "primary": "candidate",
+        "secondary": [
+          "diagnostic"
+        ]
+      },
+      "domain": {
+        "primary": "mathematics",
+        "secondary": [
+          "systems-theory",
+          "structura-reditus-core"
+        ]
+      },
+      "structural_focus": {
+        "primary": "continuity",
+        "secondary": [
+          "robustness",
+          "return"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "formal-derivation",
+        "secondary": [
+          "formal-proof"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "historical",
+      "functional_locus": "rcft",
+      "publication_state": "preprint",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000034",
+          "title": "Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees",
+          "doi": "10.5281/zenodo.16990996"
+        }
+      ],
+      "source_ids": [
+        "SRC-000034"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.1",
+      "date": "2026-09-13T18:00:00Z",
+      "next_burden": "Independently replay the historical weld lifecycle against the source's declared verification targets: satisfy the source-local weld-budget identity (pre/post test on the same anchor with tolerance on |Δκ|) within tolerance, emit the reconciled audit record (manifest snapshot and hashed audit rows), verify artifact hashes against the recorded manifest, and test the source's stated continuity behavior of κ / integrity under its declared composition and piecewise-secant rules. Any translation into the mature Structura Reditus architecture requires a separately declared repair or mapping; no historical equation, closure, return-credit rule, or weld mechanic is promoted into current Tier-1 or Tier-0 authority by this object.",
+      "missingness": [
+        {
+          "item": "historical terminology vs current architecture",
+          "class": "UNRESOLVED_SEAM"
+        },
+        {
+          "item": "source-native claims beyond the abstract and policy surface",
+          "class": "NON_BLOCKING"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000023",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000018",
+      "title": "Universal Collapse Diagnostics: Contract-First Invariants, κ-Continuous Calculus, and Cross-Domain Audit",
+      "questions": [
+        "How can contract-first invariants and historical collapse diagnostics be applied consistently across heterogeneous domains while preserving auditability?"
+      ],
+      "main_question": "How can contract-first invariants and historical collapse diagnostics be applied consistently across heterogeneous domains while preserving auditability?",
+      "object_of_study": "prefreeze collapse diagnostics across heterogeneous systems",
+      "lens": "historical cross-domain diagnostic manual",
+      "tier2_class": {
+        "primary": "diagnostic",
+        "secondary": [
+          "pedagogical",
+          "domain-translation"
+        ]
+      },
+      "domain": {
+        "primary": "interdisciplinary",
+        "secondary": [
+          "systems-theory",
+          "physics"
+        ]
+      },
+      "structural_focus": {
+        "primary": "boundary",
+        "secondary": [
+          "return",
+          "robustness"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "formal-derivation",
+        "secondary": [
+          "pedagogical"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "historical",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000029",
+          "title": "Universal Collapse Diagnostics: Contract-First Invariants, κ-Continuous Calculus, and Cross-Domain Audit",
+          "doi": "10.5281/zenodo.17173112"
+        }
+      ],
+      "source_ids": [
+        "SRC-000029"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T04:12:52Z",
+      "next_burden": "Unresolved: the source's public record does not state a next burden for this work, and this record implies no stronger use than its declared Tier-2 role. No burden is invented.",
+      "missingness": [
+        {
+          "item": "public abstract",
+          "class": "SOURCE_BOUNDARY"
+        },
+        {
+          "item": "source-stated next burden",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "historical terminology vs current architecture",
+          "class": "UNRESOLVED_SEAM"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000018",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000019",
+      "title": "A Geometry of Admissible Seams: Contract-Bound Invariants and Auditable Transitions",
+      "questions": [
+        "How can heterogeneous transitions be represented geometrically while keeping admissibility dependent on explicit contract and seam conditions rather than scalar resemblance?"
+      ],
+      "main_question": "How can heterogeneous transitions be represented geometrically while keeping admissibility dependent on explicit contract and seam conditions rather than scalar resemblance?",
+      "object_of_study": "geometric representation of transitions and seam admissibility under frozen contracts",
+      "lens": "historical geometric seam formulation",
+      "tier2_class": {
+        "primary": "candidate",
+        "secondary": [
+          "diagnostic"
+        ]
+      },
+      "domain": {
+        "primary": "mathematics",
+        "secondary": [
+          "structura-reditus-core"
+        ]
+      },
+      "structural_focus": {
+        "primary": "continuity",
+        "secondary": [
+          "boundary",
+          "return"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "formal-derivation",
+        "secondary": [
+          "conceptual-argument"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "historical",
+      "functional_locus": "umcp",
+      "publication_state": "preprint",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000024",
+          "title": "A Geometry of Admissible Seams: Contract-Bound Invariants and Auditable Transitions",
+          "doi": "10.5281/zenodo.17980036"
+        }
+      ],
+      "source_ids": [
+        "SRC-000024"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.1",
+      "date": "2026-09-13T18:00:00Z",
+      "next_burden": "Demonstrate portability, where claimed, through explicit embedding and closure disclosure, reproducible audit records (manifests or manifest hashes, closure registries, representative audit rows with seam diagnostics), seam viability, closure stability under reuse, consistent admissibility behavior, and a quantified failure boundary (the source's Appendix D portability criteria). Until those burdens are discharged, the geometric mappings and closures remain contract-local historical constructions rather than universal seam rules or current protocol authority.",
+      "missingness": [
+        {
+          "item": "public abstract for this member work",
+          "class": "SOURCE_BOUNDARY"
+        },
+        {
+          "item": "historical terminology vs current architecture",
+          "class": "UNRESOLVED_SEAM"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000024",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000020",
+      "title": "GCD / UMCP: The First Seam-Chain Casepack: A Worked Case Showing Composed Continuity Across Multiple Welded Seams",
+      "questions": [
+        "When do individually admissible local welds compose into one admissible seam-chain rather than merely a sequence of local successes?"
+      ],
+      "main_question": "When do individually admissible local welds compose into one admissible seam-chain rather than merely a sequence of local successes?",
+      "object_of_study": "Composed continuity across an ordered finite sequence of locally evaluated seams under one frozen chain-accounting contract.",
+      "lens": "seam-chain composition casepack",
+      "tier2_class": {
+        "primary": "diagnostic",
+        "secondary": [
+          "handoff"
+        ]
+      },
+      "domain": {
+        "primary": "structura-reditus-core",
+        "secondary": [
+          "mathematics",
+          "systems-theory"
+        ]
+      },
+      "structural_focus": {
+        "primary": "continuity",
+        "secondary": [
+          "return",
+          "identity"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "formal-derivation",
+        "secondary": [
+          "formal-proof"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000047",
+          "title": "GCD / UMCP: The First Seam-Chain Casepack: A Worked Case Showing Composed Continuity Across Multiple Welded Seams",
+          "doi": "10.5281/zenodo.19870445"
+        }
+      ],
+      "source_ids": [
+        "SRC-000047"
+      ],
+      "relations": [
+        {
+          "relation_id": "REL-000004",
+          "relation_type": "extends",
+          "from_id": "SR-OBJ-000020",
+          "to_id": "SR-OBJ-000009",
+          "declared_here": true
+        }
+      ],
+      "relation_ids": [
+        "REL-000004"
+      ],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T18:00:00Z",
+      "next_burden": "Source-stated ('What This Enables Next'): a small domain closure with welded transitions (declaring its domain adapter before applying local weld and chain accounting), a publication-infrastructure casepack using receipt chains, a repository implementation of seam-chain validation, and a failure taxonomy for chain composition. The paper enables these burdens but does not absorb them; no external-domain chain closure is claimed to have occurred.",
+      "missingness": [],
+      "receipt": {
+        "receipt_id": "RCPT-000025",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000021",
+      "title": "Nested Return in a Composite Diamond Clock: A Welded-Seam Audit of Phase Projection, Thermal Nulling, and Residual-Burden Migration",
+      "questions": [
+        "What structural operation occurs when phase-generated contamination is projected away, thermal drift is nulled, the target oscillator mode is preserved, and a previously subdominant residual becomes governing?"
+      ],
+      "main_question": "What structural operation occurs when phase-generated contamination is projected away, thermal drift is nulled, the target oscillator mode is preserved, and a previously subdominant residual becomes governing?",
+      "object_of_study": "Nested physical closure in a composite NV-center clock through phase projection, thermal-mode nulling, and post-closure systematic reordering.",
+      "lens": "independent secondary structural analysis of an external metrology experiment",
+      "tier2_class": {
+        "primary": "external-ingress",
+        "secondary": [
+          "domain-translation",
+          "diagnostic"
+        ]
+      },
+      "domain": {
+        "primary": "physics",
+        "secondary": [
+          "engineering"
+        ]
+      },
+      "structural_focus": {
+        "primary": "residual-migration",
+        "secondary": [
+          "return",
+          "robustness",
+          "boundary"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "secondary-empirical",
+        "secondary": [
+          "formal-derivation",
+          "source-synthesis"
+        ]
+      },
+      "provenance": "externally-anchored-derivative",
+      "maturity": "source-bounded",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000049",
+          "title": "Nested Return in a Composite Diamond Clock: A Welded-Seam Audit of Phase Projection, Thermal Nulling, and Residual-Burden Migration",
+          "doi": "10.5281/zenodo.22155902"
+        },
+        {
+          "source_id": "SRC-000048",
+          "title": "Toward a temperature-insensitive composite diamond clock",
+          "doi": "10.1103/z2sl-6gcc"
+        }
+      ],
+      "source_ids": [
+        "SRC-000049",
+        "SRC-000048"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [
+        "SR-GOV-000001"
+      ],
+      "version": "1.0.0",
+      "date": "2026-09-13T18:00:00Z",
+      "next_burden": "A canonical UMCP return/weld claim would require a separately frozen object definition, adapter, bounded trace, missingness policy, eligible return domain, metric, tolerance, horizon/time base, seam-accounting profile, closure registry, return-credit profile, residual tolerance, and RunID (source-stated). The local nested-restoration result is not turned into canonical weld.",
+      "missingness": [
+        {
+          "item": "raw experimental data of the external anchor",
+          "class": "SOURCE_BOUNDARY"
+        },
+        {
+          "item": "absolute-accuracy burden and long-duration reproducibility",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "remaining environmental/technical channels and feedback-loop completion",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "canonical UMCP return contract, seam accounting, and weld evaluation",
+          "class": "AUTHORITY_BOUNDARY"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000026",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000022",
+      "title": "Recursive Accelerating Return: A Generative Collapse Dynamics Theory of Endogenous Generative Capacity",
+      "questions": [
+        "What must be inherited, what counts as admissible return, and what rate must increase before a recursive acceleration claim is earned?"
+      ],
+      "main_question": "What must be inherited, what counts as admissible return, and what rate must increase before a recursive acceleration claim is earned?",
+      "object_of_study": "A collapse-return recurrence in which admitted returned structure changes the next productive generator and the resulting effective productive rate may accelerate, decelerate, saturate, reverse, or fail.",
+      "lens": "derived GCD regime theory",
+      "tier2_class": {
+        "primary": "candidate",
+        "secondary": [
+          "diagnostic"
+        ]
+      },
+      "domain": {
+        "primary": "systems-theory",
+        "secondary": [
+          "economics",
+          "computer-science",
+          "structura-reditus-core"
+        ]
+      },
+      "structural_focus": {
+        "primary": "recurrence",
+        "secondary": [
+          "causation",
+          "adaptation",
+          "return"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "formal-derivation",
+        "secondary": [
+          "simulation",
+          "prospective-protocol",
+          "no-empirical-validation"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "prospectively-testable",
+      "functional_locus": "rcft",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000050",
+          "title": "Recursive Accelerating Return: A Generative Collapse Dynamics Theory of Endogenous Generative Capacity",
+          "doi": "10.5281/zenodo.22035775"
+        }
+      ],
+      "source_ids": [
+        "SRC-000050"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [
+        "SR-GOV-000001"
+      ],
+      "version": "1.0.0",
+      "date": "2026-09-13T18:00:00Z",
+      "next_burden": "Prospective domain validation under a frozen GCD.RAR.CORE contract and a declared GCD.RAR.MAP.<domain> mapping contract, including admitted-return timestamps, an operator-equivalence rule, a causal inheritance design, a capacity functional, resource normalization, failed-attempt accounting, an exogenous-exposure policy, an uncertainty/persistence rule, and model comparison (source-stated).",
+      "missingness": [
+        {
+          "item": "empirical validation of RAR",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "longitudinal causal evidence for causal-RAR",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "archive record version label and full title",
+          "class": "NON_BLOCKING"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000027",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000023",
+      "title": "Identifiable Return in Memristive Associative Memory: A Generative Collapse Dynamics Analysis of Recurrent Pattern Completion",
+      "questions": [
+        "Under what conditions does a physically constrained recurrent computation recover the intended memory rather than merely settle, repeat, or produce a similar state?"
+      ],
+      "main_question": "Under what conditions does a physically constrained recurrent computation recover the intended memory rather than merely settle, repeat, or produce a similar state?",
+      "object_of_study": "Identity-preserving recurrent pattern completion under declared cue corruption and hardware constraints.",
+      "lens": "identity-aware retrospective return audit of an external hardware experiment",
+      "tier2_class": {
+        "primary": "external-ingress",
+        "secondary": [
+          "diagnostic",
+          "domain-translation"
+        ]
+      },
+      "domain": {
+        "primary": "computer-science",
+        "secondary": [
+          "engineering",
+          "cognitive-science"
+        ]
+      },
+      "structural_focus": {
+        "primary": "identity",
+        "secondary": [
+          "return",
+          "memory",
+          "recovery",
+          "robustness"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "retrospective-analysis",
+        "secondary": [
+          "computational-reproduction",
+          "formal-proof",
+          "prospective-protocol"
+        ]
+      },
+      "provenance": "externally-anchored-derivative",
+      "maturity": "retrospectively-evaluated",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000052",
+          "title": "Identifiable Return in Memristive Associative Memory: A Generative Collapse Dynamics Analysis of Recurrent Pattern Completion",
+          "doi": "10.5281/zenodo.22695434"
+        },
+        {
+          "source_id": "SRC-000051",
+          "title": "A hardware-adaptive learning algorithm for superlinear-capacity associative memory on memristor crossbars",
+          "doi": "10.1038/s41467-026-69958-0"
+        }
+      ],
+      "source_ids": [
+        "SRC-000052",
+        "SRC-000051"
+      ],
+      "relations": [
+        {
+          "relation_id": "REL-000006",
+          "relation_type": "extends",
+          "from_id": "SR-OBJ-000031",
+          "to_id": "SR-OBJ-000023",
+          "declared_here": false
+        }
+      ],
+      "relation_ids": [
+        "REL-000006"
+      ],
+      "governing_refs": [],
+      "version": "1.0.1",
+      "date": "2026-09-13T23:00:00Z",
+      "next_burden": "A prospective hardware-aware return test with frozen target identities, a cue law, acceptance regions, an identity margin, an implementation/calibration envelope, complete trajectory acquisition, a stopping horizon, a dwell requirement, and typed handling of wrong-memory capture, spurious stabilization, periodic behavior, finite-horizon non-return, and missing evidence.",
+      "missingness": [
+        {
+          "item": "peer review, journal acceptance, or independent certification of the local manuscript",
+          "class": "PUBLICATION_BOUNDARY"
+        },
+        {
+          "item": "cited Zenodo study archive of the external article",
+          "class": "SOURCE_BOUNDARY"
+        },
+        {
+          "item": "per-update physical acquisition uncertainty and stop/padding semantics",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "operator-level physical verification and calibration/regional-bound burden",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "prospective sampling burden",
+          "class": "NON_BLOCKING"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000036",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000024",
+      "title": "Language Across Articulation: Meaning, Translation, and Epistemic Accountability in Structura Reditus",
+      "questions": [
+        "How can expressive and interpretive flexibility coexist with accountable preservation of what an articulation is doing?"
+      ],
+      "main_question": "How can expressive and interpretive flexibility coexist with accountable preservation of what an articulation is doing?",
+      "object_of_study": "Accountable preservation of intellectual responsibility across changed articulations, translation, interpretation and semantic compression.",
+      "lens": "ULRC-led comparative language paper",
+      "tier2_class": {
+        "primary": "language-contact",
+        "secondary": [
+          "external-ingress",
+          "domain-translation"
+        ]
+      },
+      "domain": {
+        "primary": "linguistics",
+        "secondary": [
+          "philosophy",
+          "cognitive-science"
+        ]
+      },
+      "structural_focus": {
+        "primary": "translation",
+        "secondary": [
+          "identity",
+          "boundary"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "source-synthesis",
+        "secondary": [
+          "conceptual-argument",
+          "no-empirical-validation"
+        ]
+      },
+      "provenance": "externally-anchored-derivative",
+      "maturity": "source-bounded",
+      "functional_locus": "ulrc",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000053",
+          "title": "Language Across Articulation: Meaning, Translation, and Epistemic Accountability in Structura Reditus",
+          "doi": "10.5281/zenodo.22695438"
+        }
+      ],
+      "source_ids": [
+        "SRC-000053"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [
+        "SR-GOV-000001"
+      ],
+      "version": "1.0.0",
+      "date": "2026-09-13T18:00:00Z",
+      "next_burden": "Prospective tests of whether independently specified burden profiles can be preserved, clarified, or correctly flagged as changed across translators, readers, media, or contexts. No empirical validation is claimed by the current paper.",
+      "missingness": [
+        {
+          "item": "empirical validation",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "peer review / journal acceptance",
+          "class": "PUBLICATION_BOUNDARY"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000029",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000025",
+      "title": "Empirical Regime Auditing Under the GCD/UMCP Kernel: Contract-Frozen Calibration, Temporal Diagnostics, Typed Return, and Cross-Stream Evaluation",
+      "questions": [
+        "How can multistream empirical sequences be calibrated, admitted, diagnostically analyzed and tested for typed return without allowing temporal diagnostics to redefine the kernel or decide stance by themselves?"
+      ],
+      "main_question": "How can multistream empirical sequences be calibrated, admitted, diagnostically analyzed and tested for typed return without allowing temporal diagnostics to redefine the kernel or decide stance by themselves?",
+      "object_of_study": "Contract-frozen empirical evaluation of multistream sequences using a fixed GCD/UMCP kernel plus a separate temporal-diagnostic layer.",
+      "lens": "empirical regime-auditing companion",
+      "tier2_class": {
+        "primary": "diagnostic",
+        "secondary": [
+          "domain-translation"
+        ]
+      },
+      "domain": {
+        "primary": "structura-reditus-core",
+        "secondary": [
+          "mathematics",
+          "systems-theory"
+        ]
+      },
+      "structural_focus": {
+        "primary": "return",
+        "secondary": [
+          "boundary",
+          "missingness",
+          "heterogeneity"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "formal-derivation",
+        "secondary": [
+          "retrospective-analysis",
+          "prospective-protocol"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000046",
+          "title": "Empirical Regime Auditing Under the GCD/UMCP Kernel: Contract-Frozen Calibration, Temporal Diagnostics, Typed Return, and Cross-Stream Evaluation (A Kernel for Empirical Regime Auditing, Version 2.0)",
+          "doi": null
+        }
+      ],
+      "source_ids": [
+        "SRC-000046"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T18:00:00Z",
+      "next_burden": "Prospective domain-local validation of adapters, calibration windows, temporal diagnostics, sentinel rules, and any learned thresholds under frozen evidence boundaries. Domain-specific temporal thresholds are not universalized.",
+      "missingness": [
+        {
+          "item": "DOI of the Version 2.0 edition",
+          "class": "PUBLICATION_BOUNDARY"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000030",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000026",
+      "title": "Confinement as Integrity Collapse: A Contract-Frozen Structural Signature of Quark Binding in the GCD/UMCP Measurement Kernel",
+      "questions": [
+        "What structural signature does the quark->hadron boundary leave when quarks and hadrons are evaluated under a single frozen source-local particle-data closure?"
+      ],
+      "main_question": "What structural signature does the quark->hadron boundary leave when quarks and hadrons are evaluated under a single frozen source-local particle-data closure?",
+      "object_of_study": "The source-local integrity signature of the quark->hadron boundary under a frozen historical particle-data closure.",
+      "lens": "historical hard-domain scientific boundary case",
+      "tier2_class": {
+        "primary": "diagnostic",
+        "secondary": [
+          "domain-translation",
+          "external-ingress"
+        ]
+      },
+      "domain": {
+        "primary": "physics",
+        "secondary": [
+          "mathematics"
+        ]
+      },
+      "structural_focus": {
+        "primary": "heterogeneity",
+        "secondary": [
+          "boundary"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "retrospective-analysis",
+        "secondary": [
+          "computational-reproduction",
+          "formal-derivation"
+        ]
+      },
+      "provenance": "historical-source-anchored",
+      "maturity": "historical",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000054",
+          "title": "Confinement as Integrity Collapse: A Contract-Frozen Structural Signature of Quark Binding in the GCD/UMCP Measurement Kernel",
+          "doi": "10.5281/zenodo.20420835"
+        }
+      ],
+      "source_ids": [
+        "SRC-000054"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T18:00:00Z",
+      "next_burden": "Independent reconstruction under the mature architecture with current source data/version, a frozen particle/hadron adapter, stable channel semantics across compared object classes, the current kernel contract, explicit missingness, sensitivity/ablation tests, and comparison against native-domain explanations and alternative adapters. Historical results remain historical even if re-evaluated later.",
+      "missingness": [
+        {
+          "item": "historical terminology vs current architecture",
+          "class": "UNRESOLVED_SEAM"
+        },
+        {
+          "item": "public record description",
+          "class": "SOURCE_BOUNDARY"
+        },
+        {
+          "item": "closed-edition deposit identity",
+          "class": "NON_BLOCKING"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000031",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000027",
+      "title": "Contract-First Epistemology: Measurement, Return, and the Structure of Legitimate Claims",
+      "questions": [
+        "How should a claim earn evaluative standing under declared object, contract, closure, missingness, ledger and stance discipline?"
+      ],
+      "main_question": "How should a claim earn evaluative standing under declared object, contract, closure, missingness, ledger and stance discipline?",
+      "object_of_study": "Operational transmission of contract-first evaluation to another evaluator.",
+      "lens": "full course / formal teaching architecture",
+      "tier2_class": {
+        "primary": "pedagogical",
+        "secondary": [
+          "handoff"
+        ]
+      },
+      "domain": {
+        "primary": "education",
+        "secondary": [
+          "structura-reditus-core",
+          "philosophy"
+        ]
+      },
+      "structural_focus": {
+        "primary": "translation",
+        "secondary": [
+          "adaptation",
+          "return"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "pedagogical",
+        "secondary": [
+          "conceptual-argument",
+          "no-empirical-validation"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "cross-system",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000055",
+          "title": "Contract-First Epistemology: Measurement, Return, and the Structure of Legitimate Claims (Full Course Architecture v1.0)",
+          "doi": "10.5281/zenodo.20074210"
+        }
+      ],
+      "source_ids": [
+        "SRC-000055"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T18:00:00Z",
+      "next_burden": "Live pedagogical return: student/evaluator artifacts showing the method can be operated independently without author mediation. Classroom effectiveness is not claimed from complete course architecture.",
+      "missingness": [
+        {
+          "item": "classroom efficacy",
+          "class": "NON_BLOCKING"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000032",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000028",
+      "title": "Contract-First Epistemology: Semester I — Method Internalization (Weeks 1–14)",
+      "questions": [
+        "What must be declared before judgment becomes evaluable?"
+      ],
+      "main_question": "What must be declared before judgment becomes evaluable?",
+      "object_of_study": "Making judgment evaluable: bounding evaluative objects, freezing contracts, preserving missingness, and completing a first auditable mini-pass.",
+      "lens": "first-semester teaching route",
+      "tier2_class": {
+        "primary": "pedagogical",
+        "secondary": [
+          "handoff"
+        ]
+      },
+      "domain": {
+        "primary": "education",
+        "secondary": [
+          "structura-reditus-core"
+        ]
+      },
+      "structural_focus": {
+        "primary": "boundary",
+        "secondary": [
+          "missingness",
+          "translation"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "pedagogical",
+        "secondary": [
+          "no-empirical-validation"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "cross-system",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000056",
+          "title": "Contract-First Epistemology: Semester I — Method Internalization (Weeks 1–14)",
+          "doi": "10.5281/zenodo.20074210"
+        }
+      ],
+      "source_ids": [
+        "SRC-000056"
+      ],
+      "relations": [
+        {
+          "relation_id": "REL-000005",
+          "relation_type": "extends",
+          "from_id": "SR-OBJ-000029",
+          "to_id": "SR-OBJ-000028",
+          "declared_here": false
+        }
+      ],
+      "relation_ids": [
+        "REL-000005"
+      ],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T18:00:00Z",
+      "next_burden": "Actual student/evaluator performance demonstrating independent completion of the mini-pass and transition to Semester II.",
+      "missingness": [
+        {
+          "item": "classroom efficacy",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "separate record description for this member work",
+          "class": "SOURCE_BOUNDARY"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000033",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000029",
+      "title": "Contract-First Epistemology: Semester II — Return, Diagnostics, Transfer, and Production (Weeks 15–28)",
+      "questions": [
+        "What must return, reconcile, transfer and be defended before judgment becomes auditable?"
+      ],
+      "main_question": "What must return, reconcile, transfer and be defended before judgment becomes auditable?",
+      "object_of_study": "Making evaluation durable: typed return, ledger reconciliation, seam analysis, diagnostics, domain transfer, critique, casepack production, defense, repair, and transmission.",
+      "lens": "second-semester teaching route",
+      "tier2_class": {
+        "primary": "pedagogical",
+        "secondary": [
+          "handoff"
+        ]
+      },
+      "domain": {
+        "primary": "education",
+        "secondary": [
+          "structura-reditus-core"
+        ]
+      },
+      "structural_focus": {
+        "primary": "return",
+        "secondary": [
+          "continuity",
+          "translation"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "pedagogical",
+        "secondary": [
+          "no-empirical-validation"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "cross-system",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000057",
+          "title": "Contract-First Epistemology: Semester II — Return, Diagnostics, Transfer, and Production (Weeks 15–28)",
+          "doi": "10.5281/zenodo.20074210"
+        }
+      ],
+      "source_ids": [
+        "SRC-000057"
+      ],
+      "relations": [
+        {
+          "relation_id": "REL-000005",
+          "relation_type": "extends",
+          "from_id": "SR-OBJ-000029",
+          "to_id": "SR-OBJ-000028",
+          "declared_here": true
+        }
+      ],
+      "relation_ids": [
+        "REL-000005"
+      ],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T18:00:00Z",
+      "next_burden": "Independent student/evaluator production, defense, repair and transmission of a complete casepack.",
+      "missingness": [
+        {
+          "item": "classroom efficacy",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "separate record description for this member work",
+          "class": "SOURCE_BOUNDARY"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000034",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000030",
+      "title": "Contract-First Epistemology: Full Course Syllabus and Audit Receipt",
+      "questions": [
+        "Is the full teaching route structurally declared enough to be taught, assessed, repaired, and transmitted without author mediation?"
+      ],
+      "main_question": "Is the full teaching route structurally declared enough to be taught, assessed, repaired, and transmitted without author mediation?",
+      "object_of_study": "The full twenty-eight-week teaching route treated as an evaluable object: what the course is, what it teaches, how it is sequenced, what students produce, and what counts as completion.",
+      "lens": "compact course audit receipt",
+      "tier2_class": {
+        "primary": "pedagogical",
+        "secondary": [
+          "handoff"
+        ]
+      },
+      "domain": {
+        "primary": "education",
+        "secondary": [
+          "structura-reditus-core"
+        ]
+      },
+      "structural_focus": {
+        "primary": "return",
+        "secondary": [
+          "identity",
+          "continuity"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "pedagogical",
+        "secondary": []
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "cross-system",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000058",
+          "title": "Contract-First Epistemology: Full Course Syllabus and Audit Receipt",
+          "doi": "10.5281/zenodo.20074210"
+        }
+      ],
+      "source_ids": [
+        "SRC-000058"
+      ],
+      "relations": [],
+      "relation_ids": [],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-13T18:00:00Z",
+      "next_burden": "Live use of the receipt by an instructor, reviewer, or institution to assess, repair, or transmit the course, producing actual student/evaluator artifacts; classroom efficacy remains unproven until then.",
+      "missingness": [
+        {
+          "item": "classroom efficacy",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "separate record description for this member work",
+          "class": "SOURCE_BOUNDARY"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000035",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000031",
+      "title": "Prospective Identifiable Return in Associative Memory: A Completed Prospective Computational Test of Identity, Correction, Discrimination, and Reliability",
+      "questions": [
+        "Do target identity separation and corrective recurrent dynamics jointly provide out-of-sample information about reliable target-specific associative-memory recovery beyond prespecified simpler explanations under one unchanged evaluation contract?",
+        "Does ten-update recurrence recover the intended target more often than one application of the same frozen map (recurrence-specific correction)?",
+        "Does the frozen per-target reliability certificate (p_min = 0.95, one-sided exact Clopper-Pearson, Bonferroni alpha/10) hold for every one of the ten frozen targets at p = 0.05?"
+      ],
+      "main_question": "Do target identity separation and corrective recurrent dynamics jointly provide out-of-sample information about reliable target-specific associative-memory recovery beyond prespecified simpler explanations under one unchanged evaluation contract?",
+      "object_of_study": "A fixed, source-derived recurrent associative-memory implementation exposed to fresh cue perturbations under a prospectively frozen analysis contract.",
+      "lens": "Prospectively frozen identity-aware evaluation of target-specific recurrent associative-memory recovery under a source-derived computational operator.",
+      "tier2_class": {
+        "primary": "diagnostic",
+        "secondary": [
+          "external-ingress",
+          "domain-translation"
+        ]
+      },
+      "domain": {
+        "primary": "computer-science",
+        "secondary": [
+          "engineering",
+          "cognitive-science"
+        ]
+      },
+      "structural_focus": {
+        "primary": "return",
+        "secondary": [
+          "identity",
+          "recovery",
+          "recurrence",
+          "memory",
+          "robustness",
+          "failure"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "simulation",
+        "secondary": [
+          "prospective-protocol",
+          "computational-reproduction"
+        ]
+      },
+      "provenance": "externally-anchored-derivative",
+      "maturity": "prospectively-tested",
+      "functional_locus": "umcp",
+      "publication_state": "archived",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000060",
+          "title": "Prospective Identifiable Return in Associative Memory: A Completed Prospective Computational Test of Identity, Correction, Discrimination, and Reliability",
+          "doi": "10.5281/zenodo.22739943"
+        },
+        {
+          "source_id": "SRC-000051",
+          "title": "A hardware-adaptive learning algorithm for superlinear-capacity associative memory on memristor crossbars",
+          "doi": "10.1038/s41467-026-69958-0"
+        }
+      ],
+      "source_ids": [
+        "SRC-000060",
+        "SRC-000051"
+      ],
+      "relations": [
+        {
+          "relation_id": "REL-000006",
+          "relation_type": "extends",
+          "from_id": "SR-OBJ-000031",
+          "to_id": "SR-OBJ-000023",
+          "declared_here": true
+        }
+      ],
+      "relation_ids": [
+        "REL-000006"
+      ],
+      "governing_refs": [],
+      "version": "1.0.0",
+      "date": "2026-09-14T02:15:00Z",
+      "next_burden": "Three distinct follow-on burdens remain (paper §18): (1) a separate exploratory diagnostic of MU-01's failed reliability certificate, without retroactively repairing PIR-COMP-R1; (2) a new prospective hardware-linked replication with independently frozen physical operator, chip/array/programming identity, calibration, physical-update semantics, complete trajectories, and attempt denominator; and (3) external replication of the frozen burden architecture on a second independently specified associative-memory implementation. None of these is absorbed into the present object.",
+      "missingness": [
+        {
+          "item": "new prospectively linked physical memristor acquisition chain (chip/array/programming/calibration realization for PIR-COMP-R1)",
+          "class": "UNRESOLVED_SEAM"
+        },
+        {
+          "item": "canonical UMCP eligible-anchor/return/weld structure",
+          "class": "AUTHORITY_BOUNDARY"
+        },
+        {
+          "item": "external replication on a second independently specified associative-memory implementation",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "mechanistic explanation for the MU-01 failed reliability certificate",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "peer review, journal acceptance, or independent certification",
+          "class": "PUBLICATION_BOUNDARY"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000037",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000001",
+      "title": "Summa Reditus: A Complete Treatise on Admissible Return Through Collapse",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.20653105",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "Architecture Freeze v1.0",
+      "status": "active",
+      "source_native_claims": [
+        "Summa Reditus is a complete canon-facing treatise on Reditus: the admissible return of structure through collapse under declared conditions.",
+        "It gathers the Structura Reditus corpus into one ordered body without replacing the source works, casepacks, closures, protocols, or teaching materials.",
+        "The authority architecture (Tier-1, Tier-0, Tier-2) remains distinct from the functional systems (UMCP measures; RCFT explores; ULRC preserves language)."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000002",
+      "title": "The Threefold Authority Order",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.21212668",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "v1.0.0 (packet)",
+      "status": "active",
+      "source_native_claims": [
+        "Official source specification for the threefold authority order (Tier-1, Tier-0, Tier-2) of the Structura Reditus / GCD corpus.",
+        "Authority tiers govern what kind of authority is being exercised; functional systems govern what kind of work is being performed."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000003",
+      "title": "ULRC Operating System: Language, Refusal, Translation, and Honest Contact",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.21212668",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "v1.0.0 (packet)",
+      "status": "active",
+      "source_native_claims": [
+        "Source-of-truth reference for the Unified Language of Recursive Collapse (ULRC) as the meaning and contact-preservation system inside Structura Reditus."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000004",
+      "title": "UMCP Operating System: Functional Ground, Formal Protocol, and Diagnostic Atlas",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.21212668",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "v1.0.0 (packet)",
+      "status": "active",
+      "source_native_claims": [
+        "Source-of-truth specification for UMCP as the contract-first operating system for evaluable structure inside Structura Reditus."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000005",
+      "title": "RCFT Operating System: Discovery, Candidate Maturity, and Generative Field-Hypothesis Discipline",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.21212668",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "v1.0.0 (packet)",
+      "status": "active",
+      "source_native_claims": [
+        "Source-of-truth reference for Recursive Collapse Field Theory (RCFT) as the discovery and exploration operating system of Generative Collapse Dynamics."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000006",
+      "title": "Generative Collapse Dynamics / UMCP: Passport and Entry Map — A Front-Door Guide to the Contract-First Measurement Framework",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.19637774",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "v1.0.1 (packet)",
+      "status": "active",
+      "source_native_claims": [
+        "Part I, Passport and Entry Map, serves as the front-door guide: it presents the axiom, invariant scaffold, validation spine, tier structure, and principal reading routes through the canon."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000007",
+      "title": "Generative Collapse Dynamics / UMCP: The Core — Why the Contract-First Measurement Framework Has the Structure It Has",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.19637774",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "v1.0.1 (packet)",
+      "status": "active",
+      "source_native_claims": [
+        "Part II, The Core, states the framework in its strongest self-contained form by showing why the contract-first measurement architecture has the structure it has, and why bounded trace, typed return, seam logic, and three-valued stance are necessary rather than optional."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000008",
+      "title": "Generative Collapse Dynamics / UMCP: The Pass — A Complete Worked Traversal from Frozen Contract to Derived Stance",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.19637774",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "v1.0.1 (packet)",
+      "status": "active",
+      "source_native_claims": [
+        "Part III, The Pass, completes the sequence by walking one object through the full discipline from frozen contract to derived stance, so that the framework can be seen as a repeatable procedure."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000009",
+      "title": "The First Pass: A Complete Worked Example Through the Generative-Collapse Spine",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.19520933",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "Provides the first complete, self-contained trace of a single measurement (three identical voltage readings) through all twelve stops of the GCD/UMCP validation spine.",
+        "The heterogeneity gap Δ = F − IC is presented as a structural diagnostic: a single near-zero channel destroys IC while leaving F apparently healthy.",
+        "All numbers are stated to be reproducible from the open-source reference implementation."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000010",
+      "title": "The Periodic Table as a Measured Object: Tier-1 Derivation from Atomic Properties in the GCD Kernel",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.19639656",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "Treats all 118 elements as one fixed measured object under a frozen 8-channel atomic closure and asks what structure the GCD/UMCP kernel recovers from standard atomic properties alone.",
+        "The paper does not attempt to replace chemistry; its distinct burden is to make the entire table answerable as one explicit measured object under one published comparison surface.",
+        "Under the frozen closure all 118 rows satisfy the identities F+ω=1, IC≤F, IC=e^κ; at corpus scale 111 rows are in Collapse, 7 in Watch, 0 in Stable."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000011",
+      "title": "The Periodic Table as a Measured Object II: A Nuclear-Informed Cross-Scale Sequel on What Sharpens, Collapses, and Inverts Under a Stronger Atomic Closure",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.19852651",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "v1.0",
+      "status": "active",
+      "source_native_claims": [
+        "Nuclear-informed sequel: replaces the 8-channel surface with a stronger 12-channel closure admitting neutron excess, binding energy per nucleon, magic-number proximity, valence-electron structure, and block order.",
+        "The paper does not replace chemistry and does not claim that the periodic table originates from the kernel; its burden is to determine which atomic distinctions sharpen, compress or collapse, and invert."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000012",
+      "title": "The Heterogeneous Local Pass: A Worked Pass Showing the Divergence of Arithmetic Retention & Multiplicative Coherence",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.19868885",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "Shows, on one small object (three local channels under a frozen linear embedding), that arithmetic retention and multiplicative coherence are related but not identical, and that a healthy arithmetic surface can conceal a real multiplicative wound.",
+        "Does not introduce a new closure family, does not claim finite return, and does not stage a welded seam.",
+        "States that it prepares the reader for the next public burdens of the corpus: finite return, seam accounting, and welded continuity."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000013",
+      "title": "The First Finite-Return Casepack: A Worked Case Showing Finite Re-Entry Under a Frozen Grammar",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.19869494",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "First public paper in the GCD/UMCP corpus to make return explicit as a measured finite event under a frozen grammar, using one bounded local episode with a reference state, a wounded departure, and a candidate returned state.",
+        "Does not yet claim weld, seam closure, or earned continuity; establishes finite return as the necessary public step before those stronger burdens."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000014",
+      "title": "GCD / UMCP: The First Welded Seam Casepack — A Worked Case Showing Earned Continuity Under Frozen Seam Accounting",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.19869775",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "Finite return is necessary but not sufficient for welded continuity; a welded object has passed through an accounting seam whose debits, credits, ledger change, budget comparison, residual check, and identity check reconcile under a frozen contract.",
+        "Under the unit-rate closure finite return is present but the seam residual fails (returned-but-unwelded); under the calibrated local closure the residual closes (conformant welded seam).",
+        "Does not introduce a new Tier-1 invariant, claim a universal return-rate constant, define governance procedure, or stage a domain closure."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000015",
+      "title": "Generative Collapse Dynamics (UMCP/GCD): Enabling Cross-Domain Comparability via Contract-Frozen Kernel Invariants and Typed Return",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.18819238",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "release line v2.1.5",
+      "status": "active",
+      "source_native_claims": [
+        "Presents GCD as a contract-first measurement discipline governed by a single admissibility axiom: collapse is generative; only what returns through collapse is real — where \"real\" is an audit rule, not a metaphysical claim.",
+        "Formalizes the Tier-1 kernel ledger (F, ω, S, C, κ, IC, typed return delay τ_R) and proves the identities F+ω=1, IC≤F, IC=exp(κ)."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000016",
+      "title": "UMCP CasePack Publication",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.18226878",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": null,
+      "status": "historical",
+      "source_native_claims": []
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000017",
+      "title": "A single algebraic diagnostic detects structurally identical phase transitions from quarks to the cosmic horizon",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.21203/rs.3.rs-9205902/v1",
+      "venue": "Research Square",
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "The ratio of geometric to arithmetic coherence (IC/F), computed from a single algebraic kernel applied to normalised physical measurements, exhibits structurally identical phase-transition signatures across systems spanning 61 orders of magnitude.",
+        "The heterogeneity gap Δ = F − IC spikes at every phase boundary tested, providing a single-number diagnostic for structural fragility independent of the underlying dynamics.",
+        "The contribution is not the AM-GM bound itself but its systematic application as a scale-independent phase-transition diagnostic across 20 scientific domains; 11,342 automated proofs across 406 physical objects confirm the three identities to machine precision."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000018",
+      "title": "Liber Collapsus: De Reditu per Collapsum et de Identitate Servata",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.22310064",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "2.0",
+      "status": "active",
+      "source_native_claims": [
+        "Axiom of Reditus, received from the active canon: Collapsus generativus est; solum quod per collapsum redit, reale est. The axiom is not a metaphor but a law of ontological admissibility; 'real' names the state of a structure that can be admitted after collapse as the same, continuous, or integral under the active contract.",
+        "Collapse by itself earns no credit: ruin alone is not proof, repetition alone is not Reditus, similarity alone is not identity, repair alone is not continuity. Reditus requires a structure that suffers perturbation or collapse, a declared rule by which it is read before and after, and re-entry into an admissible region under that same rule.",
+        "If the rule changes, simple Reditus cannot be claimed; the change must be declared through a seam. If the seam does not close, no credit is granted. Where τ_R = ∞_rec, no return credit is granted, and a gap may not be filled by narration.",
+        "Identity is not immobility; identity is Reditus under law (Identitas non est immobilitas; identitas est Reditus sub lege). Two senses are distinguished, idem (similarity, continuity, temporal permanence) and ipse (selfhood whose burden is preserved through change); the ipse burden is defined narrowly and formally as structural continuity through change under a declared contract whose seam can be examined.",
+        "The correspondence with Paul Ricœur's idem/ipse distinction is a correspondence of question, not an identity of doctrines; the author states that before the 11 October 2025 edition he had not read Ricœur, who is cited for historical placement and not as the source of the formulation.",
+        "Whatever is asserted to pertain to the object is subject to the test of the contract; a declared contract is not thereby true or sufficient but fixes the bounds of judgment. Before judgment the object is declared; before measurement the rule is fixed; before credit Reditus is proven. No channel may be changed after the event to adorn the outcome and no threshold chosen after the event to save the verdict.",
+        "The bounded trace Ψ(t) = (c_1(t), …, c_n(t)) with c_i ∈ [0,1] and weights w_i ≥ 0 summing to 1 is the measurable form of the object under a fixed contract; judgment bears directly on the trace and extends to the object only within the authority of the declared measurement rule.",
+        "This book neither closes the whole field nor substitutes the theory for the field; its narrower task is to order Reditus in brief mathematical and Latin form. The 2.0 edition (Editio altera, 4 August 2026) recognises, augments, and replaces the 2025 form in active use, preserving the prior form as historical testimony, and grants no credit to continuity between the two editions because that seam is not yet demonstrated."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000019",
+      "title": "Dimethyltryptamine and the Recursive Reorganization of Consciousness",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.21726224",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "2.0",
+      "status": "active",
+      "source_native_claims": [
+        "Develops a multilevel causal architecture for how DMT reorganizes conscious experience across a compressed timescale, integrating pharmacokinetics, receptor signaling, cellular gain modulation, whole-brain dynamics, embodied physiology, phenomenology, memory, environment, repeated exposure, recovery, and post-session updating.",
+        "Presented as a Tier-2 special-case domain synthesis within the GCD–UMCP corpus; its central formal contribution is a prospective dual-reference architecture distinguishing departure from waking organization from approach toward a candidate recurrent DMT-state organization.",
+        "The proposed architecture is procedurally specified but empirically unvalidated; its scientific value depends on prospective testing, comparison with simpler models, preservation of negative results, and explicit contraction where its local predictions fail.",
+        "Offers no preparation, dosing, administration, or legal-circumvention guidance."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000020",
+      "title": "The Physics of Coherence: Recursive Collapse & Continuity Laws",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.18072852",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": null,
+      "status": "historical",
+      "source_native_claims": [
+        "Formalizes a contract-first, domain-agnostic method for computing and auditing coherence-like invariants once observables are mapped into a bounded, dimensionless trace; the core claim is operational rather than metaphysical.",
+        "Canonizes the paper under Weld ID W-2025-12-31-PHYS-COHERENCE with pre-weld anchor The Episteme of Return (10.5281/zenodo.17756705)."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000021",
+      "title": "The Episteme of Return: Collapse Integrity Kernel and the UMA Audit Stack",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.17756705",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": null,
+      "status": "historical",
+      "source_native_claims": [
+        "Consolidates the Integrity Stack (declare → log → weld → invoke) into a single governing kernel for epistemic systems, integrating the Collapse Integrity Kernel v1.0.3, the Invoke Audit Protocol, and the Universal Math Appendix under the Grammar of Return."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000022",
+      "title": "The Seam of Reality: On Thought, Return, and the Illusion of the Outside",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.17619502",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": "v1.0",
+      "status": "historical",
+      "source_native_claims": [
+        "Introduces a return-based audit calculus grounded in the Collapse Integrity Protocol, culminating in a validated epistemic seam with ledger-conserved log-integrity.",
+        "Rejects the need for exterior gesture logic or any symbolic substrate beyond the runtime contract, defining epistemic structure strictly through collapsible recurrence and integrity-preserving welds.",
+        "Claims to outperform gesture-dependent or topology-saturated theories by exposing their cost through its own runtime budget."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000023",
+      "title": "Generative Collapse Dynamics and Inference-Field Frameworks: A Provenance & Canon Note",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.17925172",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": null,
+      "status": "historical",
+      "source_native_claims": [
+        "Archival note establishing the canonical form and provenance record for GCD, UMCP, and RCFT; defines the Tier-1 invariant skeleton {ω, F, S, C, τᴿ, κ, I} and the weld calculus closing Δκ = R·τᴿ − (Dω + DC) under a frozen contract with tolerance |s| ≤ 0.005.",
+        "The paper introduces no new algebra; its contribution is provenance and transparency."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000024",
+      "title": "A Geometry of Admissible Seams: Contract-Bound Invariants and Auditable Transitions",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.17980036",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": null,
+      "status": "historical",
+      "source_native_claims": []
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000025",
+      "title": "Retro-Coherent Transmission through Quantum Collapse: A Collapse Integrity Re-Interpretation of Negative Excitation Time",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.17509993",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": "v1.0.5",
+      "status": "historical",
+      "source_native_claims": [
+        "Audits a quantum optics experiment (Sinclair et al., 2024) in which an atomic ensemble exhibits a negative excitation time under postselected single-photon transmission, framing it as a lawful return seam under the Collapse Integrity audit grammar.",
+        "Classifies the event as a Type I seam with ω = 0, τ_R = −0.82, D_C = −0.82 and zero residual, and introduces a subclass of retro-coherent seams (Class IIa) with τ_R < 0.",
+        "Claims that the Collapse Integrity grammar outperforms Lagrangian mechanics in discontinuous, memory-anchored, or retrocausal regimes."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000026",
+      "title": "Collapse Integrity Kernel v1.0.2",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.17518301",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": "v1.0.2",
+      "status": "historical",
+      "source_native_claims": [
+        "Defines the canonical invariant structure for RCFT (ω, F, C, τᴿ, κ, I = e^κ, Δκ, residual, R), regime thresholds (Stable ω < 0.038; Watch; Collapse ω ≥ 0.30; Critical IC < 0.30), and the collapse conservation law Δκ = R·τ_R − (D_ω + D_C) with |residual| ≤ tol."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000027",
+      "title": "Collapse Integrity Calculus",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.17518269",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": "v1.0",
+      "status": "historical",
+      "source_native_claims": [
+        "Formalizes the seam auditing grammar of RCFT around the collapse conservation law, defining how canonical test seams are evaluated for closure within tolerance (typically 0.005)."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000028",
+      "title": "The Grammar of Return",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.17518338",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": "v1.0",
+      "status": "historical",
+      "source_native_claims": [
+        "Establishes the formal audit protocol of RCFT: phase machine logic (DRIFT / RETURN / SHIP), collapse conservation, audit cycle grammar, canonical test invariants, closure tolerance protocols, and weld identity constraints."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000029",
+      "title": "Universal Collapse Diagnostics: Contract-First Invariants, κ-Continuous Calculus, and Cross-Domain Audit",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.17173112",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": "v1.0.1",
+      "status": "historical",
+      "source_native_claims": []
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000030",
+      "title": "Generative Collapse Dynamics: Kernel, Platform, Theory, and Governance",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.17090088",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": "1.0",
+      "status": "historical",
+      "source_native_claims": [
+        "The Ground Kernel of GCD fixes the invariant mathematics that underwrite collapse-aware diagnostics across domains: drift ω, fidelity F = 1−ω, entropy S, curvature C, adaptive first return τ_R, composite integrity IC, and log-integrity κ = ln IC, with typed outcomes as first-class audit values."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000031",
+      "title": "The Episteme Construction",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.17189775",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": "v1.0.2",
+      "status": "historical",
+      "source_native_claims": [
+        "A field manual for making claims auditable across domains, introducing a contract-first calculus for generative collapse built around a conservation-style budget for log-integrity κ (the First Law of Collapse: Δκ = R·τ_R − (D_ω + D_C)).",
+        "Separates identities (math) from closures (thresholds/policies) and narratives (interpretations), and standardizes captions, manifests, and weld governance."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000032",
+      "title": "The Common Doorway: A Cross-Field Method for Generative Collapse",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.17189775",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": "v1.0.2 (packet)",
+      "status": "historical",
+      "source_native_claims": []
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000033",
+      "title": "The Collapse Formalism: A Reader's Guide to the UMCP/RCFT/ULRC Stack",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.16990995",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": "1.0.1 (record at listed DOI)",
+      "status": "historical",
+      "source_native_claims": []
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000034",
+      "title": "Collapse Calculus: Weld-Continuous Dynamics and Audit Guarantees",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.16990996",
+      "venue": "Zenodo",
+      "publication_year": 2025,
+      "version": "1.0",
+      "status": "historical",
+      "source_native_claims": []
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000035",
+      "title": "Reditus & Structura Reditus: Field Constitution & Core-Object Formalization for Admissible Return Through Collapse",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": null,
+      "venue": null,
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "Structura Reditus is the field devoted to Reditus: the admissible return of structure through collapse under declared conditions; its governing axiom is Axiom-0: collapse is generative; only what returns through collapse is real.",
+        "A structure receives epistemic, operational, or ontological credit only when it undergoes collapse or perturbation and re-enters admissible structure under the same declared rule-set; collapse alone and survival alone are insufficient.",
+        "Tier-1 reserves the immutable kernel symbols and identities; Tier-0 governs contracts, validators, closures, ledgers, seam accounting, and stance derivation; Tier-2 translates domains into evaluable closure form without redefining the kernel."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000036",
+      "title": "Generative Collapse Dynamics: Canon Placement and the Two-Axis Architecture — Why GCD Is the Highest-Level Theoretical Acronym Inside Structura Reditus",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": null,
+      "venue": null,
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "GCD is not one subsystem among UMCP, RCFT, and ULRC; it is the foundational theory from which two necessary architectures follow: the tier architecture (authority) and the functional systems architecture (operation).",
+        "The two axes are orthogonal structures generated by the same theory; their formal separation does not extend GCD or add a new framework."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000037",
+      "title": "The Functional Systems of Generative Collapse Dynamics: UMCP, RCFT, and ULRC as Measurement, Discovery, and Language Preservation — A Consolidated Thesis of Functional Operation and Domain Ingress",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": null,
+      "venue": null,
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "UMCP measures, RCFT explores, and ULRC preserves language; the tiers govern what may be preserved, executed, translated, or changed, while the functional systems govern what kind of work is being performed.",
+        "The consolidated discipline is: freeze before judgment, explore before canon, and translate without drift."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000038",
+      "title": "Structura Collapsus: Collapse-Kernel and Protocol Reference for Generative Collapse Dynamics within the Structura Reditus Corpus",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": null,
+      "venue": null,
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "Structura Collapsus is the canonical collapse-kernel and protocol reference for GCD/UMCP within the wider field of Structura Reditus; it does not define the whole field, replace the object, or absorb the functional systems.",
+        "It states in full the 44 structural identities, 47 proven lemmas, 5 frozen parameters, 5 structural constants, 4 regime gates, and 3 algebraic identities that constitute the Tier-1 kernel and its Tier-0 protocol; the current reference line includes 20,540 automated tests across 23 evaluation surfaces and 246 closure modules.",
+        "Regime labels classify the trace but do not decide final stance; stance is read only after contract sufficiency, closure availability, return typing, missingness policy, ledger reconciliation, and authority discipline have been checked."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000039",
+      "title": "UMCP Kernel Specification (UMCP-KERNEL-SPEC.v2.4.0-rc2)",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": null,
+      "venue": null,
+      "publication_year": 2026,
+      "version": "UMCP-KERNEL-SPEC.v2.4.0-rc2",
+      "status": "active",
+      "source_native_claims": [
+        "Status: freeze-controlled repair candidate; not a Tier-1 freeze. Supersedes for review UMCP-KERNEL-SPEC.v2.4.0-rc1. Implementation baseline: GCD/UMCP repository v2.3.3.",
+        "Preserves rather than resolves three active seams: roughness (unweighted population dispersion in repository v2.3.3 vs weighted dispersion in the active UMCP operating witness), return credit (inherited R·τ_R vs independently defined Q_R), and criticality (primary CRITICAL regime vs IC < 0.30 overlay).",
+        "No historical run is rewritten by this candidate."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000040",
+      "title": "UMCP Kernel Specification Repair Audit (repair target UMCP-KERNEL-SPEC.v2.4.0-rc2)",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": null,
+      "venue": null,
+      "publication_year": 2026,
+      "version": "repair target UMCP-KERNEL-SPEC.v2.4.0-rc2",
+      "status": "active",
+      "source_native_claims": [
+        "Stance burden: specification-repair audit; not Tier-1 admission, repository certification, or canon freeze.",
+        "Adoption or freeze requires a separate authority act after the open seams close; governing sources were controlling only for their listed burdens and were not averaged into one undifferentiated authority."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000041",
+      "title": "Structura Reditus Publishing Protocol: Canon-facing publication, source, version, and repair discipline (SR-PUBLISHING-PROTOCOL.v1.0)",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": null,
+      "venue": null,
+      "publication_year": 2026,
+      "version": "SR-PUBLISHING-PROTOCOL.v1.0",
+      "status": "active",
+      "source_native_claims": [
+        "Self-declared status: final Tier-0 publishing protocol; adopted working standard; not a Tier-1 freeze. Finalized 2026-08-28, America/Chicago.",
+        "This protocol governs manuscript construction and publication conformance; it does not create Tier-1 proof, canon admission, DOI status, or public-release status by declaration alone."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000042",
+      "title": "Structura Reditus Publishing Protocol (SR-PUBLISHING-PROTOCOL.v1.0-rc1)",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": null,
+      "venue": null,
+      "publication_year": 2026,
+      "version": "SR-PUBLISHING-PROTOCOL.v1.0-rc1",
+      "status": "active",
+      "source_native_claims": [
+        "Status: internal Tier-0 repair candidate; not canon-frozen. Prepared 2026-08-29. Immediate predecessor: repaired working draft dated 2026-08-28.",
+        "Conformance to this protocol does not create proof, canon admission, DOI assignment, deposit, or public-release status; adoption or replacement of the source object requires a separate act.",
+        "Carries forward three technical seams: nonuniform-weight roughness C; inherited R·τ_R versus independently defined Q_R return-credit profiles; primary CRITICAL enum versus critical overlay."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000043",
+      "title": "Entering Structura Reditus: A Complete Ingress to Reditus, Generative Collapse Dynamics, and Contract-First Evaluation (Structura Reditus Ingress Paper)",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.20549483",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "Provides a single ingress into the Structura Reditus corpus, replacing the former three-part orientation burden with one complete front-door paper organized around placement, discipline, and first pass."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000044",
+      "title": "GCD / UMCP — Entering the Corpus: Ingress, Publication Architecture, and Guided Routes",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": null,
+      "venue": null,
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "States the publication architecture of the corpus, assigns each major paper family one primary burden, publishes decision rules for route choice, and formalizes the casepack ladder that follows The First Pass.",
+        "The paper is companion rather than constitutional: it does not replace the Orientation Series, restate the full constitutional derivation, replace continuity or weld papers, or compete with closure papers on domain substance."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000045",
+      "title": "Refusal as Structure: On Critique, Boundary, and the Public Life of Thought",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": null,
+      "venue": null,
+      "publication_year": 2026,
+      "version": "1.0",
+      "status": "active",
+      "source_native_claims": [
+        "Critique is not merely pressure applied from outside; it is one of the ways thought learns the shape of its public surface.",
+        "Refusal can evade accountability but can also protect a boundary against false terms of entry; when refusal clarifies the conditions of contact it makes disagreement more honest."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000046",
+      "title": "Empirical Regime Auditing Under the GCD/UMCP Kernel: Contract-Frozen Calibration, Temporal Diagnostics, Typed Return, and Cross-Stream Evaluation (A Kernel for Empirical Regime Auditing, Version 2.0)",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": null,
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "2.0",
+      "status": "active",
+      "source_native_claims": [
+        "Separates a fixed measurement kernel for the admitted state of an object from a temporal diagnostic layer for detecting how empirical observations move around that state.",
+        "Temporal quantities remain diagnostics unless an explicit closure promotes them; they do not redefine the reserved kernel namespace and do not acquire stance authority through usefulness alone.",
+        "Finite return establishes re-entry under the active contract but does not by itself establish a weld, favorable regime, high integrity, or final conformity.",
+        "The paper is the technical empirical companion to Liber Collapsus; open seams are aligned to UMCP-KERNEL-SPEC.v2.4.0-rc2 without promoting it."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000047",
+      "title": "GCD / UMCP: The First Seam-Chain Casepack: A Worked Case Showing Composed Continuity Across Multiple Welded Seams",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.19870445",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "1.0",
+      "status": "active",
+      "source_native_claims": [
+        "A single welded seam proves that one local continuity claim reconciles under frozen seam accounting; it does not yet prove that continuity composes across a sequence of seams.",
+        "The paper constructs a bounded five-state local episode with two candidate local seams (0->2 and 2->4) and asks whether the composed transition 0->4 reconciles as one chain-level continuity claim under one frozen seam-chain contract.",
+        "Local welds are necessary for seam-chain continuity but not sufficient: no chain residual closure, no composed continuity.",
+        "Non-goal (source-stated): no new domain closure, no resistant-corpus continuity claim, no governance procedure, no universalized local return-rate closure, no portable chain law, no extension or redefinition of Tier-1, and no claim that local welds compose automatically.",
+        "What This Enables Next (source-stated): a small domain closure with welded transitions, a publication-infrastructure casepack using receipt chains, a repository implementation of seam-chain validation, and a failure taxonomy for chain composition; the paper enables these burdens but does not absorb them."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000048",
+      "title": "Toward a temperature-insensitive composite diamond clock",
+      "source_type": "external",
+      "source_authors": [
+        "Sean Lourette",
+        "Andrey Jarmola",
+        "Jabir Chathanathil",
+        "Victor M. Acosta",
+        "A. Glen Birdwell",
+        "Peter Blümler",
+        "Dmitry Budker",
+        "Sebastián C. Carrasco",
+        "Tony G. Ivanov",
+        "Shimon Kolkowitz",
+        "Vladimir S. Malinovsky"
+      ],
+      "doi": "10.1103/z2sl-6gcc",
+      "venue": "Physical Review Applied 25, 064046",
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "Reports a composite diamond-clock scheme addressing the temperature sensitivity of the nitrogen-vacancy zero-field splitting near room temperature (per the article title and the local analysis SRC-000049; the article's own text is not held by the library)."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000049",
+      "title": "Nested Return in a Composite Diamond Clock: A Welded-Seam Audit of Phase Projection, Thermal Nulling, and Residual-Burden Migration",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.22155902",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "1.0",
+      "status": "active",
+      "source_native_claims": [
+        "Manuscript type (source-stated): Tier-2 domain-closure study / independent secondary analysis.",
+        "Two experimentally distinct operations act on different representational spaces: TTZFS-8 eight-phase cycling suppresses pulse-error-generated spectral components (phase-space projection), and a composite D/Q estimator nulls first-order thermal drift while preserving the common oscillator mode (channel-space thermal nulling).",
+        "Once the dominant thermal mode is removed, a previously subdominant residual becomes the governing burden (residual-burden migration).",
+        "The source (Lourette et al.) does not provide a GCD return contract, seam-accounting profile, return credit, residual tolerance, or RunID; 'welded-seam audit' names the audit burden, not a pre-granted weld, and canonical weld cannot be inferred from local restoration (NON_EVALUABLE absent return/seam contract).",
+        "The local operators do not redefine canonical tau_R or the reserved invariants F, omega, S, C, kappa, IC; a separate UMCP run would require its own object definition, adapter, bounded trace, missingness policy, return domain, metric, tolerance, closure registry, and run identity."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000050",
+      "title": "Recursive Accelerating Return: A Generative Collapse Dynamics Theory of Endogenous Generative Capacity",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.22035775",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "GCD-RAR.2026-08-26",
+      "status": "active",
+      "source_native_claims": [
+        "Recursive Accelerating Return (RAR) is formulated as a derived regime of Generative Collapse Dynamics; it does not redefine the Tier-1 UMCP kernel (source-stated publication status).",
+        "The claim is conditional: if structure survives collapse, returns admissibly, alters the next generator under a declared equivalence rule, has a positive identified effect on later productive capacity, and the positive log-gain per unit elapsed inter-return time increases across successive admissible returns, then the trajectory belongs to a RAR solution class of GCD.",
+        "Showing that inheritance caused the rate increase requires an additional longitudinal counterfactual; the classification does not by itself establish causal RAR.",
+        "The study-level contract GCD.RAR.CORE freezes the cycle boundary, admissible return domain, canonical return test, inter-return interval rule, capacity functional, resource normalization, operator-equivalence rule, causal capacity test, model-comparison rule, uncertainty policy, and any exogenous-exposure policy; a domain implementation must additionally declare a Tier-2 mapping contract GCD.RAR.MAP.<domain>.",
+        "Evidence boundary (source-stated): formal theory, synthetic operational demonstrations, and a prospective falsification design are included; no empirical validation of RAR is claimed."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000051",
+      "title": "A hardware-adaptive learning algorithm for superlinear-capacity associative memory on memristor crossbars",
+      "source_type": "external",
+      "source_authors": [
+        "Chengping He",
+        "Mingrui Jiang",
+        "Keyi Shan",
+        "Szu-Hao Yang",
+        "Zefan Li",
+        "Shengbo Wang",
+        "Giacomo Pedretti",
+        "Jim Ignowski",
+        "Can Li"
+      ],
+      "doi": "10.1038/s41467-026-69958-0",
+      "venue": "Nature Communications 17, 3096",
+      "publication_year": 2026,
+      "version": null,
+      "status": "active",
+      "source_native_claims": [
+        "Reports a hardware-adaptive learning algorithm for associative memory on memristor crossbars with released trajectory data (per the article title and the local analysis SRC-000052; the article's own text is not held by the library)."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000052",
+      "title": "Identifiable Return in Memristive Associative Memory: A Generative Collapse Dynamics Analysis of Recurrent Pattern Completion",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.22695434",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "1.2",
+      "status": "active",
+      "source_native_claims": [
+        "Manuscript type (owner-supplied): formal companion method with frozen retrospective source-data analysis of He et al. (SRC-000051).",
+        "Contributions (owner-supplied): an identity-aware recovery certificate; a reproducible retrospective audit of ten released trajectories; target-specific acceptance regions; reconstruction residual; local contraction; implementation-error burden; separation from competing memories; and a prospective test design.",
+        "Version 1.2 boundary (owner-supplied): the analysis includes a retrospective evidence freeze and acquired Figure-3 arrays; it does not retroactively become preregistered; no new chip experiment, completed hardware certificate, or completed UMCP kernel run is claimed."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000053",
+      "title": "Language Across Articulation: Meaning, Translation, and Epistemic Accountability in Structura Reditus",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.22695438",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "1.2 (Publication edition)",
+      "status": "active",
+      "source_native_claims": [
+        "Role and mandate (source-stated): a comparative language paper led by the Unified Language of Recursive Collapse (ULRC), articulating the corpus's position through engagement with Pleyer and colleagues' design-features review; its function is ingress, carrying ULRC's contact discipline into open literature under Tier-2 authority without changing ULRC.",
+        "Evidence boundary (source-stated): supplied source editions and selected primary literature identified in the references; source cutoff 8 September 2026; no new participant data, empirical validation, canonical return, or weld is reported.",
+        "Paper-local formal constructions remain Tier-2 proposals, not kernel definitions or adopted protocol."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000054",
+      "title": "Confinement as Integrity Collapse: A Contract-Frozen Structural Signature of Quark Binding in the GCD/UMCP Measurement Kernel",
+      "source_type": "historical",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.20420835",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "Latest closed edition 2026-05-27 (SS1m-CONFINE-T3-2025; original T3 closure 2025-07-11)",
+      "status": "historical",
+      "source_native_claims": [
+        "The paper asks a complementary measurement question to non-perturbative QCD: what structural signature the quark->hadron boundary leaves when quarks and hadrons are evaluated under a single frozen particle-data closure; the kernel receives only the declared particle trace, not the QCD Lagrangian, a confining potential, Wilson loops, lattice configurations, or a running coupling.",
+        "Under the declared source-local closure, the mean integrity composite falls from 0.581 (quarks) to 0.0111 (hadrons), a 98.1% drop; all 14 conventional hadrons satisfy IC_h < IC_q,min = 0.517 while the arithmetic mean F drops by only 28.5%; the heterogeneity gap amplifies by 10.8x; the 14/14 bound holds across a guard-band sweep, and six exotic hadrons also fall in the hadron integrity band.",
+        "Source-stated non-claims: it is not an analytic proof of QCD confinement, does not solve the Yang-Mills mass-gap problem, and does not replace non-perturbative QCD; its contribution is narrower and falsifiable under the declared closure.",
+        "Source-stated falsifier: a new color-singlet hadron with IC >= 0.517 under the same frozen composite-particle closure would violate the universal-suppression claim of Theorem T3."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000055",
+      "title": "Contract-First Epistemology: Measurement, Return, and the Structure of Legitimate Claims (Full Course Architecture v1.0)",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.20074210",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "Course Architecture v1.0",
+      "status": "active",
+      "source_native_claims": [
+        "A twenty-eight-week college-level teaching architecture within the GCD / UMCP teaching route whose formal field anchor is Contract-First Epistemology of Measurement (record description).",
+        "Course mandate (source-stated): train students to produce auditable evaluative structure before rendering judgment; the primary instructional object is operational fluency, not passive comprehension.",
+        "The course's own audit stance: classroom efficacy should not be asserted as proven until it returns through actual instruction, student artifacts, assessment records, and repair evidence."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000056",
+      "title": "Contract-First Epistemology: Semester I — Method Internalization (Weeks 1–14)",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.20074210",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "Course Architecture v1.0",
+      "status": "active",
+      "source_native_claims": [
+        "Governing Semester Question (source-stated): What must be declared before judgment becomes evaluable?",
+        "Instructional burden (source-stated): make judgment evaluable before students are asked to handle return, ledger reconciliation, diagnostics, domain transfer, critique, or final casepack defense; Weeks 1–14 begin with ordinary judgment and end with the first complete mini-pass.",
+        "Dated May 6, 2026, Course Architecture v1.0, prepared by Clement Paulus."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000057",
+      "title": "Contract-First Epistemology: Semester II — Return, Diagnostics, Transfer, and Production (Weeks 15–28)",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.20074210",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "Course Architecture v1.0",
+      "status": "active",
+      "source_native_claims": [
+        "Governing Semester Question (source-stated): What must return, reconcile, transfer, and be defended before judgment becomes auditable?",
+        "Instructional burden (source-stated): make evaluation durable after Semester I has made evaluation possible; Weeks 15–28 begin with typed return and end with final casepack defense and method transmission.",
+        "Dated May 6, 2026, Course Architecture v1.0, prepared by Clement Paulus."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000058",
+      "title": "Contract-First Epistemology: Full Course Syllabus and Audit Receipt",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.20074210",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "Course Architecture v1.0",
+      "status": "active",
+      "source_native_claims": [
+        "Purpose (source-stated): a compact audit view of the full twenty-eight-week teaching structure, designed to be read before the main course body is assessed; it treats the course itself as an evaluable object (Receipt ID CFE.SYLLABUS-RECEIPT.v1.0).",
+        "Scope (source-stated): front matter, course body, back matter, Teaching Kit, templates, ledgers, readiness checks, rubrics, and final transmission instruments. Out of scope: empirical pilot results, live cohort performance, institutional approval, instructor-specific adaptations, and domain-specific course variants.",
+        "Non-goal (source-stated): do not require students to master the full GCD / UMCP mathematical corpus before they can operate the basic evaluative discipline."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000059",
+      "title": "Shape, Phase, and Forcing in Saturn's Southern Decagon: An Integrated Inference and External-Testing Protocol",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.22550978",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "2.0.1 (Final author edition)",
+      "status": "active",
+      "source_native_claims": [
+        "Primary role (source-stated): analytical methods paper with a proposed observational reanalysis and controlled numerical experiments.",
+        "Primary object (source-stated): the separation of collective angular motion, internal geometric deformation, tracer visibility, and forcing in Saturn's southern wave-number-10 pattern.",
+        "Primary claim (source-stated): mechanism discrimination requires identifiable signal content that the admitted nuisance freedoms and competing models cannot absorb.",
+        "Result status (source-stated): conditional proofs and analytical design; not a completed observational preregistration."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000060",
+      "title": "Prospective Identifiable Return in Associative Memory: A Completed Prospective Computational Test of Identity, Correction, Discrimination, and Reliability",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.22739943",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "1.0",
+      "status": "active",
+      "source_native_claims": [
+        "Manuscript type (paper, Publication record): completed Tier-2 prospective computational evaluation; final publication edition v1.0; UMCP evaluative locus; contract PIR-COMP-2026-09-14-v1.0 (SHA-256 9d156e760fbe...), model freeze MODEL_FREEZE.json (SHA-256 975430177b9d...), run PIR-COMP-R1.",
+        "Lineage (paper §1, Fig. 1): immediate predecessor Paulus, Identifiable Return in Memristive Associative Memory v1.2 (10.5281/zenodo.22695434); external anchor He et al., Nature Communications 17, 3096 (2026), 10.1038/s41467-026-69958-0; SR-OBJ-000023 retained as a separate retrospective object; repository snapshot 7ff9869eae068c82c7e539d296e312591d1a5c0d.",
+        "Frozen object (paper §4, §12): ten 64-coordinate Figure-3 targets; synchronous map x_{t+1} = sign(x_t W), W = g1 - g0 (SRC-FIG3-REALWEIGHT-SYNC-SIGN-v1); independent bit-flip cues p in {0.05, 0.10, 0.20}, p = 0.50 negative control; T = 10; exact terminal target equality; development/confirmation separation with disjoint PCG64 namespaces; four L2 logistic models frozen before confirmation.",
+        "Results (paper §14, results/RESULT_PROFILE.json): 5,711/6,000 recovery-eligible confirmation trajectories reached exact intended-target equality (95.1833%); one-step 2,399/6,000; paired recurrence gain 0.5520, stratified bootstrap 95% CI [0.541667, 0.562504]; 3,312 one-step-fail/ten-step-succeed trials and zero reverse; two identity-rescue trajectories; joint-model confirmation log loss 0.134226 vs error-only 0.175544, identity-only 0.164289, correction-only 0.160711, all three Bonferroni lower bounds positive; reliability 9/10 targets pass at p = 0.05, MU-01 fails with 159/200 (0.7950, lower bound 0.712291); p = 0.50 negative control 71/2,000 (3.55%), leakage audit not triggered.",
+        "Stance (paper §14.6, §19; FINAL_STANCE.md): procedural stance CONFORMANT; identity, recurrence-specific correction, and prospective discrimination earn local computational credit; reliability is partial (9/10), the all-target reliability claim is not supported; MU-01 is retained as a negative target-level result and not repaired post hoc.",
+        "Boundary (paper Publication passport, §2.3, §17.5, §18): the study is computational; the hardware-prospective object remains NON_EVALUABLE under present public evidence and computational success does not become a new physical memristor validation; canonical tau_R, integrity, regime, return credit, and weld are not activated; no universal validation of GCD or Structura Reditus is claimed; three open burdens remain (MU-01 diagnostic, hardware-linked replication, external replication)."
+      ]
+    },
+    {
+      "kind": "author",
+      "id": "AUTH-0001",
+      "display_name": "Clement Paulus",
+      "orcid": "0009-0000-6069-8234",
+      "status": "active"
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000001",
+      "title": "Summa Reditus: A Complete Treatise on Admissible Return Through Collapse",
+      "status": "active",
+      "governing_role": [
+        "canon-facing",
+        "constitutional"
+      ],
+      "source_id": "SRC-000001",
+      "scope": "Gathers and places the Structura Reditus corpus in one ordered body: object, field, theory, authority architecture, functional systems, operational protocol, case range, recursive lineage, publication architecture, and teaching route."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000002",
+      "title": "Reditus & Structura Reditus: Field Constitution & Core-Object Formalization for Admissible Return Through Collapse",
+      "status": "active",
+      "governing_role": [
+        "constitutional"
+      ],
+      "source_id": "SRC-000035",
+      "scope": "States what the object is, what the field is, how the mature hierarchy is ordered, and what burden must be satisfied before a structure may receive return credit."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000003",
+      "title": "Generative Collapse Dynamics: Canon Placement and the Two-Axis Architecture",
+      "status": "active",
+      "governing_role": [
+        "constitutional",
+        "canon-facing"
+      ],
+      "source_id": "SRC-000036",
+      "scope": "Canon placement of GCD after the distinction between object, field, theory, protocol, discovery engine, language system, and domain closure has become explicit."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000004",
+      "title": "The Functional Systems of Generative Collapse Dynamics",
+      "status": "active",
+      "governing_role": [
+        "functional-source",
+        "constitutional"
+      ],
+      "source_id": "SRC-000037",
+      "scope": "Formalizes the relation among UMCP, RCFT, and ULRC after the mature hierarchy has been fixed: freeze before judgment, explore before canon, translate without drift."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000005",
+      "title": "The Threefold Authority Order: Tier-1, Tier-0, and Tier-2 in Canon, Protocol, and Translation",
+      "status": "active",
+      "governing_role": [
+        "authority-axis",
+        "specification"
+      ],
+      "source_id": "SRC-000002",
+      "scope": "The threefold authority order governing what may define, execute, validate, translate, extend, adopt, or preserve within the corpus. Functional systems govern the kind of work; authority tiers govern the kind of authority."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000006",
+      "title": "UMCP Operating System: Functional Ground, Formal Protocol, and Diagnostic Atlas",
+      "status": "active",
+      "governing_role": [
+        "functional-source",
+        "specification"
+      ],
+      "source_id": "SRC-000004",
+      "scope": "The contract-first operating system for evaluable structure inside Structura Reditus, as source-of-truth reference and practical protocol."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000007",
+      "title": "Recursive Collapse Field Theory Operating System: Discovery, Candidate Maturity, and Generative Field-Hypothesis Discipline",
+      "status": "active",
+      "governing_role": [
+        "functional-source",
+        "specification"
+      ],
+      "source_id": "SRC-000005",
+      "scope": "The disciplined environment in which recursive-collapse structures, field hypotheses, candidate invariants, domain mappings, diagnostic proposals, external-data bridge candidates, and closure paths may be generated before they are frozen, clarified, evaluated, adopted, rejected, or preserved as exploratory."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000008",
+      "title": "ULRC Operating System: Language, Refusal, Translation, and Honest Contact",
+      "status": "active",
+      "governing_role": [
+        "functional-source",
+        "language-contact",
+        "specification"
+      ],
+      "source_id": "SRC-000003",
+      "scope": "The functional system that keeps language contact-bearing before evaluation begins, fixed as both source-of-truth reference and practical reading/writing manual."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000009",
+      "title": "Liber Collapsus: De Reditu per Collapsum et de Identitate Servata",
+      "status": "active",
+      "governing_role": [
+        "canon-facing",
+        "language-contact"
+      ],
+      "source_id": "SRC-000018",
+      "scope": "Orders Reditus in brief mathematical and Latin form as a canonically ordered treatment and local witness; declares the object, exposes its own change from the 2025 edition, and states the rules by which Reditus may be proven."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000010",
+      "title": "Generative Collapse Dynamics (UMCP/GCD): Enabling Cross-Domain Comparability via Contract-Frozen Kernel Invariants and Typed Return",
+      "status": "superseded",
+      "governing_role": [
+        "kernel-reference",
+        "specification"
+      ],
+      "source_id": "SRC-000015",
+      "scope": "What the framework computes: kernel ledger, typed return, recurring diagnostics (Δ = F − IC, ρ = IC/F), frozen parameters and structural constants, regime classification, seam budget, and the v2.1.5 verification summary (16 domain closures, 406 scale-ladder objects)."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000011",
+      "title": "Structura Collapsus: Collapse-Kernel and Protocol Reference for Generative Collapse Dynamics within the Structura Reditus Corpus",
+      "status": "active",
+      "governing_role": [
+        "kernel-reference",
+        "protocol"
+      ],
+      "source_id": "SRC-000038",
+      "scope": "The technical reference by which the collapse side of GCD/UMCP becomes executable, auditable, and portable; explains why the architecture takes this form and how each component participates in collapse-return evaluation."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000012",
+      "title": "UMCP Kernel Specification",
+      "status": "candidate",
+      "governing_role": [
+        "specification",
+        "kernel-reference"
+      ],
+      "source_id": "SRC-000039",
+      "scope": "Specify the fixed kernel, typed-return interface, seam-accounting interface, validators, run record, and implementation boundaries as a local technical witness under Summa Reditus, Architecture Freeze v1.0."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000013",
+      "title": "UMCP Kernel Specification Repair Audit",
+      "status": "candidate",
+      "governing_role": [
+        "specification"
+      ],
+      "source_id": "SRC-000040",
+      "scope": "Audit receipt for the local UMCP kernel specification repair: what changed in rc2, what remained invariant, and what remains open."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000014",
+      "title": "Structura Reditus Publishing Protocol: Canon-facing publication, source, version, and repair discipline",
+      "status": "active",
+      "governing_role": [
+        "publication-protocol",
+        "protocol"
+      ],
+      "source_id": "SRC-000041",
+      "scope": "Govern how local works enter, remain legible within, and are repaired inside the completed Structura Reditus corpus."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000015",
+      "title": "Structura Reditus Publishing Protocol",
+      "status": "candidate",
+      "governing_role": [
+        "publication-protocol",
+        "protocol"
+      ],
+      "source_id": "SRC-000042",
+      "scope": "Govern how local works enter, remain legible within, and are repaired inside the completed corpus, as a local publication-protocol witness under Summa Reditus, Architecture Freeze v1.0."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000016",
+      "title": "Entering Structura Reditus: A Complete Ingress to Reditus, Generative Collapse Dynamics, and Contract-First Evaluation",
+      "status": "active",
+      "governing_role": [
+        "ingress"
+      ],
+      "source_id": "SRC-000043",
+      "scope": "One-paper ingress into the corpus in three movements: placement (mature hierarchy), discipline (why admissible return requires Axiom-0, frozen contract, bounded trace, closure availability, typed return, integrity accounting, missingness preservation, seam discipline, three-valued stance), and first pass."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000017",
+      "title": "GCD / UMCP — Entering the Corpus: Ingress, Publication Architecture, and Guided Routes",
+      "status": "unresolved",
+      "governing_role": [
+        "ingress",
+        "publication-protocol"
+      ],
+      "source_id": "SRC-000044",
+      "scope": "Publication architecture of the corpus, one primary burden per paper family, decision rules for route choice, and the casepack ladder following The First Pass."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000018",
+      "title": "Refusal as Structure: On Critique, Boundary, and the Public Life of Thought",
+      "status": "active",
+      "governing_role": [
+        "language-contact"
+      ],
+      "source_id": "SRC-000045",
+      "scope": "Locating the ground from which critique speaks; refusal as protection of a boundary against false terms of entry when it clarifies the conditions of contact."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000019",
+      "title": "Generative Collapse Dynamics (UMCP/GCD): Enabling Cross-Domain Comparability via Contract-Frozen Kernel Invariants and Typed Return",
+      "status": "active",
+      "governing_role": [
+        "kernel-reference",
+        "specification"
+      ],
+      "source_id": "SRC-000015",
+      "scope": "What the framework computes: kernel ledger, typed return, recurring diagnostics (Δ = F − IC, ρ = IC/F), frozen parameters and structural constants, regime classification, seam budget, and the v2.1.5 verification summary (16 domain closures, 406 scale-ladder objects)."
+    }
+  ]
+}

@@ -4,3 +4,6 @@ __pycache__/
 SR_LIBRARY_GOVERNING_CORE_HANDOFF_v1_0/
 # Corpus census working packages are evidence for allocation passes, not registry content.
 SR_CORPUS_CENSUS_WORKING_PACKAGE_v*/
+
+# Advisory lock for the identifier reservation ledger (runtime only)
+registry/reservations/.ledger.lock

@@ -450,23 +450,31 @@ def check_reserved_identities(registry: dict, report: ValidationReport, receipts
 
 
 def validate_registry(registry: dict = None, schemas: dict = None, taxonomies: dict = None,
-                      released_hashes: dict = None, receipts: dict = None) -> ValidationReport:
+                      released_hashes: dict = None, receipts: dict = None,
+                      reservations: dict = None) -> ValidationReport:
     """Run every automated validation check and return the full report.
 
     Released-governing-record immutability is enforced against the release
     manifests when the live registry is validated (registry is None). Callers
-    supplying their own registry pass ``released_hashes`` explicitly.
+    supplying their own registry pass ``released_hashes`` explicitly. The
+    identifier reservation ledger is checked the same way.
     """
+    from . import allocation
+
     if registry is None:
         registry = loader.load_registry()
         if released_hashes is None:
             released_hashes = loader.released_governing_hashes()
         if receipts is None:
             receipts = loader.load_receipts()
+        if reservations is None:
+            reservations = allocation.load_reservations()
     if released_hashes is None:
         released_hashes = {}
     if receipts is None:
         receipts = {}
+    if reservations is None:
+        reservations = {}
     if schemas is None:
         schemas = loader.load_schemas()
     if taxonomies is None:
@@ -487,4 +495,5 @@ def validate_registry(registry: dict = None, schemas: dict = None, taxonomies: d
     check_source_lineage(registry, report)
     check_reserved_identities(registry, report, receipts)
     check_governing(registry, report, released_hashes)
+    allocation.check_reservations(registry, receipts, reservations, report)
     return report
