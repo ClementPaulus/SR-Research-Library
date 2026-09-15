@@ -18,3 +18,18 @@ Revisions normally retain an ObjectID and change the version; the previous state
 An ObjectID named on a non-accepted receipt (RETURNED_FOR_REPAIR, REJECTED) is reserved for that submission and is never reallocated to a different work; it enters the registry only when the same work is re-admitted. The validator (`reserved-identities`) rejects a registered object that carries such an ID without an ACCEPTED receipt.
 
 Source identity (`SRC-*`) is distinct from the archive concept (`concept_doi`) and from a specific deposited version (`version_doi`). A later edition of the same named work normally advances `version` on the same `SRC-*` (or supersedes it with a new `SRC-*` that lists the old one in `supersedes`); a new version DOI alone never creates a new source or research object.
+
+## Allocation and the reservation ledger (SR-RESERVATION.v0.1.0)
+
+No browser and no isolated checkout computes "the next free number" on its own. `validators.allocation`
+reconciles committed records, `registry/objects/history/`, receipts and the identities they name,
+`.submission.json` snapshots, and the ledger under `registry/reservations/<value>.json`
+(`schema/reservation.schema.json`: namespace, value, public-safe operation key, purpose, state
+`reserved | published | withdrawn`, time, route). The portal serializes allocation with a database row lock
+and publishes ledger entries through the same protected pull-request path as records; direct contributors
+use `python -m validators.reserve`. The same operation key always returns the same value. A reserved value
+is never reused for different work; withdrawn values are never recycled; `check_reservations` in
+`validators.validate` flags a value that is still `reserved` although its record is committed, and one value
+held by two operations. Allocation refuses within 100 values of a namespace's schema limit
+(`NamespaceExhausted`); widening a namespace is a versioned migration, never a wrap. Direct pull requests
+that propose unreserved identifiers are brought into the ledger before merge.

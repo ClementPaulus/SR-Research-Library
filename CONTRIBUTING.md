@@ -17,8 +17,15 @@ Ground rules that apply to every step:
 
 ## 1. Requesting or registering an AuthorID
 
-1. Take the next free identifier in the `AUTH-NNNN` namespace (check
-   `registry/authors/`).
+The researcher portal assigns an AuthorID automatically after email
+verification (see [docs/PORTAL_CONTRIBUTING.md](docs/PORTAL_CONTRIBUTING.md)).
+For the direct route:
+
+1. Reserve the identifier through the shared ledger instead of counting files:
+   `python -m validators.reserve AUTH --purpose "author registration"` writes
+   `registry/reservations/AUTH-NNNN.json`; commit it with the record. Never
+   claim an existing AuthorID by matching a name, email, or ORCID — that needs
+   maintainer-verified evidence.
 2. Create `registry/authors/AUTH-NNNN.json` conforming to
    `schema/author.schema.json` with at least:
    - `author_id` — e.g. `AUTH-0002`
@@ -31,14 +38,20 @@ Ground rules that apply to every step:
    - `credentials` — optional; each entry needs a `statement` and a
      `verification_state` (`unverified`, `self-declared`,
      `externally-verified`). Credentials are provenance metadata only.
-3. Run `python -m validators.validate` and confirm no issues.
-4. Open a pull request adding only that file.
+3. Run `python -m validators.validate` and confirm no issues, then mark the
+   reservation published:
+   `python -m validators.reserve --publish AUTH-NNNN --record registry/authors/AUTH-NNNN.json`.
+4. Regenerate the public projection (`python -m validators.build_site`); the
+   author page and search index are part of the committed site.
+5. Open a pull request adding the author record, the reservation entry, and the
+   regenerated `site/`.
 
 The AuthorID is stable for life; contribution history changes around it.
 
 ## 2. Preparing a research-object record
 
-1. Take the next free identifier in the `SR-OBJ-NNNNNN` namespace.
+1. Reserve the identifier: `python -m validators.reserve SR-OBJ --purpose "<short purpose>"`
+   (repeat for `SRC` and `REL`). Reserved values are never reused for different work.
 2. Create a JSON file conforming to `schema/object.schema.json`. Every field
    listed as required in the schema must be present, including:
    - exactly one `tier2_class.primary` from `taxonomy/tier2_classes.yaml`
@@ -163,16 +176,23 @@ request and push to `main`; `main` should be protected as described in
 
 ## 6. Submitting work
 
-1. Add your new files under `registry/` (author, sources, relations, object).
+1. Add your new files under `registry/` (author, sources, relations, object)
+   together with their `registry/reservations/` entries.
 2. Run the validators (§5) until clean.
 3. Evaluate admission locally:
-   `python -m validators.admit path/to/SR-OBJ-NNNNNN.json`
-   (add `--write` to store the receipt under `receipts/`, and `--register`
-   to place an ACCEPTED record into `registry/objects/`; any previously
-   registered version is archived to `registry/objects/history/` first).
+   `python -m validators.admit path/to/SR-OBJ-NNNNNN.json --write`
+   stores the complete receipt bundle under `receipts/`: the `.json` and `.md`
+   receipt, the exact submitted-record snapshot (`RCPT-NNNNNN.submission.json`)
+   for every decision, and the companion execution manifest
+   (`receipts/executions/RCPT-NNNNNN.execution.json`). Add
+   `--source-file PATH` to record manuscript/data hashes (the files themselves
+   never enter Git) and `--register` to place an ACCEPTED record into
+   `registry/objects/` (any previously registered version is archived to
+   `registry/objects/history/` first; the reservation is marked published).
 4. Regenerate the public projection: `python -m validators.build_site`.
-5. Open a pull request containing the registry files, the generated
-   receipt, and the regenerated `site/`.
+5. Open a pull request containing the registry files, reservation entries, the
+   receipt bundle, and the regenerated `site/`. The default branch requires the
+   `validate` check and an up-to-date base.
 
 ## 7. Interpreting admission receipts
 

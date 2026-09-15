@@ -34,7 +34,8 @@ def scratch_repo(tmp_path_factory):
     """A committed clone of the current tree (registry, schema, taxonomy, receipts, validators) with synthetic fixtures added."""
     root = tmp_path_factory.mktemp("scratch-repo")
     for folder in ("registry", "schema", "taxonomy", "receipts", "releases", "validators", "docs"):
-        shutil.copytree(REPO_ROOT / folder, root / folder, ignore=shutil.ignore_patterns("__pycache__", ".ledger.lock"))
+        shutil.copytree(REPO_ROOT / folder, root / folder,
+                        ignore=shutil.ignore_patterns("__pycache__", ".ledger.lock", "browser", "*.png", "*.zip"))
     for name in ("requirements.txt", "requirements-dev.txt", "pyproject.toml", "ENGINE_CONTRACT.md", "LIBRARY_SPECIFICATION.md"):
         shutil.copy(REPO_ROOT / name, root / name)
     (root / "site").mkdir()

@@ -74,10 +74,22 @@ and still blocked: `SR-OBJ-000016` (SEAM-0011). After the 2026-09-14
 ingress of `SR-OBJ-000031` (Prospective Identifiable Return in Associative
 Memory; SRC-000060, REL-000006, RCPT-000037) the next free identifiers are
 `SR-OBJ-000032`, `SRC-000061`, `SR-GOV-000020`, `REL-000007`,
-`RCPT-000038`. Recalculate from the live tree before allocating; see
+`RCPT-000038`. Do not recalculate by hand: reserve through the shared
+ledger (`python -m validators.reserve <NAMESPACE> --purpose "..."`, or
+automatically via the portal), which reconciles records, history, receipts,
+snapshots, and `registry/reservations/`. See
+[docs/IDENTIFIERS.md](../docs/IDENTIFIERS.md),
 [docs/TIER2_CENSUS_2026-09.md](../docs/TIER2_CENSUS_2026-09.md) for the
 census readback and [LIBRARY_SPECIFICATION.md §6.1](../LIBRARY_SPECIFICATION.md)
 for the Tier-2 admission decision rule.
+
+### Reservations (`reservations/`)
+
+`registry/reservations/<value>.json` is the additive identifier ledger
+(`schema/reservation.schema.json`, SR-RESERVATION.v0.1.0). It is infrastructure,
+not a fourth registry surface: entries carry no research content, are excluded
+from `loader.load_registry`, and are validated by `check_reservations`. States
+are `reserved`, `published` (record committed), or `withdrawn` (never reused).
 
 ## Governing references
 
