@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -20,3 +22,35 @@ jobs:
         run: |
           python -m validators.build_site
           git diff --exit-code -- site
+      - name: Portal publication branches touch only reviewed runtime paths
+        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'portal/')
+        run: |
+          git fetch --no-tags origin "${{ github.base_ref }}"
+          python - <<'EOF'
+          import subprocess, sys
+          sys.path.insert(0, "portal")
+          from registry_bridge.policy import is_publishable
+          base = "origin/${{ github.base_ref }}"
+          changed = subprocess.check_output(["git", "diff", "--name-only", f"{base}...HEAD"], text=True).split()
+          bad = [p for p in changed if not is_publishable(p)]
+          if bad:
+              print("Runtime publication changed paths outside the policy:\n  " + "\n  ".join(bad))
+              sys.exit(1)
+          print(f"{len(changed)} changed path(s) all within the runtime publication policy")
+          EOF
+
+  portal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --require-hashes -r portal/requirements.txt -r portal/requirements-dev.txt
+      - run: cd portal && python manage.py check
+        env:
+          DJANGO_SETTINGS_MODULE: config.settings.test
+      - run: cd portal && python manage.py makemigrations --check --dry-run
+        env:
+          DJANGO_SETTINGS_MODULE: config.settings.test
+      - run: cd portal && python -m pytest tests -q -p no:warnings

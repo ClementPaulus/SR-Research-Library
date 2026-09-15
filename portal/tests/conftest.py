@@ -35,7 +35,7 @@ def scratch_repo(tmp_path_factory):
     root = tmp_path_factory.mktemp("scratch-repo")
     for folder in ("registry", "schema", "taxonomy", "receipts", "releases", "validators", "docs"):
         shutil.copytree(REPO_ROOT / folder, root / folder, ignore=shutil.ignore_patterns("__pycache__", ".ledger.lock"))
-    for name in ("requirements.txt", "requirements-dev.txt", "pyproject.toml"):
+    for name in ("requirements.txt", "requirements-dev.txt", "pyproject.toml", "ENGINE_CONTRACT.md", "LIBRARY_SPECIFICATION.md"):
         shutil.copy(REPO_ROOT / name, root / name)
     (root / "site").mkdir()
     (root / "registry" / "sources" / "SRC-000001.json").write_text(json.dumps(SYNTHETIC_SOURCE, indent=2) + "\n", encoding="utf-8")

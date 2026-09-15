@@ -1,0 +1,71 @@
+{
+  "object_id": "SR-OBJ-NEW",
+  "title": "Synthetic self-test object for library admission machinery",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "diagnostic",
+    "secondary": []
+  },
+  "functional_locus": "none",
+  "source_ids": [
+    "SRC-000001"
+  ],
+  "lens": "Library self-test lens: the object examines the admission machinery itself.",
+  "domain": {
+    "primary": "structura-reditus-core",
+    "secondary": []
+  },
+  "object_of_study": "The admission-gate machinery of the Research Library.",
+  "structural_focus": {
+    "primary": "return",
+    "secondary": [
+      "boundary"
+    ]
+  },
+  "main_question": "Does a structurally complete record pass all seven admission gates?",
+  "secondary_questions": [],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "The synthetic source states only that it exists as a test fixture."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "A structurally complete record should be ACCEPTED by the gates."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "no-empirical-validation",
+    "secondary": []
+  },
+  "provenance": "synthetic-test-object",
+  "maturity": "exploratory",
+  "relations": [],
+  "version": "0.1.0",
+  "date": "2026-09-13T00:00:00Z",
+  "publication_state": "registered-only",
+  "source_boundary": "The synthetic source establishes nothing beyond its own existence as a fixture; no scholarly claim is drawn from it.",
+  "authority_boundary": "This object claims no Tier-0 or Tier-1 authority, no scientific truth, and no endorsement of any external source.",
+  "scope": "Library self-testing only.",
+  "exclusions": [
+    "Any real scholarly claim."
+  ],
+  "preserved_meaning": "The synthetic source's own statement is preserved verbatim in its source-native claims.",
+  "missingness": [
+    {
+      "item": "No empirical validation performed",
+      "class": "NON_BLOCKING",
+      "notes": "The object is a synthetic test fixture."
+    }
+  ],
+  "distortion_or_substitution_risk": "None beyond the declared synthetic framing; the source is quoted, not interpreted.",
+  "next_burden": "None beyond continued test maintenance.",
+  "repair_route": "Amend this record and resubmit through the same seven gates.",
+  "notes": "SYNTHETIC: test fixture only; explicitly marked as synthetic.",
+  "synthetic": true
+}

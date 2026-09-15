@@ -46,8 +46,15 @@ def file_sha256(path: Path) -> str:
 
 
 def git_revision(repo_root: Path = None, allow_dirty: bool = True) -> str:
-    """Current commit of the checkout, marked dirty when the working tree differs."""
+    """Current commit of the checkout, marked dirty when the working tree differs.
+
+    Pinned evaluation checkouts are produced by ``git archive`` and carry no .git
+    directory; they record their base commit in ``.sr-base-sha`` instead.
+    """
     repo_root = repo_root or loader.REPO_ROOT
+    marker = repo_root / ".sr-base-sha"
+    if not (repo_root / ".git").exists() and marker.exists():
+        return marker.read_text(encoding="utf-8").strip()
     try:
         sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=repo_root, text=True,
                                       stderr=subprocess.DEVNULL).strip()

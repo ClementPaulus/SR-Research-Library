@@ -1,0 +1,30 @@
+name: Contribution question
+description: Ask how to route a contribution (submit or revise work, suggest a source, propose a connection) without needing an AuthorID first.
+title: "[Question] "
+labels: [question]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Asking a question never requires an AuthorID. Persistent private threads live in the portal workspace (**Questions & suggestions**); this form is the public alternative for direct contributors. Do not paste private manuscript contents here.
+  - type: dropdown
+    id: route
+    attributes:
+      label: Which route is this about?
+      options: ["Submit or revise research", "Suggest an external source", "Propose a connection or challenge", "Not sure"]
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+  - type: input
+    id: pointer
+    attributes:
+      label: Source pointer (DOI, URL, or record ID — optional)
+  - type: input
+    id: record
+    attributes:
+      label: Related record (SR-OBJ / SRC / SR-GOV / RCPT — optional)

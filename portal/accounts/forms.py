@@ -39,10 +39,10 @@ class PortalAccountAdapter(DefaultAccountAdapter):
         return user
 
     def get_login_redirect_url(self, request):
-        return "/workspace"
+        return "/workspace/"
 
     def get_email_verification_redirect_url(self, email_address):
-        return "/workspace"
+        return "/workspace/"
 
     def confirm_email(self, request, email_address):
         super().confirm_email(request, email_address)

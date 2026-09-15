@@ -48,7 +48,7 @@ def test_a01_signup_verify_registers_author_and_lands_in_workspace(client):
     assert "new@example.invalid" not in committed[f"registry/authors/{binding.author_id}.json"]
     # Log in and reach the workspace.
     client.post("/login", {"login": "new@example.invalid", "password": "correct-horse-battery-staple-9"}, follow=True)
-    response = client.get("/workspace")
+    response = client.get("/workspace/")
     assert response.status_code == 200 and binding.author_id.encode() in response.content
 
 
@@ -64,7 +64,7 @@ def test_a02_returning_session_keeps_identity_without_duplicate_registration(reg
     registered_author.save()
     assert AuthorBinding.objects.get(account=registered_author).author_id == before
     client.force_login(registered_author)
-    assert before.encode() in client.get("/workspace").content
+    assert before.encode() in client.get("/workspace/").content
 
 
 def test_a03_password_reset_retains_identity_and_revokes_sessions(registered_author, client):
@@ -88,7 +88,7 @@ def test_a03_password_reset_retains_identity_and_revokes_sessions(registered_aut
 
     removed = revoke_other_sessions(account, client.session.session_key)
     assert removed >= 1
-    assert other.get("/workspace").status_code == 302
+    assert other.get("/workspace/").status_code == 302
     from django.contrib.sessions.models import Session
 
     assert not Session.objects.filter(session_key=other_key).exists()

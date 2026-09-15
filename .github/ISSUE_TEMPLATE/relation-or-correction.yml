@@ -1,0 +1,39 @@
+name: Relation proposal or record correction
+description: Propose a typed REL-* connection between records (with the evidence that supports it) or report a documented correction to an existing record.
+title: "[Relation/Correction] "
+labels: [relation]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A proposed relation becomes a durable REL-* record only with stated evidence and review. Generated "possible structural connections" on record pages are retrieval suggestions, not relations. Disagreement (`challenges`, `contrasts_with`) is an ordinary relation and never an admission failure. A source-only suggestion is not authored research.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What are you proposing?
+      options: ["A new relation between existing records", "A correction to an existing record (new version; history preserved)", "A source suggestion (SRC-* only)"]
+    validations:
+      required: true
+  - type: input
+    id: from_id
+    attributes:
+      label: From (SR-OBJ-* or SRC-*)
+  - type: input
+    id: to_id
+    attributes:
+      label: To (SR-OBJ-* or SRC-*)
+  - type: input
+    id: relation_type
+    attributes:
+      label: Relation type (from taxonomy/relation_types.yaml)
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What evidence supports this proposed connection or correction?
+      description: Point to the source passage, version, or record field. Nothing is inferred beyond what you can point to.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: For corrections — exact field(s) and the source-grounded correct value

@@ -160,7 +160,8 @@ def receipt_detail(request, receipt_id: str):
 
 def receipts(request):
     projection = current_projection()
-    rows = sorted(projection.receipts.values(), key=lambda r: r["receipt_id"])
+    rows = [dict(r, identity=r.get("object_id") or r.get("provisional_object_id") or r.get("submission_identity"))
+            for r in sorted(projection.receipts.values(), key=lambda r: r["receipt_id"])]
     return render(request, "catalog/receipts.html", {"projection": projection, "rows": rows})
 
 
