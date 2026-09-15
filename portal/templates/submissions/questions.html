@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Questions and suggestions{% endblock %}
+{% block content %}
+<h1>Questions, source suggestions, and relation proposals</h1>
+<p class="note">Suggesting an external source or proposing a connection is not authored research and never counts toward your profile. Persistent threads are private to you and the maintainers.</p>
+<form method="post" class="stack card">{% csrf_token %}
+  <label for="route">What is this about?</label>
+  <select id="route" name="route"><option value="general">A contribution question</option><option value="source_suggestion">Suggest an external source</option><option value="relation_proposal">Propose a connection or challenge</option></select>
+  <label for="text">Your message</label><textarea id="text" name="text" rows="4" required></textarea>
+  <label for="source_pointer">Source pointer (DOI, URL, record ID — optional)</label><input id="source_pointer" name="source_pointer" type="text">
+  <div class="actions"><button class="primary" type="submit">Send</button></div>
+</form>
+<h2>Your threads</h2>
+{% for q in threads %}<div class="card"><p><span class="status">{{ q.route }}</span> <span class="note">{{ q.created_at|date:"Y-m-d H:i" }}{% if q.resolved %} · resolved{% endif %}</span></p><p>{{ q.text }}</p>{% if q.source_pointer %}<p class="note">{{ q.source_pointer }}</p>{% endif %}{% for r in q.responses.all %}<p style="margin-left:1rem"><strong>{{ r.author.display_name }}</strong>: {{ r.text }}</p>{% endfor %}</div>{% empty %}<p class="note">No threads yet.</p>{% endfor %}
+{% endblock %}

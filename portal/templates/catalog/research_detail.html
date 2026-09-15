@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}{{ o.title }} — {{ o.object_id }}{% endblock %}
+{% block content %}
+<p><span class="kind kind-obj">Tier-2 research object</span> <span class="status">authority: {{ o.authority.tier }}</span>
+  {% if receipt %}<a class="status status-{% if receipt.decision == 'ACCEPTED' %}ok{% elif receipt.decision == 'RETURNED_FOR_REPAIR' %}warn{% else %}bad{% endif %}" href="{% url 'catalog:receipt_detail' receipt.receipt_id %}">{{ receipt.receipt_id }} · {{ receipt.decision }}</a>{% endif %}</p>
+<h1>{{ o.title }}</h1>
+<dl>
+  <dt>Identifier</dt><dd><code>{{ o.object_id }}</code></dd>
+  <dt>Authors</dt><dd>{% for a in authors %}<a href="{% url 'catalog:author_detail' a.author_id %}">{{ a.display_name }}</a> ({{ a.author_id }}){% if not forloop.last %}, {% endif %}{% endfor %}</dd>
+  <dt>Version / date</dt><dd>{{ o.version }} · {{ o.date }}</dd>
+  <dt>Tier-2 class</dt><dd>{{ o.tier2_class.primary }}{% if o.tier2_class.secondary %} <span class="note">secondary: {{ o.tier2_class.secondary|join:", " }}</span>{% endif %}</dd>
+  <dt>Functional locus</dt><dd>{{ o.functional_locus }}</dd>
+  <dt>Domain</dt><dd>{{ o.domain.primary }}{% if o.domain.secondary %} <span class="note">secondary: {{ o.domain.secondary|join:", " }}</span>{% endif %}</dd>
+  <dt>Structural focus</dt><dd>{{ o.structural_focus.primary }}{% if o.structural_focus.secondary %} <span class="note">secondary: {{ o.structural_focus.secondary|join:", " }}</span>{% endif %}</dd>
+  <dt>Evidence mode</dt><dd>{{ o.evidence_mode.primary }}{% if o.evidence_mode.secondary %} <span class="note">secondary: {{ o.evidence_mode.secondary|join:", " }}</span>{% endif %}</dd>
+  <dt>Provenance</dt><dd>{{ o.provenance }}</dd>
+  <dt>Maturity</dt><dd>{{ o.maturity }}</dd>
+  <dt>Publication state</dt><dd>{{ o.publication_state }}</dd>
+  <dt>Lens</dt><dd>{{ o.lens }}</dd>
+  <dt>Object of study</dt><dd>{{ o.object_of_study }}</dd>
+</dl>
+<h2>Main question</h2><p>{{ o.main_question }}</p>
+{% if o.secondary_questions %}<h3>Secondary questions</h3><ul>{% for q in o.secondary_questions %}<li>{{ q }}</li>{% endfor %}</ul>{% endif %}
+<h2>Boundaries</h2>
+<div class="boundary"><strong>Authority boundary.</strong> {{ o.authority_boundary }}</div>
+<div class="boundary"><strong>Source boundary.</strong> {{ o.source_boundary }}</div>
+<dl>
+  <dt>Scope</dt><dd>{{ o.scope }}</dd>
+  <dt>Exclusions</dt><dd>{% if o.exclusions %}<ul>{% for e in o.exclusions %}<li>{{ e }}</li>{% endfor %}</ul>{% else %}<span class="note">none declared</span>{% endif %}</dd>
+  <dt>Preserved meaning</dt><dd>{{ o.preserved_meaning }}</dd>
+  <dt>Distortion / substitution risk</dt><dd>{{ o.distortion_or_substitution_risk }}</dd>
+  <dt>Next burden</dt><dd>{{ o.next_burden }}</dd>
+  <dt>Repair route</dt><dd>{{ o.repair_route }}</dd>
+</dl>
+<h2>Claim layers</h2>
+<table><thead><tr><th>Layer</th><th>Claim</th></tr></thead><tbody>
+{% for c in o.claim_layers %}<tr><td><span class="status">{{ c.layer }}</span></td><td>{{ c.claim }}</td></tr>{% empty %}<tr><td colspan="2" class="note">No claim layers declared.</td></tr>{% endfor %}
+</tbody></table>
+<h2>Missingness</h2>
+{% if o.missingness %}<table><thead><tr><th>Item</th><th>Class</th><th>Notes</th></tr></thead><tbody>
+{% for m in o.missingness %}<tr><td>{{ m.item }}</td><td><span class="status">{{ m.class }}</span></td><td>{{ m.notes|default:"" }}</td></tr>{% endfor %}</tbody></table>
+{% else %}<p class="note">Nothing declared missing.</p>{% endif %}
+<h2>Sources</h2>
+{% for s in sources %}
+  <div class="card"><span class="kind kind-src">Source</span> <a href="{% url 'catalog:source_detail' s.source_id %}">{{ s.source_id }} — {{ s.title }}</a>
+    <p class="note">{{ s.source_type }}{% if s.venue %} · {{ s.venue }}{% endif %}{% if s.publication_year %} {{ s.publication_year }}{% endif %}{% if s.identifier.doi %} · DOI {{ s.identifier.doi }}{% endif %}{% if s.version %} · version {{ s.version }}{% endif %}</p>
+    {% for l in s.links %}<a href="{{ l.url }}" rel="external noopener">{{ l.label }}</a>{% if l.preferred %} <span class="note">(preferred)</span>{% endif %}{% if not forloop.last %} · {% endif %}{% endfor %}
+  </div>
+{% empty %}<p class="note">No sources declared.</p>{% endfor %}
+<h2>Governing references</h2>
+{% if governing %}<ul>{% for g in governing %}<li><a href="{% url 'catalog:governing_detail' g.governing_id %}">{{ g.governing_id }} — {{ g.title }}</a></li>{% endfor %}</ul>{% else %}<p class="note">None listed.</p>{% endif %}
+<p class="note">Governing references constrain this record; they transfer no authority. The object remains Tier-2.</p>
+<h2>Declared relations</h2>
+<table><thead><tr><th>REL</th><th>Type</th><th>From</th><th>To</th><th>Notes</th></tr></thead><tbody>
+{% for r in relations %}<tr><td>{{ r.relation_id }}</td><td>{{ r.relation_type }}</td><td>{{ r.from_id }}</td><td>{{ r.to_id }}</td><td>{{ r.notes|default:"" }}</td></tr>{% empty %}<tr><td colspan="5" class="note">No relations declared by this object.</td></tr>{% endfor %}
+{% for r in inbound %}<tr><td>{{ r.relation_id }}</td><td>{{ r.relation_type }} <span class="note">(declared by {{ r.from_id }})</span></td><td>{{ r.from_id }}</td><td>{{ r.to_id }}</td><td>{{ r.notes|default:"" }}</td></tr>{% endfor %}
+</tbody></table>
+<h2>Possible structural connections (generated suggestions)</h2>
+<div class="boundary"><strong>Generated retrieval suggestion, not a declared relation.</strong> Suggestions are sorted by the number of specific shared fields; they do not establish scientific equivalence, shared mechanism, causation, support, or authority transfer, and "strength" is a detector label, not a probability.</div>
+{% if suggestions %}
+<table><thead><tr><th>Object</th><th>Detector strength</th><th>Shared fields / signals</th><th>Candidate relation type(s)</th><th>Declared?</th></tr></thead><tbody>
+{% for c in suggestions %}<tr><td><a href="{% url 'catalog:research_detail' c.other_id %}">{{ c.other_id }} — {{ c.other_title }}</a></td><td><span class="status">{{ c.strength }}</span></td>
+<td>{% for s in c.signals %}{{ s.evidence }}{% if not forloop.last %}; {% endif %}{% endfor %}</td><td>{{ c.candidate_relation_types|join:", " }}</td>
+<td>{% if c.already_declared %}yes{% else %}no — {% if user.is_authenticated %}<a href="{% url 'submissions:questions' %}">propose a relation</a>{% else %}<a href="{% url 'accounts:login' %}">log in to propose a relation</a>{% endif %}{% endif %}</td></tr>{% endfor %}
+</tbody></table>
+<p class="note">Showing {{ suggestions|length }} of {{ total_suggestions }}.{% if total_suggestions > suggestions|length %} <a href="?suggestions=all">Show all</a>{% endif %}</p>
+{% else %}<p class="note">No medium- or high-strength suggestions for this record.</p>{% endif %}
+<h2>Admission attempts</h2>
+<p class="note">Every formal evaluation of this identity, in chronological order. Earlier repair or rejection receipts are preserved; the current receipt is the acceptance matching the registered version.</p>
+<table><thead><tr><th>Receipt</th><th>Decision</th><th>Evaluated version</th><th>Generated</th><th></th></tr></thead><tbody>
+{% for r in attempts %}<tr><td><a href="{% url 'catalog:receipt_detail' r.receipt_id %}">{{ r.receipt_id }}</a></td><td>{{ r.decision }}</td><td>{{ r.version|default:"" }}</td><td>{{ r.generated }}</td><td>{% if receipt and r.receipt_id == receipt.receipt_id %}current{% endif %}</td></tr>{% endfor %}
+</tbody></table>
+<h2>Preserved previous versions</h2>
+{% if history %}<ul>{% for key, h in history %}<li><code>{{ key }}</code> — version {{ h.version }} · {{ h.date }} · {{ h.publication_state }}</li>{% endfor %}</ul>{% else %}<p class="note">This is the first registered version.</p>{% endif %}
+<h2>Notes</h2><p>{{ o.notes }}</p>
+{% endblock %}

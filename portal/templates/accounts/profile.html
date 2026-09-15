@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Your profile{% endblock %}
+{% block content %}
+<h1>Your profile</h1>
+<div class="grid">
+<section class="card">
+  <h2 style="margin-top:0">Public author identity</h2>
+  {% if not verified %}
+    <p><span class="status status-warn">Email not verified</span> Verify your email to start author registration. <a href="{% url 'account_email' %}">Re-send verification</a></p>
+  {% elif binding and binding.state == "registered" or binding and binding.state == "linked" %}
+    <p><span class="status status-ok">{{ binding.author_id }}</span> <a href="{% url 'catalog:author_detail' binding.author_id %}">View public profile</a></p>
+    <p class="note">{{ binding.evidence }}</p>
+  {% elif binding and binding.state == "reserved" %}
+    <p><span class="status status-info">{{ binding.author_id }} — registration in progress</span></p>
+    <p class="note">Your AuthorID is reserved through the shared ledger and is being published to the public registry. You can prepare drafts now; submission opens once registration completes.</p>
+  {% elif binding and binding.state == "claim_requested" %}
+    <p><span class="status status-warn">Identity claim awaiting verification</span></p>
+    <p class="note">A reviewer must verify your evidence before an existing AuthorID is linked. Until then no new identity is allocated.</p>
+  {% else %}
+    <p><span class="status status-info">Registration queued</span></p>
+    <form method="post" action="{% url 'accounts:retry_registration' %}">{% csrf_token %}<button class="secondary" type="submit">Check again</button></form>
+  {% endif %}
+  {% if public_profile %}
+    <dl><dt>Registered research objects</dt><dd>{{ public_profile.total_registered_authored_objects }}</dd></dl>
+    {% if public_profile.total_registered_authored_objects == 0 %}<p class="note">No registered research objects yet.</p>{% endif %}
+  {% endif %}
+</section>
+<section class="card">
+  <h2 style="margin-top:0">Public display</h2>
+  <form method="post" action="{% url 'accounts:update_profile' %}" class="stack">{% csrf_token %}
+    <label for="display_name">Public display name</label><input id="display_name" name="display_name" type="text" value="{{ user.display_name }}" required>
+    <p class="help">Changing your display name never changes your AuthorID.</p>
+    <div class="checkbox"><input id="publish_email" name="publish_email" type="checkbox" {% if user.publish_email %}checked{% endif %}><label for="publish_email">Publish my email on my public profile (off by default)</label></div>
+    <div class="actions"><button class="primary" type="submit">Save</button></div>
+  </form>
+  <dl><dt>Private email</dt><dd>{{ user.email }} <a href="{% url 'account_email' %}">manage</a></dd>{% if user.orcid %}<dt>ORCID</dt><dd>{{ user.orcid }} <span class="note">unverified metadata</span></dd>{% endif %}<dt>Role</dt><dd>{{ user.get_role_display }}</dd></dl>
+</section>
+</div>
+<section class="card">
+  <h2 style="margin-top:0">Link an existing author identity</h2>
+  <p class="note">If you already appear in the library (for example as AUTH-0001), request a verified link. Ownership is never granted because a name, email, ORCID, or ID matches; a reviewer verifies the evidence you provide.</p>
+  <form method="post" action="{% url 'accounts:claim_identity' %}" class="stack">{% csrf_token %}
+    <label for="author_id">Existing AuthorID</label><input id="author_id" name="author_id" type="text" placeholder="AUTH-0001" pattern="AUTH-[0-9]{4}">
+    <label for="evidence">Evidence a reviewer can verify</label><textarea id="evidence" name="evidence" rows="3" placeholder="e.g. control of the ORCID record, the deposit account, or the corresponding-author address stated in the source"></textarea>
+    <div class="actions"><button class="secondary" type="submit">Request verified link</button></div>
+  </form>
+  {% if claims %}<table><thead><tr><th>AuthorID</th><th>State</th><th>Requested</th><th>Decision</th></tr></thead><tbody>{% for c in claims %}<tr><td>{{ c.author_id }}</td><td>{{ c.state }}</td><td>{{ c.created_at|date:"Y-m-d H:i" }}</td><td>{{ c.decision_notes }}</td></tr>{% endfor %}</tbody></table>{% endif %}
+</section>
+<section class="card">
+  <h2 style="margin-top:0">Security</h2>
+  <div class="actions">
+    <a class="button secondary" href="{% url 'account_change_password' %}">Change password</a>
+    <form method="post" action="{% url 'accounts:revoke_sessions' %}">{% csrf_token %}<button class="secondary" type="submit">Sign out other sessions</button></form>
+    <a class="button secondary" href="{% url 'accounts:close_account' %}">Close account</a>
+  </div>
+  <p class="note">Closing your account removes access to drafts. Previously published research records, receipts, and history are preserved under the library's withdrawal policy; withdrawal is a visible status event, not deletion from Git history.</p>
+</section>
+{% endblock %}

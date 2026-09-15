@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{ r.receipt_id }} — {{ r.decision }}{% endblock %}
+{% block content %}
+<p><span class="kind">Admission receipt</span> <span class="status status-{% if r.decision == 'ACCEPTED' %}ok{% elif r.decision == 'RETURNED_FOR_REPAIR' %}warn{% else %}bad{% endif %}">{{ r.decision }}</span></p>
+<h1>{{ r.receipt_id }}</h1>
+<dl>
+  <dt>Decision</dt><dd>{{ r.decision }}</dd>
+  <dt>Submission</dt><dd>{% if registered %}<a href="{% url 'catalog:research_detail' ident %}">{{ ident }}</a>{% else %}{{ ident }} <span class="note">(not a registered object)</span>{% endif %}</dd>
+  <dt>Evaluated version</dt><dd>{{ r.version|default:"not stated" }}</dd>
+  <dt>Generated</dt><dd>{{ r.generated }}</dd>
+  {% if attempt %}
+  <dt>Submission hash</dt><dd><code>{{ attempt.submission_hash }}</code></dd>
+  <dt>Engine revision</dt><dd><code>{{ attempt.engine_revision }}</code></dd>
+  <dt>Registry base</dt><dd><code>{{ attempt.registry_base }}</code></dd>
+  <dt>Schema / taxonomy</dt><dd>{{ attempt.schema_version }} · {{ attempt.taxonomy_version }}</dd>
+  {% endif %}
+  {% if publication %}<dt>Publication</dt><dd>{{ publication.status }}{% if publication.pr_number %} · PR #{{ publication.pr_number }}{% endif %}{% if publication.merge_sha %} · commit <code>{{ publication.merge_sha|slice:":12" }}</code>{% endif %}</dd>{% endif %}
+</dl>
+<h2>Gates</h2>
+<p>{% for key, g in r.gates.items %}<span class="gate gate-{{ g.result }}" title="{{ g.name }}">{{ key }}</span> {% endfor %}</p>
+<table><thead><tr><th>Gate</th><th>Result</th><th>Detail</th></tr></thead><tbody>{% for key, g in r.gates.items %}<tr><td>{{ key }} — {{ g.name }}</td><td>{{ g.result }}</td><td>{{ g.detail }}</td></tr>{% endfor %}</tbody></table>
+<h2>Full receipt</h2>
+<pre>{{ markdown }}</pre>
+{% endblock %}

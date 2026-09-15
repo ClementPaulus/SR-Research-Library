@@ -1,0 +1,7 @@
+<div class="field">
+  <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+  {{ field }}
+  {% if field.help_text %}<p class="help">{{ field.help_text }}</p>{% endif %}
+  {% if evidence %}{% for e in evidence %}<p class="field-evidence"><span class="origin">{{ e.get_origin_display }}</span>{% if e.upload %} · {{ e.upload.filename }}{% endif %}{% if e.locator %} · {{ e.locator }}{% endif %}{% if e.uncertain %} · <em>uncertain</em>{% endif %}{% if e.processing.parser %} · parser {{ e.processing.parser }}{% endif %}</p>{% endfor %}{% endif %}
+  {% if field.errors %}<ul class="errorlist" role="alert">{% for err in field.errors %}<li>{{ err }}</li>{% endfor %}</ul>{% endif %}
+</div>

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Your workspace{% endblock %}
+{% block content %}
+<h1>Your workspace</h1>
+<div class="actions">
+  <a class="button" href="{% url 'submissions:new' %}">Upload research</a>
+  <a class="button secondary" href="{% url 'accounts:profile' %}">Profile</a>
+  <a class="button secondary" href="{% url 'submissions:questions' %}">Questions &amp; suggestions</a>
+  {% if binding and binding.author_id %}<span class="status {% if binding.state == 'registered' or binding.state == 'linked' %}status-ok{% else %}status-info{% endif %}">{{ binding.author_id }} · {{ binding.state }}</span>{% elif not verified %}<span class="status status-warn">verify your email to receive an AuthorID</span>{% else %}<span class="status status-info">AuthorID registration in progress</span>{% endif %}
+</div>
+{% if requested %}
+<h2>Requested actions</h2>
+<ul>{% for s in requested %}<li><a href="{% url 'submissions:detail' s.id %}">{{ s }}</a> — <span class="status status-warn">{{ s.state_label }}</span> <span class="note">{{ s.state_meaning }}</span></li>{% endfor %}</ul>
+{% endif %}
+<h2>My submissions</h2>
+<table><thead><tr><th>Submission</th><th>Status</th><th>Object</th><th>Updated</th></tr></thead><tbody>
+{% for s in mine %}<tr><td><a href="{% url 'submissions:detail' s.id %}">{{ s }}</a></td><td><span class="status">{{ s.state_label }}</span></td><td>{{ s.draft.object_id|default:s.intended_object_id|default:"—" }}</td><td>{{ s.updated_at|date:"Y-m-d H:i" }}</td></tr>
+{% empty %}<tr><td colspan="4" class="note">No submissions yet. <a href="{% url 'submissions:new' %}">Upload research</a> to begin.</td></tr>{% endfor %}
+</tbody></table>
+{% if shared %}<h2>Shared with me</h2><ul>{% for s in shared %}<li><a href="{% url 'submissions:detail' s.id %}">{{ s }}</a> — {{ s.state_label }}</li>{% endfor %}</ul>{% endif %}
+<h2>Registered works</h2>
+<ul>{% for s in registered %}<li><a href="{% url 'catalog:research_detail' s.draft.object_id %}">{{ s.draft.object_id }} — {{ s.label }}</a></li>{% empty %}<li class="note">Nothing registered yet.</li>{% endfor %}</ul>
+{% endblock %}

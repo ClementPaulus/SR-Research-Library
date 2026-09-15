@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}{{ s.title }} — {{ s.source_id }}{% endblock %}
+{% block content %}
+<p><span class="kind kind-src">Source</span> <span class="status">{{ s.source_type }}</span> <span class="status">{{ s.status|default:"active" }}</span></p>
+<h1>{{ s.title }}</h1>
+<div class="boundary"><strong>Registry kind: source.</strong> This record preserves where the work lives and what it states.
+{% if objects %} Tier-2 research built on it: {% for o in objects %}<a href="{% url 'catalog:research_detail' o.object_id %}">{{ o.object_id }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}.{% else %} It has <strong>no Tier-2 research object</strong> and carries no Tier-2 classification.{% endif %}
+{% if governing %} Governing reference(s): {% for g in governing %}<a href="{% url 'catalog:governing_detail' g.governing_id %}">{{ g.governing_id }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}.{% endif %}</div>
+<dl>
+  <dt>Identifier</dt><dd><code>{{ s.source_id }}</code></dd>
+  <dt>Source authors</dt><dd>{{ s.source_authors|join:", " }}</dd>
+  <dt>Version</dt><dd>{{ s.version|default:"none stated" }}</dd>
+  <dt>Year / venue</dt><dd>{{ s.publication_year|default:"" }} {{ s.venue|default:"" }}</dd>
+  <dt>DOI</dt><dd>{{ s.identifier.doi|default:"none recorded" }}</dd>
+  {% if s.concept_doi %}<dt>Concept DOI</dt><dd>{{ s.concept_doi }} <span class="note">archive concept</span></dd>{% endif %}
+  {% if s.version_doi %}<dt>Version DOI</dt><dd>{{ s.version_doi }} <span class="note">specific deposited version</span></dd>{% endif %}
+</dl>
+<h2>Links</h2>
+<ul>{% for l in s.links %}<li><a href="{{ l.url }}" rel="external noopener">{{ l.label }}</a> <span class="note">{{ l.type }}{% if l.preferred %} · preferred{% endif %}</span></li>{% empty %}<li class="note">No outbound links recorded. DOI identity survives a broken link.</li>{% endfor %}</ul>
+<h2>Lineage</h2>
+<table><tbody>
+{% for r in s.related_dois %}<tr><td>{{ r.relation }}</td><td>{{ r.doi }}</td><td>{{ r.notes|default:"" }}</td></tr>{% endfor %}
+{% for old in s.supersedes %}<tr><td>supersedes</td><td><a href="{% url 'catalog:source_detail' old %}">{{ old }}</a></td><td>earlier source state (preserved)</td></tr>{% endfor %}
+{% if s.superseded_by %}<tr><td>superseded_by</td><td><a href="{% url 'catalog:source_detail' s.superseded_by %}">{{ s.superseded_by }}</a></td><td>current source state</td></tr>{% endif %}
+</tbody></table>
+<h2>Source-native claims</h2>
+<ul>{% for c in s.source_native_claims %}<li>{{ c }}</li>{% empty %}<li class="note">None recorded.</li>{% endfor %}</ul>
+<p class="note">Claims the source itself makes, in its own terms. Library interpretation lives on Tier-2 objects, never here.</p>
+<h2>Stated boundaries and missingness</h2>
+<ul>{% for m in s.missingness %}<li>{{ m }}</li>{% empty %}<li class="note">None declared.</li>{% endfor %}</ul>
+<h2>Notes</h2><p>{{ s.notes|default:"" }}</p>
+{% endblock %}

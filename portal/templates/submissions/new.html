@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Upload research{% endblock %}
+{% block content %}
+<h1>Upload research</h1>
+<p>Upload your manuscript, record, or data — or supply a DOI, archive reference, or source URL instead. We prepare a draft record for your review; nothing is submitted until you confirm it.</p>
+<form method="post" enctype="multipart/form-data" class="stack card" data-upload="form">{% csrf_token %}
+  <label for="label">Working title (optional)</label><input id="label" name="label" type="text" maxlength="300">
+  <label for="files">Files</label>
+  <input id="files" name="files" type="file" multiple accept=".pdf,.docx,.md,.markdown,.txt,.tex,.json,.yaml,.yml,.csv,.tsv,.zip">
+  <p class="help">PDF, DOCX, Markdown, text, LaTeX source, JSON/YAML research records, CSV/TSV supporting data, or a ZIP handoff bundle. Up to {{ max_file_mib }} MiB per file and {{ max_submission_mib }} MiB per submission. Uploaded code is never executed. Larger packages: supply an external source link below.</p>
+  <label for="source_reference">DOI, archive reference, or source URL (optional if you upload files)</label><input id="source_reference" name="source_reference" type="text" placeholder="10.5281/zenodo.… or https://…">
+  <details><summary>Revising an existing registered object?</summary>
+    <label for="intended_object_id">Existing ObjectID to revise</label><input id="intended_object_id" name="intended_object_id" type="text" placeholder="SR-OBJ-000023" pattern="SR-OBJ-[0-9]{6}">
+    <p class="help">Leave blank for a distinct study with a new question or contract; a new ObjectID is reserved for you.</p></details>
+  <progress id="upload-progress" value="0" max="100" aria-label="Upload progress" hidden></progress>
+  <p id="upload-status" class="note" role="status" aria-live="polite"></p>
+  <div class="actions"><button class="primary" type="submit">Save files and prepare draft</button> <a href="{% url 'submissions:workspace' %}">Cancel</a></div>
+</form>
+<p class="note">Your files stay private to you and any reviewer you authorize. When you submit, only the confirmed record metadata and the receipt become public unless you separately choose to publish files.</p>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ g.title }} — {{ g.governing_id }}{% endblock %}
+{% block content %}
+<p><span class="kind kind-gov">Governing reference</span> <span class="status">{{ g.status }}</span> <span class="status">{{ g.governing_role }}</span></p>
+<h1>{{ g.title }}</h1>
+<div class="boundary"><strong>Authority belongs to the admitted burden only.</strong> This record states exactly which Tier-1 and Tier-0 burdens the source admits. Nothing here is promoted to active authority without an adoption record, and no Tier-2 object inherits it.</div>
+<dl>
+  <dt>Identifier</dt><dd><code>{{ g.governing_id }}</code></dd>
+  <dt>Source</dt><dd>{% if source %}<a href="{% url 'catalog:source_detail' source.source_id %}">{{ source.source_id }} — {{ source.title }}</a>{% else %}{{ g.source_id }}{% endif %}</dd>
+  <dt>Version</dt><dd>{{ g.version }}</dd>
+  <dt>Active from</dt><dd>{{ g.active_from }}</dd>
+  <dt>Tier-1 burden</dt><dd>{{ g.authority_scope.tier_1|join:", "|default:"none" }}</dd>
+  <dt>Tier-0 burden</dt><dd>{{ g.authority_scope.tier_0|join:", "|default:"none" }}</dd>
+  <dt>Source role</dt><dd>{{ g.source_role }}</dd>
+  <dt>DOI</dt><dd>{{ g.doi|default:"not established by the source" }}</dd>
+  {% if g.supersedes %}<dt>Supersedes</dt><dd>{% for s in g.supersedes %}<a href="{% url 'catalog:governing_detail' s %}">{{ s }}</a> {% endfor %}</dd>{% endif %}
+  {% if g.superseded_by %}<dt>Superseded by</dt><dd><a href="{% url 'catalog:governing_detail' g.superseded_by %}">{{ g.superseded_by }}</a></dd>{% endif %}
+</dl>
+<h2>Scope</h2><p>{{ g.scope }}</p>
+<h2>Non-goal</h2><p>{{ g.non_goal }}</p>
+<h2>Missingness</h2><ul>{% for m in g.missingness %}<li>{{ m }}</li>{% empty %}<li class="note">None declared.</li>{% endfor %}</ul>
+<h2>Tier-2 objects that list this reference</h2>
+<ul>{% for o in constrained %}<li><a href="{% url 'catalog:research_detail' o.object_id %}">{{ o.object_id }} — {{ o.title }}</a></li>{% empty %}<li class="note">None.</li>{% endfor %}</ul>
+<h2>Notes</h2><p>{{ g.notes|default:"" }}</p>
+{% endblock %}

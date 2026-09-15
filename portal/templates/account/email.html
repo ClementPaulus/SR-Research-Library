@@ -1,0 +1,10 @@
+{% extends "account/base_manage.html" %}
+{% block title %}Email addresses{% endblock %}
+{% block manage_content %}
+<h1>Email addresses</h1>
+<form method="post" action="{% url 'account_email' %}" class="stack card">{% csrf_token %}
+{% for emailaddress in emailaddresses %}<div class="checkbox"><input type="radio" name="email" id="email_{{ forloop.counter }}" value="{{ emailaddress.email }}" {% if emailaddress.primary %}checked{% endif %}><label for="email_{{ forloop.counter }}">{{ emailaddress.email }} {% if emailaddress.verified %}<span class="status status-ok">verified</span>{% else %}<span class="status status-warn">unverified</span>{% endif %}{% if emailaddress.primary %} <span class="status">primary</span>{% endif %}</label></div>{% endfor %}
+<div class="actions"><button class="secondary" type="submit" name="action_send">Re-send verification</button> <button class="secondary" type="submit" name="action_primary">Make primary</button></div>
+</form>
+<p><a href="{% url 'accounts:profile' %}">Back to profile</a></p>
+{% endblock %}

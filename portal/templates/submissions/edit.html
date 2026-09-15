@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Review the draft — {{ s }}{% endblock %}
+{% block content %}
+<h1>Review the extracted details and answer the remaining questions</h1>
+<p class="note">For each field we show where a value came from: <span class="origin">extracted from a source file</span> (with its page/line), <span class="origin">stated by you</span>, or <span class="origin">local library classification</span>. Confirm or correct everything before submitting. Nothing is guessed on your behalf; gaps belong in Missingness.</p>
+{% if notes.questions %}<div class="boundary"><strong>Open questions ({{ notes.questions|length }}).</strong> <ul>{% for q in notes.questions %}<li>{{ q.question }}</li>{% endfor %}</ul></div>{% endif %}
+{% if notes.problems %}<details><summary>Processing notes</summary><ul>{% for p in notes.problems %}<li class="note">{{ p }}</li>{% endfor %}</ul></details>{% endif %}
+{% if s.draft._abstract_hint %}<details><summary>Extracted abstract (source text, for reference only)</summary><pre>{{ s.draft._abstract_hint }}</pre></details>{% endif %}
+{% if s.draft._source_authors_hint %}<p class="note">Source authors found in the file: {{ s.draft._source_authors_hint|join:", " }}. Source authors are preserved on the source record exactly as stated; they are not converted into library AuthorIDs.</p>{% endif %}
+
+<form method="post" id="draft-form" class="stack" data-autosave="{% url 'submissions:autosave' s.id %}">{% csrf_token %}
+<input type="hidden" name="draft_version" value="{{ s.draft_version }}">
+<p id="autosave-status" class="note" role="status" aria-live="polite">Draft version {{ s.draft_version }}</p>
+{% if form.non_field_errors %}<ul class="errorlist" role="alert">{% for e in form.non_field_errors %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+
+<h2>1. The work</h2>
+{% for name in "title,object_of_study,main_question,secondary_questions,lens" %}{% endfor %}
+{% include "submissions/_field.html" with field=form.title evidence=evidence.title %}
+{% include "submissions/_field.html" with field=form.object_of_study evidence=evidence.object_of_study %}
+{% include "submissions/_field.html" with field=form.main_question evidence=evidence.main_question %}
+{% include "submissions/_field.html" with field=form.secondary_questions %}
+{% include "submissions/_field.html" with field=form.lens %}
+
+<h2>2. Claims, kept in layers</h2>
+{% include "submissions/_field.html" with field=form.claim_layers %}
+
+<h2>3. Boundaries</h2>
+{% include "submissions/_field.html" with field=form.source_boundary %}
+{% include "submissions/_field.html" with field=form.authority_boundary %}
+{% include "submissions/_field.html" with field=form.scope %}
+{% include "submissions/_field.html" with field=form.exclusions %}
+{% include "submissions/_field.html" with field=form.preserved_meaning %}
+{% include "submissions/_field.html" with field=form.distortion_or_substitution_risk %}
+
+<h2>4. What is missing, and what comes next</h2>
+{% include "submissions/_field.html" with field=form.missingness %}
+{% include "submissions/_field.html" with field=form.next_burden %}
+{% include "submissions/_field.html" with field=form.repair_route %}
+{% include "submissions/_field.html" with field=form.notes %}
+
+<h2>5. Library classification <span class="note">(local classification, not a source claim)</span></h2>
+<div class="grid">
+{% include "submissions/_field.html" with field=form.tier2_class_primary %}
+{% include "submissions/_field.html" with field=form.tier2_class_secondary %}
+{% include "submissions/_field.html" with field=form.domain_primary %}
+{% include "submissions/_field.html" with field=form.domain_secondary %}
+{% include "submissions/_field.html" with field=form.structural_focus_primary %}
+{% include "submissions/_field.html" with field=form.structural_focus_secondary %}
+{% include "submissions/_field.html" with field=form.evidence_mode_primary %}
+{% include "submissions/_field.html" with field=form.evidence_mode_secondary %}
+{% include "submissions/_field.html" with field=form.provenance %}
+{% include "submissions/_field.html" with field=form.maturity %}
+{% include "submissions/_field.html" with field=form.functional_locus %}
+{% include "submissions/_field.html" with field=form.publication_state %}
+</div>
+
+<details open><summary>Sources for this work ({{ sources|length }} proposed)</summary>
+<p class="note">Registered sources may be referenced by SRC-*. Propose a new one below; it is registered with your object only if the whole candidate validates. External work stays an external source with its original authors.</p>
+{% for key, src in sources.items %}<div class="card"><strong>{{ key }}</strong> — {{ src.title }} <span class="note">{{ src.source_type }} · {{ src.source_authors|join:", " }}{% if src.identifier.doi %} · DOI {{ src.identifier.doi }}{% endif %}</span>{% if src._ambiguous_version %}<p class="note">Version ambiguity declared: {{ src._ambiguous_version }} — a reviewer will ask which version governs.</p>{% endif %}</div>{% endfor %}
+</details>
+<details><summary>Relations ({{ relations|length }} proposed)</summary>
+{% for key, rel in relations.items %}<div class="card"><strong>{{ key }}</strong> {{ rel.relation_type }} → {{ rel.to_id }}<p class="note">Evidence: {{ rel.evidence|default:rel._evidence }}</p></div>{% endfor %}
+</details>
+
+<details><summary>Advanced: identifiers, version, and raw record</summary>
+{% include "submissions/_field.html" with field=form.authors %}
+{% include "submissions/_field.html" with field=form.source_ids %}
+{% include "submissions/_field.html" with field=form.relations %}
+{% include "submissions/_field.html" with field=form.governing_refs %}
+{% include "submissions/_field.html" with field=form.version %}
+{% include "submissions/_field.html" with field=form.date %}
+{% include "submissions/_field.html" with field=form.supersedes %}
+<p class="note">Object identity: <code>{{ s.draft.object_id|default:"a new SR-OBJ is reserved when you submit" }}</code>{% if s.intended_object_id %} (revising {{ s.intended_object_id }}){% endif %}</p>
+<pre>{{ raw_json }}</pre>
+</details>
+
+<div class="actions">
+  <button class="primary" type="submit" name="action" value="save">Save draft</button>
+  <button class="secondary" type="submit" name="action" value="preview">Save and continue to submit</button>
+  <a href="{% url 'submissions:detail' s.id %}">Back to status</a>
+</div>
+</form>
+
+<h2>Add a source</h2>
+<form method="post" action="{% url 'submissions:add_source' s.id %}" class="stack card">{% csrf_token %}<input type="hidden" name="draft_version" value="{{ s.draft_version }}">
+{% for field in source_form %}{% include "submissions/_field.html" with field=field %}{% endfor %}
+<div class="actions"><button class="secondary" type="submit">Add source</button></div></form>
+
+<h2>Propose a connection</h2>
+<form method="post" action="{% url 'submissions:add_relation' s.id %}" class="stack card">{% csrf_token %}<input type="hidden" name="draft_version" value="{{ s.draft_version }}">
+{% for field in relation_form %}{% include "submissions/_field.html" with field=field %}{% endfor %}
+<div class="actions"><button class="secondary" type="submit">Add relation</button></div></form>
+{% endblock %}
+{% block scripts %}<script src="{% static 'js/autosave.js' %}"></script>{% endblock %}

@@ -7,3 +7,9 @@ SR_CORPUS_CENSUS_WORKING_PACKAGE_v*/
 
 # Advisory lock for the identifier reservation ledger (runtime only)
 registry/reservations/.ledger.lock
+
+# Portal runtime artifacts (never committed)
+portal/portal-dev.sqlite3
+portal/private-media/
+portal/staticfiles/
+portal/.env

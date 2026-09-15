@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Close account{% endblock %}
+{% block content %}
+<h1>Close your account</h1>
+<p>Closing your account deactivates login and removes access to your private drafts and files. It does <strong>not</strong> erase research already published to the library: registered records, receipts, and history remain under the public withdrawal policy, and any withdrawal is recorded as a visible status event.</p>
+<form method="post">{% csrf_token %}<div class="actions"><button class="danger" type="submit">Close my account</button> <a href="{% url 'accounts:profile' %}">Cancel</a></div></form>
+{% endblock %}

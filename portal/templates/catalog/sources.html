@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Sources — Structura Reditus Research Library{% endblock %}
+{% block content %}
+<h1><span class="kind kind-src">Sources &amp; archives</span></h1>
+<p>Where each work actually lives. The original stays on its DOI/archive platform; the library never mirrors it. A source is not a Tier-2 research object.</p>
+<form method="get" class="stack"><label for="q">Search sources</label><input id="q" name="q" type="search" value="{{ q }}"><div class="actions"><button class="primary">Search</button> <a href="{% url 'catalog:sources' %}">Reset</a></div></form>
+<p class="note" role="status">{{ total }} source{{ total|pluralize }}.</p>
+<div class="table-wrap"><table><thead><tr><th>SRC</th><th>Title</th><th>Type</th><th>Year</th><th>Venue</th><th>DOI</th></tr></thead><tbody>
+{% for s in rows %}<tr><td><a href="{% url 'catalog:source_detail' s.source_id %}">{{ s.source_id }}</a></td><td>{{ s.title }}</td><td>{{ s.source_type }}</td><td>{{ s.publication_year|default:"" }}</td><td>{{ s.venue|default:"" }}</td><td>{{ s.identifier.doi|default:"" }}</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}
