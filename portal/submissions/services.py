@@ -19,7 +19,7 @@ from django.utils import timezone
 from core.models import enqueue, record_event
 from core.tasks import DeterministicFailure, RetryableError, handler
 
-from . import extraction, state as wf
+from . import extraction, preparation, state as wf
 from .models import FieldEvidence, Question, Response, ReviewCase, Submission, SubmissionRevision, Upload
 
 log = logging.getLogger("portal.submissions")
@@ -123,14 +123,48 @@ def read_upload(upload: Upload) -> bytes:
 
 # --------------------------------------------------------------------------- preparation job
 
+PREPARATION_STEPS = [
+    ("preserve", "Preserve original files"),
+    ("identify", "Identify source and version information"),
+    ("duplicates", "Check for possible duplicates"),
+    ("extract", "Extract supported metadata"),
+    ("classify", "Propose library classifications"),
+    ("assemble", "Prepare the editable submission"),
+]
+
+
+def _progress(submission: Submission, steps: list, problems: list, extra: dict = None) -> None:
+    """Persist step-by-step progress so the workspace shows what is actually happening."""
+    note = {"kind": "preparation", "steps": steps, "problems": list(problems), "at": timezone.now().isoformat()}
+    note.update(extra or {})
+    Submission.objects.filter(id=submission.id).update(processing_notes=[note], updated_at=timezone.now())
+    submission.processing_notes = [note]
+
+
+def _step(steps: list, key: str, status: str, detail: str = "") -> None:
+    for step in steps:
+        if step["key"] == key:
+            step["status"] = status
+            step["detail"] = detail
+            return
+
+
 @handler(PREPARE)
 def prepare(job) -> None:
     submission = Submission.objects.select_related("owner").get(id=job.payload["submission"])
     if submission.workflow_state not in (wf.PREPARING, wf.UPLOADING, wf.PROCESSING_UNAVAILABLE, wf.DRAFT, wf.NEEDS_REVIEW):
         return  # frozen or already evaluated; preparation of a stale job is a no-op
-    extractions, problems = [], []
+    steps = [{"key": key, "label": label, "status": "pending", "detail": ""} for key, label in PREPARATION_STEPS]
+    problems: list = []
+    extractions: list = []
+    uploads = list(submission.uploads.filter(state=Upload.COMPLETE, parent__isnull=True))
     try:
-        for upload in submission.uploads.filter(state=Upload.COMPLETE, parent__isnull=True):
+        _step(steps, "preserve", "done", f"{len(uploads)} file(s) stored with server-side SHA-256; originals are never modified")
+        _progress(submission, steps, problems)
+
+        _step(steps, "extract", "running")
+        _progress(submission, steps, problems)
+        for upload in uploads:
             data = read_upload(upload)
             if extraction.suffix_of(upload.filename) == ".zip":
                 try:
@@ -162,37 +196,190 @@ def prepare(job) -> None:
                 problems.append(f"Acquired {final_url} ({len(payload)} bytes). The library does not mirror it; the URL stays a source link.")
             except acquisition.AcquisitionRefused as exc:
                 problems.append(f"Source URL was not acquired: {exc}. The source gap is preserved; supply the source identity manually.")
+        parsed = sum(1 for _, _, e in extractions if e.fields or e.record)
+        _step(steps, "extract", "done", f"{parsed} of {len(extractions)} file(s) yielded fields; parsers: "
+              + ", ".join(sorted({str(e.processing.get('parser')) for _, _, e in extractions if e.processing.get('parser')})) or "no parseable files")
+        _progress(submission, steps, problems)
+
+        # ---- identify sources and versions
+        _step(steps, "identify", "running")
+        _progress(submission, steps, problems)
+        per_file = [(name, preparation.identify_sources(e.full_text, name)) for _, name, e in extractions if e.full_text]
+        if submission.source_reference:
+            per_file.append(("source reference", preparation.identify_sources(submission.source_reference, "source reference")))
+        identification = preparation.merge_identifications(per_file)
+        ident_summary = []
+        if identification["dois"]:
+            ident_summary.append(f"DOI {', '.join(d['value'] for d in identification['dois'][:3])}")
+        if identification["arxiv"]:
+            ident_summary.append(f"arXiv {', '.join(a['value'] for a in identification['arxiv'][:2])}")
+        if identification["versions"]:
+            ident_summary.append(f"version statement(s) {', '.join(sorted({v['value'] for v in identification['versions']}))}")
+        if identification["publication_hints"]:
+            ident_summary.append("publication hint: " + ", ".join(h["value"] for h in identification["publication_hints"]))
+        _step(steps, "identify", "done", "; ".join(ident_summary) or "no DOI, arXiv, or version statement found in the text")
+        if identification["version_ambiguity"]:
+            problems.append(identification["version_ambiguity"] + " Confirm which version governs before submitting.")
+        _progress(submission, steps, problems)
+
+        # ---- duplicates against the committed registry
+        _step(steps, "duplicates", "running")
+        _progress(submission, steps, problems)
+        from catalog.projection import current_projection
+        from registry_bridge.engine import import_engine
+
+        projection = current_projection()
+        engine = import_engine(settings.PORTAL_REGISTRY_REPO_PATH)
+        manifests = engine["execution"].load_execution_manifests(settings.PORTAL_REGISTRY_REPO_PATH / "receipts" / "executions") if engine["execution"] else {}
+        candidate_title = next((e.fields["title"]["value"] for _, _, e in extractions if e.fields.get("title")), None) or \
+            next((e.record.get("title") for _, _, e in extractions if e.record), None) or submission.draft.get("title") or ""
+        findings = preparation.check_duplicates(candidate_title, [d["value"] for d in identification["dois"]],
+                                                [u.sha256 for u in uploads], projection, manifests)
+        dup_detail = "; ".join(f"{f['id']} ({f['basis']})" for f in findings[:4]) or "no matching DOI, similar title, or identical file in the registry"
+        _step(steps, "duplicates", "done", dup_detail)
+        _progress(submission, steps, problems)
+
+        # ---- classification suggestions (library classification, always uncertain)
+        _step(steps, "classify", "running")
+        _progress(submission, steps, problems)
+        text = "\n".join(e.full_text for _, _, e in extractions if e.full_text)
+        taxonomies = engine["loader"].load_taxonomies(settings.PORTAL_REGISTRY_REPO_PATH / "taxonomy")
+        suggestions = preparation.suggest_classifications(text, taxonomies, identification["publication_hints"]) if text else {}
+        _step(steps, "classify", "done", ", ".join(f"{k} → {v['term']}" for k, v in suggestions.items() if v.get("term")) or "no classification could be suggested from the text")
+        _progress(submission, steps, problems)
     except Exception as exc:  # noqa: BLE001
         log.warning("preparation failed for %s: %s", submission.id, type(exc).__name__)
+        for step in steps:
+            if step["status"] == "running":
+                step["status"] = "failed"
+                step["detail"] = f"{type(exc).__name__}; your files are preserved and this step will be retried"
+        _progress(submission, steps, problems)
         if submission.workflow_state != wf.PROCESSING_UNAVAILABLE:
             wf.transition(submission, wf.PROCESSING_UNAVAILABLE, reason=f"preparation error: {type(exc).__name__}")
         raise RetryableError(f"preparation error {type(exc).__name__}") from exc
 
+    # ---- assemble the editable submission
+    _step(steps, "assemble", "running")
+    _progress(submission, steps, problems)
     owner_author = submission.owner.author_id
-    candidate, evidence, questions, more_problems = extraction.assemble_candidate(
+    candidate, evidence, _legacy_questions, more_problems = extraction.assemble_candidate(
         extractions, submission.draft, owner_author, submission.source_reference)
     problems += more_problems
+    evidence = list(evidence)
+    for path, suggestion in suggestions.items():
+        if not suggestion.get("term"):
+            evidence.append((path, "library-classification", "keyword match: tie", "", "no single suggestion: " + ", ".join(suggestion.get("alternatives", [])), True, {"method": "keyword"}))
+            continue
+        head, _, tail = path.partition(".")
+        current = candidate.get(head)
+        if tail:
+            block = current if isinstance(current, dict) else {"primary": "", "secondary": []}
+            if not block.get("primary"):
+                block["primary"] = suggestion["term"]
+                if suggestion.get("secondary") and not block.get("secondary"):
+                    block["secondary"] = suggestion["secondary"]
+                candidate[head] = block
+        elif not current:
+            candidate[head] = suggestion["term"]
+        evidence.append((path, "library-classification", "keyword match: " + ", ".join(suggestion["matched"][:4]), "",
+                         f"suggested {suggestion['term']}" + (f"; alternatives: {', '.join(suggestion['alternatives'])}" if suggestion["alternatives"] else ""),
+                         True, {"method": "keyword", "alternatives": suggestion["alternatives"]}))
+    proposed_sources = dict(submission.proposed_sources or {})
+    source_type_unconfirmed = False
+    existing_sources = [f for f in findings if f["kind"] == "existing_source"]
+    if existing_sources:
+        for finding in existing_sources:
+            if finding["id"] not in candidate.get("source_ids", []):
+                candidate.setdefault("source_ids", []).append(finding["id"])
+        evidence.append(("source_ids", "source-extraction", existing_sources[0]["basis"], "", ", ".join(f["id"] for f in existing_sources), False, {"method": "doi-match"}))
+    elif not proposed_sources and not candidate.get("source_ids") and (candidate.get("title") or identification["dois"]):
+        placeholder, record, unconfirmed = _auto_source(candidate, identification, extractions, submission)
+        proposed_sources[placeholder] = record
+        candidate.setdefault("source_ids", []).append(placeholder)
+        source_type_unconfirmed = unconfirmed
+        evidence.append(("source_ids", "source-extraction", "proposed from extracted title/authors/identifiers", "",
+                         f"{placeholder}: {record['title'][:80]}", True, {"method": "auto-source"}))
+    if findings:
+        candidate["_duplicate_findings"] = findings[:6]
+    if identification["version_ambiguity"]:
+        candidate["_version_ambiguity"] = identification["version_ambiguity"]
+        for record in proposed_sources.values():
+            record.setdefault("_ambiguous_version", identification["version_ambiguity"])
     if not settings.PORTAL_EXTRACTION_MODEL_SERVICE_URL:
-        problems.append("Automated preparation used deterministic parsers only (no model-assisted extraction is configured). "
-                        "Review every extracted detail and complete the remaining fields manually.")
+        problems.append("Automated preparation used deterministic parsers and keyword matching only (no model-assisted extraction is configured). "
+                        "Every suggestion is marked uncertain until you confirm it.")
+    evidence_dicts = [{"field_path": e[0], "origin": e[1], "uncertain": e[5]} for e in evidence]
+    assessment = preparation.assess(candidate, evidence_dicts, findings, identification["version_ambiguity"], source_type_unconfirmed)
+    _step(steps, "assemble", "done", f"{len(assessment['ready'])} field(s) ready, {len(assessment['needs_confirmation'])} to confirm, "
+          f"{len(assessment['missing'])} missing; {assessment['blocking_open']} blocking question(s)")
     with transaction.atomic():
         submission.refresh_from_db()
         submission.draft = candidate
+        submission.proposed_sources = proposed_sources
         submission.draft_version += 1
-        submission.processing_notes = [{"kind": "preparation", "problems": problems, "questions": questions,
-                                        "at": timezone.now().isoformat()}]
-        submission.save(update_fields=["draft", "draft_version", "processing_notes", "updated_at"])
+        submission.processing_notes = [{"kind": "preparation", "steps": steps, "problems": problems, "questions": assessment["questions"],
+                                        "assessment": {k: assessment[k] for k in ("ready", "needs_confirmation", "missing", "blocking_open", "submittable")},
+                                        "identification": {k: identification[k] for k in ("dois", "arxiv", "zenodo", "versions", "publication_hints", "version_ambiguity")},
+                                        "duplicates": findings[:6], "suggestions": suggestions, "at": timezone.now().isoformat()}]
+        submission.save(update_fields=["draft", "proposed_sources", "draft_version", "processing_notes", "updated_at"])
         FieldEvidence.objects.filter(submission=submission, revision__isnull=True).delete()
         rows = []
         for field_path, origin, locator, upload_id, preview, uncertain, processing in evidence:
             rows.append(FieldEvidence(submission=submission, field_path=field_path, origin=origin, locator=locator,
-                                      upload_id=upload_id or None, value_preview=preview, uncertain=uncertain, processing=processing))
+                                      upload_id=upload_id or None, value_preview=str(preview)[:500], uncertain=uncertain, processing=processing))
         FieldEvidence.objects.bulk_create(rows)
         if submission.workflow_state in (wf.PREPARING, wf.UPLOADING, wf.PROCESSING_UNAVAILABLE, wf.DRAFT):
             wf.transition(submission, wf.NEEDS_REVIEW, reason="draft prepared; researcher review required",
-                          payload={"questions": len(questions), "problems": len(problems)})
+                          payload={"questions": len(assessment["questions"]), "problems": len(problems), "duplicates": len(findings)})
         record_event("submission.prepared", submission=submission, account=submission.owner,
-                     payload={"fields": len(evidence), "questions": len(questions)})
+                     payload={"fields": len(evidence), "questions": len(assessment["questions"]), "duplicates": len(findings),
+                              "suggestions": sorted(suggestions)})
+
+
+def _auto_source(candidate: dict, identification: dict, extractions: list, submission: Submission) -> tuple:
+    """Propose a source record from what the files themselves state. Nothing is invented; gaps become missingness."""
+    owner_name = _fold(submission.owner.display_name)
+    authors = list(candidate.get("_source_authors_hint") or [])
+    own_work = bool(authors) and any(_fold(a) == owner_name or owner_name in _fold(a) for a in authors)
+    source_type = "corpus-native" if own_work else "external"
+    unconfirmed = not authors or not own_work
+    identifier, links, missing = {}, [], []
+    if identification["dois"]:
+        doi = identification["dois"][0]["value"]
+        identifier["doi"] = doi
+        identifier["url"] = f"https://doi.org/{doi}"
+        links.append({"label": "Canonical DOI", "type": "canonical", "url": f"https://doi.org/{doi}", "preferred": True})
+    elif identification["urls"]:
+        identifier["url"] = identification["urls"][0]["value"]
+        links.append({"label": "Source page", "type": "canonical", "url": identification["urls"][0]["value"], "preferred": True})
+    if identification["arxiv"]:
+        identifier["archive_reference"] = f"arXiv:{identification['arxiv'][0]['value']}"
+    if identification["zenodo"]:
+        identifier["archive_reference"] = f"zenodo:{identification['zenodo'][0]['value']}"
+    if not identifier:
+        missing.append("No DOI, URL, or archive reference is stated in the uploaded files; source identity rests on the uploaded manuscript.")
+    if not authors:
+        authors = [submission.owner.display_name]
+        missing.append("No author statement could be extracted; the uploading researcher is listed provisionally and must confirm authorship.")
+    missing.append("Publication year not stated in the files.")
+    record = {
+        "source_id": "SRC-NEW-1", "source_type": source_type, "title": candidate.get("title") or "(title to be confirmed)",
+        "source_authors": authors, "source_native_claims": [], "identifier": identifier, "publication_year": None, "venue": None,
+        "links": links, "missingness": missing, "status": "active",
+        "notes": "Proposed automatically from the uploaded files' own statements; confirm before submitting.",
+    }
+    versions = sorted({v["value"] for v in identification["versions"]})
+    if len(versions) == 1:
+        record["version"] = versions[0]
+    if unconfirmed:
+        record["_source_type_unconfirmed"] = True
+    return "SRC-NEW-1", record, unconfirmed
+
+
+def _fold(text: str) -> str:
+    import unicodedata
+
+    return unicodedata.normalize("NFKD", text or "").encode("ascii", "ignore").decode("ascii").lower().strip()
 
 
 def _record_member(parent: Upload, member: dict) -> Upload:
@@ -224,7 +411,13 @@ EDITABLE_TOP_LEVEL = {
 
 
 def save_draft(submission: Submission, actor, draft: dict, proposed_sources: dict, proposed_relations: dict,
-               expected_version: int, label: str = None) -> Submission:
+               expected_version: int, label: str = None, confirm_fields: list = None) -> Submission:
+    """Save an editable draft with an optimistic version token.
+
+    Preparation hints (underscore keys) survive saves; callers may update them (e.g. ``_duplicate_resolution``).
+    ``confirm_fields`` records that the researcher reviewed uncertain extracted values and kept them, so they
+    need not be retyped and stop being asked about.
+    """
     if not submission.can_edit(actor):
         raise PermissionError("not permitted to edit this submission")
     if not submission.editable:
@@ -232,13 +425,16 @@ def save_draft(submission: Submission, actor, draft: dict, proposed_sources: dic
     unknown = set(draft) - EDITABLE_TOP_LEVEL - {k for k in draft if k.startswith("_")}
     if unknown:
         raise SubmissionError("draft contains fields outside the object schema: " + ", ".join(sorted(unknown)))
+    hint_updates = {k: v for k, v in draft.items() if k.startswith("_")}
     draft = {k: v for k, v in draft.items() if not k.startswith("_")}
     draft["authority"] = {"tier": "tier-2"}  # the library registers Tier-2 records only
     with transaction.atomic():
         current = Submission.objects.select_for_update().get(id=submission.id)
         if current.draft_version != expected_version:
             raise StaleDraft(f"draft changed from version {expected_version} to {current.draft_version} in another tab")
-        current.draft = draft
+        hints = {k: v for k, v in (current.draft or {}).items() if k.startswith("_")}
+        hints.update(hint_updates)
+        current.draft = {**draft, **hints}
         current.proposed_sources = proposed_sources or {}
         current.proposed_relations = proposed_relations or {}
         current.draft_version += 1
@@ -247,11 +443,28 @@ def save_draft(submission: Submission, actor, draft: dict, proposed_sources: dic
         elif draft.get("title"):
             current.label = str(draft["title"])[:300]
         current.save(update_fields=["draft", "proposed_sources", "proposed_relations", "draft_version", "label", "updated_at"])
-        if current.workflow_state == wf.NEEDS_REVIEW:
-            pass  # stays "needs your review" until confirmation
+        confirmed = []
+        for path in confirm_fields or []:
+            value = preparation._value_at(current.draft, path)
+            if value in (None, "", [], {}):
+                continue
+            if FieldEvidence.objects.filter(submission=current, revision__isnull=True, field_path=path, uncertain=True).exists() and \
+                    not FieldEvidence.objects.filter(submission=current, revision__isnull=True, field_path=path, origin="researcher-statement").exists():
+                FieldEvidence.objects.create(submission=current, field_path=path, origin="researcher-statement",
+                                             locator="confirmed in the editor", value_preview=str(value)[:500], uncertain=False,
+                                             processing={"confirmed_by": str(actor.uuid)})
+                confirmed.append(path)
         record_event("draft.saved", actor=actor, actor_label="researcher", submission=current, account=current.owner,
-                     payload={"draft_version": current.draft_version})
+                     payload={"draft_version": current.draft_version, "confirmed_fields": confirmed})
     return current
+
+
+def assessment_for(submission: Submission) -> dict:
+    """Live readiness of the current draft (recomputed from the draft and its evidence rows)."""
+    rows = FieldEvidence.objects.filter(submission=submission, revision__isnull=True).values("field_path", "origin", "uncertain")
+    draft = submission.draft or {}
+    proposed_unconfirmed = any(rec.get("_source_type_unconfirmed") for rec in (submission.proposed_sources or {}).values())
+    return preparation.assess(draft, list(rows), draft.get("_duplicate_findings"), draft.get("_version_ambiguity"), proposed_unconfirmed)
 
 
 def preflight(submission: Submission) -> dict:
@@ -305,6 +518,31 @@ def _resolved_record(submission: Submission, allocate: bool) -> dict:
     return record
 
 
+def _apply_version_resolution(submission: Submission, resolution: str, actor) -> None:
+    """The researcher's statement of the governing version resolves automatic ambiguity (a researcher statement, recorded as such).
+
+    Ambiguity the researcher declares unresolvable in the source form (``ambiguous_version``) is left in place and still triggers review.
+    """
+    sources = dict(submission.proposed_sources or {})
+    stated = sorted({m.group(1) for m in preparation.VERSION_RE.finditer(resolution)})
+    changed = False
+    for record in sources.values():
+        auto = record.get("_ambiguous_version")
+        if auto and auto == (submission.draft or {}).get("_version_ambiguity"):
+            record.pop("_ambiguous_version", None)
+            if len(stated) == 1:
+                record["version"] = stated[0]
+            record["notes"] = (record.get("notes", "").strip() + " " if record.get("notes") else "") + \
+                f"Governing version stated by the submitting researcher: {resolution.strip()}"
+            changed = True
+    if changed:
+        submission.proposed_sources = sources
+        submission.save(update_fields=["proposed_sources", "updated_at"])
+        FieldEvidence.objects.create(submission=submission, field_path="source_ids", origin="researcher-statement",
+                                     locator="governing version stated on the submit page", value_preview=resolution[:500], uncertain=False,
+                                     processing={"confirmed_by": str(actor.uuid)})
+
+
 def _frozen_proposals(submission: Submission, mapping: dict, object_id: str) -> dict:
     sources, relations = {}, {}
     for placeholder, source in (submission.proposed_sources or {}).items():
@@ -351,6 +589,20 @@ def confirm_and_submit(submission: Submission, actor, *, publish_files: bool, ac
         current = Submission.objects.select_for_update().get(id=submission.id)
         if current.draft_version != expected_version:
             raise StaleDraft("the draft changed in another tab; reload and review before submitting")
+        hints = {k: v for k, v in (current.draft or {}).items() if k.startswith("_")}
+        findings = hints.get("_duplicate_findings") or []
+        if any(f["kind"] == "possible_duplicate_object" for f in findings) and not hints.get("_duplicate_resolution"):
+            raise SubmissionError("a possible duplicate object was found; state whether this is a revision of it or a distinct study before submitting")
+        if hints.get("_version_ambiguity") and not hints.get("_version_resolution"):
+            raise SubmissionError("more than one manuscript version was found; state which version governs before submitting")
+        if hints.get("_version_resolution"):
+            _apply_version_resolution(current, hints["_version_resolution"], actor)
+        resolution = hints.get("_duplicate_resolution") or ""
+        if resolution.startswith("revision_of:"):
+            target = resolution.split(":", 1)[1]
+            if not OBJECT_ID_RE.match(target):
+                raise SubmissionError("the revision target must be an existing SR-OBJ identifier")
+            current.intended_object_id = target
         record = _resolved_record(current, allocate=True)
         mapping = record.pop("_mapping")
         if not record.get("authors"):
@@ -370,9 +622,9 @@ def confirm_and_submit(submission: Submission, actor, *, publish_files: bool, ac
         current.uploads.filter(revision__isnull=True).update(revision=revision)
         FieldEvidence.objects.filter(submission=current, revision__isnull=True).update(revision=revision)
         current.publish_files = publish_files
-        current.draft = record
+        current.draft = {**record, **hints}
         current.draft_version += 1
-        current.save(update_fields=["publish_files", "draft", "draft_version", "updated_at"])
+        current.save(update_fields=["publish_files", "draft", "draft_version", "intended_object_id", "updated_at"])
         wf.transition(current, wf.SUBMITTED, actor=actor, actor_label="researcher", revision=revision,
                       operation_key=revision.operation_key, reason=f"revision {number} confirmed ({revision.content_hash[:19]})")
         enqueue(EVALUATE, {"revision": revision.pk}, operation_key=revision.operation_key, submission=current)
@@ -402,23 +654,42 @@ def requeue_evaluation(revision: SubmissionRevision, reason: str, review: Review
 # --------------------------------------------------------------------------- repair & revision
 
 def start_repair(submission: Submission, actor) -> Submission:
+    """Open a new editable draft from the frozen revision, reusing its evidence and naming the fields the receipt flagged."""
     if not submission.can_edit(actor):
         raise PermissionError("not permitted")
     if submission.workflow_state not in (wf.NEEDS_REPAIR, wf.NOT_ADMITTED, wf.REGISTERED):
         raise SubmissionError("repair or revision can start only after a formal decision or registration")
     latest = submission.latest_revision
+    from registry_bridge.models import EvaluationAttempt
+
+    attempt = EvaluationAttempt.objects.filter(revision=latest).exclude(receipt_id="").order_by("-recorded_at").first() if latest else None
+    focus = preparation.repair_focus(attempt.receipt) if attempt and attempt.decision != "ACCEPTED" else []
     with transaction.atomic():
         current = Submission.objects.select_for_update().get(id=submission.id)
-        draft = copy.deepcopy(latest.record) if latest else copy.deepcopy(current.draft)
+        hints = {k: v for k, v in (current.draft or {}).items() if k.startswith("_")}
+        draft = copy.deepcopy(latest.record) if latest else copy.deepcopy({k: v for k, v in current.draft.items() if not k.startswith("_")})
         if current.workflow_state == wf.REGISTERED and draft.get("version"):
             major, minor, patch = (int(x) for x in draft["version"].split("."))
             draft["version"] = f"{major}.{minor}.{patch + 1}"
             draft.pop("date", None)
-        current.draft = draft
+        current.draft = {**draft, **hints}
         current.draft_version += 1
-        current.save(update_fields=["draft", "draft_version", "updated_at"])
+        note = {"kind": "repair", "at": timezone.now().isoformat(), "from_revision": latest.number if latest else None,
+                "receipt_id": attempt.receipt_id if attempt else None, "decision": attempt.decision if attempt else None,
+                "affected_fields": focus,
+                "exact_repair": (attempt.receipt.get("exact_repair_required") or [attempt.receipt.get("established_violation")]) if attempt else []}
+        current.processing_notes = list(current.processing_notes or []) + [note]
+        current.save(update_fields=["draft", "draft_version", "processing_notes", "updated_at"])
+        # Reuse the frozen revision's evidence so nothing already extracted or confirmed is asked again.
+        FieldEvidence.objects.filter(submission=current, revision__isnull=True).delete()
+        if latest:
+            for row in FieldEvidence.objects.filter(revision=latest):
+                FieldEvidence.objects.create(submission=current, field_path=row.field_path, origin=row.origin, locator=row.locator,
+                                             upload=row.upload, value_preview=row.value_preview, uncertain=row.uncertain,
+                                             processing=dict(row.processing, reused_from_revision=latest.number))
         wf.transition(current, wf.DRAFT, actor=actor, actor_label="researcher", revision=latest,
-                      reason="researcher started a repair / new revision; the earlier revision remains frozen")
+                      reason="researcher started a repair / new revision; the earlier revision remains frozen",
+                      payload={"affected_fields": focus})
     return current
 
 

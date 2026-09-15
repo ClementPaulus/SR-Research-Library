@@ -8,7 +8,7 @@ assigned public AuthorID, guided uploads, source-grounded record preparation, th
 engine, receipts, repair, and registration in this repository — with no GitHub account, terminal, or
 JSON editing. Signed-in researchers land in their workspace. See
 [docs/PORTAL_CONTRIBUTING.md](docs/PORTAL_CONTRIBUTING.md) (researcher guide and direct route),
-[docs/PORTAL_IMPLEMENTATION.md](docs/PORTAL_IMPLEMENTATION.md), [docs/PORTAL_OPERATIONS.md](docs/PORTAL_OPERATIONS.md),
+[docs/PORTAL_WALKTHROUGH.md](docs/PORTAL_WALKTHROUGH.md) (the four demonstrated journeys), [docs/PORTAL_IMPLEMENTATION.md](docs/PORTAL_IMPLEMENTATION.md), [docs/PORTAL_OPERATIONS.md](docs/PORTAL_OPERATIONS.md),
 and [docs/PORTAL_ACCEPTANCE.md](docs/PORTAL_ACCEPTANCE.md) for what is verified and what still needs owner provisioning.
 
 Governing flow:

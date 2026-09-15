@@ -307,7 +307,8 @@ def test_e06_client_supplied_decision_is_ignored(registered_author, synthetic_re
     services.save_draft(submission, registered_author, record, {}, {}, expected_version=submission.draft_version)
     submission.refresh_from_db()
     response = client.post(f"/workspace/submissions/{submission.id}/confirm",
-                           {"acknowledge": "on", "draft_version": submission.draft_version, "decision": "ACCEPTED", "workflow_state": "registered"})
+                           {"acknowledge": "on", "acknowledge_claims": "on", "draft_version": submission.draft_version,
+                            "decision": "ACCEPTED", "workflow_state": "registered"})
     assert response.status_code == 302
     submission.refresh_from_db()
     assert submission.workflow_state == wf.NEEDS_REPAIR

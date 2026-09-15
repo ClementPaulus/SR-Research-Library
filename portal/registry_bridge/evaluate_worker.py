@@ -37,9 +37,10 @@ def _write_records(checkout: Path, kind: str, records: dict) -> list:
     return conflicts
 
 
-def _publish_ledger_states(checkout: Path, ledger_files: dict, outcome: dict) -> None:
+def _publish_ledger_states(checkout: Path, ledger_files: dict, outcome: dict = None) -> None:
     """Mark reservations published when their committed record now exists in the candidate checkout."""
     kinds = {"AUTH": "registry/authors", "SR-OBJ": "registry/objects", "SRC": "registry/sources", "REL": "registry/relations"}
+    outcome = outcome or {}
     receipt_id = (outcome.get("receipt") or {}).get("receipt_id")
     receipt_path = None
     if receipt_id and outcome.get("paths"):
@@ -87,6 +88,8 @@ def main(spec_path: str, result_path: str) -> int:
             result.update(status="dependency_conflict", issues=conflicts)
             Path(result_path).write_text(json.dumps(result), encoding="utf-8")
             return 0
+        # Proposed dependency records now exist in the candidate: their reservations are published, not merely reserved.
+        _publish_ledger_states(checkout, spec.get("ledger_files") or {})
 
         report = checks.validate_registry()
         issues = [{"check": i.check, "record": i.record, "message": i.message} for i in report.issues]

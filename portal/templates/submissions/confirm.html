@@ -4,6 +4,49 @@
 <h1>Submit this revision to the public research library</h1>
 <p>Submitting freezes the record below as an immutable revision, reserves any new identifiers, and runs the seven admission gates in an isolated evaluation against the pinned registry. You will receive a formal receipt for the decision.</p>
 <div class="boundary">{{ ADMISSION_BOUNDARY }}</div>
+
+<section class="card">
+<h2 style="margin-top:0">Readiness</h2>
+<p><span class="status status-ok">{{ assessment.ready|length }} ready</span> <span class="status status-warn">{{ assessment.needs_confirmation|length }} to confirm</span> <span class="status status-bad">{{ assessment.missing|length }} missing</span></p>
+{% if not assessment.submittable %}
+<p><strong>{{ assessment.blocking_open }} blocking question{{ assessment.blocking_open|pluralize }} remain.</strong> You may still submit — the engine will return the record for repair with the exact missing structure — or <a href="{% url 'submissions:edit' s.id %}">resolve them first</a>.</p>
+<ul>{% for q in assessment.questions %}{% if q.blocks %}<li>{{ q.question }} <span class="note">— {{ q.resolves }}</span></li>{% endif %}{% endfor %}</ul>
+{% else %}<p>No blocking questions remain.</p>{% endif %}
+</section>
+
+<form method="post" class="stack">{% csrf_token %}<input type="hidden" name="draft_version" value="{{ s.draft_version }}">
+
+{% if duplicates %}
+<section class="card" aria-labelledby="dup-heading">
+<h2 id="dup-heading" style="margin-top:0">Possible duplicate — required decision</h2>
+<p class="note">Library rule H: no duplicate intellectual object. A new version of an existing object advances its version instead of minting a duplicate.</p>
+<ul>{% for d in duplicates %}<li><code>{{ d.id }}</code> — {{ d.title }} <span class="note">({{ d.basis }}; v{{ d.version }}, authors {{ d.authors|join:", " }})</span> · <a href="{% url 'catalog:research_detail' d.id %}" target="_blank" rel="noopener">view</a></li>{% endfor %}</ul>
+<div class="checkbox"><input type="radio" id="dup-distinct" name="duplicate_resolution" value="distinct" {% if duplicate_resolution == "distinct" %}checked{% endif %}><label for="dup-distinct">This is a <strong>distinct study</strong> with its own question or contract; reserve a new ObjectID.</label></div>
+<div class="checkbox"><input type="radio" id="dup-revision" name="duplicate_resolution" value="revision" {% if duplicate_resolution and duplicate_resolution != "distinct" %}checked{% endif %}><label for="dup-revision">This is a <strong>revision</strong> of the existing object: <input type="text" name="revision_target" placeholder="SR-OBJ-000000" pattern="SR-OBJ-[0-9]{6}" value="{{ duplicates.0.id }}" style="max-width:12rem"> (its previous state is archived, never overwritten; you must be its registered author or attribution review applies).</label></div>
+</section>
+{% endif %}
+
+{% if version_ambiguity %}
+<section class="card"><h2 style="margin-top:0">Which version governs? — required</h2>
+<p class="note">{{ version_ambiguity }}</p>
+<label for="version_resolution">Governing version and file</label><input id="version_resolution" name="version_resolution" type="text" value="{{ version_resolution|default:'' }}" placeholder="e.g. Version 2 in manuscript-v2.pdf governs; v1 is an earlier version" required></section>
+{% endif %}
+
+{% if unconfirmed_source_types %}
+<section class="card"><h2 style="margin-top:0">Confirm the proposed source type</h2>
+<p class="note">Proposed source(s) {{ unconfirmed_source_types|join:", " }} were built from what your files state. Source type decides how authorship and claims are preserved.</p>
+<div class="checkbox"><input type="radio" id="st-corpus" name="source_type_confirmation" value="corpus-native"><label for="st-corpus">Corpus-native — my own current work</label></div>
+<div class="checkbox"><input type="radio" id="st-external" name="source_type_confirmation" value="external"><label for="st-external">External — work I did not author; original authors stay exactly as stated</label></div>
+</section>
+{% endif %}
+
+<section class="card"><h2 style="margin-top:0">Claims, by layer</h2>
+<p class="note">Source observations belong to the source and its authors. Everything else is your local interpretation, translation, structural mapping, or candidate claim and is attributed to you, never to external authors.</p>
+{% for layer, claims in claims_by_layer.items %}<h3>{{ layer }}</h3><ul>{% for c in claims %}<li>{{ c }}</li>{% endfor %}</ul>{% empty %}<p class="note">No claim layers declared (Gate C will return the record for repair).</p>{% endfor %}
+{% if other_authors %}<div class="boundary"><strong>Attribution review will be required.</strong> The record lists AuthorID(s) {{ other_authors|join:", " }} not bound to your account. A reviewer verifies attributable authorship before evaluation; the uploader is never substituted for the actual authors.</div>{% endif %}
+<div class="checkbox"><input type="checkbox" id="acknowledge_claims" name="acknowledge_claims" required><label for="acknowledge_claims">I confirm the layer of each claim is correct: source observations are the source's own statements, and interpretations are mine.</label></div>
+</section>
+
 <h2>What becomes public</h2>
 <ul>
   <li><strong>Public on any decision:</strong> the receipt (decision, gate results, submission identity, version) and the exact confirmed record snapshot beside it.</li>
@@ -18,9 +61,11 @@
 <h2>Files in this revision</h2>
 <ul>{% for u in uploads %}<li>{{ u.filename }} <code>{{ u.sha256|slice:":16" }}…</code> ({{ u.byte_count }} bytes) — hash recorded in the execution manifest; bytes stay in private storage.</li>{% empty %}<li class="note">No files; source identity rests on the supplied reference and source records.</li>{% endfor %}</ul>
 <details><summary>Exact record to be frozen</summary><pre>{{ record_json }}</pre></details>
-<form method="post" class="stack card">{% csrf_token %}<input type="hidden" name="draft_version" value="{{ s.draft_version }}">
+
+<section class="card">
   <div class="checkbox"><input type="checkbox" id="acknowledge" name="acknowledge" required><label for="acknowledge">I have reviewed the record above and understand which metadata, snapshots, and decisions become public.</label></div>
   <div class="checkbox"><input type="checkbox" id="publish_files" name="publish_files"><label for="publish_files">Also publish my uploaded files through the portal under the versioned portal source policy (optional; external papers stay on their platforms).</label></div>
   <div class="actions"><button class="primary" type="submit">Submit this revision to the public research library</button> <a href="{% url 'submissions:edit' s.id %}">Back to the editor</a></div>
+</section>
 </form>
 {% endblock %}

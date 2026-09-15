@@ -1,0 +1,12 @@
+<div class="field {% if status.repair %}field-repair{% endif %} {% if status.status %}field-{{ status.status }}{% endif %}">
+  <label for="{{ field.id_for_label }}">{{ field.label }}
+    {% if status.status == "ready" %}<span class="status status-ok" title="Present and confirmed or reliably extracted">ready</span>
+    {% elif status.status == "confirm" %}<span class="status status-warn" title="Extracted or suggested with uncertainty; keep it and save to confirm, or correct it">confirm</span>
+    {% elif status.status == "missing" %}<span class="status status-bad" title="No value yet">missing</span>{% endif %}
+    {% if status.repair %}<span class="status status-bad" title="Named by the repair receipt">flagged by receipt</span>{% endif %}
+  </label>
+  {{ field }}
+  {% if field.help_text %}<p class="help">{{ field.help_text }}</p>{% endif %}
+  {% if evidence %}{% for e in evidence %}<p class="field-evidence"><span class="origin origin-{{ e.origin }}">{{ e.get_origin_display }}</span>{% if e.upload %} · {{ e.upload.filename }}{% endif %}{% if e.locator %} · {{ e.locator }}{% endif %}{% if e.uncertain %} · <em>uncertain</em>{% endif %}{% if e.processing.parser %} · parser {{ e.processing.parser }}{% endif %}{% if e.processing.reused_from_revision %} · reused from revision r{{ e.processing.reused_from_revision }}{% endif %}{% if e.value_preview and e.origin == "library-classification" %} · {{ e.value_preview }}{% endif %}</p>{% endfor %}{% endif %}
+  {% if field.errors %}<ul class="errorlist" role="alert">{% for err in field.errors %}<li>{{ err }}</li>{% endfor %}</ul>{% endif %}
+</div>

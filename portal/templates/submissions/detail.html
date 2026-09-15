@@ -1,26 +1,55 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}{{ s }} — {{ s.state_label }}{% endblock %}
 {% block content %}
 <p><span class="kind">Submission</span> <span class="status {% if s.workflow_state == 'registered' %}status-ok{% elif s.workflow_state == 'needs_repair' or s.workflow_state == 'needs_your_review' or s.workflow_state == 'processing_unavailable' or s.workflow_state == 'review_needed' %}status-warn{% elif s.workflow_state == 'not_admitted' %}status-bad{% else %}status-info{% endif %}" id="state-badge">{{ s.state_label }}</span></p>
 <h1>{{ s }}</h1>
+<ol class="journey" aria-label="Submission journey">{% for step in journey %}<li class="journey-{{ step.status }}" {% if step.status == 'current' %}aria-current="step"{% endif %}>{{ step.label }}</li>{% endfor %}</ol>
 <p id="state-meaning">{{ s.state_meaning }}</p>
-{% if s.workflow_state == 'needs_repair' %}<div class="boundary">This submission needs additional information. Your files and earlier version are preserved. Read the exact repair on the receipt below, then start a repair.</div>
-{% elif s.workflow_state == 'accepted_registration_pending' %}<div class="boundary">Your submission passed the admission checks. Registration is in progress.</div>
-{% elif s.workflow_state == 'registered' %}<div class="boundary">Your work is registered. <a href="{% url 'catalog:research_detail' s.draft.object_id %}">Public record</a>{% for a in attempts %}{% if a.decision == 'ACCEPTED' %} · <a href="{% url 'catalog:receipt_detail' a.receipt_id %}">receipt {{ a.receipt_id }}</a>{% endif %}{% endfor %}</div>
-{% elif s.workflow_state == 'needs_your_review' %}<div class="boundary">Review the extracted details and answer the remaining questions before submitting.</div>{% endif %}
+
+{% if s.workflow_state == 'preparing' or s.workflow_state == 'uploading' %}
+<section class="card" id="progress-card"><h2 style="margin-top:0">Preparing your submission</h2>
+<ul class="steps" id="progress-steps">{% for st in notes.steps %}<li><span class="status status-{% if st.status == 'done' %}ok{% elif st.status == 'failed' %}bad{% elif st.status == 'running' %}info{% else %}''{% endif %}">{{ st.status }}</span> {{ st.label }}{% if st.detail %} — <span class="note">{{ st.detail }}</span>{% endif %}</li>{% empty %}<li class="note">Waiting for the worker to pick up your files…</li>{% endfor %}</ul>
+<p class="note">Your files are saved. If a step fails, the upload is retained and the step is retried; you can always complete the record manually.</p></section>
+{% elif s.workflow_state == 'processing_unavailable' %}
+<div class="boundary"><strong>Processing is temporarily unavailable.</strong> Your files are preserved and any earlier decision is unchanged. The step that failed is retried automatically; you may also open the editor and continue manually.</div>
+{% if notes.steps %}<ul class="steps">{% for st in notes.steps %}<li><span class="status status-{% if st.status == 'done' %}ok{% elif st.status == 'failed' %}bad{% else %}info{% endif %}">{{ st.status }}</span> {{ st.label }}{% if st.detail %} — <span class="note">{{ st.detail }}</span>{% endif %}</li>{% endfor %}</ul>{% endif %}
+{% elif s.workflow_state == 'needs_your_review' %}
+<div class="boundary">Review the extracted details and answer the remaining questions before submitting.
+{% if assessment %} <span class="status status-ok">{{ assessment.ready|length }} ready</span> <span class="status status-warn">{{ assessment.needs_confirmation|length }} to confirm</span> <span class="status status-bad">{{ assessment.missing|length }} missing</span>{% if assessment.blocking_open %} · {{ assessment.blocking_open }} blocking question{{ assessment.blocking_open|pluralize }}{% else %} · no blocking questions{% endif %}{% endif %}</div>
+{% elif s.workflow_state == 'needs_repair' %}<div class="boundary">This submission needs additional information. Your files and earlier version are preserved. The receipt below names the exact repair; <em>Start repair</em> opens a draft with only those fields flagged.</div>
+{% elif s.workflow_state == 'not_admitted' %}<div class="boundary">The engine found an evaluable contract violation. The receipt states the violation and the resubmission route; a corrected record is a new revision (or a new object if identity changes). This is not a judgement about the research claim.</div>
+{% elif s.workflow_state == 'review_needed' %}<div class="boundary">A documented condition needs human resolution before the gates run (see <em>Review cases</em>). Controversy or disagreement is never a trigger; a reviewer cannot override a gate.</div>
+{% elif s.workflow_state == 'accepted_registration_pending' %}<div class="boundary">Your submission passed the admission checks. Registration is in progress: the accepted revision is being committed through the protected pull-request path and is shown as <em>Registered</em> only after the committed record is read back and verified.</div>
+{% elif s.workflow_state == 'registered' %}
+<div class="boundary"><strong>Your work is registered.</strong>
+<ul>
+<li>Public record: <a href="{% url 'catalog:research_detail' registered_object %}">{{ registered_object }}</a></li>
+{% if accepted_attempt %}<li>Receipt: <a href="{% url 'catalog:receipt_detail' accepted_attempt.receipt_id %}">{{ accepted_attempt.receipt_id }}</a> · execution manifest binds hash <code>{{ accepted_attempt.submission_hash|slice:"7:23" }}</code> to base <code>{{ accepted_attempt.registry_base|slice:":12" }}</code></li>{% endif %}
+{% if owner_author_id %}<li>Profile association: <a href="{% url 'catalog:author_detail' owner_author_id %}">{{ owner_author_id }}</a></li>{% endif %}
+<li>Search: <a href="{% url 'catalog:research' %}?q={{ registered_object }}">find it in the library</a></li>
+<li>Handoff: download below (owner or public-safe scope)</li>
+</ul></div>
+{% endif %}
 
 <div class="actions">
   {% if can_edit and s.editable %}<a class="button" href="{% url 'submissions:edit' s.id %}">Review and edit the draft</a> <a class="button secondary" href="{% url 'submissions:confirm' s.id %}">Submit this revision</a>{% endif %}
+  {% if can_edit and s.workflow_state == 'processing_unavailable' %}<a class="button secondary" href="{% url 'submissions:edit' s.id %}">Continue manually</a>{% endif %}
   {% if can_edit and s.workflow_state == 'needs_repair' or can_edit and s.workflow_state == 'not_admitted' or can_edit and s.workflow_state == 'registered' %}
     <form method="post" action="{% url 'submissions:repair' s.id %}">{% csrf_token %}<button class="primary" type="submit">{% if s.workflow_state == 'registered' %}Start a new revision{% else %}Start repair{% endif %}</button></form>{% endif %}
   {% for r in revisions %}<a class="button secondary" href="{% url 'submissions:export' s.id r.number %}">Handoff r{{ r.number }} (owner)</a> <a class="button secondary" href="{% url 'submissions:export' s.id r.number %}?scope=public">Handoff r{{ r.number }} (public-safe)</a>{% endfor %}
 </div>
 
-{% if notes.problems or notes.questions %}
-<h2>Preparation results</h2>
+{% if dependency_note %}
+<h2>Proposed dependency records did not validate</h2>
+<ul>{% for i in dependency_note.issues %}<li>{{ i.record }}: {{ i.message }}</li>{% endfor %}</ul>
+{% endif %}
+{% if notes.steps and s.workflow_state != 'preparing' %}
+<details><summary>What preparation did ({{ notes.at|slice:":19" }})</summary>
+<ul class="steps">{% for st in notes.steps %}<li><span class="status status-{% if st.status == 'done' %}ok{% elif st.status == 'failed' %}bad{% else %}info{% endif %}">{{ st.status }}</span> {{ st.label }}{% if st.detail %} — <span class="note">{{ st.detail }}</span>{% endif %}</li>{% endfor %}</ul>
 {% if notes.problems %}<ul>{% for p in notes.problems %}<li class="note">{{ p }}</li>{% endfor %}</ul>{% endif %}
-{% if notes.questions %}<h3>Questions to answer in the editor</h3><ol>{% for q in notes.questions %}<li>{{ q.question }} <span class="note">({{ q.field }})</span></li>{% endfor %}</ol>{% endif %}
-{% if notes.issues %}<h3>Proposed dependency records did not validate</h3><ul>{% for i in notes.issues %}<li>{{ i.record }}: {{ i.message }}</li>{% endfor %}</ul>{% endif %}
+{% if notes.duplicates %}<h3>Possible duplicates</h3><ul>{% for d in notes.duplicates %}<li>{{ d.kind|cut:"_" }}: <code>{{ d.id }}</code> — {{ d.title }} <span class="note">({{ d.basis }})</span></li>{% endfor %}</ul>{% endif %}
+</details>
 {% endif %}
 
 <h2>Files</h2>
@@ -45,18 +74,19 @@
 {% empty %}<tr><td colspan="8" class="note">No confirmed revision yet.</td></tr>{% endfor %}
 </tbody></table>
 {% for a in attempts %}{% if a.receipt and a.decision != 'ACCEPTED' %}
-<details><summary>Receipt {{ a.receipt_id }} — exact repair / violation</summary>
-<ul>{% for line in a.receipt.exact_repair_required %}<li>{{ line }}</li>{% endfor %}{% if a.receipt.established_violation %}<li>{{ a.receipt.established_violation }}</li><li>{{ a.receipt.resubmission_conditions }}</li>{% endif %}</ul></details>
+<details {% if forloop.last %}open{% endif %}><summary>Receipt {{ a.receipt_id }} — {{ a.decision }}: exact repair / violation</summary>
+<ul>{% for line in a.receipt.exact_repair_required %}<li>{{ line }}</li>{% endfor %}{% if a.receipt.established_violation %}<li>{{ a.receipt.established_violation }}</li><li>{{ a.receipt.resubmission_conditions }}</li>{% endif %}</ul>
+{% if a.receipt.fields_already_accepted %}<p class="note">Fields already accepted: {{ a.receipt.fields_already_accepted|join:", " }}</p>{% endif %}</details>
 {% endif %}{% endfor %}
 
 {% if review_cases %}
 <h2>Review cases</h2>
-<table><thead><tr><th>Condition</th><th>Detail</th><th>State</th><th>Resolution</th></tr></thead><tbody>
+<table><thead><tr><th>Condition</th><th>Exact issue and requested evidence</th><th>State</th><th>Resolution</th></tr></thead><tbody>
 {% for c in review_cases %}<tr><td>{{ c.get_condition_display }}</td><td>{{ c.detail }}</td><td>{{ c.state }}</td><td>{{ c.resolution }}</td></tr>{% endfor %}</tbody></table>
 {% endif %}
 
 <h2>Questions about this submission</h2>
-{% for q in questions %}<div class="card"><p><strong>{{ q.author.display_name }}</strong> <span class="note">{{ q.created_at|date:"Y-m-d H:i" }} · r{{ q.revision.number|default:"—" }}{% if q.resolved %} · resolved{% endif %}</span></p><p>{{ q.text }}</p>{% if q.source_pointer %}<p class="note">Source pointer: {{ q.source_pointer }}</p>{% endif %}
+{% for q in questions %}<div class="card"><p><strong>{{ q.author.display_name }}</strong> <span class="note">{{ q.created_at|date:"Y-m-d H:i" }} · attached to r{{ q.revision.number|default:"draft" }}</span> {% if q.resolved %}<span class="status status-ok">resolved</span>{% else %}<span class="status status-warn">open</span>{% endif %}</p><p>{{ q.text }}</p>{% if q.source_pointer %}<p class="note">Source pointer: {{ q.source_pointer }}</p>{% endif %}
 {% for r in q.responses.all %}<p style="margin-left:1rem"><strong>{{ r.author.display_name }}</strong> <span class="note">{{ r.created_at|date:"Y-m-d H:i" }}</span><br>{{ r.text }}</p>{% endfor %}
 {% if q.resolution_evidence %}<p class="note">Resolution evidence: {{ q.resolution_evidence }}</p>{% endif %}
 <form method="post" action="{% url 'submissions:respond' s.id q.id %}" class="stack">{% csrf_token %}<label for="resp-{{ q.id }}">Respond</label><textarea id="resp-{{ q.id }}" name="text" rows="2"></textarea>
@@ -67,8 +97,11 @@
 <h2>History</h2>
 <ul class="timeline">{% for e in events %}<li><time>{{ e.occurred_at|date:"Y-m-d H:i:s" }}</time> {{ e.action }}{% if e.previous_state %} {{ e.previous_state }} → {{ e.new_state }}{% endif %} <span class="note">{{ e.actor_label }}{% if e.reason %} — {{ e.reason }}{% endif %}</span></li>{% endfor %}</ul>
 {% endblock %}
-{% block scripts %}{% load static %}<script src="{% static 'js/upload.js' %}"></script>
+{% block scripts %}<script src="{% static 'js/upload.js' %}"></script>
 <script>
-(function(){ var badge=document.getElementById('state-badge'); if(!badge||!window.fetch) return; var initial=badge.textContent;
-  var poll=setInterval(function(){ fetch("{% url 'submissions:status' s.id %}",{headers:{'Accept':'application/json'}}).then(function(r){return r.json();}).then(function(j){ if(j.label!==initial){ clearInterval(poll); window.location.reload(); } }).catch(function(){}); }, 5000); })();
+(function(){ var badge=document.getElementById('state-badge'); if(!badge||!window.fetch) return; var initial=badge.textContent; var stepsEl=document.getElementById('progress-steps');
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  var poll=setInterval(function(){ fetch("{% url 'submissions:status' s.id %}",{headers:{'Accept':'application/json'}}).then(function(r){return r.json();}).then(function(j){
+    if(stepsEl && j.steps && j.steps.length){ stepsEl.innerHTML=j.steps.map(function(st){ var cls=st.status==='done'?'ok':st.status==='failed'?'bad':'info'; return '<li><span class="status status-'+cls+'">'+esc(st.status)+'</span> '+esc(st.label)+(st.detail?' — <span class="note">'+esc(st.detail)+'</span>':'')+'</li>'; }).join(''); }
+    if(j.label!==initial){ clearInterval(poll); window.location.reload(); } }).catch(function(){}); }, 3000); })();
 </script>{% endblock %}

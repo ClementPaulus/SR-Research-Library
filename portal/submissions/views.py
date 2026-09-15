@@ -69,6 +69,28 @@ def new_submission(request):
                                                     "max_submission_mib": settings.PORTAL_UPLOAD_MAX_SUBMISSION_BYTES // (1024 * 1024)})
 
 
+JOURNEY = [
+    ("uploaded", "Uploaded", {wf.DRAFT, wf.UPLOADING}),
+    ("preparing", "Preparing", {wf.PREPARING, wf.PROCESSING_UNAVAILABLE}),
+    ("review", "Needs your review", {wf.NEEDS_REVIEW}),
+    ("submitted", "Submitted & evaluating", {wf.SUBMITTED, wf.EVALUATING, wf.REVIEW_NEEDED}),
+    ("decision", "Decision", {wf.NEEDS_REPAIR, wf.NOT_ADMITTED, wf.ACCEPTED_PENDING}),
+    ("registered", "Registered", {wf.REGISTERED}),
+]
+
+
+def _journey(submission: Submission) -> list:
+    current_index = next((i for i, (_, _, states) in enumerate(JOURNEY) if submission.workflow_state in states), 0)
+    rows = []
+    for index, (key, label, states) in enumerate(JOURNEY):
+        status = "done" if index < current_index else ("current" if index == current_index else "todo")
+        if key == "decision" and index == current_index:
+            label = {wf.NEEDS_REPAIR: "Needs repair", wf.NOT_ADMITTED: "Not admitted", wf.ACCEPTED_PENDING: "Accepted — awaiting registration"}.get(
+                submission.workflow_state, label)
+        rows.append({"key": key, "label": label, "status": status})
+    return rows
+
+
 @login_required
 def detail(request, submission_id):
     submission = _owned(request, submission_id)
@@ -79,19 +101,29 @@ def detail(request, submission_id):
     questions = submission.questions.prefetch_related("responses").order_by("created_at")
     review_cases = submission.review_cases.order_by("created_at")
     uploads = submission.uploads.filter(parent__isnull=True).order_by("created_at")
-    notes = submission.processing_notes[-1] if submission.processing_notes else {}
+    preparation_note = next((n for n in reversed(submission.processing_notes or []) if n.get("kind") == "preparation"), {})
+    repair_note = next((n for n in reversed(submission.processing_notes or []) if n.get("kind") == "repair"), None)
+    dependency_note = next((n for n in reversed(submission.processing_notes or []) if n.get("kind") == "dependency"), None)
+    assessment = services.assessment_for(submission) if submission.editable else None
+    registered_object = submission.draft.get("object_id") if submission.workflow_state == wf.REGISTERED else None
+    accepted_attempt = next((a for a in reversed(list(attempts)) if a.decision == "ACCEPTED"), None)
     return render(request, "submissions/detail.html", {
         "s": submission, "revisions": revisions, "attempts": attempts, "publications": publications, "events": events,
-        "questions": questions, "review_cases": review_cases, "uploads": uploads, "notes": notes,
+        "questions": questions, "review_cases": review_cases, "uploads": uploads, "notes": preparation_note,
+        "repair_note": repair_note, "dependency_note": dependency_note, "assessment": assessment,
+        "journey": _journey(submission), "registered_object": registered_object, "accepted_attempt": accepted_attempt,
         "can_edit": submission.can_edit(request.user), "labels": wf.LABELS, "meanings": wf.MEANINGS,
+        "owner_author_id": submission.owner.author_id,
     })
 
 
 @login_required
 def status_json(request, submission_id):
     submission = _owned(request, submission_id)
+    note = next((n for n in reversed(submission.processing_notes or []) if n.get("kind") == "preparation"), {})
     return JsonResponse({"state": submission.workflow_state, "label": submission.state_label, "meaning": submission.state_meaning,
-                         "draft_version": submission.draft_version, "updated_at": submission.updated_at.isoformat()})
+                         "draft_version": submission.draft_version, "updated_at": submission.updated_at.isoformat(),
+                         "steps": note.get("steps", []), "journey": _journey(submission)})
 
 
 @login_required
@@ -120,17 +152,21 @@ def edit(request, submission_id):
         messages.info(request, "This revision is frozen. Start a repair or a new revision to edit.")
         return redirect("submissions:detail", submission.id)
     evidence = FieldEvidence.objects.filter(submission=submission, revision__isnull=True).select_related("upload")
+    path_to_form = {v: k for k, v in _FORM_TO_PATH.items()}
     evidence_by_field: dict = {}
     for e in evidence:
-        evidence_by_field.setdefault(e.field_path, []).append(e)
-    notes = submission.processing_notes[-1] if submission.processing_notes else {}
+        evidence_by_field.setdefault(path_to_form.get(e.field_path, e.field_path), []).append(e)
+    notes = next((n for n in reversed(submission.processing_notes or []) if n.get("kind") == "preparation"), {})
+    repair_note = next((n for n in reversed(submission.processing_notes or []) if n.get("kind") == "repair"), None)
     if request.method == "POST":
         form = DraftForm(request.POST, taxonomies=taxonomies())
         if form.is_valid():
             try:
                 draft, sources, relations = form.to_record(submission)
+                before = services.assessment_for(submission)
                 services.save_draft(submission, request.user, draft, sources, relations,
-                                    expected_version=int(request.POST.get("draft_version", "0")))
+                                    expected_version=int(request.POST.get("draft_version", "0")),
+                                    confirm_fields=before["needs_confirmation"])
             except services.StaleDraft as exc:
                 messages.error(request, f"{exc}. Your changes were not saved; the latest saved version is shown below.")
                 return redirect("submissions:edit", submission.id)
@@ -139,18 +175,37 @@ def edit(request, submission_id):
             else:
                 if request.POST.get("action") == "preview":
                     return redirect("submissions:confirm", submission.id)
-                messages.success(request, "Draft saved.")
+                messages.success(request, "Draft saved. Extracted values you kept are now recorded as confirmed.")
                 return redirect("submissions:edit", submission.id)
     else:
         form = DraftForm.from_submission(submission, taxonomies=taxonomies())
+    assessment = services.assessment_for(submission)
+    status_by_field = {p: "ready" for p in assessment["ready"]}
+    status_by_field.update({p: "confirm" for p in assessment["needs_confirmation"]})
+    status_by_field.update({p: "missing" for p in assessment["missing"]})
+    focus = set((repair_note or {}).get("affected_fields") or [])
+    field_status = {}
+    for name in form.fields:
+        path = _form_field_to_path(name)
+        field_status[name] = {"status": status_by_field.get(path, ""), "repair": path in focus or name in focus}
     return render(request, "submissions/edit.html", {
-        "s": submission, "form": form, "evidence_by_field": evidence_by_field, "notes": notes,
+        "s": submission, "form": form, "evidence_by_field": evidence_by_field, "notes": notes, "repair_note": repair_note,
+        "assessment": assessment, "field_status": field_status,
         "sources": submission.proposed_sources or {}, "relations": submission.proposed_relations or {},
-        "source_form": ProposedSourceForm(), "relation_form": ProposedRelationForm(), "raw_json": json.dumps(submission.draft, indent=2, ensure_ascii=False),
+        "source_form": ProposedSourceForm(prefix="src"), "relation_form": ProposedRelationForm(prefix="rel"), "raw_json": json.dumps(submission.draft, indent=2, ensure_ascii=False),
         "abstract_hint": submission.draft.get("_abstract_hint"), "source_authors_hint": submission.draft.get("_source_authors_hint"),
-        "source_rows": [(k, v, v.get("_ambiguous_version")) for k, v in (submission.proposed_sources or {}).items()],
+        "duplicates": submission.draft.get("_duplicate_findings") or [], "version_ambiguity": submission.draft.get("_version_ambiguity"),
+        "source_rows": [(k, v, v.get("_ambiguous_version"), v.get("_source_type_unconfirmed")) for k, v in (submission.proposed_sources or {}).items()],
         "relation_rows": [(k, v, v.get("evidence") or v.get("_evidence") or "") for k, v in (submission.proposed_relations or {}).items()],
     })
+
+
+_FORM_TO_PATH = {"tier2_class_primary": "tier2_class.primary", "domain_primary": "domain.primary",
+                 "structural_focus_primary": "structural_focus.primary", "evidence_mode_primary": "evidence_mode.primary"}
+
+
+def _form_field_to_path(name: str) -> str:
+    return _FORM_TO_PATH.get(name, name)
 
 
 @login_required
@@ -181,7 +236,7 @@ def autosave(request, submission_id):
 @require_POST
 def add_source(request, submission_id):
     submission = _owned(request, submission_id, edit=True)
-    form = ProposedSourceForm(request.POST)
+    form = ProposedSourceForm(request.POST, prefix="src")
     if not form.is_valid():
         messages.error(request, "Source could not be added: " + "; ".join(f"{k}: {', '.join(v)}" for k, v in form.errors.items()))
         return redirect("submissions:edit", submission.id)
@@ -204,7 +259,7 @@ def add_source(request, submission_id):
 @require_POST
 def add_relation(request, submission_id):
     submission = _owned(request, submission_id, edit=True)
-    form = ProposedRelationForm(request.POST)
+    form = ProposedRelationForm(request.POST, prefix="rel")
     if not form.is_valid():
         messages.error(request, "Relation could not be added: " + "; ".join(f"{k}: {', '.join(v)}" for k, v in form.errors.items()))
         return redirect("submissions:edit", submission.id)
@@ -226,27 +281,59 @@ def confirm(request, submission_id):
     submission = _owned(request, submission_id, edit=True)
     if not submission.editable:
         return redirect("submissions:detail", submission.id)
-    preview = None
-    try:
-        preview = services.preflight(submission)
-    except Exception as exc:  # noqa: BLE001 - preview must never block the page
-        preview = {"error": f"Preview unavailable ({type(exc).__name__}); the authoritative evaluation still runs on submission."}
     if request.method == "POST":
+        hints = {}
+        if request.POST.get("duplicate_resolution"):
+            value = request.POST["duplicate_resolution"]
+            hints["_duplicate_resolution"] = value if value == "distinct" else f"revision_of:{request.POST.get('revision_target', '').strip().upper()}"
+        if request.POST.get("version_resolution"):
+            hints["_version_resolution"] = request.POST["version_resolution"].strip()[:500]
+        source_type = request.POST.get("source_type_confirmation")
         try:
+            expected = int(request.POST.get("draft_version", "0"))
+            if hints or source_type:
+                sources = dict(submission.proposed_sources or {})
+                if source_type in ("corpus-native", "external", "historical", "dataset"):
+                    for record in sources.values():
+                        if record.pop("_source_type_unconfirmed", None):
+                            record["source_type"] = source_type
+                draft = {k: v for k, v in submission.draft.items()}
+                draft.update(hints)
+                services.save_draft(submission, request.user, draft, sources, submission.proposed_relations, expected_version=expected)
+                submission.refresh_from_db()
+                expected = submission.draft_version
             revision = services.confirm_and_submit(
                 submission, request.user, publish_files=request.POST.get("publish_files") == "on",
-                acknowledged=request.POST.get("acknowledge") == "on",
-                expected_version=int(request.POST.get("draft_version", "0")))
+                acknowledged=request.POST.get("acknowledge") == "on" and request.POST.get("acknowledge_claims") == "on",
+                expected_version=expected)
         except (services.SubmissionError, services.StaleDraft, PermissionError) as exc:
             messages.error(request, str(exc))
             return redirect("submissions:confirm", submission.id)
         messages.success(request, f"Revision {revision.number} submitted to the public research library. Evaluation is running.")
         return redirect("submissions:detail", submission.id)
+    preview = None
+    try:
+        preview = services.preflight(submission)
+    except Exception as exc:  # noqa: BLE001 - preview must never block the page
+        preview = {"error": f"Preview unavailable ({type(exc).__name__}); the authoritative evaluation still runs on submission."}
+    assessment = services.assessment_for(submission)
     public_fields = ["title", "authors", "source_ids", "tier2_class", "domain", "structural_focus", "main_question", "claim_layers",
                      "evidence_mode", "provenance", "maturity", "version", "publication_state", "boundaries", "missingness", "next_burden"]
     uploads = submission.uploads.filter(parent__isnull=True, state=Upload.COMPLETE)
-    return render(request, "submissions/confirm.html", {"s": submission, "preview": preview, "public_fields": public_fields,
-                                                        "uploads": uploads, "record_json": json.dumps(submission.draft, indent=2, ensure_ascii=False)})
+    claims_by_layer: dict = {}
+    for claim in submission.draft.get("claim_layers") or []:
+        if isinstance(claim, dict):
+            claims_by_layer.setdefault(claim.get("layer", "?"), []).append(claim.get("claim", ""))
+    duplicates = [f for f in (submission.draft.get("_duplicate_findings") or []) if f["kind"] == "possible_duplicate_object"]
+    other_authors = [a for a in (submission.draft.get("authors") or []) if a != submission.owner.author_id]
+    unconfirmed_source_types = [k for k, v in (submission.proposed_sources or {}).items() if v.get("_source_type_unconfirmed")]
+    return render(request, "submissions/confirm.html", {
+        "s": submission, "preview": preview, "public_fields": public_fields, "uploads": uploads, "assessment": assessment,
+        "record_json": json.dumps({k: v for k, v in submission.draft.items() if not k.startswith("_")}, indent=2, ensure_ascii=False),
+        "claims_by_layer": claims_by_layer, "duplicates": duplicates, "version_ambiguity": submission.draft.get("_version_ambiguity"),
+        "duplicate_resolution": submission.draft.get("_duplicate_resolution"), "version_resolution": submission.draft.get("_version_resolution"),
+        "other_authors": other_authors, "unconfirmed_source_types": unconfirmed_source_types,
+    })
 
 
 @login_required

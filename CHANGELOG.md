@@ -35,8 +35,17 @@ Structura Reditus artifact. Previous releases are never silently rewritten.
   evidence-backed growth.
 - `docs/portal-evidence/baseline-810f4222.json` + `tests/test_baseline_preservation.py`
   (225 historical artifacts byte-identical).
+- Automatic preparation as the default experience (`portal/submissions/preparation.py`):
+  recorded preparation steps with live progress, DOI/arXiv/version identification,
+  duplicate checks against the committed registry, explainable keyword-based
+  classification suggestions (always uncertain), automatic source proposal from
+  the files' own statements, readiness assessment with why/blocks/resolves
+  questions, confirmation-without-retyping, repair reuse with receipt-flagged
+  fields, journey stepper, required resolutions for version ambiguity and
+  possible duplicates, `manage.py reconcile`. Four browser journeys
+  (`portal/tests/run_journeys.sh`) documented in `docs/PORTAL_WALKTHROUGH.md`.
 - Docs: PORTAL_IMPLEMENTATION, PORTAL_OPERATIONS, PORTAL_CONTRIBUTING,
-  PORTAL_ACCEPTANCE; MAIN_PROTECTION_RULESET (effective check name `validate`),
+  PORTAL_WALKTHROUGH, PORTAL_ACCEPTANCE; MAIN_PROTECTION_RULESET (effective check name `validate`),
   RECEIPTS and IDENTIFIERS clarifications; issue forms fixed (`description`)
   and extended. CI: portal job and runtime path-policy diff.
 
