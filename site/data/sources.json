@@ -2534,5 +2534,184 @@
       "The Zenodo record declares no related identifiers; the predecessor and external-anchor lineage is taken from the paper text, not from archive metadata."
     ],
     "notes": "Corpus-native completed prospective computational successor to SRC-000052 (Identifiable Return in Memristive Associative Memory v1.2). Distinct source identity: new contract, new run (PIR-COMP-R1), new frozen evidence, new concept DOI; not a version of SRC-000052 and does not supersede it. The external article DOI 10.1038/s41467-026-69958-0 belongs to He et al. (SRC-000051) and is not this source's identity. Zenodo verification (2026-09-14, API metadata): record 22739943, title \"Prospective Identifiable Return in Associative Memory\", version field empty, creators ['Paulus, Clement'] (ORCID 0009-0000-6069-8234), publication date 2026-09-14, resource type Preprint, access open, license CC-BY-4.0, concept record 22739942, files prospective_identifiable_return.pdf (189,794 bytes) and prospective_identifiable_return_publication_bundle_v1_0.zip (1,932,585 bytes). The deposited PDF and bundle were read for this record (paper text; PUBLICATION_RECORD.md, FINAL_STANCE.md, CITATION.cff, results/RESULT_PROFILE.json, validation/execution_receipt.json, missingness_ledger.csv). The DOI is the publication/provenance locator for the completed manuscript and bundle; per the paper it does not alter the frozen contract, model freeze, execution record, result profile, or final stance."
+  },
+  {
+    "source_id": "SRC-000061",
+    "source_type": "corpus-native",
+    "title": "Admissible Determination: Legitimate Selectivity, Observation, and Time in Structura Reditus",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Exact target recovery through an admitted representation is equivalent to constancy on its observational fibers; a target may remain identifiable without complete-state recovery.",
+      "A coverage condition separates model-relative determination from application adequacy; finite-menu repair separates target-changing alternatives with distinguishing evidence.",
+      "Time is the principal application: order, interval, rate, epoch, calibration, latency, present-state inference, proper time, provenance, and civil labels have distinct preservation burdens.",
+      "Version 1.1.0 declares a retrospective external-evidence freeze with source cutoff September 20 2026, retaining the RFC timestamp fixture and bounded IERS, BIPM, distributed-time, optical-clock, archival, and IANA witnesses. No new physical experiment, prospective deployment validation, canonical return, or weld is claimed."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.22950250",
+      "url": "https://doi.org/10.5281/zenodo.22950250"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.22950250",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/22950250",
+        "preferred": false
+      },
+      {
+        "label": "Released PDF",
+        "type": "full_text",
+        "url": "https://zenodo.org/api/records/22950250/files/Admissible%20Determination.pdf/content",
+        "preferred": false
+      },
+      {
+        "label": "Publication and reproducibility package",
+        "type": "supplement",
+        "url": "https://zenodo.org/api/records/22950250/files/Admissible_Determination_v1.1.0.zip/content",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "The Zenodo API has no version field; the named edition version is taken from the supplied PDF title page.",
+      "The linked publication package was not executed during this catalogue update; reported computational results remain source-reported.",
+      "Date difference preserved: the manuscript states September 27 2026; Zenodo publication_date is 2026-09-25. Neither date is silently substituted for the other; registration time is separate.",
+      "Zenodo uses the short title Admissible Determination; the full title and subtitle are transcribed from the supplied manuscript."
+    ],
+    "version": "1.1.0",
+    "status": "active",
+    "concept_doi": "10.5281/zenodo.22852525",
+    "version_doi": "10.5281/zenodo.22950250",
+    "related_dois": [],
+    "supersedes": [],
+    "superseded_by": null,
+    "notes": "Local Tier-2 closure manuscript under Summa Reditus, Architecture Freeze v1.0. Release event acknowledged from the author request and independently verified public Zenodo record. Manuscript date: September 27 2026 (America/Chicago). Zenodo publication_date: 2026-09-25. Archive resource type: Preprint; open access; license CC BY 4.0. Version DOI and concept DOI are kept separate. Metadata retrieved 2026-09-26T19:47:34Z from https://zenodo.org/api/records/22950250. Supplied PDF SHA-256: 0eaad0f273096f25f082fbc46cab0b467daf9e1799318700098dc05393220e0b. The supplied PDF matches the deposited PDF MD5 checksum and byte count. Publication and registration do not establish independent validation, authority promotion, return, or weld."
+  },
+  {
+    "source_id": "SRC-000062",
+    "source_type": "corpus-native",
+    "title": "How Much of a Thing Must Remain the Same? Burden-Relative Preservation, Support, Identity, and the Boundary of Reditus",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "Each exact burden induces the coarsest exact partition sufficient to preserve its output; simultaneous burdens require the intersection of their fiber-equivalence relations.",
+      "Cross-burden preservation requires factorization on an admitted domain and justified interface. Substrate support profiles alone do not establish support without an appropriate evidence-bearing witness.",
+      "Horizontal burden preservation and vertical support composition are distinct; direct upper support and whole-chain support have separate conditions.",
+      "History and provenance are genuine burdens, changed identity criteria require cross-regime warrant, metric tolerance need not be transitive, and endpoint sameness does not establish Reditus.",
+      "The bundled finite executable fixture checks 15 constructed properties or counterexamples; those checks are not empirical validation. Two unpublished development manuscripts are superseded for publication reference only, with their histories preserved."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.22952262",
+      "url": "https://doi.org/10.5281/zenodo.22952262"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.22952262",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/22952262",
+        "preferred": false
+      },
+      {
+        "label": "Publication and reproducibility package",
+        "type": "supplement",
+        "url": "https://zenodo.org/api/records/22952262/files/How_Much_of_a_Thing_Must_Remain_the_Same_v1_0_DOI_22952262.zip/content",
+        "preferred": false
+      },
+      {
+        "label": "Released PDF",
+        "type": "full_text",
+        "url": "https://zenodo.org/api/records/22952262/files/How_Much_of_a_Thing_Must_Remain_the_Same_v1_0_DOI_22952262.pdf/content",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "The Zenodo API has no version field; the named edition version is taken from the supplied PDF title page.",
+      "The linked publication package was not executed during this catalogue update; reported computational results remain source-reported.",
+      "Date difference preserved: the manuscript states September 27 2026; Zenodo publication_date is 2026-09-25. Neither date is silently substituted for the other; registration time is separate."
+    ],
+    "version": "1.0",
+    "status": "active",
+    "concept_doi": "10.5281/zenodo.22948820",
+    "version_doi": "10.5281/zenodo.22952262",
+    "related_dois": [],
+    "supersedes": [],
+    "superseded_by": null,
+    "notes": "Completed Tier-2 integrative closure downstream of Admissible Determination. Release event acknowledged from the author request and independently verified public Zenodo record. Manuscript date: September 27 2026. Zenodo publication_date: 2026-09-25. Archive resource type: Preprint; open access; license CC BY 4.0. Version DOI and concept DOI are kept separate. Metadata retrieved 2026-09-26T19:47:34Z from https://zenodo.org/api/records/22952262. Supplied PDF SHA-256: ad7776017918fc62fb9181e092e7fa66629f58895a9aac067a11bc86af72c2fa. The supplied PDF matches the deposited PDF MD5 checksum and byte count. Publication and registration do not establish independent validation, authority promotion, return, or weld."
+  },
+  {
+    "source_id": "SRC-000063",
+    "source_type": "corpus-native",
+    "title": "Collapse Generates Distinction: Formal Readback of Determination, Preservation, and the Return Grammar",
+    "source_authors": [
+      "Clement Paulus"
+    ],
+    "source_native_claims": [
+      "For a finite simultaneously active burden family on one admitted domain, exact joint determination through E is equivalent to ker E being contained in the kernel of the joint burden signature, or to the collision set and burden-decisive pair set being disjoint.",
+      "The four distinction cases are admissible omission, decisive collision, surplus resolution, and required distinction retained. Selective loss creates no source information.",
+      "Evidence refinement changes what can be distinguished; burden refinement changes what must be distinguished; target coarsening changes the question. Deterministic post-processing cannot split an inherited representation fiber.",
+      "Determination and burden-relative sameness do not establish identity, history, continuity, canonical return, seam closure, or weld. The set-theoretic mathematics neither proves Axiom-0 nor reduces canonical collapse to quotienting.",
+      "The publication record declares a core paper and canon-facing mathematical consolidation, introducing no new Tier-1 object or identity and no new Tier-0 return, seam, ledger, validator, closure, or stance rule."
+    ],
+    "identifier": {
+      "doi": "10.5281/zenodo.22968775",
+      "url": "https://doi.org/10.5281/zenodo.22968775"
+    },
+    "publication_year": 2026,
+    "venue": "Zenodo",
+    "links": [
+      {
+        "label": "Canonical DOI",
+        "type": "canonical",
+        "url": "https://doi.org/10.5281/zenodo.22968775",
+        "preferred": true
+      },
+      {
+        "label": "Zenodo archive",
+        "type": "archive",
+        "url": "https://zenodo.org/records/22968775",
+        "preferred": false
+      },
+      {
+        "label": "Released PDF",
+        "type": "full_text",
+        "url": "https://zenodo.org/api/records/22968775/files/Collapse_Generates_Distinction_v1.0_DOI_22968775.pdf/content",
+        "preferred": false
+      },
+      {
+        "label": "Publication and reproducibility package",
+        "type": "supplement",
+        "url": "https://zenodo.org/api/records/22968775/files/Collapse_Generates_Distinction_v1.0_publication_package.zip/content",
+        "preferred": false
+      }
+    ],
+    "missingness": [
+      "The Zenodo API has no version field; the named edition version is taken from the supplied PDF title page.",
+      "The linked publication package was not executed during this catalogue update; reported computational results remain source-reported."
+    ],
+    "version": "1.0",
+    "status": "active",
+    "concept_doi": "10.5281/zenodo.22968774",
+    "version_doi": "10.5281/zenodo.22968775",
+    "related_dois": [],
+    "supersedes": [],
+    "superseded_by": null,
+    "notes": "Core paper; canon-facing mathematical consolidation under Summa Reditus, Architecture Freeze v1.0. Release event acknowledged from the author request and independently verified public Zenodo record. Manuscript date: September 2026 (day not stated on the title page). Zenodo publication_date: 2026-09-26. Archive resource type: Preprint; open access; license CC BY 4.0. Version DOI and concept DOI are kept separate. Metadata retrieved 2026-09-26T19:47:34Z from https://zenodo.org/api/records/22968775. Supplied PDF SHA-256: 083c74ac81a7482dc90e83555d0c722355802164b15105901a7d311231229966. The supplied PDF matches the deposited PDF MD5 checksum and byte count. Publication and registration do not establish independent validation, authority promotion, return, or weld."
   }
 ]

@@ -1,0 +1,120 @@
+{
+  "object_id": "SR-OBJ-000033",
+  "title": "How Much of a Thing Must Remain the Same? Burden-Relative Preservation, Support, Identity, and the Boundary of Reditus",
+  "authors": [
+    "AUTH-0001"
+  ],
+  "authority": {
+    "tier": "tier-2"
+  },
+  "tier2_class": {
+    "primary": "diagnostic",
+    "secondary": [
+      "domain-translation"
+    ]
+  },
+  "functional_locus": "cross-system",
+  "source_ids": [
+    "SRC-000062",
+    "SRC-000061"
+  ],
+  "lens": "Burden-relative preservation and relational support",
+  "domain": {
+    "primary": "mathematics",
+    "secondary": [
+      "structura-reditus-core",
+      "philosophy",
+      "systems-theory"
+    ]
+  },
+  "object_of_study": "The distinctions that must survive variation for declared preservation, support, history, identity, and return burdens.",
+  "structural_focus": {
+    "primary": "identity",
+    "secondary": [
+      "continuity",
+      "boundary",
+      "return"
+    ]
+  },
+  "main_question": "What may change without changing what the active burden requires preserved?",
+  "secondary_questions": [
+    "When can sameness transfer across burdens or support compose across realization levels?",
+    "What additional history and cross-regime warrant are needed for continuity or changed identity criteria?"
+  ],
+  "claim_layers": [
+    {
+      "layer": "source-observation",
+      "claim": "Each exact burden induces the coarsest exact partition sufficient to preserve its output; simultaneous burdens require the intersection of their fiber-equivalence relations."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Cross-burden preservation requires factorization on an admitted domain and justified interface. Substrate support profiles alone do not establish support without an appropriate evidence-bearing witness."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "Horizontal burden preservation and vertical support composition are distinct; direct upper support and whole-chain support have separate conditions."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "History and provenance are genuine burdens, changed identity criteria require cross-regime warrant, metric tolerance need not be transitive, and endpoint sameness does not establish Reditus."
+    },
+    {
+      "layer": "source-observation",
+      "claim": "The bundled finite executable fixture checks 15 constructed properties or counterexamples; those checks are not empirical validation. Two unpublished development manuscripts are superseded for publication reference only, with their histories preserved."
+    },
+    {
+      "layer": "local-interpretation",
+      "claim": "Library classification: diagnostic primary with domain-translation secondary, reflecting the paper's conditional adequacy tests and application interfaces. These retrieval labels are not source-native claims of new authority."
+    }
+  ],
+  "evidence_mode": {
+    "primary": "formal-proof",
+    "secondary": [
+      "formal-derivation",
+      "computational-reproduction",
+      "no-empirical-validation"
+    ]
+  },
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "relations": [
+    "REL-000008"
+  ],
+  "governing_refs": [
+    "SR-GOV-000001",
+    "SR-GOV-000005"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-26T19:47:34Z",
+  "publication_state": "preprint",
+  "source_boundary": "The supplied How Much of a Thing Must Remain the Same? Burden-Relative Preservation, Support, Identity, and the Boundary of Reditus PDF, version 1.0, is the manuscript evidence for this record; the public Zenodo API establishes archive metadata and links. Admissible Determination v1.1.0 is the distinct predecessor. The two unpublished development manuscripts are publication-lineage objects only and are not evidentiary dependencies of the public argument. The linked package and reported computations were not independently rerun in this registration.",
+  "authority_boundary": "Explicitly local Tier-2 work under Summa Reditus, Architecture Freeze v1.0. No Tier-1 redefinition or new Tier-0 rule, adoption, validator, return, seam, accounting profile, or stance procedure follows from these results or their library admission.",
+  "scope": "Conditional set-theoretic preservation, simultaneous burdens, cross-burden transport, substrate support profiles and witnesses, vertical composition, provenance, identity, approximate-sameness limits, and the boundary of Reditus.",
+  "exclusions": [
+    "No burden-free identity criterion or automatic identity/continuity from terminal equality.",
+    "No empirical validation from the finite constructed fixture.",
+    "No canonical return, weld, or authority promotion from sameness or support-profile equality."
+  ],
+  "preserved_meaning": "Sameness, support, history, provenance, identity, continuity, and Reditus retain distinct burdens; changed criteria require a warranted bridge.",
+  "missingness": [
+    {
+      "item": "Independent reproduction of the linked package",
+      "class": "NON_BLOCKING",
+      "notes": "Computational-reproduction describes evidence reported by the source. This catalogue update reads the manuscript and archive metadata and does not rerun those computations."
+    },
+    {
+      "item": "Application-specific coverage and evidence",
+      "class": "NON_BLOCKING",
+      "notes": "Required for stronger empirical or deployment claims; the registered burden is the conditional theoretical/methodological work."
+    },
+    {
+      "item": "Manuscript and archive dates differ",
+      "class": "NON_BLOCKING",
+      "notes": "Manuscript: September 27 2026; Zenodo publication_date: 2026-09-25. Both are retained on the source record. The record date is the registration timestamp."
+    }
+  ],
+  "distortion_or_substitution_risk": "Treating profile equality as witnessed support, endpoint sameness as history or continuity, or approximate tolerance as exact equivalence.",
+  "next_burden": "For each application, justify the domain, maps, simultaneous burdens, support witnesses, interfaces, history, and any cross-regime identity relation; reproduce the constructed fixture separately from empirical validation.",
+  "repair_route": "Supply distinguishing evidence or a justified domain/interface repair for unresolved application burdens. A changed target or rule-set is a new declared question or seam. For catalogue corrections, preserve the prior record and re-admit a bumped version.",
+  "notes": "First library record version 1.0.0; manuscript version 1.0 is separate. Released under DOI 10.5281/zenodo.22952262; publication event confirmed by the owner and the public archive. The archive classifies the release as a Preprint. Printed publication information is preserved, including September 27 2026. No change to earlier registered works or historical runs."
+}

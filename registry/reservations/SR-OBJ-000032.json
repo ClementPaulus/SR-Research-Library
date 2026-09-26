@@ -1,0 +1,11 @@
+{
+  "reservation_version": "SR-RESERVATION.v0.1.0",
+  "namespace": "SR-OBJ",
+  "value": "SR-OBJ-000032",
+  "operation_key": "2026-09-new-papers-ad-object",
+  "purpose": "Admit Tier-2 paper: Admissible Determination: Legitimate Selectivity, Observation, and Time in Structura Reditus",
+  "state": "published",
+  "reserved_at": "2026-09-26T19:47:34Z",
+  "route": "cli",
+  "published_record_path": "registry/objects/SR-OBJ-000032.json"
+}

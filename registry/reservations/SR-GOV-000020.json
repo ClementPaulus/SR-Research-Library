@@ -1,0 +1,11 @@
+{
+  "reservation_version": "SR-RESERVATION.v0.1.0",
+  "namespace": "SR-GOV",
+  "value": "SR-GOV-000020",
+  "operation_key": "2026-09-new-papers-cgd-governing",
+  "purpose": "Register canon-facing core paper Collapse Generates Distinction with no new Tier-1/Tier-0 authority",
+  "state": "published",
+  "reserved_at": "2026-09-26T19:47:34Z",
+  "route": "cli",
+  "published_record_path": "registry/governing/SR-GOV-000020.json"
+}

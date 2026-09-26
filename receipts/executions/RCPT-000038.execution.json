@@ -1,0 +1,35 @@
+{
+  "manifest_version": "SR-EXECUTION.v0.1.0",
+  "receipt_id": "RCPT-000038",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000032",
+  "submission_hash": "sha256:379841da5573663a4228705819816d8d1e58ec71aac713189ed474d84948201c",
+  "submission_snapshot_path": "receipts/accepted/RCPT-000038.submission.json",
+  "engine_revision": "f7bb7eb87aebf1aec667da616a0fb24274af111b",
+  "schema_version": "SR-SCHEMA.v0.4.0",
+  "taxonomy_version": "SR-TAXONOMY.v0.2.0",
+  "registry_base": "f7bb7eb87aebf1aec667da616a0fb24274af111b",
+  "evaluated_at": "2026-09-26T19:47:34Z",
+  "gate_results": {
+    "A": "PASS",
+    "B": "PASS",
+    "C": "PASS",
+    "D": "PASS",
+    "E": "PASS",
+    "F": "PASS",
+    "G": "PASS"
+  },
+  "route": "cli",
+  "operation_key": "2026-09-new-papers-ad-admission",
+  "source_files": [
+    {
+      "display_name": "38-Admissible-Determination.pdf",
+      "sha256": "0eaad0f273096f25f082fbc46cab0b467daf9e1799318700098dc05393220e0b",
+      "bytes": 228605,
+      "media_type": null,
+      "version_reference": null,
+      "public": false
+    }
+  ],
+  "review_decision": null
+}

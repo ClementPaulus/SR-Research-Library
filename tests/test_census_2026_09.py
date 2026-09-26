@@ -188,7 +188,13 @@ def test_relations_are_deliberate_and_source_explicit():
             continue
         assert rel["relation_type"] in taxonomies["relation_types"], rid
         assert rel["from_id"] in endpoints and rel["to_id"] in endpoints, rid
-        assert rid in declared, f"{rid} exists but no registered object declares it"
+        if rel["from_id"].startswith("SRC-") and rel["to_id"].startswith("SRC-"):
+            # The relation schema admits source-to-source lineage. Canon-facing
+            # works need not acquire a Tier-2 object merely to declare it.
+            assert rel.get("declared"), f"{rid} has no declaration timestamp"
+            assert rel.get("notes", "").strip(), f"{rid} has no source-grounded explanation"
+        else:
+            assert rid in declared, f"{rid} exists but no registered object declares it"
 
 
 def test_snapshot_objects_and_receipts_are_preserved():

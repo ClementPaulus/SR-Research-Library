@@ -1,0 +1,60 @@
+{
+  "source_id": "SRC-000061",
+  "source_type": "corpus-native",
+  "title": "Admissible Determination: Legitimate Selectivity, Observation, and Time in Structura Reditus",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Exact target recovery through an admitted representation is equivalent to constancy on its observational fibers; a target may remain identifiable without complete-state recovery.",
+    "A coverage condition separates model-relative determination from application adequacy; finite-menu repair separates target-changing alternatives with distinguishing evidence.",
+    "Time is the principal application: order, interval, rate, epoch, calibration, latency, present-state inference, proper time, provenance, and civil labels have distinct preservation burdens.",
+    "Version 1.1.0 declares a retrospective external-evidence freeze with source cutoff September 20 2026, retaining the RFC timestamp fixture and bounded IERS, BIPM, distributed-time, optical-clock, archival, and IANA witnesses. No new physical experiment, prospective deployment validation, canonical return, or weld is claimed."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.22950250",
+    "url": "https://doi.org/10.5281/zenodo.22950250"
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.22950250",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/22950250",
+      "preferred": false
+    },
+    {
+      "label": "Released PDF",
+      "type": "full_text",
+      "url": "https://zenodo.org/api/records/22950250/files/Admissible%20Determination.pdf/content",
+      "preferred": false
+    },
+    {
+      "label": "Publication and reproducibility package",
+      "type": "supplement",
+      "url": "https://zenodo.org/api/records/22950250/files/Admissible_Determination_v1.1.0.zip/content",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "The Zenodo API has no version field; the named edition version is taken from the supplied PDF title page.",
+    "The linked publication package was not executed during this catalogue update; reported computational results remain source-reported.",
+    "Date difference preserved: the manuscript states September 27 2026; Zenodo publication_date is 2026-09-25. Neither date is silently substituted for the other; registration time is separate.",
+    "Zenodo uses the short title Admissible Determination; the full title and subtitle are transcribed from the supplied manuscript."
+  ],
+  "version": "1.1.0",
+  "status": "active",
+  "concept_doi": "10.5281/zenodo.22852525",
+  "version_doi": "10.5281/zenodo.22950250",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
+  "notes": "Local Tier-2 closure manuscript under Summa Reditus, Architecture Freeze v1.0. Release event acknowledged from the author request and independently verified public Zenodo record. Manuscript date: September 27 2026 (America/Chicago). Zenodo publication_date: 2026-09-25. Archive resource type: Preprint; open access; license CC BY 4.0. Version DOI and concept DOI are kept separate. Metadata retrieved 2026-09-26T19:47:34Z from https://zenodo.org/api/records/22950250. Supplied PDF SHA-256: 0eaad0f273096f25f082fbc46cab0b467daf9e1799318700098dc05393220e0b. The supplied PDF matches the deposited PDF MD5 checksum and byte count. Publication and registration do not establish independent validation, authority promotion, return, or weld."
+}

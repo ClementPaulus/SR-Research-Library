@@ -646,5 +646,36 @@
     "non_goal": "Tier-2 objects (scores, labels, narratives, auxiliary diagnostics) may be introduced only as diagnostics and must not be used as regime or weld gates unless promoted through an explicit seam, a new frozen run, and a recorded weld decision; the whitepaper's predictions are stated as unverified as of v2.1.5.",
     "missingness": [],
     "notes": "Supersedes SR-GOV-000010 to close the DOI-lineage seam (SEAM-0009) without editing the released record: 10.5281/zenodo.18819238 is the concept DOI and canonical anchor; 10.5281/zenodo.18819239 is the earlier v2.1.3 version record, kept only as historical version metadata on SRC-000015. Admitted burden, authority scope, scope, and non-goal are unchanged from SR-GOV-000010. Title page also cites canon context 10.5281/zenodo.17756705 (PRE) and 10.5281/zenodo.18072852 (POST), Weld-ID W-2025-12-31-PHYS-COHERENCE, and software DOI 10.5281/zenodo.18616616; those are the source's citations, not identifiers of this record."
+  },
+  {
+    "governing_id": "SR-GOV-000020",
+    "title": "Collapse Generates Distinction: Formal Readback of Determination, Preservation, and the Return Grammar",
+    "source_id": "SRC-000063",
+    "version": "Version 1.0, September 2026",
+    "status": "active",
+    "governing_role": [
+      "canon-facing"
+    ],
+    "authority_scope": {
+      "tier_1": [],
+      "tier_0": []
+    },
+    "source_role": "Core paper; canon-facing mathematical consolidation under Summa Reditus, Architecture Freeze v1.0.",
+    "immutable_record": true,
+    "active_from": "2026-09-26T19:47:34Z",
+    "supersedes": null,
+    "superseded_by": null,
+    "doi": "10.5281/zenodo.22968775",
+    "canonical_link": "https://doi.org/10.5281/zenodo.22968775",
+    "scope": "Formal readback joining the exact determination criterion and burden-relative preservation into the collision/decisive-pair criterion; clarifies distinction, evidence, burden, missingness, repair, and the boundary of the inherited return grammar. Local mathematical consolidation under Summa Reditus, not a replacement treatise.",
+    "non_goal": "Introduces no new Tier-1 object or identity and no new Tier-0 return, seam, ledger, validator, closure, or stance rule. Does not prove Axiom-0, identify every collapse with quotienting, or reduce Reditus to factorization. No authority is promoted by publication or this reference registration.",
+    "missingness": [
+      {
+        "item": "Application and extension burdens",
+        "class": "NON_BLOCKING",
+        "notes": "Measurability, numerical stability, computability, statistical calibration, physical observability, real-world coverage, and warranted identity/seam transport remain separate (section 10)."
+      }
+    ],
+    "notes": "The supplied publication record and Zenodo notes explicitly declare a canon-facing core paper. Registered as SRC plus SR-GOV, with empty Tier-1/Tier-0 authority arrays, rather than assigning an unsupported Tier-2 research-object identity. Active means available as this bounded reference, not promotion of new governing rules. Release verified in public Zenodo metadata: 2026-09-26, Preprint, CC BY 4.0. The manuscript title page states September 2026. Source PDF hash and archive links are preserved on SRC-000063."
   }
 ]

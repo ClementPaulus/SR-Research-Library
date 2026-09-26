@@ -1,0 +1,8 @@
+{
+  "relation_id": "REL-000010",
+  "relation_type": "derived_from",
+  "from_id": "SRC-000063",
+  "to_id": "SRC-000062",
+  "declared": "2026-09-26T19:47:34Z",
+  "notes": "Collapse Generates Distinction, sections 3-4 and 7, inherits burden-relative preservation and joint sameness from How Much of a Thing Must Remain the Same? v1.0. Consolidation does not supersede either local proof source."
+}

@@ -1,0 +1,59 @@
+{
+  "source_id": "SRC-000063",
+  "source_type": "corpus-native",
+  "title": "Collapse Generates Distinction: Formal Readback of Determination, Preservation, and the Return Grammar",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "For a finite simultaneously active burden family on one admitted domain, exact joint determination through E is equivalent to ker E being contained in the kernel of the joint burden signature, or to the collision set and burden-decisive pair set being disjoint.",
+    "The four distinction cases are admissible omission, decisive collision, surplus resolution, and required distinction retained. Selective loss creates no source information.",
+    "Evidence refinement changes what can be distinguished; burden refinement changes what must be distinguished; target coarsening changes the question. Deterministic post-processing cannot split an inherited representation fiber.",
+    "Determination and burden-relative sameness do not establish identity, history, continuity, canonical return, seam closure, or weld. The set-theoretic mathematics neither proves Axiom-0 nor reduces canonical collapse to quotienting.",
+    "The publication record declares a core paper and canon-facing mathematical consolidation, introducing no new Tier-1 object or identity and no new Tier-0 return, seam, ledger, validator, closure, or stance rule."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.22968775",
+    "url": "https://doi.org/10.5281/zenodo.22968775"
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.22968775",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/22968775",
+      "preferred": false
+    },
+    {
+      "label": "Released PDF",
+      "type": "full_text",
+      "url": "https://zenodo.org/api/records/22968775/files/Collapse_Generates_Distinction_v1.0_DOI_22968775.pdf/content",
+      "preferred": false
+    },
+    {
+      "label": "Publication and reproducibility package",
+      "type": "supplement",
+      "url": "https://zenodo.org/api/records/22968775/files/Collapse_Generates_Distinction_v1.0_publication_package.zip/content",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "The Zenodo API has no version field; the named edition version is taken from the supplied PDF title page.",
+    "The linked publication package was not executed during this catalogue update; reported computational results remain source-reported."
+  ],
+  "version": "1.0",
+  "status": "active",
+  "concept_doi": "10.5281/zenodo.22968774",
+  "version_doi": "10.5281/zenodo.22968775",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
+  "notes": "Core paper; canon-facing mathematical consolidation under Summa Reditus, Architecture Freeze v1.0. Release event acknowledged from the author request and independently verified public Zenodo record. Manuscript date: September 2026 (day not stated on the title page). Zenodo publication_date: 2026-09-26. Archive resource type: Preprint; open access; license CC BY 4.0. Version DOI and concept DOI are kept separate. Metadata retrieved 2026-09-26T19:47:34Z from https://zenodo.org/api/records/22968775. Supplied PDF SHA-256: 083c74ac81a7482dc90e83555d0c722355802164b15105901a7d311231229966. The supplied PDF matches the deposited PDF MD5 checksum and byte count. Publication and registration do not establish independent validation, authority promotion, return, or weld."
+}

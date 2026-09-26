@@ -2581,6 +2581,222 @@
       }
     },
     {
+      "kind": "object",
+      "id": "SR-OBJ-000032",
+      "title": "Admissible Determination: Legitimate Selectivity, Observation, and Time in Structura Reditus",
+      "questions": [
+        "When can a representation omit source distinctions without losing an independently specified answer, and what evidence repairs a target-changing loss?",
+        "When does model-relative determination cover the intended application?",
+        "Which temporal burdens require distinct calibration, latency, clock, or provenance evidence?"
+      ],
+      "main_question": "When can a representation omit source distinctions without losing an independently specified answer, and what evidence repairs a target-changing loss?",
+      "object_of_study": "The adequacy of selective representations for independently specified targets, with time as the principal application.",
+      "lens": "Target-relative determination and distinguishing-evidence repair",
+      "tier2_class": {
+        "primary": "diagnostic",
+        "secondary": [
+          "domain-translation"
+        ]
+      },
+      "domain": {
+        "primary": "mathematics",
+        "secondary": [
+          "structura-reditus-core",
+          "philosophy",
+          "physics",
+          "computer-science"
+        ]
+      },
+      "structural_focus": {
+        "primary": "compression",
+        "secondary": [
+          "boundary",
+          "missingness",
+          "translation"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "formal-proof",
+        "secondary": [
+          "formal-derivation",
+          "computational-reproduction",
+          "retrospective-analysis",
+          "secondary-empirical"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "cross-system",
+      "publication_state": "preprint",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000061",
+          "title": "Admissible Determination: Legitimate Selectivity, Observation, and Time in Structura Reditus",
+          "doi": "10.5281/zenodo.22950250"
+        }
+      ],
+      "source_ids": [
+        "SRC-000061"
+      ],
+      "relations": [
+        {
+          "relation_id": "REL-000007",
+          "relation_type": "contrasts_with",
+          "from_id": "SR-OBJ-000032",
+          "to_id": "SRC-000022",
+          "declared_here": true
+        }
+      ],
+      "relation_ids": [
+        "REL-000007"
+      ],
+      "governing_refs": [
+        "SR-GOV-000001",
+        "SR-GOV-000005"
+      ],
+      "version": "1.0.0",
+      "date": "2026-09-26T19:47:34Z",
+      "next_burden": "Independently reproduce package checks and establish domain coverage, calibration, source-version interfaces, and prospective application evidence under a declared contract.",
+      "missingness": [
+        {
+          "item": "Independent reproduction of the linked package",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "Application-specific coverage and evidence",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "Manuscript and archive dates differ",
+          "class": "NON_BLOCKING"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000038",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
+      "kind": "object",
+      "id": "SR-OBJ-000033",
+      "title": "How Much of a Thing Must Remain the Same? Burden-Relative Preservation, Support, Identity, and the Boundary of Reditus",
+      "questions": [
+        "What may change without changing what the active burden requires preserved?",
+        "When can sameness transfer across burdens or support compose across realization levels?",
+        "What additional history and cross-regime warrant are needed for continuity or changed identity criteria?"
+      ],
+      "main_question": "What may change without changing what the active burden requires preserved?",
+      "object_of_study": "The distinctions that must survive variation for declared preservation, support, history, identity, and return burdens.",
+      "lens": "Burden-relative preservation and relational support",
+      "tier2_class": {
+        "primary": "diagnostic",
+        "secondary": [
+          "domain-translation"
+        ]
+      },
+      "domain": {
+        "primary": "mathematics",
+        "secondary": [
+          "structura-reditus-core",
+          "philosophy",
+          "systems-theory"
+        ]
+      },
+      "structural_focus": {
+        "primary": "identity",
+        "secondary": [
+          "continuity",
+          "boundary",
+          "return"
+        ]
+      },
+      "evidence_mode": {
+        "primary": "formal-proof",
+        "secondary": [
+          "formal-derivation",
+          "computational-reproduction",
+          "no-empirical-validation"
+        ]
+      },
+      "provenance": "corpus-native",
+      "maturity": "frozen-local-object",
+      "functional_locus": "cross-system",
+      "publication_state": "preprint",
+      "authors": [
+        {
+          "author_id": "AUTH-0001",
+          "display_name": "Clement Paulus",
+          "orcid": "0009-0000-6069-8234"
+        }
+      ],
+      "author_ids": [
+        "AUTH-0001"
+      ],
+      "sources": [
+        {
+          "source_id": "SRC-000062",
+          "title": "How Much of a Thing Must Remain the Same? Burden-Relative Preservation, Support, Identity, and the Boundary of Reditus",
+          "doi": "10.5281/zenodo.22952262"
+        },
+        {
+          "source_id": "SRC-000061",
+          "title": "Admissible Determination: Legitimate Selectivity, Observation, and Time in Structura Reditus",
+          "doi": "10.5281/zenodo.22950250"
+        }
+      ],
+      "source_ids": [
+        "SRC-000062",
+        "SRC-000061"
+      ],
+      "relations": [
+        {
+          "relation_id": "REL-000008",
+          "relation_type": "extends",
+          "from_id": "SR-OBJ-000033",
+          "to_id": "SRC-000061",
+          "declared_here": true
+        }
+      ],
+      "relation_ids": [
+        "REL-000008"
+      ],
+      "governing_refs": [
+        "SR-GOV-000001",
+        "SR-GOV-000005"
+      ],
+      "version": "1.0.0",
+      "date": "2026-09-26T19:47:34Z",
+      "next_burden": "For each application, justify the domain, maps, simultaneous burdens, support witnesses, interfaces, history, and any cross-regime identity relation; reproduce the constructed fixture separately from empirical validation.",
+      "missingness": [
+        {
+          "item": "Independent reproduction of the linked package",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "Application-specific coverage and evidence",
+          "class": "NON_BLOCKING"
+        },
+        {
+          "item": "Manuscript and archive dates differ",
+          "class": "NON_BLOCKING"
+        }
+      ],
+      "receipt": {
+        "receipt_id": "RCPT-000039",
+        "decision": "ACCEPTED"
+      }
+    },
+    {
       "kind": "source",
       "id": "SRC-000001",
       "title": "Summa Reditus: A Complete Treatise on Admissible Return Through Collapse",
@@ -3692,6 +3908,68 @@
       ]
     },
     {
+      "kind": "source",
+      "id": "SRC-000061",
+      "title": "Admissible Determination: Legitimate Selectivity, Observation, and Time in Structura Reditus",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.22950250",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "1.1.0",
+      "status": "active",
+      "source_native_claims": [
+        "Exact target recovery through an admitted representation is equivalent to constancy on its observational fibers; a target may remain identifiable without complete-state recovery.",
+        "A coverage condition separates model-relative determination from application adequacy; finite-menu repair separates target-changing alternatives with distinguishing evidence.",
+        "Time is the principal application: order, interval, rate, epoch, calibration, latency, present-state inference, proper time, provenance, and civil labels have distinct preservation burdens.",
+        "Version 1.1.0 declares a retrospective external-evidence freeze with source cutoff September 20 2026, retaining the RFC timestamp fixture and bounded IERS, BIPM, distributed-time, optical-clock, archival, and IANA witnesses. No new physical experiment, prospective deployment validation, canonical return, or weld is claimed."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000062",
+      "title": "How Much of a Thing Must Remain the Same? Burden-Relative Preservation, Support, Identity, and the Boundary of Reditus",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.22952262",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "1.0",
+      "status": "active",
+      "source_native_claims": [
+        "Each exact burden induces the coarsest exact partition sufficient to preserve its output; simultaneous burdens require the intersection of their fiber-equivalence relations.",
+        "Cross-burden preservation requires factorization on an admitted domain and justified interface. Substrate support profiles alone do not establish support without an appropriate evidence-bearing witness.",
+        "Horizontal burden preservation and vertical support composition are distinct; direct upper support and whole-chain support have separate conditions.",
+        "History and provenance are genuine burdens, changed identity criteria require cross-regime warrant, metric tolerance need not be transitive, and endpoint sameness does not establish Reditus.",
+        "The bundled finite executable fixture checks 15 constructed properties or counterexamples; those checks are not empirical validation. Two unpublished development manuscripts are superseded for publication reference only, with their histories preserved."
+      ]
+    },
+    {
+      "kind": "source",
+      "id": "SRC-000063",
+      "title": "Collapse Generates Distinction: Formal Readback of Determination, Preservation, and the Return Grammar",
+      "source_type": "corpus-native",
+      "source_authors": [
+        "Clement Paulus"
+      ],
+      "doi": "10.5281/zenodo.22968775",
+      "venue": "Zenodo",
+      "publication_year": 2026,
+      "version": "1.0",
+      "status": "active",
+      "source_native_claims": [
+        "For a finite simultaneously active burden family on one admitted domain, exact joint determination through E is equivalent to ker E being contained in the kernel of the joint burden signature, or to the collision set and burden-decisive pair set being disjoint.",
+        "The four distinction cases are admissible omission, decisive collision, surplus resolution, and required distinction retained. Selective loss creates no source information.",
+        "Evidence refinement changes what can be distinguished; burden refinement changes what must be distinguished; target coarsening changes the question. Deterministic post-processing cannot split an inherited representation fiber.",
+        "Determination and burden-relative sameness do not establish identity, history, continuity, canonical return, seam closure, or weld. The set-theoretic mathematics neither proves Axiom-0 nor reduces canonical collapse to quotienting.",
+        "The publication record declares a core paper and canon-facing mathematical consolidation, introducing no new Tier-1 object or identity and no new Tier-0 return, seam, ledger, validator, closure, or stance rule."
+      ]
+    },
+    {
       "kind": "author",
       "id": "AUTH-0001",
       "display_name": "Clement Paulus",
@@ -3922,6 +4200,17 @@
       ],
       "source_id": "SRC-000015",
       "scope": "What the framework computes: kernel ledger, typed return, recurring diagnostics (Δ = F − IC, ρ = IC/F), frozen parameters and structural constants, regime classification, seam budget, and the v2.1.5 verification summary (16 domain closures, 406 scale-ladder objects)."
+    },
+    {
+      "kind": "governing",
+      "id": "SR-GOV-000020",
+      "title": "Collapse Generates Distinction: Formal Readback of Determination, Preservation, and the Return Grammar",
+      "status": "active",
+      "governing_role": [
+        "canon-facing"
+      ],
+      "source_id": "SRC-000063",
+      "scope": "Formal readback joining the exact determination criterion and burden-relative preservation into the collision/decisive-pair criterion; clarifies distinction, evidence, burden, missingness, repair, and the boundary of the inherited return grammar. Local mathematical consolidation under Summa Reditus, not a replacement treatise."
     }
   ]
 }
