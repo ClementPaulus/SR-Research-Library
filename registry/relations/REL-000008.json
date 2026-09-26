@@ -1,0 +1,8 @@
+{
+  "relation_id": "REL-000008",
+  "relation_type": "extends",
+  "from_id": "SR-OBJ-000033",
+  "to_id": "SRC-000061",
+  "declared": "2026-09-26T19:47:34Z",
+  "notes": "How Much of a Thing Must Remain the Same?, sections 1-2: extends the determination criterion into burden-relative preservation, relational support, substitution, provenance, and identity. Admissible Determination remains a distinct predecessor, not a superseded manuscript."
+}

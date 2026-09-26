@@ -1,0 +1,11 @@
+{
+  "reservation_version": "SR-RESERVATION.v0.1.0",
+  "namespace": "REL",
+  "value": "REL-000010",
+  "operation_key": "2026-09-new-papers-cgd-hm",
+  "purpose": "Collapse Generates Distinction, sections 3-4 and 7, inherits burden-relative preservation and joint sameness from How Much of a Thing Must Remain the Same? v1.0. Consolidation does not supersede either local proof source.",
+  "state": "published",
+  "reserved_at": "2026-09-26T19:47:34Z",
+  "route": "cli",
+  "published_record_path": "registry/relations/REL-000010.json"
+}

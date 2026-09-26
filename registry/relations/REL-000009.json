@@ -1,0 +1,8 @@
+{
+  "relation_id": "REL-000009",
+  "relation_type": "derived_from",
+  "from_id": "SRC-000063",
+  "to_id": "SRC-000061",
+  "declared": "2026-09-26T19:47:34Z",
+  "notes": "Collapse Generates Distinction, sections 2 and 4, inherits the exact determination criterion from Admissible Determination v1.1.0 and consolidates it with joint-burden preservation."
+}

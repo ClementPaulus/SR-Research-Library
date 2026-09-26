@@ -1,0 +1,60 @@
+{
+  "source_id": "SRC-000062",
+  "source_type": "corpus-native",
+  "title": "How Much of a Thing Must Remain the Same? Burden-Relative Preservation, Support, Identity, and the Boundary of Reditus",
+  "source_authors": [
+    "Clement Paulus"
+  ],
+  "source_native_claims": [
+    "Each exact burden induces the coarsest exact partition sufficient to preserve its output; simultaneous burdens require the intersection of their fiber-equivalence relations.",
+    "Cross-burden preservation requires factorization on an admitted domain and justified interface. Substrate support profiles alone do not establish support without an appropriate evidence-bearing witness.",
+    "Horizontal burden preservation and vertical support composition are distinct; direct upper support and whole-chain support have separate conditions.",
+    "History and provenance are genuine burdens, changed identity criteria require cross-regime warrant, metric tolerance need not be transitive, and endpoint sameness does not establish Reditus.",
+    "The bundled finite executable fixture checks 15 constructed properties or counterexamples; those checks are not empirical validation. Two unpublished development manuscripts are superseded for publication reference only, with their histories preserved."
+  ],
+  "identifier": {
+    "doi": "10.5281/zenodo.22952262",
+    "url": "https://doi.org/10.5281/zenodo.22952262"
+  },
+  "publication_year": 2026,
+  "venue": "Zenodo",
+  "links": [
+    {
+      "label": "Canonical DOI",
+      "type": "canonical",
+      "url": "https://doi.org/10.5281/zenodo.22952262",
+      "preferred": true
+    },
+    {
+      "label": "Zenodo archive",
+      "type": "archive",
+      "url": "https://zenodo.org/records/22952262",
+      "preferred": false
+    },
+    {
+      "label": "Publication and reproducibility package",
+      "type": "supplement",
+      "url": "https://zenodo.org/api/records/22952262/files/How_Much_of_a_Thing_Must_Remain_the_Same_v1_0_DOI_22952262.zip/content",
+      "preferred": false
+    },
+    {
+      "label": "Released PDF",
+      "type": "full_text",
+      "url": "https://zenodo.org/api/records/22952262/files/How_Much_of_a_Thing_Must_Remain_the_Same_v1_0_DOI_22952262.pdf/content",
+      "preferred": false
+    }
+  ],
+  "missingness": [
+    "The Zenodo API has no version field; the named edition version is taken from the supplied PDF title page.",
+    "The linked publication package was not executed during this catalogue update; reported computational results remain source-reported.",
+    "Date difference preserved: the manuscript states September 27 2026; Zenodo publication_date is 2026-09-25. Neither date is silently substituted for the other; registration time is separate."
+  ],
+  "version": "1.0",
+  "status": "active",
+  "concept_doi": "10.5281/zenodo.22948820",
+  "version_doi": "10.5281/zenodo.22952262",
+  "related_dois": [],
+  "supersedes": [],
+  "superseded_by": null,
+  "notes": "Completed Tier-2 integrative closure downstream of Admissible Determination. Release event acknowledged from the author request and independently verified public Zenodo record. Manuscript date: September 27 2026. Zenodo publication_date: 2026-09-25. Archive resource type: Preprint; open access; license CC BY 4.0. Version DOI and concept DOI are kept separate. Metadata retrieved 2026-09-26T19:47:34Z from https://zenodo.org/api/records/22952262. Supplied PDF SHA-256: ad7776017918fc62fb9181e092e7fa66629f58895a9aac067a11bc86af72c2fa. The supplied PDF matches the deposited PDF MD5 checksum and byte count. Publication and registration do not establish independent validation, authority promotion, return, or weld."
+}

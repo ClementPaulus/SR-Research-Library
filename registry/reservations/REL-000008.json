@@ -1,0 +1,11 @@
+{
+  "reservation_version": "SR-RESERVATION.v0.1.0",
+  "namespace": "REL",
+  "value": "REL-000008",
+  "operation_key": "2026-09-new-papers-hm-ad",
+  "purpose": "How Much of a Thing Must Remain the Same?, sections 1-2: extends the determination criterion into burden-relative preservation, relational support, substitution, provenance, and identity. Admissible Determination remains a distinct predecessor, not a superseded manuscript.",
+  "state": "published",
+  "reserved_at": "2026-09-26T19:47:34Z",
+  "route": "cli",
+  "published_record_path": "registry/relations/REL-000008.json"
+}

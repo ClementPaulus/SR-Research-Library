@@ -1,0 +1,11 @@
+{
+  "reservation_version": "SR-RESERVATION.v0.1.0",
+  "namespace": "SRC",
+  "value": "SRC-000063",
+  "operation_key": "2026-09-new-papers-cgd-source",
+  "purpose": "Register released paper: Collapse Generates Distinction: Formal Readback of Determination, Preservation, and the Return Grammar",
+  "state": "published",
+  "reserved_at": "2026-09-26T19:47:34Z",
+  "route": "cli",
+  "published_record_path": "registry/sources/SRC-000063.json"
+}

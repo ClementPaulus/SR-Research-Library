@@ -1,0 +1,77 @@
+{
+  "receipt_id": "RCPT-000039",
+  "decision": "ACCEPTED",
+  "submission_identity": "SR-OBJ-000033",
+  "generated": "2026-09-26T19:47:34Z",
+  "gates": {
+    "A": {
+      "name": "Identity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "B": {
+      "name": "Tier placement",
+      "result": "PASS",
+      "detail": ""
+    },
+    "C": {
+      "name": "Source and provenance",
+      "result": "PASS",
+      "detail": ""
+    },
+    "D": {
+      "name": "Classification",
+      "result": "PASS",
+      "detail": ""
+    },
+    "E": {
+      "name": "Boundary and missingness",
+      "result": "PASS",
+      "detail": ""
+    },
+    "F": {
+      "name": "Relation integrity",
+      "result": "PASS",
+      "detail": ""
+    },
+    "G": {
+      "name": "Library durability",
+      "result": "PASS",
+      "detail": ""
+    }
+  },
+  "disclaimer": "Library admission means organizational conformance only. It does not imply scientific truth, endorsement, Tier-0 adoption, or Tier-1 admission.",
+  "object_id": "SR-OBJ-000033",
+  "title": "How Much of a Thing Must Remain the Same? Burden-Relative Preservation, Support, Identity, and the Boundary of Reditus",
+  "author_ids": [
+    "AUTH-0001"
+  ],
+  "version": "1.0.0",
+  "date": "2026-09-26T19:47:34Z",
+  "authority": "tier-2",
+  "tier2_class_primary": "diagnostic",
+  "functional_locus": "cross-system",
+  "domain_primary": "mathematics",
+  "structural_focus_primary": "identity",
+  "main_question": "What may change without changing what the active burden requires preserved?",
+  "evidence_mode_primary": "formal-proof",
+  "provenance": "corpus-native",
+  "maturity": "frozen-local-object",
+  "source_ids": [
+    "SRC-000062",
+    "SRC-000061"
+  ],
+  "relation_ids": [
+    "REL-000008"
+  ],
+  "publication_state": "preprint",
+  "non_blocking_missingness": [
+    "Independent reproduction of the linked package (NON_BLOCKING)",
+    "Application-specific coverage and evidence (NON_BLOCKING)",
+    "Manuscript and archive dates differ (NON_BLOCKING)"
+  ],
+  "open_burdens": [
+    "For each application, justify the domain, maps, simultaneous burdens, support witnesses, interfaces, history, and any cross-regime identity relation; reproduce the constructed fixture separately from empirical validation."
+  ],
+  "next_burden": "For each application, justify the domain, maps, simultaneous burdens, support witnesses, interfaces, history, and any cross-regime identity relation; reproduce the constructed fixture separately from empirical validation."
+}

@@ -1,0 +1,8 @@
+{
+  "relation_id": "REL-000007",
+  "relation_type": "contrasts_with",
+  "from_id": "SR-OBJ-000032",
+  "to_id": "SRC-000022",
+  "declared": "2026-09-26T19:47:34Z",
+  "notes": "Admissible Determination v1.1.0, section 1.1: retains observational accountability while explicitly revising the earlier objection to exteriority. This conceptual revision does not rewrite The Seam of Reality or import its historical audit budget or receipt."
+}

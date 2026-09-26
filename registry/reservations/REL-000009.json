@@ -1,0 +1,11 @@
+{
+  "reservation_version": "SR-RESERVATION.v0.1.0",
+  "namespace": "REL",
+  "value": "REL-000009",
+  "operation_key": "2026-09-new-papers-cgd-ad",
+  "purpose": "Collapse Generates Distinction, sections 2 and 4, inherits the exact determination criterion from Admissible Determination v1.1.0 and consolidates it with joint-burden preservation.",
+  "state": "published",
+  "reserved_at": "2026-09-26T19:47:34Z",
+  "route": "cli",
+  "published_record_path": "registry/relations/REL-000009.json"
+}

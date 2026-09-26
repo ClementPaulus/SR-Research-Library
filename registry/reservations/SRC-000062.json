@@ -1,0 +1,11 @@
+{
+  "reservation_version": "SR-RESERVATION.v0.1.0",
+  "namespace": "SRC",
+  "value": "SRC-000062",
+  "operation_key": "2026-09-new-papers-hm-source",
+  "purpose": "Register released paper: How Much of a Thing Must Remain the Same? Burden-Relative Preservation, Support, Identity, and the Boundary of Reditus",
+  "state": "published",
+  "reserved_at": "2026-09-26T19:47:34Z",
+  "route": "cli",
+  "published_record_path": "registry/sources/SRC-000062.json"
+}

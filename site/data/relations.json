@@ -46,5 +46,37 @@
     "to_id": "SR-OBJ-000023",
     "declared": "2026-09-14T02:15:00Z",
     "notes": "Stated by the source (SRC-000060, paper §1.3, §1.5, Fig. 1, Appendix A): the completed prospective computational run PIR-COMP-R1 is the successor to Identifiable Return in Memristive Associative Memory v1.2 and closes the computational burden the predecessor left unresolved (prospective correction, discrimination, target-specific reliability). The paper retains SR-OBJ-000023 as a separate retrospective object; the predecessor is extended, not superseded or rewritten."
+  },
+  {
+    "relation_id": "REL-000007",
+    "relation_type": "contrasts_with",
+    "from_id": "SR-OBJ-000032",
+    "to_id": "SRC-000022",
+    "declared": "2026-09-26T19:47:34Z",
+    "notes": "Admissible Determination v1.1.0, section 1.1: retains observational accountability while explicitly revising the earlier objection to exteriority. This conceptual revision does not rewrite The Seam of Reality or import its historical audit budget or receipt."
+  },
+  {
+    "relation_id": "REL-000008",
+    "relation_type": "extends",
+    "from_id": "SR-OBJ-000033",
+    "to_id": "SRC-000061",
+    "declared": "2026-09-26T19:47:34Z",
+    "notes": "How Much of a Thing Must Remain the Same?, sections 1-2: extends the determination criterion into burden-relative preservation, relational support, substitution, provenance, and identity. Admissible Determination remains a distinct predecessor, not a superseded manuscript."
+  },
+  {
+    "relation_id": "REL-000009",
+    "relation_type": "derived_from",
+    "from_id": "SRC-000063",
+    "to_id": "SRC-000061",
+    "declared": "2026-09-26T19:47:34Z",
+    "notes": "Collapse Generates Distinction, sections 2 and 4, inherits the exact determination criterion from Admissible Determination v1.1.0 and consolidates it with joint-burden preservation."
+  },
+  {
+    "relation_id": "REL-000010",
+    "relation_type": "derived_from",
+    "from_id": "SRC-000063",
+    "to_id": "SRC-000062",
+    "declared": "2026-09-26T19:47:34Z",
+    "notes": "Collapse Generates Distinction, sections 3-4 and 7, inherits burden-relative preservation and joint sameness from How Much of a Thing Must Remain the Same? v1.0. Consolidation does not supersede either local proof source."
   }
 ]
